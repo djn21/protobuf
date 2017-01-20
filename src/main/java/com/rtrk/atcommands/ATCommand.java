@@ -3,8 +3,8 @@
 
 package com.rtrk.atcommands;
 
-public final class ATCommands {
-  private ATCommands() {}
+public final class ATCommand {
+  private ATCommand() {}
   public static void registerAllExtensions(
       com.google.protobuf.ExtensionRegistryLite registry) {
   }
@@ -131,7 +131,7 @@ public final class ATCommands {
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return com.rtrk.atcommands.ATCommands.getDescriptor().getEnumTypes().get(0);
+      return com.rtrk.atcommands.ATCommand.getDescriptor().getEnumTypes().get(0);
     }
 
     private static final OtherMessageType[] VALUES = values();
@@ -274,7 +274,7 @@ public final class ATCommands {
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return com.rtrk.atcommands.ATCommands.getDescriptor().getEnumTypes().get(1);
+      return com.rtrk.atcommands.ATCommand.getDescriptor().getEnumTypes().get(1);
     }
 
     private static final HardwareRelatedMessageType[] VALUES = values();
@@ -516,7 +516,7 @@ public final class ATCommands {
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return com.rtrk.atcommands.ATCommands.getDescriptor().getEnumTypes().get(2);
+      return com.rtrk.atcommands.ATCommand.getDescriptor().getEnumTypes().get(2);
     }
 
     private static final AudioMessageType[] VALUES = values();
@@ -686,7 +686,7 @@ public final class ATCommands {
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return com.rtrk.atcommands.ATCommands.getDescriptor().getEnumTypes().get(3);
+      return com.rtrk.atcommands.ATCommand.getDescriptor().getEnumTypes().get(3);
     }
 
     private static final SupplementaryServiceMessageType[] VALUES = values();
@@ -1063,7 +1063,7 @@ public final class ATCommands {
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return com.rtrk.atcommands.ATCommands.getDescriptor().getEnumTypes().get(4);
+      return com.rtrk.atcommands.ATCommand.getDescriptor().getEnumTypes().get(4);
     }
 
     private static final TCPIPMessageType[] VALUES = values();
@@ -1251,7 +1251,7 @@ public final class ATCommands {
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return com.rtrk.atcommands.ATCommands.getDescriptor().getEnumTypes().get(5);
+      return com.rtrk.atcommands.ATCommand.getDescriptor().getEnumTypes().get(5);
     }
 
     private static final GPRSMessageType[] VALUES = values();
@@ -1376,7 +1376,7 @@ public final class ATCommands {
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return com.rtrk.atcommands.ATCommands.getDescriptor().getEnumTypes().get(6);
+      return com.rtrk.atcommands.ATCommand.getDescriptor().getEnumTypes().get(6);
     }
 
     private static final PhonebookMessageType[] VALUES = values();
@@ -1636,7 +1636,7 @@ public final class ATCommands {
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return com.rtrk.atcommands.ATCommands.getDescriptor().getEnumTypes().get(7);
+      return com.rtrk.atcommands.ATCommand.getDescriptor().getEnumTypes().get(7);
     }
 
     private static final SMSMessageType[] VALUES = values();
@@ -1914,7 +1914,7 @@ public final class ATCommands {
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return com.rtrk.atcommands.ATCommands.getDescriptor().getEnumTypes().get(8);
+      return com.rtrk.atcommands.ATCommand.getDescriptor().getEnumTypes().get(8);
     }
 
     private static final CallRelatedMessageType[] VALUES = values();
@@ -2075,7 +2075,7 @@ public final class ATCommands {
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return com.rtrk.atcommands.ATCommands.getDescriptor().getEnumTypes().get(9);
+      return com.rtrk.atcommands.ATCommand.getDescriptor().getEnumTypes().get(9);
     }
 
     private static final NetworkServiceMessageType[] VALUES = values();
@@ -2272,7 +2272,7 @@ public final class ATCommands {
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return com.rtrk.atcommands.ATCommands.getDescriptor().getEnumTypes().get(10);
+      return com.rtrk.atcommands.ATCommand.getDescriptor().getEnumTypes().get(10);
     }
 
     private static final SIMRelatedMessageType[] VALUES = values();
@@ -2496,7 +2496,7 @@ public final class ATCommands {
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return com.rtrk.atcommands.ATCommands.getDescriptor().getEnumTypes().get(11);
+      return com.rtrk.atcommands.ATCommand.getDescriptor().getEnumTypes().get(11);
     }
 
     private static final StatusControlMessageType[] VALUES = values();
@@ -2657,7 +2657,7 @@ public final class ATCommands {
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return com.rtrk.atcommands.ATCommands.getDescriptor().getEnumTypes().get(12);
+      return com.rtrk.atcommands.ATCommand.getDescriptor().getEnumTypes().get(12);
     }
 
     private static final SerialInterfaceControlMessageType[] VALUES = values();
@@ -2944,7 +2944,7 @@ public final class ATCommands {
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return com.rtrk.atcommands.ATCommands.getDescriptor().getEnumTypes().get(13);
+      return com.rtrk.atcommands.ATCommand.getDescriptor().getEnumTypes().get(13);
     }
 
     private static final GeneralMesssageType[] VALUES = values();
@@ -3141,7 +3141,7 @@ public final class ATCommands {
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return com.rtrk.atcommands.ATCommands.getDescriptor().getEnumTypes().get(14);
+      return com.rtrk.atcommands.ATCommand.getDescriptor().getEnumTypes().get(14);
     }
 
     private static final SMTPMessageType[] VALUES = values();
@@ -3248,7 +3248,7 @@ public final class ATCommands {
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return com.rtrk.atcommands.ATCommands.getDescriptor().getEnumTypes().get(15);
+      return com.rtrk.atcommands.ATCommand.getDescriptor().getEnumTypes().get(15);
     }
 
     private static final RecordingMessageType[] VALUES = values();
@@ -3391,7 +3391,7 @@ public final class ATCommands {
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return com.rtrk.atcommands.ATCommands.getDescriptor().getEnumTypes().get(16);
+      return com.rtrk.atcommands.ATCommand.getDescriptor().getEnumTypes().get(16);
     }
 
     private static final QuecCellMessageType[] VALUES = values();
@@ -3597,7 +3597,7 @@ public final class ATCommands {
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return com.rtrk.atcommands.ATCommands.getDescriptor().getEnumTypes().get(17);
+      return com.rtrk.atcommands.ATCommand.getDescriptor().getEnumTypes().get(17);
     }
 
     private static final MMSMessageType[] VALUES = values();
@@ -3758,7 +3758,7 @@ public final class ATCommands {
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return com.rtrk.atcommands.ATCommands.getDescriptor().getEnumTypes().get(18);
+      return com.rtrk.atcommands.ATCommand.getDescriptor().getEnumTypes().get(18);
     }
 
     private static final STKMessageType[] VALUES = values();
@@ -3982,7 +3982,7 @@ public final class ATCommands {
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return com.rtrk.atcommands.ATCommands.getDescriptor().getEnumTypes().get(19);
+      return com.rtrk.atcommands.ATCommand.getDescriptor().getEnumTypes().get(19);
     }
 
     private static final FTPMessageType[] VALUES = values();
@@ -4188,7 +4188,7 @@ public final class ATCommands {
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return com.rtrk.atcommands.ATCommands.getDescriptor().getEnumTypes().get(20);
+      return com.rtrk.atcommands.ATCommand.getDescriptor().getEnumTypes().get(20);
     }
 
     private static final FileMessageType[] VALUES = values();
@@ -4313,7 +4313,7 @@ public final class ATCommands {
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return com.rtrk.atcommands.ATCommands.getDescriptor().getEnumTypes().get(21);
+      return com.rtrk.atcommands.ATCommand.getDescriptor().getEnumTypes().get(21);
     }
 
     private static final HTTPMessageType[] VALUES = values();
@@ -5761,7 +5761,7 @@ public final class ATCommands {
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return com.rtrk.atcommands.ATCommands.getDescriptor().getEnumTypes().get(22);
+      return com.rtrk.atcommands.ATCommand.getDescriptor().getEnumTypes().get(22);
     }
 
     private static final Error[] VALUES = values();
@@ -5798,7 +5798,7 @@ public final class ATCommands {
     /**
      * <code>optional .com.rtrk.protobuf.HTTPMessageType messageType = 1;</code>
      */
-    com.rtrk.atcommands.ATCommands.HTTPMessageType getMessageType();
+    com.rtrk.atcommands.ATCommand.HTTPMessageType getMessageType();
 
     /**
      * <code>optional bool test = 2;</code>
@@ -5862,7 +5862,7 @@ public final class ATCommands {
     /**
      * <code>optional .com.rtrk.protobuf.Error errorcode = 12;</code>
      */
-    com.rtrk.atcommands.ATCommands.Error getErrorcode();
+    com.rtrk.atcommands.ATCommand.Error getErrorcode();
 
     /**
      * <code>optional .com.rtrk.protobuf.Error error = 13;</code>
@@ -5871,7 +5871,7 @@ public final class ATCommands {
     /**
      * <code>optional .com.rtrk.protobuf.Error error = 13;</code>
      */
-    com.rtrk.atcommands.ATCommands.Error getError();
+    com.rtrk.atcommands.ATCommand.Error getError();
 
     /**
      * <code>optional bytes data = 14;</code>
@@ -6029,14 +6029,14 @@ public final class ATCommands {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.rtrk.atcommands.ATCommands.internal_static_com_rtrk_protobuf_HTTPCommand_descriptor;
+      return com.rtrk.atcommands.ATCommand.internal_static_com_rtrk_protobuf_HTTPCommand_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.rtrk.atcommands.ATCommands.internal_static_com_rtrk_protobuf_HTTPCommand_fieldAccessorTable
+      return com.rtrk.atcommands.ATCommand.internal_static_com_rtrk_protobuf_HTTPCommand_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.rtrk.atcommands.ATCommands.HTTPCommand.class, com.rtrk.atcommands.ATCommands.HTTPCommand.Builder.class);
+              com.rtrk.atcommands.ATCommand.HTTPCommand.class, com.rtrk.atcommands.ATCommand.HTTPCommand.Builder.class);
     }
 
     public static final int MESSAGETYPE_FIELD_NUMBER = 1;
@@ -6050,9 +6050,9 @@ public final class ATCommands {
     /**
      * <code>optional .com.rtrk.protobuf.HTTPMessageType messageType = 1;</code>
      */
-    public com.rtrk.atcommands.ATCommands.HTTPMessageType getMessageType() {
-      com.rtrk.atcommands.ATCommands.HTTPMessageType result = com.rtrk.atcommands.ATCommands.HTTPMessageType.valueOf(messageType_);
-      return result == null ? com.rtrk.atcommands.ATCommands.HTTPMessageType.UNRECOGNIZED : result;
+    public com.rtrk.atcommands.ATCommand.HTTPMessageType getMessageType() {
+      com.rtrk.atcommands.ATCommand.HTTPMessageType result = com.rtrk.atcommands.ATCommand.HTTPMessageType.valueOf(messageType_);
+      return result == null ? com.rtrk.atcommands.ATCommand.HTTPMessageType.UNRECOGNIZED : result;
     }
 
     public static final int TEST_FIELD_NUMBER = 2;
@@ -6181,9 +6181,9 @@ public final class ATCommands {
     /**
      * <code>optional .com.rtrk.protobuf.Error errorcode = 12;</code>
      */
-    public com.rtrk.atcommands.ATCommands.Error getErrorcode() {
-      com.rtrk.atcommands.ATCommands.Error result = com.rtrk.atcommands.ATCommands.Error.valueOf(errorcode_);
-      return result == null ? com.rtrk.atcommands.ATCommands.Error.UNRECOGNIZED : result;
+    public com.rtrk.atcommands.ATCommand.Error getErrorcode() {
+      com.rtrk.atcommands.ATCommand.Error result = com.rtrk.atcommands.ATCommand.Error.valueOf(errorcode_);
+      return result == null ? com.rtrk.atcommands.ATCommand.Error.UNRECOGNIZED : result;
     }
 
     public static final int ERROR_FIELD_NUMBER = 13;
@@ -6197,9 +6197,9 @@ public final class ATCommands {
     /**
      * <code>optional .com.rtrk.protobuf.Error error = 13;</code>
      */
-    public com.rtrk.atcommands.ATCommands.Error getError() {
-      com.rtrk.atcommands.ATCommands.Error result = com.rtrk.atcommands.ATCommands.Error.valueOf(error_);
-      return result == null ? com.rtrk.atcommands.ATCommands.Error.UNRECOGNIZED : result;
+    public com.rtrk.atcommands.ATCommand.Error getError() {
+      com.rtrk.atcommands.ATCommand.Error result = com.rtrk.atcommands.ATCommand.Error.valueOf(error_);
+      return result == null ? com.rtrk.atcommands.ATCommand.Error.UNRECOGNIZED : result;
     }
 
     public static final int DATA_FIELD_NUMBER = 14;
@@ -6232,7 +6232,7 @@ public final class ATCommands {
 
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (messageType_ != com.rtrk.atcommands.ATCommands.HTTPMessageType.SET_HTTP_SERVER_URL.getNumber()) {
+      if (messageType_ != com.rtrk.atcommands.ATCommand.HTTPMessageType.SET_HTTP_SERVER_URL.getNumber()) {
         output.writeEnum(1, messageType_);
       }
       if (test_ != false) {
@@ -6265,10 +6265,10 @@ public final class ATCommands {
       if (contentLength_ != 0) {
         output.writeInt32(11, contentLength_);
       }
-      if (errorcode_ != com.rtrk.atcommands.ATCommands.Error.OK.getNumber()) {
+      if (errorcode_ != com.rtrk.atcommands.ATCommand.Error.OK.getNumber()) {
         output.writeEnum(12, errorcode_);
       }
-      if (error_ != com.rtrk.atcommands.ATCommands.Error.OK.getNumber()) {
+      if (error_ != com.rtrk.atcommands.ATCommand.Error.OK.getNumber()) {
         output.writeEnum(13, error_);
       }
       if (!data_.isEmpty()) {
@@ -6284,7 +6284,7 @@ public final class ATCommands {
       if (size != -1) return size;
 
       size = 0;
-      if (messageType_ != com.rtrk.atcommands.ATCommands.HTTPMessageType.SET_HTTP_SERVER_URL.getNumber()) {
+      if (messageType_ != com.rtrk.atcommands.ATCommand.HTTPMessageType.SET_HTTP_SERVER_URL.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(1, messageType_);
       }
@@ -6327,11 +6327,11 @@ public final class ATCommands {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(11, contentLength_);
       }
-      if (errorcode_ != com.rtrk.atcommands.ATCommands.Error.OK.getNumber()) {
+      if (errorcode_ != com.rtrk.atcommands.ATCommand.Error.OK.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(12, errorcode_);
       }
-      if (error_ != com.rtrk.atcommands.ATCommands.Error.OK.getNumber()) {
+      if (error_ != com.rtrk.atcommands.ATCommand.Error.OK.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(13, error_);
       }
@@ -6353,10 +6353,10 @@ public final class ATCommands {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.rtrk.atcommands.ATCommands.HTTPCommand)) {
+      if (!(obj instanceof com.rtrk.atcommands.ATCommand.HTTPCommand)) {
         return super.equals(obj);
       }
-      com.rtrk.atcommands.ATCommands.HTTPCommand other = (com.rtrk.atcommands.ATCommands.HTTPCommand) obj;
+      com.rtrk.atcommands.ATCommand.HTTPCommand other = (com.rtrk.atcommands.ATCommand.HTTPCommand) obj;
 
       boolean result = true;
       result = result && messageType_ == other.messageType_;
@@ -6432,58 +6432,58 @@ public final class ATCommands {
       return hash;
     }
 
-    public static com.rtrk.atcommands.ATCommands.HTTPCommand parseFrom(
+    public static com.rtrk.atcommands.ATCommand.HTTPCommand parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.rtrk.atcommands.ATCommands.HTTPCommand parseFrom(
+    public static com.rtrk.atcommands.ATCommand.HTTPCommand parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.rtrk.atcommands.ATCommands.HTTPCommand parseFrom(byte[] data)
+    public static com.rtrk.atcommands.ATCommand.HTTPCommand parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.rtrk.atcommands.ATCommands.HTTPCommand parseFrom(
+    public static com.rtrk.atcommands.ATCommand.HTTPCommand parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.rtrk.atcommands.ATCommands.HTTPCommand parseFrom(java.io.InputStream input)
+    public static com.rtrk.atcommands.ATCommand.HTTPCommand parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.rtrk.atcommands.ATCommands.HTTPCommand parseFrom(
+    public static com.rtrk.atcommands.ATCommand.HTTPCommand parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.rtrk.atcommands.ATCommands.HTTPCommand parseDelimitedFrom(java.io.InputStream input)
+    public static com.rtrk.atcommands.ATCommand.HTTPCommand parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static com.rtrk.atcommands.ATCommands.HTTPCommand parseDelimitedFrom(
+    public static com.rtrk.atcommands.ATCommand.HTTPCommand parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.rtrk.atcommands.ATCommands.HTTPCommand parseFrom(
+    public static com.rtrk.atcommands.ATCommand.HTTPCommand parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.rtrk.atcommands.ATCommands.HTTPCommand parseFrom(
+    public static com.rtrk.atcommands.ATCommand.HTTPCommand parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -6495,7 +6495,7 @@ public final class ATCommands {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.rtrk.atcommands.ATCommands.HTTPCommand prototype) {
+    public static Builder newBuilder(com.rtrk.atcommands.ATCommand.HTTPCommand prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() {
@@ -6515,20 +6515,20 @@ public final class ATCommands {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:com.rtrk.protobuf.HTTPCommand)
-        com.rtrk.atcommands.ATCommands.HTTPCommandOrBuilder {
+        com.rtrk.atcommands.ATCommand.HTTPCommandOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.rtrk.atcommands.ATCommands.internal_static_com_rtrk_protobuf_HTTPCommand_descriptor;
+        return com.rtrk.atcommands.ATCommand.internal_static_com_rtrk_protobuf_HTTPCommand_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.rtrk.atcommands.ATCommands.internal_static_com_rtrk_protobuf_HTTPCommand_fieldAccessorTable
+        return com.rtrk.atcommands.ATCommand.internal_static_com_rtrk_protobuf_HTTPCommand_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.rtrk.atcommands.ATCommands.HTTPCommand.class, com.rtrk.atcommands.ATCommands.HTTPCommand.Builder.class);
+                com.rtrk.atcommands.ATCommand.HTTPCommand.class, com.rtrk.atcommands.ATCommand.HTTPCommand.Builder.class);
       }
 
-      // Construct using com.rtrk.atcommands.ATCommands.HTTPCommand.newBuilder()
+      // Construct using com.rtrk.atcommands.ATCommand.HTTPCommand.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -6580,23 +6580,23 @@ public final class ATCommands {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.rtrk.atcommands.ATCommands.internal_static_com_rtrk_protobuf_HTTPCommand_descriptor;
+        return com.rtrk.atcommands.ATCommand.internal_static_com_rtrk_protobuf_HTTPCommand_descriptor;
       }
 
-      public com.rtrk.atcommands.ATCommands.HTTPCommand getDefaultInstanceForType() {
-        return com.rtrk.atcommands.ATCommands.HTTPCommand.getDefaultInstance();
+      public com.rtrk.atcommands.ATCommand.HTTPCommand getDefaultInstanceForType() {
+        return com.rtrk.atcommands.ATCommand.HTTPCommand.getDefaultInstance();
       }
 
-      public com.rtrk.atcommands.ATCommands.HTTPCommand build() {
-        com.rtrk.atcommands.ATCommands.HTTPCommand result = buildPartial();
+      public com.rtrk.atcommands.ATCommand.HTTPCommand build() {
+        com.rtrk.atcommands.ATCommand.HTTPCommand result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      public com.rtrk.atcommands.ATCommands.HTTPCommand buildPartial() {
-        com.rtrk.atcommands.ATCommands.HTTPCommand result = new com.rtrk.atcommands.ATCommands.HTTPCommand(this);
+      public com.rtrk.atcommands.ATCommand.HTTPCommand buildPartial() {
+        com.rtrk.atcommands.ATCommand.HTTPCommand result = new com.rtrk.atcommands.ATCommand.HTTPCommand(this);
         result.messageType_ = messageType_;
         result.test_ = test_;
         result.uRLLength_ = uRLLength_;
@@ -6643,16 +6643,16 @@ public final class ATCommands {
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.rtrk.atcommands.ATCommands.HTTPCommand) {
-          return mergeFrom((com.rtrk.atcommands.ATCommands.HTTPCommand)other);
+        if (other instanceof com.rtrk.atcommands.ATCommand.HTTPCommand) {
+          return mergeFrom((com.rtrk.atcommands.ATCommand.HTTPCommand)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.rtrk.atcommands.ATCommands.HTTPCommand other) {
-        if (other == com.rtrk.atcommands.ATCommands.HTTPCommand.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.rtrk.atcommands.ATCommand.HTTPCommand other) {
+        if (other == com.rtrk.atcommands.ATCommand.HTTPCommand.getDefaultInstance()) return this;
         if (other.messageType_ != 0) {
           setMessageTypeValue(other.getMessageTypeValue());
         }
@@ -6711,11 +6711,11 @@ public final class ATCommands {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.rtrk.atcommands.ATCommands.HTTPCommand parsedMessage = null;
+        com.rtrk.atcommands.ATCommand.HTTPCommand parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.rtrk.atcommands.ATCommands.HTTPCommand) e.getUnfinishedMessage();
+          parsedMessage = (com.rtrk.atcommands.ATCommand.HTTPCommand) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -6743,14 +6743,14 @@ public final class ATCommands {
       /**
        * <code>optional .com.rtrk.protobuf.HTTPMessageType messageType = 1;</code>
        */
-      public com.rtrk.atcommands.ATCommands.HTTPMessageType getMessageType() {
-        com.rtrk.atcommands.ATCommands.HTTPMessageType result = com.rtrk.atcommands.ATCommands.HTTPMessageType.valueOf(messageType_);
-        return result == null ? com.rtrk.atcommands.ATCommands.HTTPMessageType.UNRECOGNIZED : result;
+      public com.rtrk.atcommands.ATCommand.HTTPMessageType getMessageType() {
+        com.rtrk.atcommands.ATCommand.HTTPMessageType result = com.rtrk.atcommands.ATCommand.HTTPMessageType.valueOf(messageType_);
+        return result == null ? com.rtrk.atcommands.ATCommand.HTTPMessageType.UNRECOGNIZED : result;
       }
       /**
        * <code>optional .com.rtrk.protobuf.HTTPMessageType messageType = 1;</code>
        */
-      public Builder setMessageType(com.rtrk.atcommands.ATCommands.HTTPMessageType value) {
+      public Builder setMessageType(com.rtrk.atcommands.ATCommand.HTTPMessageType value) {
         if (value == null) {
           throw new NullPointerException();
         }
@@ -7090,14 +7090,14 @@ public final class ATCommands {
       /**
        * <code>optional .com.rtrk.protobuf.Error errorcode = 12;</code>
        */
-      public com.rtrk.atcommands.ATCommands.Error getErrorcode() {
-        com.rtrk.atcommands.ATCommands.Error result = com.rtrk.atcommands.ATCommands.Error.valueOf(errorcode_);
-        return result == null ? com.rtrk.atcommands.ATCommands.Error.UNRECOGNIZED : result;
+      public com.rtrk.atcommands.ATCommand.Error getErrorcode() {
+        com.rtrk.atcommands.ATCommand.Error result = com.rtrk.atcommands.ATCommand.Error.valueOf(errorcode_);
+        return result == null ? com.rtrk.atcommands.ATCommand.Error.UNRECOGNIZED : result;
       }
       /**
        * <code>optional .com.rtrk.protobuf.Error errorcode = 12;</code>
        */
-      public Builder setErrorcode(com.rtrk.atcommands.ATCommands.Error value) {
+      public Builder setErrorcode(com.rtrk.atcommands.ATCommand.Error value) {
         if (value == null) {
           throw new NullPointerException();
         }
@@ -7134,14 +7134,14 @@ public final class ATCommands {
       /**
        * <code>optional .com.rtrk.protobuf.Error error = 13;</code>
        */
-      public com.rtrk.atcommands.ATCommands.Error getError() {
-        com.rtrk.atcommands.ATCommands.Error result = com.rtrk.atcommands.ATCommands.Error.valueOf(error_);
-        return result == null ? com.rtrk.atcommands.ATCommands.Error.UNRECOGNIZED : result;
+      public com.rtrk.atcommands.ATCommand.Error getError() {
+        com.rtrk.atcommands.ATCommand.Error result = com.rtrk.atcommands.ATCommand.Error.valueOf(error_);
+        return result == null ? com.rtrk.atcommands.ATCommand.Error.UNRECOGNIZED : result;
       }
       /**
        * <code>optional .com.rtrk.protobuf.Error error = 13;</code>
        */
-      public Builder setError(com.rtrk.atcommands.ATCommands.Error value) {
+      public Builder setError(com.rtrk.atcommands.ATCommand.Error value) {
         if (value == null) {
           throw new NullPointerException();
         }
@@ -7232,12 +7232,12 @@ public final class ATCommands {
     }
 
     // @@protoc_insertion_point(class_scope:com.rtrk.protobuf.HTTPCommand)
-    private static final com.rtrk.atcommands.ATCommands.HTTPCommand DEFAULT_INSTANCE;
+    private static final com.rtrk.atcommands.ATCommand.HTTPCommand DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.rtrk.atcommands.ATCommands.HTTPCommand();
+      DEFAULT_INSTANCE = new com.rtrk.atcommands.ATCommand.HTTPCommand();
     }
 
-    public static com.rtrk.atcommands.ATCommands.HTTPCommand getDefaultInstance() {
+    public static com.rtrk.atcommands.ATCommand.HTTPCommand getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -7260,7 +7260,7 @@ public final class ATCommands {
       return PARSER;
     }
 
-    public com.rtrk.atcommands.ATCommands.HTTPCommand getDefaultInstanceForType() {
+    public com.rtrk.atcommands.ATCommand.HTTPCommand getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -7277,166 +7277,181 @@ public final class ATCommands {
     /**
      * <code>optional .com.rtrk.protobuf.FileMessageType messageType = 1;</code>
      */
-    com.rtrk.atcommands.ATCommands.FileMessageType getMessageType();
+    com.rtrk.atcommands.ATCommand.FileMessageType getMessageType();
 
     /**
-     * <code>optional string namePattern = 2;</code>
+     * <code>optional bool test = 2;</code>
+     */
+    boolean getTest();
+
+    /**
+     * <code>optional bool execution = 3;</code>
+     */
+    boolean getExecution();
+
+    /**
+     * <code>optional bool read = 4;</code>
+     */
+    boolean getRead();
+
+    /**
+     * <code>optional string namePattern = 5;</code>
      */
     java.lang.String getNamePattern();
     /**
-     * <code>optional string namePattern = 2;</code>
+     * <code>optional string namePattern = 5;</code>
      */
     com.google.protobuf.ByteString
         getNamePatternBytes();
 
     /**
-     * <code>optional int32 freeSize = 3;</code>
+     * <code>optional int32 freeSize = 6;</code>
      */
     int getFreeSize();
 
     /**
-     * <code>optional int32 totalSize = 4;</code>
+     * <code>optional int32 totalSize = 7;</code>
      */
     int getTotalSize();
 
     /**
-     * <code>optional int32 maxAllocSize = 5;</code>
+     * <code>optional int32 maxAllocSize = 8;</code>
      */
     int getMaxAllocSize();
 
     /**
-     * <code>optional int32 UFSFileSize = 6;</code>
+     * <code>optional int32 UFSFileSize = 9;</code>
      */
     int getUFSFileSize();
 
     /**
-     * <code>optional int32 UFSFileNumber = 7;</code>
+     * <code>optional int32 UFSFileNumber = 10;</code>
      */
     int getUFSFileNumber();
 
     /**
-     * <code>optional string fileName = 8;</code>
+     * <code>optional string fileName = 11;</code>
      */
     java.lang.String getFileName();
     /**
-     * <code>optional string fileName = 8;</code>
+     * <code>optional string fileName = 11;</code>
      */
     com.google.protobuf.ByteString
         getFileNameBytes();
 
     /**
-     * <code>optional int32 fileSize = 9;</code>
+     * <code>optional int32 fileSize = 12;</code>
      */
     int getFileSize();
 
     /**
-     * <code>optional int32 ramSize = 10;</code>
+     * <code>optional int32 ramSize = 13;</code>
      */
     int getRamSize();
 
     /**
-     * <code>optional int32 uploadSize = 11;</code>
+     * <code>optional int32 uploadSize = 14;</code>
      */
     int getUploadSize();
 
     /**
-     * <code>optional int32 timeout = 12;</code>
+     * <code>optional int32 timeout = 15;</code>
      */
     int getTimeout();
 
     /**
-     * <code>optional int32 ackMode = 13;</code>
+     * <code>optional int32 ackMode = 16;</code>
      */
     int getAckMode();
 
     /**
-     * <code>optional string srcFileName = 14;</code>
+     * <code>optional string srcFileName = 17;</code>
      */
     java.lang.String getSrcFileName();
     /**
-     * <code>optional string srcFileName = 14;</code>
+     * <code>optional string srcFileName = 17;</code>
      */
     com.google.protobuf.ByteString
         getSrcFileNameBytes();
 
     /**
-     * <code>optional string destFileName = 15;</code>
+     * <code>optional string destFileName = 18;</code>
      */
     java.lang.String getDestFileName();
     /**
-     * <code>optional string destFileName = 15;</code>
+     * <code>optional string destFileName = 18;</code>
      */
     com.google.protobuf.ByteString
         getDestFileNameBytes();
 
     /**
-     * <code>optional bool copy = 16;</code>
+     * <code>optional int32 copy = 19;</code>
      */
-    boolean getCopy();
+    int getCopy();
 
     /**
-     * <code>optional bool owerwrite = 17;</code>
+     * <code>optional int32 owerwrite = 20;</code>
      */
-    boolean getOwerwrite();
+    int getOwerwrite();
 
     /**
-     * <code>optional int32 mode = 18;</code>
+     * <code>optional int32 mode = 21;</code>
      */
     int getMode();
 
     /**
-     * <code>optional int32 length = 19;</code>
+     * <code>optional int32 length = 22;</code>
      */
     int getLength();
 
     /**
-     * <code>optional string fileHandle = 20;</code>
+     * <code>optional string fileHandle = 23;</code>
      */
     java.lang.String getFileHandle();
     /**
-     * <code>optional string fileHandle = 20;</code>
+     * <code>optional string fileHandle = 23;</code>
      */
     com.google.protobuf.ByteString
         getFileHandleBytes();
 
     /**
-     * <code>optional int32 readLength = 21;</code>
+     * <code>optional int32 readLength = 24;</code>
      */
     int getReadLength();
 
     /**
-     * <code>optional int32 writtenLength = 22;</code>
+     * <code>optional int32 writtenLength = 25;</code>
      */
     int getWrittenLength();
 
     /**
-     * <code>optional int32 totalLength = 23;</code>
+     * <code>optional int32 totalLength = 26;</code>
      */
     int getTotalLength();
 
     /**
-     * <code>optional int32 offset = 24;</code>
+     * <code>optional int32 offset = 27;</code>
      */
     int getOffset();
 
     /**
-     * <code>optional int32 position = 25;</code>
+     * <code>optional int32 position = 28;</code>
      */
     int getPosition();
 
     /**
-     * <code>optional int32 checksum = 26;</code>
+     * <code>optional int32 checksum = 29;</code>
      */
     int getChecksum();
 
     /**
-     * <code>optional .com.rtrk.protobuf.Error error = 27;</code>
+     * <code>optional .com.rtrk.protobuf.Error error = 30;</code>
      */
     int getErrorValue();
     /**
-     * <code>optional .com.rtrk.protobuf.Error error = 27;</code>
+     * <code>optional .com.rtrk.protobuf.Error error = 30;</code>
      */
-    com.rtrk.atcommands.ATCommands.Error getError();
+    com.rtrk.atcommands.ATCommand.Error getError();
   }
   /**
    * Protobuf type {@code com.rtrk.protobuf.FileCommand}
@@ -7451,6 +7466,9 @@ public final class ATCommands {
     }
     private FileCommand() {
       messageType_ = 0;
+      test_ = false;
+      execution_ = false;
+      read_ = false;
       namePattern_ = "";
       freeSize_ = 0;
       totalSize_ = 0;
@@ -7465,8 +7483,8 @@ public final class ATCommands {
       ackMode_ = 0;
       srcFileName_ = "";
       destFileName_ = "";
-      copy_ = false;
-      owerwrite_ = false;
+      copy_ = 0;
+      owerwrite_ = 0;
       mode_ = 0;
       length_ = 0;
       fileHandle_ = "";
@@ -7510,137 +7528,152 @@ public final class ATCommands {
               messageType_ = rawValue;
               break;
             }
-            case 18: {
+            case 16: {
+
+              test_ = input.readBool();
+              break;
+            }
+            case 24: {
+
+              execution_ = input.readBool();
+              break;
+            }
+            case 32: {
+
+              read_ = input.readBool();
+              break;
+            }
+            case 42: {
               java.lang.String s = input.readStringRequireUtf8();
 
               namePattern_ = s;
               break;
             }
-            case 24: {
+            case 48: {
 
               freeSize_ = input.readInt32();
               break;
             }
-            case 32: {
+            case 56: {
 
               totalSize_ = input.readInt32();
               break;
             }
-            case 40: {
+            case 64: {
 
               maxAllocSize_ = input.readInt32();
               break;
             }
-            case 48: {
+            case 72: {
 
               uFSFileSize_ = input.readInt32();
               break;
             }
-            case 56: {
+            case 80: {
 
               uFSFileNumber_ = input.readInt32();
               break;
             }
-            case 66: {
+            case 90: {
               java.lang.String s = input.readStringRequireUtf8();
 
               fileName_ = s;
               break;
             }
-            case 72: {
+            case 96: {
 
               fileSize_ = input.readInt32();
               break;
             }
-            case 80: {
+            case 104: {
 
               ramSize_ = input.readInt32();
               break;
             }
-            case 88: {
+            case 112: {
 
               uploadSize_ = input.readInt32();
               break;
             }
-            case 96: {
+            case 120: {
 
               timeout_ = input.readInt32();
               break;
             }
-            case 104: {
+            case 128: {
 
               ackMode_ = input.readInt32();
               break;
             }
-            case 114: {
+            case 138: {
               java.lang.String s = input.readStringRequireUtf8();
 
               srcFileName_ = s;
               break;
             }
-            case 122: {
+            case 146: {
               java.lang.String s = input.readStringRequireUtf8();
 
               destFileName_ = s;
               break;
             }
-            case 128: {
+            case 152: {
 
-              copy_ = input.readBool();
+              copy_ = input.readInt32();
               break;
             }
-            case 136: {
+            case 160: {
 
-              owerwrite_ = input.readBool();
+              owerwrite_ = input.readInt32();
               break;
             }
-            case 144: {
+            case 168: {
 
               mode_ = input.readInt32();
               break;
             }
-            case 152: {
+            case 176: {
 
               length_ = input.readInt32();
               break;
             }
-            case 162: {
+            case 186: {
               java.lang.String s = input.readStringRequireUtf8();
 
               fileHandle_ = s;
               break;
             }
-            case 168: {
+            case 192: {
 
               readLength_ = input.readInt32();
               break;
             }
-            case 176: {
+            case 200: {
 
               writtenLength_ = input.readInt32();
               break;
             }
-            case 184: {
+            case 208: {
 
               totalLength_ = input.readInt32();
               break;
             }
-            case 192: {
+            case 216: {
 
               offset_ = input.readInt32();
               break;
             }
-            case 200: {
+            case 224: {
 
               position_ = input.readInt32();
               break;
             }
-            case 208: {
+            case 232: {
 
               checksum_ = input.readInt32();
               break;
             }
-            case 216: {
+            case 240: {
               int rawValue = input.readEnum();
 
               error_ = rawValue;
@@ -7659,14 +7692,14 @@ public final class ATCommands {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.rtrk.atcommands.ATCommands.internal_static_com_rtrk_protobuf_FileCommand_descriptor;
+      return com.rtrk.atcommands.ATCommand.internal_static_com_rtrk_protobuf_FileCommand_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.rtrk.atcommands.ATCommands.internal_static_com_rtrk_protobuf_FileCommand_fieldAccessorTable
+      return com.rtrk.atcommands.ATCommand.internal_static_com_rtrk_protobuf_FileCommand_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.rtrk.atcommands.ATCommands.FileCommand.class, com.rtrk.atcommands.ATCommands.FileCommand.Builder.class);
+              com.rtrk.atcommands.ATCommand.FileCommand.class, com.rtrk.atcommands.ATCommand.FileCommand.Builder.class);
     }
 
     public static final int MESSAGETYPE_FIELD_NUMBER = 1;
@@ -7680,15 +7713,42 @@ public final class ATCommands {
     /**
      * <code>optional .com.rtrk.protobuf.FileMessageType messageType = 1;</code>
      */
-    public com.rtrk.atcommands.ATCommands.FileMessageType getMessageType() {
-      com.rtrk.atcommands.ATCommands.FileMessageType result = com.rtrk.atcommands.ATCommands.FileMessageType.valueOf(messageType_);
-      return result == null ? com.rtrk.atcommands.ATCommands.FileMessageType.UNRECOGNIZED : result;
+    public com.rtrk.atcommands.ATCommand.FileMessageType getMessageType() {
+      com.rtrk.atcommands.ATCommand.FileMessageType result = com.rtrk.atcommands.ATCommand.FileMessageType.valueOf(messageType_);
+      return result == null ? com.rtrk.atcommands.ATCommand.FileMessageType.UNRECOGNIZED : result;
     }
 
-    public static final int NAMEPATTERN_FIELD_NUMBER = 2;
+    public static final int TEST_FIELD_NUMBER = 2;
+    private boolean test_;
+    /**
+     * <code>optional bool test = 2;</code>
+     */
+    public boolean getTest() {
+      return test_;
+    }
+
+    public static final int EXECUTION_FIELD_NUMBER = 3;
+    private boolean execution_;
+    /**
+     * <code>optional bool execution = 3;</code>
+     */
+    public boolean getExecution() {
+      return execution_;
+    }
+
+    public static final int READ_FIELD_NUMBER = 4;
+    private boolean read_;
+    /**
+     * <code>optional bool read = 4;</code>
+     */
+    public boolean getRead() {
+      return read_;
+    }
+
+    public static final int NAMEPATTERN_FIELD_NUMBER = 5;
     private volatile java.lang.Object namePattern_;
     /**
-     * <code>optional string namePattern = 2;</code>
+     * <code>optional string namePattern = 5;</code>
      */
     public java.lang.String getNamePattern() {
       java.lang.Object ref = namePattern_;
@@ -7703,7 +7763,7 @@ public final class ATCommands {
       }
     }
     /**
-     * <code>optional string namePattern = 2;</code>
+     * <code>optional string namePattern = 5;</code>
      */
     public com.google.protobuf.ByteString
         getNamePatternBytes() {
@@ -7719,55 +7779,55 @@ public final class ATCommands {
       }
     }
 
-    public static final int FREESIZE_FIELD_NUMBER = 3;
+    public static final int FREESIZE_FIELD_NUMBER = 6;
     private int freeSize_;
     /**
-     * <code>optional int32 freeSize = 3;</code>
+     * <code>optional int32 freeSize = 6;</code>
      */
     public int getFreeSize() {
       return freeSize_;
     }
 
-    public static final int TOTALSIZE_FIELD_NUMBER = 4;
+    public static final int TOTALSIZE_FIELD_NUMBER = 7;
     private int totalSize_;
     /**
-     * <code>optional int32 totalSize = 4;</code>
+     * <code>optional int32 totalSize = 7;</code>
      */
     public int getTotalSize() {
       return totalSize_;
     }
 
-    public static final int MAXALLOCSIZE_FIELD_NUMBER = 5;
+    public static final int MAXALLOCSIZE_FIELD_NUMBER = 8;
     private int maxAllocSize_;
     /**
-     * <code>optional int32 maxAllocSize = 5;</code>
+     * <code>optional int32 maxAllocSize = 8;</code>
      */
     public int getMaxAllocSize() {
       return maxAllocSize_;
     }
 
-    public static final int UFSFILESIZE_FIELD_NUMBER = 6;
+    public static final int UFSFILESIZE_FIELD_NUMBER = 9;
     private int uFSFileSize_;
     /**
-     * <code>optional int32 UFSFileSize = 6;</code>
+     * <code>optional int32 UFSFileSize = 9;</code>
      */
     public int getUFSFileSize() {
       return uFSFileSize_;
     }
 
-    public static final int UFSFILENUMBER_FIELD_NUMBER = 7;
+    public static final int UFSFILENUMBER_FIELD_NUMBER = 10;
     private int uFSFileNumber_;
     /**
-     * <code>optional int32 UFSFileNumber = 7;</code>
+     * <code>optional int32 UFSFileNumber = 10;</code>
      */
     public int getUFSFileNumber() {
       return uFSFileNumber_;
     }
 
-    public static final int FILENAME_FIELD_NUMBER = 8;
+    public static final int FILENAME_FIELD_NUMBER = 11;
     private volatile java.lang.Object fileName_;
     /**
-     * <code>optional string fileName = 8;</code>
+     * <code>optional string fileName = 11;</code>
      */
     public java.lang.String getFileName() {
       java.lang.Object ref = fileName_;
@@ -7782,7 +7842,7 @@ public final class ATCommands {
       }
     }
     /**
-     * <code>optional string fileName = 8;</code>
+     * <code>optional string fileName = 11;</code>
      */
     public com.google.protobuf.ByteString
         getFileNameBytes() {
@@ -7798,55 +7858,55 @@ public final class ATCommands {
       }
     }
 
-    public static final int FILESIZE_FIELD_NUMBER = 9;
+    public static final int FILESIZE_FIELD_NUMBER = 12;
     private int fileSize_;
     /**
-     * <code>optional int32 fileSize = 9;</code>
+     * <code>optional int32 fileSize = 12;</code>
      */
     public int getFileSize() {
       return fileSize_;
     }
 
-    public static final int RAMSIZE_FIELD_NUMBER = 10;
+    public static final int RAMSIZE_FIELD_NUMBER = 13;
     private int ramSize_;
     /**
-     * <code>optional int32 ramSize = 10;</code>
+     * <code>optional int32 ramSize = 13;</code>
      */
     public int getRamSize() {
       return ramSize_;
     }
 
-    public static final int UPLOADSIZE_FIELD_NUMBER = 11;
+    public static final int UPLOADSIZE_FIELD_NUMBER = 14;
     private int uploadSize_;
     /**
-     * <code>optional int32 uploadSize = 11;</code>
+     * <code>optional int32 uploadSize = 14;</code>
      */
     public int getUploadSize() {
       return uploadSize_;
     }
 
-    public static final int TIMEOUT_FIELD_NUMBER = 12;
+    public static final int TIMEOUT_FIELD_NUMBER = 15;
     private int timeout_;
     /**
-     * <code>optional int32 timeout = 12;</code>
+     * <code>optional int32 timeout = 15;</code>
      */
     public int getTimeout() {
       return timeout_;
     }
 
-    public static final int ACKMODE_FIELD_NUMBER = 13;
+    public static final int ACKMODE_FIELD_NUMBER = 16;
     private int ackMode_;
     /**
-     * <code>optional int32 ackMode = 13;</code>
+     * <code>optional int32 ackMode = 16;</code>
      */
     public int getAckMode() {
       return ackMode_;
     }
 
-    public static final int SRCFILENAME_FIELD_NUMBER = 14;
+    public static final int SRCFILENAME_FIELD_NUMBER = 17;
     private volatile java.lang.Object srcFileName_;
     /**
-     * <code>optional string srcFileName = 14;</code>
+     * <code>optional string srcFileName = 17;</code>
      */
     public java.lang.String getSrcFileName() {
       java.lang.Object ref = srcFileName_;
@@ -7861,7 +7921,7 @@ public final class ATCommands {
       }
     }
     /**
-     * <code>optional string srcFileName = 14;</code>
+     * <code>optional string srcFileName = 17;</code>
      */
     public com.google.protobuf.ByteString
         getSrcFileNameBytes() {
@@ -7877,10 +7937,10 @@ public final class ATCommands {
       }
     }
 
-    public static final int DESTFILENAME_FIELD_NUMBER = 15;
+    public static final int DESTFILENAME_FIELD_NUMBER = 18;
     private volatile java.lang.Object destFileName_;
     /**
-     * <code>optional string destFileName = 15;</code>
+     * <code>optional string destFileName = 18;</code>
      */
     public java.lang.String getDestFileName() {
       java.lang.Object ref = destFileName_;
@@ -7895,7 +7955,7 @@ public final class ATCommands {
       }
     }
     /**
-     * <code>optional string destFileName = 15;</code>
+     * <code>optional string destFileName = 18;</code>
      */
     public com.google.protobuf.ByteString
         getDestFileNameBytes() {
@@ -7911,46 +7971,46 @@ public final class ATCommands {
       }
     }
 
-    public static final int COPY_FIELD_NUMBER = 16;
-    private boolean copy_;
+    public static final int COPY_FIELD_NUMBER = 19;
+    private int copy_;
     /**
-     * <code>optional bool copy = 16;</code>
+     * <code>optional int32 copy = 19;</code>
      */
-    public boolean getCopy() {
+    public int getCopy() {
       return copy_;
     }
 
-    public static final int OWERWRITE_FIELD_NUMBER = 17;
-    private boolean owerwrite_;
+    public static final int OWERWRITE_FIELD_NUMBER = 20;
+    private int owerwrite_;
     /**
-     * <code>optional bool owerwrite = 17;</code>
+     * <code>optional int32 owerwrite = 20;</code>
      */
-    public boolean getOwerwrite() {
+    public int getOwerwrite() {
       return owerwrite_;
     }
 
-    public static final int MODE_FIELD_NUMBER = 18;
+    public static final int MODE_FIELD_NUMBER = 21;
     private int mode_;
     /**
-     * <code>optional int32 mode = 18;</code>
+     * <code>optional int32 mode = 21;</code>
      */
     public int getMode() {
       return mode_;
     }
 
-    public static final int LENGTH_FIELD_NUMBER = 19;
+    public static final int LENGTH_FIELD_NUMBER = 22;
     private int length_;
     /**
-     * <code>optional int32 length = 19;</code>
+     * <code>optional int32 length = 22;</code>
      */
     public int getLength() {
       return length_;
     }
 
-    public static final int FILEHANDLE_FIELD_NUMBER = 20;
+    public static final int FILEHANDLE_FIELD_NUMBER = 23;
     private volatile java.lang.Object fileHandle_;
     /**
-     * <code>optional string fileHandle = 20;</code>
+     * <code>optional string fileHandle = 23;</code>
      */
     public java.lang.String getFileHandle() {
       java.lang.Object ref = fileHandle_;
@@ -7965,7 +8025,7 @@ public final class ATCommands {
       }
     }
     /**
-     * <code>optional string fileHandle = 20;</code>
+     * <code>optional string fileHandle = 23;</code>
      */
     public com.google.protobuf.ByteString
         getFileHandleBytes() {
@@ -7981,74 +8041,74 @@ public final class ATCommands {
       }
     }
 
-    public static final int READLENGTH_FIELD_NUMBER = 21;
+    public static final int READLENGTH_FIELD_NUMBER = 24;
     private int readLength_;
     /**
-     * <code>optional int32 readLength = 21;</code>
+     * <code>optional int32 readLength = 24;</code>
      */
     public int getReadLength() {
       return readLength_;
     }
 
-    public static final int WRITTENLENGTH_FIELD_NUMBER = 22;
+    public static final int WRITTENLENGTH_FIELD_NUMBER = 25;
     private int writtenLength_;
     /**
-     * <code>optional int32 writtenLength = 22;</code>
+     * <code>optional int32 writtenLength = 25;</code>
      */
     public int getWrittenLength() {
       return writtenLength_;
     }
 
-    public static final int TOTALLENGTH_FIELD_NUMBER = 23;
+    public static final int TOTALLENGTH_FIELD_NUMBER = 26;
     private int totalLength_;
     /**
-     * <code>optional int32 totalLength = 23;</code>
+     * <code>optional int32 totalLength = 26;</code>
      */
     public int getTotalLength() {
       return totalLength_;
     }
 
-    public static final int OFFSET_FIELD_NUMBER = 24;
+    public static final int OFFSET_FIELD_NUMBER = 27;
     private int offset_;
     /**
-     * <code>optional int32 offset = 24;</code>
+     * <code>optional int32 offset = 27;</code>
      */
     public int getOffset() {
       return offset_;
     }
 
-    public static final int POSITION_FIELD_NUMBER = 25;
+    public static final int POSITION_FIELD_NUMBER = 28;
     private int position_;
     /**
-     * <code>optional int32 position = 25;</code>
+     * <code>optional int32 position = 28;</code>
      */
     public int getPosition() {
       return position_;
     }
 
-    public static final int CHECKSUM_FIELD_NUMBER = 26;
+    public static final int CHECKSUM_FIELD_NUMBER = 29;
     private int checksum_;
     /**
-     * <code>optional int32 checksum = 26;</code>
+     * <code>optional int32 checksum = 29;</code>
      */
     public int getChecksum() {
       return checksum_;
     }
 
-    public static final int ERROR_FIELD_NUMBER = 27;
+    public static final int ERROR_FIELD_NUMBER = 30;
     private int error_;
     /**
-     * <code>optional .com.rtrk.protobuf.Error error = 27;</code>
+     * <code>optional .com.rtrk.protobuf.Error error = 30;</code>
      */
     public int getErrorValue() {
       return error_;
     }
     /**
-     * <code>optional .com.rtrk.protobuf.Error error = 27;</code>
+     * <code>optional .com.rtrk.protobuf.Error error = 30;</code>
      */
-    public com.rtrk.atcommands.ATCommands.Error getError() {
-      com.rtrk.atcommands.ATCommands.Error result = com.rtrk.atcommands.ATCommands.Error.valueOf(error_);
-      return result == null ? com.rtrk.atcommands.ATCommands.Error.UNRECOGNIZED : result;
+    public com.rtrk.atcommands.ATCommand.Error getError() {
+      com.rtrk.atcommands.ATCommand.Error result = com.rtrk.atcommands.ATCommand.Error.valueOf(error_);
+      return result == null ? com.rtrk.atcommands.ATCommand.Error.UNRECOGNIZED : result;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -8063,86 +8123,95 @@ public final class ATCommands {
 
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (messageType_ != com.rtrk.atcommands.ATCommands.FileMessageType.GET_STORAGE_DATE_SIZE.getNumber()) {
+      if (messageType_ != com.rtrk.atcommands.ATCommand.FileMessageType.GET_STORAGE_DATE_SIZE.getNumber()) {
         output.writeEnum(1, messageType_);
       }
+      if (test_ != false) {
+        output.writeBool(2, test_);
+      }
+      if (execution_ != false) {
+        output.writeBool(3, execution_);
+      }
+      if (read_ != false) {
+        output.writeBool(4, read_);
+      }
       if (!getNamePatternBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, namePattern_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, namePattern_);
       }
       if (freeSize_ != 0) {
-        output.writeInt32(3, freeSize_);
+        output.writeInt32(6, freeSize_);
       }
       if (totalSize_ != 0) {
-        output.writeInt32(4, totalSize_);
+        output.writeInt32(7, totalSize_);
       }
       if (maxAllocSize_ != 0) {
-        output.writeInt32(5, maxAllocSize_);
+        output.writeInt32(8, maxAllocSize_);
       }
       if (uFSFileSize_ != 0) {
-        output.writeInt32(6, uFSFileSize_);
+        output.writeInt32(9, uFSFileSize_);
       }
       if (uFSFileNumber_ != 0) {
-        output.writeInt32(7, uFSFileNumber_);
+        output.writeInt32(10, uFSFileNumber_);
       }
       if (!getFileNameBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 8, fileName_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 11, fileName_);
       }
       if (fileSize_ != 0) {
-        output.writeInt32(9, fileSize_);
+        output.writeInt32(12, fileSize_);
       }
       if (ramSize_ != 0) {
-        output.writeInt32(10, ramSize_);
+        output.writeInt32(13, ramSize_);
       }
       if (uploadSize_ != 0) {
-        output.writeInt32(11, uploadSize_);
+        output.writeInt32(14, uploadSize_);
       }
       if (timeout_ != 0) {
-        output.writeInt32(12, timeout_);
+        output.writeInt32(15, timeout_);
       }
       if (ackMode_ != 0) {
-        output.writeInt32(13, ackMode_);
+        output.writeInt32(16, ackMode_);
       }
       if (!getSrcFileNameBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 14, srcFileName_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 17, srcFileName_);
       }
       if (!getDestFileNameBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 15, destFileName_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 18, destFileName_);
       }
-      if (copy_ != false) {
-        output.writeBool(16, copy_);
+      if (copy_ != 0) {
+        output.writeInt32(19, copy_);
       }
-      if (owerwrite_ != false) {
-        output.writeBool(17, owerwrite_);
+      if (owerwrite_ != 0) {
+        output.writeInt32(20, owerwrite_);
       }
       if (mode_ != 0) {
-        output.writeInt32(18, mode_);
+        output.writeInt32(21, mode_);
       }
       if (length_ != 0) {
-        output.writeInt32(19, length_);
+        output.writeInt32(22, length_);
       }
       if (!getFileHandleBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 20, fileHandle_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 23, fileHandle_);
       }
       if (readLength_ != 0) {
-        output.writeInt32(21, readLength_);
+        output.writeInt32(24, readLength_);
       }
       if (writtenLength_ != 0) {
-        output.writeInt32(22, writtenLength_);
+        output.writeInt32(25, writtenLength_);
       }
       if (totalLength_ != 0) {
-        output.writeInt32(23, totalLength_);
+        output.writeInt32(26, totalLength_);
       }
       if (offset_ != 0) {
-        output.writeInt32(24, offset_);
+        output.writeInt32(27, offset_);
       }
       if (position_ != 0) {
-        output.writeInt32(25, position_);
+        output.writeInt32(28, position_);
       }
       if (checksum_ != 0) {
-        output.writeInt32(26, checksum_);
+        output.writeInt32(29, checksum_);
       }
-      if (error_ != com.rtrk.atcommands.ATCommands.Error.OK.getNumber()) {
-        output.writeEnum(27, error_);
+      if (error_ != com.rtrk.atcommands.ATCommand.Error.OK.getNumber()) {
+        output.writeEnum(30, error_);
       }
     }
 
@@ -8151,108 +8220,120 @@ public final class ATCommands {
       if (size != -1) return size;
 
       size = 0;
-      if (messageType_ != com.rtrk.atcommands.ATCommands.FileMessageType.GET_STORAGE_DATE_SIZE.getNumber()) {
+      if (messageType_ != com.rtrk.atcommands.ATCommand.FileMessageType.GET_STORAGE_DATE_SIZE.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(1, messageType_);
       }
+      if (test_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(2, test_);
+      }
+      if (execution_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(3, execution_);
+      }
+      if (read_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(4, read_);
+      }
       if (!getNamePatternBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, namePattern_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, namePattern_);
       }
       if (freeSize_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(3, freeSize_);
+          .computeInt32Size(6, freeSize_);
       }
       if (totalSize_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(4, totalSize_);
+          .computeInt32Size(7, totalSize_);
       }
       if (maxAllocSize_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(5, maxAllocSize_);
+          .computeInt32Size(8, maxAllocSize_);
       }
       if (uFSFileSize_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(6, uFSFileSize_);
+          .computeInt32Size(9, uFSFileSize_);
       }
       if (uFSFileNumber_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(7, uFSFileNumber_);
+          .computeInt32Size(10, uFSFileNumber_);
       }
       if (!getFileNameBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, fileName_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(11, fileName_);
       }
       if (fileSize_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(9, fileSize_);
+          .computeInt32Size(12, fileSize_);
       }
       if (ramSize_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(10, ramSize_);
+          .computeInt32Size(13, ramSize_);
       }
       if (uploadSize_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(11, uploadSize_);
+          .computeInt32Size(14, uploadSize_);
       }
       if (timeout_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(12, timeout_);
+          .computeInt32Size(15, timeout_);
       }
       if (ackMode_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(13, ackMode_);
+          .computeInt32Size(16, ackMode_);
       }
       if (!getSrcFileNameBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(14, srcFileName_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(17, srcFileName_);
       }
       if (!getDestFileNameBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(15, destFileName_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(18, destFileName_);
       }
-      if (copy_ != false) {
+      if (copy_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(16, copy_);
+          .computeInt32Size(19, copy_);
       }
-      if (owerwrite_ != false) {
+      if (owerwrite_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(17, owerwrite_);
+          .computeInt32Size(20, owerwrite_);
       }
       if (mode_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(18, mode_);
+          .computeInt32Size(21, mode_);
       }
       if (length_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(19, length_);
+          .computeInt32Size(22, length_);
       }
       if (!getFileHandleBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(20, fileHandle_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(23, fileHandle_);
       }
       if (readLength_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(21, readLength_);
+          .computeInt32Size(24, readLength_);
       }
       if (writtenLength_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(22, writtenLength_);
+          .computeInt32Size(25, writtenLength_);
       }
       if (totalLength_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(23, totalLength_);
+          .computeInt32Size(26, totalLength_);
       }
       if (offset_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(24, offset_);
+          .computeInt32Size(27, offset_);
       }
       if (position_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(25, position_);
+          .computeInt32Size(28, position_);
       }
       if (checksum_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(26, checksum_);
+          .computeInt32Size(29, checksum_);
       }
-      if (error_ != com.rtrk.atcommands.ATCommands.Error.OK.getNumber()) {
+      if (error_ != com.rtrk.atcommands.ATCommand.Error.OK.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(27, error_);
+          .computeEnumSize(30, error_);
       }
       memoizedSize = size;
       return size;
@@ -8264,13 +8345,19 @@ public final class ATCommands {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.rtrk.atcommands.ATCommands.FileCommand)) {
+      if (!(obj instanceof com.rtrk.atcommands.ATCommand.FileCommand)) {
         return super.equals(obj);
       }
-      com.rtrk.atcommands.ATCommands.FileCommand other = (com.rtrk.atcommands.ATCommands.FileCommand) obj;
+      com.rtrk.atcommands.ATCommand.FileCommand other = (com.rtrk.atcommands.ATCommand.FileCommand) obj;
 
       boolean result = true;
       result = result && messageType_ == other.messageType_;
+      result = result && (getTest()
+          == other.getTest());
+      result = result && (getExecution()
+          == other.getExecution());
+      result = result && (getRead()
+          == other.getRead());
       result = result && getNamePattern()
           .equals(other.getNamePattern());
       result = result && (getFreeSize()
@@ -8334,6 +8421,15 @@ public final class ATCommands {
       hash = (19 * hash) + getDescriptorForType().hashCode();
       hash = (37 * hash) + MESSAGETYPE_FIELD_NUMBER;
       hash = (53 * hash) + messageType_;
+      hash = (37 * hash) + TEST_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getTest());
+      hash = (37 * hash) + EXECUTION_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getExecution());
+      hash = (37 * hash) + READ_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getRead());
       hash = (37 * hash) + NAMEPATTERN_FIELD_NUMBER;
       hash = (53 * hash) + getNamePattern().hashCode();
       hash = (37 * hash) + FREESIZE_FIELD_NUMBER;
@@ -8363,11 +8459,9 @@ public final class ATCommands {
       hash = (37 * hash) + DESTFILENAME_FIELD_NUMBER;
       hash = (53 * hash) + getDestFileName().hashCode();
       hash = (37 * hash) + COPY_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-          getCopy());
+      hash = (53 * hash) + getCopy();
       hash = (37 * hash) + OWERWRITE_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-          getOwerwrite());
+      hash = (53 * hash) + getOwerwrite();
       hash = (37 * hash) + MODE_FIELD_NUMBER;
       hash = (53 * hash) + getMode();
       hash = (37 * hash) + LENGTH_FIELD_NUMBER;
@@ -8393,58 +8487,58 @@ public final class ATCommands {
       return hash;
     }
 
-    public static com.rtrk.atcommands.ATCommands.FileCommand parseFrom(
+    public static com.rtrk.atcommands.ATCommand.FileCommand parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.rtrk.atcommands.ATCommands.FileCommand parseFrom(
+    public static com.rtrk.atcommands.ATCommand.FileCommand parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.rtrk.atcommands.ATCommands.FileCommand parseFrom(byte[] data)
+    public static com.rtrk.atcommands.ATCommand.FileCommand parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.rtrk.atcommands.ATCommands.FileCommand parseFrom(
+    public static com.rtrk.atcommands.ATCommand.FileCommand parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.rtrk.atcommands.ATCommands.FileCommand parseFrom(java.io.InputStream input)
+    public static com.rtrk.atcommands.ATCommand.FileCommand parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.rtrk.atcommands.ATCommands.FileCommand parseFrom(
+    public static com.rtrk.atcommands.ATCommand.FileCommand parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.rtrk.atcommands.ATCommands.FileCommand parseDelimitedFrom(java.io.InputStream input)
+    public static com.rtrk.atcommands.ATCommand.FileCommand parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static com.rtrk.atcommands.ATCommands.FileCommand parseDelimitedFrom(
+    public static com.rtrk.atcommands.ATCommand.FileCommand parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.rtrk.atcommands.ATCommands.FileCommand parseFrom(
+    public static com.rtrk.atcommands.ATCommand.FileCommand parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.rtrk.atcommands.ATCommands.FileCommand parseFrom(
+    public static com.rtrk.atcommands.ATCommand.FileCommand parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -8456,7 +8550,7 @@ public final class ATCommands {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.rtrk.atcommands.ATCommands.FileCommand prototype) {
+    public static Builder newBuilder(com.rtrk.atcommands.ATCommand.FileCommand prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() {
@@ -8476,20 +8570,20 @@ public final class ATCommands {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:com.rtrk.protobuf.FileCommand)
-        com.rtrk.atcommands.ATCommands.FileCommandOrBuilder {
+        com.rtrk.atcommands.ATCommand.FileCommandOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.rtrk.atcommands.ATCommands.internal_static_com_rtrk_protobuf_FileCommand_descriptor;
+        return com.rtrk.atcommands.ATCommand.internal_static_com_rtrk_protobuf_FileCommand_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.rtrk.atcommands.ATCommands.internal_static_com_rtrk_protobuf_FileCommand_fieldAccessorTable
+        return com.rtrk.atcommands.ATCommand.internal_static_com_rtrk_protobuf_FileCommand_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.rtrk.atcommands.ATCommands.FileCommand.class, com.rtrk.atcommands.ATCommands.FileCommand.Builder.class);
+                com.rtrk.atcommands.ATCommand.FileCommand.class, com.rtrk.atcommands.ATCommand.FileCommand.Builder.class);
       }
 
-      // Construct using com.rtrk.atcommands.ATCommands.FileCommand.newBuilder()
+      // Construct using com.rtrk.atcommands.ATCommand.FileCommand.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -8507,6 +8601,12 @@ public final class ATCommands {
       public Builder clear() {
         super.clear();
         messageType_ = 0;
+
+        test_ = false;
+
+        execution_ = false;
+
+        read_ = false;
 
         namePattern_ = "";
 
@@ -8536,9 +8636,9 @@ public final class ATCommands {
 
         destFileName_ = "";
 
-        copy_ = false;
+        copy_ = 0;
 
-        owerwrite_ = false;
+        owerwrite_ = 0;
 
         mode_ = 0;
 
@@ -8565,24 +8665,27 @@ public final class ATCommands {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.rtrk.atcommands.ATCommands.internal_static_com_rtrk_protobuf_FileCommand_descriptor;
+        return com.rtrk.atcommands.ATCommand.internal_static_com_rtrk_protobuf_FileCommand_descriptor;
       }
 
-      public com.rtrk.atcommands.ATCommands.FileCommand getDefaultInstanceForType() {
-        return com.rtrk.atcommands.ATCommands.FileCommand.getDefaultInstance();
+      public com.rtrk.atcommands.ATCommand.FileCommand getDefaultInstanceForType() {
+        return com.rtrk.atcommands.ATCommand.FileCommand.getDefaultInstance();
       }
 
-      public com.rtrk.atcommands.ATCommands.FileCommand build() {
-        com.rtrk.atcommands.ATCommands.FileCommand result = buildPartial();
+      public com.rtrk.atcommands.ATCommand.FileCommand build() {
+        com.rtrk.atcommands.ATCommand.FileCommand result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      public com.rtrk.atcommands.ATCommands.FileCommand buildPartial() {
-        com.rtrk.atcommands.ATCommands.FileCommand result = new com.rtrk.atcommands.ATCommands.FileCommand(this);
+      public com.rtrk.atcommands.ATCommand.FileCommand buildPartial() {
+        com.rtrk.atcommands.ATCommand.FileCommand result = new com.rtrk.atcommands.ATCommand.FileCommand(this);
         result.messageType_ = messageType_;
+        result.test_ = test_;
+        result.execution_ = execution_;
+        result.read_ = read_;
         result.namePattern_ = namePattern_;
         result.freeSize_ = freeSize_;
         result.totalSize_ = totalSize_;
@@ -8640,18 +8743,27 @@ public final class ATCommands {
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.rtrk.atcommands.ATCommands.FileCommand) {
-          return mergeFrom((com.rtrk.atcommands.ATCommands.FileCommand)other);
+        if (other instanceof com.rtrk.atcommands.ATCommand.FileCommand) {
+          return mergeFrom((com.rtrk.atcommands.ATCommand.FileCommand)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.rtrk.atcommands.ATCommands.FileCommand other) {
-        if (other == com.rtrk.atcommands.ATCommands.FileCommand.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.rtrk.atcommands.ATCommand.FileCommand other) {
+        if (other == com.rtrk.atcommands.ATCommand.FileCommand.getDefaultInstance()) return this;
         if (other.messageType_ != 0) {
           setMessageTypeValue(other.getMessageTypeValue());
+        }
+        if (other.getTest() != false) {
+          setTest(other.getTest());
+        }
+        if (other.getExecution() != false) {
+          setExecution(other.getExecution());
+        }
+        if (other.getRead() != false) {
+          setRead(other.getRead());
         }
         if (!other.getNamePattern().isEmpty()) {
           namePattern_ = other.namePattern_;
@@ -8699,10 +8811,10 @@ public final class ATCommands {
           destFileName_ = other.destFileName_;
           onChanged();
         }
-        if (other.getCopy() != false) {
+        if (other.getCopy() != 0) {
           setCopy(other.getCopy());
         }
-        if (other.getOwerwrite() != false) {
+        if (other.getOwerwrite() != 0) {
           setOwerwrite(other.getOwerwrite());
         }
         if (other.getMode() != 0) {
@@ -8748,11 +8860,11 @@ public final class ATCommands {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.rtrk.atcommands.ATCommands.FileCommand parsedMessage = null;
+        com.rtrk.atcommands.ATCommand.FileCommand parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.rtrk.atcommands.ATCommands.FileCommand) e.getUnfinishedMessage();
+          parsedMessage = (com.rtrk.atcommands.ATCommand.FileCommand) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -8780,14 +8892,14 @@ public final class ATCommands {
       /**
        * <code>optional .com.rtrk.protobuf.FileMessageType messageType = 1;</code>
        */
-      public com.rtrk.atcommands.ATCommands.FileMessageType getMessageType() {
-        com.rtrk.atcommands.ATCommands.FileMessageType result = com.rtrk.atcommands.ATCommands.FileMessageType.valueOf(messageType_);
-        return result == null ? com.rtrk.atcommands.ATCommands.FileMessageType.UNRECOGNIZED : result;
+      public com.rtrk.atcommands.ATCommand.FileMessageType getMessageType() {
+        com.rtrk.atcommands.ATCommand.FileMessageType result = com.rtrk.atcommands.ATCommand.FileMessageType.valueOf(messageType_);
+        return result == null ? com.rtrk.atcommands.ATCommand.FileMessageType.UNRECOGNIZED : result;
       }
       /**
        * <code>optional .com.rtrk.protobuf.FileMessageType messageType = 1;</code>
        */
-      public Builder setMessageType(com.rtrk.atcommands.ATCommands.FileMessageType value) {
+      public Builder setMessageType(com.rtrk.atcommands.ATCommand.FileMessageType value) {
         if (value == null) {
           throw new NullPointerException();
         }
@@ -8806,9 +8918,87 @@ public final class ATCommands {
         return this;
       }
 
+      private boolean test_ ;
+      /**
+       * <code>optional bool test = 2;</code>
+       */
+      public boolean getTest() {
+        return test_;
+      }
+      /**
+       * <code>optional bool test = 2;</code>
+       */
+      public Builder setTest(boolean value) {
+        
+        test_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool test = 2;</code>
+       */
+      public Builder clearTest() {
+        
+        test_ = false;
+        onChanged();
+        return this;
+      }
+
+      private boolean execution_ ;
+      /**
+       * <code>optional bool execution = 3;</code>
+       */
+      public boolean getExecution() {
+        return execution_;
+      }
+      /**
+       * <code>optional bool execution = 3;</code>
+       */
+      public Builder setExecution(boolean value) {
+        
+        execution_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool execution = 3;</code>
+       */
+      public Builder clearExecution() {
+        
+        execution_ = false;
+        onChanged();
+        return this;
+      }
+
+      private boolean read_ ;
+      /**
+       * <code>optional bool read = 4;</code>
+       */
+      public boolean getRead() {
+        return read_;
+      }
+      /**
+       * <code>optional bool read = 4;</code>
+       */
+      public Builder setRead(boolean value) {
+        
+        read_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool read = 4;</code>
+       */
+      public Builder clearRead() {
+        
+        read_ = false;
+        onChanged();
+        return this;
+      }
+
       private java.lang.Object namePattern_ = "";
       /**
-       * <code>optional string namePattern = 2;</code>
+       * <code>optional string namePattern = 5;</code>
        */
       public java.lang.String getNamePattern() {
         java.lang.Object ref = namePattern_;
@@ -8823,7 +9013,7 @@ public final class ATCommands {
         }
       }
       /**
-       * <code>optional string namePattern = 2;</code>
+       * <code>optional string namePattern = 5;</code>
        */
       public com.google.protobuf.ByteString
           getNamePatternBytes() {
@@ -8839,7 +9029,7 @@ public final class ATCommands {
         }
       }
       /**
-       * <code>optional string namePattern = 2;</code>
+       * <code>optional string namePattern = 5;</code>
        */
       public Builder setNamePattern(
           java.lang.String value) {
@@ -8852,7 +9042,7 @@ public final class ATCommands {
         return this;
       }
       /**
-       * <code>optional string namePattern = 2;</code>
+       * <code>optional string namePattern = 5;</code>
        */
       public Builder clearNamePattern() {
         
@@ -8861,7 +9051,7 @@ public final class ATCommands {
         return this;
       }
       /**
-       * <code>optional string namePattern = 2;</code>
+       * <code>optional string namePattern = 5;</code>
        */
       public Builder setNamePatternBytes(
           com.google.protobuf.ByteString value) {
@@ -8877,13 +9067,13 @@ public final class ATCommands {
 
       private int freeSize_ ;
       /**
-       * <code>optional int32 freeSize = 3;</code>
+       * <code>optional int32 freeSize = 6;</code>
        */
       public int getFreeSize() {
         return freeSize_;
       }
       /**
-       * <code>optional int32 freeSize = 3;</code>
+       * <code>optional int32 freeSize = 6;</code>
        */
       public Builder setFreeSize(int value) {
         
@@ -8892,7 +9082,7 @@ public final class ATCommands {
         return this;
       }
       /**
-       * <code>optional int32 freeSize = 3;</code>
+       * <code>optional int32 freeSize = 6;</code>
        */
       public Builder clearFreeSize() {
         
@@ -8903,13 +9093,13 @@ public final class ATCommands {
 
       private int totalSize_ ;
       /**
-       * <code>optional int32 totalSize = 4;</code>
+       * <code>optional int32 totalSize = 7;</code>
        */
       public int getTotalSize() {
         return totalSize_;
       }
       /**
-       * <code>optional int32 totalSize = 4;</code>
+       * <code>optional int32 totalSize = 7;</code>
        */
       public Builder setTotalSize(int value) {
         
@@ -8918,7 +9108,7 @@ public final class ATCommands {
         return this;
       }
       /**
-       * <code>optional int32 totalSize = 4;</code>
+       * <code>optional int32 totalSize = 7;</code>
        */
       public Builder clearTotalSize() {
         
@@ -8929,13 +9119,13 @@ public final class ATCommands {
 
       private int maxAllocSize_ ;
       /**
-       * <code>optional int32 maxAllocSize = 5;</code>
+       * <code>optional int32 maxAllocSize = 8;</code>
        */
       public int getMaxAllocSize() {
         return maxAllocSize_;
       }
       /**
-       * <code>optional int32 maxAllocSize = 5;</code>
+       * <code>optional int32 maxAllocSize = 8;</code>
        */
       public Builder setMaxAllocSize(int value) {
         
@@ -8944,7 +9134,7 @@ public final class ATCommands {
         return this;
       }
       /**
-       * <code>optional int32 maxAllocSize = 5;</code>
+       * <code>optional int32 maxAllocSize = 8;</code>
        */
       public Builder clearMaxAllocSize() {
         
@@ -8955,13 +9145,13 @@ public final class ATCommands {
 
       private int uFSFileSize_ ;
       /**
-       * <code>optional int32 UFSFileSize = 6;</code>
+       * <code>optional int32 UFSFileSize = 9;</code>
        */
       public int getUFSFileSize() {
         return uFSFileSize_;
       }
       /**
-       * <code>optional int32 UFSFileSize = 6;</code>
+       * <code>optional int32 UFSFileSize = 9;</code>
        */
       public Builder setUFSFileSize(int value) {
         
@@ -8970,7 +9160,7 @@ public final class ATCommands {
         return this;
       }
       /**
-       * <code>optional int32 UFSFileSize = 6;</code>
+       * <code>optional int32 UFSFileSize = 9;</code>
        */
       public Builder clearUFSFileSize() {
         
@@ -8981,13 +9171,13 @@ public final class ATCommands {
 
       private int uFSFileNumber_ ;
       /**
-       * <code>optional int32 UFSFileNumber = 7;</code>
+       * <code>optional int32 UFSFileNumber = 10;</code>
        */
       public int getUFSFileNumber() {
         return uFSFileNumber_;
       }
       /**
-       * <code>optional int32 UFSFileNumber = 7;</code>
+       * <code>optional int32 UFSFileNumber = 10;</code>
        */
       public Builder setUFSFileNumber(int value) {
         
@@ -8996,7 +9186,7 @@ public final class ATCommands {
         return this;
       }
       /**
-       * <code>optional int32 UFSFileNumber = 7;</code>
+       * <code>optional int32 UFSFileNumber = 10;</code>
        */
       public Builder clearUFSFileNumber() {
         
@@ -9007,7 +9197,7 @@ public final class ATCommands {
 
       private java.lang.Object fileName_ = "";
       /**
-       * <code>optional string fileName = 8;</code>
+       * <code>optional string fileName = 11;</code>
        */
       public java.lang.String getFileName() {
         java.lang.Object ref = fileName_;
@@ -9022,7 +9212,7 @@ public final class ATCommands {
         }
       }
       /**
-       * <code>optional string fileName = 8;</code>
+       * <code>optional string fileName = 11;</code>
        */
       public com.google.protobuf.ByteString
           getFileNameBytes() {
@@ -9038,7 +9228,7 @@ public final class ATCommands {
         }
       }
       /**
-       * <code>optional string fileName = 8;</code>
+       * <code>optional string fileName = 11;</code>
        */
       public Builder setFileName(
           java.lang.String value) {
@@ -9051,7 +9241,7 @@ public final class ATCommands {
         return this;
       }
       /**
-       * <code>optional string fileName = 8;</code>
+       * <code>optional string fileName = 11;</code>
        */
       public Builder clearFileName() {
         
@@ -9060,7 +9250,7 @@ public final class ATCommands {
         return this;
       }
       /**
-       * <code>optional string fileName = 8;</code>
+       * <code>optional string fileName = 11;</code>
        */
       public Builder setFileNameBytes(
           com.google.protobuf.ByteString value) {
@@ -9076,13 +9266,13 @@ public final class ATCommands {
 
       private int fileSize_ ;
       /**
-       * <code>optional int32 fileSize = 9;</code>
+       * <code>optional int32 fileSize = 12;</code>
        */
       public int getFileSize() {
         return fileSize_;
       }
       /**
-       * <code>optional int32 fileSize = 9;</code>
+       * <code>optional int32 fileSize = 12;</code>
        */
       public Builder setFileSize(int value) {
         
@@ -9091,7 +9281,7 @@ public final class ATCommands {
         return this;
       }
       /**
-       * <code>optional int32 fileSize = 9;</code>
+       * <code>optional int32 fileSize = 12;</code>
        */
       public Builder clearFileSize() {
         
@@ -9102,13 +9292,13 @@ public final class ATCommands {
 
       private int ramSize_ ;
       /**
-       * <code>optional int32 ramSize = 10;</code>
+       * <code>optional int32 ramSize = 13;</code>
        */
       public int getRamSize() {
         return ramSize_;
       }
       /**
-       * <code>optional int32 ramSize = 10;</code>
+       * <code>optional int32 ramSize = 13;</code>
        */
       public Builder setRamSize(int value) {
         
@@ -9117,7 +9307,7 @@ public final class ATCommands {
         return this;
       }
       /**
-       * <code>optional int32 ramSize = 10;</code>
+       * <code>optional int32 ramSize = 13;</code>
        */
       public Builder clearRamSize() {
         
@@ -9128,13 +9318,13 @@ public final class ATCommands {
 
       private int uploadSize_ ;
       /**
-       * <code>optional int32 uploadSize = 11;</code>
+       * <code>optional int32 uploadSize = 14;</code>
        */
       public int getUploadSize() {
         return uploadSize_;
       }
       /**
-       * <code>optional int32 uploadSize = 11;</code>
+       * <code>optional int32 uploadSize = 14;</code>
        */
       public Builder setUploadSize(int value) {
         
@@ -9143,7 +9333,7 @@ public final class ATCommands {
         return this;
       }
       /**
-       * <code>optional int32 uploadSize = 11;</code>
+       * <code>optional int32 uploadSize = 14;</code>
        */
       public Builder clearUploadSize() {
         
@@ -9154,13 +9344,13 @@ public final class ATCommands {
 
       private int timeout_ ;
       /**
-       * <code>optional int32 timeout = 12;</code>
+       * <code>optional int32 timeout = 15;</code>
        */
       public int getTimeout() {
         return timeout_;
       }
       /**
-       * <code>optional int32 timeout = 12;</code>
+       * <code>optional int32 timeout = 15;</code>
        */
       public Builder setTimeout(int value) {
         
@@ -9169,7 +9359,7 @@ public final class ATCommands {
         return this;
       }
       /**
-       * <code>optional int32 timeout = 12;</code>
+       * <code>optional int32 timeout = 15;</code>
        */
       public Builder clearTimeout() {
         
@@ -9180,13 +9370,13 @@ public final class ATCommands {
 
       private int ackMode_ ;
       /**
-       * <code>optional int32 ackMode = 13;</code>
+       * <code>optional int32 ackMode = 16;</code>
        */
       public int getAckMode() {
         return ackMode_;
       }
       /**
-       * <code>optional int32 ackMode = 13;</code>
+       * <code>optional int32 ackMode = 16;</code>
        */
       public Builder setAckMode(int value) {
         
@@ -9195,7 +9385,7 @@ public final class ATCommands {
         return this;
       }
       /**
-       * <code>optional int32 ackMode = 13;</code>
+       * <code>optional int32 ackMode = 16;</code>
        */
       public Builder clearAckMode() {
         
@@ -9206,7 +9396,7 @@ public final class ATCommands {
 
       private java.lang.Object srcFileName_ = "";
       /**
-       * <code>optional string srcFileName = 14;</code>
+       * <code>optional string srcFileName = 17;</code>
        */
       public java.lang.String getSrcFileName() {
         java.lang.Object ref = srcFileName_;
@@ -9221,7 +9411,7 @@ public final class ATCommands {
         }
       }
       /**
-       * <code>optional string srcFileName = 14;</code>
+       * <code>optional string srcFileName = 17;</code>
        */
       public com.google.protobuf.ByteString
           getSrcFileNameBytes() {
@@ -9237,7 +9427,7 @@ public final class ATCommands {
         }
       }
       /**
-       * <code>optional string srcFileName = 14;</code>
+       * <code>optional string srcFileName = 17;</code>
        */
       public Builder setSrcFileName(
           java.lang.String value) {
@@ -9250,7 +9440,7 @@ public final class ATCommands {
         return this;
       }
       /**
-       * <code>optional string srcFileName = 14;</code>
+       * <code>optional string srcFileName = 17;</code>
        */
       public Builder clearSrcFileName() {
         
@@ -9259,7 +9449,7 @@ public final class ATCommands {
         return this;
       }
       /**
-       * <code>optional string srcFileName = 14;</code>
+       * <code>optional string srcFileName = 17;</code>
        */
       public Builder setSrcFileNameBytes(
           com.google.protobuf.ByteString value) {
@@ -9275,7 +9465,7 @@ public final class ATCommands {
 
       private java.lang.Object destFileName_ = "";
       /**
-       * <code>optional string destFileName = 15;</code>
+       * <code>optional string destFileName = 18;</code>
        */
       public java.lang.String getDestFileName() {
         java.lang.Object ref = destFileName_;
@@ -9290,7 +9480,7 @@ public final class ATCommands {
         }
       }
       /**
-       * <code>optional string destFileName = 15;</code>
+       * <code>optional string destFileName = 18;</code>
        */
       public com.google.protobuf.ByteString
           getDestFileNameBytes() {
@@ -9306,7 +9496,7 @@ public final class ATCommands {
         }
       }
       /**
-       * <code>optional string destFileName = 15;</code>
+       * <code>optional string destFileName = 18;</code>
        */
       public Builder setDestFileName(
           java.lang.String value) {
@@ -9319,7 +9509,7 @@ public final class ATCommands {
         return this;
       }
       /**
-       * <code>optional string destFileName = 15;</code>
+       * <code>optional string destFileName = 18;</code>
        */
       public Builder clearDestFileName() {
         
@@ -9328,7 +9518,7 @@ public final class ATCommands {
         return this;
       }
       /**
-       * <code>optional string destFileName = 15;</code>
+       * <code>optional string destFileName = 18;</code>
        */
       public Builder setDestFileNameBytes(
           com.google.protobuf.ByteString value) {
@@ -9342,67 +9532,67 @@ public final class ATCommands {
         return this;
       }
 
-      private boolean copy_ ;
+      private int copy_ ;
       /**
-       * <code>optional bool copy = 16;</code>
+       * <code>optional int32 copy = 19;</code>
        */
-      public boolean getCopy() {
+      public int getCopy() {
         return copy_;
       }
       /**
-       * <code>optional bool copy = 16;</code>
+       * <code>optional int32 copy = 19;</code>
        */
-      public Builder setCopy(boolean value) {
+      public Builder setCopy(int value) {
         
         copy_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>optional bool copy = 16;</code>
+       * <code>optional int32 copy = 19;</code>
        */
       public Builder clearCopy() {
         
-        copy_ = false;
+        copy_ = 0;
         onChanged();
         return this;
       }
 
-      private boolean owerwrite_ ;
+      private int owerwrite_ ;
       /**
-       * <code>optional bool owerwrite = 17;</code>
+       * <code>optional int32 owerwrite = 20;</code>
        */
-      public boolean getOwerwrite() {
+      public int getOwerwrite() {
         return owerwrite_;
       }
       /**
-       * <code>optional bool owerwrite = 17;</code>
+       * <code>optional int32 owerwrite = 20;</code>
        */
-      public Builder setOwerwrite(boolean value) {
+      public Builder setOwerwrite(int value) {
         
         owerwrite_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>optional bool owerwrite = 17;</code>
+       * <code>optional int32 owerwrite = 20;</code>
        */
       public Builder clearOwerwrite() {
         
-        owerwrite_ = false;
+        owerwrite_ = 0;
         onChanged();
         return this;
       }
 
       private int mode_ ;
       /**
-       * <code>optional int32 mode = 18;</code>
+       * <code>optional int32 mode = 21;</code>
        */
       public int getMode() {
         return mode_;
       }
       /**
-       * <code>optional int32 mode = 18;</code>
+       * <code>optional int32 mode = 21;</code>
        */
       public Builder setMode(int value) {
         
@@ -9411,7 +9601,7 @@ public final class ATCommands {
         return this;
       }
       /**
-       * <code>optional int32 mode = 18;</code>
+       * <code>optional int32 mode = 21;</code>
        */
       public Builder clearMode() {
         
@@ -9422,13 +9612,13 @@ public final class ATCommands {
 
       private int length_ ;
       /**
-       * <code>optional int32 length = 19;</code>
+       * <code>optional int32 length = 22;</code>
        */
       public int getLength() {
         return length_;
       }
       /**
-       * <code>optional int32 length = 19;</code>
+       * <code>optional int32 length = 22;</code>
        */
       public Builder setLength(int value) {
         
@@ -9437,7 +9627,7 @@ public final class ATCommands {
         return this;
       }
       /**
-       * <code>optional int32 length = 19;</code>
+       * <code>optional int32 length = 22;</code>
        */
       public Builder clearLength() {
         
@@ -9448,7 +9638,7 @@ public final class ATCommands {
 
       private java.lang.Object fileHandle_ = "";
       /**
-       * <code>optional string fileHandle = 20;</code>
+       * <code>optional string fileHandle = 23;</code>
        */
       public java.lang.String getFileHandle() {
         java.lang.Object ref = fileHandle_;
@@ -9463,7 +9653,7 @@ public final class ATCommands {
         }
       }
       /**
-       * <code>optional string fileHandle = 20;</code>
+       * <code>optional string fileHandle = 23;</code>
        */
       public com.google.protobuf.ByteString
           getFileHandleBytes() {
@@ -9479,7 +9669,7 @@ public final class ATCommands {
         }
       }
       /**
-       * <code>optional string fileHandle = 20;</code>
+       * <code>optional string fileHandle = 23;</code>
        */
       public Builder setFileHandle(
           java.lang.String value) {
@@ -9492,7 +9682,7 @@ public final class ATCommands {
         return this;
       }
       /**
-       * <code>optional string fileHandle = 20;</code>
+       * <code>optional string fileHandle = 23;</code>
        */
       public Builder clearFileHandle() {
         
@@ -9501,7 +9691,7 @@ public final class ATCommands {
         return this;
       }
       /**
-       * <code>optional string fileHandle = 20;</code>
+       * <code>optional string fileHandle = 23;</code>
        */
       public Builder setFileHandleBytes(
           com.google.protobuf.ByteString value) {
@@ -9517,13 +9707,13 @@ public final class ATCommands {
 
       private int readLength_ ;
       /**
-       * <code>optional int32 readLength = 21;</code>
+       * <code>optional int32 readLength = 24;</code>
        */
       public int getReadLength() {
         return readLength_;
       }
       /**
-       * <code>optional int32 readLength = 21;</code>
+       * <code>optional int32 readLength = 24;</code>
        */
       public Builder setReadLength(int value) {
         
@@ -9532,7 +9722,7 @@ public final class ATCommands {
         return this;
       }
       /**
-       * <code>optional int32 readLength = 21;</code>
+       * <code>optional int32 readLength = 24;</code>
        */
       public Builder clearReadLength() {
         
@@ -9543,13 +9733,13 @@ public final class ATCommands {
 
       private int writtenLength_ ;
       /**
-       * <code>optional int32 writtenLength = 22;</code>
+       * <code>optional int32 writtenLength = 25;</code>
        */
       public int getWrittenLength() {
         return writtenLength_;
       }
       /**
-       * <code>optional int32 writtenLength = 22;</code>
+       * <code>optional int32 writtenLength = 25;</code>
        */
       public Builder setWrittenLength(int value) {
         
@@ -9558,7 +9748,7 @@ public final class ATCommands {
         return this;
       }
       /**
-       * <code>optional int32 writtenLength = 22;</code>
+       * <code>optional int32 writtenLength = 25;</code>
        */
       public Builder clearWrittenLength() {
         
@@ -9569,13 +9759,13 @@ public final class ATCommands {
 
       private int totalLength_ ;
       /**
-       * <code>optional int32 totalLength = 23;</code>
+       * <code>optional int32 totalLength = 26;</code>
        */
       public int getTotalLength() {
         return totalLength_;
       }
       /**
-       * <code>optional int32 totalLength = 23;</code>
+       * <code>optional int32 totalLength = 26;</code>
        */
       public Builder setTotalLength(int value) {
         
@@ -9584,7 +9774,7 @@ public final class ATCommands {
         return this;
       }
       /**
-       * <code>optional int32 totalLength = 23;</code>
+       * <code>optional int32 totalLength = 26;</code>
        */
       public Builder clearTotalLength() {
         
@@ -9595,13 +9785,13 @@ public final class ATCommands {
 
       private int offset_ ;
       /**
-       * <code>optional int32 offset = 24;</code>
+       * <code>optional int32 offset = 27;</code>
        */
       public int getOffset() {
         return offset_;
       }
       /**
-       * <code>optional int32 offset = 24;</code>
+       * <code>optional int32 offset = 27;</code>
        */
       public Builder setOffset(int value) {
         
@@ -9610,7 +9800,7 @@ public final class ATCommands {
         return this;
       }
       /**
-       * <code>optional int32 offset = 24;</code>
+       * <code>optional int32 offset = 27;</code>
        */
       public Builder clearOffset() {
         
@@ -9621,13 +9811,13 @@ public final class ATCommands {
 
       private int position_ ;
       /**
-       * <code>optional int32 position = 25;</code>
+       * <code>optional int32 position = 28;</code>
        */
       public int getPosition() {
         return position_;
       }
       /**
-       * <code>optional int32 position = 25;</code>
+       * <code>optional int32 position = 28;</code>
        */
       public Builder setPosition(int value) {
         
@@ -9636,7 +9826,7 @@ public final class ATCommands {
         return this;
       }
       /**
-       * <code>optional int32 position = 25;</code>
+       * <code>optional int32 position = 28;</code>
        */
       public Builder clearPosition() {
         
@@ -9647,13 +9837,13 @@ public final class ATCommands {
 
       private int checksum_ ;
       /**
-       * <code>optional int32 checksum = 26;</code>
+       * <code>optional int32 checksum = 29;</code>
        */
       public int getChecksum() {
         return checksum_;
       }
       /**
-       * <code>optional int32 checksum = 26;</code>
+       * <code>optional int32 checksum = 29;</code>
        */
       public Builder setChecksum(int value) {
         
@@ -9662,7 +9852,7 @@ public final class ATCommands {
         return this;
       }
       /**
-       * <code>optional int32 checksum = 26;</code>
+       * <code>optional int32 checksum = 29;</code>
        */
       public Builder clearChecksum() {
         
@@ -9673,13 +9863,13 @@ public final class ATCommands {
 
       private int error_ = 0;
       /**
-       * <code>optional .com.rtrk.protobuf.Error error = 27;</code>
+       * <code>optional .com.rtrk.protobuf.Error error = 30;</code>
        */
       public int getErrorValue() {
         return error_;
       }
       /**
-       * <code>optional .com.rtrk.protobuf.Error error = 27;</code>
+       * <code>optional .com.rtrk.protobuf.Error error = 30;</code>
        */
       public Builder setErrorValue(int value) {
         error_ = value;
@@ -9687,16 +9877,16 @@ public final class ATCommands {
         return this;
       }
       /**
-       * <code>optional .com.rtrk.protobuf.Error error = 27;</code>
+       * <code>optional .com.rtrk.protobuf.Error error = 30;</code>
        */
-      public com.rtrk.atcommands.ATCommands.Error getError() {
-        com.rtrk.atcommands.ATCommands.Error result = com.rtrk.atcommands.ATCommands.Error.valueOf(error_);
-        return result == null ? com.rtrk.atcommands.ATCommands.Error.UNRECOGNIZED : result;
+      public com.rtrk.atcommands.ATCommand.Error getError() {
+        com.rtrk.atcommands.ATCommand.Error result = com.rtrk.atcommands.ATCommand.Error.valueOf(error_);
+        return result == null ? com.rtrk.atcommands.ATCommand.Error.UNRECOGNIZED : result;
       }
       /**
-       * <code>optional .com.rtrk.protobuf.Error error = 27;</code>
+       * <code>optional .com.rtrk.protobuf.Error error = 30;</code>
        */
-      public Builder setError(com.rtrk.atcommands.ATCommands.Error value) {
+      public Builder setError(com.rtrk.atcommands.ATCommand.Error value) {
         if (value == null) {
           throw new NullPointerException();
         }
@@ -9706,7 +9896,7 @@ public final class ATCommands {
         return this;
       }
       /**
-       * <code>optional .com.rtrk.protobuf.Error error = 27;</code>
+       * <code>optional .com.rtrk.protobuf.Error error = 30;</code>
        */
       public Builder clearError() {
         
@@ -9729,12 +9919,12 @@ public final class ATCommands {
     }
 
     // @@protoc_insertion_point(class_scope:com.rtrk.protobuf.FileCommand)
-    private static final com.rtrk.atcommands.ATCommands.FileCommand DEFAULT_INSTANCE;
+    private static final com.rtrk.atcommands.ATCommand.FileCommand DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.rtrk.atcommands.ATCommands.FileCommand();
+      DEFAULT_INSTANCE = new com.rtrk.atcommands.ATCommand.FileCommand();
     }
 
-    public static com.rtrk.atcommands.ATCommands.FileCommand getDefaultInstance() {
+    public static com.rtrk.atcommands.ATCommand.FileCommand getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -9757,7 +9947,7 @@ public final class ATCommands {
       return PARSER;
     }
 
-    public com.rtrk.atcommands.ATCommands.FileCommand getDefaultInstanceForType() {
+    public com.rtrk.atcommands.ATCommand.FileCommand getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -9774,7 +9964,7 @@ public final class ATCommands {
     /**
      * <code>optional .com.rtrk.protobuf.FTPMessageType messageType = 1;</code>
      */
-    com.rtrk.atcommands.ATCommands.FTPMessageType getMessageType();
+    com.rtrk.atcommands.ATCommand.FTPMessageType getMessageType();
 
     /**
      * <code>optional string hostName = 2;</code>
@@ -9798,7 +9988,7 @@ public final class ATCommands {
     /**
      * <code>optional .com.rtrk.protobuf.Error error = 4;</code>
      */
-    com.rtrk.atcommands.ATCommands.Error getError();
+    com.rtrk.atcommands.ATCommand.Error getError();
 
     /**
      * <code>optional string fileName = 5;</code>
@@ -10120,14 +10310,14 @@ public final class ATCommands {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.rtrk.atcommands.ATCommands.internal_static_com_rtrk_protobuf_FTPCommand_descriptor;
+      return com.rtrk.atcommands.ATCommand.internal_static_com_rtrk_protobuf_FTPCommand_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.rtrk.atcommands.ATCommands.internal_static_com_rtrk_protobuf_FTPCommand_fieldAccessorTable
+      return com.rtrk.atcommands.ATCommand.internal_static_com_rtrk_protobuf_FTPCommand_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.rtrk.atcommands.ATCommands.FTPCommand.class, com.rtrk.atcommands.ATCommands.FTPCommand.Builder.class);
+              com.rtrk.atcommands.ATCommand.FTPCommand.class, com.rtrk.atcommands.ATCommand.FTPCommand.Builder.class);
     }
 
     public static final int MESSAGETYPE_FIELD_NUMBER = 1;
@@ -10141,9 +10331,9 @@ public final class ATCommands {
     /**
      * <code>optional .com.rtrk.protobuf.FTPMessageType messageType = 1;</code>
      */
-    public com.rtrk.atcommands.ATCommands.FTPMessageType getMessageType() {
-      com.rtrk.atcommands.ATCommands.FTPMessageType result = com.rtrk.atcommands.ATCommands.FTPMessageType.valueOf(messageType_);
-      return result == null ? com.rtrk.atcommands.ATCommands.FTPMessageType.UNRECOGNIZED : result;
+    public com.rtrk.atcommands.ATCommand.FTPMessageType getMessageType() {
+      com.rtrk.atcommands.ATCommand.FTPMessageType result = com.rtrk.atcommands.ATCommand.FTPMessageType.valueOf(messageType_);
+      return result == null ? com.rtrk.atcommands.ATCommand.FTPMessageType.UNRECOGNIZED : result;
     }
 
     public static final int HOSTNAME_FIELD_NUMBER = 2;
@@ -10200,9 +10390,9 @@ public final class ATCommands {
     /**
      * <code>optional .com.rtrk.protobuf.Error error = 4;</code>
      */
-    public com.rtrk.atcommands.ATCommands.Error getError() {
-      com.rtrk.atcommands.ATCommands.Error result = com.rtrk.atcommands.ATCommands.Error.valueOf(error_);
-      return result == null ? com.rtrk.atcommands.ATCommands.Error.UNRECOGNIZED : result;
+    public com.rtrk.atcommands.ATCommand.Error getError() {
+      com.rtrk.atcommands.ATCommand.Error result = com.rtrk.atcommands.ATCommand.Error.valueOf(error_);
+      return result == null ? com.rtrk.atcommands.ATCommand.Error.UNRECOGNIZED : result;
     }
 
     public static final int FILENAME_FIELD_NUMBER = 5;
@@ -10595,7 +10785,7 @@ public final class ATCommands {
 
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (messageType_ != com.rtrk.atcommands.ATCommands.FTPMessageType.OPEN_AN_FTP_SERVICE_TO_THE_GIVEN_FTP_SERVER.getNumber()) {
+      if (messageType_ != com.rtrk.atcommands.ATCommand.FTPMessageType.OPEN_AN_FTP_SERVICE_TO_THE_GIVEN_FTP_SERVER.getNumber()) {
         output.writeEnum(1, messageType_);
       }
       if (!getHostNameBytes().isEmpty()) {
@@ -10604,7 +10794,7 @@ public final class ATCommands {
       if (port_ != 0) {
         output.writeInt32(3, port_);
       }
-      if (error_ != com.rtrk.atcommands.ATCommands.Error.OK.getNumber()) {
+      if (error_ != com.rtrk.atcommands.ATCommand.Error.OK.getNumber()) {
         output.writeEnum(4, error_);
       }
       if (!getFileNameBytes().isEmpty()) {
@@ -10665,7 +10855,7 @@ public final class ATCommands {
       if (size != -1) return size;
 
       size = 0;
-      if (messageType_ != com.rtrk.atcommands.ATCommands.FTPMessageType.OPEN_AN_FTP_SERVICE_TO_THE_GIVEN_FTP_SERVER.getNumber()) {
+      if (messageType_ != com.rtrk.atcommands.ATCommand.FTPMessageType.OPEN_AN_FTP_SERVICE_TO_THE_GIVEN_FTP_SERVER.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(1, messageType_);
       }
@@ -10676,7 +10866,7 @@ public final class ATCommands {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(3, port_);
       }
-      if (error_ != com.rtrk.atcommands.ATCommands.Error.OK.getNumber()) {
+      if (error_ != com.rtrk.atcommands.ATCommand.Error.OK.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(4, error_);
       }
@@ -10749,10 +10939,10 @@ public final class ATCommands {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.rtrk.atcommands.ATCommands.FTPCommand)) {
+      if (!(obj instanceof com.rtrk.atcommands.ATCommand.FTPCommand)) {
         return super.equals(obj);
       }
-      com.rtrk.atcommands.ATCommands.FTPCommand other = (com.rtrk.atcommands.ATCommands.FTPCommand) obj;
+      com.rtrk.atcommands.ATCommand.FTPCommand other = (com.rtrk.atcommands.ATCommand.FTPCommand) obj;
 
       boolean result = true;
       result = result && messageType_ == other.messageType_;
@@ -10852,58 +11042,58 @@ public final class ATCommands {
       return hash;
     }
 
-    public static com.rtrk.atcommands.ATCommands.FTPCommand parseFrom(
+    public static com.rtrk.atcommands.ATCommand.FTPCommand parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.rtrk.atcommands.ATCommands.FTPCommand parseFrom(
+    public static com.rtrk.atcommands.ATCommand.FTPCommand parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.rtrk.atcommands.ATCommands.FTPCommand parseFrom(byte[] data)
+    public static com.rtrk.atcommands.ATCommand.FTPCommand parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.rtrk.atcommands.ATCommands.FTPCommand parseFrom(
+    public static com.rtrk.atcommands.ATCommand.FTPCommand parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.rtrk.atcommands.ATCommands.FTPCommand parseFrom(java.io.InputStream input)
+    public static com.rtrk.atcommands.ATCommand.FTPCommand parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.rtrk.atcommands.ATCommands.FTPCommand parseFrom(
+    public static com.rtrk.atcommands.ATCommand.FTPCommand parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.rtrk.atcommands.ATCommands.FTPCommand parseDelimitedFrom(java.io.InputStream input)
+    public static com.rtrk.atcommands.ATCommand.FTPCommand parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static com.rtrk.atcommands.ATCommands.FTPCommand parseDelimitedFrom(
+    public static com.rtrk.atcommands.ATCommand.FTPCommand parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.rtrk.atcommands.ATCommands.FTPCommand parseFrom(
+    public static com.rtrk.atcommands.ATCommand.FTPCommand parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.rtrk.atcommands.ATCommands.FTPCommand parseFrom(
+    public static com.rtrk.atcommands.ATCommand.FTPCommand parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -10915,7 +11105,7 @@ public final class ATCommands {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.rtrk.atcommands.ATCommands.FTPCommand prototype) {
+    public static Builder newBuilder(com.rtrk.atcommands.ATCommand.FTPCommand prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() {
@@ -10935,20 +11125,20 @@ public final class ATCommands {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:com.rtrk.protobuf.FTPCommand)
-        com.rtrk.atcommands.ATCommands.FTPCommandOrBuilder {
+        com.rtrk.atcommands.ATCommand.FTPCommandOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.rtrk.atcommands.ATCommands.internal_static_com_rtrk_protobuf_FTPCommand_descriptor;
+        return com.rtrk.atcommands.ATCommand.internal_static_com_rtrk_protobuf_FTPCommand_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.rtrk.atcommands.ATCommands.internal_static_com_rtrk_protobuf_FTPCommand_fieldAccessorTable
+        return com.rtrk.atcommands.ATCommand.internal_static_com_rtrk_protobuf_FTPCommand_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.rtrk.atcommands.ATCommands.FTPCommand.class, com.rtrk.atcommands.ATCommands.FTPCommand.Builder.class);
+                com.rtrk.atcommands.ATCommand.FTPCommand.class, com.rtrk.atcommands.ATCommand.FTPCommand.Builder.class);
       }
 
-      // Construct using com.rtrk.atcommands.ATCommands.FTPCommand.newBuilder()
+      // Construct using com.rtrk.atcommands.ATCommand.FTPCommand.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -11012,23 +11202,23 @@ public final class ATCommands {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.rtrk.atcommands.ATCommands.internal_static_com_rtrk_protobuf_FTPCommand_descriptor;
+        return com.rtrk.atcommands.ATCommand.internal_static_com_rtrk_protobuf_FTPCommand_descriptor;
       }
 
-      public com.rtrk.atcommands.ATCommands.FTPCommand getDefaultInstanceForType() {
-        return com.rtrk.atcommands.ATCommands.FTPCommand.getDefaultInstance();
+      public com.rtrk.atcommands.ATCommand.FTPCommand getDefaultInstanceForType() {
+        return com.rtrk.atcommands.ATCommand.FTPCommand.getDefaultInstance();
       }
 
-      public com.rtrk.atcommands.ATCommands.FTPCommand build() {
-        com.rtrk.atcommands.ATCommands.FTPCommand result = buildPartial();
+      public com.rtrk.atcommands.ATCommand.FTPCommand build() {
+        com.rtrk.atcommands.ATCommand.FTPCommand result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      public com.rtrk.atcommands.ATCommands.FTPCommand buildPartial() {
-        com.rtrk.atcommands.ATCommands.FTPCommand result = new com.rtrk.atcommands.ATCommands.FTPCommand(this);
+      public com.rtrk.atcommands.ATCommand.FTPCommand buildPartial() {
+        com.rtrk.atcommands.ATCommand.FTPCommand result = new com.rtrk.atcommands.ATCommand.FTPCommand(this);
         result.messageType_ = messageType_;
         result.hostName_ = hostName_;
         result.port_ = port_;
@@ -11081,16 +11271,16 @@ public final class ATCommands {
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.rtrk.atcommands.ATCommands.FTPCommand) {
-          return mergeFrom((com.rtrk.atcommands.ATCommands.FTPCommand)other);
+        if (other instanceof com.rtrk.atcommands.ATCommand.FTPCommand) {
+          return mergeFrom((com.rtrk.atcommands.ATCommand.FTPCommand)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.rtrk.atcommands.ATCommands.FTPCommand other) {
-        if (other == com.rtrk.atcommands.ATCommands.FTPCommand.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.rtrk.atcommands.ATCommand.FTPCommand other) {
+        if (other == com.rtrk.atcommands.ATCommand.FTPCommand.getDefaultInstance()) return this;
         if (other.messageType_ != 0) {
           setMessageTypeValue(other.getMessageTypeValue());
         }
@@ -11176,11 +11366,11 @@ public final class ATCommands {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.rtrk.atcommands.ATCommands.FTPCommand parsedMessage = null;
+        com.rtrk.atcommands.ATCommand.FTPCommand parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.rtrk.atcommands.ATCommands.FTPCommand) e.getUnfinishedMessage();
+          parsedMessage = (com.rtrk.atcommands.ATCommand.FTPCommand) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -11208,14 +11398,14 @@ public final class ATCommands {
       /**
        * <code>optional .com.rtrk.protobuf.FTPMessageType messageType = 1;</code>
        */
-      public com.rtrk.atcommands.ATCommands.FTPMessageType getMessageType() {
-        com.rtrk.atcommands.ATCommands.FTPMessageType result = com.rtrk.atcommands.ATCommands.FTPMessageType.valueOf(messageType_);
-        return result == null ? com.rtrk.atcommands.ATCommands.FTPMessageType.UNRECOGNIZED : result;
+      public com.rtrk.atcommands.ATCommand.FTPMessageType getMessageType() {
+        com.rtrk.atcommands.ATCommand.FTPMessageType result = com.rtrk.atcommands.ATCommand.FTPMessageType.valueOf(messageType_);
+        return result == null ? com.rtrk.atcommands.ATCommand.FTPMessageType.UNRECOGNIZED : result;
       }
       /**
        * <code>optional .com.rtrk.protobuf.FTPMessageType messageType = 1;</code>
        */
-      public Builder setMessageType(com.rtrk.atcommands.ATCommands.FTPMessageType value) {
+      public Builder setMessageType(com.rtrk.atcommands.ATCommand.FTPMessageType value) {
         if (value == null) {
           throw new NullPointerException();
         }
@@ -11347,14 +11537,14 @@ public final class ATCommands {
       /**
        * <code>optional .com.rtrk.protobuf.Error error = 4;</code>
        */
-      public com.rtrk.atcommands.ATCommands.Error getError() {
-        com.rtrk.atcommands.ATCommands.Error result = com.rtrk.atcommands.ATCommands.Error.valueOf(error_);
-        return result == null ? com.rtrk.atcommands.ATCommands.Error.UNRECOGNIZED : result;
+      public com.rtrk.atcommands.ATCommand.Error getError() {
+        com.rtrk.atcommands.ATCommand.Error result = com.rtrk.atcommands.ATCommand.Error.valueOf(error_);
+        return result == null ? com.rtrk.atcommands.ATCommand.Error.UNRECOGNIZED : result;
       }
       /**
        * <code>optional .com.rtrk.protobuf.Error error = 4;</code>
        */
-      public Builder setError(com.rtrk.atcommands.ATCommands.Error value) {
+      public Builder setError(com.rtrk.atcommands.ATCommand.Error value) {
         if (value == null) {
           throw new NullPointerException();
         }
@@ -12216,12 +12406,12 @@ public final class ATCommands {
     }
 
     // @@protoc_insertion_point(class_scope:com.rtrk.protobuf.FTPCommand)
-    private static final com.rtrk.atcommands.ATCommands.FTPCommand DEFAULT_INSTANCE;
+    private static final com.rtrk.atcommands.ATCommand.FTPCommand DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.rtrk.atcommands.ATCommands.FTPCommand();
+      DEFAULT_INSTANCE = new com.rtrk.atcommands.ATCommand.FTPCommand();
     }
 
-    public static com.rtrk.atcommands.ATCommands.FTPCommand getDefaultInstance() {
+    public static com.rtrk.atcommands.ATCommand.FTPCommand getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -12244,7 +12434,7 @@ public final class ATCommands {
       return PARSER;
     }
 
-    public com.rtrk.atcommands.ATCommands.FTPCommand getDefaultInstanceForType() {
+    public com.rtrk.atcommands.ATCommand.FTPCommand getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -12261,7 +12451,7 @@ public final class ATCommands {
     /**
      * <code>optional .com.rtrk.protobuf.MMSMessageType messageType = 1;</code>
      */
-    com.rtrk.atcommands.ATCommands.MMSMessageType getMessageType();
+    com.rtrk.atcommands.ATCommand.MMSMessageType getMessageType();
 
     /**
      * <code>optional string MMSCURL = 2;</code>
@@ -12475,7 +12665,7 @@ public final class ATCommands {
     /**
      * <code>optional .com.rtrk.protobuf.Error error = 35;</code>
      */
-    com.rtrk.atcommands.ATCommands.Error getError();
+    com.rtrk.atcommands.ATCommand.Error getError();
   }
   /**
    * Protobuf type {@code com.rtrk.protobuf.MMSCommand}
@@ -12750,14 +12940,14 @@ public final class ATCommands {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.rtrk.atcommands.ATCommands.internal_static_com_rtrk_protobuf_MMSCommand_descriptor;
+      return com.rtrk.atcommands.ATCommand.internal_static_com_rtrk_protobuf_MMSCommand_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.rtrk.atcommands.ATCommands.internal_static_com_rtrk_protobuf_MMSCommand_fieldAccessorTable
+      return com.rtrk.atcommands.ATCommand.internal_static_com_rtrk_protobuf_MMSCommand_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.rtrk.atcommands.ATCommands.MMSCommand.class, com.rtrk.atcommands.ATCommands.MMSCommand.Builder.class);
+              com.rtrk.atcommands.ATCommand.MMSCommand.class, com.rtrk.atcommands.ATCommand.MMSCommand.Builder.class);
     }
 
     public static final int MESSAGETYPE_FIELD_NUMBER = 1;
@@ -12771,9 +12961,9 @@ public final class ATCommands {
     /**
      * <code>optional .com.rtrk.protobuf.MMSMessageType messageType = 1;</code>
      */
-    public com.rtrk.atcommands.ATCommands.MMSMessageType getMessageType() {
-      com.rtrk.atcommands.ATCommands.MMSMessageType result = com.rtrk.atcommands.ATCommands.MMSMessageType.valueOf(messageType_);
-      return result == null ? com.rtrk.atcommands.ATCommands.MMSMessageType.UNRECOGNIZED : result;
+    public com.rtrk.atcommands.ATCommand.MMSMessageType getMessageType() {
+      com.rtrk.atcommands.ATCommand.MMSMessageType result = com.rtrk.atcommands.ATCommand.MMSMessageType.valueOf(messageType_);
+      return result == null ? com.rtrk.atcommands.ATCommand.MMSMessageType.UNRECOGNIZED : result;
     }
 
     public static final int MMSCURL_FIELD_NUMBER = 2;
@@ -13284,9 +13474,9 @@ public final class ATCommands {
     /**
      * <code>optional .com.rtrk.protobuf.Error error = 35;</code>
      */
-    public com.rtrk.atcommands.ATCommands.Error getError() {
-      com.rtrk.atcommands.ATCommands.Error result = com.rtrk.atcommands.ATCommands.Error.valueOf(error_);
-      return result == null ? com.rtrk.atcommands.ATCommands.Error.UNRECOGNIZED : result;
+    public com.rtrk.atcommands.ATCommand.Error getError() {
+      com.rtrk.atcommands.ATCommand.Error result = com.rtrk.atcommands.ATCommand.Error.valueOf(error_);
+      return result == null ? com.rtrk.atcommands.ATCommand.Error.UNRECOGNIZED : result;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -13301,7 +13491,7 @@ public final class ATCommands {
 
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (messageType_ != com.rtrk.atcommands.ATCommands.MMSMessageType.SET_THE_URL_OF_THE_MMSC.getNumber()) {
+      if (messageType_ != com.rtrk.atcommands.ATCommand.MMSMessageType.SET_THE_URL_OF_THE_MMSC.getNumber()) {
         output.writeEnum(1, messageType_);
       }
       if (!getMMSCURLBytes().isEmpty()) {
@@ -13403,7 +13593,7 @@ public final class ATCommands {
       if (fileType_ != 0) {
         output.writeInt32(34, fileType_);
       }
-      if (error_ != com.rtrk.atcommands.ATCommands.Error.OK.getNumber()) {
+      if (error_ != com.rtrk.atcommands.ATCommand.Error.OK.getNumber()) {
         output.writeEnum(35, error_);
       }
     }
@@ -13413,7 +13603,7 @@ public final class ATCommands {
       if (size != -1) return size;
 
       size = 0;
-      if (messageType_ != com.rtrk.atcommands.ATCommands.MMSMessageType.SET_THE_URL_OF_THE_MMSC.getNumber()) {
+      if (messageType_ != com.rtrk.atcommands.ATCommand.MMSMessageType.SET_THE_URL_OF_THE_MMSC.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(1, messageType_);
       }
@@ -13541,7 +13731,7 @@ public final class ATCommands {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(34, fileType_);
       }
-      if (error_ != com.rtrk.atcommands.ATCommands.Error.OK.getNumber()) {
+      if (error_ != com.rtrk.atcommands.ATCommand.Error.OK.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(35, error_);
       }
@@ -13555,10 +13745,10 @@ public final class ATCommands {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.rtrk.atcommands.ATCommands.MMSCommand)) {
+      if (!(obj instanceof com.rtrk.atcommands.ATCommand.MMSCommand)) {
         return super.equals(obj);
       }
-      com.rtrk.atcommands.ATCommands.MMSCommand other = (com.rtrk.atcommands.ATCommands.MMSCommand) obj;
+      com.rtrk.atcommands.ATCommand.MMSCommand other = (com.rtrk.atcommands.ATCommand.MMSCommand) obj;
 
       boolean result = true;
       result = result && messageType_ == other.messageType_;
@@ -13720,58 +13910,58 @@ public final class ATCommands {
       return hash;
     }
 
-    public static com.rtrk.atcommands.ATCommands.MMSCommand parseFrom(
+    public static com.rtrk.atcommands.ATCommand.MMSCommand parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.rtrk.atcommands.ATCommands.MMSCommand parseFrom(
+    public static com.rtrk.atcommands.ATCommand.MMSCommand parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.rtrk.atcommands.ATCommands.MMSCommand parseFrom(byte[] data)
+    public static com.rtrk.atcommands.ATCommand.MMSCommand parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.rtrk.atcommands.ATCommands.MMSCommand parseFrom(
+    public static com.rtrk.atcommands.ATCommand.MMSCommand parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.rtrk.atcommands.ATCommands.MMSCommand parseFrom(java.io.InputStream input)
+    public static com.rtrk.atcommands.ATCommand.MMSCommand parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.rtrk.atcommands.ATCommands.MMSCommand parseFrom(
+    public static com.rtrk.atcommands.ATCommand.MMSCommand parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.rtrk.atcommands.ATCommands.MMSCommand parseDelimitedFrom(java.io.InputStream input)
+    public static com.rtrk.atcommands.ATCommand.MMSCommand parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static com.rtrk.atcommands.ATCommands.MMSCommand parseDelimitedFrom(
+    public static com.rtrk.atcommands.ATCommand.MMSCommand parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.rtrk.atcommands.ATCommands.MMSCommand parseFrom(
+    public static com.rtrk.atcommands.ATCommand.MMSCommand parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.rtrk.atcommands.ATCommands.MMSCommand parseFrom(
+    public static com.rtrk.atcommands.ATCommand.MMSCommand parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -13783,7 +13973,7 @@ public final class ATCommands {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.rtrk.atcommands.ATCommands.MMSCommand prototype) {
+    public static Builder newBuilder(com.rtrk.atcommands.ATCommand.MMSCommand prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() {
@@ -13803,20 +13993,20 @@ public final class ATCommands {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:com.rtrk.protobuf.MMSCommand)
-        com.rtrk.atcommands.ATCommands.MMSCommandOrBuilder {
+        com.rtrk.atcommands.ATCommand.MMSCommandOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.rtrk.atcommands.ATCommands.internal_static_com_rtrk_protobuf_MMSCommand_descriptor;
+        return com.rtrk.atcommands.ATCommand.internal_static_com_rtrk_protobuf_MMSCommand_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.rtrk.atcommands.ATCommands.internal_static_com_rtrk_protobuf_MMSCommand_fieldAccessorTable
+        return com.rtrk.atcommands.ATCommand.internal_static_com_rtrk_protobuf_MMSCommand_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.rtrk.atcommands.ATCommands.MMSCommand.class, com.rtrk.atcommands.ATCommands.MMSCommand.Builder.class);
+                com.rtrk.atcommands.ATCommand.MMSCommand.class, com.rtrk.atcommands.ATCommand.MMSCommand.Builder.class);
       }
 
-      // Construct using com.rtrk.atcommands.ATCommands.MMSCommand.newBuilder()
+      // Construct using com.rtrk.atcommands.ATCommand.MMSCommand.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -13908,23 +14098,23 @@ public final class ATCommands {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.rtrk.atcommands.ATCommands.internal_static_com_rtrk_protobuf_MMSCommand_descriptor;
+        return com.rtrk.atcommands.ATCommand.internal_static_com_rtrk_protobuf_MMSCommand_descriptor;
       }
 
-      public com.rtrk.atcommands.ATCommands.MMSCommand getDefaultInstanceForType() {
-        return com.rtrk.atcommands.ATCommands.MMSCommand.getDefaultInstance();
+      public com.rtrk.atcommands.ATCommand.MMSCommand getDefaultInstanceForType() {
+        return com.rtrk.atcommands.ATCommand.MMSCommand.getDefaultInstance();
       }
 
-      public com.rtrk.atcommands.ATCommands.MMSCommand build() {
-        com.rtrk.atcommands.ATCommands.MMSCommand result = buildPartial();
+      public com.rtrk.atcommands.ATCommand.MMSCommand build() {
+        com.rtrk.atcommands.ATCommand.MMSCommand result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      public com.rtrk.atcommands.ATCommands.MMSCommand buildPartial() {
-        com.rtrk.atcommands.ATCommands.MMSCommand result = new com.rtrk.atcommands.ATCommands.MMSCommand(this);
+      public com.rtrk.atcommands.ATCommand.MMSCommand buildPartial() {
+        com.rtrk.atcommands.ATCommand.MMSCommand result = new com.rtrk.atcommands.ATCommand.MMSCommand(this);
         result.messageType_ = messageType_;
         result.mMSCURL_ = mMSCURL_;
         result.type_ = type_;
@@ -13991,16 +14181,16 @@ public final class ATCommands {
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.rtrk.atcommands.ATCommands.MMSCommand) {
-          return mergeFrom((com.rtrk.atcommands.ATCommands.MMSCommand)other);
+        if (other instanceof com.rtrk.atcommands.ATCommand.MMSCommand) {
+          return mergeFrom((com.rtrk.atcommands.ATCommand.MMSCommand)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.rtrk.atcommands.ATCommands.MMSCommand other) {
-        if (other == com.rtrk.atcommands.ATCommands.MMSCommand.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.rtrk.atcommands.ATCommand.MMSCommand other) {
+        if (other == com.rtrk.atcommands.ATCommand.MMSCommand.getDefaultInstance()) return this;
         if (other.messageType_ != 0) {
           setMessageTypeValue(other.getMessageTypeValue());
         }
@@ -14126,11 +14316,11 @@ public final class ATCommands {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.rtrk.atcommands.ATCommands.MMSCommand parsedMessage = null;
+        com.rtrk.atcommands.ATCommand.MMSCommand parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.rtrk.atcommands.ATCommands.MMSCommand) e.getUnfinishedMessage();
+          parsedMessage = (com.rtrk.atcommands.ATCommand.MMSCommand) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -14158,14 +14348,14 @@ public final class ATCommands {
       /**
        * <code>optional .com.rtrk.protobuf.MMSMessageType messageType = 1;</code>
        */
-      public com.rtrk.atcommands.ATCommands.MMSMessageType getMessageType() {
-        com.rtrk.atcommands.ATCommands.MMSMessageType result = com.rtrk.atcommands.ATCommands.MMSMessageType.valueOf(messageType_);
-        return result == null ? com.rtrk.atcommands.ATCommands.MMSMessageType.UNRECOGNIZED : result;
+      public com.rtrk.atcommands.ATCommand.MMSMessageType getMessageType() {
+        com.rtrk.atcommands.ATCommand.MMSMessageType result = com.rtrk.atcommands.ATCommand.MMSMessageType.valueOf(messageType_);
+        return result == null ? com.rtrk.atcommands.ATCommand.MMSMessageType.UNRECOGNIZED : result;
       }
       /**
        * <code>optional .com.rtrk.protobuf.MMSMessageType messageType = 1;</code>
        */
-      public Builder setMessageType(com.rtrk.atcommands.ATCommands.MMSMessageType value) {
+      public Builder setMessageType(com.rtrk.atcommands.ATCommand.MMSMessageType value) {
         if (value == null) {
           throw new NullPointerException();
         }
@@ -15404,14 +15594,14 @@ public final class ATCommands {
       /**
        * <code>optional .com.rtrk.protobuf.Error error = 35;</code>
        */
-      public com.rtrk.atcommands.ATCommands.Error getError() {
-        com.rtrk.atcommands.ATCommands.Error result = com.rtrk.atcommands.ATCommands.Error.valueOf(error_);
-        return result == null ? com.rtrk.atcommands.ATCommands.Error.UNRECOGNIZED : result;
+      public com.rtrk.atcommands.ATCommand.Error getError() {
+        com.rtrk.atcommands.ATCommand.Error result = com.rtrk.atcommands.ATCommand.Error.valueOf(error_);
+        return result == null ? com.rtrk.atcommands.ATCommand.Error.UNRECOGNIZED : result;
       }
       /**
        * <code>optional .com.rtrk.protobuf.Error error = 35;</code>
        */
-      public Builder setError(com.rtrk.atcommands.ATCommands.Error value) {
+      public Builder setError(com.rtrk.atcommands.ATCommand.Error value) {
         if (value == null) {
           throw new NullPointerException();
         }
@@ -15444,12 +15634,12 @@ public final class ATCommands {
     }
 
     // @@protoc_insertion_point(class_scope:com.rtrk.protobuf.MMSCommand)
-    private static final com.rtrk.atcommands.ATCommands.MMSCommand DEFAULT_INSTANCE;
+    private static final com.rtrk.atcommands.ATCommand.MMSCommand DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.rtrk.atcommands.ATCommands.MMSCommand();
+      DEFAULT_INSTANCE = new com.rtrk.atcommands.ATCommand.MMSCommand();
     }
 
-    public static com.rtrk.atcommands.ATCommands.MMSCommand getDefaultInstance() {
+    public static com.rtrk.atcommands.ATCommand.MMSCommand getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -15472,7 +15662,7 @@ public final class ATCommands {
       return PARSER;
     }
 
-    public com.rtrk.atcommands.ATCommands.MMSCommand getDefaultInstanceForType() {
+    public com.rtrk.atcommands.ATCommand.MMSCommand getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -15489,7 +15679,7 @@ public final class ATCommands {
     /**
      * <code>optional .com.rtrk.protobuf.QuecCellMessageType messageType = 1;</code>
      */
-    com.rtrk.atcommands.ATCommands.QuecCellMessageType getMessageType();
+    com.rtrk.atcommands.ATCommand.QuecCellMessageType getMessageType();
 
     /**
      * <code>optional int32 status = 2;</code>
@@ -15979,14 +16169,14 @@ public final class ATCommands {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.rtrk.atcommands.ATCommands.internal_static_com_rtrk_protobuf_QuecCellCommand_descriptor;
+      return com.rtrk.atcommands.ATCommand.internal_static_com_rtrk_protobuf_QuecCellCommand_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.rtrk.atcommands.ATCommands.internal_static_com_rtrk_protobuf_QuecCellCommand_fieldAccessorTable
+      return com.rtrk.atcommands.ATCommand.internal_static_com_rtrk_protobuf_QuecCellCommand_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.rtrk.atcommands.ATCommands.QuecCellCommand.class, com.rtrk.atcommands.ATCommands.QuecCellCommand.Builder.class);
+              com.rtrk.atcommands.ATCommand.QuecCellCommand.class, com.rtrk.atcommands.ATCommand.QuecCellCommand.Builder.class);
     }
 
     public static final int MESSAGETYPE_FIELD_NUMBER = 1;
@@ -16000,9 +16190,9 @@ public final class ATCommands {
     /**
      * <code>optional .com.rtrk.protobuf.QuecCellMessageType messageType = 1;</code>
      */
-    public com.rtrk.atcommands.ATCommands.QuecCellMessageType getMessageType() {
-      com.rtrk.atcommands.ATCommands.QuecCellMessageType result = com.rtrk.atcommands.ATCommands.QuecCellMessageType.valueOf(messageType_);
-      return result == null ? com.rtrk.atcommands.ATCommands.QuecCellMessageType.UNRECOGNIZED : result;
+    public com.rtrk.atcommands.ATCommand.QuecCellMessageType getMessageType() {
+      com.rtrk.atcommands.ATCommand.QuecCellMessageType result = com.rtrk.atcommands.ATCommand.QuecCellMessageType.valueOf(messageType_);
+      return result == null ? com.rtrk.atcommands.ATCommand.QuecCellMessageType.UNRECOGNIZED : result;
     }
 
     public static final int STATUS_FIELD_NUMBER = 2;
@@ -16449,7 +16639,7 @@ public final class ATCommands {
 
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (messageType_ != com.rtrk.atcommands.ATCommands.QuecCellMessageType.SCAN_BASIC_STATION_INFORMATION.getNumber()) {
+      if (messageType_ != com.rtrk.atcommands.ATCommand.QuecCellMessageType.SCAN_BASIC_STATION_INFORMATION.getNumber()) {
         output.writeEnum(1, messageType_);
       }
       if (status_ != 0) {
@@ -16567,7 +16757,7 @@ public final class ATCommands {
       if (size != -1) return size;
 
       size = 0;
-      if (messageType_ != com.rtrk.atcommands.ATCommands.QuecCellMessageType.SCAN_BASIC_STATION_INFORMATION.getNumber()) {
+      if (messageType_ != com.rtrk.atcommands.ATCommand.QuecCellMessageType.SCAN_BASIC_STATION_INFORMATION.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(1, messageType_);
       }
@@ -16721,10 +16911,10 @@ public final class ATCommands {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.rtrk.atcommands.ATCommands.QuecCellCommand)) {
+      if (!(obj instanceof com.rtrk.atcommands.ATCommand.QuecCellCommand)) {
         return super.equals(obj);
       }
-      com.rtrk.atcommands.ATCommands.QuecCellCommand other = (com.rtrk.atcommands.ATCommands.QuecCellCommand) obj;
+      com.rtrk.atcommands.ATCommand.QuecCellCommand other = (com.rtrk.atcommands.ATCommand.QuecCellCommand) obj;
 
       boolean result = true;
       result = result && messageType_ == other.messageType_;
@@ -16900,58 +17090,58 @@ public final class ATCommands {
       return hash;
     }
 
-    public static com.rtrk.atcommands.ATCommands.QuecCellCommand parseFrom(
+    public static com.rtrk.atcommands.ATCommand.QuecCellCommand parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.rtrk.atcommands.ATCommands.QuecCellCommand parseFrom(
+    public static com.rtrk.atcommands.ATCommand.QuecCellCommand parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.rtrk.atcommands.ATCommands.QuecCellCommand parseFrom(byte[] data)
+    public static com.rtrk.atcommands.ATCommand.QuecCellCommand parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.rtrk.atcommands.ATCommands.QuecCellCommand parseFrom(
+    public static com.rtrk.atcommands.ATCommand.QuecCellCommand parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.rtrk.atcommands.ATCommands.QuecCellCommand parseFrom(java.io.InputStream input)
+    public static com.rtrk.atcommands.ATCommand.QuecCellCommand parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.rtrk.atcommands.ATCommands.QuecCellCommand parseFrom(
+    public static com.rtrk.atcommands.ATCommand.QuecCellCommand parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.rtrk.atcommands.ATCommands.QuecCellCommand parseDelimitedFrom(java.io.InputStream input)
+    public static com.rtrk.atcommands.ATCommand.QuecCellCommand parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static com.rtrk.atcommands.ATCommands.QuecCellCommand parseDelimitedFrom(
+    public static com.rtrk.atcommands.ATCommand.QuecCellCommand parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.rtrk.atcommands.ATCommands.QuecCellCommand parseFrom(
+    public static com.rtrk.atcommands.ATCommand.QuecCellCommand parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.rtrk.atcommands.ATCommands.QuecCellCommand parseFrom(
+    public static com.rtrk.atcommands.ATCommand.QuecCellCommand parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -16963,7 +17153,7 @@ public final class ATCommands {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.rtrk.atcommands.ATCommands.QuecCellCommand prototype) {
+    public static Builder newBuilder(com.rtrk.atcommands.ATCommand.QuecCellCommand prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() {
@@ -16983,20 +17173,20 @@ public final class ATCommands {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:com.rtrk.protobuf.QuecCellCommand)
-        com.rtrk.atcommands.ATCommands.QuecCellCommandOrBuilder {
+        com.rtrk.atcommands.ATCommand.QuecCellCommandOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.rtrk.atcommands.ATCommands.internal_static_com_rtrk_protobuf_QuecCellCommand_descriptor;
+        return com.rtrk.atcommands.ATCommand.internal_static_com_rtrk_protobuf_QuecCellCommand_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.rtrk.atcommands.ATCommands.internal_static_com_rtrk_protobuf_QuecCellCommand_fieldAccessorTable
+        return com.rtrk.atcommands.ATCommand.internal_static_com_rtrk_protobuf_QuecCellCommand_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.rtrk.atcommands.ATCommands.QuecCellCommand.class, com.rtrk.atcommands.ATCommands.QuecCellCommand.Builder.class);
+                com.rtrk.atcommands.ATCommand.QuecCellCommand.class, com.rtrk.atcommands.ATCommand.QuecCellCommand.Builder.class);
       }
 
-      // Construct using com.rtrk.atcommands.ATCommands.QuecCellCommand.newBuilder()
+      // Construct using com.rtrk.atcommands.ATCommand.QuecCellCommand.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -17092,23 +17282,23 @@ public final class ATCommands {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.rtrk.atcommands.ATCommands.internal_static_com_rtrk_protobuf_QuecCellCommand_descriptor;
+        return com.rtrk.atcommands.ATCommand.internal_static_com_rtrk_protobuf_QuecCellCommand_descriptor;
       }
 
-      public com.rtrk.atcommands.ATCommands.QuecCellCommand getDefaultInstanceForType() {
-        return com.rtrk.atcommands.ATCommands.QuecCellCommand.getDefaultInstance();
+      public com.rtrk.atcommands.ATCommand.QuecCellCommand getDefaultInstanceForType() {
+        return com.rtrk.atcommands.ATCommand.QuecCellCommand.getDefaultInstance();
       }
 
-      public com.rtrk.atcommands.ATCommands.QuecCellCommand build() {
-        com.rtrk.atcommands.ATCommands.QuecCellCommand result = buildPartial();
+      public com.rtrk.atcommands.ATCommand.QuecCellCommand build() {
+        com.rtrk.atcommands.ATCommand.QuecCellCommand result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      public com.rtrk.atcommands.ATCommands.QuecCellCommand buildPartial() {
-        com.rtrk.atcommands.ATCommands.QuecCellCommand result = new com.rtrk.atcommands.ATCommands.QuecCellCommand(this);
+      public com.rtrk.atcommands.ATCommand.QuecCellCommand buildPartial() {
+        com.rtrk.atcommands.ATCommand.QuecCellCommand result = new com.rtrk.atcommands.ATCommand.QuecCellCommand(this);
         result.messageType_ = messageType_;
         result.status_ = status_;
         result.operatorInString_ = operatorInString_;
@@ -17177,16 +17367,16 @@ public final class ATCommands {
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.rtrk.atcommands.ATCommands.QuecCellCommand) {
-          return mergeFrom((com.rtrk.atcommands.ATCommands.QuecCellCommand)other);
+        if (other instanceof com.rtrk.atcommands.ATCommand.QuecCellCommand) {
+          return mergeFrom((com.rtrk.atcommands.ATCommand.QuecCellCommand)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.rtrk.atcommands.ATCommands.QuecCellCommand other) {
-        if (other == com.rtrk.atcommands.ATCommands.QuecCellCommand.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.rtrk.atcommands.ATCommand.QuecCellCommand other) {
+        if (other == com.rtrk.atcommands.ATCommand.QuecCellCommand.getDefaultInstance()) return this;
         if (other.messageType_ != 0) {
           setMessageTypeValue(other.getMessageTypeValue());
         }
@@ -17314,11 +17504,11 @@ public final class ATCommands {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.rtrk.atcommands.ATCommands.QuecCellCommand parsedMessage = null;
+        com.rtrk.atcommands.ATCommand.QuecCellCommand parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.rtrk.atcommands.ATCommands.QuecCellCommand) e.getUnfinishedMessage();
+          parsedMessage = (com.rtrk.atcommands.ATCommand.QuecCellCommand) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -17346,14 +17536,14 @@ public final class ATCommands {
       /**
        * <code>optional .com.rtrk.protobuf.QuecCellMessageType messageType = 1;</code>
        */
-      public com.rtrk.atcommands.ATCommands.QuecCellMessageType getMessageType() {
-        com.rtrk.atcommands.ATCommands.QuecCellMessageType result = com.rtrk.atcommands.ATCommands.QuecCellMessageType.valueOf(messageType_);
-        return result == null ? com.rtrk.atcommands.ATCommands.QuecCellMessageType.UNRECOGNIZED : result;
+      public com.rtrk.atcommands.ATCommand.QuecCellMessageType getMessageType() {
+        com.rtrk.atcommands.ATCommand.QuecCellMessageType result = com.rtrk.atcommands.ATCommand.QuecCellMessageType.valueOf(messageType_);
+        return result == null ? com.rtrk.atcommands.ATCommand.QuecCellMessageType.UNRECOGNIZED : result;
       }
       /**
        * <code>optional .com.rtrk.protobuf.QuecCellMessageType messageType = 1;</code>
        */
-      public Builder setMessageType(com.rtrk.atcommands.ATCommands.QuecCellMessageType value) {
+      public Builder setMessageType(com.rtrk.atcommands.ATCommand.QuecCellMessageType value) {
         if (value == null) {
           throw new NullPointerException();
         }
@@ -18518,12 +18708,12 @@ public final class ATCommands {
     }
 
     // @@protoc_insertion_point(class_scope:com.rtrk.protobuf.QuecCellCommand)
-    private static final com.rtrk.atcommands.ATCommands.QuecCellCommand DEFAULT_INSTANCE;
+    private static final com.rtrk.atcommands.ATCommand.QuecCellCommand DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.rtrk.atcommands.ATCommands.QuecCellCommand();
+      DEFAULT_INSTANCE = new com.rtrk.atcommands.ATCommand.QuecCellCommand();
     }
 
-    public static com.rtrk.atcommands.ATCommands.QuecCellCommand getDefaultInstance() {
+    public static com.rtrk.atcommands.ATCommand.QuecCellCommand getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -18546,7 +18736,7 @@ public final class ATCommands {
       return PARSER;
     }
 
-    public com.rtrk.atcommands.ATCommands.QuecCellCommand getDefaultInstanceForType() {
+    public com.rtrk.atcommands.ATCommand.QuecCellCommand getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -18563,7 +18753,7 @@ public final class ATCommands {
     /**
      * <code>optional .com.rtrk.protobuf.RecordingMessageType messageType = 1;</code>
      */
-    com.rtrk.atcommands.ATCommands.RecordingMessageType getMessageType();
+    com.rtrk.atcommands.ATCommand.RecordingMessageType getMessageType();
 
     /**
      * <code>optional int32 state = 2;</code>
@@ -18607,7 +18797,7 @@ public final class ATCommands {
     /**
      * <code>optional .com.rtrk.protobuf.Error error = 8;</code>
      */
-    com.rtrk.atcommands.ATCommands.Error getError();
+    com.rtrk.atcommands.ATCommand.Error getError();
   }
   /**
    * Protobuf type {@code com.rtrk.protobuf.RecordingCommand}
@@ -18712,14 +18902,14 @@ public final class ATCommands {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.rtrk.atcommands.ATCommands.internal_static_com_rtrk_protobuf_RecordingCommand_descriptor;
+      return com.rtrk.atcommands.ATCommand.internal_static_com_rtrk_protobuf_RecordingCommand_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.rtrk.atcommands.ATCommands.internal_static_com_rtrk_protobuf_RecordingCommand_fieldAccessorTable
+      return com.rtrk.atcommands.ATCommand.internal_static_com_rtrk_protobuf_RecordingCommand_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.rtrk.atcommands.ATCommands.RecordingCommand.class, com.rtrk.atcommands.ATCommands.RecordingCommand.Builder.class);
+              com.rtrk.atcommands.ATCommand.RecordingCommand.class, com.rtrk.atcommands.ATCommand.RecordingCommand.Builder.class);
     }
 
     public static final int MESSAGETYPE_FIELD_NUMBER = 1;
@@ -18733,9 +18923,9 @@ public final class ATCommands {
     /**
      * <code>optional .com.rtrk.protobuf.RecordingMessageType messageType = 1;</code>
      */
-    public com.rtrk.atcommands.ATCommands.RecordingMessageType getMessageType() {
-      com.rtrk.atcommands.ATCommands.RecordingMessageType result = com.rtrk.atcommands.ATCommands.RecordingMessageType.valueOf(messageType_);
-      return result == null ? com.rtrk.atcommands.ATCommands.RecordingMessageType.UNRECOGNIZED : result;
+    public com.rtrk.atcommands.ATCommand.RecordingMessageType getMessageType() {
+      com.rtrk.atcommands.ATCommand.RecordingMessageType result = com.rtrk.atcommands.ATCommand.RecordingMessageType.valueOf(messageType_);
+      return result == null ? com.rtrk.atcommands.ATCommand.RecordingMessageType.UNRECOGNIZED : result;
     }
 
     public static final int STATE_FIELD_NUMBER = 2;
@@ -18828,9 +19018,9 @@ public final class ATCommands {
     /**
      * <code>optional .com.rtrk.protobuf.Error error = 8;</code>
      */
-    public com.rtrk.atcommands.ATCommands.Error getError() {
-      com.rtrk.atcommands.ATCommands.Error result = com.rtrk.atcommands.ATCommands.Error.valueOf(error_);
-      return result == null ? com.rtrk.atcommands.ATCommands.Error.UNRECOGNIZED : result;
+    public com.rtrk.atcommands.ATCommand.Error getError() {
+      com.rtrk.atcommands.ATCommand.Error result = com.rtrk.atcommands.ATCommand.Error.valueOf(error_);
+      return result == null ? com.rtrk.atcommands.ATCommand.Error.UNRECOGNIZED : result;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -18845,7 +19035,7 @@ public final class ATCommands {
 
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (messageType_ != com.rtrk.atcommands.ATCommands.RecordingMessageType.RECORD_MEDIA_FILE.getNumber()) {
+      if (messageType_ != com.rtrk.atcommands.ATCommand.RecordingMessageType.RECORD_MEDIA_FILE.getNumber()) {
         output.writeEnum(1, messageType_);
       }
       if (state_ != 0) {
@@ -18866,7 +19056,7 @@ public final class ATCommands {
       if (channel_ != 0) {
         output.writeInt32(7, channel_);
       }
-      if (error_ != com.rtrk.atcommands.ATCommands.Error.OK.getNumber()) {
+      if (error_ != com.rtrk.atcommands.ATCommand.Error.OK.getNumber()) {
         output.writeEnum(8, error_);
       }
     }
@@ -18876,7 +19066,7 @@ public final class ATCommands {
       if (size != -1) return size;
 
       size = 0;
-      if (messageType_ != com.rtrk.atcommands.ATCommands.RecordingMessageType.RECORD_MEDIA_FILE.getNumber()) {
+      if (messageType_ != com.rtrk.atcommands.ATCommand.RecordingMessageType.RECORD_MEDIA_FILE.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(1, messageType_);
       }
@@ -18903,7 +19093,7 @@ public final class ATCommands {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(7, channel_);
       }
-      if (error_ != com.rtrk.atcommands.ATCommands.Error.OK.getNumber()) {
+      if (error_ != com.rtrk.atcommands.ATCommand.Error.OK.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(8, error_);
       }
@@ -18917,10 +19107,10 @@ public final class ATCommands {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.rtrk.atcommands.ATCommands.RecordingCommand)) {
+      if (!(obj instanceof com.rtrk.atcommands.ATCommand.RecordingCommand)) {
         return super.equals(obj);
       }
-      com.rtrk.atcommands.ATCommands.RecordingCommand other = (com.rtrk.atcommands.ATCommands.RecordingCommand) obj;
+      com.rtrk.atcommands.ATCommand.RecordingCommand other = (com.rtrk.atcommands.ATCommand.RecordingCommand) obj;
 
       boolean result = true;
       result = result && messageType_ == other.messageType_;
@@ -18969,58 +19159,58 @@ public final class ATCommands {
       return hash;
     }
 
-    public static com.rtrk.atcommands.ATCommands.RecordingCommand parseFrom(
+    public static com.rtrk.atcommands.ATCommand.RecordingCommand parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.rtrk.atcommands.ATCommands.RecordingCommand parseFrom(
+    public static com.rtrk.atcommands.ATCommand.RecordingCommand parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.rtrk.atcommands.ATCommands.RecordingCommand parseFrom(byte[] data)
+    public static com.rtrk.atcommands.ATCommand.RecordingCommand parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.rtrk.atcommands.ATCommands.RecordingCommand parseFrom(
+    public static com.rtrk.atcommands.ATCommand.RecordingCommand parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.rtrk.atcommands.ATCommands.RecordingCommand parseFrom(java.io.InputStream input)
+    public static com.rtrk.atcommands.ATCommand.RecordingCommand parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.rtrk.atcommands.ATCommands.RecordingCommand parseFrom(
+    public static com.rtrk.atcommands.ATCommand.RecordingCommand parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.rtrk.atcommands.ATCommands.RecordingCommand parseDelimitedFrom(java.io.InputStream input)
+    public static com.rtrk.atcommands.ATCommand.RecordingCommand parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static com.rtrk.atcommands.ATCommands.RecordingCommand parseDelimitedFrom(
+    public static com.rtrk.atcommands.ATCommand.RecordingCommand parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.rtrk.atcommands.ATCommands.RecordingCommand parseFrom(
+    public static com.rtrk.atcommands.ATCommand.RecordingCommand parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.rtrk.atcommands.ATCommands.RecordingCommand parseFrom(
+    public static com.rtrk.atcommands.ATCommand.RecordingCommand parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -19032,7 +19222,7 @@ public final class ATCommands {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.rtrk.atcommands.ATCommands.RecordingCommand prototype) {
+    public static Builder newBuilder(com.rtrk.atcommands.ATCommand.RecordingCommand prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() {
@@ -19052,20 +19242,20 @@ public final class ATCommands {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:com.rtrk.protobuf.RecordingCommand)
-        com.rtrk.atcommands.ATCommands.RecordingCommandOrBuilder {
+        com.rtrk.atcommands.ATCommand.RecordingCommandOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.rtrk.atcommands.ATCommands.internal_static_com_rtrk_protobuf_RecordingCommand_descriptor;
+        return com.rtrk.atcommands.ATCommand.internal_static_com_rtrk_protobuf_RecordingCommand_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.rtrk.atcommands.ATCommands.internal_static_com_rtrk_protobuf_RecordingCommand_fieldAccessorTable
+        return com.rtrk.atcommands.ATCommand.internal_static_com_rtrk_protobuf_RecordingCommand_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.rtrk.atcommands.ATCommands.RecordingCommand.class, com.rtrk.atcommands.ATCommands.RecordingCommand.Builder.class);
+                com.rtrk.atcommands.ATCommand.RecordingCommand.class, com.rtrk.atcommands.ATCommand.RecordingCommand.Builder.class);
       }
 
-      // Construct using com.rtrk.atcommands.ATCommands.RecordingCommand.newBuilder()
+      // Construct using com.rtrk.atcommands.ATCommand.RecordingCommand.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -19103,23 +19293,23 @@ public final class ATCommands {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.rtrk.atcommands.ATCommands.internal_static_com_rtrk_protobuf_RecordingCommand_descriptor;
+        return com.rtrk.atcommands.ATCommand.internal_static_com_rtrk_protobuf_RecordingCommand_descriptor;
       }
 
-      public com.rtrk.atcommands.ATCommands.RecordingCommand getDefaultInstanceForType() {
-        return com.rtrk.atcommands.ATCommands.RecordingCommand.getDefaultInstance();
+      public com.rtrk.atcommands.ATCommand.RecordingCommand getDefaultInstanceForType() {
+        return com.rtrk.atcommands.ATCommand.RecordingCommand.getDefaultInstance();
       }
 
-      public com.rtrk.atcommands.ATCommands.RecordingCommand build() {
-        com.rtrk.atcommands.ATCommands.RecordingCommand result = buildPartial();
+      public com.rtrk.atcommands.ATCommand.RecordingCommand build() {
+        com.rtrk.atcommands.ATCommand.RecordingCommand result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      public com.rtrk.atcommands.ATCommands.RecordingCommand buildPartial() {
-        com.rtrk.atcommands.ATCommands.RecordingCommand result = new com.rtrk.atcommands.ATCommands.RecordingCommand(this);
+      public com.rtrk.atcommands.ATCommand.RecordingCommand buildPartial() {
+        com.rtrk.atcommands.ATCommand.RecordingCommand result = new com.rtrk.atcommands.ATCommand.RecordingCommand(this);
         result.messageType_ = messageType_;
         result.state_ = state_;
         result.fileName_ = fileName_;
@@ -19159,16 +19349,16 @@ public final class ATCommands {
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.rtrk.atcommands.ATCommands.RecordingCommand) {
-          return mergeFrom((com.rtrk.atcommands.ATCommands.RecordingCommand)other);
+        if (other instanceof com.rtrk.atcommands.ATCommand.RecordingCommand) {
+          return mergeFrom((com.rtrk.atcommands.ATCommand.RecordingCommand)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.rtrk.atcommands.ATCommands.RecordingCommand other) {
-        if (other == com.rtrk.atcommands.ATCommands.RecordingCommand.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.rtrk.atcommands.ATCommand.RecordingCommand other) {
+        if (other == com.rtrk.atcommands.ATCommand.RecordingCommand.getDefaultInstance()) return this;
         if (other.messageType_ != 0) {
           setMessageTypeValue(other.getMessageTypeValue());
         }
@@ -19206,11 +19396,11 @@ public final class ATCommands {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.rtrk.atcommands.ATCommands.RecordingCommand parsedMessage = null;
+        com.rtrk.atcommands.ATCommand.RecordingCommand parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.rtrk.atcommands.ATCommands.RecordingCommand) e.getUnfinishedMessage();
+          parsedMessage = (com.rtrk.atcommands.ATCommand.RecordingCommand) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -19238,14 +19428,14 @@ public final class ATCommands {
       /**
        * <code>optional .com.rtrk.protobuf.RecordingMessageType messageType = 1;</code>
        */
-      public com.rtrk.atcommands.ATCommands.RecordingMessageType getMessageType() {
-        com.rtrk.atcommands.ATCommands.RecordingMessageType result = com.rtrk.atcommands.ATCommands.RecordingMessageType.valueOf(messageType_);
-        return result == null ? com.rtrk.atcommands.ATCommands.RecordingMessageType.UNRECOGNIZED : result;
+      public com.rtrk.atcommands.ATCommand.RecordingMessageType getMessageType() {
+        com.rtrk.atcommands.ATCommand.RecordingMessageType result = com.rtrk.atcommands.ATCommand.RecordingMessageType.valueOf(messageType_);
+        return result == null ? com.rtrk.atcommands.ATCommand.RecordingMessageType.UNRECOGNIZED : result;
       }
       /**
        * <code>optional .com.rtrk.protobuf.RecordingMessageType messageType = 1;</code>
        */
-      public Builder setMessageType(com.rtrk.atcommands.ATCommands.RecordingMessageType value) {
+      public Builder setMessageType(com.rtrk.atcommands.ATCommand.RecordingMessageType value) {
         if (value == null) {
           throw new NullPointerException();
         }
@@ -19481,14 +19671,14 @@ public final class ATCommands {
       /**
        * <code>optional .com.rtrk.protobuf.Error error = 8;</code>
        */
-      public com.rtrk.atcommands.ATCommands.Error getError() {
-        com.rtrk.atcommands.ATCommands.Error result = com.rtrk.atcommands.ATCommands.Error.valueOf(error_);
-        return result == null ? com.rtrk.atcommands.ATCommands.Error.UNRECOGNIZED : result;
+      public com.rtrk.atcommands.ATCommand.Error getError() {
+        com.rtrk.atcommands.ATCommand.Error result = com.rtrk.atcommands.ATCommand.Error.valueOf(error_);
+        return result == null ? com.rtrk.atcommands.ATCommand.Error.UNRECOGNIZED : result;
       }
       /**
        * <code>optional .com.rtrk.protobuf.Error error = 8;</code>
        */
-      public Builder setError(com.rtrk.atcommands.ATCommands.Error value) {
+      public Builder setError(com.rtrk.atcommands.ATCommand.Error value) {
         if (value == null) {
           throw new NullPointerException();
         }
@@ -19521,12 +19711,12 @@ public final class ATCommands {
     }
 
     // @@protoc_insertion_point(class_scope:com.rtrk.protobuf.RecordingCommand)
-    private static final com.rtrk.atcommands.ATCommands.RecordingCommand DEFAULT_INSTANCE;
+    private static final com.rtrk.atcommands.ATCommand.RecordingCommand DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.rtrk.atcommands.ATCommands.RecordingCommand();
+      DEFAULT_INSTANCE = new com.rtrk.atcommands.ATCommand.RecordingCommand();
     }
 
-    public static com.rtrk.atcommands.ATCommands.RecordingCommand getDefaultInstance() {
+    public static com.rtrk.atcommands.ATCommand.RecordingCommand getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -19549,7 +19739,7 @@ public final class ATCommands {
       return PARSER;
     }
 
-    public com.rtrk.atcommands.ATCommands.RecordingCommand getDefaultInstanceForType() {
+    public com.rtrk.atcommands.ATCommand.RecordingCommand getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -19566,7 +19756,7 @@ public final class ATCommands {
     /**
      * <code>optional .com.rtrk.protobuf.SMTPMessageType messageType = 1;</code>
      */
-    com.rtrk.atcommands.ATCommands.SMTPMessageType getMessageType();
+    com.rtrk.atcommands.ATCommand.SMTPMessageType getMessageType();
 
     /**
      * <code>optional string user = 2;</code>
@@ -19862,14 +20052,14 @@ public final class ATCommands {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.rtrk.atcommands.ATCommands.internal_static_com_rtrk_protobuf_SMTPCommand_descriptor;
+      return com.rtrk.atcommands.ATCommand.internal_static_com_rtrk_protobuf_SMTPCommand_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.rtrk.atcommands.ATCommands.internal_static_com_rtrk_protobuf_SMTPCommand_fieldAccessorTable
+      return com.rtrk.atcommands.ATCommand.internal_static_com_rtrk_protobuf_SMTPCommand_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.rtrk.atcommands.ATCommands.SMTPCommand.class, com.rtrk.atcommands.ATCommands.SMTPCommand.Builder.class);
+              com.rtrk.atcommands.ATCommand.SMTPCommand.class, com.rtrk.atcommands.ATCommand.SMTPCommand.Builder.class);
     }
 
     public static final int MESSAGETYPE_FIELD_NUMBER = 1;
@@ -19883,9 +20073,9 @@ public final class ATCommands {
     /**
      * <code>optional .com.rtrk.protobuf.SMTPMessageType messageType = 1;</code>
      */
-    public com.rtrk.atcommands.ATCommands.SMTPMessageType getMessageType() {
-      com.rtrk.atcommands.ATCommands.SMTPMessageType result = com.rtrk.atcommands.ATCommands.SMTPMessageType.valueOf(messageType_);
-      return result == null ? com.rtrk.atcommands.ATCommands.SMTPMessageType.UNRECOGNIZED : result;
+    public com.rtrk.atcommands.ATCommand.SMTPMessageType getMessageType() {
+      com.rtrk.atcommands.ATCommand.SMTPMessageType result = com.rtrk.atcommands.ATCommand.SMTPMessageType.valueOf(messageType_);
+      return result == null ? com.rtrk.atcommands.ATCommand.SMTPMessageType.UNRECOGNIZED : result;
     }
 
     public static final int USER_FIELD_NUMBER = 2;
@@ -20253,7 +20443,7 @@ public final class ATCommands {
 
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (messageType_ != com.rtrk.atcommands.ATCommands.SMTPMessageType.SET_THE_USER_NAME_FOR_AUTHENTICATION.getNumber()) {
+      if (messageType_ != com.rtrk.atcommands.ATCommand.SMTPMessageType.SET_THE_USER_NAME_FOR_AUTHENTICATION.getNumber()) {
         output.writeEnum(1, messageType_);
       }
       if (!getUserBytes().isEmpty()) {
@@ -20314,7 +20504,7 @@ public final class ATCommands {
       if (size != -1) return size;
 
       size = 0;
-      if (messageType_ != com.rtrk.atcommands.ATCommands.SMTPMessageType.SET_THE_USER_NAME_FOR_AUTHENTICATION.getNumber()) {
+      if (messageType_ != com.rtrk.atcommands.ATCommand.SMTPMessageType.SET_THE_USER_NAME_FOR_AUTHENTICATION.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(1, messageType_);
       }
@@ -20388,10 +20578,10 @@ public final class ATCommands {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.rtrk.atcommands.ATCommands.SMTPCommand)) {
+      if (!(obj instanceof com.rtrk.atcommands.ATCommand.SMTPCommand)) {
         return super.equals(obj);
       }
-      com.rtrk.atcommands.ATCommands.SMTPCommand other = (com.rtrk.atcommands.ATCommands.SMTPCommand) obj;
+      com.rtrk.atcommands.ATCommand.SMTPCommand other = (com.rtrk.atcommands.ATCommand.SMTPCommand) obj;
 
       boolean result = true;
       result = result && messageType_ == other.messageType_;
@@ -20480,58 +20670,58 @@ public final class ATCommands {
       return hash;
     }
 
-    public static com.rtrk.atcommands.ATCommands.SMTPCommand parseFrom(
+    public static com.rtrk.atcommands.ATCommand.SMTPCommand parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.rtrk.atcommands.ATCommands.SMTPCommand parseFrom(
+    public static com.rtrk.atcommands.ATCommand.SMTPCommand parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.rtrk.atcommands.ATCommands.SMTPCommand parseFrom(byte[] data)
+    public static com.rtrk.atcommands.ATCommand.SMTPCommand parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.rtrk.atcommands.ATCommands.SMTPCommand parseFrom(
+    public static com.rtrk.atcommands.ATCommand.SMTPCommand parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.rtrk.atcommands.ATCommands.SMTPCommand parseFrom(java.io.InputStream input)
+    public static com.rtrk.atcommands.ATCommand.SMTPCommand parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.rtrk.atcommands.ATCommands.SMTPCommand parseFrom(
+    public static com.rtrk.atcommands.ATCommand.SMTPCommand parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.rtrk.atcommands.ATCommands.SMTPCommand parseDelimitedFrom(java.io.InputStream input)
+    public static com.rtrk.atcommands.ATCommand.SMTPCommand parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static com.rtrk.atcommands.ATCommands.SMTPCommand parseDelimitedFrom(
+    public static com.rtrk.atcommands.ATCommand.SMTPCommand parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.rtrk.atcommands.ATCommands.SMTPCommand parseFrom(
+    public static com.rtrk.atcommands.ATCommand.SMTPCommand parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.rtrk.atcommands.ATCommands.SMTPCommand parseFrom(
+    public static com.rtrk.atcommands.ATCommand.SMTPCommand parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -20543,7 +20733,7 @@ public final class ATCommands {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.rtrk.atcommands.ATCommands.SMTPCommand prototype) {
+    public static Builder newBuilder(com.rtrk.atcommands.ATCommand.SMTPCommand prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() {
@@ -20563,20 +20753,20 @@ public final class ATCommands {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:com.rtrk.protobuf.SMTPCommand)
-        com.rtrk.atcommands.ATCommands.SMTPCommandOrBuilder {
+        com.rtrk.atcommands.ATCommand.SMTPCommandOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.rtrk.atcommands.ATCommands.internal_static_com_rtrk_protobuf_SMTPCommand_descriptor;
+        return com.rtrk.atcommands.ATCommand.internal_static_com_rtrk_protobuf_SMTPCommand_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.rtrk.atcommands.ATCommands.internal_static_com_rtrk_protobuf_SMTPCommand_fieldAccessorTable
+        return com.rtrk.atcommands.ATCommand.internal_static_com_rtrk_protobuf_SMTPCommand_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.rtrk.atcommands.ATCommands.SMTPCommand.class, com.rtrk.atcommands.ATCommands.SMTPCommand.Builder.class);
+                com.rtrk.atcommands.ATCommand.SMTPCommand.class, com.rtrk.atcommands.ATCommand.SMTPCommand.Builder.class);
       }
 
-      // Construct using com.rtrk.atcommands.ATCommands.SMTPCommand.newBuilder()
+      // Construct using com.rtrk.atcommands.ATCommand.SMTPCommand.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -20634,23 +20824,23 @@ public final class ATCommands {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.rtrk.atcommands.ATCommands.internal_static_com_rtrk_protobuf_SMTPCommand_descriptor;
+        return com.rtrk.atcommands.ATCommand.internal_static_com_rtrk_protobuf_SMTPCommand_descriptor;
       }
 
-      public com.rtrk.atcommands.ATCommands.SMTPCommand getDefaultInstanceForType() {
-        return com.rtrk.atcommands.ATCommands.SMTPCommand.getDefaultInstance();
+      public com.rtrk.atcommands.ATCommand.SMTPCommand getDefaultInstanceForType() {
+        return com.rtrk.atcommands.ATCommand.SMTPCommand.getDefaultInstance();
       }
 
-      public com.rtrk.atcommands.ATCommands.SMTPCommand build() {
-        com.rtrk.atcommands.ATCommands.SMTPCommand result = buildPartial();
+      public com.rtrk.atcommands.ATCommand.SMTPCommand build() {
+        com.rtrk.atcommands.ATCommand.SMTPCommand result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      public com.rtrk.atcommands.ATCommands.SMTPCommand buildPartial() {
-        com.rtrk.atcommands.ATCommands.SMTPCommand result = new com.rtrk.atcommands.ATCommands.SMTPCommand(this);
+      public com.rtrk.atcommands.ATCommand.SMTPCommand buildPartial() {
+        com.rtrk.atcommands.ATCommand.SMTPCommand result = new com.rtrk.atcommands.ATCommand.SMTPCommand(this);
         result.messageType_ = messageType_;
         result.user_ = user_;
         result.password_ = password_;
@@ -20700,16 +20890,16 @@ public final class ATCommands {
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.rtrk.atcommands.ATCommands.SMTPCommand) {
-          return mergeFrom((com.rtrk.atcommands.ATCommands.SMTPCommand)other);
+        if (other instanceof com.rtrk.atcommands.ATCommand.SMTPCommand) {
+          return mergeFrom((com.rtrk.atcommands.ATCommand.SMTPCommand)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.rtrk.atcommands.ATCommands.SMTPCommand other) {
-        if (other == com.rtrk.atcommands.ATCommands.SMTPCommand.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.rtrk.atcommands.ATCommand.SMTPCommand other) {
+        if (other == com.rtrk.atcommands.ATCommand.SMTPCommand.getDefaultInstance()) return this;
         if (other.messageType_ != 0) {
           setMessageTypeValue(other.getMessageTypeValue());
         }
@@ -20784,11 +20974,11 @@ public final class ATCommands {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.rtrk.atcommands.ATCommands.SMTPCommand parsedMessage = null;
+        com.rtrk.atcommands.ATCommand.SMTPCommand parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.rtrk.atcommands.ATCommands.SMTPCommand) e.getUnfinishedMessage();
+          parsedMessage = (com.rtrk.atcommands.ATCommand.SMTPCommand) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -20816,14 +21006,14 @@ public final class ATCommands {
       /**
        * <code>optional .com.rtrk.protobuf.SMTPMessageType messageType = 1;</code>
        */
-      public com.rtrk.atcommands.ATCommands.SMTPMessageType getMessageType() {
-        com.rtrk.atcommands.ATCommands.SMTPMessageType result = com.rtrk.atcommands.ATCommands.SMTPMessageType.valueOf(messageType_);
-        return result == null ? com.rtrk.atcommands.ATCommands.SMTPMessageType.UNRECOGNIZED : result;
+      public com.rtrk.atcommands.ATCommand.SMTPMessageType getMessageType() {
+        com.rtrk.atcommands.ATCommand.SMTPMessageType result = com.rtrk.atcommands.ATCommand.SMTPMessageType.valueOf(messageType_);
+        return result == null ? com.rtrk.atcommands.ATCommand.SMTPMessageType.UNRECOGNIZED : result;
       }
       /**
        * <code>optional .com.rtrk.protobuf.SMTPMessageType messageType = 1;</code>
        */
-      public Builder setMessageType(com.rtrk.atcommands.ATCommands.SMTPMessageType value) {
+      public Builder setMessageType(com.rtrk.atcommands.ATCommand.SMTPMessageType value) {
         if (value == null) {
           throw new NullPointerException();
         }
@@ -21642,12 +21832,12 @@ public final class ATCommands {
     }
 
     // @@protoc_insertion_point(class_scope:com.rtrk.protobuf.SMTPCommand)
-    private static final com.rtrk.atcommands.ATCommands.SMTPCommand DEFAULT_INSTANCE;
+    private static final com.rtrk.atcommands.ATCommand.SMTPCommand DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.rtrk.atcommands.ATCommands.SMTPCommand();
+      DEFAULT_INSTANCE = new com.rtrk.atcommands.ATCommand.SMTPCommand();
     }
 
-    public static com.rtrk.atcommands.ATCommands.SMTPCommand getDefaultInstance() {
+    public static com.rtrk.atcommands.ATCommand.SMTPCommand getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -21670,7 +21860,7 @@ public final class ATCommands {
       return PARSER;
     }
 
-    public com.rtrk.atcommands.ATCommands.SMTPCommand getDefaultInstanceForType() {
+    public com.rtrk.atcommands.ATCommand.SMTPCommand getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -21687,7 +21877,7 @@ public final class ATCommands {
     /**
      * <code>optional .com.rtrk.protobuf.STKMessageType messageType = 1;</code>
      */
-    com.rtrk.atcommands.ATCommands.STKMessageType getMessageType();
+    com.rtrk.atcommands.ATCommand.STKMessageType getMessageType();
 
     /**
      * <code>optional int32 n = 2;</code>
@@ -21810,14 +22000,14 @@ public final class ATCommands {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.rtrk.atcommands.ATCommands.internal_static_com_rtrk_protobuf_STKCommand_descriptor;
+      return com.rtrk.atcommands.ATCommand.internal_static_com_rtrk_protobuf_STKCommand_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.rtrk.atcommands.ATCommands.internal_static_com_rtrk_protobuf_STKCommand_fieldAccessorTable
+      return com.rtrk.atcommands.ATCommand.internal_static_com_rtrk_protobuf_STKCommand_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.rtrk.atcommands.ATCommands.STKCommand.class, com.rtrk.atcommands.ATCommands.STKCommand.Builder.class);
+              com.rtrk.atcommands.ATCommand.STKCommand.class, com.rtrk.atcommands.ATCommand.STKCommand.Builder.class);
     }
 
     public static final int MESSAGETYPE_FIELD_NUMBER = 1;
@@ -21831,9 +22021,9 @@ public final class ATCommands {
     /**
      * <code>optional .com.rtrk.protobuf.STKMessageType messageType = 1;</code>
      */
-    public com.rtrk.atcommands.ATCommands.STKMessageType getMessageType() {
-      com.rtrk.atcommands.ATCommands.STKMessageType result = com.rtrk.atcommands.ATCommands.STKMessageType.valueOf(messageType_);
-      return result == null ? com.rtrk.atcommands.ATCommands.STKMessageType.UNRECOGNIZED : result;
+    public com.rtrk.atcommands.ATCommand.STKMessageType getMessageType() {
+      com.rtrk.atcommands.ATCommand.STKMessageType result = com.rtrk.atcommands.ATCommand.STKMessageType.valueOf(messageType_);
+      return result == null ? com.rtrk.atcommands.ATCommand.STKMessageType.UNRECOGNIZED : result;
     }
 
     public static final int N_FIELD_NUMBER = 2;
@@ -21959,7 +22149,7 @@ public final class ATCommands {
 
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (messageType_ != com.rtrk.atcommands.ATCommands.STKMessageType.TURN_ON_OFF_STK_FUNCTION.getNumber()) {
+      if (messageType_ != com.rtrk.atcommands.ATCommand.STKMessageType.TURN_ON_OFF_STK_FUNCTION.getNumber()) {
         output.writeEnum(1, messageType_);
       }
       if (n_ != 0) {
@@ -21981,7 +22171,7 @@ public final class ATCommands {
       if (size != -1) return size;
 
       size = 0;
-      if (messageType_ != com.rtrk.atcommands.ATCommands.STKMessageType.TURN_ON_OFF_STK_FUNCTION.getNumber()) {
+      if (messageType_ != com.rtrk.atcommands.ATCommand.STKMessageType.TURN_ON_OFF_STK_FUNCTION.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(1, messageType_);
       }
@@ -22008,10 +22198,10 @@ public final class ATCommands {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.rtrk.atcommands.ATCommands.STKCommand)) {
+      if (!(obj instanceof com.rtrk.atcommands.ATCommand.STKCommand)) {
         return super.equals(obj);
       }
-      com.rtrk.atcommands.ATCommands.STKCommand other = (com.rtrk.atcommands.ATCommands.STKCommand) obj;
+      com.rtrk.atcommands.ATCommand.STKCommand other = (com.rtrk.atcommands.ATCommand.STKCommand) obj;
 
       boolean result = true;
       result = result && messageType_ == other.messageType_;
@@ -22048,58 +22238,58 @@ public final class ATCommands {
       return hash;
     }
 
-    public static com.rtrk.atcommands.ATCommands.STKCommand parseFrom(
+    public static com.rtrk.atcommands.ATCommand.STKCommand parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.rtrk.atcommands.ATCommands.STKCommand parseFrom(
+    public static com.rtrk.atcommands.ATCommand.STKCommand parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.rtrk.atcommands.ATCommands.STKCommand parseFrom(byte[] data)
+    public static com.rtrk.atcommands.ATCommand.STKCommand parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.rtrk.atcommands.ATCommands.STKCommand parseFrom(
+    public static com.rtrk.atcommands.ATCommand.STKCommand parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.rtrk.atcommands.ATCommands.STKCommand parseFrom(java.io.InputStream input)
+    public static com.rtrk.atcommands.ATCommand.STKCommand parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.rtrk.atcommands.ATCommands.STKCommand parseFrom(
+    public static com.rtrk.atcommands.ATCommand.STKCommand parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.rtrk.atcommands.ATCommands.STKCommand parseDelimitedFrom(java.io.InputStream input)
+    public static com.rtrk.atcommands.ATCommand.STKCommand parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static com.rtrk.atcommands.ATCommands.STKCommand parseDelimitedFrom(
+    public static com.rtrk.atcommands.ATCommand.STKCommand parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.rtrk.atcommands.ATCommands.STKCommand parseFrom(
+    public static com.rtrk.atcommands.ATCommand.STKCommand parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.rtrk.atcommands.ATCommands.STKCommand parseFrom(
+    public static com.rtrk.atcommands.ATCommand.STKCommand parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -22111,7 +22301,7 @@ public final class ATCommands {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.rtrk.atcommands.ATCommands.STKCommand prototype) {
+    public static Builder newBuilder(com.rtrk.atcommands.ATCommand.STKCommand prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() {
@@ -22131,20 +22321,20 @@ public final class ATCommands {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:com.rtrk.protobuf.STKCommand)
-        com.rtrk.atcommands.ATCommands.STKCommandOrBuilder {
+        com.rtrk.atcommands.ATCommand.STKCommandOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.rtrk.atcommands.ATCommands.internal_static_com_rtrk_protobuf_STKCommand_descriptor;
+        return com.rtrk.atcommands.ATCommand.internal_static_com_rtrk_protobuf_STKCommand_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.rtrk.atcommands.ATCommands.internal_static_com_rtrk_protobuf_STKCommand_fieldAccessorTable
+        return com.rtrk.atcommands.ATCommand.internal_static_com_rtrk_protobuf_STKCommand_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.rtrk.atcommands.ATCommands.STKCommand.class, com.rtrk.atcommands.ATCommands.STKCommand.Builder.class);
+                com.rtrk.atcommands.ATCommand.STKCommand.class, com.rtrk.atcommands.ATCommand.STKCommand.Builder.class);
       }
 
-      // Construct using com.rtrk.atcommands.ATCommands.STKCommand.newBuilder()
+      // Construct using com.rtrk.atcommands.ATCommand.STKCommand.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -22176,23 +22366,23 @@ public final class ATCommands {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.rtrk.atcommands.ATCommands.internal_static_com_rtrk_protobuf_STKCommand_descriptor;
+        return com.rtrk.atcommands.ATCommand.internal_static_com_rtrk_protobuf_STKCommand_descriptor;
       }
 
-      public com.rtrk.atcommands.ATCommands.STKCommand getDefaultInstanceForType() {
-        return com.rtrk.atcommands.ATCommands.STKCommand.getDefaultInstance();
+      public com.rtrk.atcommands.ATCommand.STKCommand getDefaultInstanceForType() {
+        return com.rtrk.atcommands.ATCommand.STKCommand.getDefaultInstance();
       }
 
-      public com.rtrk.atcommands.ATCommands.STKCommand build() {
-        com.rtrk.atcommands.ATCommands.STKCommand result = buildPartial();
+      public com.rtrk.atcommands.ATCommand.STKCommand build() {
+        com.rtrk.atcommands.ATCommand.STKCommand result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      public com.rtrk.atcommands.ATCommands.STKCommand buildPartial() {
-        com.rtrk.atcommands.ATCommands.STKCommand result = new com.rtrk.atcommands.ATCommands.STKCommand(this);
+      public com.rtrk.atcommands.ATCommand.STKCommand buildPartial() {
+        com.rtrk.atcommands.ATCommand.STKCommand result = new com.rtrk.atcommands.ATCommand.STKCommand(this);
         result.messageType_ = messageType_;
         result.n_ = n_;
         result.profile_ = profile_;
@@ -22229,16 +22419,16 @@ public final class ATCommands {
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.rtrk.atcommands.ATCommands.STKCommand) {
-          return mergeFrom((com.rtrk.atcommands.ATCommands.STKCommand)other);
+        if (other instanceof com.rtrk.atcommands.ATCommand.STKCommand) {
+          return mergeFrom((com.rtrk.atcommands.ATCommand.STKCommand)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.rtrk.atcommands.ATCommands.STKCommand other) {
-        if (other == com.rtrk.atcommands.ATCommands.STKCommand.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.rtrk.atcommands.ATCommand.STKCommand other) {
+        if (other == com.rtrk.atcommands.ATCommand.STKCommand.getDefaultInstance()) return this;
         if (other.messageType_ != 0) {
           setMessageTypeValue(other.getMessageTypeValue());
         }
@@ -22269,11 +22459,11 @@ public final class ATCommands {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.rtrk.atcommands.ATCommands.STKCommand parsedMessage = null;
+        com.rtrk.atcommands.ATCommand.STKCommand parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.rtrk.atcommands.ATCommands.STKCommand) e.getUnfinishedMessage();
+          parsedMessage = (com.rtrk.atcommands.ATCommand.STKCommand) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -22301,14 +22491,14 @@ public final class ATCommands {
       /**
        * <code>optional .com.rtrk.protobuf.STKMessageType messageType = 1;</code>
        */
-      public com.rtrk.atcommands.ATCommands.STKMessageType getMessageType() {
-        com.rtrk.atcommands.ATCommands.STKMessageType result = com.rtrk.atcommands.ATCommands.STKMessageType.valueOf(messageType_);
-        return result == null ? com.rtrk.atcommands.ATCommands.STKMessageType.UNRECOGNIZED : result;
+      public com.rtrk.atcommands.ATCommand.STKMessageType getMessageType() {
+        com.rtrk.atcommands.ATCommand.STKMessageType result = com.rtrk.atcommands.ATCommand.STKMessageType.valueOf(messageType_);
+        return result == null ? com.rtrk.atcommands.ATCommand.STKMessageType.UNRECOGNIZED : result;
       }
       /**
        * <code>optional .com.rtrk.protobuf.STKMessageType messageType = 1;</code>
        */
-      public Builder setMessageType(com.rtrk.atcommands.ATCommands.STKMessageType value) {
+      public Builder setMessageType(com.rtrk.atcommands.ATCommand.STKMessageType value) {
         if (value == null) {
           throw new NullPointerException();
         }
@@ -22574,12 +22764,12 @@ public final class ATCommands {
     }
 
     // @@protoc_insertion_point(class_scope:com.rtrk.protobuf.STKCommand)
-    private static final com.rtrk.atcommands.ATCommands.STKCommand DEFAULT_INSTANCE;
+    private static final com.rtrk.atcommands.ATCommand.STKCommand DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.rtrk.atcommands.ATCommands.STKCommand();
+      DEFAULT_INSTANCE = new com.rtrk.atcommands.ATCommand.STKCommand();
     }
 
-    public static com.rtrk.atcommands.ATCommands.STKCommand getDefaultInstance() {
+    public static com.rtrk.atcommands.ATCommand.STKCommand getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -22602,7 +22792,7 @@ public final class ATCommands {
       return PARSER;
     }
 
-    public com.rtrk.atcommands.ATCommands.STKCommand getDefaultInstanceForType() {
+    public com.rtrk.atcommands.ATCommand.STKCommand getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -22619,7 +22809,7 @@ public final class ATCommands {
     /**
      * <code>optional .com.rtrk.protobuf.GeneralMesssageType messageType = 1;</code>
      */
-    com.rtrk.atcommands.ATCommands.GeneralMesssageType getMessageType();
+    com.rtrk.atcommands.ATCommand.GeneralMesssageType getMessageType();
 
     /**
      * <code>optional int32 value = 2;</code>
@@ -22741,14 +22931,14 @@ public final class ATCommands {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.rtrk.atcommands.ATCommands.internal_static_com_rtrk_protobuf_GeneralCommand_descriptor;
+      return com.rtrk.atcommands.ATCommand.internal_static_com_rtrk_protobuf_GeneralCommand_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.rtrk.atcommands.ATCommands.internal_static_com_rtrk_protobuf_GeneralCommand_fieldAccessorTable
+      return com.rtrk.atcommands.ATCommand.internal_static_com_rtrk_protobuf_GeneralCommand_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.rtrk.atcommands.ATCommands.GeneralCommand.class, com.rtrk.atcommands.ATCommands.GeneralCommand.Builder.class);
+              com.rtrk.atcommands.ATCommand.GeneralCommand.class, com.rtrk.atcommands.ATCommand.GeneralCommand.Builder.class);
     }
 
     public static final int MESSAGETYPE_FIELD_NUMBER = 1;
@@ -22762,9 +22952,9 @@ public final class ATCommands {
     /**
      * <code>optional .com.rtrk.protobuf.GeneralMesssageType messageType = 1;</code>
      */
-    public com.rtrk.atcommands.ATCommands.GeneralMesssageType getMessageType() {
-      com.rtrk.atcommands.ATCommands.GeneralMesssageType result = com.rtrk.atcommands.ATCommands.GeneralMesssageType.valueOf(messageType_);
-      return result == null ? com.rtrk.atcommands.ATCommands.GeneralMesssageType.UNRECOGNIZED : result;
+    public com.rtrk.atcommands.ATCommand.GeneralMesssageType getMessageType() {
+      com.rtrk.atcommands.ATCommand.GeneralMesssageType result = com.rtrk.atcommands.ATCommand.GeneralMesssageType.valueOf(messageType_);
+      return result == null ? com.rtrk.atcommands.ATCommand.GeneralMesssageType.UNRECOGNIZED : result;
     }
 
     public static final int VALUE_FIELD_NUMBER = 2;
@@ -22849,7 +23039,7 @@ public final class ATCommands {
 
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (messageType_ != com.rtrk.atcommands.ATCommands.GeneralMesssageType.DISPLAY_PRODUCT_IDENTIFICATION_INFORMATION.getNumber()) {
+      if (messageType_ != com.rtrk.atcommands.ATCommand.GeneralMesssageType.DISPLAY_PRODUCT_IDENTIFICATION_INFORMATION.getNumber()) {
         output.writeEnum(1, messageType_);
       }
       if (value_ != 0) {
@@ -22874,7 +23064,7 @@ public final class ATCommands {
       if (size != -1) return size;
 
       size = 0;
-      if (messageType_ != com.rtrk.atcommands.ATCommands.GeneralMesssageType.DISPLAY_PRODUCT_IDENTIFICATION_INFORMATION.getNumber()) {
+      if (messageType_ != com.rtrk.atcommands.ATCommand.GeneralMesssageType.DISPLAY_PRODUCT_IDENTIFICATION_INFORMATION.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(1, messageType_);
       }
@@ -22907,10 +23097,10 @@ public final class ATCommands {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.rtrk.atcommands.ATCommands.GeneralCommand)) {
+      if (!(obj instanceof com.rtrk.atcommands.ATCommand.GeneralCommand)) {
         return super.equals(obj);
       }
-      com.rtrk.atcommands.ATCommands.GeneralCommand other = (com.rtrk.atcommands.ATCommands.GeneralCommand) obj;
+      com.rtrk.atcommands.ATCommand.GeneralCommand other = (com.rtrk.atcommands.ATCommand.GeneralCommand) obj;
 
       boolean result = true;
       result = result && messageType_ == other.messageType_;
@@ -22951,58 +23141,58 @@ public final class ATCommands {
       return hash;
     }
 
-    public static com.rtrk.atcommands.ATCommands.GeneralCommand parseFrom(
+    public static com.rtrk.atcommands.ATCommand.GeneralCommand parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.rtrk.atcommands.ATCommands.GeneralCommand parseFrom(
+    public static com.rtrk.atcommands.ATCommand.GeneralCommand parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.rtrk.atcommands.ATCommands.GeneralCommand parseFrom(byte[] data)
+    public static com.rtrk.atcommands.ATCommand.GeneralCommand parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.rtrk.atcommands.ATCommands.GeneralCommand parseFrom(
+    public static com.rtrk.atcommands.ATCommand.GeneralCommand parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.rtrk.atcommands.ATCommands.GeneralCommand parseFrom(java.io.InputStream input)
+    public static com.rtrk.atcommands.ATCommand.GeneralCommand parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.rtrk.atcommands.ATCommands.GeneralCommand parseFrom(
+    public static com.rtrk.atcommands.ATCommand.GeneralCommand parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.rtrk.atcommands.ATCommands.GeneralCommand parseDelimitedFrom(java.io.InputStream input)
+    public static com.rtrk.atcommands.ATCommand.GeneralCommand parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static com.rtrk.atcommands.ATCommands.GeneralCommand parseDelimitedFrom(
+    public static com.rtrk.atcommands.ATCommand.GeneralCommand parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.rtrk.atcommands.ATCommands.GeneralCommand parseFrom(
+    public static com.rtrk.atcommands.ATCommand.GeneralCommand parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.rtrk.atcommands.ATCommands.GeneralCommand parseFrom(
+    public static com.rtrk.atcommands.ATCommand.GeneralCommand parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -23014,7 +23204,7 @@ public final class ATCommands {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.rtrk.atcommands.ATCommands.GeneralCommand prototype) {
+    public static Builder newBuilder(com.rtrk.atcommands.ATCommand.GeneralCommand prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() {
@@ -23034,20 +23224,20 @@ public final class ATCommands {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:com.rtrk.protobuf.GeneralCommand)
-        com.rtrk.atcommands.ATCommands.GeneralCommandOrBuilder {
+        com.rtrk.atcommands.ATCommand.GeneralCommandOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.rtrk.atcommands.ATCommands.internal_static_com_rtrk_protobuf_GeneralCommand_descriptor;
+        return com.rtrk.atcommands.ATCommand.internal_static_com_rtrk_protobuf_GeneralCommand_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.rtrk.atcommands.ATCommands.internal_static_com_rtrk_protobuf_GeneralCommand_fieldAccessorTable
+        return com.rtrk.atcommands.ATCommand.internal_static_com_rtrk_protobuf_GeneralCommand_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.rtrk.atcommands.ATCommands.GeneralCommand.class, com.rtrk.atcommands.ATCommands.GeneralCommand.Builder.class);
+                com.rtrk.atcommands.ATCommand.GeneralCommand.class, com.rtrk.atcommands.ATCommand.GeneralCommand.Builder.class);
       }
 
-      // Construct using com.rtrk.atcommands.ATCommands.GeneralCommand.newBuilder()
+      // Construct using com.rtrk.atcommands.ATCommand.GeneralCommand.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -23081,23 +23271,23 @@ public final class ATCommands {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.rtrk.atcommands.ATCommands.internal_static_com_rtrk_protobuf_GeneralCommand_descriptor;
+        return com.rtrk.atcommands.ATCommand.internal_static_com_rtrk_protobuf_GeneralCommand_descriptor;
       }
 
-      public com.rtrk.atcommands.ATCommands.GeneralCommand getDefaultInstanceForType() {
-        return com.rtrk.atcommands.ATCommands.GeneralCommand.getDefaultInstance();
+      public com.rtrk.atcommands.ATCommand.GeneralCommand getDefaultInstanceForType() {
+        return com.rtrk.atcommands.ATCommand.GeneralCommand.getDefaultInstance();
       }
 
-      public com.rtrk.atcommands.ATCommands.GeneralCommand build() {
-        com.rtrk.atcommands.ATCommands.GeneralCommand result = buildPartial();
+      public com.rtrk.atcommands.ATCommand.GeneralCommand build() {
+        com.rtrk.atcommands.ATCommand.GeneralCommand result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      public com.rtrk.atcommands.ATCommands.GeneralCommand buildPartial() {
-        com.rtrk.atcommands.ATCommands.GeneralCommand result = new com.rtrk.atcommands.ATCommands.GeneralCommand(this);
+      public com.rtrk.atcommands.ATCommand.GeneralCommand buildPartial() {
+        com.rtrk.atcommands.ATCommand.GeneralCommand result = new com.rtrk.atcommands.ATCommand.GeneralCommand(this);
         result.messageType_ = messageType_;
         result.value_ = value_;
         result.n_ = n_;
@@ -23135,16 +23325,16 @@ public final class ATCommands {
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.rtrk.atcommands.ATCommands.GeneralCommand) {
-          return mergeFrom((com.rtrk.atcommands.ATCommands.GeneralCommand)other);
+        if (other instanceof com.rtrk.atcommands.ATCommand.GeneralCommand) {
+          return mergeFrom((com.rtrk.atcommands.ATCommand.GeneralCommand)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.rtrk.atcommands.ATCommands.GeneralCommand other) {
-        if (other == com.rtrk.atcommands.ATCommands.GeneralCommand.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.rtrk.atcommands.ATCommand.GeneralCommand other) {
+        if (other == com.rtrk.atcommands.ATCommand.GeneralCommand.getDefaultInstance()) return this;
         if (other.messageType_ != 0) {
           setMessageTypeValue(other.getMessageTypeValue());
         }
@@ -23176,11 +23366,11 @@ public final class ATCommands {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.rtrk.atcommands.ATCommands.GeneralCommand parsedMessage = null;
+        com.rtrk.atcommands.ATCommand.GeneralCommand parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.rtrk.atcommands.ATCommands.GeneralCommand) e.getUnfinishedMessage();
+          parsedMessage = (com.rtrk.atcommands.ATCommand.GeneralCommand) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -23208,14 +23398,14 @@ public final class ATCommands {
       /**
        * <code>optional .com.rtrk.protobuf.GeneralMesssageType messageType = 1;</code>
        */
-      public com.rtrk.atcommands.ATCommands.GeneralMesssageType getMessageType() {
-        com.rtrk.atcommands.ATCommands.GeneralMesssageType result = com.rtrk.atcommands.ATCommands.GeneralMesssageType.valueOf(messageType_);
-        return result == null ? com.rtrk.atcommands.ATCommands.GeneralMesssageType.UNRECOGNIZED : result;
+      public com.rtrk.atcommands.ATCommand.GeneralMesssageType getMessageType() {
+        com.rtrk.atcommands.ATCommand.GeneralMesssageType result = com.rtrk.atcommands.ATCommand.GeneralMesssageType.valueOf(messageType_);
+        return result == null ? com.rtrk.atcommands.ATCommand.GeneralMesssageType.UNRECOGNIZED : result;
       }
       /**
        * <code>optional .com.rtrk.protobuf.GeneralMesssageType messageType = 1;</code>
        */
-      public Builder setMessageType(com.rtrk.atcommands.ATCommands.GeneralMesssageType value) {
+      public Builder setMessageType(com.rtrk.atcommands.ATCommand.GeneralMesssageType value) {
         if (value == null) {
           throw new NullPointerException();
         }
@@ -23421,12 +23611,12 @@ public final class ATCommands {
     }
 
     // @@protoc_insertion_point(class_scope:com.rtrk.protobuf.GeneralCommand)
-    private static final com.rtrk.atcommands.ATCommands.GeneralCommand DEFAULT_INSTANCE;
+    private static final com.rtrk.atcommands.ATCommand.GeneralCommand DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.rtrk.atcommands.ATCommands.GeneralCommand();
+      DEFAULT_INSTANCE = new com.rtrk.atcommands.ATCommand.GeneralCommand();
     }
 
-    public static com.rtrk.atcommands.ATCommands.GeneralCommand getDefaultInstance() {
+    public static com.rtrk.atcommands.ATCommand.GeneralCommand getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -23449,7 +23639,7 @@ public final class ATCommands {
       return PARSER;
     }
 
-    public com.rtrk.atcommands.ATCommands.GeneralCommand getDefaultInstanceForType() {
+    public com.rtrk.atcommands.ATCommand.GeneralCommand getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -23466,7 +23656,7 @@ public final class ATCommands {
     /**
      * <code>optional .com.rtrk.protobuf.SerialInterfaceControlMessageType messageType = 1;</code>
      */
-    com.rtrk.atcommands.ATCommands.SerialInterfaceControlMessageType getMessageType();
+    com.rtrk.atcommands.ATCommand.SerialInterfaceControlMessageType getMessageType();
 
     /**
      * <code>optional int32 value = 2;</code>
@@ -23749,14 +23939,14 @@ public final class ATCommands {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.rtrk.atcommands.ATCommands.internal_static_com_rtrk_protobuf_SerialInterfaceControlCommand_descriptor;
+      return com.rtrk.atcommands.ATCommand.internal_static_com_rtrk_protobuf_SerialInterfaceControlCommand_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.rtrk.atcommands.ATCommands.internal_static_com_rtrk_protobuf_SerialInterfaceControlCommand_fieldAccessorTable
+      return com.rtrk.atcommands.ATCommand.internal_static_com_rtrk_protobuf_SerialInterfaceControlCommand_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.rtrk.atcommands.ATCommands.SerialInterfaceControlCommand.class, com.rtrk.atcommands.ATCommands.SerialInterfaceControlCommand.Builder.class);
+              com.rtrk.atcommands.ATCommand.SerialInterfaceControlCommand.class, com.rtrk.atcommands.ATCommand.SerialInterfaceControlCommand.Builder.class);
     }
 
     public static final int MESSAGETYPE_FIELD_NUMBER = 1;
@@ -23770,9 +23960,9 @@ public final class ATCommands {
     /**
      * <code>optional .com.rtrk.protobuf.SerialInterfaceControlMessageType messageType = 1;</code>
      */
-    public com.rtrk.atcommands.ATCommands.SerialInterfaceControlMessageType getMessageType() {
-      com.rtrk.atcommands.ATCommands.SerialInterfaceControlMessageType result = com.rtrk.atcommands.ATCommands.SerialInterfaceControlMessageType.valueOf(messageType_);
-      return result == null ? com.rtrk.atcommands.ATCommands.SerialInterfaceControlMessageType.UNRECOGNIZED : result;
+    public com.rtrk.atcommands.ATCommand.SerialInterfaceControlMessageType getMessageType() {
+      com.rtrk.atcommands.ATCommand.SerialInterfaceControlMessageType result = com.rtrk.atcommands.ATCommand.SerialInterfaceControlMessageType.valueOf(messageType_);
+      return result == null ? com.rtrk.atcommands.ATCommand.SerialInterfaceControlMessageType.UNRECOGNIZED : result;
     }
 
     public static final int VALUE_FIELD_NUMBER = 2;
@@ -23973,7 +24163,7 @@ public final class ATCommands {
 
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (messageType_ != com.rtrk.atcommands.ATCommands.SerialInterfaceControlMessageType.SET_DCD_FUNCTION_MODE.getNumber()) {
+      if (messageType_ != com.rtrk.atcommands.ATCommand.SerialInterfaceControlMessageType.SET_DCD_FUNCTION_MODE.getNumber()) {
         output.writeEnum(1, messageType_);
       }
       if (value_ != 0) {
@@ -24037,7 +24227,7 @@ public final class ATCommands {
       if (size != -1) return size;
 
       size = 0;
-      if (messageType_ != com.rtrk.atcommands.ATCommands.SerialInterfaceControlMessageType.SET_DCD_FUNCTION_MODE.getNumber()) {
+      if (messageType_ != com.rtrk.atcommands.ATCommand.SerialInterfaceControlMessageType.SET_DCD_FUNCTION_MODE.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(1, messageType_);
       }
@@ -24123,10 +24313,10 @@ public final class ATCommands {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.rtrk.atcommands.ATCommands.SerialInterfaceControlCommand)) {
+      if (!(obj instanceof com.rtrk.atcommands.ATCommand.SerialInterfaceControlCommand)) {
         return super.equals(obj);
       }
-      com.rtrk.atcommands.ATCommands.SerialInterfaceControlCommand other = (com.rtrk.atcommands.ATCommands.SerialInterfaceControlCommand) obj;
+      com.rtrk.atcommands.ATCommand.SerialInterfaceControlCommand other = (com.rtrk.atcommands.ATCommand.SerialInterfaceControlCommand) obj;
 
       boolean result = true;
       result = result && messageType_ == other.messageType_;
@@ -24219,58 +24409,58 @@ public final class ATCommands {
       return hash;
     }
 
-    public static com.rtrk.atcommands.ATCommands.SerialInterfaceControlCommand parseFrom(
+    public static com.rtrk.atcommands.ATCommand.SerialInterfaceControlCommand parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.rtrk.atcommands.ATCommands.SerialInterfaceControlCommand parseFrom(
+    public static com.rtrk.atcommands.ATCommand.SerialInterfaceControlCommand parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.rtrk.atcommands.ATCommands.SerialInterfaceControlCommand parseFrom(byte[] data)
+    public static com.rtrk.atcommands.ATCommand.SerialInterfaceControlCommand parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.rtrk.atcommands.ATCommands.SerialInterfaceControlCommand parseFrom(
+    public static com.rtrk.atcommands.ATCommand.SerialInterfaceControlCommand parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.rtrk.atcommands.ATCommands.SerialInterfaceControlCommand parseFrom(java.io.InputStream input)
+    public static com.rtrk.atcommands.ATCommand.SerialInterfaceControlCommand parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.rtrk.atcommands.ATCommands.SerialInterfaceControlCommand parseFrom(
+    public static com.rtrk.atcommands.ATCommand.SerialInterfaceControlCommand parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.rtrk.atcommands.ATCommands.SerialInterfaceControlCommand parseDelimitedFrom(java.io.InputStream input)
+    public static com.rtrk.atcommands.ATCommand.SerialInterfaceControlCommand parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static com.rtrk.atcommands.ATCommands.SerialInterfaceControlCommand parseDelimitedFrom(
+    public static com.rtrk.atcommands.ATCommand.SerialInterfaceControlCommand parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.rtrk.atcommands.ATCommands.SerialInterfaceControlCommand parseFrom(
+    public static com.rtrk.atcommands.ATCommand.SerialInterfaceControlCommand parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.rtrk.atcommands.ATCommands.SerialInterfaceControlCommand parseFrom(
+    public static com.rtrk.atcommands.ATCommand.SerialInterfaceControlCommand parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -24282,7 +24472,7 @@ public final class ATCommands {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.rtrk.atcommands.ATCommands.SerialInterfaceControlCommand prototype) {
+    public static Builder newBuilder(com.rtrk.atcommands.ATCommand.SerialInterfaceControlCommand prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() {
@@ -24302,20 +24492,20 @@ public final class ATCommands {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:com.rtrk.protobuf.SerialInterfaceControlCommand)
-        com.rtrk.atcommands.ATCommands.SerialInterfaceControlCommandOrBuilder {
+        com.rtrk.atcommands.ATCommand.SerialInterfaceControlCommandOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.rtrk.atcommands.ATCommands.internal_static_com_rtrk_protobuf_SerialInterfaceControlCommand_descriptor;
+        return com.rtrk.atcommands.ATCommand.internal_static_com_rtrk_protobuf_SerialInterfaceControlCommand_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.rtrk.atcommands.ATCommands.internal_static_com_rtrk_protobuf_SerialInterfaceControlCommand_fieldAccessorTable
+        return com.rtrk.atcommands.ATCommand.internal_static_com_rtrk_protobuf_SerialInterfaceControlCommand_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.rtrk.atcommands.ATCommands.SerialInterfaceControlCommand.class, com.rtrk.atcommands.ATCommands.SerialInterfaceControlCommand.Builder.class);
+                com.rtrk.atcommands.ATCommand.SerialInterfaceControlCommand.class, com.rtrk.atcommands.ATCommand.SerialInterfaceControlCommand.Builder.class);
       }
 
-      // Construct using com.rtrk.atcommands.ATCommands.SerialInterfaceControlCommand.newBuilder()
+      // Construct using com.rtrk.atcommands.ATCommand.SerialInterfaceControlCommand.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -24375,23 +24565,23 @@ public final class ATCommands {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.rtrk.atcommands.ATCommands.internal_static_com_rtrk_protobuf_SerialInterfaceControlCommand_descriptor;
+        return com.rtrk.atcommands.ATCommand.internal_static_com_rtrk_protobuf_SerialInterfaceControlCommand_descriptor;
       }
 
-      public com.rtrk.atcommands.ATCommands.SerialInterfaceControlCommand getDefaultInstanceForType() {
-        return com.rtrk.atcommands.ATCommands.SerialInterfaceControlCommand.getDefaultInstance();
+      public com.rtrk.atcommands.ATCommand.SerialInterfaceControlCommand getDefaultInstanceForType() {
+        return com.rtrk.atcommands.ATCommand.SerialInterfaceControlCommand.getDefaultInstance();
       }
 
-      public com.rtrk.atcommands.ATCommands.SerialInterfaceControlCommand build() {
-        com.rtrk.atcommands.ATCommands.SerialInterfaceControlCommand result = buildPartial();
+      public com.rtrk.atcommands.ATCommand.SerialInterfaceControlCommand build() {
+        com.rtrk.atcommands.ATCommand.SerialInterfaceControlCommand result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      public com.rtrk.atcommands.ATCommands.SerialInterfaceControlCommand buildPartial() {
-        com.rtrk.atcommands.ATCommands.SerialInterfaceControlCommand result = new com.rtrk.atcommands.ATCommands.SerialInterfaceControlCommand(this);
+      public com.rtrk.atcommands.ATCommand.SerialInterfaceControlCommand buildPartial() {
+        com.rtrk.atcommands.ATCommand.SerialInterfaceControlCommand result = new com.rtrk.atcommands.ATCommand.SerialInterfaceControlCommand(this);
         result.messageType_ = messageType_;
         result.value_ = value_;
         result.format_ = format_;
@@ -24442,16 +24632,16 @@ public final class ATCommands {
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.rtrk.atcommands.ATCommands.SerialInterfaceControlCommand) {
-          return mergeFrom((com.rtrk.atcommands.ATCommands.SerialInterfaceControlCommand)other);
+        if (other instanceof com.rtrk.atcommands.ATCommand.SerialInterfaceControlCommand) {
+          return mergeFrom((com.rtrk.atcommands.ATCommand.SerialInterfaceControlCommand)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.rtrk.atcommands.ATCommands.SerialInterfaceControlCommand other) {
-        if (other == com.rtrk.atcommands.ATCommands.SerialInterfaceControlCommand.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.rtrk.atcommands.ATCommand.SerialInterfaceControlCommand other) {
+        if (other == com.rtrk.atcommands.ATCommand.SerialInterfaceControlCommand.getDefaultInstance()) return this;
         if (other.messageType_ != 0) {
           setMessageTypeValue(other.getMessageTypeValue());
         }
@@ -24521,11 +24711,11 @@ public final class ATCommands {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.rtrk.atcommands.ATCommands.SerialInterfaceControlCommand parsedMessage = null;
+        com.rtrk.atcommands.ATCommand.SerialInterfaceControlCommand parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.rtrk.atcommands.ATCommands.SerialInterfaceControlCommand) e.getUnfinishedMessage();
+          parsedMessage = (com.rtrk.atcommands.ATCommand.SerialInterfaceControlCommand) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -24553,14 +24743,14 @@ public final class ATCommands {
       /**
        * <code>optional .com.rtrk.protobuf.SerialInterfaceControlMessageType messageType = 1;</code>
        */
-      public com.rtrk.atcommands.ATCommands.SerialInterfaceControlMessageType getMessageType() {
-        com.rtrk.atcommands.ATCommands.SerialInterfaceControlMessageType result = com.rtrk.atcommands.ATCommands.SerialInterfaceControlMessageType.valueOf(messageType_);
-        return result == null ? com.rtrk.atcommands.ATCommands.SerialInterfaceControlMessageType.UNRECOGNIZED : result;
+      public com.rtrk.atcommands.ATCommand.SerialInterfaceControlMessageType getMessageType() {
+        com.rtrk.atcommands.ATCommand.SerialInterfaceControlMessageType result = com.rtrk.atcommands.ATCommand.SerialInterfaceControlMessageType.valueOf(messageType_);
+        return result == null ? com.rtrk.atcommands.ATCommand.SerialInterfaceControlMessageType.UNRECOGNIZED : result;
       }
       /**
        * <code>optional .com.rtrk.protobuf.SerialInterfaceControlMessageType messageType = 1;</code>
        */
-      public Builder setMessageType(com.rtrk.atcommands.ATCommands.SerialInterfaceControlMessageType value) {
+      public Builder setMessageType(com.rtrk.atcommands.ATCommand.SerialInterfaceControlMessageType value) {
         if (value == null) {
           throw new NullPointerException();
         }
@@ -25133,12 +25323,12 @@ public final class ATCommands {
     }
 
     // @@protoc_insertion_point(class_scope:com.rtrk.protobuf.SerialInterfaceControlCommand)
-    private static final com.rtrk.atcommands.ATCommands.SerialInterfaceControlCommand DEFAULT_INSTANCE;
+    private static final com.rtrk.atcommands.ATCommand.SerialInterfaceControlCommand DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.rtrk.atcommands.ATCommands.SerialInterfaceControlCommand();
+      DEFAULT_INSTANCE = new com.rtrk.atcommands.ATCommand.SerialInterfaceControlCommand();
     }
 
-    public static com.rtrk.atcommands.ATCommands.SerialInterfaceControlCommand getDefaultInstance() {
+    public static com.rtrk.atcommands.ATCommand.SerialInterfaceControlCommand getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -25161,7 +25351,7 @@ public final class ATCommands {
       return PARSER;
     }
 
-    public com.rtrk.atcommands.ATCommands.SerialInterfaceControlCommand getDefaultInstanceForType() {
+    public com.rtrk.atcommands.ATCommand.SerialInterfaceControlCommand getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -25178,7 +25368,7 @@ public final class ATCommands {
     /**
      * <code>optional .com.rtrk.protobuf.StatusControlMessageType messageType = 1;</code>
      */
-    com.rtrk.atcommands.ATCommands.StatusControlMessageType getMessageType();
+    com.rtrk.atcommands.ATCommand.StatusControlMessageType getMessageType();
 
     /**
      * <code>optional int32 locationID = 2;</code>
@@ -25458,14 +25648,14 @@ public final class ATCommands {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.rtrk.atcommands.ATCommands.internal_static_com_rtrk_protobuf_StatusControlCommand_descriptor;
+      return com.rtrk.atcommands.ATCommand.internal_static_com_rtrk_protobuf_StatusControlCommand_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.rtrk.atcommands.ATCommands.internal_static_com_rtrk_protobuf_StatusControlCommand_fieldAccessorTable
+      return com.rtrk.atcommands.ATCommand.internal_static_com_rtrk_protobuf_StatusControlCommand_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.rtrk.atcommands.ATCommands.StatusControlCommand.class, com.rtrk.atcommands.ATCommands.StatusControlCommand.Builder.class);
+              com.rtrk.atcommands.ATCommand.StatusControlCommand.class, com.rtrk.atcommands.ATCommand.StatusControlCommand.Builder.class);
     }
 
     public static final int MESSAGETYPE_FIELD_NUMBER = 1;
@@ -25479,9 +25669,9 @@ public final class ATCommands {
     /**
      * <code>optional .com.rtrk.protobuf.StatusControlMessageType messageType = 1;</code>
      */
-    public com.rtrk.atcommands.ATCommands.StatusControlMessageType getMessageType() {
-      com.rtrk.atcommands.ATCommands.StatusControlMessageType result = com.rtrk.atcommands.ATCommands.StatusControlMessageType.valueOf(messageType_);
-      return result == null ? com.rtrk.atcommands.ATCommands.StatusControlMessageType.UNRECOGNIZED : result;
+    public com.rtrk.atcommands.ATCommand.StatusControlMessageType getMessageType() {
+      com.rtrk.atcommands.ATCommand.StatusControlMessageType result = com.rtrk.atcommands.ATCommand.StatusControlMessageType.valueOf(messageType_);
+      return result == null ? com.rtrk.atcommands.ATCommand.StatusControlMessageType.UNRECOGNIZED : result;
     }
 
     public static final int LOCATIONID_FIELD_NUMBER = 2;
@@ -25757,7 +25947,7 @@ public final class ATCommands {
 
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (messageType_ != com.rtrk.atcommands.ATCommands.StatusControlMessageType.EXTENDED_ERROR_REPORT.getNumber()) {
+      if (messageType_ != com.rtrk.atcommands.ATCommand.StatusControlMessageType.EXTENDED_ERROR_REPORT.getNumber()) {
         output.writeEnum(1, messageType_);
       }
       if (locationID_ != 0) {
@@ -25818,7 +26008,7 @@ public final class ATCommands {
       if (size != -1) return size;
 
       size = 0;
-      if (messageType_ != com.rtrk.atcommands.ATCommands.StatusControlMessageType.EXTENDED_ERROR_REPORT.getNumber()) {
+      if (messageType_ != com.rtrk.atcommands.ATCommand.StatusControlMessageType.EXTENDED_ERROR_REPORT.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(1, messageType_);
       }
@@ -25896,10 +26086,10 @@ public final class ATCommands {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.rtrk.atcommands.ATCommands.StatusControlCommand)) {
+      if (!(obj instanceof com.rtrk.atcommands.ATCommand.StatusControlCommand)) {
         return super.equals(obj);
       }
-      com.rtrk.atcommands.ATCommands.StatusControlCommand other = (com.rtrk.atcommands.ATCommands.StatusControlCommand) obj;
+      com.rtrk.atcommands.ATCommand.StatusControlCommand other = (com.rtrk.atcommands.ATCommand.StatusControlCommand) obj;
 
       boolean result = true;
       result = result && messageType_ == other.messageType_;
@@ -25988,58 +26178,58 @@ public final class ATCommands {
       return hash;
     }
 
-    public static com.rtrk.atcommands.ATCommands.StatusControlCommand parseFrom(
+    public static com.rtrk.atcommands.ATCommand.StatusControlCommand parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.rtrk.atcommands.ATCommands.StatusControlCommand parseFrom(
+    public static com.rtrk.atcommands.ATCommand.StatusControlCommand parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.rtrk.atcommands.ATCommands.StatusControlCommand parseFrom(byte[] data)
+    public static com.rtrk.atcommands.ATCommand.StatusControlCommand parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.rtrk.atcommands.ATCommands.StatusControlCommand parseFrom(
+    public static com.rtrk.atcommands.ATCommand.StatusControlCommand parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.rtrk.atcommands.ATCommands.StatusControlCommand parseFrom(java.io.InputStream input)
+    public static com.rtrk.atcommands.ATCommand.StatusControlCommand parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.rtrk.atcommands.ATCommands.StatusControlCommand parseFrom(
+    public static com.rtrk.atcommands.ATCommand.StatusControlCommand parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.rtrk.atcommands.ATCommands.StatusControlCommand parseDelimitedFrom(java.io.InputStream input)
+    public static com.rtrk.atcommands.ATCommand.StatusControlCommand parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static com.rtrk.atcommands.ATCommands.StatusControlCommand parseDelimitedFrom(
+    public static com.rtrk.atcommands.ATCommand.StatusControlCommand parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.rtrk.atcommands.ATCommands.StatusControlCommand parseFrom(
+    public static com.rtrk.atcommands.ATCommand.StatusControlCommand parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.rtrk.atcommands.ATCommands.StatusControlCommand parseFrom(
+    public static com.rtrk.atcommands.ATCommand.StatusControlCommand parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -26051,7 +26241,7 @@ public final class ATCommands {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.rtrk.atcommands.ATCommands.StatusControlCommand prototype) {
+    public static Builder newBuilder(com.rtrk.atcommands.ATCommand.StatusControlCommand prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() {
@@ -26071,20 +26261,20 @@ public final class ATCommands {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:com.rtrk.protobuf.StatusControlCommand)
-        com.rtrk.atcommands.ATCommands.StatusControlCommandOrBuilder {
+        com.rtrk.atcommands.ATCommand.StatusControlCommandOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.rtrk.atcommands.ATCommands.internal_static_com_rtrk_protobuf_StatusControlCommand_descriptor;
+        return com.rtrk.atcommands.ATCommand.internal_static_com_rtrk_protobuf_StatusControlCommand_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.rtrk.atcommands.ATCommands.internal_static_com_rtrk_protobuf_StatusControlCommand_fieldAccessorTable
+        return com.rtrk.atcommands.ATCommand.internal_static_com_rtrk_protobuf_StatusControlCommand_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.rtrk.atcommands.ATCommands.StatusControlCommand.class, com.rtrk.atcommands.ATCommands.StatusControlCommand.Builder.class);
+                com.rtrk.atcommands.ATCommand.StatusControlCommand.class, com.rtrk.atcommands.ATCommand.StatusControlCommand.Builder.class);
       }
 
-      // Construct using com.rtrk.atcommands.ATCommands.StatusControlCommand.newBuilder()
+      // Construct using com.rtrk.atcommands.ATCommand.StatusControlCommand.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -26142,23 +26332,23 @@ public final class ATCommands {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.rtrk.atcommands.ATCommands.internal_static_com_rtrk_protobuf_StatusControlCommand_descriptor;
+        return com.rtrk.atcommands.ATCommand.internal_static_com_rtrk_protobuf_StatusControlCommand_descriptor;
       }
 
-      public com.rtrk.atcommands.ATCommands.StatusControlCommand getDefaultInstanceForType() {
-        return com.rtrk.atcommands.ATCommands.StatusControlCommand.getDefaultInstance();
+      public com.rtrk.atcommands.ATCommand.StatusControlCommand getDefaultInstanceForType() {
+        return com.rtrk.atcommands.ATCommand.StatusControlCommand.getDefaultInstance();
       }
 
-      public com.rtrk.atcommands.ATCommands.StatusControlCommand build() {
-        com.rtrk.atcommands.ATCommands.StatusControlCommand result = buildPartial();
+      public com.rtrk.atcommands.ATCommand.StatusControlCommand build() {
+        com.rtrk.atcommands.ATCommand.StatusControlCommand result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      public com.rtrk.atcommands.ATCommands.StatusControlCommand buildPartial() {
-        com.rtrk.atcommands.ATCommands.StatusControlCommand result = new com.rtrk.atcommands.ATCommands.StatusControlCommand(this);
+      public com.rtrk.atcommands.ATCommand.StatusControlCommand buildPartial() {
+        com.rtrk.atcommands.ATCommand.StatusControlCommand result = new com.rtrk.atcommands.ATCommand.StatusControlCommand(this);
         result.messageType_ = messageType_;
         result.locationID_ = locationID_;
         result.cause_ = cause_;
@@ -26208,16 +26398,16 @@ public final class ATCommands {
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.rtrk.atcommands.ATCommands.StatusControlCommand) {
-          return mergeFrom((com.rtrk.atcommands.ATCommands.StatusControlCommand)other);
+        if (other instanceof com.rtrk.atcommands.ATCommand.StatusControlCommand) {
+          return mergeFrom((com.rtrk.atcommands.ATCommand.StatusControlCommand)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.rtrk.atcommands.ATCommands.StatusControlCommand other) {
-        if (other == com.rtrk.atcommands.ATCommands.StatusControlCommand.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.rtrk.atcommands.ATCommand.StatusControlCommand other) {
+        if (other == com.rtrk.atcommands.ATCommand.StatusControlCommand.getDefaultInstance()) return this;
         if (other.messageType_ != 0) {
           setMessageTypeValue(other.getMessageTypeValue());
         }
@@ -26288,11 +26478,11 @@ public final class ATCommands {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.rtrk.atcommands.ATCommands.StatusControlCommand parsedMessage = null;
+        com.rtrk.atcommands.ATCommand.StatusControlCommand parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.rtrk.atcommands.ATCommands.StatusControlCommand) e.getUnfinishedMessage();
+          parsedMessage = (com.rtrk.atcommands.ATCommand.StatusControlCommand) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -26320,14 +26510,14 @@ public final class ATCommands {
       /**
        * <code>optional .com.rtrk.protobuf.StatusControlMessageType messageType = 1;</code>
        */
-      public com.rtrk.atcommands.ATCommands.StatusControlMessageType getMessageType() {
-        com.rtrk.atcommands.ATCommands.StatusControlMessageType result = com.rtrk.atcommands.ATCommands.StatusControlMessageType.valueOf(messageType_);
-        return result == null ? com.rtrk.atcommands.ATCommands.StatusControlMessageType.UNRECOGNIZED : result;
+      public com.rtrk.atcommands.ATCommand.StatusControlMessageType getMessageType() {
+        com.rtrk.atcommands.ATCommand.StatusControlMessageType result = com.rtrk.atcommands.ATCommand.StatusControlMessageType.valueOf(messageType_);
+        return result == null ? com.rtrk.atcommands.ATCommand.StatusControlMessageType.UNRECOGNIZED : result;
       }
       /**
        * <code>optional .com.rtrk.protobuf.StatusControlMessageType messageType = 1;</code>
        */
-      public Builder setMessageType(com.rtrk.atcommands.ATCommands.StatusControlMessageType value) {
+      public Builder setMessageType(com.rtrk.atcommands.ATCommand.StatusControlMessageType value) {
         if (value == null) {
           throw new NullPointerException();
         }
@@ -26994,12 +27184,12 @@ public final class ATCommands {
     }
 
     // @@protoc_insertion_point(class_scope:com.rtrk.protobuf.StatusControlCommand)
-    private static final com.rtrk.atcommands.ATCommands.StatusControlCommand DEFAULT_INSTANCE;
+    private static final com.rtrk.atcommands.ATCommand.StatusControlCommand DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.rtrk.atcommands.ATCommands.StatusControlCommand();
+      DEFAULT_INSTANCE = new com.rtrk.atcommands.ATCommand.StatusControlCommand();
     }
 
-    public static com.rtrk.atcommands.ATCommands.StatusControlCommand getDefaultInstance() {
+    public static com.rtrk.atcommands.ATCommand.StatusControlCommand getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -27022,7 +27212,7 @@ public final class ATCommands {
       return PARSER;
     }
 
-    public com.rtrk.atcommands.ATCommands.StatusControlCommand getDefaultInstanceForType() {
+    public com.rtrk.atcommands.ATCommand.StatusControlCommand getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -27039,7 +27229,7 @@ public final class ATCommands {
     /**
      * <code>optional .com.rtrk.protobuf.SIMRelatedMessageType messageType = 1;</code>
      */
-    com.rtrk.atcommands.ATCommands.SIMRelatedMessageType getMessageType();
+    com.rtrk.atcommands.ATCommand.SIMRelatedMessageType getMessageType();
 
     /**
      * <code>optional string fac = 2;</code>
@@ -27487,14 +27677,14 @@ public final class ATCommands {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.rtrk.atcommands.ATCommands.internal_static_com_rtrk_protobuf_SIMRelatedCommand_descriptor;
+      return com.rtrk.atcommands.ATCommand.internal_static_com_rtrk_protobuf_SIMRelatedCommand_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.rtrk.atcommands.ATCommands.internal_static_com_rtrk_protobuf_SIMRelatedCommand_fieldAccessorTable
+      return com.rtrk.atcommands.ATCommand.internal_static_com_rtrk_protobuf_SIMRelatedCommand_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.rtrk.atcommands.ATCommands.SIMRelatedCommand.class, com.rtrk.atcommands.ATCommands.SIMRelatedCommand.Builder.class);
+              com.rtrk.atcommands.ATCommand.SIMRelatedCommand.class, com.rtrk.atcommands.ATCommand.SIMRelatedCommand.Builder.class);
     }
 
     public static final int MESSAGETYPE_FIELD_NUMBER = 1;
@@ -27508,9 +27698,9 @@ public final class ATCommands {
     /**
      * <code>optional .com.rtrk.protobuf.SIMRelatedMessageType messageType = 1;</code>
      */
-    public com.rtrk.atcommands.ATCommands.SIMRelatedMessageType getMessageType() {
-      com.rtrk.atcommands.ATCommands.SIMRelatedMessageType result = com.rtrk.atcommands.ATCommands.SIMRelatedMessageType.valueOf(messageType_);
-      return result == null ? com.rtrk.atcommands.ATCommands.SIMRelatedMessageType.UNRECOGNIZED : result;
+    public com.rtrk.atcommands.ATCommand.SIMRelatedMessageType getMessageType() {
+      com.rtrk.atcommands.ATCommand.SIMRelatedMessageType result = com.rtrk.atcommands.ATCommand.SIMRelatedMessageType.valueOf(messageType_);
+      return result == null ? com.rtrk.atcommands.ATCommand.SIMRelatedMessageType.UNRECOGNIZED : result;
     }
 
     public static final int FAC_FIELD_NUMBER = 2;
@@ -28044,7 +28234,7 @@ public final class ATCommands {
 
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (messageType_ != com.rtrk.atcommands.ATCommands.SIMRelatedMessageType.REQUEST_IMSI.getNumber()) {
+      if (messageType_ != com.rtrk.atcommands.ATCommand.SIMRelatedMessageType.REQUEST_IMSI.getNumber()) {
         output.writeEnum(1, messageType_);
       }
       if (!getFacBytes().isEmpty()) {
@@ -28141,7 +28331,7 @@ public final class ATCommands {
       if (size != -1) return size;
 
       size = 0;
-      if (messageType_ != com.rtrk.atcommands.ATCommands.SIMRelatedMessageType.REQUEST_IMSI.getNumber()) {
+      if (messageType_ != com.rtrk.atcommands.ATCommand.SIMRelatedMessageType.REQUEST_IMSI.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(1, messageType_);
       }
@@ -28261,10 +28451,10 @@ public final class ATCommands {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.rtrk.atcommands.ATCommands.SIMRelatedCommand)) {
+      if (!(obj instanceof com.rtrk.atcommands.ATCommand.SIMRelatedCommand)) {
         return super.equals(obj);
       }
-      com.rtrk.atcommands.ATCommands.SIMRelatedCommand other = (com.rtrk.atcommands.ATCommands.SIMRelatedCommand) obj;
+      com.rtrk.atcommands.ATCommand.SIMRelatedCommand other = (com.rtrk.atcommands.ATCommand.SIMRelatedCommand) obj;
 
       boolean result = true;
       result = result && messageType_ == other.messageType_;
@@ -28401,58 +28591,58 @@ public final class ATCommands {
       return hash;
     }
 
-    public static com.rtrk.atcommands.ATCommands.SIMRelatedCommand parseFrom(
+    public static com.rtrk.atcommands.ATCommand.SIMRelatedCommand parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.rtrk.atcommands.ATCommands.SIMRelatedCommand parseFrom(
+    public static com.rtrk.atcommands.ATCommand.SIMRelatedCommand parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.rtrk.atcommands.ATCommands.SIMRelatedCommand parseFrom(byte[] data)
+    public static com.rtrk.atcommands.ATCommand.SIMRelatedCommand parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.rtrk.atcommands.ATCommands.SIMRelatedCommand parseFrom(
+    public static com.rtrk.atcommands.ATCommand.SIMRelatedCommand parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.rtrk.atcommands.ATCommands.SIMRelatedCommand parseFrom(java.io.InputStream input)
+    public static com.rtrk.atcommands.ATCommand.SIMRelatedCommand parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.rtrk.atcommands.ATCommands.SIMRelatedCommand parseFrom(
+    public static com.rtrk.atcommands.ATCommand.SIMRelatedCommand parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.rtrk.atcommands.ATCommands.SIMRelatedCommand parseDelimitedFrom(java.io.InputStream input)
+    public static com.rtrk.atcommands.ATCommand.SIMRelatedCommand parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static com.rtrk.atcommands.ATCommands.SIMRelatedCommand parseDelimitedFrom(
+    public static com.rtrk.atcommands.ATCommand.SIMRelatedCommand parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.rtrk.atcommands.ATCommands.SIMRelatedCommand parseFrom(
+    public static com.rtrk.atcommands.ATCommand.SIMRelatedCommand parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.rtrk.atcommands.ATCommands.SIMRelatedCommand parseFrom(
+    public static com.rtrk.atcommands.ATCommand.SIMRelatedCommand parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -28464,7 +28654,7 @@ public final class ATCommands {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.rtrk.atcommands.ATCommands.SIMRelatedCommand prototype) {
+    public static Builder newBuilder(com.rtrk.atcommands.ATCommand.SIMRelatedCommand prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() {
@@ -28484,20 +28674,20 @@ public final class ATCommands {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:com.rtrk.protobuf.SIMRelatedCommand)
-        com.rtrk.atcommands.ATCommands.SIMRelatedCommandOrBuilder {
+        com.rtrk.atcommands.ATCommand.SIMRelatedCommandOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.rtrk.atcommands.ATCommands.internal_static_com_rtrk_protobuf_SIMRelatedCommand_descriptor;
+        return com.rtrk.atcommands.ATCommand.internal_static_com_rtrk_protobuf_SIMRelatedCommand_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.rtrk.atcommands.ATCommands.internal_static_com_rtrk_protobuf_SIMRelatedCommand_fieldAccessorTable
+        return com.rtrk.atcommands.ATCommand.internal_static_com_rtrk_protobuf_SIMRelatedCommand_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.rtrk.atcommands.ATCommands.SIMRelatedCommand.class, com.rtrk.atcommands.ATCommands.SIMRelatedCommand.Builder.class);
+                com.rtrk.atcommands.ATCommand.SIMRelatedCommand.class, com.rtrk.atcommands.ATCommand.SIMRelatedCommand.Builder.class);
       }
 
-      // Construct using com.rtrk.atcommands.ATCommands.SIMRelatedCommand.newBuilder()
+      // Construct using com.rtrk.atcommands.ATCommand.SIMRelatedCommand.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -28579,23 +28769,23 @@ public final class ATCommands {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.rtrk.atcommands.ATCommands.internal_static_com_rtrk_protobuf_SIMRelatedCommand_descriptor;
+        return com.rtrk.atcommands.ATCommand.internal_static_com_rtrk_protobuf_SIMRelatedCommand_descriptor;
       }
 
-      public com.rtrk.atcommands.ATCommands.SIMRelatedCommand getDefaultInstanceForType() {
-        return com.rtrk.atcommands.ATCommands.SIMRelatedCommand.getDefaultInstance();
+      public com.rtrk.atcommands.ATCommand.SIMRelatedCommand getDefaultInstanceForType() {
+        return com.rtrk.atcommands.ATCommand.SIMRelatedCommand.getDefaultInstance();
       }
 
-      public com.rtrk.atcommands.ATCommands.SIMRelatedCommand build() {
-        com.rtrk.atcommands.ATCommands.SIMRelatedCommand result = buildPartial();
+      public com.rtrk.atcommands.ATCommand.SIMRelatedCommand build() {
+        com.rtrk.atcommands.ATCommand.SIMRelatedCommand result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      public com.rtrk.atcommands.ATCommands.SIMRelatedCommand buildPartial() {
-        com.rtrk.atcommands.ATCommands.SIMRelatedCommand result = new com.rtrk.atcommands.ATCommands.SIMRelatedCommand(this);
+      public com.rtrk.atcommands.ATCommand.SIMRelatedCommand buildPartial() {
+        com.rtrk.atcommands.ATCommand.SIMRelatedCommand result = new com.rtrk.atcommands.ATCommand.SIMRelatedCommand(this);
         result.messageType_ = messageType_;
         result.fac_ = fac_;
         result.mode_ = mode_;
@@ -28657,16 +28847,16 @@ public final class ATCommands {
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.rtrk.atcommands.ATCommands.SIMRelatedCommand) {
-          return mergeFrom((com.rtrk.atcommands.ATCommands.SIMRelatedCommand)other);
+        if (other instanceof com.rtrk.atcommands.ATCommand.SIMRelatedCommand) {
+          return mergeFrom((com.rtrk.atcommands.ATCommand.SIMRelatedCommand)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.rtrk.atcommands.ATCommands.SIMRelatedCommand other) {
-        if (other == com.rtrk.atcommands.ATCommands.SIMRelatedCommand.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.rtrk.atcommands.ATCommand.SIMRelatedCommand other) {
+        if (other == com.rtrk.atcommands.ATCommand.SIMRelatedCommand.getDefaultInstance()) return this;
         if (other.messageType_ != 0) {
           setMessageTypeValue(other.getMessageTypeValue());
         }
@@ -28779,11 +28969,11 @@ public final class ATCommands {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.rtrk.atcommands.ATCommands.SIMRelatedCommand parsedMessage = null;
+        com.rtrk.atcommands.ATCommand.SIMRelatedCommand parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.rtrk.atcommands.ATCommands.SIMRelatedCommand) e.getUnfinishedMessage();
+          parsedMessage = (com.rtrk.atcommands.ATCommand.SIMRelatedCommand) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -28811,14 +29001,14 @@ public final class ATCommands {
       /**
        * <code>optional .com.rtrk.protobuf.SIMRelatedMessageType messageType = 1;</code>
        */
-      public com.rtrk.atcommands.ATCommands.SIMRelatedMessageType getMessageType() {
-        com.rtrk.atcommands.ATCommands.SIMRelatedMessageType result = com.rtrk.atcommands.ATCommands.SIMRelatedMessageType.valueOf(messageType_);
-        return result == null ? com.rtrk.atcommands.ATCommands.SIMRelatedMessageType.UNRECOGNIZED : result;
+      public com.rtrk.atcommands.ATCommand.SIMRelatedMessageType getMessageType() {
+        com.rtrk.atcommands.ATCommand.SIMRelatedMessageType result = com.rtrk.atcommands.ATCommand.SIMRelatedMessageType.valueOf(messageType_);
+        return result == null ? com.rtrk.atcommands.ATCommand.SIMRelatedMessageType.UNRECOGNIZED : result;
       }
       /**
        * <code>optional .com.rtrk.protobuf.SIMRelatedMessageType messageType = 1;</code>
        */
-      public Builder setMessageType(com.rtrk.atcommands.ATCommands.SIMRelatedMessageType value) {
+      public Builder setMessageType(com.rtrk.atcommands.ATCommand.SIMRelatedMessageType value) {
         if (value == null) {
           throw new NullPointerException();
         }
@@ -30055,12 +30245,12 @@ public final class ATCommands {
     }
 
     // @@protoc_insertion_point(class_scope:com.rtrk.protobuf.SIMRelatedCommand)
-    private static final com.rtrk.atcommands.ATCommands.SIMRelatedCommand DEFAULT_INSTANCE;
+    private static final com.rtrk.atcommands.ATCommand.SIMRelatedCommand DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.rtrk.atcommands.ATCommands.SIMRelatedCommand();
+      DEFAULT_INSTANCE = new com.rtrk.atcommands.ATCommand.SIMRelatedCommand();
     }
 
-    public static com.rtrk.atcommands.ATCommands.SIMRelatedCommand getDefaultInstance() {
+    public static com.rtrk.atcommands.ATCommand.SIMRelatedCommand getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -30083,7 +30273,7 @@ public final class ATCommands {
       return PARSER;
     }
 
-    public com.rtrk.atcommands.ATCommands.SIMRelatedCommand getDefaultInstanceForType() {
+    public com.rtrk.atcommands.ATCommand.SIMRelatedCommand getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -30100,7 +30290,7 @@ public final class ATCommands {
     /**
      * <code>optional .com.rtrk.protobuf.NetworkServiceMessageType messageType = 1;</code>
      */
-    com.rtrk.atcommands.ATCommands.NetworkServiceMessageType getMessageType();
+    com.rtrk.atcommands.ATCommand.NetworkServiceMessageType getMessageType();
 
     /**
      * <code>optional int32 status = 2;</code>
@@ -30426,14 +30616,14 @@ public final class ATCommands {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.rtrk.atcommands.ATCommands.internal_static_com_rtrk_protobuf_NetworkServiceCommand_descriptor;
+      return com.rtrk.atcommands.ATCommand.internal_static_com_rtrk_protobuf_NetworkServiceCommand_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.rtrk.atcommands.ATCommands.internal_static_com_rtrk_protobuf_NetworkServiceCommand_fieldAccessorTable
+      return com.rtrk.atcommands.ATCommand.internal_static_com_rtrk_protobuf_NetworkServiceCommand_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.rtrk.atcommands.ATCommands.NetworkServiceCommand.class, com.rtrk.atcommands.ATCommands.NetworkServiceCommand.Builder.class);
+              com.rtrk.atcommands.ATCommand.NetworkServiceCommand.class, com.rtrk.atcommands.ATCommand.NetworkServiceCommand.Builder.class);
     }
 
     public static final int MESSAGETYPE_FIELD_NUMBER = 1;
@@ -30447,9 +30637,9 @@ public final class ATCommands {
     /**
      * <code>optional .com.rtrk.protobuf.NetworkServiceMessageType messageType = 1;</code>
      */
-    public com.rtrk.atcommands.ATCommands.NetworkServiceMessageType getMessageType() {
-      com.rtrk.atcommands.ATCommands.NetworkServiceMessageType result = com.rtrk.atcommands.ATCommands.NetworkServiceMessageType.valueOf(messageType_);
-      return result == null ? com.rtrk.atcommands.ATCommands.NetworkServiceMessageType.UNRECOGNIZED : result;
+    public com.rtrk.atcommands.ATCommand.NetworkServiceMessageType getMessageType() {
+      com.rtrk.atcommands.ATCommand.NetworkServiceMessageType result = com.rtrk.atcommands.ATCommand.NetworkServiceMessageType.valueOf(messageType_);
+      return result == null ? com.rtrk.atcommands.ATCommand.NetworkServiceMessageType.UNRECOGNIZED : result;
     }
 
     public static final int STATUS_FIELD_NUMBER = 2;
@@ -30782,7 +30972,7 @@ public final class ATCommands {
 
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (messageType_ != com.rtrk.atcommands.ATCommands.NetworkServiceMessageType.OPERATOR_SELECTION.getNumber()) {
+      if (messageType_ != com.rtrk.atcommands.ATCommand.NetworkServiceMessageType.OPERATOR_SELECTION.getNumber()) {
         output.writeEnum(1, messageType_);
       }
       if (status_ != 0) {
@@ -30855,7 +31045,7 @@ public final class ATCommands {
       if (size != -1) return size;
 
       size = 0;
-      if (messageType_ != com.rtrk.atcommands.ATCommands.NetworkServiceMessageType.OPERATOR_SELECTION.getNumber()) {
+      if (messageType_ != com.rtrk.atcommands.ATCommand.NetworkServiceMessageType.OPERATOR_SELECTION.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(1, messageType_);
       }
@@ -30948,10 +31138,10 @@ public final class ATCommands {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.rtrk.atcommands.ATCommands.NetworkServiceCommand)) {
+      if (!(obj instanceof com.rtrk.atcommands.ATCommand.NetworkServiceCommand)) {
         return super.equals(obj);
       }
-      com.rtrk.atcommands.ATCommands.NetworkServiceCommand other = (com.rtrk.atcommands.ATCommands.NetworkServiceCommand) obj;
+      com.rtrk.atcommands.ATCommand.NetworkServiceCommand other = (com.rtrk.atcommands.ATCommand.NetworkServiceCommand) obj;
 
       boolean result = true;
       result = result && messageType_ == other.messageType_;
@@ -31056,58 +31246,58 @@ public final class ATCommands {
       return hash;
     }
 
-    public static com.rtrk.atcommands.ATCommands.NetworkServiceCommand parseFrom(
+    public static com.rtrk.atcommands.ATCommand.NetworkServiceCommand parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.rtrk.atcommands.ATCommands.NetworkServiceCommand parseFrom(
+    public static com.rtrk.atcommands.ATCommand.NetworkServiceCommand parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.rtrk.atcommands.ATCommands.NetworkServiceCommand parseFrom(byte[] data)
+    public static com.rtrk.atcommands.ATCommand.NetworkServiceCommand parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.rtrk.atcommands.ATCommands.NetworkServiceCommand parseFrom(
+    public static com.rtrk.atcommands.ATCommand.NetworkServiceCommand parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.rtrk.atcommands.ATCommands.NetworkServiceCommand parseFrom(java.io.InputStream input)
+    public static com.rtrk.atcommands.ATCommand.NetworkServiceCommand parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.rtrk.atcommands.ATCommands.NetworkServiceCommand parseFrom(
+    public static com.rtrk.atcommands.ATCommand.NetworkServiceCommand parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.rtrk.atcommands.ATCommands.NetworkServiceCommand parseDelimitedFrom(java.io.InputStream input)
+    public static com.rtrk.atcommands.ATCommand.NetworkServiceCommand parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static com.rtrk.atcommands.ATCommands.NetworkServiceCommand parseDelimitedFrom(
+    public static com.rtrk.atcommands.ATCommand.NetworkServiceCommand parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.rtrk.atcommands.ATCommands.NetworkServiceCommand parseFrom(
+    public static com.rtrk.atcommands.ATCommand.NetworkServiceCommand parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.rtrk.atcommands.ATCommands.NetworkServiceCommand parseFrom(
+    public static com.rtrk.atcommands.ATCommand.NetworkServiceCommand parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -31119,7 +31309,7 @@ public final class ATCommands {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.rtrk.atcommands.ATCommands.NetworkServiceCommand prototype) {
+    public static Builder newBuilder(com.rtrk.atcommands.ATCommand.NetworkServiceCommand prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() {
@@ -31139,20 +31329,20 @@ public final class ATCommands {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:com.rtrk.protobuf.NetworkServiceCommand)
-        com.rtrk.atcommands.ATCommands.NetworkServiceCommandOrBuilder {
+        com.rtrk.atcommands.ATCommand.NetworkServiceCommandOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.rtrk.atcommands.ATCommands.internal_static_com_rtrk_protobuf_NetworkServiceCommand_descriptor;
+        return com.rtrk.atcommands.ATCommand.internal_static_com_rtrk_protobuf_NetworkServiceCommand_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.rtrk.atcommands.ATCommands.internal_static_com_rtrk_protobuf_NetworkServiceCommand_fieldAccessorTable
+        return com.rtrk.atcommands.ATCommand.internal_static_com_rtrk_protobuf_NetworkServiceCommand_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.rtrk.atcommands.ATCommands.NetworkServiceCommand.class, com.rtrk.atcommands.ATCommands.NetworkServiceCommand.Builder.class);
+                com.rtrk.atcommands.ATCommand.NetworkServiceCommand.class, com.rtrk.atcommands.ATCommand.NetworkServiceCommand.Builder.class);
       }
 
-      // Construct using com.rtrk.atcommands.ATCommands.NetworkServiceCommand.newBuilder()
+      // Construct using com.rtrk.atcommands.ATCommand.NetworkServiceCommand.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -31218,23 +31408,23 @@ public final class ATCommands {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.rtrk.atcommands.ATCommands.internal_static_com_rtrk_protobuf_NetworkServiceCommand_descriptor;
+        return com.rtrk.atcommands.ATCommand.internal_static_com_rtrk_protobuf_NetworkServiceCommand_descriptor;
       }
 
-      public com.rtrk.atcommands.ATCommands.NetworkServiceCommand getDefaultInstanceForType() {
-        return com.rtrk.atcommands.ATCommands.NetworkServiceCommand.getDefaultInstance();
+      public com.rtrk.atcommands.ATCommand.NetworkServiceCommand getDefaultInstanceForType() {
+        return com.rtrk.atcommands.ATCommand.NetworkServiceCommand.getDefaultInstance();
       }
 
-      public com.rtrk.atcommands.ATCommands.NetworkServiceCommand build() {
-        com.rtrk.atcommands.ATCommands.NetworkServiceCommand result = buildPartial();
+      public com.rtrk.atcommands.ATCommand.NetworkServiceCommand build() {
+        com.rtrk.atcommands.ATCommand.NetworkServiceCommand result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      public com.rtrk.atcommands.ATCommands.NetworkServiceCommand buildPartial() {
-        com.rtrk.atcommands.ATCommands.NetworkServiceCommand result = new com.rtrk.atcommands.ATCommands.NetworkServiceCommand(this);
+      public com.rtrk.atcommands.ATCommand.NetworkServiceCommand buildPartial() {
+        com.rtrk.atcommands.ATCommand.NetworkServiceCommand result = new com.rtrk.atcommands.ATCommand.NetworkServiceCommand(this);
         result.messageType_ = messageType_;
         result.status_ = status_;
         result.operator_ = operator_;
@@ -31288,16 +31478,16 @@ public final class ATCommands {
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.rtrk.atcommands.ATCommands.NetworkServiceCommand) {
-          return mergeFrom((com.rtrk.atcommands.ATCommands.NetworkServiceCommand)other);
+        if (other instanceof com.rtrk.atcommands.ATCommand.NetworkServiceCommand) {
+          return mergeFrom((com.rtrk.atcommands.ATCommand.NetworkServiceCommand)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.rtrk.atcommands.ATCommands.NetworkServiceCommand other) {
-        if (other == com.rtrk.atcommands.ATCommands.NetworkServiceCommand.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.rtrk.atcommands.ATCommand.NetworkServiceCommand other) {
+        if (other == com.rtrk.atcommands.ATCommand.NetworkServiceCommand.getDefaultInstance()) return this;
         if (other.messageType_ != 0) {
           setMessageTypeValue(other.getMessageTypeValue());
         }
@@ -31381,11 +31571,11 @@ public final class ATCommands {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.rtrk.atcommands.ATCommands.NetworkServiceCommand parsedMessage = null;
+        com.rtrk.atcommands.ATCommand.NetworkServiceCommand parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.rtrk.atcommands.ATCommands.NetworkServiceCommand) e.getUnfinishedMessage();
+          parsedMessage = (com.rtrk.atcommands.ATCommand.NetworkServiceCommand) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -31413,14 +31603,14 @@ public final class ATCommands {
       /**
        * <code>optional .com.rtrk.protobuf.NetworkServiceMessageType messageType = 1;</code>
        */
-      public com.rtrk.atcommands.ATCommands.NetworkServiceMessageType getMessageType() {
-        com.rtrk.atcommands.ATCommands.NetworkServiceMessageType result = com.rtrk.atcommands.ATCommands.NetworkServiceMessageType.valueOf(messageType_);
-        return result == null ? com.rtrk.atcommands.ATCommands.NetworkServiceMessageType.UNRECOGNIZED : result;
+      public com.rtrk.atcommands.ATCommand.NetworkServiceMessageType getMessageType() {
+        com.rtrk.atcommands.ATCommand.NetworkServiceMessageType result = com.rtrk.atcommands.ATCommand.NetworkServiceMessageType.valueOf(messageType_);
+        return result == null ? com.rtrk.atcommands.ATCommand.NetworkServiceMessageType.UNRECOGNIZED : result;
       }
       /**
        * <code>optional .com.rtrk.protobuf.NetworkServiceMessageType messageType = 1;</code>
        */
-      public Builder setMessageType(com.rtrk.atcommands.ATCommands.NetworkServiceMessageType value) {
+      public Builder setMessageType(com.rtrk.atcommands.ATCommand.NetworkServiceMessageType value) {
         if (value == null) {
           throw new NullPointerException();
         }
@@ -32226,12 +32416,12 @@ public final class ATCommands {
     }
 
     // @@protoc_insertion_point(class_scope:com.rtrk.protobuf.NetworkServiceCommand)
-    private static final com.rtrk.atcommands.ATCommands.NetworkServiceCommand DEFAULT_INSTANCE;
+    private static final com.rtrk.atcommands.ATCommand.NetworkServiceCommand DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.rtrk.atcommands.ATCommands.NetworkServiceCommand();
+      DEFAULT_INSTANCE = new com.rtrk.atcommands.ATCommand.NetworkServiceCommand();
     }
 
-    public static com.rtrk.atcommands.ATCommands.NetworkServiceCommand getDefaultInstance() {
+    public static com.rtrk.atcommands.ATCommand.NetworkServiceCommand getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -32254,7 +32444,7 @@ public final class ATCommands {
       return PARSER;
     }
 
-    public com.rtrk.atcommands.ATCommands.NetworkServiceCommand getDefaultInstanceForType() {
+    public com.rtrk.atcommands.ATCommand.NetworkServiceCommand getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -32271,7 +32461,7 @@ public final class ATCommands {
     /**
      * <code>optional .com.rtrk.protobuf.CallRelatedMessageType messageType = 1;</code>
      */
-    com.rtrk.atcommands.ATCommands.CallRelatedMessageType getMessageType();
+    com.rtrk.atcommands.ATCommand.CallRelatedMessageType getMessageType();
 
     /**
      * <code>optional string number = 2;</code>
@@ -32563,14 +32753,14 @@ public final class ATCommands {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.rtrk.atcommands.ATCommands.internal_static_com_rtrk_protobuf_CallRelatedCommand_descriptor;
+      return com.rtrk.atcommands.ATCommand.internal_static_com_rtrk_protobuf_CallRelatedCommand_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.rtrk.atcommands.ATCommands.internal_static_com_rtrk_protobuf_CallRelatedCommand_fieldAccessorTable
+      return com.rtrk.atcommands.ATCommand.internal_static_com_rtrk_protobuf_CallRelatedCommand_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.rtrk.atcommands.ATCommands.CallRelatedCommand.class, com.rtrk.atcommands.ATCommands.CallRelatedCommand.Builder.class);
+              com.rtrk.atcommands.ATCommand.CallRelatedCommand.class, com.rtrk.atcommands.ATCommand.CallRelatedCommand.Builder.class);
     }
 
     public static final int MESSAGETYPE_FIELD_NUMBER = 1;
@@ -32584,9 +32774,9 @@ public final class ATCommands {
     /**
      * <code>optional .com.rtrk.protobuf.CallRelatedMessageType messageType = 1;</code>
      */
-    public com.rtrk.atcommands.ATCommands.CallRelatedMessageType getMessageType() {
-      com.rtrk.atcommands.ATCommands.CallRelatedMessageType result = com.rtrk.atcommands.ATCommands.CallRelatedMessageType.valueOf(messageType_);
-      return result == null ? com.rtrk.atcommands.ATCommands.CallRelatedMessageType.UNRECOGNIZED : result;
+    public com.rtrk.atcommands.ATCommand.CallRelatedMessageType getMessageType() {
+      com.rtrk.atcommands.ATCommand.CallRelatedMessageType result = com.rtrk.atcommands.ATCommand.CallRelatedMessageType.valueOf(messageType_);
+      return result == null ? com.rtrk.atcommands.ATCommand.CallRelatedMessageType.UNRECOGNIZED : result;
     }
 
     public static final int NUMBER_FIELD_NUMBER = 2;
@@ -32836,7 +33026,7 @@ public final class ATCommands {
 
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (messageType_ != com.rtrk.atcommands.ATCommands.CallRelatedMessageType.ANSWER_AN_INCOMING_CALL.getNumber()) {
+      if (messageType_ != com.rtrk.atcommands.ATCommand.CallRelatedMessageType.ANSWER_AN_INCOMING_CALL.getNumber()) {
         output.writeEnum(1, messageType_);
       }
       if (!getNumberBytes().isEmpty()) {
@@ -32897,7 +33087,7 @@ public final class ATCommands {
       if (size != -1) return size;
 
       size = 0;
-      if (messageType_ != com.rtrk.atcommands.ATCommands.CallRelatedMessageType.ANSWER_AN_INCOMING_CALL.getNumber()) {
+      if (messageType_ != com.rtrk.atcommands.ATCommand.CallRelatedMessageType.ANSWER_AN_INCOMING_CALL.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(1, messageType_);
       }
@@ -32977,10 +33167,10 @@ public final class ATCommands {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.rtrk.atcommands.ATCommands.CallRelatedCommand)) {
+      if (!(obj instanceof com.rtrk.atcommands.ATCommand.CallRelatedCommand)) {
         return super.equals(obj);
       }
-      com.rtrk.atcommands.ATCommands.CallRelatedCommand other = (com.rtrk.atcommands.ATCommands.CallRelatedCommand) obj;
+      com.rtrk.atcommands.ATCommand.CallRelatedCommand other = (com.rtrk.atcommands.ATCommand.CallRelatedCommand) obj;
 
       boolean result = true;
       result = result && messageType_ == other.messageType_;
@@ -33070,58 +33260,58 @@ public final class ATCommands {
       return hash;
     }
 
-    public static com.rtrk.atcommands.ATCommands.CallRelatedCommand parseFrom(
+    public static com.rtrk.atcommands.ATCommand.CallRelatedCommand parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.rtrk.atcommands.ATCommands.CallRelatedCommand parseFrom(
+    public static com.rtrk.atcommands.ATCommand.CallRelatedCommand parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.rtrk.atcommands.ATCommands.CallRelatedCommand parseFrom(byte[] data)
+    public static com.rtrk.atcommands.ATCommand.CallRelatedCommand parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.rtrk.atcommands.ATCommands.CallRelatedCommand parseFrom(
+    public static com.rtrk.atcommands.ATCommand.CallRelatedCommand parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.rtrk.atcommands.ATCommands.CallRelatedCommand parseFrom(java.io.InputStream input)
+    public static com.rtrk.atcommands.ATCommand.CallRelatedCommand parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.rtrk.atcommands.ATCommands.CallRelatedCommand parseFrom(
+    public static com.rtrk.atcommands.ATCommand.CallRelatedCommand parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.rtrk.atcommands.ATCommands.CallRelatedCommand parseDelimitedFrom(java.io.InputStream input)
+    public static com.rtrk.atcommands.ATCommand.CallRelatedCommand parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static com.rtrk.atcommands.ATCommands.CallRelatedCommand parseDelimitedFrom(
+    public static com.rtrk.atcommands.ATCommand.CallRelatedCommand parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.rtrk.atcommands.ATCommands.CallRelatedCommand parseFrom(
+    public static com.rtrk.atcommands.ATCommand.CallRelatedCommand parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.rtrk.atcommands.ATCommands.CallRelatedCommand parseFrom(
+    public static com.rtrk.atcommands.ATCommand.CallRelatedCommand parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -33133,7 +33323,7 @@ public final class ATCommands {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.rtrk.atcommands.ATCommands.CallRelatedCommand prototype) {
+    public static Builder newBuilder(com.rtrk.atcommands.ATCommand.CallRelatedCommand prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() {
@@ -33153,20 +33343,20 @@ public final class ATCommands {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:com.rtrk.protobuf.CallRelatedCommand)
-        com.rtrk.atcommands.ATCommands.CallRelatedCommandOrBuilder {
+        com.rtrk.atcommands.ATCommand.CallRelatedCommandOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.rtrk.atcommands.ATCommands.internal_static_com_rtrk_protobuf_CallRelatedCommand_descriptor;
+        return com.rtrk.atcommands.ATCommand.internal_static_com_rtrk_protobuf_CallRelatedCommand_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.rtrk.atcommands.ATCommands.internal_static_com_rtrk_protobuf_CallRelatedCommand_fieldAccessorTable
+        return com.rtrk.atcommands.ATCommand.internal_static_com_rtrk_protobuf_CallRelatedCommand_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.rtrk.atcommands.ATCommands.CallRelatedCommand.class, com.rtrk.atcommands.ATCommands.CallRelatedCommand.Builder.class);
+                com.rtrk.atcommands.ATCommand.CallRelatedCommand.class, com.rtrk.atcommands.ATCommand.CallRelatedCommand.Builder.class);
       }
 
-      // Construct using com.rtrk.atcommands.ATCommands.CallRelatedCommand.newBuilder()
+      // Construct using com.rtrk.atcommands.ATCommand.CallRelatedCommand.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -33224,23 +33414,23 @@ public final class ATCommands {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.rtrk.atcommands.ATCommands.internal_static_com_rtrk_protobuf_CallRelatedCommand_descriptor;
+        return com.rtrk.atcommands.ATCommand.internal_static_com_rtrk_protobuf_CallRelatedCommand_descriptor;
       }
 
-      public com.rtrk.atcommands.ATCommands.CallRelatedCommand getDefaultInstanceForType() {
-        return com.rtrk.atcommands.ATCommands.CallRelatedCommand.getDefaultInstance();
+      public com.rtrk.atcommands.ATCommand.CallRelatedCommand getDefaultInstanceForType() {
+        return com.rtrk.atcommands.ATCommand.CallRelatedCommand.getDefaultInstance();
       }
 
-      public com.rtrk.atcommands.ATCommands.CallRelatedCommand build() {
-        com.rtrk.atcommands.ATCommands.CallRelatedCommand result = buildPartial();
+      public com.rtrk.atcommands.ATCommand.CallRelatedCommand build() {
+        com.rtrk.atcommands.ATCommand.CallRelatedCommand result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      public com.rtrk.atcommands.ATCommands.CallRelatedCommand buildPartial() {
-        com.rtrk.atcommands.ATCommands.CallRelatedCommand result = new com.rtrk.atcommands.ATCommands.CallRelatedCommand(this);
+      public com.rtrk.atcommands.ATCommand.CallRelatedCommand buildPartial() {
+        com.rtrk.atcommands.ATCommand.CallRelatedCommand result = new com.rtrk.atcommands.ATCommand.CallRelatedCommand(this);
         result.messageType_ = messageType_;
         result.number_ = number_;
         result.gSMModifier_ = gSMModifier_;
@@ -33290,16 +33480,16 @@ public final class ATCommands {
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.rtrk.atcommands.ATCommands.CallRelatedCommand) {
-          return mergeFrom((com.rtrk.atcommands.ATCommands.CallRelatedCommand)other);
+        if (other instanceof com.rtrk.atcommands.ATCommand.CallRelatedCommand) {
+          return mergeFrom((com.rtrk.atcommands.ATCommand.CallRelatedCommand)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.rtrk.atcommands.ATCommands.CallRelatedCommand other) {
-        if (other == com.rtrk.atcommands.ATCommands.CallRelatedCommand.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.rtrk.atcommands.ATCommand.CallRelatedCommand other) {
+        if (other == com.rtrk.atcommands.ATCommand.CallRelatedCommand.getDefaultInstance()) return this;
         if (other.messageType_ != 0) {
           setMessageTypeValue(other.getMessageTypeValue());
         }
@@ -33368,11 +33558,11 @@ public final class ATCommands {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.rtrk.atcommands.ATCommands.CallRelatedCommand parsedMessage = null;
+        com.rtrk.atcommands.ATCommand.CallRelatedCommand parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.rtrk.atcommands.ATCommands.CallRelatedCommand) e.getUnfinishedMessage();
+          parsedMessage = (com.rtrk.atcommands.ATCommand.CallRelatedCommand) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -33400,14 +33590,14 @@ public final class ATCommands {
       /**
        * <code>optional .com.rtrk.protobuf.CallRelatedMessageType messageType = 1;</code>
        */
-      public com.rtrk.atcommands.ATCommands.CallRelatedMessageType getMessageType() {
-        com.rtrk.atcommands.ATCommands.CallRelatedMessageType result = com.rtrk.atcommands.ATCommands.CallRelatedMessageType.valueOf(messageType_);
-        return result == null ? com.rtrk.atcommands.ATCommands.CallRelatedMessageType.UNRECOGNIZED : result;
+      public com.rtrk.atcommands.ATCommand.CallRelatedMessageType getMessageType() {
+        com.rtrk.atcommands.ATCommand.CallRelatedMessageType result = com.rtrk.atcommands.ATCommand.CallRelatedMessageType.valueOf(messageType_);
+        return result == null ? com.rtrk.atcommands.ATCommand.CallRelatedMessageType.UNRECOGNIZED : result;
       }
       /**
        * <code>optional .com.rtrk.protobuf.CallRelatedMessageType messageType = 1;</code>
        */
-      public Builder setMessageType(com.rtrk.atcommands.ATCommands.CallRelatedMessageType value) {
+      public Builder setMessageType(com.rtrk.atcommands.ATCommand.CallRelatedMessageType value) {
         if (value == null) {
           throw new NullPointerException();
         }
@@ -34060,12 +34250,12 @@ public final class ATCommands {
     }
 
     // @@protoc_insertion_point(class_scope:com.rtrk.protobuf.CallRelatedCommand)
-    private static final com.rtrk.atcommands.ATCommands.CallRelatedCommand DEFAULT_INSTANCE;
+    private static final com.rtrk.atcommands.ATCommand.CallRelatedCommand DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.rtrk.atcommands.ATCommands.CallRelatedCommand();
+      DEFAULT_INSTANCE = new com.rtrk.atcommands.ATCommand.CallRelatedCommand();
     }
 
-    public static com.rtrk.atcommands.ATCommands.CallRelatedCommand getDefaultInstance() {
+    public static com.rtrk.atcommands.ATCommand.CallRelatedCommand getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -34088,7 +34278,7 @@ public final class ATCommands {
       return PARSER;
     }
 
-    public com.rtrk.atcommands.ATCommands.CallRelatedCommand getDefaultInstanceForType() {
+    public com.rtrk.atcommands.ATCommand.CallRelatedCommand getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -34105,7 +34295,7 @@ public final class ATCommands {
     /**
      * <code>optional .com.rtrk.protobuf.SMSMessageType messsageType = 1;</code>
      */
-    com.rtrk.atcommands.ATCommands.SMSMessageType getMesssageType();
+    com.rtrk.atcommands.ATCommand.SMSMessageType getMesssageType();
 
     /**
      * <code>optional int32 service = 2;</code>
@@ -34785,14 +34975,14 @@ public final class ATCommands {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.rtrk.atcommands.ATCommands.internal_static_com_rtrk_protobuf_SMSCommand_descriptor;
+      return com.rtrk.atcommands.ATCommand.internal_static_com_rtrk_protobuf_SMSCommand_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.rtrk.atcommands.ATCommands.internal_static_com_rtrk_protobuf_SMSCommand_fieldAccessorTable
+      return com.rtrk.atcommands.ATCommand.internal_static_com_rtrk_protobuf_SMSCommand_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.rtrk.atcommands.ATCommands.SMSCommand.class, com.rtrk.atcommands.ATCommands.SMSCommand.Builder.class);
+              com.rtrk.atcommands.ATCommand.SMSCommand.class, com.rtrk.atcommands.ATCommand.SMSCommand.Builder.class);
     }
 
     public static final int MESSSAGETYPE_FIELD_NUMBER = 1;
@@ -34806,9 +34996,9 @@ public final class ATCommands {
     /**
      * <code>optional .com.rtrk.protobuf.SMSMessageType messsageType = 1;</code>
      */
-    public com.rtrk.atcommands.ATCommands.SMSMessageType getMesssageType() {
-      com.rtrk.atcommands.ATCommands.SMSMessageType result = com.rtrk.atcommands.ATCommands.SMSMessageType.valueOf(messsageType_);
-      return result == null ? com.rtrk.atcommands.ATCommands.SMSMessageType.UNRECOGNIZED : result;
+    public com.rtrk.atcommands.ATCommand.SMSMessageType getMesssageType() {
+      com.rtrk.atcommands.ATCommand.SMSMessageType result = com.rtrk.atcommands.ATCommand.SMSMessageType.valueOf(messsageType_);
+      return result == null ? com.rtrk.atcommands.ATCommand.SMSMessageType.UNRECOGNIZED : result;
     }
 
     public static final int SERVICE_FIELD_NUMBER = 2;
@@ -35608,7 +35798,7 @@ public final class ATCommands {
 
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (messsageType_ != com.rtrk.atcommands.ATCommands.SMSMessageType.SELECT_MESSAGE_SERVICE.getNumber()) {
+      if (messsageType_ != com.rtrk.atcommands.ATCommand.SMSMessageType.SELECT_MESSAGE_SERVICE.getNumber()) {
         output.writeEnum(1, messsageType_);
       }
       if (service_ != 0) {
@@ -35738,7 +35928,7 @@ public final class ATCommands {
       if (size != -1) return size;
 
       size = 0;
-      if (messsageType_ != com.rtrk.atcommands.ATCommands.SMSMessageType.SELECT_MESSAGE_SERVICE.getNumber()) {
+      if (messsageType_ != com.rtrk.atcommands.ATCommand.SMSMessageType.SELECT_MESSAGE_SERVICE.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(1, messsageType_);
       }
@@ -35899,10 +36089,10 @@ public final class ATCommands {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.rtrk.atcommands.ATCommands.SMSCommand)) {
+      if (!(obj instanceof com.rtrk.atcommands.ATCommand.SMSCommand)) {
         return super.equals(obj);
       }
-      com.rtrk.atcommands.ATCommands.SMSCommand other = (com.rtrk.atcommands.ATCommands.SMSCommand) obj;
+      com.rtrk.atcommands.ATCommand.SMSCommand other = (com.rtrk.atcommands.ATCommand.SMSCommand) obj;
 
       boolean result = true;
       result = result && messsageType_ == other.messsageType_;
@@ -36083,58 +36273,58 @@ public final class ATCommands {
       return hash;
     }
 
-    public static com.rtrk.atcommands.ATCommands.SMSCommand parseFrom(
+    public static com.rtrk.atcommands.ATCommand.SMSCommand parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.rtrk.atcommands.ATCommands.SMSCommand parseFrom(
+    public static com.rtrk.atcommands.ATCommand.SMSCommand parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.rtrk.atcommands.ATCommands.SMSCommand parseFrom(byte[] data)
+    public static com.rtrk.atcommands.ATCommand.SMSCommand parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.rtrk.atcommands.ATCommands.SMSCommand parseFrom(
+    public static com.rtrk.atcommands.ATCommand.SMSCommand parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.rtrk.atcommands.ATCommands.SMSCommand parseFrom(java.io.InputStream input)
+    public static com.rtrk.atcommands.ATCommand.SMSCommand parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.rtrk.atcommands.ATCommands.SMSCommand parseFrom(
+    public static com.rtrk.atcommands.ATCommand.SMSCommand parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.rtrk.atcommands.ATCommands.SMSCommand parseDelimitedFrom(java.io.InputStream input)
+    public static com.rtrk.atcommands.ATCommand.SMSCommand parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static com.rtrk.atcommands.ATCommands.SMSCommand parseDelimitedFrom(
+    public static com.rtrk.atcommands.ATCommand.SMSCommand parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.rtrk.atcommands.ATCommands.SMSCommand parseFrom(
+    public static com.rtrk.atcommands.ATCommand.SMSCommand parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.rtrk.atcommands.ATCommands.SMSCommand parseFrom(
+    public static com.rtrk.atcommands.ATCommand.SMSCommand parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -36146,7 +36336,7 @@ public final class ATCommands {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.rtrk.atcommands.ATCommands.SMSCommand prototype) {
+    public static Builder newBuilder(com.rtrk.atcommands.ATCommand.SMSCommand prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() {
@@ -36166,20 +36356,20 @@ public final class ATCommands {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:com.rtrk.protobuf.SMSCommand)
-        com.rtrk.atcommands.ATCommands.SMSCommandOrBuilder {
+        com.rtrk.atcommands.ATCommand.SMSCommandOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.rtrk.atcommands.ATCommands.internal_static_com_rtrk_protobuf_SMSCommand_descriptor;
+        return com.rtrk.atcommands.ATCommand.internal_static_com_rtrk_protobuf_SMSCommand_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.rtrk.atcommands.ATCommands.internal_static_com_rtrk_protobuf_SMSCommand_fieldAccessorTable
+        return com.rtrk.atcommands.ATCommand.internal_static_com_rtrk_protobuf_SMSCommand_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.rtrk.atcommands.ATCommands.SMSCommand.class, com.rtrk.atcommands.ATCommands.SMSCommand.Builder.class);
+                com.rtrk.atcommands.ATCommand.SMSCommand.class, com.rtrk.atcommands.ATCommand.SMSCommand.Builder.class);
       }
 
-      // Construct using com.rtrk.atcommands.ATCommands.SMSCommand.newBuilder()
+      // Construct using com.rtrk.atcommands.ATCommand.SMSCommand.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -36283,23 +36473,23 @@ public final class ATCommands {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.rtrk.atcommands.ATCommands.internal_static_com_rtrk_protobuf_SMSCommand_descriptor;
+        return com.rtrk.atcommands.ATCommand.internal_static_com_rtrk_protobuf_SMSCommand_descriptor;
       }
 
-      public com.rtrk.atcommands.ATCommands.SMSCommand getDefaultInstanceForType() {
-        return com.rtrk.atcommands.ATCommands.SMSCommand.getDefaultInstance();
+      public com.rtrk.atcommands.ATCommand.SMSCommand getDefaultInstanceForType() {
+        return com.rtrk.atcommands.ATCommand.SMSCommand.getDefaultInstance();
       }
 
-      public com.rtrk.atcommands.ATCommands.SMSCommand build() {
-        com.rtrk.atcommands.ATCommands.SMSCommand result = buildPartial();
+      public com.rtrk.atcommands.ATCommand.SMSCommand build() {
+        com.rtrk.atcommands.ATCommand.SMSCommand result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      public com.rtrk.atcommands.ATCommands.SMSCommand buildPartial() {
-        com.rtrk.atcommands.ATCommands.SMSCommand result = new com.rtrk.atcommands.ATCommands.SMSCommand(this);
+      public com.rtrk.atcommands.ATCommand.SMSCommand buildPartial() {
+        com.rtrk.atcommands.ATCommand.SMSCommand result = new com.rtrk.atcommands.ATCommand.SMSCommand(this);
         result.messsageType_ = messsageType_;
         result.service_ = service_;
         result.mobileTerminatedMessage_ = mobileTerminatedMessage_;
@@ -36372,16 +36562,16 @@ public final class ATCommands {
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.rtrk.atcommands.ATCommands.SMSCommand) {
-          return mergeFrom((com.rtrk.atcommands.ATCommands.SMSCommand)other);
+        if (other instanceof com.rtrk.atcommands.ATCommand.SMSCommand) {
+          return mergeFrom((com.rtrk.atcommands.ATCommand.SMSCommand)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.rtrk.atcommands.ATCommands.SMSCommand other) {
-        if (other == com.rtrk.atcommands.ATCommands.SMSCommand.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.rtrk.atcommands.ATCommand.SMSCommand other) {
+        if (other == com.rtrk.atcommands.ATCommand.SMSCommand.getDefaultInstance()) return this;
         if (other.messsageType_ != 0) {
           setMesssageTypeValue(other.getMesssageTypeValue());
         }
@@ -36530,11 +36720,11 @@ public final class ATCommands {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.rtrk.atcommands.ATCommands.SMSCommand parsedMessage = null;
+        com.rtrk.atcommands.ATCommand.SMSCommand parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.rtrk.atcommands.ATCommands.SMSCommand) e.getUnfinishedMessage();
+          parsedMessage = (com.rtrk.atcommands.ATCommand.SMSCommand) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -36562,14 +36752,14 @@ public final class ATCommands {
       /**
        * <code>optional .com.rtrk.protobuf.SMSMessageType messsageType = 1;</code>
        */
-      public com.rtrk.atcommands.ATCommands.SMSMessageType getMesssageType() {
-        com.rtrk.atcommands.ATCommands.SMSMessageType result = com.rtrk.atcommands.ATCommands.SMSMessageType.valueOf(messsageType_);
-        return result == null ? com.rtrk.atcommands.ATCommands.SMSMessageType.UNRECOGNIZED : result;
+      public com.rtrk.atcommands.ATCommand.SMSMessageType getMesssageType() {
+        com.rtrk.atcommands.ATCommand.SMSMessageType result = com.rtrk.atcommands.ATCommand.SMSMessageType.valueOf(messsageType_);
+        return result == null ? com.rtrk.atcommands.ATCommand.SMSMessageType.UNRECOGNIZED : result;
       }
       /**
        * <code>optional .com.rtrk.protobuf.SMSMessageType messsageType = 1;</code>
        */
-      public Builder setMesssageType(com.rtrk.atcommands.ATCommands.SMSMessageType value) {
+      public Builder setMesssageType(com.rtrk.atcommands.ATCommand.SMSMessageType value) {
         if (value == null) {
           throw new NullPointerException();
         }
@@ -38480,12 +38670,12 @@ public final class ATCommands {
     }
 
     // @@protoc_insertion_point(class_scope:com.rtrk.protobuf.SMSCommand)
-    private static final com.rtrk.atcommands.ATCommands.SMSCommand DEFAULT_INSTANCE;
+    private static final com.rtrk.atcommands.ATCommand.SMSCommand DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.rtrk.atcommands.ATCommands.SMSCommand();
+      DEFAULT_INSTANCE = new com.rtrk.atcommands.ATCommand.SMSCommand();
     }
 
-    public static com.rtrk.atcommands.ATCommands.SMSCommand getDefaultInstance() {
+    public static com.rtrk.atcommands.ATCommand.SMSCommand getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -38508,7 +38698,7 @@ public final class ATCommands {
       return PARSER;
     }
 
-    public com.rtrk.atcommands.ATCommands.SMSCommand getDefaultInstanceForType() {
+    public com.rtrk.atcommands.ATCommand.SMSCommand getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -38525,7 +38715,7 @@ public final class ATCommands {
     /**
      * <code>optional .com.rtrk.protobuf.PhonebookMessageType messageType = 1;</code>
      */
-    com.rtrk.atcommands.ATCommands.PhonebookMessageType getMessageType();
+    com.rtrk.atcommands.ATCommand.PhonebookMessageType getMessageType();
 
     /**
      * <code>optional string storage = 2;</code>
@@ -38765,14 +38955,14 @@ public final class ATCommands {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.rtrk.atcommands.ATCommands.internal_static_com_rtrk_protobuf_PhonebookCommand_descriptor;
+      return com.rtrk.atcommands.ATCommand.internal_static_com_rtrk_protobuf_PhonebookCommand_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.rtrk.atcommands.ATCommands.internal_static_com_rtrk_protobuf_PhonebookCommand_fieldAccessorTable
+      return com.rtrk.atcommands.ATCommand.internal_static_com_rtrk_protobuf_PhonebookCommand_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.rtrk.atcommands.ATCommands.PhonebookCommand.class, com.rtrk.atcommands.ATCommands.PhonebookCommand.Builder.class);
+              com.rtrk.atcommands.ATCommand.PhonebookCommand.class, com.rtrk.atcommands.ATCommand.PhonebookCommand.Builder.class);
     }
 
     public static final int MESSAGETYPE_FIELD_NUMBER = 1;
@@ -38786,9 +38976,9 @@ public final class ATCommands {
     /**
      * <code>optional .com.rtrk.protobuf.PhonebookMessageType messageType = 1;</code>
      */
-    public com.rtrk.atcommands.ATCommands.PhonebookMessageType getMessageType() {
-      com.rtrk.atcommands.ATCommands.PhonebookMessageType result = com.rtrk.atcommands.ATCommands.PhonebookMessageType.valueOf(messageType_);
-      return result == null ? com.rtrk.atcommands.ATCommands.PhonebookMessageType.UNRECOGNIZED : result;
+    public com.rtrk.atcommands.ATCommand.PhonebookMessageType getMessageType() {
+      com.rtrk.atcommands.ATCommand.PhonebookMessageType result = com.rtrk.atcommands.ATCommand.PhonebookMessageType.valueOf(messageType_);
+      return result == null ? com.rtrk.atcommands.ATCommand.PhonebookMessageType.UNRECOGNIZED : result;
     }
 
     public static final int STORAGE_FIELD_NUMBER = 2;
@@ -39070,7 +39260,7 @@ public final class ATCommands {
 
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (messageType_ != com.rtrk.atcommands.ATCommands.PhonebookMessageType.SELECT_PHONEBOOK_MEMORY_STORAGE.getNumber()) {
+      if (messageType_ != com.rtrk.atcommands.ATCommand.PhonebookMessageType.SELECT_PHONEBOOK_MEMORY_STORAGE.getNumber()) {
         output.writeEnum(1, messageType_);
       }
       if (!getStorageBytes().isEmpty()) {
@@ -39119,7 +39309,7 @@ public final class ATCommands {
       if (size != -1) return size;
 
       size = 0;
-      if (messageType_ != com.rtrk.atcommands.ATCommands.PhonebookMessageType.SELECT_PHONEBOOK_MEMORY_STORAGE.getNumber()) {
+      if (messageType_ != com.rtrk.atcommands.ATCommand.PhonebookMessageType.SELECT_PHONEBOOK_MEMORY_STORAGE.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(1, messageType_);
       }
@@ -39179,10 +39369,10 @@ public final class ATCommands {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.rtrk.atcommands.ATCommands.PhonebookCommand)) {
+      if (!(obj instanceof com.rtrk.atcommands.ATCommand.PhonebookCommand)) {
         return super.equals(obj);
       }
-      com.rtrk.atcommands.ATCommands.PhonebookCommand other = (com.rtrk.atcommands.ATCommands.PhonebookCommand) obj;
+      com.rtrk.atcommands.ATCommand.PhonebookCommand other = (com.rtrk.atcommands.ATCommand.PhonebookCommand) obj;
 
       boolean result = true;
       result = result && messageType_ == other.messageType_;
@@ -39255,58 +39445,58 @@ public final class ATCommands {
       return hash;
     }
 
-    public static com.rtrk.atcommands.ATCommands.PhonebookCommand parseFrom(
+    public static com.rtrk.atcommands.ATCommand.PhonebookCommand parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.rtrk.atcommands.ATCommands.PhonebookCommand parseFrom(
+    public static com.rtrk.atcommands.ATCommand.PhonebookCommand parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.rtrk.atcommands.ATCommands.PhonebookCommand parseFrom(byte[] data)
+    public static com.rtrk.atcommands.ATCommand.PhonebookCommand parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.rtrk.atcommands.ATCommands.PhonebookCommand parseFrom(
+    public static com.rtrk.atcommands.ATCommand.PhonebookCommand parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.rtrk.atcommands.ATCommands.PhonebookCommand parseFrom(java.io.InputStream input)
+    public static com.rtrk.atcommands.ATCommand.PhonebookCommand parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.rtrk.atcommands.ATCommands.PhonebookCommand parseFrom(
+    public static com.rtrk.atcommands.ATCommand.PhonebookCommand parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.rtrk.atcommands.ATCommands.PhonebookCommand parseDelimitedFrom(java.io.InputStream input)
+    public static com.rtrk.atcommands.ATCommand.PhonebookCommand parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static com.rtrk.atcommands.ATCommands.PhonebookCommand parseDelimitedFrom(
+    public static com.rtrk.atcommands.ATCommand.PhonebookCommand parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.rtrk.atcommands.ATCommands.PhonebookCommand parseFrom(
+    public static com.rtrk.atcommands.ATCommand.PhonebookCommand parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.rtrk.atcommands.ATCommands.PhonebookCommand parseFrom(
+    public static com.rtrk.atcommands.ATCommand.PhonebookCommand parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -39318,7 +39508,7 @@ public final class ATCommands {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.rtrk.atcommands.ATCommands.PhonebookCommand prototype) {
+    public static Builder newBuilder(com.rtrk.atcommands.ATCommand.PhonebookCommand prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() {
@@ -39338,20 +39528,20 @@ public final class ATCommands {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:com.rtrk.protobuf.PhonebookCommand)
-        com.rtrk.atcommands.ATCommands.PhonebookCommandOrBuilder {
+        com.rtrk.atcommands.ATCommand.PhonebookCommandOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.rtrk.atcommands.ATCommands.internal_static_com_rtrk_protobuf_PhonebookCommand_descriptor;
+        return com.rtrk.atcommands.ATCommand.internal_static_com_rtrk_protobuf_PhonebookCommand_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.rtrk.atcommands.ATCommands.internal_static_com_rtrk_protobuf_PhonebookCommand_fieldAccessorTable
+        return com.rtrk.atcommands.ATCommand.internal_static_com_rtrk_protobuf_PhonebookCommand_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.rtrk.atcommands.ATCommands.PhonebookCommand.class, com.rtrk.atcommands.ATCommands.PhonebookCommand.Builder.class);
+                com.rtrk.atcommands.ATCommand.PhonebookCommand.class, com.rtrk.atcommands.ATCommand.PhonebookCommand.Builder.class);
       }
 
-      // Construct using com.rtrk.atcommands.ATCommands.PhonebookCommand.newBuilder()
+      // Construct using com.rtrk.atcommands.ATCommand.PhonebookCommand.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -39401,23 +39591,23 @@ public final class ATCommands {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.rtrk.atcommands.ATCommands.internal_static_com_rtrk_protobuf_PhonebookCommand_descriptor;
+        return com.rtrk.atcommands.ATCommand.internal_static_com_rtrk_protobuf_PhonebookCommand_descriptor;
       }
 
-      public com.rtrk.atcommands.ATCommands.PhonebookCommand getDefaultInstanceForType() {
-        return com.rtrk.atcommands.ATCommands.PhonebookCommand.getDefaultInstance();
+      public com.rtrk.atcommands.ATCommand.PhonebookCommand getDefaultInstanceForType() {
+        return com.rtrk.atcommands.ATCommand.PhonebookCommand.getDefaultInstance();
       }
 
-      public com.rtrk.atcommands.ATCommands.PhonebookCommand build() {
-        com.rtrk.atcommands.ATCommands.PhonebookCommand result = buildPartial();
+      public com.rtrk.atcommands.ATCommand.PhonebookCommand build() {
+        com.rtrk.atcommands.ATCommand.PhonebookCommand result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      public com.rtrk.atcommands.ATCommands.PhonebookCommand buildPartial() {
-        com.rtrk.atcommands.ATCommands.PhonebookCommand result = new com.rtrk.atcommands.ATCommands.PhonebookCommand(this);
+      public com.rtrk.atcommands.ATCommand.PhonebookCommand buildPartial() {
+        com.rtrk.atcommands.ATCommand.PhonebookCommand result = new com.rtrk.atcommands.ATCommand.PhonebookCommand(this);
         result.messageType_ = messageType_;
         result.storage_ = storage_;
         result.nlength_ = nlength_;
@@ -39463,16 +39653,16 @@ public final class ATCommands {
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.rtrk.atcommands.ATCommands.PhonebookCommand) {
-          return mergeFrom((com.rtrk.atcommands.ATCommands.PhonebookCommand)other);
+        if (other instanceof com.rtrk.atcommands.ATCommand.PhonebookCommand) {
+          return mergeFrom((com.rtrk.atcommands.ATCommand.PhonebookCommand)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.rtrk.atcommands.ATCommands.PhonebookCommand other) {
-        if (other == com.rtrk.atcommands.ATCommands.PhonebookCommand.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.rtrk.atcommands.ATCommand.PhonebookCommand other) {
+        if (other == com.rtrk.atcommands.ATCommand.PhonebookCommand.getDefaultInstance()) return this;
         if (other.messageType_ != 0) {
           setMessageTypeValue(other.getMessageTypeValue());
         }
@@ -39533,11 +39723,11 @@ public final class ATCommands {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.rtrk.atcommands.ATCommands.PhonebookCommand parsedMessage = null;
+        com.rtrk.atcommands.ATCommand.PhonebookCommand parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.rtrk.atcommands.ATCommands.PhonebookCommand) e.getUnfinishedMessage();
+          parsedMessage = (com.rtrk.atcommands.ATCommand.PhonebookCommand) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -39565,14 +39755,14 @@ public final class ATCommands {
       /**
        * <code>optional .com.rtrk.protobuf.PhonebookMessageType messageType = 1;</code>
        */
-      public com.rtrk.atcommands.ATCommands.PhonebookMessageType getMessageType() {
-        com.rtrk.atcommands.ATCommands.PhonebookMessageType result = com.rtrk.atcommands.ATCommands.PhonebookMessageType.valueOf(messageType_);
-        return result == null ? com.rtrk.atcommands.ATCommands.PhonebookMessageType.UNRECOGNIZED : result;
+      public com.rtrk.atcommands.ATCommand.PhonebookMessageType getMessageType() {
+        com.rtrk.atcommands.ATCommand.PhonebookMessageType result = com.rtrk.atcommands.ATCommand.PhonebookMessageType.valueOf(messageType_);
+        return result == null ? com.rtrk.atcommands.ATCommand.PhonebookMessageType.UNRECOGNIZED : result;
       }
       /**
        * <code>optional .com.rtrk.protobuf.PhonebookMessageType messageType = 1;</code>
        */
-      public Builder setMessageType(com.rtrk.atcommands.ATCommands.PhonebookMessageType value) {
+      public Builder setMessageType(com.rtrk.atcommands.ATCommand.PhonebookMessageType value) {
         if (value == null) {
           throw new NullPointerException();
         }
@@ -40201,12 +40391,12 @@ public final class ATCommands {
     }
 
     // @@protoc_insertion_point(class_scope:com.rtrk.protobuf.PhonebookCommand)
-    private static final com.rtrk.atcommands.ATCommands.PhonebookCommand DEFAULT_INSTANCE;
+    private static final com.rtrk.atcommands.ATCommand.PhonebookCommand DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.rtrk.atcommands.ATCommands.PhonebookCommand();
+      DEFAULT_INSTANCE = new com.rtrk.atcommands.ATCommand.PhonebookCommand();
     }
 
-    public static com.rtrk.atcommands.ATCommands.PhonebookCommand getDefaultInstance() {
+    public static com.rtrk.atcommands.ATCommand.PhonebookCommand getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -40229,7 +40419,7 @@ public final class ATCommands {
       return PARSER;
     }
 
-    public com.rtrk.atcommands.ATCommands.PhonebookCommand getDefaultInstanceForType() {
+    public com.rtrk.atcommands.ATCommand.PhonebookCommand getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -40246,7 +40436,7 @@ public final class ATCommands {
     /**
      * <code>optional .com.rtrk.protobuf.GPRSMessageType messageType = 1;</code>
      */
-    com.rtrk.atcommands.ATCommands.GPRSMessageType getMessageType();
+    com.rtrk.atcommands.ATCommand.GPRSMessageType getMessageType();
 
     /**
      * <code>optional int32 state = 2;</code>
@@ -40569,14 +40759,14 @@ public final class ATCommands {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.rtrk.atcommands.ATCommands.internal_static_com_rtrk_protobuf_GPRSCommand_descriptor;
+      return com.rtrk.atcommands.ATCommand.internal_static_com_rtrk_protobuf_GPRSCommand_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.rtrk.atcommands.ATCommands.internal_static_com_rtrk_protobuf_GPRSCommand_fieldAccessorTable
+      return com.rtrk.atcommands.ATCommand.internal_static_com_rtrk_protobuf_GPRSCommand_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.rtrk.atcommands.ATCommands.GPRSCommand.class, com.rtrk.atcommands.ATCommands.GPRSCommand.Builder.class);
+              com.rtrk.atcommands.ATCommand.GPRSCommand.class, com.rtrk.atcommands.ATCommand.GPRSCommand.Builder.class);
     }
 
     public static final int MESSAGETYPE_FIELD_NUMBER = 1;
@@ -40590,9 +40780,9 @@ public final class ATCommands {
     /**
      * <code>optional .com.rtrk.protobuf.GPRSMessageType messageType = 1;</code>
      */
-    public com.rtrk.atcommands.ATCommands.GPRSMessageType getMessageType() {
-      com.rtrk.atcommands.ATCommands.GPRSMessageType result = com.rtrk.atcommands.ATCommands.GPRSMessageType.valueOf(messageType_);
-      return result == null ? com.rtrk.atcommands.ATCommands.GPRSMessageType.UNRECOGNIZED : result;
+    public com.rtrk.atcommands.ATCommand.GPRSMessageType getMessageType() {
+      com.rtrk.atcommands.ATCommand.GPRSMessageType result = com.rtrk.atcommands.ATCommand.GPRSMessageType.valueOf(messageType_);
+      return result == null ? com.rtrk.atcommands.ATCommand.GPRSMessageType.UNRECOGNIZED : result;
     }
 
     public static final int STATE_FIELD_NUMBER = 2;
@@ -40962,7 +41152,7 @@ public final class ATCommands {
 
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (messageType_ != com.rtrk.atcommands.ATCommands.GPRSMessageType.ATTACH_DEATTACH_GPRS_SERVICE.getNumber()) {
+      if (messageType_ != com.rtrk.atcommands.ATCommand.GPRSMessageType.ATTACH_DEATTACH_GPRS_SERVICE.getNumber()) {
         output.writeEnum(1, messageType_);
       }
       if (state_ != 0) {
@@ -41032,7 +41222,7 @@ public final class ATCommands {
       if (size != -1) return size;
 
       size = 0;
-      if (messageType_ != com.rtrk.atcommands.ATCommands.GPRSMessageType.ATTACH_DEATTACH_GPRS_SERVICE.getNumber()) {
+      if (messageType_ != com.rtrk.atcommands.ATCommand.GPRSMessageType.ATTACH_DEATTACH_GPRS_SERVICE.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(1, messageType_);
       }
@@ -41119,10 +41309,10 @@ public final class ATCommands {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.rtrk.atcommands.ATCommands.GPRSCommand)) {
+      if (!(obj instanceof com.rtrk.atcommands.ATCommand.GPRSCommand)) {
         return super.equals(obj);
       }
-      com.rtrk.atcommands.ATCommands.GPRSCommand other = (com.rtrk.atcommands.ATCommands.GPRSCommand) obj;
+      com.rtrk.atcommands.ATCommand.GPRSCommand other = (com.rtrk.atcommands.ATCommand.GPRSCommand) obj;
 
       boolean result = true;
       result = result && messageType_ == other.messageType_;
@@ -41223,58 +41413,58 @@ public final class ATCommands {
       return hash;
     }
 
-    public static com.rtrk.atcommands.ATCommands.GPRSCommand parseFrom(
+    public static com.rtrk.atcommands.ATCommand.GPRSCommand parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.rtrk.atcommands.ATCommands.GPRSCommand parseFrom(
+    public static com.rtrk.atcommands.ATCommand.GPRSCommand parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.rtrk.atcommands.ATCommands.GPRSCommand parseFrom(byte[] data)
+    public static com.rtrk.atcommands.ATCommand.GPRSCommand parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.rtrk.atcommands.ATCommands.GPRSCommand parseFrom(
+    public static com.rtrk.atcommands.ATCommand.GPRSCommand parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.rtrk.atcommands.ATCommands.GPRSCommand parseFrom(java.io.InputStream input)
+    public static com.rtrk.atcommands.ATCommand.GPRSCommand parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.rtrk.atcommands.ATCommands.GPRSCommand parseFrom(
+    public static com.rtrk.atcommands.ATCommand.GPRSCommand parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.rtrk.atcommands.ATCommands.GPRSCommand parseDelimitedFrom(java.io.InputStream input)
+    public static com.rtrk.atcommands.ATCommand.GPRSCommand parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static com.rtrk.atcommands.ATCommands.GPRSCommand parseDelimitedFrom(
+    public static com.rtrk.atcommands.ATCommand.GPRSCommand parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.rtrk.atcommands.ATCommands.GPRSCommand parseFrom(
+    public static com.rtrk.atcommands.ATCommand.GPRSCommand parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.rtrk.atcommands.ATCommands.GPRSCommand parseFrom(
+    public static com.rtrk.atcommands.ATCommand.GPRSCommand parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -41286,7 +41476,7 @@ public final class ATCommands {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.rtrk.atcommands.ATCommands.GPRSCommand prototype) {
+    public static Builder newBuilder(com.rtrk.atcommands.ATCommand.GPRSCommand prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() {
@@ -41306,20 +41496,20 @@ public final class ATCommands {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:com.rtrk.protobuf.GPRSCommand)
-        com.rtrk.atcommands.ATCommands.GPRSCommandOrBuilder {
+        com.rtrk.atcommands.ATCommand.GPRSCommandOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.rtrk.atcommands.ATCommands.internal_static_com_rtrk_protobuf_GPRSCommand_descriptor;
+        return com.rtrk.atcommands.ATCommand.internal_static_com_rtrk_protobuf_GPRSCommand_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.rtrk.atcommands.ATCommands.internal_static_com_rtrk_protobuf_GPRSCommand_fieldAccessorTable
+        return com.rtrk.atcommands.ATCommand.internal_static_com_rtrk_protobuf_GPRSCommand_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.rtrk.atcommands.ATCommands.GPRSCommand.class, com.rtrk.atcommands.ATCommands.GPRSCommand.Builder.class);
+                com.rtrk.atcommands.ATCommand.GPRSCommand.class, com.rtrk.atcommands.ATCommand.GPRSCommand.Builder.class);
       }
 
-      // Construct using com.rtrk.atcommands.ATCommands.GPRSCommand.newBuilder()
+      // Construct using com.rtrk.atcommands.ATCommand.GPRSCommand.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -41383,23 +41573,23 @@ public final class ATCommands {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.rtrk.atcommands.ATCommands.internal_static_com_rtrk_protobuf_GPRSCommand_descriptor;
+        return com.rtrk.atcommands.ATCommand.internal_static_com_rtrk_protobuf_GPRSCommand_descriptor;
       }
 
-      public com.rtrk.atcommands.ATCommands.GPRSCommand getDefaultInstanceForType() {
-        return com.rtrk.atcommands.ATCommands.GPRSCommand.getDefaultInstance();
+      public com.rtrk.atcommands.ATCommand.GPRSCommand getDefaultInstanceForType() {
+        return com.rtrk.atcommands.ATCommand.GPRSCommand.getDefaultInstance();
       }
 
-      public com.rtrk.atcommands.ATCommands.GPRSCommand build() {
-        com.rtrk.atcommands.ATCommands.GPRSCommand result = buildPartial();
+      public com.rtrk.atcommands.ATCommand.GPRSCommand build() {
+        com.rtrk.atcommands.ATCommand.GPRSCommand result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      public com.rtrk.atcommands.ATCommands.GPRSCommand buildPartial() {
-        com.rtrk.atcommands.ATCommands.GPRSCommand result = new com.rtrk.atcommands.ATCommands.GPRSCommand(this);
+      public com.rtrk.atcommands.ATCommand.GPRSCommand buildPartial() {
+        com.rtrk.atcommands.ATCommand.GPRSCommand result = new com.rtrk.atcommands.ATCommand.GPRSCommand(this);
         result.messageType_ = messageType_;
         result.state_ = state_;
         result.cid_ = cid_;
@@ -41452,16 +41642,16 @@ public final class ATCommands {
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.rtrk.atcommands.ATCommands.GPRSCommand) {
-          return mergeFrom((com.rtrk.atcommands.ATCommands.GPRSCommand)other);
+        if (other instanceof com.rtrk.atcommands.ATCommand.GPRSCommand) {
+          return mergeFrom((com.rtrk.atcommands.ATCommand.GPRSCommand)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.rtrk.atcommands.ATCommands.GPRSCommand other) {
-        if (other == com.rtrk.atcommands.ATCommands.GPRSCommand.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.rtrk.atcommands.ATCommand.GPRSCommand other) {
+        if (other == com.rtrk.atcommands.ATCommand.GPRSCommand.getDefaultInstance()) return this;
         if (other.messageType_ != 0) {
           setMessageTypeValue(other.getMessageTypeValue());
         }
@@ -41544,11 +41734,11 @@ public final class ATCommands {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.rtrk.atcommands.ATCommands.GPRSCommand parsedMessage = null;
+        com.rtrk.atcommands.ATCommand.GPRSCommand parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.rtrk.atcommands.ATCommands.GPRSCommand) e.getUnfinishedMessage();
+          parsedMessage = (com.rtrk.atcommands.ATCommand.GPRSCommand) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -41576,14 +41766,14 @@ public final class ATCommands {
       /**
        * <code>optional .com.rtrk.protobuf.GPRSMessageType messageType = 1;</code>
        */
-      public com.rtrk.atcommands.ATCommands.GPRSMessageType getMessageType() {
-        com.rtrk.atcommands.ATCommands.GPRSMessageType result = com.rtrk.atcommands.ATCommands.GPRSMessageType.valueOf(messageType_);
-        return result == null ? com.rtrk.atcommands.ATCommands.GPRSMessageType.UNRECOGNIZED : result;
+      public com.rtrk.atcommands.ATCommand.GPRSMessageType getMessageType() {
+        com.rtrk.atcommands.ATCommand.GPRSMessageType result = com.rtrk.atcommands.ATCommand.GPRSMessageType.valueOf(messageType_);
+        return result == null ? com.rtrk.atcommands.ATCommand.GPRSMessageType.UNRECOGNIZED : result;
       }
       /**
        * <code>optional .com.rtrk.protobuf.GPRSMessageType messageType = 1;</code>
        */
-      public Builder setMessageType(com.rtrk.atcommands.ATCommands.GPRSMessageType value) {
+      public Builder setMessageType(com.rtrk.atcommands.ATCommand.GPRSMessageType value) {
         if (value == null) {
           throw new NullPointerException();
         }
@@ -42437,12 +42627,12 @@ public final class ATCommands {
     }
 
     // @@protoc_insertion_point(class_scope:com.rtrk.protobuf.GPRSCommand)
-    private static final com.rtrk.atcommands.ATCommands.GPRSCommand DEFAULT_INSTANCE;
+    private static final com.rtrk.atcommands.ATCommand.GPRSCommand DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.rtrk.atcommands.ATCommands.GPRSCommand();
+      DEFAULT_INSTANCE = new com.rtrk.atcommands.ATCommand.GPRSCommand();
     }
 
-    public static com.rtrk.atcommands.ATCommands.GPRSCommand getDefaultInstance() {
+    public static com.rtrk.atcommands.ATCommand.GPRSCommand getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -42465,7 +42655,7 @@ public final class ATCommands {
       return PARSER;
     }
 
-    public com.rtrk.atcommands.ATCommands.GPRSCommand getDefaultInstanceForType() {
+    public com.rtrk.atcommands.ATCommand.GPRSCommand getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -42482,7 +42672,7 @@ public final class ATCommands {
     /**
      * <code>optional .com.rtrk.protobuf.TCPIPMessageType messageType = 1;</code>
      */
-    com.rtrk.atcommands.ATCommands.TCPIPMessageType getMessageType();
+    com.rtrk.atcommands.ATCommand.TCPIPMessageType getMessageType();
 
     /**
      * <code>optional int32 index = 2;</code>
@@ -43150,14 +43340,14 @@ public final class ATCommands {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.rtrk.atcommands.ATCommands.internal_static_com_rtrk_protobuf_TCPIPCommand_descriptor;
+      return com.rtrk.atcommands.ATCommand.internal_static_com_rtrk_protobuf_TCPIPCommand_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.rtrk.atcommands.ATCommands.internal_static_com_rtrk_protobuf_TCPIPCommand_fieldAccessorTable
+      return com.rtrk.atcommands.ATCommand.internal_static_com_rtrk_protobuf_TCPIPCommand_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.rtrk.atcommands.ATCommands.TCPIPCommand.class, com.rtrk.atcommands.ATCommands.TCPIPCommand.Builder.class);
+              com.rtrk.atcommands.ATCommand.TCPIPCommand.class, com.rtrk.atcommands.ATCommand.TCPIPCommand.Builder.class);
     }
 
     public static final int MESSAGETYPE_FIELD_NUMBER = 1;
@@ -43171,9 +43361,9 @@ public final class ATCommands {
     /**
      * <code>optional .com.rtrk.protobuf.TCPIPMessageType messageType = 1;</code>
      */
-    public com.rtrk.atcommands.ATCommands.TCPIPMessageType getMessageType() {
-      com.rtrk.atcommands.ATCommands.TCPIPMessageType result = com.rtrk.atcommands.ATCommands.TCPIPMessageType.valueOf(messageType_);
-      return result == null ? com.rtrk.atcommands.ATCommands.TCPIPMessageType.UNRECOGNIZED : result;
+    public com.rtrk.atcommands.ATCommand.TCPIPMessageType getMessageType() {
+      com.rtrk.atcommands.ATCommand.TCPIPMessageType result = com.rtrk.atcommands.ATCommand.TCPIPMessageType.valueOf(messageType_);
+      return result == null ? com.rtrk.atcommands.ATCommand.TCPIPMessageType.UNRECOGNIZED : result;
     }
 
     public static final int INDEX_FIELD_NUMBER = 2;
@@ -43945,7 +44135,7 @@ public final class ATCommands {
 
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (messageType_ != com.rtrk.atcommands.ATCommands.TCPIPMessageType.SET_UP_TCP_OR_UDP_CONNECTION.getNumber()) {
+      if (messageType_ != com.rtrk.atcommands.ATCommand.TCPIPMessageType.SET_UP_TCP_OR_UDP_CONNECTION.getNumber()) {
         output.writeEnum(1, messageType_);
       }
       if (index_ != 0) {
@@ -44099,7 +44289,7 @@ public final class ATCommands {
       if (size != -1) return size;
 
       size = 0;
-      if (messageType_ != com.rtrk.atcommands.ATCommands.TCPIPMessageType.SET_UP_TCP_OR_UDP_CONNECTION.getNumber()) {
+      if (messageType_ != com.rtrk.atcommands.ATCommand.TCPIPMessageType.SET_UP_TCP_OR_UDP_CONNECTION.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(1, messageType_);
       }
@@ -44292,10 +44482,10 @@ public final class ATCommands {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.rtrk.atcommands.ATCommands.TCPIPCommand)) {
+      if (!(obj instanceof com.rtrk.atcommands.ATCommand.TCPIPCommand)) {
         return super.equals(obj);
       }
-      com.rtrk.atcommands.ATCommands.TCPIPCommand other = (com.rtrk.atcommands.ATCommands.TCPIPCommand) obj;
+      com.rtrk.atcommands.ATCommand.TCPIPCommand other = (com.rtrk.atcommands.ATCommand.TCPIPCommand) obj;
 
       boolean result = true;
       result = result && messageType_ == other.messageType_;
@@ -44513,58 +44703,58 @@ public final class ATCommands {
       return hash;
     }
 
-    public static com.rtrk.atcommands.ATCommands.TCPIPCommand parseFrom(
+    public static com.rtrk.atcommands.ATCommand.TCPIPCommand parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.rtrk.atcommands.ATCommands.TCPIPCommand parseFrom(
+    public static com.rtrk.atcommands.ATCommand.TCPIPCommand parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.rtrk.atcommands.ATCommands.TCPIPCommand parseFrom(byte[] data)
+    public static com.rtrk.atcommands.ATCommand.TCPIPCommand parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.rtrk.atcommands.ATCommands.TCPIPCommand parseFrom(
+    public static com.rtrk.atcommands.ATCommand.TCPIPCommand parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.rtrk.atcommands.ATCommands.TCPIPCommand parseFrom(java.io.InputStream input)
+    public static com.rtrk.atcommands.ATCommand.TCPIPCommand parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.rtrk.atcommands.ATCommands.TCPIPCommand parseFrom(
+    public static com.rtrk.atcommands.ATCommand.TCPIPCommand parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.rtrk.atcommands.ATCommands.TCPIPCommand parseDelimitedFrom(java.io.InputStream input)
+    public static com.rtrk.atcommands.ATCommand.TCPIPCommand parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static com.rtrk.atcommands.ATCommands.TCPIPCommand parseDelimitedFrom(
+    public static com.rtrk.atcommands.ATCommand.TCPIPCommand parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.rtrk.atcommands.ATCommands.TCPIPCommand parseFrom(
+    public static com.rtrk.atcommands.ATCommand.TCPIPCommand parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.rtrk.atcommands.ATCommands.TCPIPCommand parseFrom(
+    public static com.rtrk.atcommands.ATCommand.TCPIPCommand parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -44576,7 +44766,7 @@ public final class ATCommands {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.rtrk.atcommands.ATCommands.TCPIPCommand prototype) {
+    public static Builder newBuilder(com.rtrk.atcommands.ATCommand.TCPIPCommand prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() {
@@ -44596,20 +44786,20 @@ public final class ATCommands {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:com.rtrk.protobuf.TCPIPCommand)
-        com.rtrk.atcommands.ATCommands.TCPIPCommandOrBuilder {
+        com.rtrk.atcommands.ATCommand.TCPIPCommandOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.rtrk.atcommands.ATCommands.internal_static_com_rtrk_protobuf_TCPIPCommand_descriptor;
+        return com.rtrk.atcommands.ATCommand.internal_static_com_rtrk_protobuf_TCPIPCommand_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.rtrk.atcommands.ATCommands.internal_static_com_rtrk_protobuf_TCPIPCommand_fieldAccessorTable
+        return com.rtrk.atcommands.ATCommand.internal_static_com_rtrk_protobuf_TCPIPCommand_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.rtrk.atcommands.ATCommands.TCPIPCommand.class, com.rtrk.atcommands.ATCommands.TCPIPCommand.Builder.class);
+                com.rtrk.atcommands.ATCommand.TCPIPCommand.class, com.rtrk.atcommands.ATCommand.TCPIPCommand.Builder.class);
       }
 
-      // Construct using com.rtrk.atcommands.ATCommands.TCPIPCommand.newBuilder()
+      // Construct using com.rtrk.atcommands.ATCommand.TCPIPCommand.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -44729,23 +44919,23 @@ public final class ATCommands {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.rtrk.atcommands.ATCommands.internal_static_com_rtrk_protobuf_TCPIPCommand_descriptor;
+        return com.rtrk.atcommands.ATCommand.internal_static_com_rtrk_protobuf_TCPIPCommand_descriptor;
       }
 
-      public com.rtrk.atcommands.ATCommands.TCPIPCommand getDefaultInstanceForType() {
-        return com.rtrk.atcommands.ATCommands.TCPIPCommand.getDefaultInstance();
+      public com.rtrk.atcommands.ATCommand.TCPIPCommand getDefaultInstanceForType() {
+        return com.rtrk.atcommands.ATCommand.TCPIPCommand.getDefaultInstance();
       }
 
-      public com.rtrk.atcommands.ATCommands.TCPIPCommand build() {
-        com.rtrk.atcommands.ATCommands.TCPIPCommand result = buildPartial();
+      public com.rtrk.atcommands.ATCommand.TCPIPCommand build() {
+        com.rtrk.atcommands.ATCommand.TCPIPCommand result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      public com.rtrk.atcommands.ATCommands.TCPIPCommand buildPartial() {
-        com.rtrk.atcommands.ATCommands.TCPIPCommand result = new com.rtrk.atcommands.ATCommands.TCPIPCommand(this);
+      public com.rtrk.atcommands.ATCommand.TCPIPCommand buildPartial() {
+        com.rtrk.atcommands.ATCommand.TCPIPCommand result = new com.rtrk.atcommands.ATCommand.TCPIPCommand(this);
         result.messageType_ = messageType_;
         result.index_ = index_;
         result.mode_ = mode_;
@@ -44826,16 +45016,16 @@ public final class ATCommands {
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.rtrk.atcommands.ATCommands.TCPIPCommand) {
-          return mergeFrom((com.rtrk.atcommands.ATCommands.TCPIPCommand)other);
+        if (other instanceof com.rtrk.atcommands.ATCommand.TCPIPCommand) {
+          return mergeFrom((com.rtrk.atcommands.ATCommand.TCPIPCommand)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.rtrk.atcommands.ATCommands.TCPIPCommand other) {
-        if (other == com.rtrk.atcommands.ATCommands.TCPIPCommand.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.rtrk.atcommands.ATCommand.TCPIPCommand other) {
+        if (other == com.rtrk.atcommands.ATCommand.TCPIPCommand.getDefaultInstance()) return this;
         if (other.messageType_ != 0) {
           setMessageTypeValue(other.getMessageTypeValue());
         }
@@ -45008,11 +45198,11 @@ public final class ATCommands {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.rtrk.atcommands.ATCommands.TCPIPCommand parsedMessage = null;
+        com.rtrk.atcommands.ATCommand.TCPIPCommand parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.rtrk.atcommands.ATCommands.TCPIPCommand) e.getUnfinishedMessage();
+          parsedMessage = (com.rtrk.atcommands.ATCommand.TCPIPCommand) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -45040,14 +45230,14 @@ public final class ATCommands {
       /**
        * <code>optional .com.rtrk.protobuf.TCPIPMessageType messageType = 1;</code>
        */
-      public com.rtrk.atcommands.ATCommands.TCPIPMessageType getMessageType() {
-        com.rtrk.atcommands.ATCommands.TCPIPMessageType result = com.rtrk.atcommands.ATCommands.TCPIPMessageType.valueOf(messageType_);
-        return result == null ? com.rtrk.atcommands.ATCommands.TCPIPMessageType.UNRECOGNIZED : result;
+      public com.rtrk.atcommands.ATCommand.TCPIPMessageType getMessageType() {
+        com.rtrk.atcommands.ATCommand.TCPIPMessageType result = com.rtrk.atcommands.ATCommand.TCPIPMessageType.valueOf(messageType_);
+        return result == null ? com.rtrk.atcommands.ATCommand.TCPIPMessageType.UNRECOGNIZED : result;
       }
       /**
        * <code>optional .com.rtrk.protobuf.TCPIPMessageType messageType = 1;</code>
        */
-      public Builder setMessageType(com.rtrk.atcommands.ATCommands.TCPIPMessageType value) {
+      public Builder setMessageType(com.rtrk.atcommands.ATCommand.TCPIPMessageType value) {
         if (value == null) {
           throw new NullPointerException();
         }
@@ -46887,12 +47077,12 @@ public final class ATCommands {
     }
 
     // @@protoc_insertion_point(class_scope:com.rtrk.protobuf.TCPIPCommand)
-    private static final com.rtrk.atcommands.ATCommands.TCPIPCommand DEFAULT_INSTANCE;
+    private static final com.rtrk.atcommands.ATCommand.TCPIPCommand DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.rtrk.atcommands.ATCommands.TCPIPCommand();
+      DEFAULT_INSTANCE = new com.rtrk.atcommands.ATCommand.TCPIPCommand();
     }
 
-    public static com.rtrk.atcommands.ATCommands.TCPIPCommand getDefaultInstance() {
+    public static com.rtrk.atcommands.ATCommand.TCPIPCommand getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -46915,7 +47105,7 @@ public final class ATCommands {
       return PARSER;
     }
 
-    public com.rtrk.atcommands.ATCommands.TCPIPCommand getDefaultInstanceForType() {
+    public com.rtrk.atcommands.ATCommand.TCPIPCommand getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -46932,7 +47122,7 @@ public final class ATCommands {
     /**
      * <code>optional .com.rtrk.protobuf.SupplementaryServiceMessageType messageType = 1;</code>
      */
-    com.rtrk.atcommands.ATCommands.SupplementaryServiceMessageType getMessageType();
+    com.rtrk.atcommands.ATCommand.SupplementaryServiceMessageType getMessageType();
 
     /**
      * <code>optional int32 reads = 2;</code>
@@ -47198,14 +47388,14 @@ public final class ATCommands {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.rtrk.atcommands.ATCommands.internal_static_com_rtrk_protobuf_SupplementaryServiceCommand_descriptor;
+      return com.rtrk.atcommands.ATCommand.internal_static_com_rtrk_protobuf_SupplementaryServiceCommand_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.rtrk.atcommands.ATCommands.internal_static_com_rtrk_protobuf_SupplementaryServiceCommand_fieldAccessorTable
+      return com.rtrk.atcommands.ATCommand.internal_static_com_rtrk_protobuf_SupplementaryServiceCommand_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.rtrk.atcommands.ATCommands.SupplementaryServiceCommand.class, com.rtrk.atcommands.ATCommands.SupplementaryServiceCommand.Builder.class);
+              com.rtrk.atcommands.ATCommand.SupplementaryServiceCommand.class, com.rtrk.atcommands.ATCommand.SupplementaryServiceCommand.Builder.class);
     }
 
     public static final int MESSAGETYPE_FIELD_NUMBER = 1;
@@ -47219,9 +47409,9 @@ public final class ATCommands {
     /**
      * <code>optional .com.rtrk.protobuf.SupplementaryServiceMessageType messageType = 1;</code>
      */
-    public com.rtrk.atcommands.ATCommands.SupplementaryServiceMessageType getMessageType() {
-      com.rtrk.atcommands.ATCommands.SupplementaryServiceMessageType result = com.rtrk.atcommands.ATCommands.SupplementaryServiceMessageType.valueOf(messageType_);
-      return result == null ? com.rtrk.atcommands.ATCommands.SupplementaryServiceMessageType.UNRECOGNIZED : result;
+    public com.rtrk.atcommands.ATCommand.SupplementaryServiceMessageType getMessageType() {
+      com.rtrk.atcommands.ATCommand.SupplementaryServiceMessageType result = com.rtrk.atcommands.ATCommand.SupplementaryServiceMessageType.valueOf(messageType_);
+      return result == null ? com.rtrk.atcommands.ATCommand.SupplementaryServiceMessageType.UNRECOGNIZED : result;
     }
 
     public static final int READS_FIELD_NUMBER = 2;
@@ -47464,7 +47654,7 @@ public final class ATCommands {
 
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (messageType_ != com.rtrk.atcommands.ATCommands.SupplementaryServiceMessageType.CALL_FORWARDING_NUMBER_AND_CONDITIONS_CONTROL.getNumber()) {
+      if (messageType_ != com.rtrk.atcommands.ATCommand.SupplementaryServiceMessageType.CALL_FORWARDING_NUMBER_AND_CONDITIONS_CONTROL.getNumber()) {
         output.writeEnum(1, messageType_);
       }
       if (reads_ != 0) {
@@ -47525,7 +47715,7 @@ public final class ATCommands {
       if (size != -1) return size;
 
       size = 0;
-      if (messageType_ != com.rtrk.atcommands.ATCommands.SupplementaryServiceMessageType.CALL_FORWARDING_NUMBER_AND_CONDITIONS_CONTROL.getNumber()) {
+      if (messageType_ != com.rtrk.atcommands.ATCommand.SupplementaryServiceMessageType.CALL_FORWARDING_NUMBER_AND_CONDITIONS_CONTROL.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(1, messageType_);
       }
@@ -47604,10 +47794,10 @@ public final class ATCommands {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.rtrk.atcommands.ATCommands.SupplementaryServiceCommand)) {
+      if (!(obj instanceof com.rtrk.atcommands.ATCommand.SupplementaryServiceCommand)) {
         return super.equals(obj);
       }
-      com.rtrk.atcommands.ATCommands.SupplementaryServiceCommand other = (com.rtrk.atcommands.ATCommands.SupplementaryServiceCommand) obj;
+      com.rtrk.atcommands.ATCommand.SupplementaryServiceCommand other = (com.rtrk.atcommands.ATCommand.SupplementaryServiceCommand) obj;
 
       boolean result = true;
       result = result && messageType_ == other.messageType_;
@@ -47696,58 +47886,58 @@ public final class ATCommands {
       return hash;
     }
 
-    public static com.rtrk.atcommands.ATCommands.SupplementaryServiceCommand parseFrom(
+    public static com.rtrk.atcommands.ATCommand.SupplementaryServiceCommand parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.rtrk.atcommands.ATCommands.SupplementaryServiceCommand parseFrom(
+    public static com.rtrk.atcommands.ATCommand.SupplementaryServiceCommand parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.rtrk.atcommands.ATCommands.SupplementaryServiceCommand parseFrom(byte[] data)
+    public static com.rtrk.atcommands.ATCommand.SupplementaryServiceCommand parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.rtrk.atcommands.ATCommands.SupplementaryServiceCommand parseFrom(
+    public static com.rtrk.atcommands.ATCommand.SupplementaryServiceCommand parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.rtrk.atcommands.ATCommands.SupplementaryServiceCommand parseFrom(java.io.InputStream input)
+    public static com.rtrk.atcommands.ATCommand.SupplementaryServiceCommand parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.rtrk.atcommands.ATCommands.SupplementaryServiceCommand parseFrom(
+    public static com.rtrk.atcommands.ATCommand.SupplementaryServiceCommand parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.rtrk.atcommands.ATCommands.SupplementaryServiceCommand parseDelimitedFrom(java.io.InputStream input)
+    public static com.rtrk.atcommands.ATCommand.SupplementaryServiceCommand parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static com.rtrk.atcommands.ATCommands.SupplementaryServiceCommand parseDelimitedFrom(
+    public static com.rtrk.atcommands.ATCommand.SupplementaryServiceCommand parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.rtrk.atcommands.ATCommands.SupplementaryServiceCommand parseFrom(
+    public static com.rtrk.atcommands.ATCommand.SupplementaryServiceCommand parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.rtrk.atcommands.ATCommands.SupplementaryServiceCommand parseFrom(
+    public static com.rtrk.atcommands.ATCommand.SupplementaryServiceCommand parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -47759,7 +47949,7 @@ public final class ATCommands {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.rtrk.atcommands.ATCommands.SupplementaryServiceCommand prototype) {
+    public static Builder newBuilder(com.rtrk.atcommands.ATCommand.SupplementaryServiceCommand prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() {
@@ -47779,20 +47969,20 @@ public final class ATCommands {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:com.rtrk.protobuf.SupplementaryServiceCommand)
-        com.rtrk.atcommands.ATCommands.SupplementaryServiceCommandOrBuilder {
+        com.rtrk.atcommands.ATCommand.SupplementaryServiceCommandOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.rtrk.atcommands.ATCommands.internal_static_com_rtrk_protobuf_SupplementaryServiceCommand_descriptor;
+        return com.rtrk.atcommands.ATCommand.internal_static_com_rtrk_protobuf_SupplementaryServiceCommand_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.rtrk.atcommands.ATCommands.internal_static_com_rtrk_protobuf_SupplementaryServiceCommand_fieldAccessorTable
+        return com.rtrk.atcommands.ATCommand.internal_static_com_rtrk_protobuf_SupplementaryServiceCommand_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.rtrk.atcommands.ATCommands.SupplementaryServiceCommand.class, com.rtrk.atcommands.ATCommands.SupplementaryServiceCommand.Builder.class);
+                com.rtrk.atcommands.ATCommand.SupplementaryServiceCommand.class, com.rtrk.atcommands.ATCommand.SupplementaryServiceCommand.Builder.class);
       }
 
-      // Construct using com.rtrk.atcommands.ATCommands.SupplementaryServiceCommand.newBuilder()
+      // Construct using com.rtrk.atcommands.ATCommand.SupplementaryServiceCommand.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -47850,23 +48040,23 @@ public final class ATCommands {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.rtrk.atcommands.ATCommands.internal_static_com_rtrk_protobuf_SupplementaryServiceCommand_descriptor;
+        return com.rtrk.atcommands.ATCommand.internal_static_com_rtrk_protobuf_SupplementaryServiceCommand_descriptor;
       }
 
-      public com.rtrk.atcommands.ATCommands.SupplementaryServiceCommand getDefaultInstanceForType() {
-        return com.rtrk.atcommands.ATCommands.SupplementaryServiceCommand.getDefaultInstance();
+      public com.rtrk.atcommands.ATCommand.SupplementaryServiceCommand getDefaultInstanceForType() {
+        return com.rtrk.atcommands.ATCommand.SupplementaryServiceCommand.getDefaultInstance();
       }
 
-      public com.rtrk.atcommands.ATCommands.SupplementaryServiceCommand build() {
-        com.rtrk.atcommands.ATCommands.SupplementaryServiceCommand result = buildPartial();
+      public com.rtrk.atcommands.ATCommand.SupplementaryServiceCommand build() {
+        com.rtrk.atcommands.ATCommand.SupplementaryServiceCommand result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      public com.rtrk.atcommands.ATCommands.SupplementaryServiceCommand buildPartial() {
-        com.rtrk.atcommands.ATCommands.SupplementaryServiceCommand result = new com.rtrk.atcommands.ATCommands.SupplementaryServiceCommand(this);
+      public com.rtrk.atcommands.ATCommand.SupplementaryServiceCommand buildPartial() {
+        com.rtrk.atcommands.ATCommand.SupplementaryServiceCommand result = new com.rtrk.atcommands.ATCommand.SupplementaryServiceCommand(this);
         result.messageType_ = messageType_;
         result.reads_ = reads_;
         result.mode_ = mode_;
@@ -47916,16 +48106,16 @@ public final class ATCommands {
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.rtrk.atcommands.ATCommands.SupplementaryServiceCommand) {
-          return mergeFrom((com.rtrk.atcommands.ATCommands.SupplementaryServiceCommand)other);
+        if (other instanceof com.rtrk.atcommands.ATCommand.SupplementaryServiceCommand) {
+          return mergeFrom((com.rtrk.atcommands.ATCommand.SupplementaryServiceCommand)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.rtrk.atcommands.ATCommands.SupplementaryServiceCommand other) {
-        if (other == com.rtrk.atcommands.ATCommands.SupplementaryServiceCommand.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.rtrk.atcommands.ATCommand.SupplementaryServiceCommand other) {
+        if (other == com.rtrk.atcommands.ATCommand.SupplementaryServiceCommand.getDefaultInstance()) return this;
         if (other.messageType_ != 0) {
           setMessageTypeValue(other.getMessageTypeValue());
         }
@@ -47995,11 +48185,11 @@ public final class ATCommands {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.rtrk.atcommands.ATCommands.SupplementaryServiceCommand parsedMessage = null;
+        com.rtrk.atcommands.ATCommand.SupplementaryServiceCommand parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.rtrk.atcommands.ATCommands.SupplementaryServiceCommand) e.getUnfinishedMessage();
+          parsedMessage = (com.rtrk.atcommands.ATCommand.SupplementaryServiceCommand) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -48027,14 +48217,14 @@ public final class ATCommands {
       /**
        * <code>optional .com.rtrk.protobuf.SupplementaryServiceMessageType messageType = 1;</code>
        */
-      public com.rtrk.atcommands.ATCommands.SupplementaryServiceMessageType getMessageType() {
-        com.rtrk.atcommands.ATCommands.SupplementaryServiceMessageType result = com.rtrk.atcommands.ATCommands.SupplementaryServiceMessageType.valueOf(messageType_);
-        return result == null ? com.rtrk.atcommands.ATCommands.SupplementaryServiceMessageType.UNRECOGNIZED : result;
+      public com.rtrk.atcommands.ATCommand.SupplementaryServiceMessageType getMessageType() {
+        com.rtrk.atcommands.ATCommand.SupplementaryServiceMessageType result = com.rtrk.atcommands.ATCommand.SupplementaryServiceMessageType.valueOf(messageType_);
+        return result == null ? com.rtrk.atcommands.ATCommand.SupplementaryServiceMessageType.UNRECOGNIZED : result;
       }
       /**
        * <code>optional .com.rtrk.protobuf.SupplementaryServiceMessageType messageType = 1;</code>
        */
-      public Builder setMessageType(com.rtrk.atcommands.ATCommands.SupplementaryServiceMessageType value) {
+      public Builder setMessageType(com.rtrk.atcommands.ATCommand.SupplementaryServiceMessageType value) {
         if (value == null) {
           throw new NullPointerException();
         }
@@ -48638,12 +48828,12 @@ public final class ATCommands {
     }
 
     // @@protoc_insertion_point(class_scope:com.rtrk.protobuf.SupplementaryServiceCommand)
-    private static final com.rtrk.atcommands.ATCommands.SupplementaryServiceCommand DEFAULT_INSTANCE;
+    private static final com.rtrk.atcommands.ATCommand.SupplementaryServiceCommand DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.rtrk.atcommands.ATCommands.SupplementaryServiceCommand();
+      DEFAULT_INSTANCE = new com.rtrk.atcommands.ATCommand.SupplementaryServiceCommand();
     }
 
-    public static com.rtrk.atcommands.ATCommands.SupplementaryServiceCommand getDefaultInstance() {
+    public static com.rtrk.atcommands.ATCommand.SupplementaryServiceCommand getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -48666,7 +48856,7 @@ public final class ATCommands {
       return PARSER;
     }
 
-    public com.rtrk.atcommands.ATCommands.SupplementaryServiceCommand getDefaultInstanceForType() {
+    public com.rtrk.atcommands.ATCommand.SupplementaryServiceCommand getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -48683,7 +48873,7 @@ public final class ATCommands {
     /**
      * <code>optional .com.rtrk.protobuf.AudioMessageType messageType = 1;</code>
      */
-    com.rtrk.atcommands.ATCommands.AudioMessageType getMessageType();
+    com.rtrk.atcommands.ATCommand.AudioMessageType getMessageType();
 
     /**
      * <code>optional int32 value = 2;</code>
@@ -49053,14 +49243,14 @@ public final class ATCommands {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.rtrk.atcommands.ATCommands.internal_static_com_rtrk_protobuf_AudioCommand_descriptor;
+      return com.rtrk.atcommands.ATCommand.internal_static_com_rtrk_protobuf_AudioCommand_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.rtrk.atcommands.ATCommands.internal_static_com_rtrk_protobuf_AudioCommand_fieldAccessorTable
+      return com.rtrk.atcommands.ATCommand.internal_static_com_rtrk_protobuf_AudioCommand_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.rtrk.atcommands.ATCommands.AudioCommand.class, com.rtrk.atcommands.ATCommands.AudioCommand.Builder.class);
+              com.rtrk.atcommands.ATCommand.AudioCommand.class, com.rtrk.atcommands.ATCommand.AudioCommand.Builder.class);
     }
 
     public static final int MESSAGETYPE_FIELD_NUMBER = 1;
@@ -49074,9 +49264,9 @@ public final class ATCommands {
     /**
      * <code>optional .com.rtrk.protobuf.AudioMessageType messageType = 1;</code>
      */
-    public com.rtrk.atcommands.ATCommands.AudioMessageType getMessageType() {
-      com.rtrk.atcommands.ATCommands.AudioMessageType result = com.rtrk.atcommands.ATCommands.AudioMessageType.valueOf(messageType_);
-      return result == null ? com.rtrk.atcommands.ATCommands.AudioMessageType.UNRECOGNIZED : result;
+    public com.rtrk.atcommands.ATCommand.AudioMessageType getMessageType() {
+      com.rtrk.atcommands.ATCommand.AudioMessageType result = com.rtrk.atcommands.ATCommand.AudioMessageType.valueOf(messageType_);
+      return result == null ? com.rtrk.atcommands.ATCommand.AudioMessageType.UNRECOGNIZED : result;
     }
 
     public static final int VALUE_FIELD_NUMBER = 2;
@@ -49384,7 +49574,7 @@ public final class ATCommands {
 
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (messageType_ != com.rtrk.atcommands.ATCommands.AudioMessageType.SET_MONITOR_SPEAKER_LOUDNESS.getNumber()) {
+      if (messageType_ != com.rtrk.atcommands.ATCommand.AudioMessageType.SET_MONITOR_SPEAKER_LOUDNESS.getNumber()) {
         output.writeEnum(1, messageType_);
       }
       if (value_ != 0) {
@@ -49475,7 +49665,7 @@ public final class ATCommands {
       if (size != -1) return size;
 
       size = 0;
-      if (messageType_ != com.rtrk.atcommands.ATCommands.AudioMessageType.SET_MONITOR_SPEAKER_LOUDNESS.getNumber()) {
+      if (messageType_ != com.rtrk.atcommands.ATCommand.AudioMessageType.SET_MONITOR_SPEAKER_LOUDNESS.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(1, messageType_);
       }
@@ -49595,10 +49785,10 @@ public final class ATCommands {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.rtrk.atcommands.ATCommands.AudioCommand)) {
+      if (!(obj instanceof com.rtrk.atcommands.ATCommand.AudioCommand)) {
         return super.equals(obj);
       }
-      com.rtrk.atcommands.ATCommands.AudioCommand other = (com.rtrk.atcommands.ATCommands.AudioCommand) obj;
+      com.rtrk.atcommands.ATCommand.AudioCommand other = (com.rtrk.atcommands.ATCommand.AudioCommand) obj;
 
       boolean result = true;
       result = result && messageType_ == other.messageType_;
@@ -49729,58 +49919,58 @@ public final class ATCommands {
       return hash;
     }
 
-    public static com.rtrk.atcommands.ATCommands.AudioCommand parseFrom(
+    public static com.rtrk.atcommands.ATCommand.AudioCommand parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.rtrk.atcommands.ATCommands.AudioCommand parseFrom(
+    public static com.rtrk.atcommands.ATCommand.AudioCommand parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.rtrk.atcommands.ATCommands.AudioCommand parseFrom(byte[] data)
+    public static com.rtrk.atcommands.ATCommand.AudioCommand parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.rtrk.atcommands.ATCommands.AudioCommand parseFrom(
+    public static com.rtrk.atcommands.ATCommand.AudioCommand parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.rtrk.atcommands.ATCommands.AudioCommand parseFrom(java.io.InputStream input)
+    public static com.rtrk.atcommands.ATCommand.AudioCommand parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.rtrk.atcommands.ATCommands.AudioCommand parseFrom(
+    public static com.rtrk.atcommands.ATCommand.AudioCommand parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.rtrk.atcommands.ATCommands.AudioCommand parseDelimitedFrom(java.io.InputStream input)
+    public static com.rtrk.atcommands.ATCommand.AudioCommand parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static com.rtrk.atcommands.ATCommands.AudioCommand parseDelimitedFrom(
+    public static com.rtrk.atcommands.ATCommand.AudioCommand parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.rtrk.atcommands.ATCommands.AudioCommand parseFrom(
+    public static com.rtrk.atcommands.ATCommand.AudioCommand parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.rtrk.atcommands.ATCommands.AudioCommand parseFrom(
+    public static com.rtrk.atcommands.ATCommand.AudioCommand parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -49792,7 +49982,7 @@ public final class ATCommands {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.rtrk.atcommands.ATCommands.AudioCommand prototype) {
+    public static Builder newBuilder(com.rtrk.atcommands.ATCommand.AudioCommand prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() {
@@ -49812,20 +50002,20 @@ public final class ATCommands {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:com.rtrk.protobuf.AudioCommand)
-        com.rtrk.atcommands.ATCommands.AudioCommandOrBuilder {
+        com.rtrk.atcommands.ATCommand.AudioCommandOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.rtrk.atcommands.ATCommands.internal_static_com_rtrk_protobuf_AudioCommand_descriptor;
+        return com.rtrk.atcommands.ATCommand.internal_static_com_rtrk_protobuf_AudioCommand_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.rtrk.atcommands.ATCommands.internal_static_com_rtrk_protobuf_AudioCommand_fieldAccessorTable
+        return com.rtrk.atcommands.ATCommand.internal_static_com_rtrk_protobuf_AudioCommand_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.rtrk.atcommands.ATCommands.AudioCommand.class, com.rtrk.atcommands.ATCommands.AudioCommand.Builder.class);
+                com.rtrk.atcommands.ATCommand.AudioCommand.class, com.rtrk.atcommands.ATCommand.AudioCommand.Builder.class);
       }
 
-      // Construct using com.rtrk.atcommands.ATCommands.AudioCommand.newBuilder()
+      // Construct using com.rtrk.atcommands.ATCommand.AudioCommand.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -49903,23 +50093,23 @@ public final class ATCommands {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.rtrk.atcommands.ATCommands.internal_static_com_rtrk_protobuf_AudioCommand_descriptor;
+        return com.rtrk.atcommands.ATCommand.internal_static_com_rtrk_protobuf_AudioCommand_descriptor;
       }
 
-      public com.rtrk.atcommands.ATCommands.AudioCommand getDefaultInstanceForType() {
-        return com.rtrk.atcommands.ATCommands.AudioCommand.getDefaultInstance();
+      public com.rtrk.atcommands.ATCommand.AudioCommand getDefaultInstanceForType() {
+        return com.rtrk.atcommands.ATCommand.AudioCommand.getDefaultInstance();
       }
 
-      public com.rtrk.atcommands.ATCommands.AudioCommand build() {
-        com.rtrk.atcommands.ATCommands.AudioCommand result = buildPartial();
+      public com.rtrk.atcommands.ATCommand.AudioCommand build() {
+        com.rtrk.atcommands.ATCommand.AudioCommand result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      public com.rtrk.atcommands.ATCommands.AudioCommand buildPartial() {
-        com.rtrk.atcommands.ATCommands.AudioCommand result = new com.rtrk.atcommands.ATCommands.AudioCommand(this);
+      public com.rtrk.atcommands.ATCommand.AudioCommand buildPartial() {
+        com.rtrk.atcommands.ATCommand.AudioCommand result = new com.rtrk.atcommands.ATCommand.AudioCommand(this);
         result.messageType_ = messageType_;
         result.value_ = value_;
         result.internalDuration_ = internalDuration_;
@@ -49979,16 +50169,16 @@ public final class ATCommands {
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.rtrk.atcommands.ATCommands.AudioCommand) {
-          return mergeFrom((com.rtrk.atcommands.ATCommands.AudioCommand)other);
+        if (other instanceof com.rtrk.atcommands.ATCommand.AudioCommand) {
+          return mergeFrom((com.rtrk.atcommands.ATCommand.AudioCommand)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.rtrk.atcommands.ATCommands.AudioCommand other) {
-        if (other == com.rtrk.atcommands.ATCommands.AudioCommand.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.rtrk.atcommands.ATCommand.AudioCommand other) {
+        if (other == com.rtrk.atcommands.ATCommand.AudioCommand.getDefaultInstance()) return this;
         if (other.messageType_ != 0) {
           setMessageTypeValue(other.getMessageTypeValue());
         }
@@ -50087,11 +50277,11 @@ public final class ATCommands {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.rtrk.atcommands.ATCommands.AudioCommand parsedMessage = null;
+        com.rtrk.atcommands.ATCommand.AudioCommand parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.rtrk.atcommands.ATCommands.AudioCommand) e.getUnfinishedMessage();
+          parsedMessage = (com.rtrk.atcommands.ATCommand.AudioCommand) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -50119,14 +50309,14 @@ public final class ATCommands {
       /**
        * <code>optional .com.rtrk.protobuf.AudioMessageType messageType = 1;</code>
        */
-      public com.rtrk.atcommands.ATCommands.AudioMessageType getMessageType() {
-        com.rtrk.atcommands.ATCommands.AudioMessageType result = com.rtrk.atcommands.ATCommands.AudioMessageType.valueOf(messageType_);
-        return result == null ? com.rtrk.atcommands.ATCommands.AudioMessageType.UNRECOGNIZED : result;
+      public com.rtrk.atcommands.ATCommand.AudioMessageType getMessageType() {
+        com.rtrk.atcommands.ATCommand.AudioMessageType result = com.rtrk.atcommands.ATCommand.AudioMessageType.valueOf(messageType_);
+        return result == null ? com.rtrk.atcommands.ATCommand.AudioMessageType.UNRECOGNIZED : result;
       }
       /**
        * <code>optional .com.rtrk.protobuf.AudioMessageType messageType = 1;</code>
        */
-      public Builder setMessageType(com.rtrk.atcommands.ATCommands.AudioMessageType value) {
+      public Builder setMessageType(com.rtrk.atcommands.ATCommand.AudioMessageType value) {
         if (value == null) {
           throw new NullPointerException();
         }
@@ -50947,12 +51137,12 @@ public final class ATCommands {
     }
 
     // @@protoc_insertion_point(class_scope:com.rtrk.protobuf.AudioCommand)
-    private static final com.rtrk.atcommands.ATCommands.AudioCommand DEFAULT_INSTANCE;
+    private static final com.rtrk.atcommands.ATCommand.AudioCommand DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.rtrk.atcommands.ATCommands.AudioCommand();
+      DEFAULT_INSTANCE = new com.rtrk.atcommands.ATCommand.AudioCommand();
     }
 
-    public static com.rtrk.atcommands.ATCommands.AudioCommand getDefaultInstance() {
+    public static com.rtrk.atcommands.ATCommand.AudioCommand getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -50975,7 +51165,7 @@ public final class ATCommands {
       return PARSER;
     }
 
-    public com.rtrk.atcommands.ATCommands.AudioCommand getDefaultInstanceForType() {
+    public com.rtrk.atcommands.ATCommand.AudioCommand getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -50992,7 +51182,7 @@ public final class ATCommands {
     /**
      * <code>optional .com.rtrk.protobuf.HardwareRelatedMessageType messageType = 1;</code>
      */
-    com.rtrk.atcommands.ATCommands.HardwareRelatedMessageType getMessageType();
+    com.rtrk.atcommands.ATCommand.HardwareRelatedMessageType getMessageType();
 
     /**
      * <code>optional string time = 2;</code>
@@ -51202,14 +51392,14 @@ public final class ATCommands {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.rtrk.atcommands.ATCommands.internal_static_com_rtrk_protobuf_HardwareRelatedCommand_descriptor;
+      return com.rtrk.atcommands.ATCommand.internal_static_com_rtrk_protobuf_HardwareRelatedCommand_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.rtrk.atcommands.ATCommands.internal_static_com_rtrk_protobuf_HardwareRelatedCommand_fieldAccessorTable
+      return com.rtrk.atcommands.ATCommand.internal_static_com_rtrk_protobuf_HardwareRelatedCommand_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.rtrk.atcommands.ATCommands.HardwareRelatedCommand.class, com.rtrk.atcommands.ATCommands.HardwareRelatedCommand.Builder.class);
+              com.rtrk.atcommands.ATCommand.HardwareRelatedCommand.class, com.rtrk.atcommands.ATCommand.HardwareRelatedCommand.Builder.class);
     }
 
     public static final int MESSAGETYPE_FIELD_NUMBER = 1;
@@ -51223,9 +51413,9 @@ public final class ATCommands {
     /**
      * <code>optional .com.rtrk.protobuf.HardwareRelatedMessageType messageType = 1;</code>
      */
-    public com.rtrk.atcommands.ATCommands.HardwareRelatedMessageType getMessageType() {
-      com.rtrk.atcommands.ATCommands.HardwareRelatedMessageType result = com.rtrk.atcommands.ATCommands.HardwareRelatedMessageType.valueOf(messageType_);
-      return result == null ? com.rtrk.atcommands.ATCommands.HardwareRelatedMessageType.UNRECOGNIZED : result;
+    public com.rtrk.atcommands.ATCommand.HardwareRelatedMessageType getMessageType() {
+      com.rtrk.atcommands.ATCommand.HardwareRelatedMessageType result = com.rtrk.atcommands.ATCommand.HardwareRelatedMessageType.valueOf(messageType_);
+      return result == null ? com.rtrk.atcommands.ATCommand.HardwareRelatedMessageType.UNRECOGNIZED : result;
     }
 
     public static final int TIME_FIELD_NUMBER = 2;
@@ -51382,7 +51572,7 @@ public final class ATCommands {
 
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (messageType_ != com.rtrk.atcommands.ATCommands.HardwareRelatedMessageType.CLOCK.getNumber()) {
+      if (messageType_ != com.rtrk.atcommands.ATCommand.HardwareRelatedMessageType.CLOCK.getNumber()) {
         output.writeEnum(1, messageType_);
       }
       if (!getTimeBytes().isEmpty()) {
@@ -51431,7 +51621,7 @@ public final class ATCommands {
       if (size != -1) return size;
 
       size = 0;
-      if (messageType_ != com.rtrk.atcommands.ATCommands.HardwareRelatedMessageType.CLOCK.getNumber()) {
+      if (messageType_ != com.rtrk.atcommands.ATCommand.HardwareRelatedMessageType.CLOCK.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(1, messageType_);
       }
@@ -51496,10 +51686,10 @@ public final class ATCommands {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.rtrk.atcommands.ATCommands.HardwareRelatedCommand)) {
+      if (!(obj instanceof com.rtrk.atcommands.ATCommand.HardwareRelatedCommand)) {
         return super.equals(obj);
       }
-      com.rtrk.atcommands.ATCommands.HardwareRelatedCommand other = (com.rtrk.atcommands.ATCommands.HardwareRelatedCommand) obj;
+      com.rtrk.atcommands.ATCommand.HardwareRelatedCommand other = (com.rtrk.atcommands.ATCommand.HardwareRelatedCommand) obj;
 
       boolean result = true;
       result = result && messageType_ == other.messageType_;
@@ -51572,58 +51762,58 @@ public final class ATCommands {
       return hash;
     }
 
-    public static com.rtrk.atcommands.ATCommands.HardwareRelatedCommand parseFrom(
+    public static com.rtrk.atcommands.ATCommand.HardwareRelatedCommand parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.rtrk.atcommands.ATCommands.HardwareRelatedCommand parseFrom(
+    public static com.rtrk.atcommands.ATCommand.HardwareRelatedCommand parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.rtrk.atcommands.ATCommands.HardwareRelatedCommand parseFrom(byte[] data)
+    public static com.rtrk.atcommands.ATCommand.HardwareRelatedCommand parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.rtrk.atcommands.ATCommands.HardwareRelatedCommand parseFrom(
+    public static com.rtrk.atcommands.ATCommand.HardwareRelatedCommand parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.rtrk.atcommands.ATCommands.HardwareRelatedCommand parseFrom(java.io.InputStream input)
+    public static com.rtrk.atcommands.ATCommand.HardwareRelatedCommand parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.rtrk.atcommands.ATCommands.HardwareRelatedCommand parseFrom(
+    public static com.rtrk.atcommands.ATCommand.HardwareRelatedCommand parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.rtrk.atcommands.ATCommands.HardwareRelatedCommand parseDelimitedFrom(java.io.InputStream input)
+    public static com.rtrk.atcommands.ATCommand.HardwareRelatedCommand parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static com.rtrk.atcommands.ATCommands.HardwareRelatedCommand parseDelimitedFrom(
+    public static com.rtrk.atcommands.ATCommand.HardwareRelatedCommand parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.rtrk.atcommands.ATCommands.HardwareRelatedCommand parseFrom(
+    public static com.rtrk.atcommands.ATCommand.HardwareRelatedCommand parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.rtrk.atcommands.ATCommands.HardwareRelatedCommand parseFrom(
+    public static com.rtrk.atcommands.ATCommand.HardwareRelatedCommand parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -51635,7 +51825,7 @@ public final class ATCommands {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.rtrk.atcommands.ATCommands.HardwareRelatedCommand prototype) {
+    public static Builder newBuilder(com.rtrk.atcommands.ATCommand.HardwareRelatedCommand prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() {
@@ -51655,20 +51845,20 @@ public final class ATCommands {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:com.rtrk.protobuf.HardwareRelatedCommand)
-        com.rtrk.atcommands.ATCommands.HardwareRelatedCommandOrBuilder {
+        com.rtrk.atcommands.ATCommand.HardwareRelatedCommandOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.rtrk.atcommands.ATCommands.internal_static_com_rtrk_protobuf_HardwareRelatedCommand_descriptor;
+        return com.rtrk.atcommands.ATCommand.internal_static_com_rtrk_protobuf_HardwareRelatedCommand_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.rtrk.atcommands.ATCommands.internal_static_com_rtrk_protobuf_HardwareRelatedCommand_fieldAccessorTable
+        return com.rtrk.atcommands.ATCommand.internal_static_com_rtrk_protobuf_HardwareRelatedCommand_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.rtrk.atcommands.ATCommands.HardwareRelatedCommand.class, com.rtrk.atcommands.ATCommands.HardwareRelatedCommand.Builder.class);
+                com.rtrk.atcommands.ATCommand.HardwareRelatedCommand.class, com.rtrk.atcommands.ATCommand.HardwareRelatedCommand.Builder.class);
       }
 
-      // Construct using com.rtrk.atcommands.ATCommands.HardwareRelatedCommand.newBuilder()
+      // Construct using com.rtrk.atcommands.ATCommand.HardwareRelatedCommand.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -51718,23 +51908,23 @@ public final class ATCommands {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.rtrk.atcommands.ATCommands.internal_static_com_rtrk_protobuf_HardwareRelatedCommand_descriptor;
+        return com.rtrk.atcommands.ATCommand.internal_static_com_rtrk_protobuf_HardwareRelatedCommand_descriptor;
       }
 
-      public com.rtrk.atcommands.ATCommands.HardwareRelatedCommand getDefaultInstanceForType() {
-        return com.rtrk.atcommands.ATCommands.HardwareRelatedCommand.getDefaultInstance();
+      public com.rtrk.atcommands.ATCommand.HardwareRelatedCommand getDefaultInstanceForType() {
+        return com.rtrk.atcommands.ATCommand.HardwareRelatedCommand.getDefaultInstance();
       }
 
-      public com.rtrk.atcommands.ATCommands.HardwareRelatedCommand build() {
-        com.rtrk.atcommands.ATCommands.HardwareRelatedCommand result = buildPartial();
+      public com.rtrk.atcommands.ATCommand.HardwareRelatedCommand build() {
+        com.rtrk.atcommands.ATCommand.HardwareRelatedCommand result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      public com.rtrk.atcommands.ATCommands.HardwareRelatedCommand buildPartial() {
-        com.rtrk.atcommands.ATCommands.HardwareRelatedCommand result = new com.rtrk.atcommands.ATCommands.HardwareRelatedCommand(this);
+      public com.rtrk.atcommands.ATCommand.HardwareRelatedCommand buildPartial() {
+        com.rtrk.atcommands.ATCommand.HardwareRelatedCommand result = new com.rtrk.atcommands.ATCommand.HardwareRelatedCommand(this);
         result.messageType_ = messageType_;
         result.time_ = time_;
         result.state_ = state_;
@@ -51780,16 +51970,16 @@ public final class ATCommands {
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.rtrk.atcommands.ATCommands.HardwareRelatedCommand) {
-          return mergeFrom((com.rtrk.atcommands.ATCommands.HardwareRelatedCommand)other);
+        if (other instanceof com.rtrk.atcommands.ATCommand.HardwareRelatedCommand) {
+          return mergeFrom((com.rtrk.atcommands.ATCommand.HardwareRelatedCommand)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.rtrk.atcommands.ATCommands.HardwareRelatedCommand other) {
-        if (other == com.rtrk.atcommands.ATCommands.HardwareRelatedCommand.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.rtrk.atcommands.ATCommand.HardwareRelatedCommand other) {
+        if (other == com.rtrk.atcommands.ATCommand.HardwareRelatedCommand.getDefaultInstance()) return this;
         if (other.messageType_ != 0) {
           setMessageTypeValue(other.getMessageTypeValue());
         }
@@ -51845,11 +52035,11 @@ public final class ATCommands {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.rtrk.atcommands.ATCommands.HardwareRelatedCommand parsedMessage = null;
+        com.rtrk.atcommands.ATCommand.HardwareRelatedCommand parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.rtrk.atcommands.ATCommands.HardwareRelatedCommand) e.getUnfinishedMessage();
+          parsedMessage = (com.rtrk.atcommands.ATCommand.HardwareRelatedCommand) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -51877,14 +52067,14 @@ public final class ATCommands {
       /**
        * <code>optional .com.rtrk.protobuf.HardwareRelatedMessageType messageType = 1;</code>
        */
-      public com.rtrk.atcommands.ATCommands.HardwareRelatedMessageType getMessageType() {
-        com.rtrk.atcommands.ATCommands.HardwareRelatedMessageType result = com.rtrk.atcommands.ATCommands.HardwareRelatedMessageType.valueOf(messageType_);
-        return result == null ? com.rtrk.atcommands.ATCommands.HardwareRelatedMessageType.UNRECOGNIZED : result;
+      public com.rtrk.atcommands.ATCommand.HardwareRelatedMessageType getMessageType() {
+        com.rtrk.atcommands.ATCommand.HardwareRelatedMessageType result = com.rtrk.atcommands.ATCommand.HardwareRelatedMessageType.valueOf(messageType_);
+        return result == null ? com.rtrk.atcommands.ATCommand.HardwareRelatedMessageType.UNRECOGNIZED : result;
       }
       /**
        * <code>optional .com.rtrk.protobuf.HardwareRelatedMessageType messageType = 1;</code>
        */
-      public Builder setMessageType(com.rtrk.atcommands.ATCommands.HardwareRelatedMessageType value) {
+      public Builder setMessageType(com.rtrk.atcommands.ATCommand.HardwareRelatedMessageType value) {
         if (value == null) {
           throw new NullPointerException();
         }
@@ -52298,12 +52488,12 @@ public final class ATCommands {
     }
 
     // @@protoc_insertion_point(class_scope:com.rtrk.protobuf.HardwareRelatedCommand)
-    private static final com.rtrk.atcommands.ATCommands.HardwareRelatedCommand DEFAULT_INSTANCE;
+    private static final com.rtrk.atcommands.ATCommand.HardwareRelatedCommand DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.rtrk.atcommands.ATCommands.HardwareRelatedCommand();
+      DEFAULT_INSTANCE = new com.rtrk.atcommands.ATCommand.HardwareRelatedCommand();
     }
 
-    public static com.rtrk.atcommands.ATCommands.HardwareRelatedCommand getDefaultInstance() {
+    public static com.rtrk.atcommands.ATCommand.HardwareRelatedCommand getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -52326,7 +52516,7 @@ public final class ATCommands {
       return PARSER;
     }
 
-    public com.rtrk.atcommands.ATCommands.HardwareRelatedCommand getDefaultInstanceForType() {
+    public com.rtrk.atcommands.ATCommand.HardwareRelatedCommand getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -52343,7 +52533,7 @@ public final class ATCommands {
     /**
      * <code>optional .com.rtrk.protobuf.OtherMessageType messageType = 1;</code>
      */
-    com.rtrk.atcommands.ATCommands.OtherMessageType getMessageType();
+    com.rtrk.atcommands.ATCommand.OtherMessageType getMessageType();
 
     /**
      * <code>optional int32 value = 2;</code>
@@ -52448,14 +52638,14 @@ public final class ATCommands {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.rtrk.atcommands.ATCommands.internal_static_com_rtrk_protobuf_OtherCommand_descriptor;
+      return com.rtrk.atcommands.ATCommand.internal_static_com_rtrk_protobuf_OtherCommand_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.rtrk.atcommands.ATCommands.internal_static_com_rtrk_protobuf_OtherCommand_fieldAccessorTable
+      return com.rtrk.atcommands.ATCommand.internal_static_com_rtrk_protobuf_OtherCommand_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.rtrk.atcommands.ATCommands.OtherCommand.class, com.rtrk.atcommands.ATCommands.OtherCommand.Builder.class);
+              com.rtrk.atcommands.ATCommand.OtherCommand.class, com.rtrk.atcommands.ATCommand.OtherCommand.Builder.class);
     }
 
     public static final int MESSAGETYPE_FIELD_NUMBER = 1;
@@ -52469,9 +52659,9 @@ public final class ATCommands {
     /**
      * <code>optional .com.rtrk.protobuf.OtherMessageType messageType = 1;</code>
      */
-    public com.rtrk.atcommands.ATCommands.OtherMessageType getMessageType() {
-      com.rtrk.atcommands.ATCommands.OtherMessageType result = com.rtrk.atcommands.ATCommands.OtherMessageType.valueOf(messageType_);
-      return result == null ? com.rtrk.atcommands.ATCommands.OtherMessageType.UNRECOGNIZED : result;
+    public com.rtrk.atcommands.ATCommand.OtherMessageType getMessageType() {
+      com.rtrk.atcommands.ATCommand.OtherMessageType result = com.rtrk.atcommands.ATCommand.OtherMessageType.valueOf(messageType_);
+      return result == null ? com.rtrk.atcommands.ATCommand.OtherMessageType.UNRECOGNIZED : result;
     }
 
     public static final int VALUE_FIELD_NUMBER = 2;
@@ -52522,7 +52712,7 @@ public final class ATCommands {
 
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (messageType_ != com.rtrk.atcommands.ATCommands.OtherMessageType.REISSUES_THE_LAST_COMMAND_GIVEN.getNumber()) {
+      if (messageType_ != com.rtrk.atcommands.ATCommand.OtherMessageType.REISSUES_THE_LAST_COMMAND_GIVEN.getNumber()) {
         output.writeEnum(1, messageType_);
       }
       if (value_ != 0) {
@@ -52544,7 +52734,7 @@ public final class ATCommands {
       if (size != -1) return size;
 
       size = 0;
-      if (messageType_ != com.rtrk.atcommands.ATCommands.OtherMessageType.REISSUES_THE_LAST_COMMAND_GIVEN.getNumber()) {
+      if (messageType_ != com.rtrk.atcommands.ATCommand.OtherMessageType.REISSUES_THE_LAST_COMMAND_GIVEN.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(1, messageType_);
       }
@@ -52574,10 +52764,10 @@ public final class ATCommands {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.rtrk.atcommands.ATCommands.OtherCommand)) {
+      if (!(obj instanceof com.rtrk.atcommands.ATCommand.OtherCommand)) {
         return super.equals(obj);
       }
-      com.rtrk.atcommands.ATCommands.OtherCommand other = (com.rtrk.atcommands.ATCommands.OtherCommand) obj;
+      com.rtrk.atcommands.ATCommand.OtherCommand other = (com.rtrk.atcommands.ATCommand.OtherCommand) obj;
 
       boolean result = true;
       result = result && messageType_ == other.messageType_;
@@ -52614,58 +52804,58 @@ public final class ATCommands {
       return hash;
     }
 
-    public static com.rtrk.atcommands.ATCommands.OtherCommand parseFrom(
+    public static com.rtrk.atcommands.ATCommand.OtherCommand parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.rtrk.atcommands.ATCommands.OtherCommand parseFrom(
+    public static com.rtrk.atcommands.ATCommand.OtherCommand parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.rtrk.atcommands.ATCommands.OtherCommand parseFrom(byte[] data)
+    public static com.rtrk.atcommands.ATCommand.OtherCommand parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.rtrk.atcommands.ATCommands.OtherCommand parseFrom(
+    public static com.rtrk.atcommands.ATCommand.OtherCommand parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.rtrk.atcommands.ATCommands.OtherCommand parseFrom(java.io.InputStream input)
+    public static com.rtrk.atcommands.ATCommand.OtherCommand parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.rtrk.atcommands.ATCommands.OtherCommand parseFrom(
+    public static com.rtrk.atcommands.ATCommand.OtherCommand parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.rtrk.atcommands.ATCommands.OtherCommand parseDelimitedFrom(java.io.InputStream input)
+    public static com.rtrk.atcommands.ATCommand.OtherCommand parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static com.rtrk.atcommands.ATCommands.OtherCommand parseDelimitedFrom(
+    public static com.rtrk.atcommands.ATCommand.OtherCommand parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.rtrk.atcommands.ATCommands.OtherCommand parseFrom(
+    public static com.rtrk.atcommands.ATCommand.OtherCommand parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.rtrk.atcommands.ATCommands.OtherCommand parseFrom(
+    public static com.rtrk.atcommands.ATCommand.OtherCommand parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -52677,7 +52867,7 @@ public final class ATCommands {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.rtrk.atcommands.ATCommands.OtherCommand prototype) {
+    public static Builder newBuilder(com.rtrk.atcommands.ATCommand.OtherCommand prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() {
@@ -52697,20 +52887,20 @@ public final class ATCommands {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:com.rtrk.protobuf.OtherCommand)
-        com.rtrk.atcommands.ATCommands.OtherCommandOrBuilder {
+        com.rtrk.atcommands.ATCommand.OtherCommandOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.rtrk.atcommands.ATCommands.internal_static_com_rtrk_protobuf_OtherCommand_descriptor;
+        return com.rtrk.atcommands.ATCommand.internal_static_com_rtrk_protobuf_OtherCommand_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.rtrk.atcommands.ATCommands.internal_static_com_rtrk_protobuf_OtherCommand_fieldAccessorTable
+        return com.rtrk.atcommands.ATCommand.internal_static_com_rtrk_protobuf_OtherCommand_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.rtrk.atcommands.ATCommands.OtherCommand.class, com.rtrk.atcommands.ATCommands.OtherCommand.Builder.class);
+                com.rtrk.atcommands.ATCommand.OtherCommand.class, com.rtrk.atcommands.ATCommand.OtherCommand.Builder.class);
       }
 
-      // Construct using com.rtrk.atcommands.ATCommands.OtherCommand.newBuilder()
+      // Construct using com.rtrk.atcommands.ATCommand.OtherCommand.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -52742,23 +52932,23 @@ public final class ATCommands {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.rtrk.atcommands.ATCommands.internal_static_com_rtrk_protobuf_OtherCommand_descriptor;
+        return com.rtrk.atcommands.ATCommand.internal_static_com_rtrk_protobuf_OtherCommand_descriptor;
       }
 
-      public com.rtrk.atcommands.ATCommands.OtherCommand getDefaultInstanceForType() {
-        return com.rtrk.atcommands.ATCommands.OtherCommand.getDefaultInstance();
+      public com.rtrk.atcommands.ATCommand.OtherCommand getDefaultInstanceForType() {
+        return com.rtrk.atcommands.ATCommand.OtherCommand.getDefaultInstance();
       }
 
-      public com.rtrk.atcommands.ATCommands.OtherCommand build() {
-        com.rtrk.atcommands.ATCommands.OtherCommand result = buildPartial();
+      public com.rtrk.atcommands.ATCommand.OtherCommand build() {
+        com.rtrk.atcommands.ATCommand.OtherCommand result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      public com.rtrk.atcommands.ATCommands.OtherCommand buildPartial() {
-        com.rtrk.atcommands.ATCommands.OtherCommand result = new com.rtrk.atcommands.ATCommands.OtherCommand(this);
+      public com.rtrk.atcommands.ATCommand.OtherCommand buildPartial() {
+        com.rtrk.atcommands.ATCommand.OtherCommand result = new com.rtrk.atcommands.ATCommand.OtherCommand(this);
         result.messageType_ = messageType_;
         result.value_ = value_;
         result.n_ = n_;
@@ -52795,16 +52985,16 @@ public final class ATCommands {
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.rtrk.atcommands.ATCommands.OtherCommand) {
-          return mergeFrom((com.rtrk.atcommands.ATCommands.OtherCommand)other);
+        if (other instanceof com.rtrk.atcommands.ATCommand.OtherCommand) {
+          return mergeFrom((com.rtrk.atcommands.ATCommand.OtherCommand)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.rtrk.atcommands.ATCommands.OtherCommand other) {
-        if (other == com.rtrk.atcommands.ATCommands.OtherCommand.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.rtrk.atcommands.ATCommand.OtherCommand other) {
+        if (other == com.rtrk.atcommands.ATCommand.OtherCommand.getDefaultInstance()) return this;
         if (other.messageType_ != 0) {
           setMessageTypeValue(other.getMessageTypeValue());
         }
@@ -52832,11 +53022,11 @@ public final class ATCommands {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.rtrk.atcommands.ATCommands.OtherCommand parsedMessage = null;
+        com.rtrk.atcommands.ATCommand.OtherCommand parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.rtrk.atcommands.ATCommands.OtherCommand) e.getUnfinishedMessage();
+          parsedMessage = (com.rtrk.atcommands.ATCommand.OtherCommand) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -52864,14 +53054,14 @@ public final class ATCommands {
       /**
        * <code>optional .com.rtrk.protobuf.OtherMessageType messageType = 1;</code>
        */
-      public com.rtrk.atcommands.ATCommands.OtherMessageType getMessageType() {
-        com.rtrk.atcommands.ATCommands.OtherMessageType result = com.rtrk.atcommands.ATCommands.OtherMessageType.valueOf(messageType_);
-        return result == null ? com.rtrk.atcommands.ATCommands.OtherMessageType.UNRECOGNIZED : result;
+      public com.rtrk.atcommands.ATCommand.OtherMessageType getMessageType() {
+        com.rtrk.atcommands.ATCommand.OtherMessageType result = com.rtrk.atcommands.ATCommand.OtherMessageType.valueOf(messageType_);
+        return result == null ? com.rtrk.atcommands.ATCommand.OtherMessageType.UNRECOGNIZED : result;
       }
       /**
        * <code>optional .com.rtrk.protobuf.OtherMessageType messageType = 1;</code>
        */
-      public Builder setMessageType(com.rtrk.atcommands.ATCommands.OtherMessageType value) {
+      public Builder setMessageType(com.rtrk.atcommands.ATCommand.OtherMessageType value) {
         if (value == null) {
           throw new NullPointerException();
         }
@@ -53008,12 +53198,12 @@ public final class ATCommands {
     }
 
     // @@protoc_insertion_point(class_scope:com.rtrk.protobuf.OtherCommand)
-    private static final com.rtrk.atcommands.ATCommands.OtherCommand DEFAULT_INSTANCE;
+    private static final com.rtrk.atcommands.ATCommand.OtherCommand DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.rtrk.atcommands.ATCommands.OtherCommand();
+      DEFAULT_INSTANCE = new com.rtrk.atcommands.ATCommand.OtherCommand();
     }
 
-    public static com.rtrk.atcommands.ATCommands.OtherCommand getDefaultInstance() {
+    public static com.rtrk.atcommands.ATCommand.OtherCommand getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -53036,7 +53226,7 @@ public final class ATCommands {
       return PARSER;
     }
 
-    public com.rtrk.atcommands.ATCommands.OtherCommand getDefaultInstanceForType() {
+    public com.rtrk.atcommands.ATCommand.OtherCommand getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -53171,607 +53361,608 @@ public final class ATCommands {
       "entLength\030\013 \001(\005\022+\n\terrorcode\030\014 \001(\0162\030.com" +
       ".rtrk.protobuf.Error\022\'\n\005error\030\r \001(\0162\030.co" +
       "m.rtrk.protobuf.Error\022\014\n\004data\030\016 \001(\014\022\020\n\010b",
-      "odyData\030\017 \001(\014\"\310\004\n\013FileCommand\0227\n\013message" +
+      "odyData\030\017 \001(\014\"\367\004\n\013FileCommand\0227\n\013message" +
       "Type\030\001 \001(\0162\".com.rtrk.protobuf.FileMessa" +
-      "geType\022\023\n\013namePattern\030\002 \001(\t\022\020\n\010freeSize\030" +
-      "\003 \001(\005\022\021\n\ttotalSize\030\004 \001(\005\022\024\n\014maxAllocSize" +
-      "\030\005 \001(\005\022\023\n\013UFSFileSize\030\006 \001(\005\022\025\n\rUFSFileNu" +
-      "mber\030\007 \001(\005\022\020\n\010fileName\030\010 \001(\t\022\020\n\010fileSize" +
-      "\030\t \001(\005\022\017\n\007ramSize\030\n \001(\005\022\022\n\nuploadSize\030\013 " +
-      "\001(\005\022\017\n\007timeout\030\014 \001(\005\022\017\n\007ackMode\030\r \001(\005\022\023\n" +
-      "\013srcFileName\030\016 \001(\t\022\024\n\014destFileName\030\017 \001(\t" +
-      "\022\014\n\004copy\030\020 \001(\010\022\021\n\towerwrite\030\021 \001(\010\022\014\n\004mod",
-      "e\030\022 \001(\005\022\016\n\006length\030\023 \001(\005\022\022\n\nfileHandle\030\024 " +
-      "\001(\t\022\022\n\nreadLength\030\025 \001(\005\022\025\n\rwrittenLength" +
-      "\030\026 \001(\005\022\023\n\013totalLength\030\027 \001(\005\022\016\n\006offset\030\030 " +
-      "\001(\005\022\020\n\010position\030\031 \001(\005\022\020\n\010checksum\030\032 \001(\005\022" +
-      "\'\n\005error\030\033 \001(\0162\030.com.rtrk.protobuf.Error" +
-      "\"\271\003\n\nFTPCommand\0226\n\013messageType\030\001 \001(\0162!.c" +
-      "om.rtrk.protobuf.FTPMessageType\022\020\n\010hostN" +
-      "ame\030\002 \001(\t\022\014\n\004port\030\003 \001(\005\022\'\n\005error\030\004 \001(\0162\030" +
-      ".com.rtrk.protobuf.Error\022\020\n\010fileName\030\005 \001" +
-      "(\t\022\020\n\010fileSize\030\006 \001(\005\022\014\n\004time\030\007 \001(\005\022\022\n\nup",
-      "loadSize\030\010 \001(\005\022\024\n\014downloadSize\030\t \001(\005\022\020\n\010" +
-      "pathName\030\n \001(\t\022\020\n\010username\030\013 \001(\t\022\020\n\010pass" +
-      "word\030\014 \001(\t\022\014\n\004type\030\r \001(\005\022\r\n\005value\030\016 \001(\005\022" +
-      "\016\n\006status\030\017 \001(\t\022\016\n\006length\030\020 \001(\005\022\022\n\nsourc" +
-      "eName\030\021 \001(\t\022\022\n\ntargetName\030\022 \001(\t\022\014\n\004name\030" +
-      "\024 \001(\t\022\016\n\006return\030\023 \001(\005\022\025\n\rdirectoryName\030\025" +
-      " \001(\t\"\266\005\n\nMMSCommand\0226\n\013messageType\030\001 \001(\016" +
-      "2!.com.rtrk.protobuf.MMSMessageType\022\017\n\007M" +
-      "MSCURL\030\002 \001(\t\022\014\n\004type\030\003 \001(\005\022\017\n\007gateway\030\004 " +
-      "\001(\t\022\014\n\004port\030\005 \001(\005\022\r\n\005valid\030\006 \001(\005\022\020\n\010prio",
-      "rity\030\007 \001(\005\022\022\n\nsendReport\030\010 \001(\010\022\022\n\nreadRe" +
-      "port\030\t \001(\010\022\017\n\007visible\030\n \001(\005\022\r\n\005class\030\013 \001" +
-      "(\005\022\017\n\007charset\030\014 \001(\t\022\021\n\tinputMode\030\r \001(\005\022\020" +
-      "\n\010function\030\016 \001(\005\022\017\n\007operate\030\017 \001(\005\022\020\n\010ops" +
-      "tring\030\020 \001(\t\022\014\n\004from\030\021 \001(\005\022\n\n\002to\030\022 \001(\005\022\020\n" +
-      "\010MMSIndex\030\023 \001(\005\022\023\n\013fromAddress\030\024 \001(\t\022\027\n\017" +
-      "isNotDownloaded\030\025 \001(\010\022\014\n\004date\030\026 \001(\t\022\014\n\004t" +
-      "ime\030\027 \001(\t\022\023\n\013messageSize\030\030 \001(\005\022\014\n\004para\030\031" +
-      " \001(\005\022\020\n\010fileName\030\032 \001(\t\022\024\n\014downloadSize\030\033" +
-      " \001(\005\022\020\n\010checksum\030\034 \001(\005\022\024\n\014DURAttribute\030\035",
-      " \001(\003\022\020\n\010SMSToSIM\030\036 \001(\005\022\022\n\nenableUSC2\030\037 \001" +
-      "(\010\022\021\n\tbigEndian\030  \001(\010\022\023\n\013outputStyle\030! \001" +
-      "(\005\022\020\n\010fileType\030\" \001(\005\022\'\n\005error\030# \001(\0162\030.co" +
-      "m.rtrk.protobuf.Error\"\356\006\n\017QuecCellComman" +
-      "d\022;\n\013messageType\030\001 \001(\0162&.com.rtrk.protob" +
-      "uf.QuecCellMessageType\022\016\n\006status\030\002 \001(\005\022\030" +
-      "\n\020operatorInString\030\003 \001(\t\022\035\n\025operatorInSh" +
-      "ortString\030\004 \001(\t\022\030\n\020operatorInNumber\030\005 \001(" +
-      "\005\022\016\n\006indexN\030\006 \001(\005\022\030\n\020locationAreaCode\030\007 " +
-      "\001(\005\022\016\n\006cellID\030\010 \001(\005\022\037\n\027baseStationIdenti",
-      "tyCode\030\t \001(\005\022\024\n\014receiveLevel\030\n \001(\005\022+\n#ab" +
-      "soluteRadioFrequencyChannelNumber\030\013 \001(\001\022" +
-      "\014\n\004mode\030\014 \001(\005\022\014\n\004dump\030\r \001(\005\022\031\n\021mobileCou" +
-      "ntryCode\030\016 \001(\005\022\031\n\021mobileNetworkCode\030\017 \001(" +
-      "\005\022\037\n\027broadcastControlChannel\030\020 \001(\005\022\031\n\021re" +
-      "ceiveSignalLeve\030\021 \001(\001\022\n\n\002c1\030\022 \001(\005\022\n\n\002c2\030" +
-      "\023 \001(\005\022\034\n\024transmitPowerMaximum\030\024 \001(\001\022\032\n\022r" +
-      "eceiveLevelAccess\030\025 \001(\005\022\021\n\ttimeslots\030\026 \001" +
-      "(\005\022\021\n\tMAIOValue\030\027 \001(\005\022\020\n\010HSNValue\030\030 \001(\005\022" +
-      "\013\n\003TCH\030\031 \001(\005\022\025\n\rtimingAdvance\030\032 \001(\005\022\024\n\014R",
-      "XQualitySub\030\033 \001(\005\022\025\n\rRXQualityFull\030\034 \001(\005" +
-      "\022\"\n\032numberOfNeighboringSixCell\030\035 \001(\005\022\017\n\007" +
-      "band100\030\036 \001(\010\022\017\n\007rrState\030\037 \001(\005\022\023\n\013channe" +
-      "lType\030  \001(\t\022\027\n\017automaticReport\030! \001(\010\022\014\n\004" +
-      "line\030\" \001(\005\022\025\n\rforbiddenData\030# \001(\t\022\014\n\004ban" +
-      "d\030$ \001(\005\022\r\n\005value\030% \001(\005\"\333\001\n\020RecordingComm" +
-      "and\022<\n\013messageType\030\001 \001(\0162\'.com.rtrk.prot" +
-      "obuf.RecordingMessageType\022\r\n\005state\030\002 \001(\005" +
-      "\022\020\n\010fileName\030\003 \001(\t\022\016\n\006format\030\004 \001(\005\022\016\n\006re" +
-      "peat\030\005 \001(\010\022\016\n\006volume\030\006 \001(\005\022\017\n\007channel\030\007 ",
-      "\001(\005\022\'\n\005error\030\010 \001(\0162\030.com.rtrk.protobuf.E" +
-      "rror\"\343\002\n\013SMTPCommand\0227\n\013messageType\030\001 \001(" +
-      "\0162\".com.rtrk.protobuf.SMTPMessageType\022\014\n" +
-      "\004user\030\002 \001(\t\022\020\n\010password\030\003 \001(\t\022\017\n\007address" +
-      "\030\004 \001(\t\022\014\n\004name\030\005 \001(\t\022\025\n\rserverAddress\030\006 " +
-      "\001(\t\022\014\n\004port\030\007 \001(\005\022\014\n\004mode\030\010 \001(\005\022\014\n\004type\030" +
-      "\t \001(\005\022\024\n\014emailAddress\030\n \001(\t\022\016\n\006result\030\013 " +
-      "\001(\005\022\017\n\007charset\030\014 \001(\005\022\r\n\005title\030\r \001(\t\022\017\n\007t" +
-      "imeout\030\016 \001(\005\022\021\n\tfileIndex\030\017 \001(\005\022\020\n\010fileN" +
-      "ame\030\020 \001(\t\022\020\n\010fileSize\030\021 \001(\005\022\r\n\005value\030\022 \001",
-      "(\005\"\216\001\n\nSTKCommand\0226\n\013messageType\030\001 \001(\0162!" +
-      ".com.rtrk.protobuf.STKMessageType\022\t\n\001n\030\002" +
-      " \001(\005\022\017\n\007profile\030\003 \001(\t\022\022\n\nsatCommand\030\004 \001(" +
-      "\t\022\030\n\020terminalResponse\030\005 \001(\t\"\243\001\n\016GeneralC" +
-      "ommand\022;\n\013messageType\030\001 \001(\0162&.com.rtrk.p" +
-      "rotobuf.GeneralMesssageType\022\r\n\005value\030\002 \001" +
-      "(\005\022\t\n\001n\030\003 \001(\005\022\025\n\rfunctionality\030\004 \001(\005\022\r\n\005" +
-      "reset\030\005 \001(\005\022\024\n\014characterSet\030\006 \001(\t\"\332\003\n\035Se" +
-      "rialInterfaceControlCommand\022I\n\013messageTy" +
-      "pe\030\001 \001(\01624.com.rtrk.protobuf.SerialInter",
-      "faceControlMessageType\022\r\n\005value\030\002 \001(\005\022\016\n" +
-      "\006format\030\003 \001(\005\022\017\n\007partity\030\004 \001(\005\022\020\n\010DCEByD" +
-      "TE\030\005 \001(\005\022\020\n\010DTEByDCE\030\006 \001(\005\022\014\n\004rate\030\007 \001(\005" +
-      "\022\014\n\004mode\030\010 \001(\005\022\016\n\006subset\030\t \001(\005\022\021\n\tportSp" +
-      "eed\030\n \001(\005\022\030\n\020maximumFrameSize\030\013 \001(\005\022\032\n\022a" +
-      "cknowledmentTimer\030\014 \001(\005\022&\n\036maximumNumber" +
-      "OfRetransmissions\030\r \001(\005\022\025\n\rresponseTimer" +
-      "\030\016 \001(\005\022\033\n\023wakeUpResponseTimer\030\017 \001(\005\022\023\n\013w" +
-      "indowsSize\030\020 \001(\005\022\020\n\010baudRate\030\021 \001(\005\022\020\n\010da" +
-      "taBits\030\022 \001(\005\022\020\n\010stopBits\030\023 \001(\005\"\377\002\n\024Statu",
-      "sControlCommand\022@\n\013messageType\030\001 \001(\0162+.c" +
-      "om.rtrk.protobuf.StatusControlMessageTyp" +
-      "e\022\022\n\nlocationID\030\002 \001(\005\022\r\n\005cause\030\003 \001(\t\022\013\n\003" +
-      "pas\030\004 \001(\005\022\016\n\006status\030\005 \001(\005\022\021\n\trefuseSMS\030\006" +
-      " \001(\005\022\022\n\nrefuseCall\030\007 \001(\005\022\014\n\004mode\030\010 \001(\005\022\020" +
-      "\n\010extunsol\030\t \001(\t\022\r\n\005state\030\n \001(\005\022\016\n\006enabl" +
-      "e\030\013 \001(\005\022\014\n\004time\030\014 \001(\t\022\032\n\022datlightSavingT" +
-      "ime\030\r \001(\t\022\023\n\013insertLevel\030\016 \001(\005\022\021\n\tpinCho" +
-      "ice\030\017 \001(\005\022\024\n\014insertStatus\030\020 \001(\005\022\t\n\001n\030\021 \001" +
-      "(\005\022\014\n\004type\030\022 \001(\005\"\224\004\n\021SIMRelatedCommand\022=",
-      "\n\013messageType\030\001 \001(\0162(.com.rtrk.protobuf." +
-      "SIMRelatedMessageType\022\013\n\003fac\030\002 \001(\t\022\014\n\004mo" +
-      "de\030\003 \001(\005\022\020\n\010password\030\004 \001(\t\022\r\n\005class\030\005 \001(" +
-      "\005\022\016\n\006status\030\006 \001(\005\022\013\n\003pin\030\007 \001(\t\022\016\n\006newPin" +
-      "\030\010 \001(\t\022\021\n\tpwdLength\030\t \001(\005\022\016\n\006oldPwd\030\n \001(" +
-      "\t\022\016\n\006newPwd\030\013 \001(\t\022\017\n\007command\030\014 \001(\005\022\016\n\006fi" +
-      "leID\030\r \001(\005\022\n\n\002P1\030\016 \001(\005\022\n\n\002P2\030\017 \001(\005\022\n\n\002P3" +
-      "\030\020 \001(\005\022\013\n\003SW1\030\021 \001(\005\022\013\n\003SW2\030\022 \001(\005\022\014\n\004data" +
-      "\030\023 \001(\t\022\020\n\010response\030\024 \001(\t\022\016\n\006length\030\025 \001(\005" +
-      "\022\020\n\010CCIDData\030\026 \001(\t\022\014\n\004GID1\030\027 \001(\005\022\014\n\004GID2",
-      "\030\030 \001(\005\022\032\n\022serviceProvideName\030\031 \001(\t\022\023\n\013di" +
-      "splayMode\030\032 \001(\005\022\014\n\004chv1\030\033 \001(\005\022\014\n\004chv2\030\034 " +
-      "\001(\005\022\014\n\004puk1\030\035 \001(\005\022\014\n\004puk2\030\036 \001(\005\"\264\003\n\025Netw" +
-      "orkServiceCommand\022A\n\013messageType\030\001 \001(\0162," +
-      ".com.rtrk.protobuf.NetworkServiceMessage" +
-      "Type\022\016\n\006status\030\002 \001(\005\022\020\n\010operator\030\003 \001(\005\022\014" +
-      "\n\004mode\030\004 \001(\005\022\016\n\006format\030\005 \001(\005\022\t\n\001n\030\006 \001(\005\022" +
-      "\030\n\020locationAreaCode\030\007 \001(\t\022\016\n\006cellID\030\010 \001(" +
-      "\t\022\014\n\004rssi\030\t \001(\005\022\013\n\003ber\030\n \001(\005\022\r\n\005index\030\013 " +
-      "\001(\005\022\020\n\010numericn\030\014 \001(\t\022\016\n\006alphan\030\r \001(\t\022\016\n",
-      "\006opBand\030\016 \001(\t\022\014\n\004dump\030\017 \001(\005\022\014\n\004band\030\020 \001(" +
-      "\005\022\021\n\tfrequency\030\021 \001(\005\022\026\n\016signalStrength\030\022" +
-      " \001(\005\022\020\n\010band1900\030\023 \001(\005\022\016\n\006arfcn1\030\024 \001(\005\022\016" +
-      "\n\006arfcn2\030\025 \001(\005\022\016\n\006arfcn3\030\026 \001(\005\"\260\003\n\022CallR" +
-      "elatedCommand\022>\n\013messageType\030\001 \001(\0162).com" +
-      ".rtrk.protobuf.CallRelatedMessageType\022\016\n" +
-      "\006number\030\002 \001(\t\022\023\n\013GSMModifier\030\003 \001(\t\022\036\n\026in" +
-      "terworkinWindowsSize\030\030 \001(\005\022\030\n\020mobileWind" +
-      "owSize\030\005 \001(\005\022\032\n\022acknowledmentTimer\030\006 \001(\005" +
-      "\022\037\n\027retransimissionAttempts\030\007 \001(\005\022\022\n\nRPL",
-      "Version\030\010 \001(\005\022\032\n\022resequencingPeriod\030\t \001(" +
-      "\005\022\t\n\001n\030\n \001(\005\022\014\n\004type\030\013 \001(\005\022\r\n\005index\030\014 \001(" +
-      "\005\022\013\n\003dir\030\r \001(\005\022\014\n\004stat\030\016 \001(\005\022\014\n\004mode\030\017 \001" +
-      "(\005\022\022\n\nmultiparty\030\020 \001(\005\022\025\n\rspeechChannel\030" +
-      "\021 \001(\005\022\022\n\ndisableATH\030\022 \001(\010\"\361\006\n\nSMSCommand" +
-      "\0227\n\014messsageType\030\001 \001(\0162!.com.rtrk.protob" +
-      "uf.SMSMessageType\022\017\n\007service\030\002 \001(\005\022\037\n\027mo" +
-      "bileTerminatedMessage\030\003 \001(\005\022\035\n\025mobileOri" +
-      "entedMessage\030\004 \001(\005\022\034\n\024broadcastTypeMessa" +
-      "ge\030\005 \001(\005\022\014\n\004mode\030\006 \001(\005\022\021\n\tSCAddress\030\007 \001(",
-      "\t\022\023\n\013toSCAddress\030\010 \001(\005\022\014\n\004mem1\030\t \001(\t\022\014\n\004" +
-      "mem2\030\n \001(\t\022\014\n\004mem3\030\013 \001(\t\022\r\n\005index\030\014 \001(\005\022" +
-      "\017\n\007delflag\030\r \001(\005\022\r\n\005alpha\030\016 \001(\t\022\032\n\022desti" +
-      "nationAddress\030\017 \001(\t\022\014\n\004data\030\020 \001(\014\022\016\n\006len" +
-      "gth\030\021 \001(\005\022\032\n\022originatingAddress\030\022 \001(\t\022\013\n" +
-      "\003pdu\030\023 \001(\005\022\036\n\026serviceCenterTimeStamp\030\024 \001" +
-      "(\t\022\034\n\024TPDestinationAddress\030\025 \001(\005\022\034\n\024TPOr" +
-      "iginatingAddress\030\026 \001(\005\022\n\n\002fo\030\027 \001(\005\022\031\n\021me" +
-      "ssageIdentifier\030\030 \001(\005\022\032\n\022protocolIdentif" +
-      "ier\030\031 \001(\005\022\014\n\004stat\030\032 \001(\t\022\026\n\016validityPerio",
-      "d\030\033 \001(\t\022\030\n\020messageReference\030\034 \001(\005\022\016\n\006ack" +
-      "pdu\030\035 \001(\005\022\023\n\013commandType\030\036 \001(\005\022\025\n\rmessag" +
-      "eNumber\030\037 \001(\005\022\n\n\002ds\030  \001(\005\022\016\n\006buffer\030! \001(" +
-      "\005\022\017\n\007profile\030\" \001(\005\022\032\n\022messageIdentifiers" +
-      "\030# \001(\t\022\014\n\004dcss\030$ \001(\t\022\014\n\004show\030% \001(\005\022\027\n\017da" +
-      "taCodinScheme\030& \001(\005\022\014\n\004type\030\' \001(\t\022\016\n\006sta" +
-      "tus\030( \001(\005\022\022\n\nfirstOctet\030) \001(\005\"\240\002\n\020Phoneb" +
-      "ookCommand\022<\n\013messageType\030\001 \001(\0162\'.com.rt" +
-      "rk.protobuf.PhonebookMessageType\022\017\n\007stor" +
-      "age\030\002 \001(\t\022\017\n\007nlength\030\003 \001(\005\022\017\n\007tlength\030\004 ",
-      "\001(\005\022\r\n\005index\030\005 \001(\005\022\016\n\006number\030\006 \001(\t\022\014\n\004ty" +
-      "pe\030\007 \001(\005\022\014\n\004text\030\010 \001(\t\022\016\n\006index1\030\t \001(\005\022\016" +
-      "\n\006index2\030\n \001(\005\022\020\n\010findText\030\013 \001(\t\022\016\n\006alph" +
-      "ax\030\014 \001(\t\022\017\n\007numberx\030\r \001(\t\022\r\n\005typex\030\016 \001(\005" +
-      "\"\363\002\n\013GPRSCommand\0227\n\013messageType\030\001 \001(\0162\"." +
-      "com.rtrk.protobuf.GPRSMessageType\022\r\n\005sta" +
-      "te\030\002 \001(\005\022\013\n\003cid\030\003 \001(\005\022\017\n\007PDPType\030\004 \001(\t\022\013" +
-      "\n\003APN\030\005 \001(\t\022\022\n\nPDPAddress\030\006 \001(\t\022\r\n\005dComp" +
-      "\030\007 \001(\005\022\r\n\005hComp\030\010 \001(\005\022\022\n\nprecedence\030\t \001(" +
-      "\005\022\r\n\005delay\030\n \001(\005\022\023\n\013reliability\030\013 \001(\005\022\014\n",
-      "\004peek\030\014 \001(\005\022\014\n\004mean\030\r \001(\005\022\013\n\003L2P\030\016 \001(\t\022\r" +
-      "\n\005class\030\017 \001(\t\022\014\n\004mode\030\020 \001(\005\022\t\n\001n\030\021 \001(\005\022\014" +
-      "\n\004stat\030\022 \001(\005\022\013\n\003lac\030\023 \001(\t\022\n\n\002ci\030\024 \001(\t\022\017\n" +
-      "\007service\030\025 \001(\005\"\316\006\n\014TCPIPCommand\0228\n\013messa" +
-      "geType\030\001 \001(\0162#.com.rtrk.protobuf.TCPIPMe" +
-      "ssageType\022\r\n\005index\030\002 \001(\005\022\014\n\004mode\030\003 \001(\t\022\021" +
-      "\n\tIPAddress\030\004 \001(\t\022\014\n\004port\030\005 \001(\005\022\022\n\ndomai" +
-      "nName\030\006 \001(\t\022\016\n\006length\030\007 \001(\005\022\013\n\003APN\030\010 \001(\t" +
-      "\022\020\n\010username\030\t \001(\t\022\020\n\010password\030\n \001(\t\022\014\n\004" +
-      "rate\030\013 \001(\005\022\r\n\005state\030\014 \001(\t\022\023\n\013socketState",
-      "\030\r \001(\t\022\023\n\013serverState\030\016 \001(\t\022\022\n\nprimaryDN" +
-      "S\030\017 \001(\t\022\023\n\013seondaryDNS\030\020 \001(\t\022\r\n\005error\030\021 " +
-      "\001(\005\022\014\n\004time\030\022 \001(\003\022\022\n\nsendPrompt\030\023 \001(\005\022\013\n" +
-      "\003num\030\024 \001(\005\022\014\n\004type\030\025 \001(\005\022\013\n\003max\030\026 \001(\003\022\022\n" +
-      "\ndialNumber\030\027 \001(\t\022\022\n\nconnection\030\030 \001(\005\022\025\n" +
-      "\rnumberOfRetry\030\031 \001(\005\022\020\n\010waitTime\030\032 \001(\005\022\020" +
-      "\n\010sendSize\030\033 \001(\005\022\016\n\006escape\030\034 \001(\010\022\017\n\007chan" +
-      "nel\030\035 \001(\005\022\t\n\001n\030\036 \001(\005\022\014\n\004sent\030\037 \001(\005\022\r\n\005ac" +
-      "ked\030  \001(\005\022\016\n\006nAcked\030! \001(\005\022\t\n\001m\030\" \001(\005\022\n\n\002" +
-      "id\030# \001(\005\022\n\n\002sc\030$ \001(\005\022\013\n\003sid\030% \001(\005\022\016\n\006num",
-      "ber\030& \001(\005\022\014\n\004host\030\' \001(\t\022\017\n\007timeout\030( \001(\005" +
-      "\022\022\n\npingNumber\030) \001(\005\022\016\n\006result\030* \001(\005\022\r\n\005" +
-      "bytes\030+ \001(\005\022\013\n\003ttl\030, \001(\005\022\023\n\013finalResult\030" +
-      "- \001(\005\022\020\n\010received\030. \001(\005\022\014\n\004lost\030/ \001(\005\022\013\n" +
-      "\003min\0300 \001(\003\022\013\n\003avg\0301 \001(\003\"\335\002\n\033Supplementar" +
-      "yServiceCommand\022G\n\013messageType\030\001 \001(\01622.c" +
-      "om.rtrk.protobuf.SupplementaryServiceMes" +
-      "sageType\022\r\n\005reads\030\002 \001(\005\022\014\n\004mode\030\003 \001(\005\022\016\n" +
-      "\006number\030\004 \001(\t\022\014\n\004type\030\005 \001(\005\022\022\n\nsubaddres" +
-      "s\030\006 \001(\t\022\016\n\006satype\030\007 \001(\005\022\r\n\005class\030\010 \001(\005\022\014",
-      "\n\004time\030\t \001(\005\022\016\n\006status\030\n \001(\005\022\t\n\001n\030\013 \001(\005\022" +
-      "\r\n\005index\030\014 \001(\005\022\014\n\004info\030\r \001(\005\022\t\n\001m\030\016 \001(\005\022" +
-      "\013\n\003str\030\017 \001(\t\022\013\n\003dcs\030\020 \001(\005\022\r\n\005code1\030\021 \001(\005" +
-      "\022\r\n\005code2\030\022 \001(\005\"\312\004\n\014AudioCommand\0228\n\013mess" +
-      "ageType\030\001 \001(\0162#.com.rtrk.protobuf.AudioM" +
-      "essageType\022\r\n\005value\030\002 \001(\005\022\030\n\020internalDur" +
-      "ation\030\003 \001(\005\022\020\n\010duration\030\004 \001(\005\022\022\n\ndtmfStr" +
-      "ing\030\005 \001(\t\022\014\n\004mode\030\006 \001(\005\022\r\n\005level\030\007 \001(\005\022\t" +
-      "\n\001n\030\010 \001(\005\022\021\n\tgainLevel\030\t \001(\005\022\017\n\007channel\030" +
-      "\n \001(\005\022\r\n\005state\030\013 \001(\005\022\014\n\004type\030\014 \001(\005\022\021\n\tfr",
-      "equency\030\r \001(\005\022\020\n\010periodON\030\016 \001(\005\022\021\n\tperio" +
-      "dOFF\030\017 \001(\005\022\022\n\noutputPath\030\020 \001(\005\022\027\n\017operat" +
-      "eFunction\030\021 \001(\005\022\026\n\016functionStatus\030\022 \001(\005\022" +
-      "\017\n\007operate\030\023 \001(\005\022\023\n\013prefixPause\030\024 \001(\005\022\024\n" +
-      "\014lowThreshold\030\025 \001(\005\022\025\n\rhighThreshold\030\026 \001" +
-      "(\005\022\020\n\010dtmfCode\030\027 \001(\t\022\027\n\017persistenceTime\030" +
-      "\030 \001(\005\022\020\n\010ulVolume\030\031 \001(\005\022\020\n\010dlVolume\030\032 \001(" +
-      "\005\022\027\n\017continuanceTime\030\033 \001(\003\022\020\n\010muteTime\030\034" +
-      " \001(\003\"\250\002\n\026HardwareRelatedCommand\022B\n\013messa" +
-      "geType\030\001 \001(\0162-.com.rtrk.protobuf.Hardwar",
-      "eRelatedMessageType\022\014\n\004time\030\002 \001(\t\022\r\n\005sta" +
-      "te\030\003 \001(\005\022\016\n\006repeat\030\004 \001(\005\022\r\n\005power\030\005 \001(\005\022" +
-      "\013\n\003bcs\030\006 \001(\005\022\013\n\003bcl\030\007 \001(\005\022\017\n\007voltage\030\010 \001" +
-      "(\005\022\016\n\006status\030\t \001(\005\022\r\n\005value\030\n \001(\005\022\t\n\001n\030\013" +
-      " \001(\005\022\017\n\007ledMode\030\014 \001(\005\022\025\n\rthresholdType\030\r" +
-      " \001(\005\022\021\n\tthreshold\030\016 \001(\005\"\205\001\n\014OtherCommand" +
-      "\0228\n\013messageType\030\001 \001(\0162#.com.rtrk.protobu" +
-      "f.OtherMessageType\022\r\n\005value\030\002 \001(\005\022\t\n\001n\030\003" +
-      " \001(\005\022\020\n\010timeMode\030\004 \001(\005\022\017\n\007indMode\030\005 \001(\005*" +
-      "\206\002\n\020OtherMessageType\022#\n\037REISSUES_THE_LAS",
-      "T_COMMAND_GIVEN\020\000\022\031\n\025SET_COMMAND_ECHO_MO" +
-      "DE\020\001\022*\n&SET_COMMAND_LINE_TERMINATION_CHA" +
-      "RACTER\020\002\022%\n!SET_RESPONSE_FORMATTING_CHAR" +
-      "ACTER\020\003\022&\n\"SET_COMMAND_LINE_EDITING_CHAR" +
-      "ACTER\020\004\022\017\n\013SET_RI_TIME\020\005\022&\n\"BURST_TRANSI" +
-      "TION_SIGNAL_INDICATION\020\006*\302\001\n\032HardwareRel" +
-      "atedMessageType\022\t\n\005CLOCK\020\000\022\r\n\tSET_ALARM\020" +
-      "\001\022\022\n\016BATTERY_CHARGE\020\002\022\014\n\010READ_ADC\020\003\022\030\n\024C" +
-      "ONFIGURE_SHOW_CLOCK\020\004\022&\n\"CONFIGURE_THE_N" +
-      "ETWORK_LED_PATTERNS\020\005\022&\n\"CONFIGURE_THE_T",
-      "HRESHOLD_OF_VOLTAGE\020\006*\231\004\n\020AudioMessageTy" +
-      "pe\022 \n\034SET_MONITOR_SPEAKER_LOUDNESS\020\000\022\034\n\030" +
-      "SET_MONITOR_SPEAKER_MODE\020\001\022\021\n\rTONE_DURAT" +
-      "ION\020\002\022\034\n\030DTMF_AND_TONE_GENERATION\020\003\022\024\n\020A" +
-      "LERT_SOUND_MODE\020\004\022\026\n\022RINGER_SOUND_LEVEL\020" +
-      "\005\022\035\n\031LOUD_SPEAKER_VOLUME_LEVEL\020\006\022\020\n\014MUTE" +
-      "_CONTROL\020\007\022#\n\037CHANGE_THE_SIDE_TONE_GAIN_" +
-      "LEVEL\020\010\022$\n CHANGE_THE_MICROPHONE_GAIN_LE" +
-      "VEL\020\t\022\035\n\031GENERATE_LOCAL_DTMF_TONES\020\n\022\033\n\027" +
-      "SWAP_THE_AUDIO_CHANNELS\020\013\022 \n\034AUDIO_CHANN",
-      "EL_LOOP_BACK_TEST\020\014\022 \n\034GENERATE_LOCAL_SP" +
-      "ECIFIC_TONE\020\r\022\030\n\024SET_DTMF_OUTPUT_PATH\020\016\022" +
-      "\033\n\027SET_TONE_DETECTION_MODE\020\017\022\017\n\013DETECT_D" +
-      "TMF\020\020\022\"\n\036PLAY_DTMF_TONE_DURING_THE_CALL\020" +
-      "\021*\311\003\n\037SupplementaryServiceMessageType\0221\n" +
-      "-CALL_FORWARDING_NUMBER_AND_CONDITIONS_C" +
-      "ONTROL\020\000\022\035\n\031CLOSED_USER_GROUP_CONTROL\020\001\022" +
-      "\030\n\024CALL_WAITING_CONTROL\020\002\022\034\n\030CALL_HOLD_A" +
-      "ND_MULTIPARTY\020\003\022,\n(CALLING_LINE_IDENTIFI" +
-      "CATION_PRESENTATION\020\004\022C\n?CONTROL_WHETHER",
-      "_OR_NOT_TO_SHOW_THE_NAME_OF_INCOMING_CAL" +
-      "L_NUMBER\020\005\022.\n*CONNECTED_LINE_IDENTIFICAT" +
-      "ION_PRESENTATION\020\006\022#\n\037SHOW_ALPHA_FIELD_I" +
-      "N_COLP_STRING\020\007\022+\n\'UNSTRUCTURED_SUPPLEME" +
-      "NTARY_SERVICE_DATA\020\010\022\'\n#SUPPLEMENTARY_SE" +
-      "RVICES_NOTIFICATION\020\t*\252\n\n\020TCPIPMessageTy" +
-      "pe\022 \n\034SET_UP_TCP_OR_UDP_CONNECTION\020\000\022+\n\'" +
-      "SEND_DATA_THROUGH_TCP_OR_UDP_CONNECTION\020" +
-      "\001\022\037\n\033CLOSE_TCP_OR_UDP_CONNECTION\020\002\022#\n\037DE" +
-      "ACTIVATE_GPRS_CSD_PDP_CONTEXT\020\003\022\022\n\016SET_L",
-      "OCAL_PORT\020\004\022.\n*START_TCPIP_TASK_APN_USER" +
-      "NAME_AND_PASSWORD\020\005\022\033\n\027ACTIVE_GPRS_CSD_C" +
-      "ONTEXT\020\006\022\030\n\024GET_LOCAL_IP_ADDRESS\020\007\022#\n\037QU" +
-      "ERY_CURRENT_CONNECTION_STATUS\020\010\022-\n)QUERY" +
-      "_CONNECTION_STATUS_OF_CURRENT_ACCESS\020\t\022\037" +
-      "\n\033QUERT_CURRENT_SERVER_STATUS\020\n\022 \n\034CONFI" +
-      "GURE_DOMAIN_NAME_SERVER\020\013\022-\n)QUERY_THE_I" +
-      "P_ADDRESS_OF_GIVEN_DOMAIN_NAME\020\014\0221\n-CONN" +
-      "ECT_WITH_IP_ADDRESS_OR_DOMAIN_NAME_SERVE" +
-      "R\020\r\022(\n$ADD_AN_IP_HEADER_WHEN_RECEIVING_D",
-      "ATE\020\016\022\033\n\027SET_AUDIO_SENDING_TIMER\020\017\022\037\n\033SE" +
-      "T_PROMT_WHEN_SENDING_DATA\020\020\022\027\n\023CONFIGURE" +
-      "_AS_SERVER\020\021\022$\n SELECT_CSD_OR_GPRS_AS_TH" +
-      "E_BEARER\020\022\022\025\n\021CHOOSE_CONNECTION\020\023\0227\n3SET" +
-      "_WHETHER_OR_NOT_TO_DISPLAY_THE_ADDRESS_O" +
-      "F_SENDER\020\024\022\"\n\036SAVE_TCPIP_APPLICATION_CON" +
-      "TEXT\020\025\022\036\n\032SELECT_TCPIP_TRANSFER_MODE\020\026\0224" +
-      "\n0CONTROL_WHETHER_OR_NOT_TO_SHOW_THE_PRO" +
-      "TOCOL_TYPE\020\027\022;\n7CONTROL_WHETHER_OR_NOT_T" +
-      "O_ENABLE_MULTIPLE_TCPIP_SESSION\020\030\0226\n2CON",
-      "TROL_WHETHER_OR_NOT_TO_DISPLAY_LOCAL_IP_" +
-      "ADDRESS\020\031\022*\n&SELECT_A_CONTEXT_AS_FOREGRO" +
-      "UND_CONTEXT\020\032\022*\n&QUETY_THE_DATA_INFORMAT" +
-      "ION_FOR_SENDING\020\033\0220\n,SET_THE_METHOD_TO_H" +
-      "ANDLE_RECEIVED_TCPIP_DATA\020\034\022$\n RETRIEVE_" +
-      "THE_RECEIVED_TCPIP_DATA\020\035\0225\n1CONTRO_WHET" +
-      "HER_OR_NOT_TO_ECHO_THE_DATA_FOR_QISEND\020\036" +
-      "\022\030\n\024PING_A_REMOTE_SERVER\020\037\022&\n\"SYNCHRONIZ" +
-      "E_THE_LOCAL_TIME_VIA_NTP\020 *\225\003\n\017GPRSMessa" +
-      "geType\022 \n\034ATTACH_DEATTACH_GPRS_SERVICE\020\000",
-      "\022\026\n\022DEFINE_PDP_CONTEXT\020\001\022\031\n\025QOS_PROFILE_" +
-      "REQUESTED\020\002\022\"\n\036QOS_PROFILE_MINIMUM_ACCEP" +
-      "TABLE\020\003\022&\n\"PDP_CONTEXT_ACTIVATE_OR_DEACT" +
-      "IVATE\020\004\022\024\n\020ENTER_DATA_STATE\020\005\022\024\n\020SHOW_PD" +
-      "P_ADDRESS\020\006\022\035\n\031GPRS_MOBILE_STATION_CLASS" +
-      "\020\007\022-\n)CONTROL_UNSOLICITED_GPRS_EVETNT_RE" +
-      "PORTING\020\010\022\037\n\033NETWORK_REGISTRATION_STATUS" +
-      "\020\t\022%\n!SELECT_SERVICE_FOR_MO_SMS_MESSAGE\020" +
-      "\n\022\037\n\033CHANGE_GPRS_MULTISLOT_CLASS\020\013*\255\001\n\024P" +
-      "honebookMessageType\022#\n\037SELECT_PHONEBOOK_",
-      "MEMORY_STORAGE\020\000\022\031\n\025WRITE_PHONEBOOK_ENTR" +
-      "Y\020\001\022\"\n\036READ_CURRENT_PHONEBOOK_ENTRIES\020\002\022" +
-      "\032\n\026FIND_PHONEBOOK_ENTRIES\020\003\022\025\n\021SUBSCRIBE" +
-      "R_NUMBER\020\004*\377\004\n\016SMSMessageType\022\032\n\026SELECT_" +
-      "MESSAGE_SERVICE\020\000\022\035\n\031SELECT_SMS_MESSAGE_" +
-      "FORMAT\020\001\022\036\n\032SMS_SERVICE_CENTER_ADDRESS\020\002" +
-      "\022!\n\035PREFERRED_SMS_MESSAGE_STORAGE\020\003\022\026\n\022D" +
-      "ELETE_SMS_MESSAGE\020\004\022+\n\'LIST_SMS_MESSAGE_" +
-      "FROM_PREFERRED_STORAGE\020\005\022\024\n\020READ_SMS_MES" +
-      "SAGE\020\006\022\024\n\020SEND_SMS_MESSAGE\020\007\022\037\n\033WRITE_SM",
-      "S_MESSAGE_TO_MEMORY\020\010\022!\n\035SEND_SMS_MESSAG" +
-      "E_FROM_STORAGE\020\t\022\024\n\020SEND_SMS_COMMAND\020\n\022\036" +
-      "\n\032NEW_SMS_MESSAGE_INDICATION\020\013\022\030\n\024RESTOR" +
-      "E_SMS_SETTINGS\020\014\022\025\n\021SAVE_SMS_SETTINGS\020\r\022" +
-      "%\n!SELECT_CALL_BROADCAST_SMS_MESSAGE\020\016\022!" +
-      "\n\035SHOW_SMS_TEXT_MODE_PARAMETERS\020\017\022 \n\034SET" +
-      "_SMS_TEXT_MODE_PARAMETERS\020\020\0226\n2STRORE_CL" +
-      "ASS0_SMS_TO_SIM_WHEN_RECEIVING_CLASS0_SM" +
-      "S\020\021\022\022\n\016DELETE_ALL_SMS\020\022\022\033\n\027CONFIGURE_SMS" +
-      "_CODE_MODE\020\023*\367\006\n\026CallRelatedMessageType\022",
-      "\033\n\027ANSWER_AN_INCOMING_CALL\020\000\022)\n%MOBILE_O" +
-      "RIENTED_CALL_TO_DIAL_A_NUMBER\020\001\022\"\n\036DISCO" +
-      "NNECT_EXISTING_CONNECTION\020\002\022)\n%SWITCH_FR" +
-      "OM_DATA_MODE_TO_COMMAND_MODE\020\003\022)\n%SWITCH" +
-      "_FROM_COMMAND_MODE_TO_DATA_MODE\020\004\022\030\n\024SEL" +
-      "ECT_PULSE_DIALING\020\005\0229\n5SET_NUMBER_OF_RIN" +
-      "GS_BEFORE_AUTOMATICLY_ANSWERING_CALL\020\006\022\"" +
-      "\n\036SET_PAUSE_BEFORE_BLIND_DIALING\020\007\022;\n7SE" +
-      "T_NUMBER_OF_SECONDS_TO_WAIT_FOR_CONNECTI" +
-      "ON_COMPLETION\020\010\0229\n5SET_NUMBER_OF_SECONDS",
-      "_TO_WAIT_FOR_COMMA_DIAL_MODIFIER\020\t\022A\n=SE" +
-      "T_DISCONNECT_DELAY_AFTER_INDICATING_ABSE" +
-      "NCE_OF_DATA_CARRIER\020\n\022\027\n\023SELECT_TONE_DIA" +
-      "LING\020\013\022\032\n\026SELECT_TYPE_OF_ADDRESS\020\014\022\034\n\030LI" +
-      "ST_CURRENT_CALLS_OF_ME\020\r\022\035\n\031SERVICE_REPO" +
-      "RTING_CONTROL\020\016\0229\n5SET_CELLULAR_RESULT_C" +
-      "ODE_FOR_INCOMING_CALL_INDICATION\020\017\022(\n$SE" +
-      "LECT_RADIO_LINK_PROTOCOL_PARAMETER\020\020\022\033\n\027" +
-      "SINGLE_NUMBERING_SCHEME\020\021\022$\n CONFIGURE_A" +
-      "LTERNATING_MODE_CALLS\020\022\022\034\n\030PREFERENCE_SP",
-      "EACH_CODING\020\023\022\036\n\032SPEECH_CHANNEL_TYPE_REP" +
-      "ORT\020\024\022\017\n\013DISABLE_ATH\020\025*\265\002\n\031NetworkServic" +
-      "eMessageType\022\026\n\022OPERATOR_SELECTION\020\000\022\030\n\024" +
-      "NETWORK_REGISTRATION\020\001\022\031\n\025SIGNAL_QUALITY" +
-      "_REPORT\020\002\022\033\n\027PREFERRED_OPERATOR_LIST\020\003\022\027" +
-      "\n\023READ_OPEARATR_NAMES\020\004\022%\n!GET_AND_SET_M" +
-      "OBILE_OPERATION_BAND\020\005\0225\n1NETWORK_SERVIC" +
-      "E_SWITCH_ON_OR_OFF_ENGINEERING_MODE\020\006\022\037\n" +
-      "\033SCAN_POWER_OF_GSM_FREQUENCY\020\007\022\026\n\022LOCK_G" +
-      "SM_FREQUENCY\020\010*\347\002\n\025SIMRelatedMessageType",
-      "\022\020\n\014REQUEST_IMSI\020\000\022\021\n\rFACILITY_LOCK\020\001\022\r\n" +
-      "\tENTER_PIN\020\002\022\023\n\017CHANGE_PASSWORD\020\003\022\031\n\025RES" +
-      "TRICTED_SIM_ACCESS\020\004\022\026\n\022GENERIC_SIM_ACCE" +
-      "SS\020\005\022\034\n\030CHANGE_PS_SUPER_PASSWORD\020\006\022\r\n\tSH" +
-      "OW_CCID\020\007\022\023\n\017SHOW_CCID_QCCID\020\010\022!\n\035GET_SI" +
-      "M_CARD_GROUP_IDENTIFIER\020\t\022%\n!SELECT_SIM_" +
-      "CARD_OPERATING_VOLTAGE\020\n\022\035\n\031GET_SERVICE_" +
-      "PROVIDER_NAME\020\013\022\'\n#TIME_REMAINING_TO_INP" +
-      "UT_SIM_PIN_PUK\020\014*\262\005\n\030StatusControlMessag" +
-      "eType\022\031\n\025EXTENDED_ERROR_REPORT\020\000\022$\n MOBI",
-      "LE_EQUIPMENT_ACTIVITY_STATUS\020\001\022\036\n\032INDICA" +
-      "TE_RI_WHEN_USING_URC\020\002\022(\n$SHOW_STATE_OF_" +
-      "MOBILE_ORIGINATED_CELL\020\003\022.\n*REFUSE_TO_RE" +
-      "CEIVE_SMS_INCOMING_CALL_OR_NOT\020\004\022.\n*ENAB" +
-      "LE_OR_DISABLE_INITIAL_URC_PRESENTATION\020\005" +
-      "\0229\n5ENABLE_OR_DISABLE_PROPRIETARY_UNSOLI" +
-      "CITED_INDICATIONS\020\006\022!\n\035QUERY_STATE_OF_IN" +
-      "ITIALIZATION\020\007\022\034\n\030QUERY_GSM_NETWORK_STAT" +
-      "US\020\010\022\035\n\031NETWORK_TIME_SYNCHRONIZED\020\t\022+\n\'O" +
-      "BTAIN_LATEST_NETWORK_TIME_SYNCHRONIZED\020\n",
-      "\0228\n4NETWORK_TIME_SYNCHRONIZATION_AND_UPD" +
-      "ATE_THE_RTC_TIME\020\013\022\'\n#NETWORK_TIME_SYNCH" +
-      "RONIZATION_REPORT\020\014\022\'\n#SWITCH_ON_OR_OFF_" +
-      "DETECTING_SIM_CARD\020\r\022!\n\035SIM_INSERTED_STA" +
-      "TUS_REPORTING\020\016\0224\n0CSC_CALL_OR_GPRS_PDP_" +
-      "CONTEXT_TERMINAL_INDICATION\020\017*\335\002\n!Serial" +
-      "InterfaceControlMessageType\022\031\n\025SET_DCD_F" +
-      "UNCTION_MODE\020\000\022\031\n\025SET_DTR_FUNCTION_MODE\020" +
-      "\001\022\'\n#SET_TE_TA_CONTROL_CHARACTER_FRAMING" +
-      "\020\002\022%\n!SET_TE_TA_LOCAL_DATA_FLOW_CONTROL\020",
-      "\003\022,\n(SET_TE_TA_LOCAL_DATA_RATE_REPORTING" +
-      "_MODE\020\004\022\036\n\032SET_TE_TA_FIXED_LOCAL_RATE\020\005\022" +
-      "\027\n\023MULTIPLEXER_CONTROL\020\006\022 \n\034CONFIGURE_DU" +
-      "AL_UART_FUNCTION\020\007\022)\n%CONFIGURE_PARAMETE" +
-      "RS_OF_THE_DUAL_UART\020\010*\376\006\n\023GeneralMesssag" +
-      "eType\022.\n*DISPLAY_PRODUCT_IDENTIFICATION_" +
-      "INFORMATION\020\000\022\'\n#REQUEST_MANUFACTURER_ID" +
-      "ENTIFICATION\020\001\022#\n\037REQUEST_TA_MODEL_IDENT" +
-      "IFICATION\020\002\022&\n\"REQUEST_TA_REVISION_IDENT" +
-      "IFICATION\020\003\022(\n$REQUEST_GLOBAL_OBJECT_IDE",
-      "NTIFICATION\020\004\022,\n(REQUEST_MANUFACTURER_ID" +
-      "ENTIFICATION_CGMI\020\005\022 \n\034REQUEST_MODEL_IDE" +
-      "NTIFICATION\020\006\022+\n\'REQUEST_TA_REVISION_IDE" +
-      "NTIFICATION_CGMR\020\007\022\020\n\014REQUEST_IMEI\020\010\0220\n," +
-      "REQUEST_PRODUCT_SERIAL_NUMBER_IDENTIFICA" +
-      "TION\020\t\022\025\n\021REQUEST_IMEI_QGSN\020\n\0227\n3SET_ALL" +
-      "_CURRENT_PARAMETERS_TO_MANUFACTURER_DEFA" +
-      "ULTS\020\013\022!\n\035DISPLAY_CURRENT_CONFIGURATION\020" +
-      "\014\0224\n0STORE_CURRENT_PARAMETERS_TO_USER_DE" +
-      "FINED_PROFILE\020\r\022%\n!SET_RESULT_CODE_PRESE",
-      "NTATION_CODE\020\016\022\026\n\022TA_RESPONSE_FORMAT\020\017\022\"" +
-      "\n\036SET_CONNECT_RESULT_CODE_FORMAT\020\020\0226\n2SE" +
-      "T_ALL_CURRENT_PARAMETERS_TO_USER_DEFINED" +
-      "_PROFILE\020\021\022\033\n\027SET_PHONE_FUNCTIONALITY\020\022\022" +
-      "\r\n\tPOWER_OFF\020\023\022!\n\035REPORT_MOBILE_EQUIPMEN" +
-      "T_ERROR\020\024\022\030\n\024SET_TE_CHARACTER_SET\020\025\022)\n%R" +
-      "EQUEST_COMPLETE_TA_CAPABILITIES_LIST\020\026*\312" +
-      "\003\n\017SMTPMessageType\022(\n$SET_THE_USER_NAME_" +
-      "FOR_AUTHENTICATION\020\000\022\'\n#SET_THE_PASSWORD" +
-      "_FOR_AUTHENTICATION\020\001\022\'\n#SET_THE_EMAIL_A",
-      "DDRESS_OF_THE_SENDER\020\002\022\030\n\024SET_THE_SENDER" +
-      "S_NAME\020\003\022+\n\'SET_THE_ADDRESS_AND_PORT_OD_" +
-      "SMTP_SERVER\020\004\022\034\n\030ADD_OR_DELETE_RECIPIENT" +
-      "S\020\005\022!\n\035EDIT_THE_SUBJECT_OF_THE_EMAIL\020\006\022!" +
-      "\n\035EDIT_THE_CONTENT_OF_THE_EMAIL\020\007\022#\n\037ADD" +
-      "_AN_ATTACHMENT_FOR_THE_EMAIL\020\010\022\030\n\024DELETE" +
-      "_AN_ATTACHMENT\020\t\022)\n%CLEAR_ALL_CONFIGURAT" +
-      "IONS_AND_CONTENTS\020\n\022\026\n\022SMTP_CONFIGURATIO" +
-      "N\020\013\022\016\n\nSEND_EMAIL\020\014*_\n\024RecordingMessageT" +
-      "ype\022\025\n\021RECORD_MEDIA_FILE\020\000\022\023\n\017PLAY_MEDIA",
-      "_FILE\020\001\022\033\n\027STOP_PLAYING_MEDIA_FILE\020\002*\352\001\n" +
-      "\023QuecCellMessageType\022\"\n\036SCAN_BASIC_STATI" +
-      "ON_INFORMATION\020\000\022%\n!SWITCH_ON_OR_OFF_ENG" +
-      "INEERING_MODE\020\001\022\031\n\025LOCK_THE_BASE_STATION" +
-      "\020\002\022\036\n\032SCAN_ARFCN_RECEIVING_LEVEL\020\003\022\033\n\027GE" +
-      "T_CHANNEL_INFORMATION\020\004\022\033\n\027GET_LAST_VALI" +
-      "D_TA_VALUE\020\005\022\023\n\017FORBID_OPERATOR\020\006*\337\003\n\016MM" +
-      "SMessageType\022\033\n\027SET_THE_URL_OF_THE_MMSC\020" +
-      "\000\022\025\n\021SET_THE_MMS_PROXY\020\001\022-\n)SET_THE_PARA" +
-      "METER_FOR_SENDING_MMS_MESSAGE\020\002\022%\n!SET_C",
-      "HARACTER_SETS_AND_INPUT_MODE\020\003\022\025\n\021WRITE_" +
-      "MMS_MESSAGE\020\004\022\024\n\020SEND_MMS_MESSAGE\020\005\022#\n\037M" +
-      "ENAGE_THE_RECEIVED_MMS_MESSAGE\020\006\022\035\n\031READ" +
-      "_RECEIVED_MMS_MESSAGE\020\007\022%\n!RECEIVE_MMS_M" +
-      "ESSAGE_FROM_THE_MMSC\020\010\022(\n$SET_PRIORITY_O" +
-      "F_MMS_MESSAGE_AND_CALL\020\t\022.\n*SET_DUR_ATTR" +
-      "IBUTE_VALUE_IN_THE_SMIL_SCRIPT\020\n\022\032\n\026SET_" +
-      "MMS_SMS_TRANSACTOR\020\013\022\036\n\032ENABLE_OUTPUT_TE" +
-      "XT_IN_USC2\020\014\022\025\n\021OUTPUT_FILE_STYLE\020\r*\350\001\n\016" +
-      "STKMessageType\022\034\n\030TURN_ON_OFF_STK_FUNCTI",
-      "ON\020\000\022\030\n\024STK_PROFILE_DOWNLOAD\020\001\022\030\n\024STK_EN" +
-      "VELOPE_COMMAND\020\002\022\031\n\025STK_TERMINAL_RESPONS" +
-      "E\020\003\022\024\n\020TRIGGER_STK_CALL\020\004\022\023\n\017TRIGGER_STK" +
-      "_SMS\020\005\022\022\n\016TRIGGER_STK_SS\020\006\022\024\n\020TRIGGER_ST" +
-      "K_USSD\020\007\022\024\n\020TRIGGER_STK_DTMF\020\010*\305\006\n\016FTPMe" +
-      "ssageType\022/\n+OPEN_AN_FTP_SERVICE_TO_THE_" +
-      "GIVEN_FTP_SERVER\020\000\022\031\n\025CLOSE_THE_FTP_SERV" +
-      "ICE\020\001\022#\n\037UPLOAD_A_FILE_TO_THE_FTP_SERVER" +
-      "\020\002\022=\n9SET_THE_PATH_IN_THE_FTP_SERVER_TO_" +
-      "UPLOAD_OR_DOWNLOAD_FILE\020\003\0228\n4SET_THE_USE",
-      "R_NAME_OF_THE_ACCOUNT_TO_OPEN_FTP_SERVIC" +
-      "E\020\004\0227\n3SET_THE_PASSWORD_OF_THE_ACCOUNT_T" +
-      "O_OPEN_FTP_SERVICE\020\005\0228\n4SET_SOME_CONFIGU" +
-      "RABLE_PARAMETERS_FOR_THE_FTP_SERVICE\020\006\022\037" +
-      "\n\033QUERY_STATUS_OF_FTP_SERVICE\020\007\0229\n5QUERY" +
-      "_THE_REAL_SIZE_TRANSFERED_IN_THE_LATEST_" +
-      "TRANSFER\020\010\0220\n,RENAME_FILE_OR_FOLDER_NAME" +
-      "_ON_THE_FTP_SERVER\020\t\0226\n2QUERY_THE_SIZE_O" +
-      "F_APPOINTED_FILE_ON_THE_FTP_SERVER\020\n\022/\n+" +
-      "DELETE_THE_APPOINTED_FILE_ON_THE_FTP_SER",
-      "VER\020\013\0220\n,ESTABLISH_A_NEW_FILEFOLDER_ON_T" +
-      "HE_FTP_SERVER\020\014\022)\n%REMOVE_A_FILEFOLDER_O" +
-      "N_THE_FTP_SERVER\020\r\022D\n@LIST_CONTENTS_OF_D" +
-      "IRECTORY_OR_FILE_INFORMATION_ON_THE_FTP_" +
-      "SERVER\020\016\022<\n8LIST_FILE_NAMES_IN_THE_GIVEN" +
-      "_DIRECTORY_ON_THE_FTP_SERVER\020\017*\375\002\n\017FileM" +
-      "essageType\022\031\n\025GET_STORAGE_DATE_SIZE\020\000\022\016\n" +
-      "\nLIST_FILES\020\001\022\032\n\026UPLOAD_FILE_TO_STORAGE\020" +
-      "\002\022\036\n\032DOWNLOAD_FILE_FROM_STORAGE\020\003\022\032\n\026DEL" +
-      "ETE_FILE_IN_STORAGE\020\004\022\r\n\tMOVE_FILE\020\005\022\r\n\t",
-      "OPEN_FILE\020\006\022\r\n\tREAD_FILE\020\007\022\016\n\nWRITE_FILE" +
-      "\020\010\022\r\n\tSEEK_FILE\020\t\022\016\n\nCLOSE_FILE\020\n\022\"\n\036GET" +
-      "_OFFSET_OF_THE_FILE_POINTER\020\013\0224\n0FORCE_T" +
-      "O_WRITE_DATA_REMAINING_IN_THE_FILE_BUFFE" +
-      "R\020\014\0221\n-TRUNCATE_THE_SPECIFIED_FILE_FROM_" +
-      "FILE_POINTER\020\r*\244\001\n\017HTTPMessageType\022\027\n\023SE" +
-      "T_HTTP_SERVER_URL\020\000\022\031\n\025SEND_HTTP_GET_REQ" +
-      "UEST\020\001\022\035\n\031READ_HTTP_SERVER_RESPONSE\020\002\022\032\n" +
-      "\026SEND_HTTP_POST_REQUEST\020\003\022\"\n\036DOWNLODA_FI" +
-      "LE_FROM_HTTP_SERVER\020\004*\240\037\n\005Error\022\006\n\002OK\020\000\022",
-      "\020\n\014UNKNOW_ERROR\020\001\022\020\n\014SERVICE_BUSY\020\003\022\034\n\030F" +
-      "AILED_TO_GET_IP_ADDRESS\020\004\022\021\n\rNETWORK_ERR" +
-      "OR\020\005\022\026\n\022FTP_SESSION_CLOSED\020\006\022\032\n\026DATA_CON" +
-      "NECTION_CLOSED\020\007\022#\n\037GPRS_CSD_CONTEXT_IS_" +
-      "DEACTIVATED\020\010\022\013\n\007TIMEOUT\020\t\022\033\n\027INPUT_PARA" +
-      "METER_ILLEGAL\020\n\022$\n FILE_NOT_FOUND_IN_LOC" +
-      "AL_POSITION\020\013\022(\n$FAILED_TO_GET_FILE_IN_L" +
-      "OCAL_POSITION\020\014\022\024\n\020NO_ENOUGH_MEMORY\020\r\022!\n" +
-      "\035FAILED_TO_SAVE_THE_ATTACHMENT\020\016\022 \n\034THE_" +
-      "INPUT_PARAMETER_IS_WRONG\020\017\022$\n\037FTP_SERVER",
-      "_CANT_SUPPORT_SERVICE\020\245\003\022#\n\036FAILDE_TO_OP" +
-      "EN_DATA_CONNECTION\020\251\003\022/\n*THE_CONNECTION_" +
-      "IS_CLOSED_AND_STOP_TRANSFER\020\252\003\022\'\n\"THE_RE" +
-      "QUEST_FOR_FILE_ISNT_OPERATED\020\302\003\022)\n$THE_F" +
-      "TP_SERVER_HAS_NOT_ENOUGH_MEMORY\020\304\003\022+\n&TH" +
-      "E_FORMAT_OF_THE_FTP_COMMAND_IS_WRONG\020\364\003\022" +
-      ",\n\'THE_PATTERN_OF_THE_FTP_COMMAND_IS_WRO" +
-      "NG\020\365\003\0220\n+THE_FTP_COMMAND_ISNT_OPERATED_B" +
-      "Y_FTP_SERVER\020\366\003\022\035\n\030BAD_SEQUENCE_OF_COMMA" +
-      "NDS\020\367\003\022&\n!COMMAND_PARAMETER_NOT_IMPLEMEN",
-      "TED\020\370\003\022!\n\034DOMAIN_DOES_NOT_ACCEPT_EMAIL\020\211" +
-      "\004\022\034\n\027NOT_LOGIN_TO_FTP_SERVER\020\222\004\022\"\n\035NEEDE" +
-      "D_INFORMATION_OF_ACCOUNT\020\224\004\022\032\n\025AUTHENTIC" +
-      "ATION_FAILED\020\227\004\022 \n\033THE_REQUEST_IS_NOT_OP" +
-      "ERATED\020\246\004\022\033\n\026THE_REQUEST_IS_STOPPED\020\247\004\022%" +
-      "\n THE_REQUEST_OF_A_FILE_IS_STOPPED\020\250\004\022\031\n" +
-      "\024FILE_NAME_IS_ILLEGAL\020\251\004\022\027\n\022TRANSACTION_" +
-      "FAILED\020\252\004\022\022\n\rHTTP_TIME_OUT\020\331\035\022\016\n\tHTTP_BU" +
-      "SY\020\332\035\022\023\n\016HTTP_UART_BUSY\020\333\035\022\030\n\023HTTP_GET_N" +
-      "O_REQUEST\020\334\035\022\026\n\021HTTP_NETWORK_BUSY\020\335\035\022\035\n\030",
-      "HTTP_NETWORK_OPEN_FAILED\020\336\035\022\033\n\026HTTP_NETW" +
-      "ORK_NO_CONFIG\020\337\035\022\032\n\025HTTP_NETWORK_DEACTIV" +
-      "E\020\340\035\022\027\n\022HTTP_NETWORK_ERROR\020\341\035\022\023\n\016HTTP_UR" +
-      "L_ERROR\020\342\035\022\023\n\016HTTP_EMPTY_URL\020\343\035\022\027\n\022HTTP_" +
-      "IP_ADDR_ERROR\020\344\035\022\023\n\016HTTP_DNS_ERROR\020\345\035\022\035\n" +
-      "\030HTTP_SOCKET_CREATE_ERROR\020\346\035\022\036\n\031HTTP_SOC" +
-      "KET_CONNECT_ERROR\020\347\035\022\033\n\026HTTP_SOCKET_READ" +
-      "_ERROR\020\350\035\022\034\n\027HTTP_SOCKET_WRITE_ERROR\020\351\035\022" +
-      "\026\n\021HTTP_SOCKET_CLOSE\020\352\035\022\033\n\026HTTP_DATA_ENC" +
-      "ODE_ERROR\020\353\035\022\033\n\026HTTP_DATA_DECODE_ERROR\020\354",
-      "\035\022\031\n\024HTTP_TO_READ_TIMEOUT\020\355\035\022\031\n\024HTTP_RES" +
-      "PONSE_FAILED\020\356\035\022\027\n\022INCOMING_CALL_BUSY\020\357\035" +
-      "\022\024\n\017VOICE_CALL_BUSY\020\360\035\022\022\n\rINPUT_TIMEOUT\020" +
-      "\361\035\022\026\n\021WAIT_DATA_TIMEOUT\020\362\035\022\037\n\032WAIT_HTTP_" +
-      "RESPONSE_TIMEOUT\020\363\035\022\026\n\021ALLOC_MEMORY_FAIL" +
-      "\020\364\035\022\031\n\024HTTP_NEED_RELOCATION\020\365\035\022\030\n\023INVALI" +
-      "D_INPUT_VALUE\020\231\036\022\021\n\014MMS_TIME_OUT\020\275\036\022\021\n\014U" +
-      "RL_TOO_LONG\020\276\036\022\020\n\013INVALID_URL\020\277\036\022\026\n\021UNSU" +
-      "PPORTED_PROXY\020\300\036\022\032\n\025INVALID_PROXY_ADDRES" +
-      "S\020\301\036\022\025\n\020IP_ADDRESS_ERROR\020\302\036\022\016\n\tDNS_ERROR",
-      "\020\303\036\022\024\n\017PARAMETER_ERROR\020\304\036\022\030\n\023TO_ADDRESS_" +
-      "EXCEEDED\020\305\036\022\030\n\023CC_ADDRESS_EXCEEDED\020\306\036\022\031\n" +
-      "\024BCC_ADDRESS_EXCEEDED\020\307\036\022$\n\037APPENDED_FIL" +
-      "E_CAPACITY_EXCEEDED\020\310\036\022\027\n\022FILE_NAME_TOO_" +
-      "LONG\020\311\036\022 \n\033THE_NUMBER_OF_FILE_EXCEEDED\020\312" +
-      "\036\022\031\n\024NON_EXISTENT_ADDRESS\020\313\036\022\025\n\020UFS_STOR" +
-      "AGE_FULL\020\314\036\022\017\n\nDRIVE_FULL\020\315\036\022\020\n\013DRIVE_ER" +
-      "ROR\020\316\036\022\016\n\tNOT_FOUND\020\317\036\022\026\n\021INVALID_FILE_N" +
-      "AME\020\320\036\022\031\n\024FILE_ALREADY_EXISTED\020\321\036\022\032\n\025FAI" +
-      "LED_TO_CREATE_FILE\020\322\036\022\031\n\024FAILED_TO_WRITE",
-      "_FILE\020\323\036\022\030\n\023FAILED_TO_OPEN_FILE\020\324\036\022\030\n\023FA" +
-      "ILED_TO_READ_FILE\020\325\036\022\r\n\010MMS_BUSY\020\326\036\022\025\n\020S" +
-      "ENDING_MMS_BUSY\020\327\036\022\030\n\023SENDING_MMS_STOPPE" +
-      "D\020\330\036\022\034\n\027ALREADY_STOPPED_TO_SEND\020\331\036\022\027\n\022RE" +
-      "CEIVING_MMS_BUSY\020\332\036\022\032\n\025RECEIVING_MMS_STO" +
-      "PPED\020\333\036\022\034\n\027ALREADY_STOPPED_RECEIVE\020\334\036\022\032\n" +
-      "\025HTTP_RESPONSE_FALIURE\020\335\036\022\031\n\024INVALID_MMS" +
-      "_RESPONSE\020\336\036\022\027\n\022MMS_RESPONSE_ERROR\020\337\036\022\031\n" +
-      "\024INVALID_PUSH_MESSAGE\020\340\036\022\027\n\022ALREADY_DONW" +
-      "LOADED\020\341\036\022\021\n\014NETWORK_BUSY\020\342\036\022\033\n\026FAILED_T",
-      "O_OPEN_NETWORK\020\343\036\022\032\n\025NETWORK_NO_CONFIGUR" +
-      "ED\020\344\036\022\030\n\023NETWORK_DEACTIVATED\020\345\036\022\026\n\021MMS_N" +
-      "ETWORK_ERROR\020\346\036\022\025\n\020NETWORK_SHUTDOWN\020\347\036\022\016" +
-      "\n\tUART_BUSY\020\350\036\022\021\n\014UART_ESCAPED\020\351\036\022\034\n\027FAI" +
-      "LED_TO_CREATE_SOCKET\020\352\036\022\035\n\030FAILED_TO_CON" +
-      "NECT_SOCKET\020\353\036\022\032\n\025FAILED_TO_READ_SOCKET\020" +
-      "\354\036\022\033\n\026FAILED_TO_WRITE_SOCKET\020\355\036\022\022\n\rSOCKE" +
-      "T_CLOSED\020\356\036\022\025\n\020MMS_LENGTH_ERROR\020\357\036\022\031\n\024FA" +
-      "ILED_TO_ENCODE_MMS\020\360\036\022\031\n\024FAILED_TO_DECOD" +
-      "E_MMS\020\361\036\022\032\n\025FAILED_TO_DECODE_HTTP\020\362\036\022\"\n\035",
-      "FAILED_TO_DECODE_PUSH_MESSAGE\020\363\036\022\024\n\017PDU_" +
-      "ALIGN_ERROR\020\364\036\022\030\n\023PDU_CHARACTER_ERROR\020\365\036" +
-      "\022\024\n\017STRING_TOO_LONG\020\366\036\022\r\n\010MMS_FULL\020\367\036\022\025\n" +
-      "\020NON_EXISTENT_MMS\020\370\036\022\024\n\017INVALID_ADDRESS\020" +
-      "\371\036\022\030\n\023MMS_VOICE_CALL_BUSY\020\372\036\022\030\n\023ALLOC_ME" +
-      "MORY_FAILED\020\373\036\022\026\n\021EXCEED_MAX_LENGTH\020\240\037\022\023" +
-      "\n\016OPEN_FILE_FAIL\020\241\037\022\024\n\017WRITE_FILE_FAIL\020\242" +
-      "\037\022\022\n\rGET_SIZE_FAIL\020\243\037\022\016\n\tREAD_FAIL\020\244\037\022\023\n" +
-      "\016LIST_FILE_FAIL\020\245\037\022\025\n\020DELETE_FILE_FAIL\020\246" +
-      "\037\022\027\n\022GET_DISC_INFO_FAIL\020\247\037\022\r\n\010NO_SPACE\020\250",
-      "\037\022\r\n\010TIME_OUT\020\251\037\022\030\n\023HTTP_FILE_NOT_FOUND\020" +
-      "\252\037\022\023\n\016FILE_TOO_LARGE\020\253\037\022\027\n\022FILE_ALREADY_" +
-      "EXIST\020\254\037\022\026\n\021INVALID_PARAMETER\020\255\037\022\021\n\014DRIV" +
-      "ER_ERROR\020\256\037\022\020\n\013CREATE_FAIL\020\257\037\022\022\n\rACCESS_" +
-      "DENIED\020\260\037\022\026\n\021FILE_IS_TOO_LARGE\020\261\037\022\021\n\014WRO" +
-      "NG_FORMAT\020\314!\022\024\n\017AUDIO_TASK_BUSY\020\316!\022\027\n\022CR" +
-      "EATE_FILE_FAILED\020\317!\022/\n*ADDITIONAL_RECORD" +
-      "ING_IN_A_DIFFERENT_FORMAT\020\320!\022\016\n\tDISC_FUL" +
-      "L\020\321!\022\035\n\030WRITE_PROTECTION_ON_FILE\020\322!\022\033\n\026R" +
-      "ECORDING_UNKNOW_ERROR\020\223#B!\n\023com.rtrk.atc",
-      "ommandsB\nATCommandsb\006proto3"
+      "geType\022\014\n\004test\030\002 \001(\010\022\021\n\texecution\030\003 \001(\010\022" +
+      "\014\n\004read\030\004 \001(\010\022\023\n\013namePattern\030\005 \001(\t\022\020\n\010fr" +
+      "eeSize\030\006 \001(\005\022\021\n\ttotalSize\030\007 \001(\005\022\024\n\014maxAl" +
+      "locSize\030\010 \001(\005\022\023\n\013UFSFileSize\030\t \001(\005\022\025\n\rUF" +
+      "SFileNumber\030\n \001(\005\022\020\n\010fileName\030\013 \001(\t\022\020\n\010f" +
+      "ileSize\030\014 \001(\005\022\017\n\007ramSize\030\r \001(\005\022\022\n\nupload" +
+      "Size\030\016 \001(\005\022\017\n\007timeout\030\017 \001(\005\022\017\n\007ackMode\030\020" +
+      " \001(\005\022\023\n\013srcFileName\030\021 \001(\t\022\024\n\014destFileNam",
+      "e\030\022 \001(\t\022\014\n\004copy\030\023 \001(\005\022\021\n\towerwrite\030\024 \001(\005" +
+      "\022\014\n\004mode\030\025 \001(\005\022\016\n\006length\030\026 \001(\005\022\022\n\nfileHa" +
+      "ndle\030\027 \001(\t\022\022\n\nreadLength\030\030 \001(\005\022\025\n\rwritte" +
+      "nLength\030\031 \001(\005\022\023\n\013totalLength\030\032 \001(\005\022\016\n\006of" +
+      "fset\030\033 \001(\005\022\020\n\010position\030\034 \001(\005\022\020\n\010checksum" +
+      "\030\035 \001(\005\022\'\n\005error\030\036 \001(\0162\030.com.rtrk.protobu" +
+      "f.Error\"\271\003\n\nFTPCommand\0226\n\013messageType\030\001 " +
+      "\001(\0162!.com.rtrk.protobuf.FTPMessageType\022\020" +
+      "\n\010hostName\030\002 \001(\t\022\014\n\004port\030\003 \001(\005\022\'\n\005error\030" +
+      "\004 \001(\0162\030.com.rtrk.protobuf.Error\022\020\n\010fileN",
+      "ame\030\005 \001(\t\022\020\n\010fileSize\030\006 \001(\005\022\014\n\004time\030\007 \001(" +
+      "\005\022\022\n\nuploadSize\030\010 \001(\005\022\024\n\014downloadSize\030\t " +
+      "\001(\005\022\020\n\010pathName\030\n \001(\t\022\020\n\010username\030\013 \001(\t\022" +
+      "\020\n\010password\030\014 \001(\t\022\014\n\004type\030\r \001(\005\022\r\n\005value" +
+      "\030\016 \001(\005\022\016\n\006status\030\017 \001(\t\022\016\n\006length\030\020 \001(\005\022\022" +
+      "\n\nsourceName\030\021 \001(\t\022\022\n\ntargetName\030\022 \001(\t\022\014" +
+      "\n\004name\030\024 \001(\t\022\016\n\006return\030\023 \001(\005\022\025\n\rdirector" +
+      "yName\030\025 \001(\t\"\266\005\n\nMMSCommand\0226\n\013messageTyp" +
+      "e\030\001 \001(\0162!.com.rtrk.protobuf.MMSMessageTy" +
+      "pe\022\017\n\007MMSCURL\030\002 \001(\t\022\014\n\004type\030\003 \001(\005\022\017\n\007gat",
+      "eway\030\004 \001(\t\022\014\n\004port\030\005 \001(\005\022\r\n\005valid\030\006 \001(\005\022" +
+      "\020\n\010priority\030\007 \001(\005\022\022\n\nsendReport\030\010 \001(\010\022\022\n" +
+      "\nreadReport\030\t \001(\010\022\017\n\007visible\030\n \001(\005\022\r\n\005cl" +
+      "ass\030\013 \001(\005\022\017\n\007charset\030\014 \001(\t\022\021\n\tinputMode\030" +
+      "\r \001(\005\022\020\n\010function\030\016 \001(\005\022\017\n\007operate\030\017 \001(\005" +
+      "\022\020\n\010opstring\030\020 \001(\t\022\014\n\004from\030\021 \001(\005\022\n\n\002to\030\022" +
+      " \001(\005\022\020\n\010MMSIndex\030\023 \001(\005\022\023\n\013fromAddress\030\024 " +
+      "\001(\t\022\027\n\017isNotDownloaded\030\025 \001(\010\022\014\n\004date\030\026 \001" +
+      "(\t\022\014\n\004time\030\027 \001(\t\022\023\n\013messageSize\030\030 \001(\005\022\014\n" +
+      "\004para\030\031 \001(\005\022\020\n\010fileName\030\032 \001(\t\022\024\n\014downloa",
+      "dSize\030\033 \001(\005\022\020\n\010checksum\030\034 \001(\005\022\024\n\014DURAttr" +
+      "ibute\030\035 \001(\003\022\020\n\010SMSToSIM\030\036 \001(\005\022\022\n\nenableU" +
+      "SC2\030\037 \001(\010\022\021\n\tbigEndian\030  \001(\010\022\023\n\013outputSt" +
+      "yle\030! \001(\005\022\020\n\010fileType\030\" \001(\005\022\'\n\005error\030# \001" +
+      "(\0162\030.com.rtrk.protobuf.Error\"\356\006\n\017QuecCel" +
+      "lCommand\022;\n\013messageType\030\001 \001(\0162&.com.rtrk" +
+      ".protobuf.QuecCellMessageType\022\016\n\006status\030" +
+      "\002 \001(\005\022\030\n\020operatorInString\030\003 \001(\t\022\035\n\025opera" +
+      "torInShortString\030\004 \001(\t\022\030\n\020operatorInNumb" +
+      "er\030\005 \001(\005\022\016\n\006indexN\030\006 \001(\005\022\030\n\020locationArea",
+      "Code\030\007 \001(\005\022\016\n\006cellID\030\010 \001(\005\022\037\n\027baseStatio" +
+      "nIdentityCode\030\t \001(\005\022\024\n\014receiveLevel\030\n \001(" +
+      "\005\022+\n#absoluteRadioFrequencyChannelNumber" +
+      "\030\013 \001(\001\022\014\n\004mode\030\014 \001(\005\022\014\n\004dump\030\r \001(\005\022\031\n\021mo" +
+      "bileCountryCode\030\016 \001(\005\022\031\n\021mobileNetworkCo" +
+      "de\030\017 \001(\005\022\037\n\027broadcastControlChannel\030\020 \001(" +
+      "\005\022\031\n\021receiveSignalLeve\030\021 \001(\001\022\n\n\002c1\030\022 \001(\005" +
+      "\022\n\n\002c2\030\023 \001(\005\022\034\n\024transmitPowerMaximum\030\024 \001" +
+      "(\001\022\032\n\022receiveLevelAccess\030\025 \001(\005\022\021\n\ttimesl" +
+      "ots\030\026 \001(\005\022\021\n\tMAIOValue\030\027 \001(\005\022\020\n\010HSNValue",
+      "\030\030 \001(\005\022\013\n\003TCH\030\031 \001(\005\022\025\n\rtimingAdvance\030\032 \001" +
+      "(\005\022\024\n\014RXQualitySub\030\033 \001(\005\022\025\n\rRXQualityFul" +
+      "l\030\034 \001(\005\022\"\n\032numberOfNeighboringSixCell\030\035 " +
+      "\001(\005\022\017\n\007band100\030\036 \001(\010\022\017\n\007rrState\030\037 \001(\005\022\023\n" +
+      "\013channelType\030  \001(\t\022\027\n\017automaticReport\030! " +
+      "\001(\010\022\014\n\004line\030\" \001(\005\022\025\n\rforbiddenData\030# \001(\t" +
+      "\022\014\n\004band\030$ \001(\005\022\r\n\005value\030% \001(\005\"\333\001\n\020Record" +
+      "ingCommand\022<\n\013messageType\030\001 \001(\0162\'.com.rt" +
+      "rk.protobuf.RecordingMessageType\022\r\n\005stat" +
+      "e\030\002 \001(\005\022\020\n\010fileName\030\003 \001(\t\022\016\n\006format\030\004 \001(",
+      "\005\022\016\n\006repeat\030\005 \001(\010\022\016\n\006volume\030\006 \001(\005\022\017\n\007cha" +
+      "nnel\030\007 \001(\005\022\'\n\005error\030\010 \001(\0162\030.com.rtrk.pro" +
+      "tobuf.Error\"\343\002\n\013SMTPCommand\0227\n\013messageTy" +
+      "pe\030\001 \001(\0162\".com.rtrk.protobuf.SMTPMessage" +
+      "Type\022\014\n\004user\030\002 \001(\t\022\020\n\010password\030\003 \001(\t\022\017\n\007" +
+      "address\030\004 \001(\t\022\014\n\004name\030\005 \001(\t\022\025\n\rserverAdd" +
+      "ress\030\006 \001(\t\022\014\n\004port\030\007 \001(\005\022\014\n\004mode\030\010 \001(\005\022\014" +
+      "\n\004type\030\t \001(\005\022\024\n\014emailAddress\030\n \001(\t\022\016\n\006re" +
+      "sult\030\013 \001(\005\022\017\n\007charset\030\014 \001(\005\022\r\n\005title\030\r \001" +
+      "(\t\022\017\n\007timeout\030\016 \001(\005\022\021\n\tfileIndex\030\017 \001(\005\022\020",
+      "\n\010fileName\030\020 \001(\t\022\020\n\010fileSize\030\021 \001(\005\022\r\n\005va" +
+      "lue\030\022 \001(\005\"\216\001\n\nSTKCommand\0226\n\013messageType\030" +
+      "\001 \001(\0162!.com.rtrk.protobuf.STKMessageType" +
+      "\022\t\n\001n\030\002 \001(\005\022\017\n\007profile\030\003 \001(\t\022\022\n\nsatComma" +
+      "nd\030\004 \001(\t\022\030\n\020terminalResponse\030\005 \001(\t\"\243\001\n\016G" +
+      "eneralCommand\022;\n\013messageType\030\001 \001(\0162&.com" +
+      ".rtrk.protobuf.GeneralMesssageType\022\r\n\005va" +
+      "lue\030\002 \001(\005\022\t\n\001n\030\003 \001(\005\022\025\n\rfunctionality\030\004 " +
+      "\001(\005\022\r\n\005reset\030\005 \001(\005\022\024\n\014characterSet\030\006 \001(\t" +
+      "\"\332\003\n\035SerialInterfaceControlCommand\022I\n\013me",
+      "ssageType\030\001 \001(\01624.com.rtrk.protobuf.Seri" +
+      "alInterfaceControlMessageType\022\r\n\005value\030\002" +
+      " \001(\005\022\016\n\006format\030\003 \001(\005\022\017\n\007partity\030\004 \001(\005\022\020\n" +
+      "\010DCEByDTE\030\005 \001(\005\022\020\n\010DTEByDCE\030\006 \001(\005\022\014\n\004rat" +
+      "e\030\007 \001(\005\022\014\n\004mode\030\010 \001(\005\022\016\n\006subset\030\t \001(\005\022\021\n" +
+      "\tportSpeed\030\n \001(\005\022\030\n\020maximumFrameSize\030\013 \001" +
+      "(\005\022\032\n\022acknowledmentTimer\030\014 \001(\005\022&\n\036maximu" +
+      "mNumberOfRetransmissions\030\r \001(\005\022\025\n\rrespon" +
+      "seTimer\030\016 \001(\005\022\033\n\023wakeUpResponseTimer\030\017 \001" +
+      "(\005\022\023\n\013windowsSize\030\020 \001(\005\022\020\n\010baudRate\030\021 \001(",
+      "\005\022\020\n\010dataBits\030\022 \001(\005\022\020\n\010stopBits\030\023 \001(\005\"\377\002" +
+      "\n\024StatusControlCommand\022@\n\013messageType\030\001 " +
+      "\001(\0162+.com.rtrk.protobuf.StatusControlMes" +
+      "sageType\022\022\n\nlocationID\030\002 \001(\005\022\r\n\005cause\030\003 " +
+      "\001(\t\022\013\n\003pas\030\004 \001(\005\022\016\n\006status\030\005 \001(\005\022\021\n\trefu" +
+      "seSMS\030\006 \001(\005\022\022\n\nrefuseCall\030\007 \001(\005\022\014\n\004mode\030" +
+      "\010 \001(\005\022\020\n\010extunsol\030\t \001(\t\022\r\n\005state\030\n \001(\005\022\016" +
+      "\n\006enable\030\013 \001(\005\022\014\n\004time\030\014 \001(\t\022\032\n\022datlight" +
+      "SavingTime\030\r \001(\t\022\023\n\013insertLevel\030\016 \001(\005\022\021\n" +
+      "\tpinChoice\030\017 \001(\005\022\024\n\014insertStatus\030\020 \001(\005\022\t",
+      "\n\001n\030\021 \001(\005\022\014\n\004type\030\022 \001(\005\"\224\004\n\021SIMRelatedCo" +
+      "mmand\022=\n\013messageType\030\001 \001(\0162(.com.rtrk.pr" +
+      "otobuf.SIMRelatedMessageType\022\013\n\003fac\030\002 \001(" +
+      "\t\022\014\n\004mode\030\003 \001(\005\022\020\n\010password\030\004 \001(\t\022\r\n\005cla" +
+      "ss\030\005 \001(\005\022\016\n\006status\030\006 \001(\005\022\013\n\003pin\030\007 \001(\t\022\016\n" +
+      "\006newPin\030\010 \001(\t\022\021\n\tpwdLength\030\t \001(\005\022\016\n\006oldP" +
+      "wd\030\n \001(\t\022\016\n\006newPwd\030\013 \001(\t\022\017\n\007command\030\014 \001(" +
+      "\005\022\016\n\006fileID\030\r \001(\005\022\n\n\002P1\030\016 \001(\005\022\n\n\002P2\030\017 \001(" +
+      "\005\022\n\n\002P3\030\020 \001(\005\022\013\n\003SW1\030\021 \001(\005\022\013\n\003SW2\030\022 \001(\005\022" +
+      "\014\n\004data\030\023 \001(\t\022\020\n\010response\030\024 \001(\t\022\016\n\006lengt",
+      "h\030\025 \001(\005\022\020\n\010CCIDData\030\026 \001(\t\022\014\n\004GID1\030\027 \001(\005\022" +
+      "\014\n\004GID2\030\030 \001(\005\022\032\n\022serviceProvideName\030\031 \001(" +
+      "\t\022\023\n\013displayMode\030\032 \001(\005\022\014\n\004chv1\030\033 \001(\005\022\014\n\004" +
+      "chv2\030\034 \001(\005\022\014\n\004puk1\030\035 \001(\005\022\014\n\004puk2\030\036 \001(\005\"\264" +
+      "\003\n\025NetworkServiceCommand\022A\n\013messageType\030" +
+      "\001 \001(\0162,.com.rtrk.protobuf.NetworkService" +
+      "MessageType\022\016\n\006status\030\002 \001(\005\022\020\n\010operator\030" +
+      "\003 \001(\005\022\014\n\004mode\030\004 \001(\005\022\016\n\006format\030\005 \001(\005\022\t\n\001n" +
+      "\030\006 \001(\005\022\030\n\020locationAreaCode\030\007 \001(\t\022\016\n\006cell" +
+      "ID\030\010 \001(\t\022\014\n\004rssi\030\t \001(\005\022\013\n\003ber\030\n \001(\005\022\r\n\005i",
+      "ndex\030\013 \001(\005\022\020\n\010numericn\030\014 \001(\t\022\016\n\006alphan\030\r" +
+      " \001(\t\022\016\n\006opBand\030\016 \001(\t\022\014\n\004dump\030\017 \001(\005\022\014\n\004ba" +
+      "nd\030\020 \001(\005\022\021\n\tfrequency\030\021 \001(\005\022\026\n\016signalStr" +
+      "ength\030\022 \001(\005\022\020\n\010band1900\030\023 \001(\005\022\016\n\006arfcn1\030" +
+      "\024 \001(\005\022\016\n\006arfcn2\030\025 \001(\005\022\016\n\006arfcn3\030\026 \001(\005\"\260\003" +
+      "\n\022CallRelatedCommand\022>\n\013messageType\030\001 \001(" +
+      "\0162).com.rtrk.protobuf.CallRelatedMessage" +
+      "Type\022\016\n\006number\030\002 \001(\t\022\023\n\013GSMModifier\030\003 \001(" +
+      "\t\022\036\n\026interworkinWindowsSize\030\030 \001(\005\022\030\n\020mob" +
+      "ileWindowSize\030\005 \001(\005\022\032\n\022acknowledmentTime",
+      "r\030\006 \001(\005\022\037\n\027retransimissionAttempts\030\007 \001(\005" +
+      "\022\022\n\nRPLVersion\030\010 \001(\005\022\032\n\022resequencingPeri" +
+      "od\030\t \001(\005\022\t\n\001n\030\n \001(\005\022\014\n\004type\030\013 \001(\005\022\r\n\005ind" +
+      "ex\030\014 \001(\005\022\013\n\003dir\030\r \001(\005\022\014\n\004stat\030\016 \001(\005\022\014\n\004m" +
+      "ode\030\017 \001(\005\022\022\n\nmultiparty\030\020 \001(\005\022\025\n\rspeechC" +
+      "hannel\030\021 \001(\005\022\022\n\ndisableATH\030\022 \001(\010\"\361\006\n\nSMS" +
+      "Command\0227\n\014messsageType\030\001 \001(\0162!.com.rtrk" +
+      ".protobuf.SMSMessageType\022\017\n\007service\030\002 \001(" +
+      "\005\022\037\n\027mobileTerminatedMessage\030\003 \001(\005\022\035\n\025mo" +
+      "bileOrientedMessage\030\004 \001(\005\022\034\n\024broadcastTy",
+      "peMessage\030\005 \001(\005\022\014\n\004mode\030\006 \001(\005\022\021\n\tSCAddre" +
+      "ss\030\007 \001(\t\022\023\n\013toSCAddress\030\010 \001(\005\022\014\n\004mem1\030\t " +
+      "\001(\t\022\014\n\004mem2\030\n \001(\t\022\014\n\004mem3\030\013 \001(\t\022\r\n\005index" +
+      "\030\014 \001(\005\022\017\n\007delflag\030\r \001(\005\022\r\n\005alpha\030\016 \001(\t\022\032" +
+      "\n\022destinationAddress\030\017 \001(\t\022\014\n\004data\030\020 \001(\014" +
+      "\022\016\n\006length\030\021 \001(\005\022\032\n\022originatingAddress\030\022" +
+      " \001(\t\022\013\n\003pdu\030\023 \001(\005\022\036\n\026serviceCenterTimeSt" +
+      "amp\030\024 \001(\t\022\034\n\024TPDestinationAddress\030\025 \001(\005\022" +
+      "\034\n\024TPOriginatingAddress\030\026 \001(\005\022\n\n\002fo\030\027 \001(" +
+      "\005\022\031\n\021messageIdentifier\030\030 \001(\005\022\032\n\022protocol",
+      "Identifier\030\031 \001(\005\022\014\n\004stat\030\032 \001(\t\022\026\n\016validi" +
+      "tyPeriod\030\033 \001(\t\022\030\n\020messageReference\030\034 \001(\005" +
+      "\022\016\n\006ackpdu\030\035 \001(\005\022\023\n\013commandType\030\036 \001(\005\022\025\n" +
+      "\rmessageNumber\030\037 \001(\005\022\n\n\002ds\030  \001(\005\022\016\n\006buff" +
+      "er\030! \001(\005\022\017\n\007profile\030\" \001(\005\022\032\n\022messageIden" +
+      "tifiers\030# \001(\t\022\014\n\004dcss\030$ \001(\t\022\014\n\004show\030% \001(" +
+      "\005\022\027\n\017dataCodinScheme\030& \001(\005\022\014\n\004type\030\' \001(\t" +
+      "\022\016\n\006status\030( \001(\005\022\022\n\nfirstOctet\030) \001(\005\"\240\002\n" +
+      "\020PhonebookCommand\022<\n\013messageType\030\001 \001(\0162\'" +
+      ".com.rtrk.protobuf.PhonebookMessageType\022",
+      "\017\n\007storage\030\002 \001(\t\022\017\n\007nlength\030\003 \001(\005\022\017\n\007tle" +
+      "ngth\030\004 \001(\005\022\r\n\005index\030\005 \001(\005\022\016\n\006number\030\006 \001(" +
+      "\t\022\014\n\004type\030\007 \001(\005\022\014\n\004text\030\010 \001(\t\022\016\n\006index1\030" +
+      "\t \001(\005\022\016\n\006index2\030\n \001(\005\022\020\n\010findText\030\013 \001(\t\022" +
+      "\016\n\006alphax\030\014 \001(\t\022\017\n\007numberx\030\r \001(\t\022\r\n\005type" +
+      "x\030\016 \001(\005\"\363\002\n\013GPRSCommand\0227\n\013messageType\030\001" +
+      " \001(\0162\".com.rtrk.protobuf.GPRSMessageType" +
+      "\022\r\n\005state\030\002 \001(\005\022\013\n\003cid\030\003 \001(\005\022\017\n\007PDPType\030" +
+      "\004 \001(\t\022\013\n\003APN\030\005 \001(\t\022\022\n\nPDPAddress\030\006 \001(\t\022\r" +
+      "\n\005dComp\030\007 \001(\005\022\r\n\005hComp\030\010 \001(\005\022\022\n\npreceden",
+      "ce\030\t \001(\005\022\r\n\005delay\030\n \001(\005\022\023\n\013reliability\030\013" +
+      " \001(\005\022\014\n\004peek\030\014 \001(\005\022\014\n\004mean\030\r \001(\005\022\013\n\003L2P\030" +
+      "\016 \001(\t\022\r\n\005class\030\017 \001(\t\022\014\n\004mode\030\020 \001(\005\022\t\n\001n\030" +
+      "\021 \001(\005\022\014\n\004stat\030\022 \001(\005\022\013\n\003lac\030\023 \001(\t\022\n\n\002ci\030\024" +
+      " \001(\t\022\017\n\007service\030\025 \001(\005\"\316\006\n\014TCPIPCommand\0228" +
+      "\n\013messageType\030\001 \001(\0162#.com.rtrk.protobuf." +
+      "TCPIPMessageType\022\r\n\005index\030\002 \001(\005\022\014\n\004mode\030" +
+      "\003 \001(\t\022\021\n\tIPAddress\030\004 \001(\t\022\014\n\004port\030\005 \001(\005\022\022" +
+      "\n\ndomainName\030\006 \001(\t\022\016\n\006length\030\007 \001(\005\022\013\n\003AP" +
+      "N\030\010 \001(\t\022\020\n\010username\030\t \001(\t\022\020\n\010password\030\n ",
+      "\001(\t\022\014\n\004rate\030\013 \001(\005\022\r\n\005state\030\014 \001(\t\022\023\n\013sock" +
+      "etState\030\r \001(\t\022\023\n\013serverState\030\016 \001(\t\022\022\n\npr" +
+      "imaryDNS\030\017 \001(\t\022\023\n\013seondaryDNS\030\020 \001(\t\022\r\n\005e" +
+      "rror\030\021 \001(\005\022\014\n\004time\030\022 \001(\003\022\022\n\nsendPrompt\030\023" +
+      " \001(\005\022\013\n\003num\030\024 \001(\005\022\014\n\004type\030\025 \001(\005\022\013\n\003max\030\026" +
+      " \001(\003\022\022\n\ndialNumber\030\027 \001(\t\022\022\n\nconnection\030\030" +
+      " \001(\005\022\025\n\rnumberOfRetry\030\031 \001(\005\022\020\n\010waitTime\030" +
+      "\032 \001(\005\022\020\n\010sendSize\030\033 \001(\005\022\016\n\006escape\030\034 \001(\010\022" +
+      "\017\n\007channel\030\035 \001(\005\022\t\n\001n\030\036 \001(\005\022\014\n\004sent\030\037 \001(" +
+      "\005\022\r\n\005acked\030  \001(\005\022\016\n\006nAcked\030! \001(\005\022\t\n\001m\030\" ",
+      "\001(\005\022\n\n\002id\030# \001(\005\022\n\n\002sc\030$ \001(\005\022\013\n\003sid\030% \001(\005" +
+      "\022\016\n\006number\030& \001(\005\022\014\n\004host\030\' \001(\t\022\017\n\007timeou" +
+      "t\030( \001(\005\022\022\n\npingNumber\030) \001(\005\022\016\n\006result\030* " +
+      "\001(\005\022\r\n\005bytes\030+ \001(\005\022\013\n\003ttl\030, \001(\005\022\023\n\013final" +
+      "Result\030- \001(\005\022\020\n\010received\030. \001(\005\022\014\n\004lost\030/" +
+      " \001(\005\022\013\n\003min\0300 \001(\003\022\013\n\003avg\0301 \001(\003\"\335\002\n\033Suppl" +
+      "ementaryServiceCommand\022G\n\013messageType\030\001 " +
+      "\001(\01622.com.rtrk.protobuf.SupplementarySer" +
+      "viceMessageType\022\r\n\005reads\030\002 \001(\005\022\014\n\004mode\030\003" +
+      " \001(\005\022\016\n\006number\030\004 \001(\t\022\014\n\004type\030\005 \001(\005\022\022\n\nsu",
+      "baddress\030\006 \001(\t\022\016\n\006satype\030\007 \001(\005\022\r\n\005class\030" +
+      "\010 \001(\005\022\014\n\004time\030\t \001(\005\022\016\n\006status\030\n \001(\005\022\t\n\001n" +
+      "\030\013 \001(\005\022\r\n\005index\030\014 \001(\005\022\014\n\004info\030\r \001(\005\022\t\n\001m" +
+      "\030\016 \001(\005\022\013\n\003str\030\017 \001(\t\022\013\n\003dcs\030\020 \001(\005\022\r\n\005code" +
+      "1\030\021 \001(\005\022\r\n\005code2\030\022 \001(\005\"\312\004\n\014AudioCommand\022" +
+      "8\n\013messageType\030\001 \001(\0162#.com.rtrk.protobuf" +
+      ".AudioMessageType\022\r\n\005value\030\002 \001(\005\022\030\n\020inte" +
+      "rnalDuration\030\003 \001(\005\022\020\n\010duration\030\004 \001(\005\022\022\n\n" +
+      "dtmfString\030\005 \001(\t\022\014\n\004mode\030\006 \001(\005\022\r\n\005level\030" +
+      "\007 \001(\005\022\t\n\001n\030\010 \001(\005\022\021\n\tgainLevel\030\t \001(\005\022\017\n\007c",
+      "hannel\030\n \001(\005\022\r\n\005state\030\013 \001(\005\022\014\n\004type\030\014 \001(" +
+      "\005\022\021\n\tfrequency\030\r \001(\005\022\020\n\010periodON\030\016 \001(\005\022\021" +
+      "\n\tperiodOFF\030\017 \001(\005\022\022\n\noutputPath\030\020 \001(\005\022\027\n" +
+      "\017operateFunction\030\021 \001(\005\022\026\n\016functionStatus" +
+      "\030\022 \001(\005\022\017\n\007operate\030\023 \001(\005\022\023\n\013prefixPause\030\024" +
+      " \001(\005\022\024\n\014lowThreshold\030\025 \001(\005\022\025\n\rhighThresh" +
+      "old\030\026 \001(\005\022\020\n\010dtmfCode\030\027 \001(\t\022\027\n\017persisten" +
+      "ceTime\030\030 \001(\005\022\020\n\010ulVolume\030\031 \001(\005\022\020\n\010dlVolu" +
+      "me\030\032 \001(\005\022\027\n\017continuanceTime\030\033 \001(\003\022\020\n\010mut" +
+      "eTime\030\034 \001(\003\"\250\002\n\026HardwareRelatedCommand\022B",
+      "\n\013messageType\030\001 \001(\0162-.com.rtrk.protobuf." +
+      "HardwareRelatedMessageType\022\014\n\004time\030\002 \001(\t" +
+      "\022\r\n\005state\030\003 \001(\005\022\016\n\006repeat\030\004 \001(\005\022\r\n\005power" +
+      "\030\005 \001(\005\022\013\n\003bcs\030\006 \001(\005\022\013\n\003bcl\030\007 \001(\005\022\017\n\007volt" +
+      "age\030\010 \001(\005\022\016\n\006status\030\t \001(\005\022\r\n\005value\030\n \001(\005" +
+      "\022\t\n\001n\030\013 \001(\005\022\017\n\007ledMode\030\014 \001(\005\022\025\n\rthreshol" +
+      "dType\030\r \001(\005\022\021\n\tthreshold\030\016 \001(\005\"\205\001\n\014Other" +
+      "Command\0228\n\013messageType\030\001 \001(\0162#.com.rtrk." +
+      "protobuf.OtherMessageType\022\r\n\005value\030\002 \001(\005" +
+      "\022\t\n\001n\030\003 \001(\005\022\020\n\010timeMode\030\004 \001(\005\022\017\n\007indMode",
+      "\030\005 \001(\005*\206\002\n\020OtherMessageType\022#\n\037REISSUES_" +
+      "THE_LAST_COMMAND_GIVEN\020\000\022\031\n\025SET_COMMAND_" +
+      "ECHO_MODE\020\001\022*\n&SET_COMMAND_LINE_TERMINAT" +
+      "ION_CHARACTER\020\002\022%\n!SET_RESPONSE_FORMATTI" +
+      "NG_CHARACTER\020\003\022&\n\"SET_COMMAND_LINE_EDITI" +
+      "NG_CHARACTER\020\004\022\017\n\013SET_RI_TIME\020\005\022&\n\"BURST" +
+      "_TRANSITION_SIGNAL_INDICATION\020\006*\302\001\n\032Hard" +
+      "wareRelatedMessageType\022\t\n\005CLOCK\020\000\022\r\n\tSET" +
+      "_ALARM\020\001\022\022\n\016BATTERY_CHARGE\020\002\022\014\n\010READ_ADC" +
+      "\020\003\022\030\n\024CONFIGURE_SHOW_CLOCK\020\004\022&\n\"CONFIGUR",
+      "E_THE_NETWORK_LED_PATTERNS\020\005\022&\n\"CONFIGUR" +
+      "E_THE_THRESHOLD_OF_VOLTAGE\020\006*\231\004\n\020AudioMe" +
+      "ssageType\022 \n\034SET_MONITOR_SPEAKER_LOUDNES" +
+      "S\020\000\022\034\n\030SET_MONITOR_SPEAKER_MODE\020\001\022\021\n\rTON" +
+      "E_DURATION\020\002\022\034\n\030DTMF_AND_TONE_GENERATION" +
+      "\020\003\022\024\n\020ALERT_SOUND_MODE\020\004\022\026\n\022RINGER_SOUND" +
+      "_LEVEL\020\005\022\035\n\031LOUD_SPEAKER_VOLUME_LEVEL\020\006\022" +
+      "\020\n\014MUTE_CONTROL\020\007\022#\n\037CHANGE_THE_SIDE_TON" +
+      "E_GAIN_LEVEL\020\010\022$\n CHANGE_THE_MICROPHONE_" +
+      "GAIN_LEVEL\020\t\022\035\n\031GENERATE_LOCAL_DTMF_TONE",
+      "S\020\n\022\033\n\027SWAP_THE_AUDIO_CHANNELS\020\013\022 \n\034AUDI" +
+      "O_CHANNEL_LOOP_BACK_TEST\020\014\022 \n\034GENERATE_L" +
+      "OCAL_SPECIFIC_TONE\020\r\022\030\n\024SET_DTMF_OUTPUT_" +
+      "PATH\020\016\022\033\n\027SET_TONE_DETECTION_MODE\020\017\022\017\n\013D" +
+      "ETECT_DTMF\020\020\022\"\n\036PLAY_DTMF_TONE_DURING_TH" +
+      "E_CALL\020\021*\311\003\n\037SupplementaryServiceMessage" +
+      "Type\0221\n-CALL_FORWARDING_NUMBER_AND_CONDI" +
+      "TIONS_CONTROL\020\000\022\035\n\031CLOSED_USER_GROUP_CON" +
+      "TROL\020\001\022\030\n\024CALL_WAITING_CONTROL\020\002\022\034\n\030CALL" +
+      "_HOLD_AND_MULTIPARTY\020\003\022,\n(CALLING_LINE_I",
+      "DENTIFICATION_PRESENTATION\020\004\022C\n?CONTROL_" +
+      "WHETHER_OR_NOT_TO_SHOW_THE_NAME_OF_INCOM" +
+      "ING_CALL_NUMBER\020\005\022.\n*CONNECTED_LINE_IDEN" +
+      "TIFICATION_PRESENTATION\020\006\022#\n\037SHOW_ALPHA_" +
+      "FIELD_IN_COLP_STRING\020\007\022+\n\'UNSTRUCTURED_S" +
+      "UPPLEMENTARY_SERVICE_DATA\020\010\022\'\n#SUPPLEMEN" +
+      "TARY_SERVICES_NOTIFICATION\020\t*\252\n\n\020TCPIPMe" +
+      "ssageType\022 \n\034SET_UP_TCP_OR_UDP_CONNECTIO" +
+      "N\020\000\022+\n\'SEND_DATA_THROUGH_TCP_OR_UDP_CONN" +
+      "ECTION\020\001\022\037\n\033CLOSE_TCP_OR_UDP_CONNECTION\020",
+      "\002\022#\n\037DEACTIVATE_GPRS_CSD_PDP_CONTEXT\020\003\022\022" +
+      "\n\016SET_LOCAL_PORT\020\004\022.\n*START_TCPIP_TASK_A" +
+      "PN_USERNAME_AND_PASSWORD\020\005\022\033\n\027ACTIVE_GPR" +
+      "S_CSD_CONTEXT\020\006\022\030\n\024GET_LOCAL_IP_ADDRESS\020" +
+      "\007\022#\n\037QUERY_CURRENT_CONNECTION_STATUS\020\010\022-" +
+      "\n)QUERY_CONNECTION_STATUS_OF_CURRENT_ACC" +
+      "ESS\020\t\022\037\n\033QUERT_CURRENT_SERVER_STATUS\020\n\022 " +
+      "\n\034CONFIGURE_DOMAIN_NAME_SERVER\020\013\022-\n)QUER" +
+      "Y_THE_IP_ADDRESS_OF_GIVEN_DOMAIN_NAME\020\014\022" +
+      "1\n-CONNECT_WITH_IP_ADDRESS_OR_DOMAIN_NAM",
+      "E_SERVER\020\r\022(\n$ADD_AN_IP_HEADER_WHEN_RECE" +
+      "IVING_DATE\020\016\022\033\n\027SET_AUDIO_SENDING_TIMER\020" +
+      "\017\022\037\n\033SET_PROMT_WHEN_SENDING_DATA\020\020\022\027\n\023CO" +
+      "NFIGURE_AS_SERVER\020\021\022$\n SELECT_CSD_OR_GPR" +
+      "S_AS_THE_BEARER\020\022\022\025\n\021CHOOSE_CONNECTION\020\023" +
+      "\0227\n3SET_WHETHER_OR_NOT_TO_DISPLAY_THE_AD" +
+      "DRESS_OF_SENDER\020\024\022\"\n\036SAVE_TCPIP_APPLICAT" +
+      "ION_CONTEXT\020\025\022\036\n\032SELECT_TCPIP_TRANSFER_M" +
+      "ODE\020\026\0224\n0CONTROL_WHETHER_OR_NOT_TO_SHOW_" +
+      "THE_PROTOCOL_TYPE\020\027\022;\n7CONTROL_WHETHER_O",
+      "R_NOT_TO_ENABLE_MULTIPLE_TCPIP_SESSION\020\030" +
+      "\0226\n2CONTROL_WHETHER_OR_NOT_TO_DISPLAY_LO" +
+      "CAL_IP_ADDRESS\020\031\022*\n&SELECT_A_CONTEXT_AS_" +
+      "FOREGROUND_CONTEXT\020\032\022*\n&QUETY_THE_DATA_I" +
+      "NFORMATION_FOR_SENDING\020\033\0220\n,SET_THE_METH" +
+      "OD_TO_HANDLE_RECEIVED_TCPIP_DATA\020\034\022$\n RE" +
+      "TRIEVE_THE_RECEIVED_TCPIP_DATA\020\035\0225\n1CONT" +
+      "RO_WHETHER_OR_NOT_TO_ECHO_THE_DATA_FOR_Q" +
+      "ISEND\020\036\022\030\n\024PING_A_REMOTE_SERVER\020\037\022&\n\"SYN" +
+      "CHRONIZE_THE_LOCAL_TIME_VIA_NTP\020 *\225\003\n\017GP",
+      "RSMessageType\022 \n\034ATTACH_DEATTACH_GPRS_SE" +
+      "RVICE\020\000\022\026\n\022DEFINE_PDP_CONTEXT\020\001\022\031\n\025QOS_P" +
+      "ROFILE_REQUESTED\020\002\022\"\n\036QOS_PROFILE_MINIMU" +
+      "M_ACCEPTABLE\020\003\022&\n\"PDP_CONTEXT_ACTIVATE_O" +
+      "R_DEACTIVATE\020\004\022\024\n\020ENTER_DATA_STATE\020\005\022\024\n\020" +
+      "SHOW_PDP_ADDRESS\020\006\022\035\n\031GPRS_MOBILE_STATIO" +
+      "N_CLASS\020\007\022-\n)CONTROL_UNSOLICITED_GPRS_EV" +
+      "ETNT_REPORTING\020\010\022\037\n\033NETWORK_REGISTRATION" +
+      "_STATUS\020\t\022%\n!SELECT_SERVICE_FOR_MO_SMS_M" +
+      "ESSAGE\020\n\022\037\n\033CHANGE_GPRS_MULTISLOT_CLASS\020",
+      "\013*\255\001\n\024PhonebookMessageType\022#\n\037SELECT_PHO" +
+      "NEBOOK_MEMORY_STORAGE\020\000\022\031\n\025WRITE_PHONEBO" +
+      "OK_ENTRY\020\001\022\"\n\036READ_CURRENT_PHONEBOOK_ENT" +
+      "RIES\020\002\022\032\n\026FIND_PHONEBOOK_ENTRIES\020\003\022\025\n\021SU" +
+      "BSCRIBER_NUMBER\020\004*\377\004\n\016SMSMessageType\022\032\n\026" +
+      "SELECT_MESSAGE_SERVICE\020\000\022\035\n\031SELECT_SMS_M" +
+      "ESSAGE_FORMAT\020\001\022\036\n\032SMS_SERVICE_CENTER_AD" +
+      "DRESS\020\002\022!\n\035PREFERRED_SMS_MESSAGE_STORAGE" +
+      "\020\003\022\026\n\022DELETE_SMS_MESSAGE\020\004\022+\n\'LIST_SMS_M" +
+      "ESSAGE_FROM_PREFERRED_STORAGE\020\005\022\024\n\020READ_",
+      "SMS_MESSAGE\020\006\022\024\n\020SEND_SMS_MESSAGE\020\007\022\037\n\033W" +
+      "RITE_SMS_MESSAGE_TO_MEMORY\020\010\022!\n\035SEND_SMS" +
+      "_MESSAGE_FROM_STORAGE\020\t\022\024\n\020SEND_SMS_COMM" +
+      "AND\020\n\022\036\n\032NEW_SMS_MESSAGE_INDICATION\020\013\022\030\n" +
+      "\024RESTORE_SMS_SETTINGS\020\014\022\025\n\021SAVE_SMS_SETT" +
+      "INGS\020\r\022%\n!SELECT_CALL_BROADCAST_SMS_MESS" +
+      "AGE\020\016\022!\n\035SHOW_SMS_TEXT_MODE_PARAMETERS\020\017" +
+      "\022 \n\034SET_SMS_TEXT_MODE_PARAMETERS\020\020\0226\n2ST" +
+      "RORE_CLASS0_SMS_TO_SIM_WHEN_RECEIVING_CL" +
+      "ASS0_SMS\020\021\022\022\n\016DELETE_ALL_SMS\020\022\022\033\n\027CONFIG",
+      "URE_SMS_CODE_MODE\020\023*\367\006\n\026CallRelatedMessa" +
+      "geType\022\033\n\027ANSWER_AN_INCOMING_CALL\020\000\022)\n%M" +
+      "OBILE_ORIENTED_CALL_TO_DIAL_A_NUMBER\020\001\022\"" +
+      "\n\036DISCONNECT_EXISTING_CONNECTION\020\002\022)\n%SW" +
+      "ITCH_FROM_DATA_MODE_TO_COMMAND_MODE\020\003\022)\n" +
+      "%SWITCH_FROM_COMMAND_MODE_TO_DATA_MODE\020\004" +
+      "\022\030\n\024SELECT_PULSE_DIALING\020\005\0229\n5SET_NUMBER" +
+      "_OF_RINGS_BEFORE_AUTOMATICLY_ANSWERING_C" +
+      "ALL\020\006\022\"\n\036SET_PAUSE_BEFORE_BLIND_DIALING\020" +
+      "\007\022;\n7SET_NUMBER_OF_SECONDS_TO_WAIT_FOR_C",
+      "ONNECTION_COMPLETION\020\010\0229\n5SET_NUMBER_OF_" +
+      "SECONDS_TO_WAIT_FOR_COMMA_DIAL_MODIFIER\020" +
+      "\t\022A\n=SET_DISCONNECT_DELAY_AFTER_INDICATI" +
+      "NG_ABSENCE_OF_DATA_CARRIER\020\n\022\027\n\023SELECT_T" +
+      "ONE_DIALING\020\013\022\032\n\026SELECT_TYPE_OF_ADDRESS\020" +
+      "\014\022\034\n\030LIST_CURRENT_CALLS_OF_ME\020\r\022\035\n\031SERVI" +
+      "CE_REPORTING_CONTROL\020\016\0229\n5SET_CELLULAR_R" +
+      "ESULT_CODE_FOR_INCOMING_CALL_INDICATION\020" +
+      "\017\022(\n$SELECT_RADIO_LINK_PROTOCOL_PARAMETE" +
+      "R\020\020\022\033\n\027SINGLE_NUMBERING_SCHEME\020\021\022$\n CONF",
+      "IGURE_ALTERNATING_MODE_CALLS\020\022\022\034\n\030PREFER" +
+      "ENCE_SPEACH_CODING\020\023\022\036\n\032SPEECH_CHANNEL_T" +
+      "YPE_REPORT\020\024\022\017\n\013DISABLE_ATH\020\025*\265\002\n\031Networ" +
+      "kServiceMessageType\022\026\n\022OPERATOR_SELECTIO" +
+      "N\020\000\022\030\n\024NETWORK_REGISTRATION\020\001\022\031\n\025SIGNAL_" +
+      "QUALITY_REPORT\020\002\022\033\n\027PREFERRED_OPERATOR_L" +
+      "IST\020\003\022\027\n\023READ_OPEARATR_NAMES\020\004\022%\n!GET_AN" +
+      "D_SET_MOBILE_OPERATION_BAND\020\005\0225\n1NETWORK" +
+      "_SERVICE_SWITCH_ON_OR_OFF_ENGINEERING_MO" +
+      "DE\020\006\022\037\n\033SCAN_POWER_OF_GSM_FREQUENCY\020\007\022\026\n",
+      "\022LOCK_GSM_FREQUENCY\020\010*\347\002\n\025SIMRelatedMess" +
+      "ageType\022\020\n\014REQUEST_IMSI\020\000\022\021\n\rFACILITY_LO" +
+      "CK\020\001\022\r\n\tENTER_PIN\020\002\022\023\n\017CHANGE_PASSWORD\020\003" +
+      "\022\031\n\025RESTRICTED_SIM_ACCESS\020\004\022\026\n\022GENERIC_S" +
+      "IM_ACCESS\020\005\022\034\n\030CHANGE_PS_SUPER_PASSWORD\020" +
+      "\006\022\r\n\tSHOW_CCID\020\007\022\023\n\017SHOW_CCID_QCCID\020\010\022!\n" +
+      "\035GET_SIM_CARD_GROUP_IDENTIFIER\020\t\022%\n!SELE" +
+      "CT_SIM_CARD_OPERATING_VOLTAGE\020\n\022\035\n\031GET_S" +
+      "ERVICE_PROVIDER_NAME\020\013\022\'\n#TIME_REMAINING" +
+      "_TO_INPUT_SIM_PIN_PUK\020\014*\262\005\n\030StatusContro",
+      "lMessageType\022\031\n\025EXTENDED_ERROR_REPORT\020\000\022" +
+      "$\n MOBILE_EQUIPMENT_ACTIVITY_STATUS\020\001\022\036\n" +
+      "\032INDICATE_RI_WHEN_USING_URC\020\002\022(\n$SHOW_ST" +
+      "ATE_OF_MOBILE_ORIGINATED_CELL\020\003\022.\n*REFUS" +
+      "E_TO_RECEIVE_SMS_INCOMING_CALL_OR_NOT\020\004\022" +
+      ".\n*ENABLE_OR_DISABLE_INITIAL_URC_PRESENT" +
+      "ATION\020\005\0229\n5ENABLE_OR_DISABLE_PROPRIETARY" +
+      "_UNSOLICITED_INDICATIONS\020\006\022!\n\035QUERY_STAT" +
+      "E_OF_INITIALIZATION\020\007\022\034\n\030QUERY_GSM_NETWO" +
+      "RK_STATUS\020\010\022\035\n\031NETWORK_TIME_SYNCHRONIZED",
+      "\020\t\022+\n\'OBTAIN_LATEST_NETWORK_TIME_SYNCHRO" +
+      "NIZED\020\n\0228\n4NETWORK_TIME_SYNCHRONIZATION_" +
+      "AND_UPDATE_THE_RTC_TIME\020\013\022\'\n#NETWORK_TIM" +
+      "E_SYNCHRONIZATION_REPORT\020\014\022\'\n#SWITCH_ON_" +
+      "OR_OFF_DETECTING_SIM_CARD\020\r\022!\n\035SIM_INSER" +
+      "TED_STATUS_REPORTING\020\016\0224\n0CSC_CALL_OR_GP" +
+      "RS_PDP_CONTEXT_TERMINAL_INDICATION\020\017*\335\002\n" +
+      "!SerialInterfaceControlMessageType\022\031\n\025SE" +
+      "T_DCD_FUNCTION_MODE\020\000\022\031\n\025SET_DTR_FUNCTIO" +
+      "N_MODE\020\001\022\'\n#SET_TE_TA_CONTROL_CHARACTER_",
+      "FRAMING\020\002\022%\n!SET_TE_TA_LOCAL_DATA_FLOW_C" +
+      "ONTROL\020\003\022,\n(SET_TE_TA_LOCAL_DATA_RATE_RE" +
+      "PORTING_MODE\020\004\022\036\n\032SET_TE_TA_FIXED_LOCAL_" +
+      "RATE\020\005\022\027\n\023MULTIPLEXER_CONTROL\020\006\022 \n\034CONFI" +
+      "GURE_DUAL_UART_FUNCTION\020\007\022)\n%CONFIGURE_P" +
+      "ARAMETERS_OF_THE_DUAL_UART\020\010*\376\006\n\023General" +
+      "MesssageType\022.\n*DISPLAY_PRODUCT_IDENTIFI" +
+      "CATION_INFORMATION\020\000\022\'\n#REQUEST_MANUFACT" +
+      "URER_IDENTIFICATION\020\001\022#\n\037REQUEST_TA_MODE" +
+      "L_IDENTIFICATION\020\002\022&\n\"REQUEST_TA_REVISIO",
+      "N_IDENTIFICATION\020\003\022(\n$REQUEST_GLOBAL_OBJ" +
+      "ECT_IDENTIFICATION\020\004\022,\n(REQUEST_MANUFACT" +
+      "URER_IDENTIFICATION_CGMI\020\005\022 \n\034REQUEST_MO" +
+      "DEL_IDENTIFICATION\020\006\022+\n\'REQUEST_TA_REVIS" +
+      "ION_IDENTIFICATION_CGMR\020\007\022\020\n\014REQUEST_IME" +
+      "I\020\010\0220\n,REQUEST_PRODUCT_SERIAL_NUMBER_IDE" +
+      "NTIFICATION\020\t\022\025\n\021REQUEST_IMEI_QGSN\020\n\0227\n3" +
+      "SET_ALL_CURRENT_PARAMETERS_TO_MANUFACTUR" +
+      "ER_DEFAULTS\020\013\022!\n\035DISPLAY_CURRENT_CONFIGU" +
+      "RATION\020\014\0224\n0STORE_CURRENT_PARAMETERS_TO_",
+      "USER_DEFINED_PROFILE\020\r\022%\n!SET_RESULT_COD" +
+      "E_PRESENTATION_CODE\020\016\022\026\n\022TA_RESPONSE_FOR" +
+      "MAT\020\017\022\"\n\036SET_CONNECT_RESULT_CODE_FORMAT\020" +
+      "\020\0226\n2SET_ALL_CURRENT_PARAMETERS_TO_USER_" +
+      "DEFINED_PROFILE\020\021\022\033\n\027SET_PHONE_FUNCTIONA" +
+      "LITY\020\022\022\r\n\tPOWER_OFF\020\023\022!\n\035REPORT_MOBILE_E" +
+      "QUIPMENT_ERROR\020\024\022\030\n\024SET_TE_CHARACTER_SET" +
+      "\020\025\022)\n%REQUEST_COMPLETE_TA_CAPABILITIES_L" +
+      "IST\020\026*\312\003\n\017SMTPMessageType\022(\n$SET_THE_USE" +
+      "R_NAME_FOR_AUTHENTICATION\020\000\022\'\n#SET_THE_P",
+      "ASSWORD_FOR_AUTHENTICATION\020\001\022\'\n#SET_THE_" +
+      "EMAIL_ADDRESS_OF_THE_SENDER\020\002\022\030\n\024SET_THE" +
+      "_SENDERS_NAME\020\003\022+\n\'SET_THE_ADDRESS_AND_P" +
+      "ORT_OD_SMTP_SERVER\020\004\022\034\n\030ADD_OR_DELETE_RE" +
+      "CIPIENTS\020\005\022!\n\035EDIT_THE_SUBJECT_OF_THE_EM" +
+      "AIL\020\006\022!\n\035EDIT_THE_CONTENT_OF_THE_EMAIL\020\007" +
+      "\022#\n\037ADD_AN_ATTACHMENT_FOR_THE_EMAIL\020\010\022\030\n" +
+      "\024DELETE_AN_ATTACHMENT\020\t\022)\n%CLEAR_ALL_CON" +
+      "FIGURATIONS_AND_CONTENTS\020\n\022\026\n\022SMTP_CONFI" +
+      "GURATION\020\013\022\016\n\nSEND_EMAIL\020\014*_\n\024RecordingM",
+      "essageType\022\025\n\021RECORD_MEDIA_FILE\020\000\022\023\n\017PLA" +
+      "Y_MEDIA_FILE\020\001\022\033\n\027STOP_PLAYING_MEDIA_FIL" +
+      "E\020\002*\352\001\n\023QuecCellMessageType\022\"\n\036SCAN_BASI" +
+      "C_STATION_INFORMATION\020\000\022%\n!SWITCH_ON_OR_" +
+      "OFF_ENGINEERING_MODE\020\001\022\031\n\025LOCK_THE_BASE_" +
+      "STATION\020\002\022\036\n\032SCAN_ARFCN_RECEIVING_LEVEL\020" +
+      "\003\022\033\n\027GET_CHANNEL_INFORMATION\020\004\022\033\n\027GET_LA" +
+      "ST_VALID_TA_VALUE\020\005\022\023\n\017FORBID_OPERATOR\020\006" +
+      "*\337\003\n\016MMSMessageType\022\033\n\027SET_THE_URL_OF_TH" +
+      "E_MMSC\020\000\022\025\n\021SET_THE_MMS_PROXY\020\001\022-\n)SET_T",
+      "HE_PARAMETER_FOR_SENDING_MMS_MESSAGE\020\002\022%" +
+      "\n!SET_CHARACTER_SETS_AND_INPUT_MODE\020\003\022\025\n" +
+      "\021WRITE_MMS_MESSAGE\020\004\022\024\n\020SEND_MMS_MESSAGE" +
+      "\020\005\022#\n\037MENAGE_THE_RECEIVED_MMS_MESSAGE\020\006\022" +
+      "\035\n\031READ_RECEIVED_MMS_MESSAGE\020\007\022%\n!RECEIV" +
+      "E_MMS_MESSAGE_FROM_THE_MMSC\020\010\022(\n$SET_PRI" +
+      "ORITY_OF_MMS_MESSAGE_AND_CALL\020\t\022.\n*SET_D" +
+      "UR_ATTRIBUTE_VALUE_IN_THE_SMIL_SCRIPT\020\n\022" +
+      "\032\n\026SET_MMS_SMS_TRANSACTOR\020\013\022\036\n\032ENABLE_OU" +
+      "TPUT_TEXT_IN_USC2\020\014\022\025\n\021OUTPUT_FILE_STYLE",
+      "\020\r*\350\001\n\016STKMessageType\022\034\n\030TURN_ON_OFF_STK" +
+      "_FUNCTION\020\000\022\030\n\024STK_PROFILE_DOWNLOAD\020\001\022\030\n" +
+      "\024STK_ENVELOPE_COMMAND\020\002\022\031\n\025STK_TERMINAL_" +
+      "RESPONSE\020\003\022\024\n\020TRIGGER_STK_CALL\020\004\022\023\n\017TRIG" +
+      "GER_STK_SMS\020\005\022\022\n\016TRIGGER_STK_SS\020\006\022\024\n\020TRI" +
+      "GGER_STK_USSD\020\007\022\024\n\020TRIGGER_STK_DTMF\020\010*\305\006" +
+      "\n\016FTPMessageType\022/\n+OPEN_AN_FTP_SERVICE_" +
+      "TO_THE_GIVEN_FTP_SERVER\020\000\022\031\n\025CLOSE_THE_F" +
+      "TP_SERVICE\020\001\022#\n\037UPLOAD_A_FILE_TO_THE_FTP" +
+      "_SERVER\020\002\022=\n9SET_THE_PATH_IN_THE_FTP_SER",
+      "VER_TO_UPLOAD_OR_DOWNLOAD_FILE\020\003\0228\n4SET_" +
+      "THE_USER_NAME_OF_THE_ACCOUNT_TO_OPEN_FTP" +
+      "_SERVICE\020\004\0227\n3SET_THE_PASSWORD_OF_THE_AC" +
+      "COUNT_TO_OPEN_FTP_SERVICE\020\005\0228\n4SET_SOME_" +
+      "CONFIGURABLE_PARAMETERS_FOR_THE_FTP_SERV" +
+      "ICE\020\006\022\037\n\033QUERY_STATUS_OF_FTP_SERVICE\020\007\0229" +
+      "\n5QUERY_THE_REAL_SIZE_TRANSFERED_IN_THE_" +
+      "LATEST_TRANSFER\020\010\0220\n,RENAME_FILE_OR_FOLD" +
+      "ER_NAME_ON_THE_FTP_SERVER\020\t\0226\n2QUERY_THE" +
+      "_SIZE_OF_APPOINTED_FILE_ON_THE_FTP_SERVE",
+      "R\020\n\022/\n+DELETE_THE_APPOINTED_FILE_ON_THE_" +
+      "FTP_SERVER\020\013\0220\n,ESTABLISH_A_NEW_FILEFOLD" +
+      "ER_ON_THE_FTP_SERVER\020\014\022)\n%REMOVE_A_FILEF" +
+      "OLDER_ON_THE_FTP_SERVER\020\r\022D\n@LIST_CONTEN" +
+      "TS_OF_DIRECTORY_OR_FILE_INFORMATION_ON_T" +
+      "HE_FTP_SERVER\020\016\022<\n8LIST_FILE_NAMES_IN_TH" +
+      "E_GIVEN_DIRECTORY_ON_THE_FTP_SERVER\020\017*\375\002" +
+      "\n\017FileMessageType\022\031\n\025GET_STORAGE_DATE_SI" +
+      "ZE\020\000\022\016\n\nLIST_FILES\020\001\022\032\n\026UPLOAD_FILE_TO_S" +
+      "TORAGE\020\002\022\036\n\032DOWNLOAD_FILE_FROM_STORAGE\020\003",
+      "\022\032\n\026DELETE_FILE_IN_STORAGE\020\004\022\r\n\tMOVE_FIL" +
+      "E\020\005\022\r\n\tOPEN_FILE\020\006\022\r\n\tREAD_FILE\020\007\022\016\n\nWRI" +
+      "TE_FILE\020\010\022\r\n\tSEEK_FILE\020\t\022\016\n\nCLOSE_FILE\020\n" +
+      "\022\"\n\036GET_OFFSET_OF_THE_FILE_POINTER\020\013\0224\n0" +
+      "FORCE_TO_WRITE_DATA_REMAINING_IN_THE_FIL" +
+      "E_BUFFER\020\014\0221\n-TRUNCATE_THE_SPECIFIED_FIL" +
+      "E_FROM_FILE_POINTER\020\r*\244\001\n\017HTTPMessageTyp" +
+      "e\022\027\n\023SET_HTTP_SERVER_URL\020\000\022\031\n\025SEND_HTTP_" +
+      "GET_REQUEST\020\001\022\035\n\031READ_HTTP_SERVER_RESPON" +
+      "SE\020\002\022\032\n\026SEND_HTTP_POST_REQUEST\020\003\022\"\n\036DOWN",
+      "LODA_FILE_FROM_HTTP_SERVER\020\004*\240\037\n\005Error\022\006" +
+      "\n\002OK\020\000\022\020\n\014UNKNOW_ERROR\020\001\022\020\n\014SERVICE_BUSY" +
+      "\020\003\022\034\n\030FAILED_TO_GET_IP_ADDRESS\020\004\022\021\n\rNETW" +
+      "ORK_ERROR\020\005\022\026\n\022FTP_SESSION_CLOSED\020\006\022\032\n\026D" +
+      "ATA_CONNECTION_CLOSED\020\007\022#\n\037GPRS_CSD_CONT" +
+      "EXT_IS_DEACTIVATED\020\010\022\013\n\007TIMEOUT\020\t\022\033\n\027INP" +
+      "UT_PARAMETER_ILLEGAL\020\n\022$\n FILE_NOT_FOUND" +
+      "_IN_LOCAL_POSITION\020\013\022(\n$FAILED_TO_GET_FI" +
+      "LE_IN_LOCAL_POSITION\020\014\022\024\n\020NO_ENOUGH_MEMO" +
+      "RY\020\r\022!\n\035FAILED_TO_SAVE_THE_ATTACHMENT\020\016\022",
+      " \n\034THE_INPUT_PARAMETER_IS_WRONG\020\017\022$\n\037FTP" +
+      "_SERVER_CANT_SUPPORT_SERVICE\020\245\003\022#\n\036FAILD" +
+      "E_TO_OPEN_DATA_CONNECTION\020\251\003\022/\n*THE_CONN" +
+      "ECTION_IS_CLOSED_AND_STOP_TRANSFER\020\252\003\022\'\n" +
+      "\"THE_REQUEST_FOR_FILE_ISNT_OPERATED\020\302\003\022)" +
+      "\n$THE_FTP_SERVER_HAS_NOT_ENOUGH_MEMORY\020\304" +
+      "\003\022+\n&THE_FORMAT_OF_THE_FTP_COMMAND_IS_WR" +
+      "ONG\020\364\003\022,\n\'THE_PATTERN_OF_THE_FTP_COMMAND" +
+      "_IS_WRONG\020\365\003\0220\n+THE_FTP_COMMAND_ISNT_OPE" +
+      "RATED_BY_FTP_SERVER\020\366\003\022\035\n\030BAD_SEQUENCE_O",
+      "F_COMMANDS\020\367\003\022&\n!COMMAND_PARAMETER_NOT_I" +
+      "MPLEMENTED\020\370\003\022!\n\034DOMAIN_DOES_NOT_ACCEPT_" +
+      "EMAIL\020\211\004\022\034\n\027NOT_LOGIN_TO_FTP_SERVER\020\222\004\022\"" +
+      "\n\035NEEDED_INFORMATION_OF_ACCOUNT\020\224\004\022\032\n\025AU" +
+      "THENTICATION_FAILED\020\227\004\022 \n\033THE_REQUEST_IS" +
+      "_NOT_OPERATED\020\246\004\022\033\n\026THE_REQUEST_IS_STOPP" +
+      "ED\020\247\004\022%\n THE_REQUEST_OF_A_FILE_IS_STOPPE" +
+      "D\020\250\004\022\031\n\024FILE_NAME_IS_ILLEGAL\020\251\004\022\027\n\022TRANS" +
+      "ACTION_FAILED\020\252\004\022\022\n\rHTTP_TIME_OUT\020\331\035\022\016\n\t" +
+      "HTTP_BUSY\020\332\035\022\023\n\016HTTP_UART_BUSY\020\333\035\022\030\n\023HTT",
+      "P_GET_NO_REQUEST\020\334\035\022\026\n\021HTTP_NETWORK_BUSY" +
+      "\020\335\035\022\035\n\030HTTP_NETWORK_OPEN_FAILED\020\336\035\022\033\n\026HT" +
+      "TP_NETWORK_NO_CONFIG\020\337\035\022\032\n\025HTTP_NETWORK_" +
+      "DEACTIVE\020\340\035\022\027\n\022HTTP_NETWORK_ERROR\020\341\035\022\023\n\016" +
+      "HTTP_URL_ERROR\020\342\035\022\023\n\016HTTP_EMPTY_URL\020\343\035\022\027" +
+      "\n\022HTTP_IP_ADDR_ERROR\020\344\035\022\023\n\016HTTP_DNS_ERRO" +
+      "R\020\345\035\022\035\n\030HTTP_SOCKET_CREATE_ERROR\020\346\035\022\036\n\031H" +
+      "TTP_SOCKET_CONNECT_ERROR\020\347\035\022\033\n\026HTTP_SOCK" +
+      "ET_READ_ERROR\020\350\035\022\034\n\027HTTP_SOCKET_WRITE_ER" +
+      "ROR\020\351\035\022\026\n\021HTTP_SOCKET_CLOSE\020\352\035\022\033\n\026HTTP_D",
+      "ATA_ENCODE_ERROR\020\353\035\022\033\n\026HTTP_DATA_DECODE_" +
+      "ERROR\020\354\035\022\031\n\024HTTP_TO_READ_TIMEOUT\020\355\035\022\031\n\024H" +
+      "TTP_RESPONSE_FAILED\020\356\035\022\027\n\022INCOMING_CALL_" +
+      "BUSY\020\357\035\022\024\n\017VOICE_CALL_BUSY\020\360\035\022\022\n\rINPUT_T" +
+      "IMEOUT\020\361\035\022\026\n\021WAIT_DATA_TIMEOUT\020\362\035\022\037\n\032WAI" +
+      "T_HTTP_RESPONSE_TIMEOUT\020\363\035\022\026\n\021ALLOC_MEMO" +
+      "RY_FAIL\020\364\035\022\031\n\024HTTP_NEED_RELOCATION\020\365\035\022\030\n" +
+      "\023INVALID_INPUT_VALUE\020\231\036\022\021\n\014MMS_TIME_OUT\020" +
+      "\275\036\022\021\n\014URL_TOO_LONG\020\276\036\022\020\n\013INVALID_URL\020\277\036\022" +
+      "\026\n\021UNSUPPORTED_PROXY\020\300\036\022\032\n\025INVALID_PROXY",
+      "_ADDRESS\020\301\036\022\025\n\020IP_ADDRESS_ERROR\020\302\036\022\016\n\tDN" +
+      "S_ERROR\020\303\036\022\024\n\017PARAMETER_ERROR\020\304\036\022\030\n\023TO_A" +
+      "DDRESS_EXCEEDED\020\305\036\022\030\n\023CC_ADDRESS_EXCEEDE" +
+      "D\020\306\036\022\031\n\024BCC_ADDRESS_EXCEEDED\020\307\036\022$\n\037APPEN" +
+      "DED_FILE_CAPACITY_EXCEEDED\020\310\036\022\027\n\022FILE_NA" +
+      "ME_TOO_LONG\020\311\036\022 \n\033THE_NUMBER_OF_FILE_EXC" +
+      "EEDED\020\312\036\022\031\n\024NON_EXISTENT_ADDRESS\020\313\036\022\025\n\020U" +
+      "FS_STORAGE_FULL\020\314\036\022\017\n\nDRIVE_FULL\020\315\036\022\020\n\013D" +
+      "RIVE_ERROR\020\316\036\022\016\n\tNOT_FOUND\020\317\036\022\026\n\021INVALID" +
+      "_FILE_NAME\020\320\036\022\031\n\024FILE_ALREADY_EXISTED\020\321\036",
+      "\022\032\n\025FAILED_TO_CREATE_FILE\020\322\036\022\031\n\024FAILED_T" +
+      "O_WRITE_FILE\020\323\036\022\030\n\023FAILED_TO_OPEN_FILE\020\324" +
+      "\036\022\030\n\023FAILED_TO_READ_FILE\020\325\036\022\r\n\010MMS_BUSY\020" +
+      "\326\036\022\025\n\020SENDING_MMS_BUSY\020\327\036\022\030\n\023SENDING_MMS" +
+      "_STOPPED\020\330\036\022\034\n\027ALREADY_STOPPED_TO_SEND\020\331" +
+      "\036\022\027\n\022RECEIVING_MMS_BUSY\020\332\036\022\032\n\025RECEIVING_" +
+      "MMS_STOPPED\020\333\036\022\034\n\027ALREADY_STOPPED_RECEIV" +
+      "E\020\334\036\022\032\n\025HTTP_RESPONSE_FALIURE\020\335\036\022\031\n\024INVA" +
+      "LID_MMS_RESPONSE\020\336\036\022\027\n\022MMS_RESPONSE_ERRO" +
+      "R\020\337\036\022\031\n\024INVALID_PUSH_MESSAGE\020\340\036\022\027\n\022ALREA",
+      "DY_DONWLOADED\020\341\036\022\021\n\014NETWORK_BUSY\020\342\036\022\033\n\026F" +
+      "AILED_TO_OPEN_NETWORK\020\343\036\022\032\n\025NETWORK_NO_C" +
+      "ONFIGURED\020\344\036\022\030\n\023NETWORK_DEACTIVATED\020\345\036\022\026" +
+      "\n\021MMS_NETWORK_ERROR\020\346\036\022\025\n\020NETWORK_SHUTDO" +
+      "WN\020\347\036\022\016\n\tUART_BUSY\020\350\036\022\021\n\014UART_ESCAPED\020\351\036" +
+      "\022\034\n\027FAILED_TO_CREATE_SOCKET\020\352\036\022\035\n\030FAILED" +
+      "_TO_CONNECT_SOCKET\020\353\036\022\032\n\025FAILED_TO_READ_" +
+      "SOCKET\020\354\036\022\033\n\026FAILED_TO_WRITE_SOCKET\020\355\036\022\022" +
+      "\n\rSOCKET_CLOSED\020\356\036\022\025\n\020MMS_LENGTH_ERROR\020\357" +
+      "\036\022\031\n\024FAILED_TO_ENCODE_MMS\020\360\036\022\031\n\024FAILED_T",
+      "O_DECODE_MMS\020\361\036\022\032\n\025FAILED_TO_DECODE_HTTP" +
+      "\020\362\036\022\"\n\035FAILED_TO_DECODE_PUSH_MESSAGE\020\363\036\022" +
+      "\024\n\017PDU_ALIGN_ERROR\020\364\036\022\030\n\023PDU_CHARACTER_E" +
+      "RROR\020\365\036\022\024\n\017STRING_TOO_LONG\020\366\036\022\r\n\010MMS_FUL" +
+      "L\020\367\036\022\025\n\020NON_EXISTENT_MMS\020\370\036\022\024\n\017INVALID_A" +
+      "DDRESS\020\371\036\022\030\n\023MMS_VOICE_CALL_BUSY\020\372\036\022\030\n\023A" +
+      "LLOC_MEMORY_FAILED\020\373\036\022\026\n\021EXCEED_MAX_LENG" +
+      "TH\020\240\037\022\023\n\016OPEN_FILE_FAIL\020\241\037\022\024\n\017WRITE_FILE" +
+      "_FAIL\020\242\037\022\022\n\rGET_SIZE_FAIL\020\243\037\022\016\n\tREAD_FAI" +
+      "L\020\244\037\022\023\n\016LIST_FILE_FAIL\020\245\037\022\025\n\020DELETE_FILE",
+      "_FAIL\020\246\037\022\027\n\022GET_DISC_INFO_FAIL\020\247\037\022\r\n\010NO_" +
+      "SPACE\020\250\037\022\r\n\010TIME_OUT\020\251\037\022\030\n\023HTTP_FILE_NOT" +
+      "_FOUND\020\252\037\022\023\n\016FILE_TOO_LARGE\020\253\037\022\027\n\022FILE_A" +
+      "LREADY_EXIST\020\254\037\022\026\n\021INVALID_PARAMETER\020\255\037\022" +
+      "\021\n\014DRIVER_ERROR\020\256\037\022\020\n\013CREATE_FAIL\020\257\037\022\022\n\r" +
+      "ACCESS_DENIED\020\260\037\022\026\n\021FILE_IS_TOO_LARGE\020\261\037" +
+      "\022\021\n\014WRONG_FORMAT\020\314!\022\024\n\017AUDIO_TASK_BUSY\020\316" +
+      "!\022\027\n\022CREATE_FILE_FAILED\020\317!\022/\n*ADDITIONAL" +
+      "_RECORDING_IN_A_DIFFERENT_FORMAT\020\320!\022\016\n\tD" +
+      "ISC_FULL\020\321!\022\035\n\030WRITE_PROTECTION_ON_FILE\020",
+      "\322!\022\033\n\026RECORDING_UNKNOW_ERROR\020\223#B \n\023com.r" +
+      "trk.atcommandsB\tATCommandb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -53796,7 +53987,7 @@ public final class ATCommands {
     internal_static_com_rtrk_protobuf_FileCommand_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_rtrk_protobuf_FileCommand_descriptor,
-        new java.lang.String[] { "MessageType", "NamePattern", "FreeSize", "TotalSize", "MaxAllocSize", "UFSFileSize", "UFSFileNumber", "FileName", "FileSize", "RamSize", "UploadSize", "Timeout", "AckMode", "SrcFileName", "DestFileName", "Copy", "Owerwrite", "Mode", "Length", "FileHandle", "ReadLength", "WrittenLength", "TotalLength", "Offset", "Position", "Checksum", "Error", });
+        new java.lang.String[] { "MessageType", "Test", "Execution", "Read", "NamePattern", "FreeSize", "TotalSize", "MaxAllocSize", "UFSFileSize", "UFSFileNumber", "FileName", "FileSize", "RamSize", "UploadSize", "Timeout", "AckMode", "SrcFileName", "DestFileName", "Copy", "Owerwrite", "Mode", "Length", "FileHandle", "ReadLength", "WrittenLength", "TotalLength", "Offset", "Position", "Checksum", "Error", });
     internal_static_com_rtrk_protobuf_FTPCommand_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_com_rtrk_protobuf_FTPCommand_fieldAccessorTable = new

@@ -3,7 +3,7 @@ syntax = "proto3";
 package com.rtrk.protobuf;
 
 option java_package = "com.rtrk.atcommands";
-option java_outer_classname = "ATCommands";
+option java_outer_classname = "ATCommand";
 message HTTPCommand {
 	HTTPMessageType messageType = 1;
 	bool test = 2;
@@ -24,32 +24,35 @@ message HTTPCommand {
 
 message FileCommand {
 	FileMessageType messageType = 1;
-	string namePattern = 2;
-	int32 freeSize = 3;
-	int32 totalSize = 4;
-	int32 maxAllocSize = 5;
-	int32 UFSFileSize = 6;
-	int32 UFSFileNumber = 7;
-	string fileName = 8;
-	int32 fileSize = 9;
-	int32 ramSize = 10;
-	int32 uploadSize = 11;
-	int32 timeout = 12;
-	int32 ackMode = 13;
-	string srcFileName = 14;
-	string destFileName = 15;
-	bool copy = 16;
-	bool owerwrite = 17;
-	int32 mode = 18;
-	int32 length = 19;
-	string fileHandle = 20;
-	int32 readLength = 21;
-	int32 writtenLength = 22;
-	int32 totalLength = 23;
-	int32 offset = 24;
-	int32 position = 25;
-	int32 checksum = 26;
-	Error error = 27;
+	bool test = 2;
+	bool execution = 3;
+	bool read=4;
+	string namePattern = 5;
+	int32 freeSize = 6;
+	int32 totalSize = 7;
+	int32 maxAllocSize = 8;
+	int32 UFSFileSize = 9;
+	int32 UFSFileNumber = 10;
+	string fileName = 11;
+	int32 fileSize = 12;
+	int32 ramSize = 13;
+	int32 uploadSize = 14;
+	int32 timeout = 15;
+	int32 ackMode = 16;
+	string srcFileName = 17;
+	string destFileName = 18;
+	int32 copy = 19;
+	int32 owerwrite = 20;
+	int32 mode = 21;
+	int32 length = 22;
+	string fileHandle = 23;
+	int32 readLength = 24;
+	int32 writtenLength = 25;
+	int32 totalLength = 26;
+	int32 offset = 27;
+	int32 position = 28;
+	int32 checksum = 29;
+	Error error = 30;
 }
 
 message FTPCommand {
@@ -360,7 +363,7 @@ message SMSCommand {
 	int32 ds = 32;
 	int32 buffer = 33;
 	int32 profile = 34;
-	string messageIdentifiers = 35;//mids
+	string messageIdentifiers = 35; //mids
 	string dcss = 36;
 	int32 show = 37;
 	int32 dataCodinScheme = 38; //dcs
