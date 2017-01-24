@@ -26,7 +26,7 @@ message FileCommand {
 	FileMessageType messageType = 1;
 	bool test = 2;
 	bool execution = 3;
-	bool read=4;
+	bool read = 4;
 	string namePattern = 5;
 	int32 freeSize = 6;
 	int32 totalSize = 7;
@@ -57,9 +57,9 @@ message FileCommand {
 
 message FTPCommand {
 	FTPMessageType messageType = 1;
-	bool test=2;
-	bool execution=3;
-	bool read=4;
+	bool test = 2;
+	bool execution = 3;
+	bool read = 4;
 	string hostName = 5;
 	int32 port = 6;
 	Error error = 7;
@@ -84,8 +84,8 @@ message FTPCommand {
 
 message MMSCommand {
 	MMSMessageType messageType = 1;
-	bool test=2;
-	bool read=3;
+	bool test = 2;
+	bool read = 3;
 	string MMSCURL = 4;
 	int32 type = 5;
 	string gateway = 6;
@@ -124,80 +124,93 @@ message MMSCommand {
 
 message QuecCellCommand {
 	QuecCellMessageType messageType = 1;
-	int32 status = 2;
-	string operatorInString = 3;
-	string operatorInShortString = 4;
-	int32 operatorInNumber = 5;
-	int32 indexN = 6;
-	int32 locationAreaCode = 7;
-	int32 cellID = 8;
-	int32 baseStationIdentityCode = 9;
-	int32 receiveLevel = 10; //rxlev
-	double absoluteRadioFrequencyChannelNumber = 11;
-	int32 mode = 12;
-	int32 dump = 13;
-	int32 mobileCountryCode = 14;
-	int32 mobileNetworkCode = 15;
-	int32 broadcastControlChannel = 16;
-	double receiveSignalLeve = 17; //dbm
-	int32 c1 = 18;
-	int32 c2 = 19;
-	double transmitPowerMaximum = 20;
-	int32 receiveLevelAccess = 21;
-	int32 timeslots = 22;
-	int32 MAIOValue = 23;
-	int32 HSNValue = 24;
-	int32 TCH = 25;
-	int32 timingAdvance = 26;
-	int32 RXQualitySub = 27;
-	int32 RXQualityFull = 28;
-	int32 numberOfNeighboringSixCell = 29;
-	bool band100 = 30;
-	int32 rrState = 31;
-	string channelType = 32;
-	bool automaticReport = 33;
-	int32 line = 34;
-	string forbiddenData = 35;
-	int32 band = 36;
-	int32 value = 37;
+	bool test=2;
+	bool read=3;
+	bool execution=4;
+	int32 status = 5;
+	string operatorInString = 6;
+	string operatorInShortString = 7;
+	int32 operatorInNumber = 8;
+	int32 indexN = 9;
+	int32 locationAreaCode = 10;
+	int32 cellID = 11;
+	int32 baseStationIdentityCode = 12;
+	int32 receiveLevel = 13; //rxlev
+	double absoluteRadioFrequencyChannelNumber = 14;
+	int32 mode = 15;
+	int32 dump = 16;
+	int32 mobileCountryCode = 17;
+	int32 mobileNetworkCode = 18;
+	int32 broadcastControlChannel = 19;
+	double receiveSignalLeve = 20; //dbm
+	int32 c1 = 21;
+	int32 c2 = 22;
+	double transmitPowerMaximum = 23;
+	int32 receiveLevelAccess = 24;
+	int32 timeslots = 25;
+	int32 MAIOValue = 26;
+	int32 HSNValue = 27;
+	int32 TCH = 28;
+	int32 timingAdvance = 29;
+	int32 RXQualitySub = 30;
+	int32 RXQualityFull = 31;
+	int32 numberOfNeighboringSixCell = 32;
+	bool band1900 = 33;
+	int32 rrState = 34;
+	string channelType = 35;
+	bool automaticReport = 36;
+	int32 line = 37;
+	string forbiddenData = 38;
+	int32 band = 39;
+	int32 value = 40;
+	int32 arcfn1 = 41;
+	int32 arcfn2 = 42;
+	int32 arcfn3 = 43;
 }
 
 message RecordingCommand {
 	RecordingMessageType messageType = 1;
-	int32 state = 2;
-	string fileName = 3;
-	int32 format = 4;
-	bool repeat = 5;
-	int32 volume = 6;
-	int32 channel = 7;
-	Error error = 8;
+	bool test = 2;
+	bool read = 3;
+	bool execution = 4;
+	int32 state = 5;
+	string fileName = 6;
+	int32 format = 7;
+	bool repeat = 8;
+	int32 volume = 9;
+	int32 channel = 10;
+	int32 control = 11;
+	Error error = 12;
 }
 
 message SMTPCommand {
 	SMTPMessageType messageType = 1;
-	string user = 2;
-	string password = 3;
-	string address = 4;
-	string name = 5;
-	string serverAddress = 6;
-	int32 port = 7;
-	int32 mode = 8;
-	int32 type = 9;
-	string emailAddress = 10;
-	int32 result = 11;
-	int32 charset = 12;
-	string title = 13;
-	int32 timeout = 14;
-	int32 fileIndex = 15;
-	string fileName = 16;
-	int32 fileSize = 17;
-	int32 value = 18;
+	bool test = 2;
+	bool read = 3;
+	bool execute = 4;
+	string user = 5;
+	string password = 6;
+	string address = 7;
+	string name = 8;
+	string serverAddress = 9;
+	int32 port = 10;
+	int32 mode = 11;
+	int32 type = 12;
+	string emailAddress = 13;
+	int32 result = 14;
+	int32 charset = 15;
+	string title = 16;
+	int32 timeout = 17;
+	int32 fileIndex = 18;
+	string fileName = 19;
+	int32 fileSize = 20;
+	int32 value = 21;
 }
 
 message STKCommand {
 	STKMessageType messageType = 1;
-	bool test=2;
-	bool read=3;
+	bool test = 2;
+	bool read = 3;
 	bool execution = 4;
 	int32 n = 5;
 	string profile = 6;
@@ -207,33 +220,40 @@ message STKCommand {
 
 message GeneralCommand {
 	GeneralMesssageType messageType = 1;
-	int32 value = 2;
-	int32 n = 3;
-	int32 functionality = 4;
-	int32 reset = 5;
-	string characterSet = 6;
+	bool test=2;
+	bool read=3;
+	bool execution=4;
+	int32 value = 5;
+	int32 n = 6;
+	int32 functionality = 7;
+	int32 reset = 8;
+	string characterSet = 9;
 }
 
 message SerialInterfaceControlCommand {
 	SerialInterfaceControlMessageType messageType = 1;
-	int32 value = 2;
-	int32 format = 3;
-	int32 partity = 4;
-	int32 DCEByDTE = 5;
-	int32 DTEByDCE = 6;
-	int32 rate = 7;
-	int32 mode = 8;
-	int32 subset = 9;
-	int32 portSpeed = 10;
-	int32 maximumFrameSize = 11; //N1
-	int32 acknowledmentTimer = 12; //T1
-	int32 maximumNumberOfRetransmissions = 13; //N2
-	int32 responseTimer = 14; //T2
-	int32 wakeUpResponseTimer = 15; //T3
-	int32 windowsSize = 16; //k
-	int32 baudRate = 17;
-	int32 dataBits = 18;
-	int32 stopBits = 19;
+	bool test=2;
+	bool read=3;
+	bool execution=4;
+	int32 value = 5;
+	int32 format = 6;
+	int32 partity = 7;
+	int32 DCEByDTE = 8;
+	int32 DTEByDCE = 9;
+	int32 rate = 10;
+	bool enableDualUART = 11;
+	int32 subset = 12;
+	int32 portSpeed = 13;
+	int32 maximumFrameSize = 14; //N1
+	int32 acknowledmentTimer = 15; //T1
+	int32 maximumNumberOfRetransmissions = 16; //N2
+	int32 responseTimer = 17; //T2
+	int32 wakeUpResponseTimer = 18; //T3
+	int32 windowsSize = 19; //k
+	int32 baudRate = 20;
+	int32 dataBits = 21;
+	int32 stopBits = 22;
+	int32 mode = 23;
 }
 
 message StatusControlCommand {
@@ -542,15 +562,15 @@ message HardwareRelatedCommand {
 	int32 threshold = 14;
 }
 
-message OtherCommand {
-	OtherMessageType messageType = 1;
+message OthersCommand {
+	OthersMessageType messageType = 1;
 	int32 value = 2;
 	int32 n = 3;
 	int32 timeMode = 4;
 	int32 indMode = 5;
 }
 
-enum OtherMessageType {
+enum OthersMessageType {
 	REISSUES_THE_LAST_COMMAND_GIVEN = 0;
 	SET_COMMAND_ECHO_MODE = 1;
 	SET_COMMAND_LINE_TERMINATION_CHARACTER = 2;
@@ -861,7 +881,7 @@ enum FTPMessageType {
 	OPEN_AN_FTP_SERVICE_TO_THE_GIVEN_FTP_SERVER = 0;
 	CLOSE_THE_FTP_SERVICE = 1;
 	UPLOAD_A_FILE_TO_THE_FTP_SERVER = 2;
-	DOWNLOAD_A_FILE_FROM_THE_FTP_SERVER=3;
+	DOWNLOAD_A_FILE_FROM_THE_FTP_SERVER = 3;
 	SET_THE_PATH_IN_THE_FTP_SERVER_TO_UPLOAD_OR_DOWNLOAD_FILE = 4;
 	SET_THE_USER_NAME_OF_THE_ACCOUNT_TO_OPEN_FTP_SERVICE = 5;
 	SET_THE_PASSWORD_OF_THE_ACCOUNT_TO_OPEN_FTP_SERVICE = 6;
