@@ -1464,9 +1464,9 @@ public final class ATCommand {
      */
     SAVE_SMS_SETTINGS(13),
     /**
-     * <code>SELECT_CALL_BROADCAST_SMS_MESSAGE = 14;</code>
+     * <code>SELECT_CELL_BROADCAST_SMS_MESSAGE = 14;</code>
      */
-    SELECT_CALL_BROADCAST_SMS_MESSAGE(14),
+    SELECT_CELL_BROADCAST_SMS_MESSAGE(14),
     /**
      * <code>SHOW_SMS_TEXT_MODE_PARAMETERS = 15;</code>
      */
@@ -1547,9 +1547,9 @@ public final class ATCommand {
      */
     public static final int SAVE_SMS_SETTINGS_VALUE = 13;
     /**
-     * <code>SELECT_CALL_BROADCAST_SMS_MESSAGE = 14;</code>
+     * <code>SELECT_CELL_BROADCAST_SMS_MESSAGE = 14;</code>
      */
-    public static final int SELECT_CALL_BROADCAST_SMS_MESSAGE_VALUE = 14;
+    public static final int SELECT_CELL_BROADCAST_SMS_MESSAGE_VALUE = 14;
     /**
      * <code>SHOW_SMS_TEXT_MODE_PARAMETERS = 15;</code>
      */
@@ -1604,7 +1604,7 @@ public final class ATCommand {
         case 11: return NEW_SMS_MESSAGE_INDICATION;
         case 12: return RESTORE_SMS_SETTINGS;
         case 13: return SAVE_SMS_SETTINGS;
-        case 14: return SELECT_CALL_BROADCAST_SMS_MESSAGE;
+        case 14: return SELECT_CELL_BROADCAST_SMS_MESSAGE;
         case 15: return SHOW_SMS_TEXT_MODE_PARAMETERS;
         case 16: return SET_SMS_TEXT_MODE_PARAMETERS;
         case 17: return STRORE_CLASS0_SMS_TO_SIM_WHEN_RECEIVING_CLASS0_SMS;
@@ -2340,9 +2340,9 @@ public final class ATCommand {
      */
     QUERY_GSM_NETWORK_STATUS(8),
     /**
-     * <code>NETWORK_TIME_SYNCHRONIZED = 9;</code>
+     * <code>NETWORK_TIME_SYNCHRONIZATION = 9;</code>
      */
-    NETWORK_TIME_SYNCHRONIZED(9),
+    NETWORK_TIME_SYNCHRONIZATION(9),
     /**
      * <code>OBTAIN_LATEST_NETWORK_TIME_SYNCHRONIZED = 10;</code>
      */
@@ -2407,9 +2407,9 @@ public final class ATCommand {
      */
     public static final int QUERY_GSM_NETWORK_STATUS_VALUE = 8;
     /**
-     * <code>NETWORK_TIME_SYNCHRONIZED = 9;</code>
+     * <code>NETWORK_TIME_SYNCHRONIZATION = 9;</code>
      */
-    public static final int NETWORK_TIME_SYNCHRONIZED_VALUE = 9;
+    public static final int NETWORK_TIME_SYNCHRONIZATION_VALUE = 9;
     /**
      * <code>OBTAIN_LATEST_NETWORK_TIME_SYNCHRONIZED = 10;</code>
      */
@@ -2463,7 +2463,7 @@ public final class ATCommand {
         case 6: return ENABLE_OR_DISABLE_PROPRIETARY_UNSOLICITED_INDICATIONS;
         case 7: return QUERY_STATE_OF_INITIALIZATION;
         case 8: return QUERY_GSM_NETWORK_STATUS;
-        case 9: return NETWORK_TIME_SYNCHRONIZED;
+        case 9: return NETWORK_TIME_SYNCHRONIZATION;
         case 10: return OBTAIN_LATEST_NETWORK_TIME_SYNCHRONIZED;
         case 11: return NETWORK_TIME_SYNCHRONIZATION_AND_UPDATE_THE_RTC_TIME;
         case 12: return NETWORK_TIME_SYNCHRONIZATION_REPORT;
@@ -27171,71 +27171,86 @@ public final class ATCommand {
     com.rtrk.atcommands.ATCommand.StatusControlMessageType getMessageType();
 
     /**
-     * <code>optional int32 locationID = 2;</code>
+     * <code>optional bool test = 2;</code>
+     */
+    boolean getTest();
+
+    /**
+     * <code>optional bool read = 3;</code>
+     */
+    boolean getRead();
+
+    /**
+     * <code>optional bool execution = 4;</code>
+     */
+    boolean getExecution();
+
+    /**
+     * <code>optional int32 locationID = 5;</code>
      */
     int getLocationID();
 
     /**
-     * <code>optional string cause = 3;</code>
+     * <code>optional string cause = 6;</code>
      */
     java.lang.String getCause();
     /**
-     * <code>optional string cause = 3;</code>
+     * <code>optional string cause = 6;</code>
      */
     com.google.protobuf.ByteString
         getCauseBytes();
 
     /**
-     * <code>optional int32 pas = 4;</code>
+     * <code>optional int32 pas = 7;</code>
      */
     int getPas();
 
     /**
-     * <code>optional int32 status = 5;</code>
+     * <code>optional int32 status = 8;</code>
      */
     int getStatus();
 
     /**
-     * <code>optional int32 refuseSMS = 6;</code>
+     * <code>optional bool refuseSMS = 9;</code>
      */
-    int getRefuseSMS();
+    boolean getRefuseSMS();
 
     /**
-     * <code>optional int32 refuseCall = 7;</code>
+     * <code>optional bool refuseCall = 10;</code>
      */
-    int getRefuseCall();
+    boolean getRefuseCall();
 
     /**
-     * <code>optional int32 mode = 8;</code>
+     * <code>optional int32 mode = 11;</code>
      */
     int getMode();
 
     /**
-     * <code>optional string extunsol = 9;</code>
+     * <code>optional string extunsol = 12;</code>
      */
     java.lang.String getExtunsol();
     /**
-     * <code>optional string extunsol = 9;</code>
+     * <code>optional string extunsol = 12;</code>
      */
     com.google.protobuf.ByteString
         getExtunsolBytes();
 
     /**
-     * <code>optional int32 state = 10;</code>
+     * <code>optional int32 state = 13;</code>
      */
     int getState();
 
     /**
-     * <code>optional int32 enable = 11;</code>
+     * <code>optional bool enable = 14;</code>
      */
-    int getEnable();
+    boolean getEnable();
 
     /**
-     * <code>optional string time = 12;</code>
+     * <code>optional string time = 15;</code>
      */
     java.lang.String getTime();
     /**
-     * <code>optional string time = 12;</code>
+     * <code>optional string time = 15;</code>
      */
     com.google.protobuf.ByteString
         getTimeBytes();
@@ -27245,7 +27260,7 @@ public final class ATCommand {
      *ds
      * </pre>
      *
-     * <code>optional string datlightSavingTime = 13;</code>
+     * <code>optional string datlightSavingTime = 16;</code>
      */
     java.lang.String getDatlightSavingTime();
     /**
@@ -27253,33 +27268,28 @@ public final class ATCommand {
      *ds
      * </pre>
      *
-     * <code>optional string datlightSavingTime = 13;</code>
+     * <code>optional string datlightSavingTime = 16;</code>
      */
     com.google.protobuf.ByteString
         getDatlightSavingTimeBytes();
 
     /**
-     * <code>optional int32 insertLevel = 14;</code>
+     * <code>optional int32 insertLevel = 17;</code>
      */
     int getInsertLevel();
 
     /**
-     * <code>optional int32 pinChoice = 15;</code>
+     * <code>optional int32 pinChoice = 18;</code>
      */
     int getPinChoice();
 
     /**
-     * <code>optional int32 insertStatus = 16;</code>
+     * <code>optional int32 insertStatus = 19;</code>
      */
     int getInsertStatus();
 
     /**
-     * <code>optional int32 n = 17;</code>
-     */
-    int getN();
-
-    /**
-     * <code>optional int32 type = 18;</code>
+     * <code>optional int32 type = 20;</code>
      */
     int getType();
   }
@@ -27296,22 +27306,24 @@ public final class ATCommand {
     }
     private StatusControlCommand() {
       messageType_ = 0;
+      test_ = false;
+      read_ = false;
+      execution_ = false;
       locationID_ = 0;
       cause_ = "";
       pas_ = 0;
       status_ = 0;
-      refuseSMS_ = 0;
-      refuseCall_ = 0;
+      refuseSMS_ = false;
+      refuseCall_ = false;
       mode_ = 0;
       extunsol_ = "";
       state_ = 0;
-      enable_ = 0;
+      enable_ = false;
       time_ = "";
       datlightSavingTime_ = "";
       insertLevel_ = 0;
       pinChoice_ = 0;
       insertStatus_ = 0;
-      n_ = 0;
       type_ = 0;
     }
 
@@ -27348,89 +27360,99 @@ public final class ATCommand {
             }
             case 16: {
 
+              test_ = input.readBool();
+              break;
+            }
+            case 24: {
+
+              read_ = input.readBool();
+              break;
+            }
+            case 32: {
+
+              execution_ = input.readBool();
+              break;
+            }
+            case 40: {
+
               locationID_ = input.readInt32();
               break;
             }
-            case 26: {
+            case 50: {
               java.lang.String s = input.readStringRequireUtf8();
 
               cause_ = s;
               break;
             }
-            case 32: {
+            case 56: {
 
               pas_ = input.readInt32();
               break;
             }
-            case 40: {
+            case 64: {
 
               status_ = input.readInt32();
               break;
             }
-            case 48: {
+            case 72: {
 
-              refuseSMS_ = input.readInt32();
-              break;
-            }
-            case 56: {
-
-              refuseCall_ = input.readInt32();
-              break;
-            }
-            case 64: {
-
-              mode_ = input.readInt32();
-              break;
-            }
-            case 74: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              extunsol_ = s;
+              refuseSMS_ = input.readBool();
               break;
             }
             case 80: {
 
-              state_ = input.readInt32();
+              refuseCall_ = input.readBool();
               break;
             }
             case 88: {
 
-              enable_ = input.readInt32();
+              mode_ = input.readInt32();
               break;
             }
             case 98: {
               java.lang.String s = input.readStringRequireUtf8();
 
+              extunsol_ = s;
+              break;
+            }
+            case 104: {
+
+              state_ = input.readInt32();
+              break;
+            }
+            case 112: {
+
+              enable_ = input.readBool();
+              break;
+            }
+            case 122: {
+              java.lang.String s = input.readStringRequireUtf8();
+
               time_ = s;
               break;
             }
-            case 106: {
+            case 130: {
               java.lang.String s = input.readStringRequireUtf8();
 
               datlightSavingTime_ = s;
               break;
             }
-            case 112: {
+            case 136: {
 
               insertLevel_ = input.readInt32();
               break;
             }
-            case 120: {
+            case 144: {
 
               pinChoice_ = input.readInt32();
               break;
             }
-            case 128: {
+            case 152: {
 
               insertStatus_ = input.readInt32();
               break;
             }
-            case 136: {
-
-              n_ = input.readInt32();
-              break;
-            }
-            case 144: {
+            case 160: {
 
               type_ = input.readInt32();
               break;
@@ -27474,19 +27496,46 @@ public final class ATCommand {
       return result == null ? com.rtrk.atcommands.ATCommand.StatusControlMessageType.UNRECOGNIZED : result;
     }
 
-    public static final int LOCATIONID_FIELD_NUMBER = 2;
+    public static final int TEST_FIELD_NUMBER = 2;
+    private boolean test_;
+    /**
+     * <code>optional bool test = 2;</code>
+     */
+    public boolean getTest() {
+      return test_;
+    }
+
+    public static final int READ_FIELD_NUMBER = 3;
+    private boolean read_;
+    /**
+     * <code>optional bool read = 3;</code>
+     */
+    public boolean getRead() {
+      return read_;
+    }
+
+    public static final int EXECUTION_FIELD_NUMBER = 4;
+    private boolean execution_;
+    /**
+     * <code>optional bool execution = 4;</code>
+     */
+    public boolean getExecution() {
+      return execution_;
+    }
+
+    public static final int LOCATIONID_FIELD_NUMBER = 5;
     private int locationID_;
     /**
-     * <code>optional int32 locationID = 2;</code>
+     * <code>optional int32 locationID = 5;</code>
      */
     public int getLocationID() {
       return locationID_;
     }
 
-    public static final int CAUSE_FIELD_NUMBER = 3;
+    public static final int CAUSE_FIELD_NUMBER = 6;
     private volatile java.lang.Object cause_;
     /**
-     * <code>optional string cause = 3;</code>
+     * <code>optional string cause = 6;</code>
      */
     public java.lang.String getCause() {
       java.lang.Object ref = cause_;
@@ -27501,7 +27550,7 @@ public final class ATCommand {
       }
     }
     /**
-     * <code>optional string cause = 3;</code>
+     * <code>optional string cause = 6;</code>
      */
     public com.google.protobuf.ByteString
         getCauseBytes() {
@@ -27517,55 +27566,55 @@ public final class ATCommand {
       }
     }
 
-    public static final int PAS_FIELD_NUMBER = 4;
+    public static final int PAS_FIELD_NUMBER = 7;
     private int pas_;
     /**
-     * <code>optional int32 pas = 4;</code>
+     * <code>optional int32 pas = 7;</code>
      */
     public int getPas() {
       return pas_;
     }
 
-    public static final int STATUS_FIELD_NUMBER = 5;
+    public static final int STATUS_FIELD_NUMBER = 8;
     private int status_;
     /**
-     * <code>optional int32 status = 5;</code>
+     * <code>optional int32 status = 8;</code>
      */
     public int getStatus() {
       return status_;
     }
 
-    public static final int REFUSESMS_FIELD_NUMBER = 6;
-    private int refuseSMS_;
+    public static final int REFUSESMS_FIELD_NUMBER = 9;
+    private boolean refuseSMS_;
     /**
-     * <code>optional int32 refuseSMS = 6;</code>
+     * <code>optional bool refuseSMS = 9;</code>
      */
-    public int getRefuseSMS() {
+    public boolean getRefuseSMS() {
       return refuseSMS_;
     }
 
-    public static final int REFUSECALL_FIELD_NUMBER = 7;
-    private int refuseCall_;
+    public static final int REFUSECALL_FIELD_NUMBER = 10;
+    private boolean refuseCall_;
     /**
-     * <code>optional int32 refuseCall = 7;</code>
+     * <code>optional bool refuseCall = 10;</code>
      */
-    public int getRefuseCall() {
+    public boolean getRefuseCall() {
       return refuseCall_;
     }
 
-    public static final int MODE_FIELD_NUMBER = 8;
+    public static final int MODE_FIELD_NUMBER = 11;
     private int mode_;
     /**
-     * <code>optional int32 mode = 8;</code>
+     * <code>optional int32 mode = 11;</code>
      */
     public int getMode() {
       return mode_;
     }
 
-    public static final int EXTUNSOL_FIELD_NUMBER = 9;
+    public static final int EXTUNSOL_FIELD_NUMBER = 12;
     private volatile java.lang.Object extunsol_;
     /**
-     * <code>optional string extunsol = 9;</code>
+     * <code>optional string extunsol = 12;</code>
      */
     public java.lang.String getExtunsol() {
       java.lang.Object ref = extunsol_;
@@ -27580,7 +27629,7 @@ public final class ATCommand {
       }
     }
     /**
-     * <code>optional string extunsol = 9;</code>
+     * <code>optional string extunsol = 12;</code>
      */
     public com.google.protobuf.ByteString
         getExtunsolBytes() {
@@ -27596,28 +27645,28 @@ public final class ATCommand {
       }
     }
 
-    public static final int STATE_FIELD_NUMBER = 10;
+    public static final int STATE_FIELD_NUMBER = 13;
     private int state_;
     /**
-     * <code>optional int32 state = 10;</code>
+     * <code>optional int32 state = 13;</code>
      */
     public int getState() {
       return state_;
     }
 
-    public static final int ENABLE_FIELD_NUMBER = 11;
-    private int enable_;
+    public static final int ENABLE_FIELD_NUMBER = 14;
+    private boolean enable_;
     /**
-     * <code>optional int32 enable = 11;</code>
+     * <code>optional bool enable = 14;</code>
      */
-    public int getEnable() {
+    public boolean getEnable() {
       return enable_;
     }
 
-    public static final int TIME_FIELD_NUMBER = 12;
+    public static final int TIME_FIELD_NUMBER = 15;
     private volatile java.lang.Object time_;
     /**
-     * <code>optional string time = 12;</code>
+     * <code>optional string time = 15;</code>
      */
     public java.lang.String getTime() {
       java.lang.Object ref = time_;
@@ -27632,7 +27681,7 @@ public final class ATCommand {
       }
     }
     /**
-     * <code>optional string time = 12;</code>
+     * <code>optional string time = 15;</code>
      */
     public com.google.protobuf.ByteString
         getTimeBytes() {
@@ -27648,14 +27697,14 @@ public final class ATCommand {
       }
     }
 
-    public static final int DATLIGHTSAVINGTIME_FIELD_NUMBER = 13;
+    public static final int DATLIGHTSAVINGTIME_FIELD_NUMBER = 16;
     private volatile java.lang.Object datlightSavingTime_;
     /**
      * <pre>
      *ds
      * </pre>
      *
-     * <code>optional string datlightSavingTime = 13;</code>
+     * <code>optional string datlightSavingTime = 16;</code>
      */
     public java.lang.String getDatlightSavingTime() {
       java.lang.Object ref = datlightSavingTime_;
@@ -27674,7 +27723,7 @@ public final class ATCommand {
      *ds
      * </pre>
      *
-     * <code>optional string datlightSavingTime = 13;</code>
+     * <code>optional string datlightSavingTime = 16;</code>
      */
     public com.google.protobuf.ByteString
         getDatlightSavingTimeBytes() {
@@ -27690,46 +27739,37 @@ public final class ATCommand {
       }
     }
 
-    public static final int INSERTLEVEL_FIELD_NUMBER = 14;
+    public static final int INSERTLEVEL_FIELD_NUMBER = 17;
     private int insertLevel_;
     /**
-     * <code>optional int32 insertLevel = 14;</code>
+     * <code>optional int32 insertLevel = 17;</code>
      */
     public int getInsertLevel() {
       return insertLevel_;
     }
 
-    public static final int PINCHOICE_FIELD_NUMBER = 15;
+    public static final int PINCHOICE_FIELD_NUMBER = 18;
     private int pinChoice_;
     /**
-     * <code>optional int32 pinChoice = 15;</code>
+     * <code>optional int32 pinChoice = 18;</code>
      */
     public int getPinChoice() {
       return pinChoice_;
     }
 
-    public static final int INSERTSTATUS_FIELD_NUMBER = 16;
+    public static final int INSERTSTATUS_FIELD_NUMBER = 19;
     private int insertStatus_;
     /**
-     * <code>optional int32 insertStatus = 16;</code>
+     * <code>optional int32 insertStatus = 19;</code>
      */
     public int getInsertStatus() {
       return insertStatus_;
     }
 
-    public static final int N_FIELD_NUMBER = 17;
-    private int n_;
-    /**
-     * <code>optional int32 n = 17;</code>
-     */
-    public int getN() {
-      return n_;
-    }
-
-    public static final int TYPE_FIELD_NUMBER = 18;
+    public static final int TYPE_FIELD_NUMBER = 20;
     private int type_;
     /**
-     * <code>optional int32 type = 18;</code>
+     * <code>optional int32 type = 20;</code>
      */
     public int getType() {
       return type_;
@@ -27750,56 +27790,62 @@ public final class ATCommand {
       if (messageType_ != com.rtrk.atcommands.ATCommand.StatusControlMessageType.EXTENDED_ERROR_REPORT.getNumber()) {
         output.writeEnum(1, messageType_);
       }
+      if (test_ != false) {
+        output.writeBool(2, test_);
+      }
+      if (read_ != false) {
+        output.writeBool(3, read_);
+      }
+      if (execution_ != false) {
+        output.writeBool(4, execution_);
+      }
       if (locationID_ != 0) {
-        output.writeInt32(2, locationID_);
+        output.writeInt32(5, locationID_);
       }
       if (!getCauseBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, cause_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, cause_);
       }
       if (pas_ != 0) {
-        output.writeInt32(4, pas_);
+        output.writeInt32(7, pas_);
       }
       if (status_ != 0) {
-        output.writeInt32(5, status_);
+        output.writeInt32(8, status_);
       }
-      if (refuseSMS_ != 0) {
-        output.writeInt32(6, refuseSMS_);
+      if (refuseSMS_ != false) {
+        output.writeBool(9, refuseSMS_);
       }
-      if (refuseCall_ != 0) {
-        output.writeInt32(7, refuseCall_);
+      if (refuseCall_ != false) {
+        output.writeBool(10, refuseCall_);
       }
       if (mode_ != 0) {
-        output.writeInt32(8, mode_);
+        output.writeInt32(11, mode_);
       }
       if (!getExtunsolBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 9, extunsol_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 12, extunsol_);
       }
       if (state_ != 0) {
-        output.writeInt32(10, state_);
+        output.writeInt32(13, state_);
       }
-      if (enable_ != 0) {
-        output.writeInt32(11, enable_);
+      if (enable_ != false) {
+        output.writeBool(14, enable_);
       }
       if (!getTimeBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 12, time_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 15, time_);
       }
       if (!getDatlightSavingTimeBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 13, datlightSavingTime_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 16, datlightSavingTime_);
       }
       if (insertLevel_ != 0) {
-        output.writeInt32(14, insertLevel_);
+        output.writeInt32(17, insertLevel_);
       }
       if (pinChoice_ != 0) {
-        output.writeInt32(15, pinChoice_);
+        output.writeInt32(18, pinChoice_);
       }
       if (insertStatus_ != 0) {
-        output.writeInt32(16, insertStatus_);
-      }
-      if (n_ != 0) {
-        output.writeInt32(17, n_);
+        output.writeInt32(19, insertStatus_);
       }
       if (type_ != 0) {
-        output.writeInt32(18, type_);
+        output.writeInt32(20, type_);
       }
     }
 
@@ -27812,69 +27858,77 @@ public final class ATCommand {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(1, messageType_);
       }
+      if (test_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(2, test_);
+      }
+      if (read_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(3, read_);
+      }
+      if (execution_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(4, execution_);
+      }
       if (locationID_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(2, locationID_);
+          .computeInt32Size(5, locationID_);
       }
       if (!getCauseBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, cause_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, cause_);
       }
       if (pas_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(4, pas_);
+          .computeInt32Size(7, pas_);
       }
       if (status_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(5, status_);
+          .computeInt32Size(8, status_);
       }
-      if (refuseSMS_ != 0) {
+      if (refuseSMS_ != false) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(6, refuseSMS_);
+          .computeBoolSize(9, refuseSMS_);
       }
-      if (refuseCall_ != 0) {
+      if (refuseCall_ != false) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(7, refuseCall_);
+          .computeBoolSize(10, refuseCall_);
       }
       if (mode_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(8, mode_);
+          .computeInt32Size(11, mode_);
       }
       if (!getExtunsolBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, extunsol_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(12, extunsol_);
       }
       if (state_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(10, state_);
+          .computeInt32Size(13, state_);
       }
-      if (enable_ != 0) {
+      if (enable_ != false) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(11, enable_);
+          .computeBoolSize(14, enable_);
       }
       if (!getTimeBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(12, time_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(15, time_);
       }
       if (!getDatlightSavingTimeBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(13, datlightSavingTime_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(16, datlightSavingTime_);
       }
       if (insertLevel_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(14, insertLevel_);
+          .computeInt32Size(17, insertLevel_);
       }
       if (pinChoice_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(15, pinChoice_);
+          .computeInt32Size(18, pinChoice_);
       }
       if (insertStatus_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(16, insertStatus_);
-      }
-      if (n_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(17, n_);
+          .computeInt32Size(19, insertStatus_);
       }
       if (type_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(18, type_);
+          .computeInt32Size(20, type_);
       }
       memoizedSize = size;
       return size;
@@ -27893,6 +27947,12 @@ public final class ATCommand {
 
       boolean result = true;
       result = result && messageType_ == other.messageType_;
+      result = result && (getTest()
+          == other.getTest());
+      result = result && (getRead()
+          == other.getRead());
+      result = result && (getExecution()
+          == other.getExecution());
       result = result && (getLocationID()
           == other.getLocationID());
       result = result && getCause()
@@ -27923,8 +27983,6 @@ public final class ATCommand {
           == other.getPinChoice());
       result = result && (getInsertStatus()
           == other.getInsertStatus());
-      result = result && (getN()
-          == other.getN());
       result = result && (getType()
           == other.getType());
       return result;
@@ -27939,6 +27997,15 @@ public final class ATCommand {
       hash = (19 * hash) + getDescriptorForType().hashCode();
       hash = (37 * hash) + MESSAGETYPE_FIELD_NUMBER;
       hash = (53 * hash) + messageType_;
+      hash = (37 * hash) + TEST_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getTest());
+      hash = (37 * hash) + READ_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getRead());
+      hash = (37 * hash) + EXECUTION_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getExecution());
       hash = (37 * hash) + LOCATIONID_FIELD_NUMBER;
       hash = (53 * hash) + getLocationID();
       hash = (37 * hash) + CAUSE_FIELD_NUMBER;
@@ -27948,9 +28015,11 @@ public final class ATCommand {
       hash = (37 * hash) + STATUS_FIELD_NUMBER;
       hash = (53 * hash) + getStatus();
       hash = (37 * hash) + REFUSESMS_FIELD_NUMBER;
-      hash = (53 * hash) + getRefuseSMS();
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getRefuseSMS());
       hash = (37 * hash) + REFUSECALL_FIELD_NUMBER;
-      hash = (53 * hash) + getRefuseCall();
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getRefuseCall());
       hash = (37 * hash) + MODE_FIELD_NUMBER;
       hash = (53 * hash) + getMode();
       hash = (37 * hash) + EXTUNSOL_FIELD_NUMBER;
@@ -27958,7 +28027,8 @@ public final class ATCommand {
       hash = (37 * hash) + STATE_FIELD_NUMBER;
       hash = (53 * hash) + getState();
       hash = (37 * hash) + ENABLE_FIELD_NUMBER;
-      hash = (53 * hash) + getEnable();
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getEnable());
       hash = (37 * hash) + TIME_FIELD_NUMBER;
       hash = (53 * hash) + getTime().hashCode();
       hash = (37 * hash) + DATLIGHTSAVINGTIME_FIELD_NUMBER;
@@ -27969,8 +28039,6 @@ public final class ATCommand {
       hash = (53 * hash) + getPinChoice();
       hash = (37 * hash) + INSERTSTATUS_FIELD_NUMBER;
       hash = (53 * hash) + getInsertStatus();
-      hash = (37 * hash) + N_FIELD_NUMBER;
-      hash = (53 * hash) + getN();
       hash = (37 * hash) + TYPE_FIELD_NUMBER;
       hash = (53 * hash) + getType();
       hash = (29 * hash) + unknownFields.hashCode();
@@ -28093,6 +28161,12 @@ public final class ATCommand {
         super.clear();
         messageType_ = 0;
 
+        test_ = false;
+
+        read_ = false;
+
+        execution_ = false;
+
         locationID_ = 0;
 
         cause_ = "";
@@ -28101,9 +28175,9 @@ public final class ATCommand {
 
         status_ = 0;
 
-        refuseSMS_ = 0;
+        refuseSMS_ = false;
 
-        refuseCall_ = 0;
+        refuseCall_ = false;
 
         mode_ = 0;
 
@@ -28111,7 +28185,7 @@ public final class ATCommand {
 
         state_ = 0;
 
-        enable_ = 0;
+        enable_ = false;
 
         time_ = "";
 
@@ -28122,8 +28196,6 @@ public final class ATCommand {
         pinChoice_ = 0;
 
         insertStatus_ = 0;
-
-        n_ = 0;
 
         type_ = 0;
 
@@ -28150,6 +28222,9 @@ public final class ATCommand {
       public com.rtrk.atcommands.ATCommand.StatusControlCommand buildPartial() {
         com.rtrk.atcommands.ATCommand.StatusControlCommand result = new com.rtrk.atcommands.ATCommand.StatusControlCommand(this);
         result.messageType_ = messageType_;
+        result.test_ = test_;
+        result.read_ = read_;
+        result.execution_ = execution_;
         result.locationID_ = locationID_;
         result.cause_ = cause_;
         result.pas_ = pas_;
@@ -28165,7 +28240,6 @@ public final class ATCommand {
         result.insertLevel_ = insertLevel_;
         result.pinChoice_ = pinChoice_;
         result.insertStatus_ = insertStatus_;
-        result.n_ = n_;
         result.type_ = type_;
         onBuilt();
         return result;
@@ -28211,6 +28285,15 @@ public final class ATCommand {
         if (other.messageType_ != 0) {
           setMessageTypeValue(other.getMessageTypeValue());
         }
+        if (other.getTest() != false) {
+          setTest(other.getTest());
+        }
+        if (other.getRead() != false) {
+          setRead(other.getRead());
+        }
+        if (other.getExecution() != false) {
+          setExecution(other.getExecution());
+        }
         if (other.getLocationID() != 0) {
           setLocationID(other.getLocationID());
         }
@@ -28224,10 +28307,10 @@ public final class ATCommand {
         if (other.getStatus() != 0) {
           setStatus(other.getStatus());
         }
-        if (other.getRefuseSMS() != 0) {
+        if (other.getRefuseSMS() != false) {
           setRefuseSMS(other.getRefuseSMS());
         }
-        if (other.getRefuseCall() != 0) {
+        if (other.getRefuseCall() != false) {
           setRefuseCall(other.getRefuseCall());
         }
         if (other.getMode() != 0) {
@@ -28240,7 +28323,7 @@ public final class ATCommand {
         if (other.getState() != 0) {
           setState(other.getState());
         }
-        if (other.getEnable() != 0) {
+        if (other.getEnable() != false) {
           setEnable(other.getEnable());
         }
         if (!other.getTime().isEmpty()) {
@@ -28259,9 +28342,6 @@ public final class ATCommand {
         }
         if (other.getInsertStatus() != 0) {
           setInsertStatus(other.getInsertStatus());
-        }
-        if (other.getN() != 0) {
-          setN(other.getN());
         }
         if (other.getType() != 0) {
           setType(other.getType());
@@ -28336,15 +28416,93 @@ public final class ATCommand {
         return this;
       }
 
+      private boolean test_ ;
+      /**
+       * <code>optional bool test = 2;</code>
+       */
+      public boolean getTest() {
+        return test_;
+      }
+      /**
+       * <code>optional bool test = 2;</code>
+       */
+      public Builder setTest(boolean value) {
+        
+        test_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool test = 2;</code>
+       */
+      public Builder clearTest() {
+        
+        test_ = false;
+        onChanged();
+        return this;
+      }
+
+      private boolean read_ ;
+      /**
+       * <code>optional bool read = 3;</code>
+       */
+      public boolean getRead() {
+        return read_;
+      }
+      /**
+       * <code>optional bool read = 3;</code>
+       */
+      public Builder setRead(boolean value) {
+        
+        read_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool read = 3;</code>
+       */
+      public Builder clearRead() {
+        
+        read_ = false;
+        onChanged();
+        return this;
+      }
+
+      private boolean execution_ ;
+      /**
+       * <code>optional bool execution = 4;</code>
+       */
+      public boolean getExecution() {
+        return execution_;
+      }
+      /**
+       * <code>optional bool execution = 4;</code>
+       */
+      public Builder setExecution(boolean value) {
+        
+        execution_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool execution = 4;</code>
+       */
+      public Builder clearExecution() {
+        
+        execution_ = false;
+        onChanged();
+        return this;
+      }
+
       private int locationID_ ;
       /**
-       * <code>optional int32 locationID = 2;</code>
+       * <code>optional int32 locationID = 5;</code>
        */
       public int getLocationID() {
         return locationID_;
       }
       /**
-       * <code>optional int32 locationID = 2;</code>
+       * <code>optional int32 locationID = 5;</code>
        */
       public Builder setLocationID(int value) {
         
@@ -28353,7 +28511,7 @@ public final class ATCommand {
         return this;
       }
       /**
-       * <code>optional int32 locationID = 2;</code>
+       * <code>optional int32 locationID = 5;</code>
        */
       public Builder clearLocationID() {
         
@@ -28364,7 +28522,7 @@ public final class ATCommand {
 
       private java.lang.Object cause_ = "";
       /**
-       * <code>optional string cause = 3;</code>
+       * <code>optional string cause = 6;</code>
        */
       public java.lang.String getCause() {
         java.lang.Object ref = cause_;
@@ -28379,7 +28537,7 @@ public final class ATCommand {
         }
       }
       /**
-       * <code>optional string cause = 3;</code>
+       * <code>optional string cause = 6;</code>
        */
       public com.google.protobuf.ByteString
           getCauseBytes() {
@@ -28395,7 +28553,7 @@ public final class ATCommand {
         }
       }
       /**
-       * <code>optional string cause = 3;</code>
+       * <code>optional string cause = 6;</code>
        */
       public Builder setCause(
           java.lang.String value) {
@@ -28408,7 +28566,7 @@ public final class ATCommand {
         return this;
       }
       /**
-       * <code>optional string cause = 3;</code>
+       * <code>optional string cause = 6;</code>
        */
       public Builder clearCause() {
         
@@ -28417,7 +28575,7 @@ public final class ATCommand {
         return this;
       }
       /**
-       * <code>optional string cause = 3;</code>
+       * <code>optional string cause = 6;</code>
        */
       public Builder setCauseBytes(
           com.google.protobuf.ByteString value) {
@@ -28433,13 +28591,13 @@ public final class ATCommand {
 
       private int pas_ ;
       /**
-       * <code>optional int32 pas = 4;</code>
+       * <code>optional int32 pas = 7;</code>
        */
       public int getPas() {
         return pas_;
       }
       /**
-       * <code>optional int32 pas = 4;</code>
+       * <code>optional int32 pas = 7;</code>
        */
       public Builder setPas(int value) {
         
@@ -28448,7 +28606,7 @@ public final class ATCommand {
         return this;
       }
       /**
-       * <code>optional int32 pas = 4;</code>
+       * <code>optional int32 pas = 7;</code>
        */
       public Builder clearPas() {
         
@@ -28459,13 +28617,13 @@ public final class ATCommand {
 
       private int status_ ;
       /**
-       * <code>optional int32 status = 5;</code>
+       * <code>optional int32 status = 8;</code>
        */
       public int getStatus() {
         return status_;
       }
       /**
-       * <code>optional int32 status = 5;</code>
+       * <code>optional int32 status = 8;</code>
        */
       public Builder setStatus(int value) {
         
@@ -28474,7 +28632,7 @@ public final class ATCommand {
         return this;
       }
       /**
-       * <code>optional int32 status = 5;</code>
+       * <code>optional int32 status = 8;</code>
        */
       public Builder clearStatus() {
         
@@ -28483,67 +28641,67 @@ public final class ATCommand {
         return this;
       }
 
-      private int refuseSMS_ ;
+      private boolean refuseSMS_ ;
       /**
-       * <code>optional int32 refuseSMS = 6;</code>
+       * <code>optional bool refuseSMS = 9;</code>
        */
-      public int getRefuseSMS() {
+      public boolean getRefuseSMS() {
         return refuseSMS_;
       }
       /**
-       * <code>optional int32 refuseSMS = 6;</code>
+       * <code>optional bool refuseSMS = 9;</code>
        */
-      public Builder setRefuseSMS(int value) {
+      public Builder setRefuseSMS(boolean value) {
         
         refuseSMS_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>optional int32 refuseSMS = 6;</code>
+       * <code>optional bool refuseSMS = 9;</code>
        */
       public Builder clearRefuseSMS() {
         
-        refuseSMS_ = 0;
+        refuseSMS_ = false;
         onChanged();
         return this;
       }
 
-      private int refuseCall_ ;
+      private boolean refuseCall_ ;
       /**
-       * <code>optional int32 refuseCall = 7;</code>
+       * <code>optional bool refuseCall = 10;</code>
        */
-      public int getRefuseCall() {
+      public boolean getRefuseCall() {
         return refuseCall_;
       }
       /**
-       * <code>optional int32 refuseCall = 7;</code>
+       * <code>optional bool refuseCall = 10;</code>
        */
-      public Builder setRefuseCall(int value) {
+      public Builder setRefuseCall(boolean value) {
         
         refuseCall_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>optional int32 refuseCall = 7;</code>
+       * <code>optional bool refuseCall = 10;</code>
        */
       public Builder clearRefuseCall() {
         
-        refuseCall_ = 0;
+        refuseCall_ = false;
         onChanged();
         return this;
       }
 
       private int mode_ ;
       /**
-       * <code>optional int32 mode = 8;</code>
+       * <code>optional int32 mode = 11;</code>
        */
       public int getMode() {
         return mode_;
       }
       /**
-       * <code>optional int32 mode = 8;</code>
+       * <code>optional int32 mode = 11;</code>
        */
       public Builder setMode(int value) {
         
@@ -28552,7 +28710,7 @@ public final class ATCommand {
         return this;
       }
       /**
-       * <code>optional int32 mode = 8;</code>
+       * <code>optional int32 mode = 11;</code>
        */
       public Builder clearMode() {
         
@@ -28563,7 +28721,7 @@ public final class ATCommand {
 
       private java.lang.Object extunsol_ = "";
       /**
-       * <code>optional string extunsol = 9;</code>
+       * <code>optional string extunsol = 12;</code>
        */
       public java.lang.String getExtunsol() {
         java.lang.Object ref = extunsol_;
@@ -28578,7 +28736,7 @@ public final class ATCommand {
         }
       }
       /**
-       * <code>optional string extunsol = 9;</code>
+       * <code>optional string extunsol = 12;</code>
        */
       public com.google.protobuf.ByteString
           getExtunsolBytes() {
@@ -28594,7 +28752,7 @@ public final class ATCommand {
         }
       }
       /**
-       * <code>optional string extunsol = 9;</code>
+       * <code>optional string extunsol = 12;</code>
        */
       public Builder setExtunsol(
           java.lang.String value) {
@@ -28607,7 +28765,7 @@ public final class ATCommand {
         return this;
       }
       /**
-       * <code>optional string extunsol = 9;</code>
+       * <code>optional string extunsol = 12;</code>
        */
       public Builder clearExtunsol() {
         
@@ -28616,7 +28774,7 @@ public final class ATCommand {
         return this;
       }
       /**
-       * <code>optional string extunsol = 9;</code>
+       * <code>optional string extunsol = 12;</code>
        */
       public Builder setExtunsolBytes(
           com.google.protobuf.ByteString value) {
@@ -28632,13 +28790,13 @@ public final class ATCommand {
 
       private int state_ ;
       /**
-       * <code>optional int32 state = 10;</code>
+       * <code>optional int32 state = 13;</code>
        */
       public int getState() {
         return state_;
       }
       /**
-       * <code>optional int32 state = 10;</code>
+       * <code>optional int32 state = 13;</code>
        */
       public Builder setState(int value) {
         
@@ -28647,7 +28805,7 @@ public final class ATCommand {
         return this;
       }
       /**
-       * <code>optional int32 state = 10;</code>
+       * <code>optional int32 state = 13;</code>
        */
       public Builder clearState() {
         
@@ -28656,35 +28814,35 @@ public final class ATCommand {
         return this;
       }
 
-      private int enable_ ;
+      private boolean enable_ ;
       /**
-       * <code>optional int32 enable = 11;</code>
+       * <code>optional bool enable = 14;</code>
        */
-      public int getEnable() {
+      public boolean getEnable() {
         return enable_;
       }
       /**
-       * <code>optional int32 enable = 11;</code>
+       * <code>optional bool enable = 14;</code>
        */
-      public Builder setEnable(int value) {
+      public Builder setEnable(boolean value) {
         
         enable_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>optional int32 enable = 11;</code>
+       * <code>optional bool enable = 14;</code>
        */
       public Builder clearEnable() {
         
-        enable_ = 0;
+        enable_ = false;
         onChanged();
         return this;
       }
 
       private java.lang.Object time_ = "";
       /**
-       * <code>optional string time = 12;</code>
+       * <code>optional string time = 15;</code>
        */
       public java.lang.String getTime() {
         java.lang.Object ref = time_;
@@ -28699,7 +28857,7 @@ public final class ATCommand {
         }
       }
       /**
-       * <code>optional string time = 12;</code>
+       * <code>optional string time = 15;</code>
        */
       public com.google.protobuf.ByteString
           getTimeBytes() {
@@ -28715,7 +28873,7 @@ public final class ATCommand {
         }
       }
       /**
-       * <code>optional string time = 12;</code>
+       * <code>optional string time = 15;</code>
        */
       public Builder setTime(
           java.lang.String value) {
@@ -28728,7 +28886,7 @@ public final class ATCommand {
         return this;
       }
       /**
-       * <code>optional string time = 12;</code>
+       * <code>optional string time = 15;</code>
        */
       public Builder clearTime() {
         
@@ -28737,7 +28895,7 @@ public final class ATCommand {
         return this;
       }
       /**
-       * <code>optional string time = 12;</code>
+       * <code>optional string time = 15;</code>
        */
       public Builder setTimeBytes(
           com.google.protobuf.ByteString value) {
@@ -28757,7 +28915,7 @@ public final class ATCommand {
        *ds
        * </pre>
        *
-       * <code>optional string datlightSavingTime = 13;</code>
+       * <code>optional string datlightSavingTime = 16;</code>
        */
       public java.lang.String getDatlightSavingTime() {
         java.lang.Object ref = datlightSavingTime_;
@@ -28776,7 +28934,7 @@ public final class ATCommand {
        *ds
        * </pre>
        *
-       * <code>optional string datlightSavingTime = 13;</code>
+       * <code>optional string datlightSavingTime = 16;</code>
        */
       public com.google.protobuf.ByteString
           getDatlightSavingTimeBytes() {
@@ -28796,7 +28954,7 @@ public final class ATCommand {
        *ds
        * </pre>
        *
-       * <code>optional string datlightSavingTime = 13;</code>
+       * <code>optional string datlightSavingTime = 16;</code>
        */
       public Builder setDatlightSavingTime(
           java.lang.String value) {
@@ -28813,7 +28971,7 @@ public final class ATCommand {
        *ds
        * </pre>
        *
-       * <code>optional string datlightSavingTime = 13;</code>
+       * <code>optional string datlightSavingTime = 16;</code>
        */
       public Builder clearDatlightSavingTime() {
         
@@ -28826,7 +28984,7 @@ public final class ATCommand {
        *ds
        * </pre>
        *
-       * <code>optional string datlightSavingTime = 13;</code>
+       * <code>optional string datlightSavingTime = 16;</code>
        */
       public Builder setDatlightSavingTimeBytes(
           com.google.protobuf.ByteString value) {
@@ -28842,13 +29000,13 @@ public final class ATCommand {
 
       private int insertLevel_ ;
       /**
-       * <code>optional int32 insertLevel = 14;</code>
+       * <code>optional int32 insertLevel = 17;</code>
        */
       public int getInsertLevel() {
         return insertLevel_;
       }
       /**
-       * <code>optional int32 insertLevel = 14;</code>
+       * <code>optional int32 insertLevel = 17;</code>
        */
       public Builder setInsertLevel(int value) {
         
@@ -28857,7 +29015,7 @@ public final class ATCommand {
         return this;
       }
       /**
-       * <code>optional int32 insertLevel = 14;</code>
+       * <code>optional int32 insertLevel = 17;</code>
        */
       public Builder clearInsertLevel() {
         
@@ -28868,13 +29026,13 @@ public final class ATCommand {
 
       private int pinChoice_ ;
       /**
-       * <code>optional int32 pinChoice = 15;</code>
+       * <code>optional int32 pinChoice = 18;</code>
        */
       public int getPinChoice() {
         return pinChoice_;
       }
       /**
-       * <code>optional int32 pinChoice = 15;</code>
+       * <code>optional int32 pinChoice = 18;</code>
        */
       public Builder setPinChoice(int value) {
         
@@ -28883,7 +29041,7 @@ public final class ATCommand {
         return this;
       }
       /**
-       * <code>optional int32 pinChoice = 15;</code>
+       * <code>optional int32 pinChoice = 18;</code>
        */
       public Builder clearPinChoice() {
         
@@ -28894,13 +29052,13 @@ public final class ATCommand {
 
       private int insertStatus_ ;
       /**
-       * <code>optional int32 insertStatus = 16;</code>
+       * <code>optional int32 insertStatus = 19;</code>
        */
       public int getInsertStatus() {
         return insertStatus_;
       }
       /**
-       * <code>optional int32 insertStatus = 16;</code>
+       * <code>optional int32 insertStatus = 19;</code>
        */
       public Builder setInsertStatus(int value) {
         
@@ -28909,7 +29067,7 @@ public final class ATCommand {
         return this;
       }
       /**
-       * <code>optional int32 insertStatus = 16;</code>
+       * <code>optional int32 insertStatus = 19;</code>
        */
       public Builder clearInsertStatus() {
         
@@ -28918,41 +29076,15 @@ public final class ATCommand {
         return this;
       }
 
-      private int n_ ;
-      /**
-       * <code>optional int32 n = 17;</code>
-       */
-      public int getN() {
-        return n_;
-      }
-      /**
-       * <code>optional int32 n = 17;</code>
-       */
-      public Builder setN(int value) {
-        
-        n_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional int32 n = 17;</code>
-       */
-      public Builder clearN() {
-        
-        n_ = 0;
-        onChanged();
-        return this;
-      }
-
       private int type_ ;
       /**
-       * <code>optional int32 type = 18;</code>
+       * <code>optional int32 type = 20;</code>
        */
       public int getType() {
         return type_;
       }
       /**
-       * <code>optional int32 type = 18;</code>
+       * <code>optional int32 type = 20;</code>
        */
       public Builder setType(int value) {
         
@@ -28961,7 +29093,7 @@ public final class ATCommand {
         return this;
       }
       /**
-       * <code>optional int32 type = 18;</code>
+       * <code>optional int32 type = 20;</code>
        */
       public Builder clearType() {
         
@@ -29032,26 +29164,41 @@ public final class ATCommand {
     com.rtrk.atcommands.ATCommand.SIMRelatedMessageType getMessageType();
 
     /**
-     * <code>optional string fac = 2;</code>
+     * <code>optional bool test = 2;</code>
+     */
+    boolean getTest();
+
+    /**
+     * <code>optional bool read = 3;</code>
+     */
+    boolean getRead();
+
+    /**
+     * <code>optional bool execution = 4;</code>
+     */
+    boolean getExecution();
+
+    /**
+     * <code>optional string fac = 31;</code>
      */
     java.lang.String getFac();
     /**
-     * <code>optional string fac = 2;</code>
+     * <code>optional string fac = 31;</code>
      */
     com.google.protobuf.ByteString
         getFacBytes();
 
     /**
-     * <code>optional int32 mode = 3;</code>
+     * <code>optional int32 mode = 32;</code>
      */
     int getMode();
 
     /**
-     * <code>optional string password = 4;</code>
+     * <code>optional string password = 33;</code>
      */
     java.lang.String getPassword();
     /**
-     * <code>optional string password = 4;</code>
+     * <code>optional string password = 33;</code>
      */
     com.google.protobuf.ByteString
         getPasswordBytes();
@@ -29112,9 +29259,14 @@ public final class ATCommand {
         getNewPwdBytes();
 
     /**
-     * <code>optional int32 command = 12;</code>
+     * <code>optional string command = 12;</code>
      */
-    int getCommand();
+    java.lang.String getCommand();
+    /**
+     * <code>optional string command = 12;</code>
+     */
+    com.google.protobuf.ByteString
+        getCommandBytes();
 
     /**
      * <code>optional int32 fileID = 13;</code>
@@ -29247,6 +29399,9 @@ public final class ATCommand {
     }
     private SIMRelatedCommand() {
       messageType_ = 0;
+      test_ = false;
+      read_ = false;
+      execution_ = false;
       fac_ = "";
       mode_ = 0;
       password_ = "";
@@ -29257,7 +29412,7 @@ public final class ATCommand {
       pwdLength_ = 0;
       oldPwd_ = "";
       newPwd_ = "";
-      command_ = 0;
+      command_ = "";
       fileID_ = 0;
       p1_ = 0;
       p2_ = 0;
@@ -29289,6 +29444,7 @@ public final class ATCommand {
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       int mutable_bitField0_ = 0;
+      int mutable_bitField1_ = 0;
       try {
         boolean done = false;
         while (!done) {
@@ -29309,21 +29465,19 @@ public final class ATCommand {
               messageType_ = rawValue;
               break;
             }
-            case 18: {
-              java.lang.String s = input.readStringRequireUtf8();
+            case 16: {
 
-              fac_ = s;
+              test_ = input.readBool();
               break;
             }
             case 24: {
 
-              mode_ = input.readInt32();
+              read_ = input.readBool();
               break;
             }
-            case 34: {
-              java.lang.String s = input.readStringRequireUtf8();
+            case 32: {
 
-              password_ = s;
+              execution_ = input.readBool();
               break;
             }
             case 40: {
@@ -29365,9 +29519,10 @@ public final class ATCommand {
               newPwd_ = s;
               break;
             }
-            case 96: {
+            case 98: {
+              java.lang.String s = input.readStringRequireUtf8();
 
-              command_ = input.readInt32();
+              command_ = s;
               break;
             }
             case 104: {
@@ -29464,6 +29619,23 @@ public final class ATCommand {
               puk2_ = input.readInt32();
               break;
             }
+            case 250: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              fac_ = s;
+              break;
+            }
+            case 256: {
+
+              mode_ = input.readInt32();
+              break;
+            }
+            case 266: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              password_ = s;
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -29503,10 +29675,37 @@ public final class ATCommand {
       return result == null ? com.rtrk.atcommands.ATCommand.SIMRelatedMessageType.UNRECOGNIZED : result;
     }
 
-    public static final int FAC_FIELD_NUMBER = 2;
+    public static final int TEST_FIELD_NUMBER = 2;
+    private boolean test_;
+    /**
+     * <code>optional bool test = 2;</code>
+     */
+    public boolean getTest() {
+      return test_;
+    }
+
+    public static final int READ_FIELD_NUMBER = 3;
+    private boolean read_;
+    /**
+     * <code>optional bool read = 3;</code>
+     */
+    public boolean getRead() {
+      return read_;
+    }
+
+    public static final int EXECUTION_FIELD_NUMBER = 4;
+    private boolean execution_;
+    /**
+     * <code>optional bool execution = 4;</code>
+     */
+    public boolean getExecution() {
+      return execution_;
+    }
+
+    public static final int FAC_FIELD_NUMBER = 31;
     private volatile java.lang.Object fac_;
     /**
-     * <code>optional string fac = 2;</code>
+     * <code>optional string fac = 31;</code>
      */
     public java.lang.String getFac() {
       java.lang.Object ref = fac_;
@@ -29521,7 +29720,7 @@ public final class ATCommand {
       }
     }
     /**
-     * <code>optional string fac = 2;</code>
+     * <code>optional string fac = 31;</code>
      */
     public com.google.protobuf.ByteString
         getFacBytes() {
@@ -29537,19 +29736,19 @@ public final class ATCommand {
       }
     }
 
-    public static final int MODE_FIELD_NUMBER = 3;
+    public static final int MODE_FIELD_NUMBER = 32;
     private int mode_;
     /**
-     * <code>optional int32 mode = 3;</code>
+     * <code>optional int32 mode = 32;</code>
      */
     public int getMode() {
       return mode_;
     }
 
-    public static final int PASSWORD_FIELD_NUMBER = 4;
+    public static final int PASSWORD_FIELD_NUMBER = 33;
     private volatile java.lang.Object password_;
     /**
-     * <code>optional string password = 4;</code>
+     * <code>optional string password = 33;</code>
      */
     public java.lang.String getPassword() {
       java.lang.Object ref = password_;
@@ -29564,7 +29763,7 @@ public final class ATCommand {
       }
     }
     /**
-     * <code>optional string password = 4;</code>
+     * <code>optional string password = 33;</code>
      */
     public com.google.protobuf.ByteString
         getPasswordBytes() {
@@ -29744,12 +29943,37 @@ public final class ATCommand {
     }
 
     public static final int COMMAND_FIELD_NUMBER = 12;
-    private int command_;
+    private volatile java.lang.Object command_;
     /**
-     * <code>optional int32 command = 12;</code>
+     * <code>optional string command = 12;</code>
      */
-    public int getCommand() {
-      return command_;
+    public java.lang.String getCommand() {
+      java.lang.Object ref = command_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        command_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>optional string command = 12;</code>
+     */
+    public com.google.protobuf.ByteString
+        getCommandBytes() {
+      java.lang.Object ref = command_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        command_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
     }
 
     public static final int FILEID_FIELD_NUMBER = 13;
@@ -30037,14 +30261,14 @@ public final class ATCommand {
       if (messageType_ != com.rtrk.atcommands.ATCommand.SIMRelatedMessageType.REQUEST_IMSI.getNumber()) {
         output.writeEnum(1, messageType_);
       }
-      if (!getFacBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, fac_);
+      if (test_ != false) {
+        output.writeBool(2, test_);
       }
-      if (mode_ != 0) {
-        output.writeInt32(3, mode_);
+      if (read_ != false) {
+        output.writeBool(3, read_);
       }
-      if (!getPasswordBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, password_);
+      if (execution_ != false) {
+        output.writeBool(4, execution_);
       }
       if (class__ != 0) {
         output.writeInt32(5, class__);
@@ -30067,8 +30291,8 @@ public final class ATCommand {
       if (!getNewPwdBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 11, newPwd_);
       }
-      if (command_ != 0) {
-        output.writeInt32(12, command_);
+      if (!getCommandBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 12, command_);
       }
       if (fileID_ != 0) {
         output.writeInt32(13, fileID_);
@@ -30124,6 +30348,15 @@ public final class ATCommand {
       if (puk2_ != 0) {
         output.writeInt32(30, puk2_);
       }
+      if (!getFacBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 31, fac_);
+      }
+      if (mode_ != 0) {
+        output.writeInt32(32, mode_);
+      }
+      if (!getPasswordBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 33, password_);
+      }
     }
 
     public int getSerializedSize() {
@@ -30135,15 +30368,17 @@ public final class ATCommand {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(1, messageType_);
       }
-      if (!getFacBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, fac_);
-      }
-      if (mode_ != 0) {
+      if (test_ != false) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(3, mode_);
+          .computeBoolSize(2, test_);
       }
-      if (!getPasswordBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, password_);
+      if (read_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(3, read_);
+      }
+      if (execution_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(4, execution_);
       }
       if (class__ != 0) {
         size += com.google.protobuf.CodedOutputStream
@@ -30169,9 +30404,8 @@ public final class ATCommand {
       if (!getNewPwdBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(11, newPwd_);
       }
-      if (command_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(12, command_);
+      if (!getCommandBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(12, command_);
       }
       if (fileID_ != 0) {
         size += com.google.protobuf.CodedOutputStream
@@ -30241,6 +30475,16 @@ public final class ATCommand {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(30, puk2_);
       }
+      if (!getFacBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(31, fac_);
+      }
+      if (mode_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(32, mode_);
+      }
+      if (!getPasswordBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(33, password_);
+      }
       memoizedSize = size;
       return size;
     }
@@ -30258,6 +30502,12 @@ public final class ATCommand {
 
       boolean result = true;
       result = result && messageType_ == other.messageType_;
+      result = result && (getTest()
+          == other.getTest());
+      result = result && (getRead()
+          == other.getRead());
+      result = result && (getExecution()
+          == other.getExecution());
       result = result && getFac()
           .equals(other.getFac());
       result = result && (getMode()
@@ -30278,8 +30528,8 @@ public final class ATCommand {
           .equals(other.getOldPwd());
       result = result && getNewPwd()
           .equals(other.getNewPwd());
-      result = result && (getCommand()
-          == other.getCommand());
+      result = result && getCommand()
+          .equals(other.getCommand());
       result = result && (getFileID()
           == other.getFileID());
       result = result && (getP1()
@@ -30328,6 +30578,15 @@ public final class ATCommand {
       hash = (19 * hash) + getDescriptorForType().hashCode();
       hash = (37 * hash) + MESSAGETYPE_FIELD_NUMBER;
       hash = (53 * hash) + messageType_;
+      hash = (37 * hash) + TEST_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getTest());
+      hash = (37 * hash) + READ_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getRead());
+      hash = (37 * hash) + EXECUTION_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getExecution());
       hash = (37 * hash) + FAC_FIELD_NUMBER;
       hash = (53 * hash) + getFac().hashCode();
       hash = (37 * hash) + MODE_FIELD_NUMBER;
@@ -30349,7 +30608,7 @@ public final class ATCommand {
       hash = (37 * hash) + NEWPWD_FIELD_NUMBER;
       hash = (53 * hash) + getNewPwd().hashCode();
       hash = (37 * hash) + COMMAND_FIELD_NUMBER;
-      hash = (53 * hash) + getCommand();
+      hash = (53 * hash) + getCommand().hashCode();
       hash = (37 * hash) + FILEID_FIELD_NUMBER;
       hash = (53 * hash) + getFileID();
       hash = (37 * hash) + P1_FIELD_NUMBER;
@@ -30506,6 +30765,12 @@ public final class ATCommand {
         super.clear();
         messageType_ = 0;
 
+        test_ = false;
+
+        read_ = false;
+
+        execution_ = false;
+
         fac_ = "";
 
         mode_ = 0;
@@ -30526,7 +30791,7 @@ public final class ATCommand {
 
         newPwd_ = "";
 
-        command_ = 0;
+        command_ = "";
 
         fileID_ = 0;
 
@@ -30587,6 +30852,9 @@ public final class ATCommand {
       public com.rtrk.atcommands.ATCommand.SIMRelatedCommand buildPartial() {
         com.rtrk.atcommands.ATCommand.SIMRelatedCommand result = new com.rtrk.atcommands.ATCommand.SIMRelatedCommand(this);
         result.messageType_ = messageType_;
+        result.test_ = test_;
+        result.read_ = read_;
+        result.execution_ = execution_;
         result.fac_ = fac_;
         result.mode_ = mode_;
         result.password_ = password_;
@@ -30660,6 +30928,15 @@ public final class ATCommand {
         if (other.messageType_ != 0) {
           setMessageTypeValue(other.getMessageTypeValue());
         }
+        if (other.getTest() != false) {
+          setTest(other.getTest());
+        }
+        if (other.getRead() != false) {
+          setRead(other.getRead());
+        }
+        if (other.getExecution() != false) {
+          setExecution(other.getExecution());
+        }
         if (!other.getFac().isEmpty()) {
           fac_ = other.fac_;
           onChanged();
@@ -30696,8 +30973,9 @@ public final class ATCommand {
           newPwd_ = other.newPwd_;
           onChanged();
         }
-        if (other.getCommand() != 0) {
-          setCommand(other.getCommand());
+        if (!other.getCommand().isEmpty()) {
+          command_ = other.command_;
+          onChanged();
         }
         if (other.getFileID() != 0) {
           setFileID(other.getFileID());
@@ -30827,9 +31105,87 @@ public final class ATCommand {
         return this;
       }
 
+      private boolean test_ ;
+      /**
+       * <code>optional bool test = 2;</code>
+       */
+      public boolean getTest() {
+        return test_;
+      }
+      /**
+       * <code>optional bool test = 2;</code>
+       */
+      public Builder setTest(boolean value) {
+        
+        test_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool test = 2;</code>
+       */
+      public Builder clearTest() {
+        
+        test_ = false;
+        onChanged();
+        return this;
+      }
+
+      private boolean read_ ;
+      /**
+       * <code>optional bool read = 3;</code>
+       */
+      public boolean getRead() {
+        return read_;
+      }
+      /**
+       * <code>optional bool read = 3;</code>
+       */
+      public Builder setRead(boolean value) {
+        
+        read_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool read = 3;</code>
+       */
+      public Builder clearRead() {
+        
+        read_ = false;
+        onChanged();
+        return this;
+      }
+
+      private boolean execution_ ;
+      /**
+       * <code>optional bool execution = 4;</code>
+       */
+      public boolean getExecution() {
+        return execution_;
+      }
+      /**
+       * <code>optional bool execution = 4;</code>
+       */
+      public Builder setExecution(boolean value) {
+        
+        execution_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool execution = 4;</code>
+       */
+      public Builder clearExecution() {
+        
+        execution_ = false;
+        onChanged();
+        return this;
+      }
+
       private java.lang.Object fac_ = "";
       /**
-       * <code>optional string fac = 2;</code>
+       * <code>optional string fac = 31;</code>
        */
       public java.lang.String getFac() {
         java.lang.Object ref = fac_;
@@ -30844,7 +31200,7 @@ public final class ATCommand {
         }
       }
       /**
-       * <code>optional string fac = 2;</code>
+       * <code>optional string fac = 31;</code>
        */
       public com.google.protobuf.ByteString
           getFacBytes() {
@@ -30860,7 +31216,7 @@ public final class ATCommand {
         }
       }
       /**
-       * <code>optional string fac = 2;</code>
+       * <code>optional string fac = 31;</code>
        */
       public Builder setFac(
           java.lang.String value) {
@@ -30873,7 +31229,7 @@ public final class ATCommand {
         return this;
       }
       /**
-       * <code>optional string fac = 2;</code>
+       * <code>optional string fac = 31;</code>
        */
       public Builder clearFac() {
         
@@ -30882,7 +31238,7 @@ public final class ATCommand {
         return this;
       }
       /**
-       * <code>optional string fac = 2;</code>
+       * <code>optional string fac = 31;</code>
        */
       public Builder setFacBytes(
           com.google.protobuf.ByteString value) {
@@ -30898,13 +31254,13 @@ public final class ATCommand {
 
       private int mode_ ;
       /**
-       * <code>optional int32 mode = 3;</code>
+       * <code>optional int32 mode = 32;</code>
        */
       public int getMode() {
         return mode_;
       }
       /**
-       * <code>optional int32 mode = 3;</code>
+       * <code>optional int32 mode = 32;</code>
        */
       public Builder setMode(int value) {
         
@@ -30913,7 +31269,7 @@ public final class ATCommand {
         return this;
       }
       /**
-       * <code>optional int32 mode = 3;</code>
+       * <code>optional int32 mode = 32;</code>
        */
       public Builder clearMode() {
         
@@ -30924,7 +31280,7 @@ public final class ATCommand {
 
       private java.lang.Object password_ = "";
       /**
-       * <code>optional string password = 4;</code>
+       * <code>optional string password = 33;</code>
        */
       public java.lang.String getPassword() {
         java.lang.Object ref = password_;
@@ -30939,7 +31295,7 @@ public final class ATCommand {
         }
       }
       /**
-       * <code>optional string password = 4;</code>
+       * <code>optional string password = 33;</code>
        */
       public com.google.protobuf.ByteString
           getPasswordBytes() {
@@ -30955,7 +31311,7 @@ public final class ATCommand {
         }
       }
       /**
-       * <code>optional string password = 4;</code>
+       * <code>optional string password = 33;</code>
        */
       public Builder setPassword(
           java.lang.String value) {
@@ -30968,7 +31324,7 @@ public final class ATCommand {
         return this;
       }
       /**
-       * <code>optional string password = 4;</code>
+       * <code>optional string password = 33;</code>
        */
       public Builder clearPassword() {
         
@@ -30977,7 +31333,7 @@ public final class ATCommand {
         return this;
       }
       /**
-       * <code>optional string password = 4;</code>
+       * <code>optional string password = 33;</code>
        */
       public Builder setPasswordBytes(
           com.google.protobuf.ByteString value) {
@@ -31345,28 +31701,71 @@ public final class ATCommand {
         return this;
       }
 
-      private int command_ ;
+      private java.lang.Object command_ = "";
       /**
-       * <code>optional int32 command = 12;</code>
+       * <code>optional string command = 12;</code>
        */
-      public int getCommand() {
-        return command_;
+      public java.lang.String getCommand() {
+        java.lang.Object ref = command_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          command_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
       }
       /**
-       * <code>optional int32 command = 12;</code>
+       * <code>optional string command = 12;</code>
        */
-      public Builder setCommand(int value) {
-        
+      public com.google.protobuf.ByteString
+          getCommandBytes() {
+        java.lang.Object ref = command_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          command_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string command = 12;</code>
+       */
+      public Builder setCommand(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
         command_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>optional int32 command = 12;</code>
+       * <code>optional string command = 12;</code>
        */
       public Builder clearCommand() {
         
-        command_ = 0;
+        command_ = getDefaultInstance().getCommand();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string command = 12;</code>
+       */
+      public Builder setCommandBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        command_ = value;
         onChanged();
         return this;
       }
@@ -32093,107 +32492,122 @@ public final class ATCommand {
     com.rtrk.atcommands.ATCommand.NetworkServiceMessageType getMessageType();
 
     /**
-     * <code>optional int32 status = 2;</code>
+     * <code>optional bool test = 2;</code>
+     */
+    boolean getTest();
+
+    /**
+     * <code>optional bool read = 3;</code>
+     */
+    boolean getRead();
+
+    /**
+     * <code>optional bool execution = 4;</code>
+     */
+    boolean getExecution();
+
+    /**
+     * <code>optional int32 status = 5;</code>
      */
     int getStatus();
 
     /**
-     * <code>optional int32 operator = 3;</code>
+     * <code>optional int32 operator = 6;</code>
      */
     int getOperator();
 
     /**
-     * <code>optional int32 mode = 4;</code>
+     * <code>optional int32 mode = 7;</code>
      */
     int getMode();
 
     /**
-     * <code>optional int32 format = 5;</code>
+     * <code>optional int32 format = 8;</code>
      */
     int getFormat();
 
     /**
-     * <code>optional int32 n = 6;</code>
+     * <code>optional int32 n = 9;</code>
      */
     int getN();
 
     /**
-     * <code>optional string locationAreaCode = 7;</code>
+     * <code>optional string locationAreaCode = 10;</code>
      */
     java.lang.String getLocationAreaCode();
     /**
-     * <code>optional string locationAreaCode = 7;</code>
+     * <code>optional string locationAreaCode = 10;</code>
      */
     com.google.protobuf.ByteString
         getLocationAreaCodeBytes();
 
     /**
-     * <code>optional string cellID = 8;</code>
+     * <code>optional string cellID = 11;</code>
      */
     java.lang.String getCellID();
     /**
-     * <code>optional string cellID = 8;</code>
+     * <code>optional string cellID = 11;</code>
      */
     com.google.protobuf.ByteString
         getCellIDBytes();
 
     /**
-     * <code>optional int32 rssi = 9;</code>
+     * <code>optional int32 rssi = 12;</code>
      */
     int getRssi();
 
     /**
-     * <code>optional int32 ber = 10;</code>
+     * <code>optional int32 ber = 13;</code>
      */
     int getBer();
 
     /**
-     * <code>optional int32 index = 11;</code>
+     * <code>optional int32 index = 14;</code>
      */
     int getIndex();
 
     /**
-     * <code>optional string numericn = 12;</code>
+     * <code>optional string numericn = 15;</code>
      */
     java.lang.String getNumericn();
     /**
-     * <code>optional string numericn = 12;</code>
+     * <code>optional string numericn = 15;</code>
      */
     com.google.protobuf.ByteString
         getNumericnBytes();
 
     /**
-     * <code>optional string alphan = 13;</code>
+     * <code>optional string alphan = 16;</code>
      */
     java.lang.String getAlphan();
     /**
-     * <code>optional string alphan = 13;</code>
+     * <code>optional string alphan = 16;</code>
      */
     com.google.protobuf.ByteString
         getAlphanBytes();
 
     /**
-     * <code>optional string opBand = 14;</code>
+     * <code>optional string opBand = 17;</code>
      */
     java.lang.String getOpBand();
     /**
-     * <code>optional string opBand = 14;</code>
+     * <code>optional string opBand = 17;</code>
      */
     com.google.protobuf.ByteString
         getOpBandBytes();
 
     /**
-     * <code>optional int32 dump = 15;</code>
+     * <code>optional int32 dump = 18;</code>
      */
     int getDump();
 
     /**
-     * <code>optional int32 band = 16;</code>
+     * <code>optional int32 band = 19;</code>
      */
     int getBand();
 
     /**
-     * <code>optional int32 frequency = 17;</code>
+     * <code>optional int32 frequency = 20;</code>
      */
     int getFrequency();
 
@@ -32202,27 +32616,27 @@ public final class ATCommand {
      *dbm
      * </pre>
      *
-     * <code>optional int32 signalStrength = 18;</code>
+     * <code>optional int32 signalStrength = 21;</code>
      */
     int getSignalStrength();
 
     /**
-     * <code>optional int32 band1900 = 19;</code>
+     * <code>optional int32 band1900 = 22;</code>
      */
     int getBand1900();
 
     /**
-     * <code>optional int32 arfcn1 = 20;</code>
+     * <code>optional int32 arfcn1 = 23;</code>
      */
     int getArfcn1();
 
     /**
-     * <code>optional int32 arfcn2 = 21;</code>
+     * <code>optional int32 arfcn2 = 24;</code>
      */
     int getArfcn2();
 
     /**
-     * <code>optional int32 arfcn3 = 22;</code>
+     * <code>optional int32 arfcn3 = 25;</code>
      */
     int getArfcn3();
   }
@@ -32239,6 +32653,9 @@ public final class ATCommand {
     }
     private NetworkServiceCommand() {
       messageType_ = 0;
+      test_ = false;
+      read_ = false;
+      execution_ = false;
       status_ = 0;
       operator_ = 0;
       mode_ = 0;
@@ -32295,110 +32712,125 @@ public final class ATCommand {
             }
             case 16: {
 
-              status_ = input.readInt32();
+              test_ = input.readBool();
               break;
             }
             case 24: {
 
-              operator_ = input.readInt32();
+              read_ = input.readBool();
               break;
             }
             case 32: {
 
-              mode_ = input.readInt32();
+              execution_ = input.readBool();
               break;
             }
             case 40: {
 
-              format_ = input.readInt32();
+              status_ = input.readInt32();
               break;
             }
             case 48: {
 
+              operator_ = input.readInt32();
+              break;
+            }
+            case 56: {
+
+              mode_ = input.readInt32();
+              break;
+            }
+            case 64: {
+
+              format_ = input.readInt32();
+              break;
+            }
+            case 72: {
+
               n_ = input.readInt32();
               break;
             }
-            case 58: {
+            case 82: {
               java.lang.String s = input.readStringRequireUtf8();
 
               locationAreaCode_ = s;
               break;
             }
-            case 66: {
+            case 90: {
               java.lang.String s = input.readStringRequireUtf8();
 
               cellID_ = s;
               break;
             }
-            case 72: {
+            case 96: {
 
               rssi_ = input.readInt32();
               break;
             }
-            case 80: {
+            case 104: {
 
               ber_ = input.readInt32();
               break;
             }
-            case 88: {
+            case 112: {
 
               index_ = input.readInt32();
               break;
             }
-            case 98: {
+            case 122: {
               java.lang.String s = input.readStringRequireUtf8();
 
               numericn_ = s;
               break;
             }
-            case 106: {
+            case 130: {
               java.lang.String s = input.readStringRequireUtf8();
 
               alphan_ = s;
               break;
             }
-            case 114: {
+            case 138: {
               java.lang.String s = input.readStringRequireUtf8();
 
               opBand_ = s;
               break;
             }
-            case 120: {
+            case 144: {
 
               dump_ = input.readInt32();
               break;
             }
-            case 128: {
+            case 152: {
 
               band_ = input.readInt32();
               break;
             }
-            case 136: {
+            case 160: {
 
               frequency_ = input.readInt32();
               break;
             }
-            case 144: {
+            case 168: {
 
               signalStrength_ = input.readInt32();
               break;
             }
-            case 152: {
+            case 176: {
 
               band1900_ = input.readInt32();
               break;
             }
-            case 160: {
+            case 184: {
 
               arfcn1_ = input.readInt32();
               break;
             }
-            case 168: {
+            case 192: {
 
               arfcn2_ = input.readInt32();
               break;
             }
-            case 176: {
+            case 200: {
 
               arfcn3_ = input.readInt32();
               break;
@@ -32442,55 +32874,82 @@ public final class ATCommand {
       return result == null ? com.rtrk.atcommands.ATCommand.NetworkServiceMessageType.UNRECOGNIZED : result;
     }
 
-    public static final int STATUS_FIELD_NUMBER = 2;
+    public static final int TEST_FIELD_NUMBER = 2;
+    private boolean test_;
+    /**
+     * <code>optional bool test = 2;</code>
+     */
+    public boolean getTest() {
+      return test_;
+    }
+
+    public static final int READ_FIELD_NUMBER = 3;
+    private boolean read_;
+    /**
+     * <code>optional bool read = 3;</code>
+     */
+    public boolean getRead() {
+      return read_;
+    }
+
+    public static final int EXECUTION_FIELD_NUMBER = 4;
+    private boolean execution_;
+    /**
+     * <code>optional bool execution = 4;</code>
+     */
+    public boolean getExecution() {
+      return execution_;
+    }
+
+    public static final int STATUS_FIELD_NUMBER = 5;
     private int status_;
     /**
-     * <code>optional int32 status = 2;</code>
+     * <code>optional int32 status = 5;</code>
      */
     public int getStatus() {
       return status_;
     }
 
-    public static final int OPERATOR_FIELD_NUMBER = 3;
+    public static final int OPERATOR_FIELD_NUMBER = 6;
     private int operator_;
     /**
-     * <code>optional int32 operator = 3;</code>
+     * <code>optional int32 operator = 6;</code>
      */
     public int getOperator() {
       return operator_;
     }
 
-    public static final int MODE_FIELD_NUMBER = 4;
+    public static final int MODE_FIELD_NUMBER = 7;
     private int mode_;
     /**
-     * <code>optional int32 mode = 4;</code>
+     * <code>optional int32 mode = 7;</code>
      */
     public int getMode() {
       return mode_;
     }
 
-    public static final int FORMAT_FIELD_NUMBER = 5;
+    public static final int FORMAT_FIELD_NUMBER = 8;
     private int format_;
     /**
-     * <code>optional int32 format = 5;</code>
+     * <code>optional int32 format = 8;</code>
      */
     public int getFormat() {
       return format_;
     }
 
-    public static final int N_FIELD_NUMBER = 6;
+    public static final int N_FIELD_NUMBER = 9;
     private int n_;
     /**
-     * <code>optional int32 n = 6;</code>
+     * <code>optional int32 n = 9;</code>
      */
     public int getN() {
       return n_;
     }
 
-    public static final int LOCATIONAREACODE_FIELD_NUMBER = 7;
+    public static final int LOCATIONAREACODE_FIELD_NUMBER = 10;
     private volatile java.lang.Object locationAreaCode_;
     /**
-     * <code>optional string locationAreaCode = 7;</code>
+     * <code>optional string locationAreaCode = 10;</code>
      */
     public java.lang.String getLocationAreaCode() {
       java.lang.Object ref = locationAreaCode_;
@@ -32505,7 +32964,7 @@ public final class ATCommand {
       }
     }
     /**
-     * <code>optional string locationAreaCode = 7;</code>
+     * <code>optional string locationAreaCode = 10;</code>
      */
     public com.google.protobuf.ByteString
         getLocationAreaCodeBytes() {
@@ -32521,10 +32980,10 @@ public final class ATCommand {
       }
     }
 
-    public static final int CELLID_FIELD_NUMBER = 8;
+    public static final int CELLID_FIELD_NUMBER = 11;
     private volatile java.lang.Object cellID_;
     /**
-     * <code>optional string cellID = 8;</code>
+     * <code>optional string cellID = 11;</code>
      */
     public java.lang.String getCellID() {
       java.lang.Object ref = cellID_;
@@ -32539,7 +32998,7 @@ public final class ATCommand {
       }
     }
     /**
-     * <code>optional string cellID = 8;</code>
+     * <code>optional string cellID = 11;</code>
      */
     public com.google.protobuf.ByteString
         getCellIDBytes() {
@@ -32555,37 +33014,37 @@ public final class ATCommand {
       }
     }
 
-    public static final int RSSI_FIELD_NUMBER = 9;
+    public static final int RSSI_FIELD_NUMBER = 12;
     private int rssi_;
     /**
-     * <code>optional int32 rssi = 9;</code>
+     * <code>optional int32 rssi = 12;</code>
      */
     public int getRssi() {
       return rssi_;
     }
 
-    public static final int BER_FIELD_NUMBER = 10;
+    public static final int BER_FIELD_NUMBER = 13;
     private int ber_;
     /**
-     * <code>optional int32 ber = 10;</code>
+     * <code>optional int32 ber = 13;</code>
      */
     public int getBer() {
       return ber_;
     }
 
-    public static final int INDEX_FIELD_NUMBER = 11;
+    public static final int INDEX_FIELD_NUMBER = 14;
     private int index_;
     /**
-     * <code>optional int32 index = 11;</code>
+     * <code>optional int32 index = 14;</code>
      */
     public int getIndex() {
       return index_;
     }
 
-    public static final int NUMERICN_FIELD_NUMBER = 12;
+    public static final int NUMERICN_FIELD_NUMBER = 15;
     private volatile java.lang.Object numericn_;
     /**
-     * <code>optional string numericn = 12;</code>
+     * <code>optional string numericn = 15;</code>
      */
     public java.lang.String getNumericn() {
       java.lang.Object ref = numericn_;
@@ -32600,7 +33059,7 @@ public final class ATCommand {
       }
     }
     /**
-     * <code>optional string numericn = 12;</code>
+     * <code>optional string numericn = 15;</code>
      */
     public com.google.protobuf.ByteString
         getNumericnBytes() {
@@ -32616,10 +33075,10 @@ public final class ATCommand {
       }
     }
 
-    public static final int ALPHAN_FIELD_NUMBER = 13;
+    public static final int ALPHAN_FIELD_NUMBER = 16;
     private volatile java.lang.Object alphan_;
     /**
-     * <code>optional string alphan = 13;</code>
+     * <code>optional string alphan = 16;</code>
      */
     public java.lang.String getAlphan() {
       java.lang.Object ref = alphan_;
@@ -32634,7 +33093,7 @@ public final class ATCommand {
       }
     }
     /**
-     * <code>optional string alphan = 13;</code>
+     * <code>optional string alphan = 16;</code>
      */
     public com.google.protobuf.ByteString
         getAlphanBytes() {
@@ -32650,10 +33109,10 @@ public final class ATCommand {
       }
     }
 
-    public static final int OPBAND_FIELD_NUMBER = 14;
+    public static final int OPBAND_FIELD_NUMBER = 17;
     private volatile java.lang.Object opBand_;
     /**
-     * <code>optional string opBand = 14;</code>
+     * <code>optional string opBand = 17;</code>
      */
     public java.lang.String getOpBand() {
       java.lang.Object ref = opBand_;
@@ -32668,7 +33127,7 @@ public final class ATCommand {
       }
     }
     /**
-     * <code>optional string opBand = 14;</code>
+     * <code>optional string opBand = 17;</code>
      */
     public com.google.protobuf.ByteString
         getOpBandBytes() {
@@ -32684,77 +33143,77 @@ public final class ATCommand {
       }
     }
 
-    public static final int DUMP_FIELD_NUMBER = 15;
+    public static final int DUMP_FIELD_NUMBER = 18;
     private int dump_;
     /**
-     * <code>optional int32 dump = 15;</code>
+     * <code>optional int32 dump = 18;</code>
      */
     public int getDump() {
       return dump_;
     }
 
-    public static final int BAND_FIELD_NUMBER = 16;
+    public static final int BAND_FIELD_NUMBER = 19;
     private int band_;
     /**
-     * <code>optional int32 band = 16;</code>
+     * <code>optional int32 band = 19;</code>
      */
     public int getBand() {
       return band_;
     }
 
-    public static final int FREQUENCY_FIELD_NUMBER = 17;
+    public static final int FREQUENCY_FIELD_NUMBER = 20;
     private int frequency_;
     /**
-     * <code>optional int32 frequency = 17;</code>
+     * <code>optional int32 frequency = 20;</code>
      */
     public int getFrequency() {
       return frequency_;
     }
 
-    public static final int SIGNALSTRENGTH_FIELD_NUMBER = 18;
+    public static final int SIGNALSTRENGTH_FIELD_NUMBER = 21;
     private int signalStrength_;
     /**
      * <pre>
      *dbm
      * </pre>
      *
-     * <code>optional int32 signalStrength = 18;</code>
+     * <code>optional int32 signalStrength = 21;</code>
      */
     public int getSignalStrength() {
       return signalStrength_;
     }
 
-    public static final int BAND1900_FIELD_NUMBER = 19;
+    public static final int BAND1900_FIELD_NUMBER = 22;
     private int band1900_;
     /**
-     * <code>optional int32 band1900 = 19;</code>
+     * <code>optional int32 band1900 = 22;</code>
      */
     public int getBand1900() {
       return band1900_;
     }
 
-    public static final int ARFCN1_FIELD_NUMBER = 20;
+    public static final int ARFCN1_FIELD_NUMBER = 23;
     private int arfcn1_;
     /**
-     * <code>optional int32 arfcn1 = 20;</code>
+     * <code>optional int32 arfcn1 = 23;</code>
      */
     public int getArfcn1() {
       return arfcn1_;
     }
 
-    public static final int ARFCN2_FIELD_NUMBER = 21;
+    public static final int ARFCN2_FIELD_NUMBER = 24;
     private int arfcn2_;
     /**
-     * <code>optional int32 arfcn2 = 21;</code>
+     * <code>optional int32 arfcn2 = 24;</code>
      */
     public int getArfcn2() {
       return arfcn2_;
     }
 
-    public static final int ARFCN3_FIELD_NUMBER = 22;
+    public static final int ARFCN3_FIELD_NUMBER = 25;
     private int arfcn3_;
     /**
-     * <code>optional int32 arfcn3 = 22;</code>
+     * <code>optional int32 arfcn3 = 25;</code>
      */
     public int getArfcn3() {
       return arfcn3_;
@@ -32775,68 +33234,77 @@ public final class ATCommand {
       if (messageType_ != com.rtrk.atcommands.ATCommand.NetworkServiceMessageType.OPERATOR_SELECTION.getNumber()) {
         output.writeEnum(1, messageType_);
       }
+      if (test_ != false) {
+        output.writeBool(2, test_);
+      }
+      if (read_ != false) {
+        output.writeBool(3, read_);
+      }
+      if (execution_ != false) {
+        output.writeBool(4, execution_);
+      }
       if (status_ != 0) {
-        output.writeInt32(2, status_);
+        output.writeInt32(5, status_);
       }
       if (operator_ != 0) {
-        output.writeInt32(3, operator_);
+        output.writeInt32(6, operator_);
       }
       if (mode_ != 0) {
-        output.writeInt32(4, mode_);
+        output.writeInt32(7, mode_);
       }
       if (format_ != 0) {
-        output.writeInt32(5, format_);
+        output.writeInt32(8, format_);
       }
       if (n_ != 0) {
-        output.writeInt32(6, n_);
+        output.writeInt32(9, n_);
       }
       if (!getLocationAreaCodeBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 7, locationAreaCode_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 10, locationAreaCode_);
       }
       if (!getCellIDBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 8, cellID_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 11, cellID_);
       }
       if (rssi_ != 0) {
-        output.writeInt32(9, rssi_);
+        output.writeInt32(12, rssi_);
       }
       if (ber_ != 0) {
-        output.writeInt32(10, ber_);
+        output.writeInt32(13, ber_);
       }
       if (index_ != 0) {
-        output.writeInt32(11, index_);
+        output.writeInt32(14, index_);
       }
       if (!getNumericnBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 12, numericn_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 15, numericn_);
       }
       if (!getAlphanBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 13, alphan_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 16, alphan_);
       }
       if (!getOpBandBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 14, opBand_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 17, opBand_);
       }
       if (dump_ != 0) {
-        output.writeInt32(15, dump_);
+        output.writeInt32(18, dump_);
       }
       if (band_ != 0) {
-        output.writeInt32(16, band_);
+        output.writeInt32(19, band_);
       }
       if (frequency_ != 0) {
-        output.writeInt32(17, frequency_);
+        output.writeInt32(20, frequency_);
       }
       if (signalStrength_ != 0) {
-        output.writeInt32(18, signalStrength_);
+        output.writeInt32(21, signalStrength_);
       }
       if (band1900_ != 0) {
-        output.writeInt32(19, band1900_);
+        output.writeInt32(22, band1900_);
       }
       if (arfcn1_ != 0) {
-        output.writeInt32(20, arfcn1_);
+        output.writeInt32(23, arfcn1_);
       }
       if (arfcn2_ != 0) {
-        output.writeInt32(21, arfcn2_);
+        output.writeInt32(24, arfcn2_);
       }
       if (arfcn3_ != 0) {
-        output.writeInt32(22, arfcn3_);
+        output.writeInt32(25, arfcn3_);
       }
     }
 
@@ -32849,84 +33317,96 @@ public final class ATCommand {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(1, messageType_);
       }
+      if (test_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(2, test_);
+      }
+      if (read_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(3, read_);
+      }
+      if (execution_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(4, execution_);
+      }
       if (status_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(2, status_);
+          .computeInt32Size(5, status_);
       }
       if (operator_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(3, operator_);
+          .computeInt32Size(6, operator_);
       }
       if (mode_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(4, mode_);
+          .computeInt32Size(7, mode_);
       }
       if (format_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(5, format_);
+          .computeInt32Size(8, format_);
       }
       if (n_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(6, n_);
+          .computeInt32Size(9, n_);
       }
       if (!getLocationAreaCodeBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, locationAreaCode_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(10, locationAreaCode_);
       }
       if (!getCellIDBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, cellID_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(11, cellID_);
       }
       if (rssi_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(9, rssi_);
+          .computeInt32Size(12, rssi_);
       }
       if (ber_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(10, ber_);
+          .computeInt32Size(13, ber_);
       }
       if (index_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(11, index_);
+          .computeInt32Size(14, index_);
       }
       if (!getNumericnBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(12, numericn_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(15, numericn_);
       }
       if (!getAlphanBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(13, alphan_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(16, alphan_);
       }
       if (!getOpBandBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(14, opBand_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(17, opBand_);
       }
       if (dump_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(15, dump_);
+          .computeInt32Size(18, dump_);
       }
       if (band_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(16, band_);
+          .computeInt32Size(19, band_);
       }
       if (frequency_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(17, frequency_);
+          .computeInt32Size(20, frequency_);
       }
       if (signalStrength_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(18, signalStrength_);
+          .computeInt32Size(21, signalStrength_);
       }
       if (band1900_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(19, band1900_);
+          .computeInt32Size(22, band1900_);
       }
       if (arfcn1_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(20, arfcn1_);
+          .computeInt32Size(23, arfcn1_);
       }
       if (arfcn2_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(21, arfcn2_);
+          .computeInt32Size(24, arfcn2_);
       }
       if (arfcn3_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(22, arfcn3_);
+          .computeInt32Size(25, arfcn3_);
       }
       memoizedSize = size;
       return size;
@@ -32945,6 +33425,12 @@ public final class ATCommand {
 
       boolean result = true;
       result = result && messageType_ == other.messageType_;
+      result = result && (getTest()
+          == other.getTest());
+      result = result && (getRead()
+          == other.getRead());
+      result = result && (getExecution()
+          == other.getExecution());
       result = result && (getStatus()
           == other.getStatus());
       result = result && (getOperator()
@@ -32999,6 +33485,15 @@ public final class ATCommand {
       hash = (19 * hash) + getDescriptorForType().hashCode();
       hash = (37 * hash) + MESSAGETYPE_FIELD_NUMBER;
       hash = (53 * hash) + messageType_;
+      hash = (37 * hash) + TEST_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getTest());
+      hash = (37 * hash) + READ_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getRead());
+      hash = (37 * hash) + EXECUTION_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getExecution());
       hash = (37 * hash) + STATUS_FIELD_NUMBER;
       hash = (53 * hash) + getStatus();
       hash = (37 * hash) + OPERATOR_FIELD_NUMBER;
@@ -33161,6 +33656,12 @@ public final class ATCommand {
         super.clear();
         messageType_ = 0;
 
+        test_ = false;
+
+        read_ = false;
+
+        execution_ = false;
+
         status_ = 0;
 
         operator_ = 0;
@@ -33226,6 +33727,9 @@ public final class ATCommand {
       public com.rtrk.atcommands.ATCommand.NetworkServiceCommand buildPartial() {
         com.rtrk.atcommands.ATCommand.NetworkServiceCommand result = new com.rtrk.atcommands.ATCommand.NetworkServiceCommand(this);
         result.messageType_ = messageType_;
+        result.test_ = test_;
+        result.read_ = read_;
+        result.execution_ = execution_;
         result.status_ = status_;
         result.operator_ = operator_;
         result.mode_ = mode_;
@@ -33290,6 +33794,15 @@ public final class ATCommand {
         if (other == com.rtrk.atcommands.ATCommand.NetworkServiceCommand.getDefaultInstance()) return this;
         if (other.messageType_ != 0) {
           setMessageTypeValue(other.getMessageTypeValue());
+        }
+        if (other.getTest() != false) {
+          setTest(other.getTest());
+        }
+        if (other.getRead() != false) {
+          setRead(other.getRead());
+        }
+        if (other.getExecution() != false) {
+          setExecution(other.getExecution());
         }
         if (other.getStatus() != 0) {
           setStatus(other.getStatus());
@@ -33429,15 +33942,93 @@ public final class ATCommand {
         return this;
       }
 
+      private boolean test_ ;
+      /**
+       * <code>optional bool test = 2;</code>
+       */
+      public boolean getTest() {
+        return test_;
+      }
+      /**
+       * <code>optional bool test = 2;</code>
+       */
+      public Builder setTest(boolean value) {
+        
+        test_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool test = 2;</code>
+       */
+      public Builder clearTest() {
+        
+        test_ = false;
+        onChanged();
+        return this;
+      }
+
+      private boolean read_ ;
+      /**
+       * <code>optional bool read = 3;</code>
+       */
+      public boolean getRead() {
+        return read_;
+      }
+      /**
+       * <code>optional bool read = 3;</code>
+       */
+      public Builder setRead(boolean value) {
+        
+        read_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool read = 3;</code>
+       */
+      public Builder clearRead() {
+        
+        read_ = false;
+        onChanged();
+        return this;
+      }
+
+      private boolean execution_ ;
+      /**
+       * <code>optional bool execution = 4;</code>
+       */
+      public boolean getExecution() {
+        return execution_;
+      }
+      /**
+       * <code>optional bool execution = 4;</code>
+       */
+      public Builder setExecution(boolean value) {
+        
+        execution_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool execution = 4;</code>
+       */
+      public Builder clearExecution() {
+        
+        execution_ = false;
+        onChanged();
+        return this;
+      }
+
       private int status_ ;
       /**
-       * <code>optional int32 status = 2;</code>
+       * <code>optional int32 status = 5;</code>
        */
       public int getStatus() {
         return status_;
       }
       /**
-       * <code>optional int32 status = 2;</code>
+       * <code>optional int32 status = 5;</code>
        */
       public Builder setStatus(int value) {
         
@@ -33446,7 +34037,7 @@ public final class ATCommand {
         return this;
       }
       /**
-       * <code>optional int32 status = 2;</code>
+       * <code>optional int32 status = 5;</code>
        */
       public Builder clearStatus() {
         
@@ -33457,13 +34048,13 @@ public final class ATCommand {
 
       private int operator_ ;
       /**
-       * <code>optional int32 operator = 3;</code>
+       * <code>optional int32 operator = 6;</code>
        */
       public int getOperator() {
         return operator_;
       }
       /**
-       * <code>optional int32 operator = 3;</code>
+       * <code>optional int32 operator = 6;</code>
        */
       public Builder setOperator(int value) {
         
@@ -33472,7 +34063,7 @@ public final class ATCommand {
         return this;
       }
       /**
-       * <code>optional int32 operator = 3;</code>
+       * <code>optional int32 operator = 6;</code>
        */
       public Builder clearOperator() {
         
@@ -33483,13 +34074,13 @@ public final class ATCommand {
 
       private int mode_ ;
       /**
-       * <code>optional int32 mode = 4;</code>
+       * <code>optional int32 mode = 7;</code>
        */
       public int getMode() {
         return mode_;
       }
       /**
-       * <code>optional int32 mode = 4;</code>
+       * <code>optional int32 mode = 7;</code>
        */
       public Builder setMode(int value) {
         
@@ -33498,7 +34089,7 @@ public final class ATCommand {
         return this;
       }
       /**
-       * <code>optional int32 mode = 4;</code>
+       * <code>optional int32 mode = 7;</code>
        */
       public Builder clearMode() {
         
@@ -33509,13 +34100,13 @@ public final class ATCommand {
 
       private int format_ ;
       /**
-       * <code>optional int32 format = 5;</code>
+       * <code>optional int32 format = 8;</code>
        */
       public int getFormat() {
         return format_;
       }
       /**
-       * <code>optional int32 format = 5;</code>
+       * <code>optional int32 format = 8;</code>
        */
       public Builder setFormat(int value) {
         
@@ -33524,7 +34115,7 @@ public final class ATCommand {
         return this;
       }
       /**
-       * <code>optional int32 format = 5;</code>
+       * <code>optional int32 format = 8;</code>
        */
       public Builder clearFormat() {
         
@@ -33535,13 +34126,13 @@ public final class ATCommand {
 
       private int n_ ;
       /**
-       * <code>optional int32 n = 6;</code>
+       * <code>optional int32 n = 9;</code>
        */
       public int getN() {
         return n_;
       }
       /**
-       * <code>optional int32 n = 6;</code>
+       * <code>optional int32 n = 9;</code>
        */
       public Builder setN(int value) {
         
@@ -33550,7 +34141,7 @@ public final class ATCommand {
         return this;
       }
       /**
-       * <code>optional int32 n = 6;</code>
+       * <code>optional int32 n = 9;</code>
        */
       public Builder clearN() {
         
@@ -33561,7 +34152,7 @@ public final class ATCommand {
 
       private java.lang.Object locationAreaCode_ = "";
       /**
-       * <code>optional string locationAreaCode = 7;</code>
+       * <code>optional string locationAreaCode = 10;</code>
        */
       public java.lang.String getLocationAreaCode() {
         java.lang.Object ref = locationAreaCode_;
@@ -33576,7 +34167,7 @@ public final class ATCommand {
         }
       }
       /**
-       * <code>optional string locationAreaCode = 7;</code>
+       * <code>optional string locationAreaCode = 10;</code>
        */
       public com.google.protobuf.ByteString
           getLocationAreaCodeBytes() {
@@ -33592,7 +34183,7 @@ public final class ATCommand {
         }
       }
       /**
-       * <code>optional string locationAreaCode = 7;</code>
+       * <code>optional string locationAreaCode = 10;</code>
        */
       public Builder setLocationAreaCode(
           java.lang.String value) {
@@ -33605,7 +34196,7 @@ public final class ATCommand {
         return this;
       }
       /**
-       * <code>optional string locationAreaCode = 7;</code>
+       * <code>optional string locationAreaCode = 10;</code>
        */
       public Builder clearLocationAreaCode() {
         
@@ -33614,7 +34205,7 @@ public final class ATCommand {
         return this;
       }
       /**
-       * <code>optional string locationAreaCode = 7;</code>
+       * <code>optional string locationAreaCode = 10;</code>
        */
       public Builder setLocationAreaCodeBytes(
           com.google.protobuf.ByteString value) {
@@ -33630,7 +34221,7 @@ public final class ATCommand {
 
       private java.lang.Object cellID_ = "";
       /**
-       * <code>optional string cellID = 8;</code>
+       * <code>optional string cellID = 11;</code>
        */
       public java.lang.String getCellID() {
         java.lang.Object ref = cellID_;
@@ -33645,7 +34236,7 @@ public final class ATCommand {
         }
       }
       /**
-       * <code>optional string cellID = 8;</code>
+       * <code>optional string cellID = 11;</code>
        */
       public com.google.protobuf.ByteString
           getCellIDBytes() {
@@ -33661,7 +34252,7 @@ public final class ATCommand {
         }
       }
       /**
-       * <code>optional string cellID = 8;</code>
+       * <code>optional string cellID = 11;</code>
        */
       public Builder setCellID(
           java.lang.String value) {
@@ -33674,7 +34265,7 @@ public final class ATCommand {
         return this;
       }
       /**
-       * <code>optional string cellID = 8;</code>
+       * <code>optional string cellID = 11;</code>
        */
       public Builder clearCellID() {
         
@@ -33683,7 +34274,7 @@ public final class ATCommand {
         return this;
       }
       /**
-       * <code>optional string cellID = 8;</code>
+       * <code>optional string cellID = 11;</code>
        */
       public Builder setCellIDBytes(
           com.google.protobuf.ByteString value) {
@@ -33699,13 +34290,13 @@ public final class ATCommand {
 
       private int rssi_ ;
       /**
-       * <code>optional int32 rssi = 9;</code>
+       * <code>optional int32 rssi = 12;</code>
        */
       public int getRssi() {
         return rssi_;
       }
       /**
-       * <code>optional int32 rssi = 9;</code>
+       * <code>optional int32 rssi = 12;</code>
        */
       public Builder setRssi(int value) {
         
@@ -33714,7 +34305,7 @@ public final class ATCommand {
         return this;
       }
       /**
-       * <code>optional int32 rssi = 9;</code>
+       * <code>optional int32 rssi = 12;</code>
        */
       public Builder clearRssi() {
         
@@ -33725,13 +34316,13 @@ public final class ATCommand {
 
       private int ber_ ;
       /**
-       * <code>optional int32 ber = 10;</code>
+       * <code>optional int32 ber = 13;</code>
        */
       public int getBer() {
         return ber_;
       }
       /**
-       * <code>optional int32 ber = 10;</code>
+       * <code>optional int32 ber = 13;</code>
        */
       public Builder setBer(int value) {
         
@@ -33740,7 +34331,7 @@ public final class ATCommand {
         return this;
       }
       /**
-       * <code>optional int32 ber = 10;</code>
+       * <code>optional int32 ber = 13;</code>
        */
       public Builder clearBer() {
         
@@ -33751,13 +34342,13 @@ public final class ATCommand {
 
       private int index_ ;
       /**
-       * <code>optional int32 index = 11;</code>
+       * <code>optional int32 index = 14;</code>
        */
       public int getIndex() {
         return index_;
       }
       /**
-       * <code>optional int32 index = 11;</code>
+       * <code>optional int32 index = 14;</code>
        */
       public Builder setIndex(int value) {
         
@@ -33766,7 +34357,7 @@ public final class ATCommand {
         return this;
       }
       /**
-       * <code>optional int32 index = 11;</code>
+       * <code>optional int32 index = 14;</code>
        */
       public Builder clearIndex() {
         
@@ -33777,7 +34368,7 @@ public final class ATCommand {
 
       private java.lang.Object numericn_ = "";
       /**
-       * <code>optional string numericn = 12;</code>
+       * <code>optional string numericn = 15;</code>
        */
       public java.lang.String getNumericn() {
         java.lang.Object ref = numericn_;
@@ -33792,7 +34383,7 @@ public final class ATCommand {
         }
       }
       /**
-       * <code>optional string numericn = 12;</code>
+       * <code>optional string numericn = 15;</code>
        */
       public com.google.protobuf.ByteString
           getNumericnBytes() {
@@ -33808,7 +34399,7 @@ public final class ATCommand {
         }
       }
       /**
-       * <code>optional string numericn = 12;</code>
+       * <code>optional string numericn = 15;</code>
        */
       public Builder setNumericn(
           java.lang.String value) {
@@ -33821,7 +34412,7 @@ public final class ATCommand {
         return this;
       }
       /**
-       * <code>optional string numericn = 12;</code>
+       * <code>optional string numericn = 15;</code>
        */
       public Builder clearNumericn() {
         
@@ -33830,7 +34421,7 @@ public final class ATCommand {
         return this;
       }
       /**
-       * <code>optional string numericn = 12;</code>
+       * <code>optional string numericn = 15;</code>
        */
       public Builder setNumericnBytes(
           com.google.protobuf.ByteString value) {
@@ -33846,7 +34437,7 @@ public final class ATCommand {
 
       private java.lang.Object alphan_ = "";
       /**
-       * <code>optional string alphan = 13;</code>
+       * <code>optional string alphan = 16;</code>
        */
       public java.lang.String getAlphan() {
         java.lang.Object ref = alphan_;
@@ -33861,7 +34452,7 @@ public final class ATCommand {
         }
       }
       /**
-       * <code>optional string alphan = 13;</code>
+       * <code>optional string alphan = 16;</code>
        */
       public com.google.protobuf.ByteString
           getAlphanBytes() {
@@ -33877,7 +34468,7 @@ public final class ATCommand {
         }
       }
       /**
-       * <code>optional string alphan = 13;</code>
+       * <code>optional string alphan = 16;</code>
        */
       public Builder setAlphan(
           java.lang.String value) {
@@ -33890,7 +34481,7 @@ public final class ATCommand {
         return this;
       }
       /**
-       * <code>optional string alphan = 13;</code>
+       * <code>optional string alphan = 16;</code>
        */
       public Builder clearAlphan() {
         
@@ -33899,7 +34490,7 @@ public final class ATCommand {
         return this;
       }
       /**
-       * <code>optional string alphan = 13;</code>
+       * <code>optional string alphan = 16;</code>
        */
       public Builder setAlphanBytes(
           com.google.protobuf.ByteString value) {
@@ -33915,7 +34506,7 @@ public final class ATCommand {
 
       private java.lang.Object opBand_ = "";
       /**
-       * <code>optional string opBand = 14;</code>
+       * <code>optional string opBand = 17;</code>
        */
       public java.lang.String getOpBand() {
         java.lang.Object ref = opBand_;
@@ -33930,7 +34521,7 @@ public final class ATCommand {
         }
       }
       /**
-       * <code>optional string opBand = 14;</code>
+       * <code>optional string opBand = 17;</code>
        */
       public com.google.protobuf.ByteString
           getOpBandBytes() {
@@ -33946,7 +34537,7 @@ public final class ATCommand {
         }
       }
       /**
-       * <code>optional string opBand = 14;</code>
+       * <code>optional string opBand = 17;</code>
        */
       public Builder setOpBand(
           java.lang.String value) {
@@ -33959,7 +34550,7 @@ public final class ATCommand {
         return this;
       }
       /**
-       * <code>optional string opBand = 14;</code>
+       * <code>optional string opBand = 17;</code>
        */
       public Builder clearOpBand() {
         
@@ -33968,7 +34559,7 @@ public final class ATCommand {
         return this;
       }
       /**
-       * <code>optional string opBand = 14;</code>
+       * <code>optional string opBand = 17;</code>
        */
       public Builder setOpBandBytes(
           com.google.protobuf.ByteString value) {
@@ -33984,13 +34575,13 @@ public final class ATCommand {
 
       private int dump_ ;
       /**
-       * <code>optional int32 dump = 15;</code>
+       * <code>optional int32 dump = 18;</code>
        */
       public int getDump() {
         return dump_;
       }
       /**
-       * <code>optional int32 dump = 15;</code>
+       * <code>optional int32 dump = 18;</code>
        */
       public Builder setDump(int value) {
         
@@ -33999,7 +34590,7 @@ public final class ATCommand {
         return this;
       }
       /**
-       * <code>optional int32 dump = 15;</code>
+       * <code>optional int32 dump = 18;</code>
        */
       public Builder clearDump() {
         
@@ -34010,13 +34601,13 @@ public final class ATCommand {
 
       private int band_ ;
       /**
-       * <code>optional int32 band = 16;</code>
+       * <code>optional int32 band = 19;</code>
        */
       public int getBand() {
         return band_;
       }
       /**
-       * <code>optional int32 band = 16;</code>
+       * <code>optional int32 band = 19;</code>
        */
       public Builder setBand(int value) {
         
@@ -34025,7 +34616,7 @@ public final class ATCommand {
         return this;
       }
       /**
-       * <code>optional int32 band = 16;</code>
+       * <code>optional int32 band = 19;</code>
        */
       public Builder clearBand() {
         
@@ -34036,13 +34627,13 @@ public final class ATCommand {
 
       private int frequency_ ;
       /**
-       * <code>optional int32 frequency = 17;</code>
+       * <code>optional int32 frequency = 20;</code>
        */
       public int getFrequency() {
         return frequency_;
       }
       /**
-       * <code>optional int32 frequency = 17;</code>
+       * <code>optional int32 frequency = 20;</code>
        */
       public Builder setFrequency(int value) {
         
@@ -34051,7 +34642,7 @@ public final class ATCommand {
         return this;
       }
       /**
-       * <code>optional int32 frequency = 17;</code>
+       * <code>optional int32 frequency = 20;</code>
        */
       public Builder clearFrequency() {
         
@@ -34066,7 +34657,7 @@ public final class ATCommand {
        *dbm
        * </pre>
        *
-       * <code>optional int32 signalStrength = 18;</code>
+       * <code>optional int32 signalStrength = 21;</code>
        */
       public int getSignalStrength() {
         return signalStrength_;
@@ -34076,7 +34667,7 @@ public final class ATCommand {
        *dbm
        * </pre>
        *
-       * <code>optional int32 signalStrength = 18;</code>
+       * <code>optional int32 signalStrength = 21;</code>
        */
       public Builder setSignalStrength(int value) {
         
@@ -34089,7 +34680,7 @@ public final class ATCommand {
        *dbm
        * </pre>
        *
-       * <code>optional int32 signalStrength = 18;</code>
+       * <code>optional int32 signalStrength = 21;</code>
        */
       public Builder clearSignalStrength() {
         
@@ -34100,13 +34691,13 @@ public final class ATCommand {
 
       private int band1900_ ;
       /**
-       * <code>optional int32 band1900 = 19;</code>
+       * <code>optional int32 band1900 = 22;</code>
        */
       public int getBand1900() {
         return band1900_;
       }
       /**
-       * <code>optional int32 band1900 = 19;</code>
+       * <code>optional int32 band1900 = 22;</code>
        */
       public Builder setBand1900(int value) {
         
@@ -34115,7 +34706,7 @@ public final class ATCommand {
         return this;
       }
       /**
-       * <code>optional int32 band1900 = 19;</code>
+       * <code>optional int32 band1900 = 22;</code>
        */
       public Builder clearBand1900() {
         
@@ -34126,13 +34717,13 @@ public final class ATCommand {
 
       private int arfcn1_ ;
       /**
-       * <code>optional int32 arfcn1 = 20;</code>
+       * <code>optional int32 arfcn1 = 23;</code>
        */
       public int getArfcn1() {
         return arfcn1_;
       }
       /**
-       * <code>optional int32 arfcn1 = 20;</code>
+       * <code>optional int32 arfcn1 = 23;</code>
        */
       public Builder setArfcn1(int value) {
         
@@ -34141,7 +34732,7 @@ public final class ATCommand {
         return this;
       }
       /**
-       * <code>optional int32 arfcn1 = 20;</code>
+       * <code>optional int32 arfcn1 = 23;</code>
        */
       public Builder clearArfcn1() {
         
@@ -34152,13 +34743,13 @@ public final class ATCommand {
 
       private int arfcn2_ ;
       /**
-       * <code>optional int32 arfcn2 = 21;</code>
+       * <code>optional int32 arfcn2 = 24;</code>
        */
       public int getArfcn2() {
         return arfcn2_;
       }
       /**
-       * <code>optional int32 arfcn2 = 21;</code>
+       * <code>optional int32 arfcn2 = 24;</code>
        */
       public Builder setArfcn2(int value) {
         
@@ -34167,7 +34758,7 @@ public final class ATCommand {
         return this;
       }
       /**
-       * <code>optional int32 arfcn2 = 21;</code>
+       * <code>optional int32 arfcn2 = 24;</code>
        */
       public Builder clearArfcn2() {
         
@@ -34178,13 +34769,13 @@ public final class ATCommand {
 
       private int arfcn3_ ;
       /**
-       * <code>optional int32 arfcn3 = 22;</code>
+       * <code>optional int32 arfcn3 = 25;</code>
        */
       public int getArfcn3() {
         return arfcn3_;
       }
       /**
-       * <code>optional int32 arfcn3 = 22;</code>
+       * <code>optional int32 arfcn3 = 25;</code>
        */
       public Builder setArfcn3(int value) {
         
@@ -34193,7 +34784,7 @@ public final class ATCommand {
         return this;
       }
       /**
-       * <code>optional int32 arfcn3 = 22;</code>
+       * <code>optional int32 arfcn3 = 25;</code>
        */
       public Builder clearArfcn3() {
         
@@ -34264,11 +34855,26 @@ public final class ATCommand {
     com.rtrk.atcommands.ATCommand.CallRelatedMessageType getMessageType();
 
     /**
-     * <code>optional string number = 2;</code>
+     * <code>optional bool test = 2;</code>
+     */
+    boolean getTest();
+
+    /**
+     * <code>optional bool read = 3;</code>
+     */
+    boolean getRead();
+
+    /**
+     * <code>optional bool execution = 4;</code>
+     */
+    boolean getExecution();
+
+    /**
+     * <code>optional string number = 5;</code>
      */
     java.lang.String getNumber();
     /**
-     * <code>optional string number = 2;</code>
+     * <code>optional string number = 5;</code>
      */
     com.google.protobuf.ByteString
         getNumberBytes();
@@ -34278,7 +34884,7 @@ public final class ATCommand {
      *mgsm
      * </pre>
      *
-     * <code>optional string GSMModifier = 3;</code>
+     * <code>optional string GSMModifier = 6;</code>
      */
     java.lang.String getGSMModifier();
     /**
@@ -34286,7 +34892,7 @@ public final class ATCommand {
      *mgsm
      * </pre>
      *
-     * <code>optional string GSMModifier = 3;</code>
+     * <code>optional string GSMModifier = 6;</code>
      */
     com.google.protobuf.ByteString
         getGSMModifierBytes();
@@ -34296,7 +34902,7 @@ public final class ATCommand {
      *iws
      * </pre>
      *
-     * <code>optional int32 interworkinWindowsSize = 24;</code>
+     * <code>optional int32 interworkinWindowsSize = 7;</code>
      */
     int getInterworkinWindowsSize();
 
@@ -34305,7 +34911,7 @@ public final class ATCommand {
      *mws
      * </pre>
      *
-     * <code>optional int32 mobileWindowSize = 5;</code>
+     * <code>optional int32 mobileWindowSize = 8;</code>
      */
     int getMobileWindowSize();
 
@@ -34314,7 +34920,7 @@ public final class ATCommand {
      *T1
      * </pre>
      *
-     * <code>optional int32 acknowledmentTimer = 6;</code>
+     * <code>optional int32 acknowledmentTimer = 9;</code>
      */
     int getAcknowledmentTimer();
 
@@ -34323,7 +34929,7 @@ public final class ATCommand {
      *N2
      * </pre>
      *
-     * <code>optional int32 retransimissionAttempts = 7;</code>
+     * <code>optional int32 retransimissionAttempts = 10;</code>
      */
     int getRetransimissionAttempts();
 
@@ -34332,7 +34938,7 @@ public final class ATCommand {
      *verx
      * </pre>
      *
-     * <code>optional int32 RPLVersion = 8;</code>
+     * <code>optional int32 RPLVersion = 11;</code>
      */
     int getRPLVersion();
 
@@ -34341,54 +34947,63 @@ public final class ATCommand {
      *T4
      * </pre>
      *
-     * <code>optional int32 resequencingPeriod = 9;</code>
+     * <code>optional int32 resequencingPeriod = 12;</code>
      */
     int getResequencingPeriod();
 
     /**
-     * <code>optional int32 n = 10;</code>
+     * <code>optional int32 n = 13;</code>
      */
     int getN();
 
     /**
-     * <code>optional int32 type = 11;</code>
+     * <code>optional int32 type = 14;</code>
      */
     int getType();
 
     /**
-     * <code>optional int32 index = 12;</code>
+     * <code>optional int32 index = 15;</code>
      */
     int getIndex();
 
     /**
-     * <code>optional int32 dir = 13;</code>
+     * <code>optional int32 dir = 16;</code>
      */
     int getDir();
 
     /**
-     * <code>optional int32 stat = 14;</code>
+     * <code>optional int32 stat = 17;</code>
      */
     int getStat();
 
     /**
-     * <code>optional int32 mode = 15;</code>
+     * <code>optional int32 mode = 18;</code>
      */
     int getMode();
 
     /**
-     * <code>optional int32 multiparty = 16;</code>
+     * <code>optional int32 multiparty = 19;</code>
      */
     int getMultiparty();
 
     /**
-     * <code>optional int32 speechChannel = 17;</code>
+     * <code>optional int32 speechChannel = 20;</code>
      */
     int getSpeechChannel();
 
     /**
-     * <code>optional bool disableATH = 18;</code>
+     * <code>optional bool disableATH = 21;</code>
      */
     boolean getDisableATH();
+
+    /**
+     * <pre>
+     *;
+     * </pre>
+     *
+     * <code>optional bool setUpVoiceCall = 22;</code>
+     */
+    boolean getSetUpVoiceCall();
   }
   /**
    * Protobuf type {@code com.rtrk.protobuf.CallRelatedCommand}
@@ -34403,6 +35018,9 @@ public final class ATCommand {
     }
     private CallRelatedCommand() {
       messageType_ = 0;
+      test_ = false;
+      read_ = false;
+      execution_ = false;
       number_ = "";
       gSMModifier_ = "";
       interworkinWindowsSize_ = 0;
@@ -34420,6 +35038,7 @@ public final class ATCommand {
       multiparty_ = 0;
       speechChannel_ = 0;
       disableATH_ = false;
+      setUpVoiceCall_ = false;
     }
 
     @java.lang.Override
@@ -34453,91 +35072,111 @@ public final class ATCommand {
               messageType_ = rawValue;
               break;
             }
-            case 18: {
+            case 16: {
+
+              test_ = input.readBool();
+              break;
+            }
+            case 24: {
+
+              read_ = input.readBool();
+              break;
+            }
+            case 32: {
+
+              execution_ = input.readBool();
+              break;
+            }
+            case 42: {
               java.lang.String s = input.readStringRequireUtf8();
 
               number_ = s;
               break;
             }
-            case 26: {
+            case 50: {
               java.lang.String s = input.readStringRequireUtf8();
 
               gSMModifier_ = s;
               break;
             }
-            case 40: {
-
-              mobileWindowSize_ = input.readInt32();
-              break;
-            }
-            case 48: {
-
-              acknowledmentTimer_ = input.readInt32();
-              break;
-            }
             case 56: {
 
-              retransimissionAttempts_ = input.readInt32();
+              interworkinWindowsSize_ = input.readInt32();
               break;
             }
             case 64: {
 
-              rPLVersion_ = input.readInt32();
+              mobileWindowSize_ = input.readInt32();
               break;
             }
             case 72: {
 
-              resequencingPeriod_ = input.readInt32();
+              acknowledmentTimer_ = input.readInt32();
               break;
             }
             case 80: {
 
-              n_ = input.readInt32();
+              retransimissionAttempts_ = input.readInt32();
               break;
             }
             case 88: {
 
-              type_ = input.readInt32();
+              rPLVersion_ = input.readInt32();
               break;
             }
             case 96: {
 
-              index_ = input.readInt32();
+              resequencingPeriod_ = input.readInt32();
               break;
             }
             case 104: {
 
-              dir_ = input.readInt32();
+              n_ = input.readInt32();
               break;
             }
             case 112: {
 
-              stat_ = input.readInt32();
+              type_ = input.readInt32();
               break;
             }
             case 120: {
 
-              mode_ = input.readInt32();
+              index_ = input.readInt32();
               break;
             }
             case 128: {
 
-              multiparty_ = input.readInt32();
+              dir_ = input.readInt32();
               break;
             }
             case 136: {
 
-              speechChannel_ = input.readInt32();
+              stat_ = input.readInt32();
               break;
             }
             case 144: {
 
+              mode_ = input.readInt32();
+              break;
+            }
+            case 152: {
+
+              multiparty_ = input.readInt32();
+              break;
+            }
+            case 160: {
+
+              speechChannel_ = input.readInt32();
+              break;
+            }
+            case 168: {
+
               disableATH_ = input.readBool();
               break;
             }
-            case 192: {
+            case 176: {
 
-              interworkinWindowsSize_ = input.readInt32();
+              setUpVoiceCall_ = input.readBool();
               break;
             }
           }
@@ -34579,10 +35218,37 @@ public final class ATCommand {
       return result == null ? com.rtrk.atcommands.ATCommand.CallRelatedMessageType.UNRECOGNIZED : result;
     }
 
-    public static final int NUMBER_FIELD_NUMBER = 2;
+    public static final int TEST_FIELD_NUMBER = 2;
+    private boolean test_;
+    /**
+     * <code>optional bool test = 2;</code>
+     */
+    public boolean getTest() {
+      return test_;
+    }
+
+    public static final int READ_FIELD_NUMBER = 3;
+    private boolean read_;
+    /**
+     * <code>optional bool read = 3;</code>
+     */
+    public boolean getRead() {
+      return read_;
+    }
+
+    public static final int EXECUTION_FIELD_NUMBER = 4;
+    private boolean execution_;
+    /**
+     * <code>optional bool execution = 4;</code>
+     */
+    public boolean getExecution() {
+      return execution_;
+    }
+
+    public static final int NUMBER_FIELD_NUMBER = 5;
     private volatile java.lang.Object number_;
     /**
-     * <code>optional string number = 2;</code>
+     * <code>optional string number = 5;</code>
      */
     public java.lang.String getNumber() {
       java.lang.Object ref = number_;
@@ -34597,7 +35263,7 @@ public final class ATCommand {
       }
     }
     /**
-     * <code>optional string number = 2;</code>
+     * <code>optional string number = 5;</code>
      */
     public com.google.protobuf.ByteString
         getNumberBytes() {
@@ -34613,14 +35279,14 @@ public final class ATCommand {
       }
     }
 
-    public static final int GSMMODIFIER_FIELD_NUMBER = 3;
+    public static final int GSMMODIFIER_FIELD_NUMBER = 6;
     private volatile java.lang.Object gSMModifier_;
     /**
      * <pre>
      *mgsm
      * </pre>
      *
-     * <code>optional string GSMModifier = 3;</code>
+     * <code>optional string GSMModifier = 6;</code>
      */
     public java.lang.String getGSMModifier() {
       java.lang.Object ref = gSMModifier_;
@@ -34639,7 +35305,7 @@ public final class ATCommand {
      *mgsm
      * </pre>
      *
-     * <code>optional string GSMModifier = 3;</code>
+     * <code>optional string GSMModifier = 6;</code>
      */
     public com.google.protobuf.ByteString
         getGSMModifierBytes() {
@@ -34655,163 +35321,176 @@ public final class ATCommand {
       }
     }
 
-    public static final int INTERWORKINWINDOWSSIZE_FIELD_NUMBER = 24;
+    public static final int INTERWORKINWINDOWSSIZE_FIELD_NUMBER = 7;
     private int interworkinWindowsSize_;
     /**
      * <pre>
      *iws
      * </pre>
      *
-     * <code>optional int32 interworkinWindowsSize = 24;</code>
+     * <code>optional int32 interworkinWindowsSize = 7;</code>
      */
     public int getInterworkinWindowsSize() {
       return interworkinWindowsSize_;
     }
 
-    public static final int MOBILEWINDOWSIZE_FIELD_NUMBER = 5;
+    public static final int MOBILEWINDOWSIZE_FIELD_NUMBER = 8;
     private int mobileWindowSize_;
     /**
      * <pre>
      *mws
      * </pre>
      *
-     * <code>optional int32 mobileWindowSize = 5;</code>
+     * <code>optional int32 mobileWindowSize = 8;</code>
      */
     public int getMobileWindowSize() {
       return mobileWindowSize_;
     }
 
-    public static final int ACKNOWLEDMENTTIMER_FIELD_NUMBER = 6;
+    public static final int ACKNOWLEDMENTTIMER_FIELD_NUMBER = 9;
     private int acknowledmentTimer_;
     /**
      * <pre>
      *T1
      * </pre>
      *
-     * <code>optional int32 acknowledmentTimer = 6;</code>
+     * <code>optional int32 acknowledmentTimer = 9;</code>
      */
     public int getAcknowledmentTimer() {
       return acknowledmentTimer_;
     }
 
-    public static final int RETRANSIMISSIONATTEMPTS_FIELD_NUMBER = 7;
+    public static final int RETRANSIMISSIONATTEMPTS_FIELD_NUMBER = 10;
     private int retransimissionAttempts_;
     /**
      * <pre>
      *N2
      * </pre>
      *
-     * <code>optional int32 retransimissionAttempts = 7;</code>
+     * <code>optional int32 retransimissionAttempts = 10;</code>
      */
     public int getRetransimissionAttempts() {
       return retransimissionAttempts_;
     }
 
-    public static final int RPLVERSION_FIELD_NUMBER = 8;
+    public static final int RPLVERSION_FIELD_NUMBER = 11;
     private int rPLVersion_;
     /**
      * <pre>
      *verx
      * </pre>
      *
-     * <code>optional int32 RPLVersion = 8;</code>
+     * <code>optional int32 RPLVersion = 11;</code>
      */
     public int getRPLVersion() {
       return rPLVersion_;
     }
 
-    public static final int RESEQUENCINGPERIOD_FIELD_NUMBER = 9;
+    public static final int RESEQUENCINGPERIOD_FIELD_NUMBER = 12;
     private int resequencingPeriod_;
     /**
      * <pre>
      *T4
      * </pre>
      *
-     * <code>optional int32 resequencingPeriod = 9;</code>
+     * <code>optional int32 resequencingPeriod = 12;</code>
      */
     public int getResequencingPeriod() {
       return resequencingPeriod_;
     }
 
-    public static final int N_FIELD_NUMBER = 10;
+    public static final int N_FIELD_NUMBER = 13;
     private int n_;
     /**
-     * <code>optional int32 n = 10;</code>
+     * <code>optional int32 n = 13;</code>
      */
     public int getN() {
       return n_;
     }
 
-    public static final int TYPE_FIELD_NUMBER = 11;
+    public static final int TYPE_FIELD_NUMBER = 14;
     private int type_;
     /**
-     * <code>optional int32 type = 11;</code>
+     * <code>optional int32 type = 14;</code>
      */
     public int getType() {
       return type_;
     }
 
-    public static final int INDEX_FIELD_NUMBER = 12;
+    public static final int INDEX_FIELD_NUMBER = 15;
     private int index_;
     /**
-     * <code>optional int32 index = 12;</code>
+     * <code>optional int32 index = 15;</code>
      */
     public int getIndex() {
       return index_;
     }
 
-    public static final int DIR_FIELD_NUMBER = 13;
+    public static final int DIR_FIELD_NUMBER = 16;
     private int dir_;
     /**
-     * <code>optional int32 dir = 13;</code>
+     * <code>optional int32 dir = 16;</code>
      */
     public int getDir() {
       return dir_;
     }
 
-    public static final int STAT_FIELD_NUMBER = 14;
+    public static final int STAT_FIELD_NUMBER = 17;
     private int stat_;
     /**
-     * <code>optional int32 stat = 14;</code>
+     * <code>optional int32 stat = 17;</code>
      */
     public int getStat() {
       return stat_;
     }
 
-    public static final int MODE_FIELD_NUMBER = 15;
+    public static final int MODE_FIELD_NUMBER = 18;
     private int mode_;
     /**
-     * <code>optional int32 mode = 15;</code>
+     * <code>optional int32 mode = 18;</code>
      */
     public int getMode() {
       return mode_;
     }
 
-    public static final int MULTIPARTY_FIELD_NUMBER = 16;
+    public static final int MULTIPARTY_FIELD_NUMBER = 19;
     private int multiparty_;
     /**
-     * <code>optional int32 multiparty = 16;</code>
+     * <code>optional int32 multiparty = 19;</code>
      */
     public int getMultiparty() {
       return multiparty_;
     }
 
-    public static final int SPEECHCHANNEL_FIELD_NUMBER = 17;
+    public static final int SPEECHCHANNEL_FIELD_NUMBER = 20;
     private int speechChannel_;
     /**
-     * <code>optional int32 speechChannel = 17;</code>
+     * <code>optional int32 speechChannel = 20;</code>
      */
     public int getSpeechChannel() {
       return speechChannel_;
     }
 
-    public static final int DISABLEATH_FIELD_NUMBER = 18;
+    public static final int DISABLEATH_FIELD_NUMBER = 21;
     private boolean disableATH_;
     /**
-     * <code>optional bool disableATH = 18;</code>
+     * <code>optional bool disableATH = 21;</code>
      */
     public boolean getDisableATH() {
       return disableATH_;
+    }
+
+    public static final int SETUPVOICECALL_FIELD_NUMBER = 22;
+    private boolean setUpVoiceCall_;
+    /**
+     * <pre>
+     *;
+     * </pre>
+     *
+     * <code>optional bool setUpVoiceCall = 22;</code>
+     */
+    public boolean getSetUpVoiceCall() {
+      return setUpVoiceCall_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -34829,56 +35508,68 @@ public final class ATCommand {
       if (messageType_ != com.rtrk.atcommands.ATCommand.CallRelatedMessageType.ANSWER_AN_INCOMING_CALL.getNumber()) {
         output.writeEnum(1, messageType_);
       }
+      if (test_ != false) {
+        output.writeBool(2, test_);
+      }
+      if (read_ != false) {
+        output.writeBool(3, read_);
+      }
+      if (execution_ != false) {
+        output.writeBool(4, execution_);
+      }
       if (!getNumberBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, number_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, number_);
       }
       if (!getGSMModifierBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, gSMModifier_);
-      }
-      if (mobileWindowSize_ != 0) {
-        output.writeInt32(5, mobileWindowSize_);
-      }
-      if (acknowledmentTimer_ != 0) {
-        output.writeInt32(6, acknowledmentTimer_);
-      }
-      if (retransimissionAttempts_ != 0) {
-        output.writeInt32(7, retransimissionAttempts_);
-      }
-      if (rPLVersion_ != 0) {
-        output.writeInt32(8, rPLVersion_);
-      }
-      if (resequencingPeriod_ != 0) {
-        output.writeInt32(9, resequencingPeriod_);
-      }
-      if (n_ != 0) {
-        output.writeInt32(10, n_);
-      }
-      if (type_ != 0) {
-        output.writeInt32(11, type_);
-      }
-      if (index_ != 0) {
-        output.writeInt32(12, index_);
-      }
-      if (dir_ != 0) {
-        output.writeInt32(13, dir_);
-      }
-      if (stat_ != 0) {
-        output.writeInt32(14, stat_);
-      }
-      if (mode_ != 0) {
-        output.writeInt32(15, mode_);
-      }
-      if (multiparty_ != 0) {
-        output.writeInt32(16, multiparty_);
-      }
-      if (speechChannel_ != 0) {
-        output.writeInt32(17, speechChannel_);
-      }
-      if (disableATH_ != false) {
-        output.writeBool(18, disableATH_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, gSMModifier_);
       }
       if (interworkinWindowsSize_ != 0) {
-        output.writeInt32(24, interworkinWindowsSize_);
+        output.writeInt32(7, interworkinWindowsSize_);
+      }
+      if (mobileWindowSize_ != 0) {
+        output.writeInt32(8, mobileWindowSize_);
+      }
+      if (acknowledmentTimer_ != 0) {
+        output.writeInt32(9, acknowledmentTimer_);
+      }
+      if (retransimissionAttempts_ != 0) {
+        output.writeInt32(10, retransimissionAttempts_);
+      }
+      if (rPLVersion_ != 0) {
+        output.writeInt32(11, rPLVersion_);
+      }
+      if (resequencingPeriod_ != 0) {
+        output.writeInt32(12, resequencingPeriod_);
+      }
+      if (n_ != 0) {
+        output.writeInt32(13, n_);
+      }
+      if (type_ != 0) {
+        output.writeInt32(14, type_);
+      }
+      if (index_ != 0) {
+        output.writeInt32(15, index_);
+      }
+      if (dir_ != 0) {
+        output.writeInt32(16, dir_);
+      }
+      if (stat_ != 0) {
+        output.writeInt32(17, stat_);
+      }
+      if (mode_ != 0) {
+        output.writeInt32(18, mode_);
+      }
+      if (multiparty_ != 0) {
+        output.writeInt32(19, multiparty_);
+      }
+      if (speechChannel_ != 0) {
+        output.writeInt32(20, speechChannel_);
+      }
+      if (disableATH_ != false) {
+        output.writeBool(21, disableATH_);
+      }
+      if (setUpVoiceCall_ != false) {
+        output.writeBool(22, setUpVoiceCall_);
       }
     }
 
@@ -34891,71 +35582,87 @@ public final class ATCommand {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(1, messageType_);
       }
+      if (test_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(2, test_);
+      }
+      if (read_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(3, read_);
+      }
+      if (execution_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(4, execution_);
+      }
       if (!getNumberBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, number_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, number_);
       }
       if (!getGSMModifierBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, gSMModifier_);
-      }
-      if (mobileWindowSize_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(5, mobileWindowSize_);
-      }
-      if (acknowledmentTimer_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(6, acknowledmentTimer_);
-      }
-      if (retransimissionAttempts_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(7, retransimissionAttempts_);
-      }
-      if (rPLVersion_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(8, rPLVersion_);
-      }
-      if (resequencingPeriod_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(9, resequencingPeriod_);
-      }
-      if (n_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(10, n_);
-      }
-      if (type_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(11, type_);
-      }
-      if (index_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(12, index_);
-      }
-      if (dir_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(13, dir_);
-      }
-      if (stat_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(14, stat_);
-      }
-      if (mode_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(15, mode_);
-      }
-      if (multiparty_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(16, multiparty_);
-      }
-      if (speechChannel_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(17, speechChannel_);
-      }
-      if (disableATH_ != false) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(18, disableATH_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, gSMModifier_);
       }
       if (interworkinWindowsSize_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(24, interworkinWindowsSize_);
+          .computeInt32Size(7, interworkinWindowsSize_);
+      }
+      if (mobileWindowSize_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(8, mobileWindowSize_);
+      }
+      if (acknowledmentTimer_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(9, acknowledmentTimer_);
+      }
+      if (retransimissionAttempts_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(10, retransimissionAttempts_);
+      }
+      if (rPLVersion_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(11, rPLVersion_);
+      }
+      if (resequencingPeriod_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(12, resequencingPeriod_);
+      }
+      if (n_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(13, n_);
+      }
+      if (type_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(14, type_);
+      }
+      if (index_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(15, index_);
+      }
+      if (dir_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(16, dir_);
+      }
+      if (stat_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(17, stat_);
+      }
+      if (mode_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(18, mode_);
+      }
+      if (multiparty_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(19, multiparty_);
+      }
+      if (speechChannel_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(20, speechChannel_);
+      }
+      if (disableATH_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(21, disableATH_);
+      }
+      if (setUpVoiceCall_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(22, setUpVoiceCall_);
       }
       memoizedSize = size;
       return size;
@@ -34974,6 +35681,12 @@ public final class ATCommand {
 
       boolean result = true;
       result = result && messageType_ == other.messageType_;
+      result = result && (getTest()
+          == other.getTest());
+      result = result && (getRead()
+          == other.getRead());
+      result = result && (getExecution()
+          == other.getExecution());
       result = result && getNumber()
           .equals(other.getNumber());
       result = result && getGSMModifier()
@@ -35008,6 +35721,8 @@ public final class ATCommand {
           == other.getSpeechChannel());
       result = result && (getDisableATH()
           == other.getDisableATH());
+      result = result && (getSetUpVoiceCall()
+          == other.getSetUpVoiceCall());
       return result;
     }
 
@@ -35020,6 +35735,15 @@ public final class ATCommand {
       hash = (19 * hash) + getDescriptorForType().hashCode();
       hash = (37 * hash) + MESSAGETYPE_FIELD_NUMBER;
       hash = (53 * hash) + messageType_;
+      hash = (37 * hash) + TEST_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getTest());
+      hash = (37 * hash) + READ_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getRead());
+      hash = (37 * hash) + EXECUTION_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getExecution());
       hash = (37 * hash) + NUMBER_FIELD_NUMBER;
       hash = (53 * hash) + getNumber().hashCode();
       hash = (37 * hash) + GSMMODIFIER_FIELD_NUMBER;
@@ -35055,6 +35779,9 @@ public final class ATCommand {
       hash = (37 * hash) + DISABLEATH_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getDisableATH());
+      hash = (37 * hash) + SETUPVOICECALL_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getSetUpVoiceCall());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -35175,6 +35902,12 @@ public final class ATCommand {
         super.clear();
         messageType_ = 0;
 
+        test_ = false;
+
+        read_ = false;
+
+        execution_ = false;
+
         number_ = "";
 
         gSMModifier_ = "";
@@ -35209,6 +35942,8 @@ public final class ATCommand {
 
         disableATH_ = false;
 
+        setUpVoiceCall_ = false;
+
         return this;
       }
 
@@ -35232,6 +35967,9 @@ public final class ATCommand {
       public com.rtrk.atcommands.ATCommand.CallRelatedCommand buildPartial() {
         com.rtrk.atcommands.ATCommand.CallRelatedCommand result = new com.rtrk.atcommands.ATCommand.CallRelatedCommand(this);
         result.messageType_ = messageType_;
+        result.test_ = test_;
+        result.read_ = read_;
+        result.execution_ = execution_;
         result.number_ = number_;
         result.gSMModifier_ = gSMModifier_;
         result.interworkinWindowsSize_ = interworkinWindowsSize_;
@@ -35249,6 +35987,7 @@ public final class ATCommand {
         result.multiparty_ = multiparty_;
         result.speechChannel_ = speechChannel_;
         result.disableATH_ = disableATH_;
+        result.setUpVoiceCall_ = setUpVoiceCall_;
         onBuilt();
         return result;
       }
@@ -35292,6 +36031,15 @@ public final class ATCommand {
         if (other == com.rtrk.atcommands.ATCommand.CallRelatedCommand.getDefaultInstance()) return this;
         if (other.messageType_ != 0) {
           setMessageTypeValue(other.getMessageTypeValue());
+        }
+        if (other.getTest() != false) {
+          setTest(other.getTest());
+        }
+        if (other.getRead() != false) {
+          setRead(other.getRead());
+        }
+        if (other.getExecution() != false) {
+          setExecution(other.getExecution());
         }
         if (!other.getNumber().isEmpty()) {
           number_ = other.number_;
@@ -35345,6 +36093,9 @@ public final class ATCommand {
         }
         if (other.getDisableATH() != false) {
           setDisableATH(other.getDisableATH());
+        }
+        if (other.getSetUpVoiceCall() != false) {
+          setSetUpVoiceCall(other.getSetUpVoiceCall());
         }
         onChanged();
         return this;
@@ -35416,9 +36167,87 @@ public final class ATCommand {
         return this;
       }
 
+      private boolean test_ ;
+      /**
+       * <code>optional bool test = 2;</code>
+       */
+      public boolean getTest() {
+        return test_;
+      }
+      /**
+       * <code>optional bool test = 2;</code>
+       */
+      public Builder setTest(boolean value) {
+        
+        test_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool test = 2;</code>
+       */
+      public Builder clearTest() {
+        
+        test_ = false;
+        onChanged();
+        return this;
+      }
+
+      private boolean read_ ;
+      /**
+       * <code>optional bool read = 3;</code>
+       */
+      public boolean getRead() {
+        return read_;
+      }
+      /**
+       * <code>optional bool read = 3;</code>
+       */
+      public Builder setRead(boolean value) {
+        
+        read_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool read = 3;</code>
+       */
+      public Builder clearRead() {
+        
+        read_ = false;
+        onChanged();
+        return this;
+      }
+
+      private boolean execution_ ;
+      /**
+       * <code>optional bool execution = 4;</code>
+       */
+      public boolean getExecution() {
+        return execution_;
+      }
+      /**
+       * <code>optional bool execution = 4;</code>
+       */
+      public Builder setExecution(boolean value) {
+        
+        execution_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool execution = 4;</code>
+       */
+      public Builder clearExecution() {
+        
+        execution_ = false;
+        onChanged();
+        return this;
+      }
+
       private java.lang.Object number_ = "";
       /**
-       * <code>optional string number = 2;</code>
+       * <code>optional string number = 5;</code>
        */
       public java.lang.String getNumber() {
         java.lang.Object ref = number_;
@@ -35433,7 +36262,7 @@ public final class ATCommand {
         }
       }
       /**
-       * <code>optional string number = 2;</code>
+       * <code>optional string number = 5;</code>
        */
       public com.google.protobuf.ByteString
           getNumberBytes() {
@@ -35449,7 +36278,7 @@ public final class ATCommand {
         }
       }
       /**
-       * <code>optional string number = 2;</code>
+       * <code>optional string number = 5;</code>
        */
       public Builder setNumber(
           java.lang.String value) {
@@ -35462,7 +36291,7 @@ public final class ATCommand {
         return this;
       }
       /**
-       * <code>optional string number = 2;</code>
+       * <code>optional string number = 5;</code>
        */
       public Builder clearNumber() {
         
@@ -35471,7 +36300,7 @@ public final class ATCommand {
         return this;
       }
       /**
-       * <code>optional string number = 2;</code>
+       * <code>optional string number = 5;</code>
        */
       public Builder setNumberBytes(
           com.google.protobuf.ByteString value) {
@@ -35491,7 +36320,7 @@ public final class ATCommand {
        *mgsm
        * </pre>
        *
-       * <code>optional string GSMModifier = 3;</code>
+       * <code>optional string GSMModifier = 6;</code>
        */
       public java.lang.String getGSMModifier() {
         java.lang.Object ref = gSMModifier_;
@@ -35510,7 +36339,7 @@ public final class ATCommand {
        *mgsm
        * </pre>
        *
-       * <code>optional string GSMModifier = 3;</code>
+       * <code>optional string GSMModifier = 6;</code>
        */
       public com.google.protobuf.ByteString
           getGSMModifierBytes() {
@@ -35530,7 +36359,7 @@ public final class ATCommand {
        *mgsm
        * </pre>
        *
-       * <code>optional string GSMModifier = 3;</code>
+       * <code>optional string GSMModifier = 6;</code>
        */
       public Builder setGSMModifier(
           java.lang.String value) {
@@ -35547,7 +36376,7 @@ public final class ATCommand {
        *mgsm
        * </pre>
        *
-       * <code>optional string GSMModifier = 3;</code>
+       * <code>optional string GSMModifier = 6;</code>
        */
       public Builder clearGSMModifier() {
         
@@ -35560,7 +36389,7 @@ public final class ATCommand {
        *mgsm
        * </pre>
        *
-       * <code>optional string GSMModifier = 3;</code>
+       * <code>optional string GSMModifier = 6;</code>
        */
       public Builder setGSMModifierBytes(
           com.google.protobuf.ByteString value) {
@@ -35580,7 +36409,7 @@ public final class ATCommand {
        *iws
        * </pre>
        *
-       * <code>optional int32 interworkinWindowsSize = 24;</code>
+       * <code>optional int32 interworkinWindowsSize = 7;</code>
        */
       public int getInterworkinWindowsSize() {
         return interworkinWindowsSize_;
@@ -35590,7 +36419,7 @@ public final class ATCommand {
        *iws
        * </pre>
        *
-       * <code>optional int32 interworkinWindowsSize = 24;</code>
+       * <code>optional int32 interworkinWindowsSize = 7;</code>
        */
       public Builder setInterworkinWindowsSize(int value) {
         
@@ -35603,7 +36432,7 @@ public final class ATCommand {
        *iws
        * </pre>
        *
-       * <code>optional int32 interworkinWindowsSize = 24;</code>
+       * <code>optional int32 interworkinWindowsSize = 7;</code>
        */
       public Builder clearInterworkinWindowsSize() {
         
@@ -35618,7 +36447,7 @@ public final class ATCommand {
        *mws
        * </pre>
        *
-       * <code>optional int32 mobileWindowSize = 5;</code>
+       * <code>optional int32 mobileWindowSize = 8;</code>
        */
       public int getMobileWindowSize() {
         return mobileWindowSize_;
@@ -35628,7 +36457,7 @@ public final class ATCommand {
        *mws
        * </pre>
        *
-       * <code>optional int32 mobileWindowSize = 5;</code>
+       * <code>optional int32 mobileWindowSize = 8;</code>
        */
       public Builder setMobileWindowSize(int value) {
         
@@ -35641,7 +36470,7 @@ public final class ATCommand {
        *mws
        * </pre>
        *
-       * <code>optional int32 mobileWindowSize = 5;</code>
+       * <code>optional int32 mobileWindowSize = 8;</code>
        */
       public Builder clearMobileWindowSize() {
         
@@ -35656,7 +36485,7 @@ public final class ATCommand {
        *T1
        * </pre>
        *
-       * <code>optional int32 acknowledmentTimer = 6;</code>
+       * <code>optional int32 acknowledmentTimer = 9;</code>
        */
       public int getAcknowledmentTimer() {
         return acknowledmentTimer_;
@@ -35666,7 +36495,7 @@ public final class ATCommand {
        *T1
        * </pre>
        *
-       * <code>optional int32 acknowledmentTimer = 6;</code>
+       * <code>optional int32 acknowledmentTimer = 9;</code>
        */
       public Builder setAcknowledmentTimer(int value) {
         
@@ -35679,7 +36508,7 @@ public final class ATCommand {
        *T1
        * </pre>
        *
-       * <code>optional int32 acknowledmentTimer = 6;</code>
+       * <code>optional int32 acknowledmentTimer = 9;</code>
        */
       public Builder clearAcknowledmentTimer() {
         
@@ -35694,7 +36523,7 @@ public final class ATCommand {
        *N2
        * </pre>
        *
-       * <code>optional int32 retransimissionAttempts = 7;</code>
+       * <code>optional int32 retransimissionAttempts = 10;</code>
        */
       public int getRetransimissionAttempts() {
         return retransimissionAttempts_;
@@ -35704,7 +36533,7 @@ public final class ATCommand {
        *N2
        * </pre>
        *
-       * <code>optional int32 retransimissionAttempts = 7;</code>
+       * <code>optional int32 retransimissionAttempts = 10;</code>
        */
       public Builder setRetransimissionAttempts(int value) {
         
@@ -35717,7 +36546,7 @@ public final class ATCommand {
        *N2
        * </pre>
        *
-       * <code>optional int32 retransimissionAttempts = 7;</code>
+       * <code>optional int32 retransimissionAttempts = 10;</code>
        */
       public Builder clearRetransimissionAttempts() {
         
@@ -35732,7 +36561,7 @@ public final class ATCommand {
        *verx
        * </pre>
        *
-       * <code>optional int32 RPLVersion = 8;</code>
+       * <code>optional int32 RPLVersion = 11;</code>
        */
       public int getRPLVersion() {
         return rPLVersion_;
@@ -35742,7 +36571,7 @@ public final class ATCommand {
        *verx
        * </pre>
        *
-       * <code>optional int32 RPLVersion = 8;</code>
+       * <code>optional int32 RPLVersion = 11;</code>
        */
       public Builder setRPLVersion(int value) {
         
@@ -35755,7 +36584,7 @@ public final class ATCommand {
        *verx
        * </pre>
        *
-       * <code>optional int32 RPLVersion = 8;</code>
+       * <code>optional int32 RPLVersion = 11;</code>
        */
       public Builder clearRPLVersion() {
         
@@ -35770,7 +36599,7 @@ public final class ATCommand {
        *T4
        * </pre>
        *
-       * <code>optional int32 resequencingPeriod = 9;</code>
+       * <code>optional int32 resequencingPeriod = 12;</code>
        */
       public int getResequencingPeriod() {
         return resequencingPeriod_;
@@ -35780,7 +36609,7 @@ public final class ATCommand {
        *T4
        * </pre>
        *
-       * <code>optional int32 resequencingPeriod = 9;</code>
+       * <code>optional int32 resequencingPeriod = 12;</code>
        */
       public Builder setResequencingPeriod(int value) {
         
@@ -35793,7 +36622,7 @@ public final class ATCommand {
        *T4
        * </pre>
        *
-       * <code>optional int32 resequencingPeriod = 9;</code>
+       * <code>optional int32 resequencingPeriod = 12;</code>
        */
       public Builder clearResequencingPeriod() {
         
@@ -35804,13 +36633,13 @@ public final class ATCommand {
 
       private int n_ ;
       /**
-       * <code>optional int32 n = 10;</code>
+       * <code>optional int32 n = 13;</code>
        */
       public int getN() {
         return n_;
       }
       /**
-       * <code>optional int32 n = 10;</code>
+       * <code>optional int32 n = 13;</code>
        */
       public Builder setN(int value) {
         
@@ -35819,7 +36648,7 @@ public final class ATCommand {
         return this;
       }
       /**
-       * <code>optional int32 n = 10;</code>
+       * <code>optional int32 n = 13;</code>
        */
       public Builder clearN() {
         
@@ -35830,13 +36659,13 @@ public final class ATCommand {
 
       private int type_ ;
       /**
-       * <code>optional int32 type = 11;</code>
+       * <code>optional int32 type = 14;</code>
        */
       public int getType() {
         return type_;
       }
       /**
-       * <code>optional int32 type = 11;</code>
+       * <code>optional int32 type = 14;</code>
        */
       public Builder setType(int value) {
         
@@ -35845,7 +36674,7 @@ public final class ATCommand {
         return this;
       }
       /**
-       * <code>optional int32 type = 11;</code>
+       * <code>optional int32 type = 14;</code>
        */
       public Builder clearType() {
         
@@ -35856,13 +36685,13 @@ public final class ATCommand {
 
       private int index_ ;
       /**
-       * <code>optional int32 index = 12;</code>
+       * <code>optional int32 index = 15;</code>
        */
       public int getIndex() {
         return index_;
       }
       /**
-       * <code>optional int32 index = 12;</code>
+       * <code>optional int32 index = 15;</code>
        */
       public Builder setIndex(int value) {
         
@@ -35871,7 +36700,7 @@ public final class ATCommand {
         return this;
       }
       /**
-       * <code>optional int32 index = 12;</code>
+       * <code>optional int32 index = 15;</code>
        */
       public Builder clearIndex() {
         
@@ -35882,13 +36711,13 @@ public final class ATCommand {
 
       private int dir_ ;
       /**
-       * <code>optional int32 dir = 13;</code>
+       * <code>optional int32 dir = 16;</code>
        */
       public int getDir() {
         return dir_;
       }
       /**
-       * <code>optional int32 dir = 13;</code>
+       * <code>optional int32 dir = 16;</code>
        */
       public Builder setDir(int value) {
         
@@ -35897,7 +36726,7 @@ public final class ATCommand {
         return this;
       }
       /**
-       * <code>optional int32 dir = 13;</code>
+       * <code>optional int32 dir = 16;</code>
        */
       public Builder clearDir() {
         
@@ -35908,13 +36737,13 @@ public final class ATCommand {
 
       private int stat_ ;
       /**
-       * <code>optional int32 stat = 14;</code>
+       * <code>optional int32 stat = 17;</code>
        */
       public int getStat() {
         return stat_;
       }
       /**
-       * <code>optional int32 stat = 14;</code>
+       * <code>optional int32 stat = 17;</code>
        */
       public Builder setStat(int value) {
         
@@ -35923,7 +36752,7 @@ public final class ATCommand {
         return this;
       }
       /**
-       * <code>optional int32 stat = 14;</code>
+       * <code>optional int32 stat = 17;</code>
        */
       public Builder clearStat() {
         
@@ -35934,13 +36763,13 @@ public final class ATCommand {
 
       private int mode_ ;
       /**
-       * <code>optional int32 mode = 15;</code>
+       * <code>optional int32 mode = 18;</code>
        */
       public int getMode() {
         return mode_;
       }
       /**
-       * <code>optional int32 mode = 15;</code>
+       * <code>optional int32 mode = 18;</code>
        */
       public Builder setMode(int value) {
         
@@ -35949,7 +36778,7 @@ public final class ATCommand {
         return this;
       }
       /**
-       * <code>optional int32 mode = 15;</code>
+       * <code>optional int32 mode = 18;</code>
        */
       public Builder clearMode() {
         
@@ -35960,13 +36789,13 @@ public final class ATCommand {
 
       private int multiparty_ ;
       /**
-       * <code>optional int32 multiparty = 16;</code>
+       * <code>optional int32 multiparty = 19;</code>
        */
       public int getMultiparty() {
         return multiparty_;
       }
       /**
-       * <code>optional int32 multiparty = 16;</code>
+       * <code>optional int32 multiparty = 19;</code>
        */
       public Builder setMultiparty(int value) {
         
@@ -35975,7 +36804,7 @@ public final class ATCommand {
         return this;
       }
       /**
-       * <code>optional int32 multiparty = 16;</code>
+       * <code>optional int32 multiparty = 19;</code>
        */
       public Builder clearMultiparty() {
         
@@ -35986,13 +36815,13 @@ public final class ATCommand {
 
       private int speechChannel_ ;
       /**
-       * <code>optional int32 speechChannel = 17;</code>
+       * <code>optional int32 speechChannel = 20;</code>
        */
       public int getSpeechChannel() {
         return speechChannel_;
       }
       /**
-       * <code>optional int32 speechChannel = 17;</code>
+       * <code>optional int32 speechChannel = 20;</code>
        */
       public Builder setSpeechChannel(int value) {
         
@@ -36001,7 +36830,7 @@ public final class ATCommand {
         return this;
       }
       /**
-       * <code>optional int32 speechChannel = 17;</code>
+       * <code>optional int32 speechChannel = 20;</code>
        */
       public Builder clearSpeechChannel() {
         
@@ -36012,13 +36841,13 @@ public final class ATCommand {
 
       private boolean disableATH_ ;
       /**
-       * <code>optional bool disableATH = 18;</code>
+       * <code>optional bool disableATH = 21;</code>
        */
       public boolean getDisableATH() {
         return disableATH_;
       }
       /**
-       * <code>optional bool disableATH = 18;</code>
+       * <code>optional bool disableATH = 21;</code>
        */
       public Builder setDisableATH(boolean value) {
         
@@ -36027,11 +36856,49 @@ public final class ATCommand {
         return this;
       }
       /**
-       * <code>optional bool disableATH = 18;</code>
+       * <code>optional bool disableATH = 21;</code>
        */
       public Builder clearDisableATH() {
         
         disableATH_ = false;
+        onChanged();
+        return this;
+      }
+
+      private boolean setUpVoiceCall_ ;
+      /**
+       * <pre>
+       *;
+       * </pre>
+       *
+       * <code>optional bool setUpVoiceCall = 22;</code>
+       */
+      public boolean getSetUpVoiceCall() {
+        return setUpVoiceCall_;
+      }
+      /**
+       * <pre>
+       *;
+       * </pre>
+       *
+       * <code>optional bool setUpVoiceCall = 22;</code>
+       */
+      public Builder setSetUpVoiceCall(boolean value) {
+        
+        setUpVoiceCall_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       *;
+       * </pre>
+       *
+       * <code>optional bool setUpVoiceCall = 22;</code>
+       */
+      public Builder clearSetUpVoiceCall() {
+        
+        setUpVoiceCall_ = false;
         onChanged();
         return this;
       }
@@ -36098,7 +36965,22 @@ public final class ATCommand {
     com.rtrk.atcommands.ATCommand.SMSMessageType getMesssageType();
 
     /**
-     * <code>optional int32 service = 2;</code>
+     * <code>optional bool test = 2;</code>
+     */
+    boolean getTest();
+
+    /**
+     * <code>optional bool read = 3;</code>
+     */
+    boolean getRead();
+
+    /**
+     * <code>optional bool execution = 4;</code>
+     */
+    boolean getExecution();
+
+    /**
+     * <code>optional int32 service = 5;</code>
      */
     int getService();
 
@@ -36107,7 +36989,7 @@ public final class ATCommand {
      *mt
      * </pre>
      *
-     * <code>optional int32 mobileTerminatedMessage = 3;</code>
+     * <code>optional int32 mobileTerminatedMessage = 6;</code>
      */
     int getMobileTerminatedMessage();
 
@@ -36116,7 +36998,7 @@ public final class ATCommand {
      *mo
      * </pre>
      *
-     * <code>optional int32 mobileOrientedMessage = 4;</code>
+     * <code>optional int32 mobileOrientedMessage = 7;</code>
      */
     int getMobileOrientedMessage();
 
@@ -36125,12 +37007,12 @@ public final class ATCommand {
      *bm
      * </pre>
      *
-     * <code>optional int32 broadcastTypeMessage = 5;</code>
+     * <code>optional int32 broadcastTypeMessage = 8;</code>
      */
     int getBroadcastTypeMessage();
 
     /**
-     * <code>optional int32 mode = 6;</code>
+     * <code>optional int32 mode = 9;</code>
      */
     int getMode();
 
@@ -36139,7 +37021,7 @@ public final class ATCommand {
      *sca
      * </pre>
      *
-     * <code>optional string SCAddress = 7;</code>
+     * <code>optional string SCAddress = 10;</code>
      */
     java.lang.String getSCAddress();
     /**
@@ -36147,7 +37029,7 @@ public final class ATCommand {
      *sca
      * </pre>
      *
-     * <code>optional string SCAddress = 7;</code>
+     * <code>optional string SCAddress = 10;</code>
      */
     com.google.protobuf.ByteString
         getSCAddressBytes();
@@ -36157,56 +37039,56 @@ public final class ATCommand {
      *tosca
      * </pre>
      *
-     * <code>optional int32 toSCAddress = 8;</code>
+     * <code>optional int32 toSCAddress = 11;</code>
      */
     int getToSCAddress();
 
     /**
-     * <code>optional string mem1 = 9;</code>
+     * <code>optional string mem1 = 12;</code>
      */
     java.lang.String getMem1();
     /**
-     * <code>optional string mem1 = 9;</code>
+     * <code>optional string mem1 = 12;</code>
      */
     com.google.protobuf.ByteString
         getMem1Bytes();
 
     /**
-     * <code>optional string mem2 = 10;</code>
+     * <code>optional string mem2 = 13;</code>
      */
     java.lang.String getMem2();
     /**
-     * <code>optional string mem2 = 10;</code>
+     * <code>optional string mem2 = 13;</code>
      */
     com.google.protobuf.ByteString
         getMem2Bytes();
 
     /**
-     * <code>optional string mem3 = 11;</code>
+     * <code>optional string mem3 = 14;</code>
      */
     java.lang.String getMem3();
     /**
-     * <code>optional string mem3 = 11;</code>
+     * <code>optional string mem3 = 14;</code>
      */
     com.google.protobuf.ByteString
         getMem3Bytes();
 
     /**
-     * <code>optional int32 index = 12;</code>
+     * <code>optional int32 index = 15;</code>
      */
     int getIndex();
 
     /**
-     * <code>optional int32 delflag = 13;</code>
+     * <code>optional int32 delflag = 16;</code>
      */
     int getDelflag();
 
     /**
-     * <code>optional string alpha = 14;</code>
+     * <code>optional string alpha = 17;</code>
      */
     java.lang.String getAlpha();
     /**
-     * <code>optional string alpha = 14;</code>
+     * <code>optional string alpha = 17;</code>
      */
     com.google.protobuf.ByteString
         getAlphaBytes();
@@ -36216,7 +37098,7 @@ public final class ATCommand {
      *da
      * </pre>
      *
-     * <code>optional string destinationAddress = 15;</code>
+     * <code>optional string destinationAddress = 18;</code>
      */
     java.lang.String getDestinationAddress();
     /**
@@ -36224,18 +37106,18 @@ public final class ATCommand {
      *da
      * </pre>
      *
-     * <code>optional string destinationAddress = 15;</code>
+     * <code>optional string destinationAddress = 18;</code>
      */
     com.google.protobuf.ByteString
         getDestinationAddressBytes();
 
     /**
-     * <code>optional bytes data = 16;</code>
+     * <code>optional bytes data = 19;</code>
      */
     com.google.protobuf.ByteString getData();
 
     /**
-     * <code>optional int32 length = 17;</code>
+     * <code>optional int32 length = 20;</code>
      */
     int getLength();
 
@@ -36244,7 +37126,7 @@ public final class ATCommand {
      *oa
      * </pre>
      *
-     * <code>optional string originatingAddress = 18;</code>
+     * <code>optional string originatingAddress = 21;</code>
      */
     java.lang.String getOriginatingAddress();
     /**
@@ -36252,13 +37134,13 @@ public final class ATCommand {
      *oa
      * </pre>
      *
-     * <code>optional string originatingAddress = 18;</code>
+     * <code>optional string originatingAddress = 21;</code>
      */
     com.google.protobuf.ByteString
         getOriginatingAddressBytes();
 
     /**
-     * <code>optional int32 pdu = 19;</code>
+     * <code>optional int32 pdu = 22;</code>
      */
     int getPdu();
 
@@ -36267,7 +37149,7 @@ public final class ATCommand {
      *scts
      * </pre>
      *
-     * <code>optional string serviceCenterTimeStamp = 20;</code>
+     * <code>optional string serviceCenterTimeStamp = 23;</code>
      */
     java.lang.String getServiceCenterTimeStamp();
     /**
@@ -36275,7 +37157,7 @@ public final class ATCommand {
      *scts
      * </pre>
      *
-     * <code>optional string serviceCenterTimeStamp = 20;</code>
+     * <code>optional string serviceCenterTimeStamp = 23;</code>
      */
     com.google.protobuf.ByteString
         getServiceCenterTimeStampBytes();
@@ -36285,7 +37167,7 @@ public final class ATCommand {
      *toda
      * </pre>
      *
-     * <code>optional int32 TPDestinationAddress = 21;</code>
+     * <code>optional int32 TPDestinationAddress = 24;</code>
      */
     int getTPDestinationAddress();
 
@@ -36294,12 +37176,12 @@ public final class ATCommand {
      *tooa
      * </pre>
      *
-     * <code>optional int32 TPOriginatingAddress = 22;</code>
+     * <code>optional int32 TPOriginatingAddress = 25;</code>
      */
     int getTPOriginatingAddress();
 
     /**
-     * <code>optional int32 fo = 23;</code>
+     * <code>optional int32 fo = 26;</code>
      */
     int getFo();
 
@@ -36308,7 +37190,7 @@ public final class ATCommand {
      *mid
      * </pre>
      *
-     * <code>optional int32 messageIdentifier = 24;</code>
+     * <code>optional int32 messageIdentifier = 27;</code>
      */
     int getMessageIdentifier();
 
@@ -36317,16 +37199,16 @@ public final class ATCommand {
      *pid
      * </pre>
      *
-     * <code>optional int32 protocolIdentifier = 25;</code>
+     * <code>optional int32 protocolIdentifier = 28;</code>
      */
     int getProtocolIdentifier();
 
     /**
-     * <code>optional string stat = 26;</code>
+     * <code>optional string stat = 29;</code>
      */
     java.lang.String getStat();
     /**
-     * <code>optional string stat = 26;</code>
+     * <code>optional string stat = 29;</code>
      */
     com.google.protobuf.ByteString
         getStatBytes();
@@ -36336,30 +37218,21 @@ public final class ATCommand {
      *vp
      * </pre>
      *
-     * <code>optional string validityPeriod = 27;</code>
+     * <code>optional int32 validityPeriod = 30;</code>
      */
-    java.lang.String getValidityPeriod();
-    /**
-     * <pre>
-     *vp
-     * </pre>
-     *
-     * <code>optional string validityPeriod = 27;</code>
-     */
-    com.google.protobuf.ByteString
-        getValidityPeriodBytes();
+    int getValidityPeriod();
 
     /**
      * <pre>
      *mr
      * </pre>
      *
-     * <code>optional int32 messageReference = 28;</code>
+     * <code>optional int32 messageReference = 31;</code>
      */
     int getMessageReference();
 
     /**
-     * <code>optional int32 ackpdu = 29;</code>
+     * <code>optional int32 ackpdu = 32;</code>
      */
     int getAckpdu();
 
@@ -36368,7 +37241,7 @@ public final class ATCommand {
      *ct
      * </pre>
      *
-     * <code>optional int32 commandType = 30;</code>
+     * <code>optional int32 commandType = 33;</code>
      */
     int getCommandType();
 
@@ -36377,22 +37250,22 @@ public final class ATCommand {
      *mn
      * </pre>
      *
-     * <code>optional int32 messageNumber = 31;</code>
+     * <code>optional int32 messageNumber = 34;</code>
      */
     int getMessageNumber();
 
     /**
-     * <code>optional int32 ds = 32;</code>
+     * <code>optional int32 ds = 35;</code>
      */
     int getDs();
 
     /**
-     * <code>optional int32 buffer = 33;</code>
+     * <code>optional int32 buffer = 36;</code>
      */
     int getBuffer();
 
     /**
-     * <code>optional int32 profile = 34;</code>
+     * <code>optional int32 profile = 37;</code>
      */
     int getProfile();
 
@@ -36401,7 +37274,7 @@ public final class ATCommand {
      *mids
      * </pre>
      *
-     * <code>optional string messageIdentifiers = 35;</code>
+     * <code>optional string messageIdentifiers = 38;</code>
      */
     java.lang.String getMessageIdentifiers();
     /**
@@ -36409,23 +37282,23 @@ public final class ATCommand {
      *mids
      * </pre>
      *
-     * <code>optional string messageIdentifiers = 35;</code>
+     * <code>optional string messageIdentifiers = 38;</code>
      */
     com.google.protobuf.ByteString
         getMessageIdentifiersBytes();
 
     /**
-     * <code>optional string dcss = 36;</code>
+     * <code>optional string dcss = 39;</code>
      */
     java.lang.String getDcss();
     /**
-     * <code>optional string dcss = 36;</code>
+     * <code>optional string dcss = 39;</code>
      */
     com.google.protobuf.ByteString
         getDcssBytes();
 
     /**
-     * <code>optional int32 show = 37;</code>
+     * <code>optional int32 show = 40;</code>
      */
     int getShow();
 
@@ -36434,22 +37307,22 @@ public final class ATCommand {
      *dcs
      * </pre>
      *
-     * <code>optional int32 dataCodinScheme = 38;</code>
+     * <code>optional int32 dataCodinScheme = 41;</code>
      */
     int getDataCodinScheme();
 
     /**
-     * <code>optional string type = 39;</code>
+     * <code>optional string type = 42;</code>
      */
     java.lang.String getType();
     /**
-     * <code>optional string type = 39;</code>
+     * <code>optional string type = 42;</code>
      */
     com.google.protobuf.ByteString
         getTypeBytes();
 
     /**
-     * <code>optional int32 status = 40;</code>
+     * <code>optional int32 status = 43;</code>
      */
     int getStatus();
 
@@ -36458,7 +37331,7 @@ public final class ATCommand {
      *fo
      * </pre>
      *
-     * <code>optional int32 firstOctet = 41;</code>
+     * <code>optional int32 firstOctet = 44;</code>
      */
     int getFirstOctet();
   }
@@ -36475,6 +37348,9 @@ public final class ATCommand {
     }
     private SMSCommand() {
       messsageType_ = 0;
+      test_ = false;
+      read_ = false;
+      execution_ = false;
       service_ = 0;
       mobileTerminatedMessage_ = 0;
       mobileOrientedMessage_ = 0;
@@ -36500,7 +37376,7 @@ public final class ATCommand {
       messageIdentifier_ = 0;
       protocolIdentifier_ = 0;
       stat_ = "";
-      validityPeriod_ = "";
+      validityPeriod_ = 0;
       messageReference_ = 0;
       ackpdu_ = 0;
       commandType_ = 0;
@@ -36551,213 +37427,227 @@ public final class ATCommand {
             }
             case 16: {
 
-              service_ = input.readInt32();
+              test_ = input.readBool();
               break;
             }
             case 24: {
 
-              mobileTerminatedMessage_ = input.readInt32();
+              read_ = input.readBool();
               break;
             }
             case 32: {
 
-              mobileOrientedMessage_ = input.readInt32();
+              execution_ = input.readBool();
               break;
             }
             case 40: {
 
-              broadcastTypeMessage_ = input.readInt32();
+              service_ = input.readInt32();
               break;
             }
             case 48: {
 
-              mode_ = input.readInt32();
+              mobileTerminatedMessage_ = input.readInt32();
               break;
             }
-            case 58: {
-              java.lang.String s = input.readStringRequireUtf8();
+            case 56: {
 
-              sCAddress_ = s;
+              mobileOrientedMessage_ = input.readInt32();
               break;
             }
             case 64: {
 
-              toSCAddress_ = input.readInt32();
+              broadcastTypeMessage_ = input.readInt32();
               break;
             }
-            case 74: {
-              java.lang.String s = input.readStringRequireUtf8();
+            case 72: {
 
-              mem1_ = s;
+              mode_ = input.readInt32();
               break;
             }
             case 82: {
               java.lang.String s = input.readStringRequireUtf8();
 
-              mem2_ = s;
+              sCAddress_ = s;
               break;
             }
-            case 90: {
+            case 88: {
+
+              toSCAddress_ = input.readInt32();
+              break;
+            }
+            case 98: {
               java.lang.String s = input.readStringRequireUtf8();
 
-              mem3_ = s;
+              mem1_ = s;
               break;
             }
-            case 96: {
+            case 106: {
+              java.lang.String s = input.readStringRequireUtf8();
 
-              index_ = input.readInt32();
-              break;
-            }
-            case 104: {
-
-              delflag_ = input.readInt32();
+              mem2_ = s;
               break;
             }
             case 114: {
               java.lang.String s = input.readStringRequireUtf8();
 
-              alpha_ = s;
+              mem3_ = s;
               break;
             }
-            case 122: {
+            case 120: {
+
+              index_ = input.readInt32();
+              break;
+            }
+            case 128: {
+
+              delflag_ = input.readInt32();
+              break;
+            }
+            case 138: {
               java.lang.String s = input.readStringRequireUtf8();
 
-              destinationAddress_ = s;
-              break;
-            }
-            case 130: {
-
-              data_ = input.readBytes();
-              break;
-            }
-            case 136: {
-
-              length_ = input.readInt32();
+              alpha_ = s;
               break;
             }
             case 146: {
               java.lang.String s = input.readStringRequireUtf8();
 
+              destinationAddress_ = s;
+              break;
+            }
+            case 154: {
+
+              data_ = input.readBytes();
+              break;
+            }
+            case 160: {
+
+              length_ = input.readInt32();
+              break;
+            }
+            case 170: {
+              java.lang.String s = input.readStringRequireUtf8();
+
               originatingAddress_ = s;
               break;
             }
-            case 152: {
+            case 176: {
 
               pdu_ = input.readInt32();
               break;
             }
-            case 162: {
+            case 186: {
               java.lang.String s = input.readStringRequireUtf8();
 
               serviceCenterTimeStamp_ = s;
               break;
             }
-            case 168: {
+            case 192: {
 
               tPDestinationAddress_ = input.readInt32();
               break;
             }
-            case 176: {
+            case 200: {
 
               tPOriginatingAddress_ = input.readInt32();
               break;
             }
-            case 184: {
+            case 208: {
 
               fo_ = input.readInt32();
               break;
             }
-            case 192: {
+            case 216: {
 
               messageIdentifier_ = input.readInt32();
               break;
             }
-            case 200: {
+            case 224: {
 
               protocolIdentifier_ = input.readInt32();
               break;
             }
-            case 210: {
+            case 234: {
               java.lang.String s = input.readStringRequireUtf8();
 
               stat_ = s;
               break;
             }
-            case 218: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              validityPeriod_ = s;
-              break;
-            }
-            case 224: {
-
-              messageReference_ = input.readInt32();
-              break;
-            }
-            case 232: {
-
-              ackpdu_ = input.readInt32();
-              break;
-            }
             case 240: {
 
-              commandType_ = input.readInt32();
+              validityPeriod_ = input.readInt32();
               break;
             }
             case 248: {
 
-              messageNumber_ = input.readInt32();
+              messageReference_ = input.readInt32();
               break;
             }
             case 256: {
 
-              ds_ = input.readInt32();
+              ackpdu_ = input.readInt32();
               break;
             }
             case 264: {
 
-              buffer_ = input.readInt32();
+              commandType_ = input.readInt32();
               break;
             }
             case 272: {
 
+              messageNumber_ = input.readInt32();
+              break;
+            }
+            case 280: {
+
+              ds_ = input.readInt32();
+              break;
+            }
+            case 288: {
+
+              buffer_ = input.readInt32();
+              break;
+            }
+            case 296: {
+
               profile_ = input.readInt32();
               break;
             }
-            case 282: {
+            case 306: {
               java.lang.String s = input.readStringRequireUtf8();
 
               messageIdentifiers_ = s;
               break;
             }
-            case 290: {
+            case 314: {
               java.lang.String s = input.readStringRequireUtf8();
 
               dcss_ = s;
               break;
             }
-            case 296: {
+            case 320: {
 
               show_ = input.readInt32();
               break;
             }
-            case 304: {
+            case 328: {
 
               dataCodinScheme_ = input.readInt32();
               break;
             }
-            case 314: {
+            case 338: {
               java.lang.String s = input.readStringRequireUtf8();
 
               type_ = s;
               break;
             }
-            case 320: {
+            case 344: {
 
               status_ = input.readInt32();
               break;
             }
-            case 328: {
+            case 352: {
 
               firstOctet_ = input.readInt32();
               break;
@@ -36801,71 +37691,98 @@ public final class ATCommand {
       return result == null ? com.rtrk.atcommands.ATCommand.SMSMessageType.UNRECOGNIZED : result;
     }
 
-    public static final int SERVICE_FIELD_NUMBER = 2;
+    public static final int TEST_FIELD_NUMBER = 2;
+    private boolean test_;
+    /**
+     * <code>optional bool test = 2;</code>
+     */
+    public boolean getTest() {
+      return test_;
+    }
+
+    public static final int READ_FIELD_NUMBER = 3;
+    private boolean read_;
+    /**
+     * <code>optional bool read = 3;</code>
+     */
+    public boolean getRead() {
+      return read_;
+    }
+
+    public static final int EXECUTION_FIELD_NUMBER = 4;
+    private boolean execution_;
+    /**
+     * <code>optional bool execution = 4;</code>
+     */
+    public boolean getExecution() {
+      return execution_;
+    }
+
+    public static final int SERVICE_FIELD_NUMBER = 5;
     private int service_;
     /**
-     * <code>optional int32 service = 2;</code>
+     * <code>optional int32 service = 5;</code>
      */
     public int getService() {
       return service_;
     }
 
-    public static final int MOBILETERMINATEDMESSAGE_FIELD_NUMBER = 3;
+    public static final int MOBILETERMINATEDMESSAGE_FIELD_NUMBER = 6;
     private int mobileTerminatedMessage_;
     /**
      * <pre>
      *mt
      * </pre>
      *
-     * <code>optional int32 mobileTerminatedMessage = 3;</code>
+     * <code>optional int32 mobileTerminatedMessage = 6;</code>
      */
     public int getMobileTerminatedMessage() {
       return mobileTerminatedMessage_;
     }
 
-    public static final int MOBILEORIENTEDMESSAGE_FIELD_NUMBER = 4;
+    public static final int MOBILEORIENTEDMESSAGE_FIELD_NUMBER = 7;
     private int mobileOrientedMessage_;
     /**
      * <pre>
      *mo
      * </pre>
      *
-     * <code>optional int32 mobileOrientedMessage = 4;</code>
+     * <code>optional int32 mobileOrientedMessage = 7;</code>
      */
     public int getMobileOrientedMessage() {
       return mobileOrientedMessage_;
     }
 
-    public static final int BROADCASTTYPEMESSAGE_FIELD_NUMBER = 5;
+    public static final int BROADCASTTYPEMESSAGE_FIELD_NUMBER = 8;
     private int broadcastTypeMessage_;
     /**
      * <pre>
      *bm
      * </pre>
      *
-     * <code>optional int32 broadcastTypeMessage = 5;</code>
+     * <code>optional int32 broadcastTypeMessage = 8;</code>
      */
     public int getBroadcastTypeMessage() {
       return broadcastTypeMessage_;
     }
 
-    public static final int MODE_FIELD_NUMBER = 6;
+    public static final int MODE_FIELD_NUMBER = 9;
     private int mode_;
     /**
-     * <code>optional int32 mode = 6;</code>
+     * <code>optional int32 mode = 9;</code>
      */
     public int getMode() {
       return mode_;
     }
 
-    public static final int SCADDRESS_FIELD_NUMBER = 7;
+    public static final int SCADDRESS_FIELD_NUMBER = 10;
     private volatile java.lang.Object sCAddress_;
     /**
      * <pre>
      *sca
      * </pre>
      *
-     * <code>optional string SCAddress = 7;</code>
+     * <code>optional string SCAddress = 10;</code>
      */
     public java.lang.String getSCAddress() {
       java.lang.Object ref = sCAddress_;
@@ -36884,7 +37801,7 @@ public final class ATCommand {
      *sca
      * </pre>
      *
-     * <code>optional string SCAddress = 7;</code>
+     * <code>optional string SCAddress = 10;</code>
      */
     public com.google.protobuf.ByteString
         getSCAddressBytes() {
@@ -36900,23 +37817,23 @@ public final class ATCommand {
       }
     }
 
-    public static final int TOSCADDRESS_FIELD_NUMBER = 8;
+    public static final int TOSCADDRESS_FIELD_NUMBER = 11;
     private int toSCAddress_;
     /**
      * <pre>
      *tosca
      * </pre>
      *
-     * <code>optional int32 toSCAddress = 8;</code>
+     * <code>optional int32 toSCAddress = 11;</code>
      */
     public int getToSCAddress() {
       return toSCAddress_;
     }
 
-    public static final int MEM1_FIELD_NUMBER = 9;
+    public static final int MEM1_FIELD_NUMBER = 12;
     private volatile java.lang.Object mem1_;
     /**
-     * <code>optional string mem1 = 9;</code>
+     * <code>optional string mem1 = 12;</code>
      */
     public java.lang.String getMem1() {
       java.lang.Object ref = mem1_;
@@ -36931,7 +37848,7 @@ public final class ATCommand {
       }
     }
     /**
-     * <code>optional string mem1 = 9;</code>
+     * <code>optional string mem1 = 12;</code>
      */
     public com.google.protobuf.ByteString
         getMem1Bytes() {
@@ -36947,10 +37864,10 @@ public final class ATCommand {
       }
     }
 
-    public static final int MEM2_FIELD_NUMBER = 10;
+    public static final int MEM2_FIELD_NUMBER = 13;
     private volatile java.lang.Object mem2_;
     /**
-     * <code>optional string mem2 = 10;</code>
+     * <code>optional string mem2 = 13;</code>
      */
     public java.lang.String getMem2() {
       java.lang.Object ref = mem2_;
@@ -36965,7 +37882,7 @@ public final class ATCommand {
       }
     }
     /**
-     * <code>optional string mem2 = 10;</code>
+     * <code>optional string mem2 = 13;</code>
      */
     public com.google.protobuf.ByteString
         getMem2Bytes() {
@@ -36981,10 +37898,10 @@ public final class ATCommand {
       }
     }
 
-    public static final int MEM3_FIELD_NUMBER = 11;
+    public static final int MEM3_FIELD_NUMBER = 14;
     private volatile java.lang.Object mem3_;
     /**
-     * <code>optional string mem3 = 11;</code>
+     * <code>optional string mem3 = 14;</code>
      */
     public java.lang.String getMem3() {
       java.lang.Object ref = mem3_;
@@ -36999,7 +37916,7 @@ public final class ATCommand {
       }
     }
     /**
-     * <code>optional string mem3 = 11;</code>
+     * <code>optional string mem3 = 14;</code>
      */
     public com.google.protobuf.ByteString
         getMem3Bytes() {
@@ -37015,28 +37932,28 @@ public final class ATCommand {
       }
     }
 
-    public static final int INDEX_FIELD_NUMBER = 12;
+    public static final int INDEX_FIELD_NUMBER = 15;
     private int index_;
     /**
-     * <code>optional int32 index = 12;</code>
+     * <code>optional int32 index = 15;</code>
      */
     public int getIndex() {
       return index_;
     }
 
-    public static final int DELFLAG_FIELD_NUMBER = 13;
+    public static final int DELFLAG_FIELD_NUMBER = 16;
     private int delflag_;
     /**
-     * <code>optional int32 delflag = 13;</code>
+     * <code>optional int32 delflag = 16;</code>
      */
     public int getDelflag() {
       return delflag_;
     }
 
-    public static final int ALPHA_FIELD_NUMBER = 14;
+    public static final int ALPHA_FIELD_NUMBER = 17;
     private volatile java.lang.Object alpha_;
     /**
-     * <code>optional string alpha = 14;</code>
+     * <code>optional string alpha = 17;</code>
      */
     public java.lang.String getAlpha() {
       java.lang.Object ref = alpha_;
@@ -37051,7 +37968,7 @@ public final class ATCommand {
       }
     }
     /**
-     * <code>optional string alpha = 14;</code>
+     * <code>optional string alpha = 17;</code>
      */
     public com.google.protobuf.ByteString
         getAlphaBytes() {
@@ -37067,14 +37984,14 @@ public final class ATCommand {
       }
     }
 
-    public static final int DESTINATIONADDRESS_FIELD_NUMBER = 15;
+    public static final int DESTINATIONADDRESS_FIELD_NUMBER = 18;
     private volatile java.lang.Object destinationAddress_;
     /**
      * <pre>
      *da
      * </pre>
      *
-     * <code>optional string destinationAddress = 15;</code>
+     * <code>optional string destinationAddress = 18;</code>
      */
     public java.lang.String getDestinationAddress() {
       java.lang.Object ref = destinationAddress_;
@@ -37093,7 +38010,7 @@ public final class ATCommand {
      *da
      * </pre>
      *
-     * <code>optional string destinationAddress = 15;</code>
+     * <code>optional string destinationAddress = 18;</code>
      */
     public com.google.protobuf.ByteString
         getDestinationAddressBytes() {
@@ -37109,32 +38026,32 @@ public final class ATCommand {
       }
     }
 
-    public static final int DATA_FIELD_NUMBER = 16;
+    public static final int DATA_FIELD_NUMBER = 19;
     private com.google.protobuf.ByteString data_;
     /**
-     * <code>optional bytes data = 16;</code>
+     * <code>optional bytes data = 19;</code>
      */
     public com.google.protobuf.ByteString getData() {
       return data_;
     }
 
-    public static final int LENGTH_FIELD_NUMBER = 17;
+    public static final int LENGTH_FIELD_NUMBER = 20;
     private int length_;
     /**
-     * <code>optional int32 length = 17;</code>
+     * <code>optional int32 length = 20;</code>
      */
     public int getLength() {
       return length_;
     }
 
-    public static final int ORIGINATINGADDRESS_FIELD_NUMBER = 18;
+    public static final int ORIGINATINGADDRESS_FIELD_NUMBER = 21;
     private volatile java.lang.Object originatingAddress_;
     /**
      * <pre>
      *oa
      * </pre>
      *
-     * <code>optional string originatingAddress = 18;</code>
+     * <code>optional string originatingAddress = 21;</code>
      */
     public java.lang.String getOriginatingAddress() {
       java.lang.Object ref = originatingAddress_;
@@ -37153,7 +38070,7 @@ public final class ATCommand {
      *oa
      * </pre>
      *
-     * <code>optional string originatingAddress = 18;</code>
+     * <code>optional string originatingAddress = 21;</code>
      */
     public com.google.protobuf.ByteString
         getOriginatingAddressBytes() {
@@ -37169,23 +38086,23 @@ public final class ATCommand {
       }
     }
 
-    public static final int PDU_FIELD_NUMBER = 19;
+    public static final int PDU_FIELD_NUMBER = 22;
     private int pdu_;
     /**
-     * <code>optional int32 pdu = 19;</code>
+     * <code>optional int32 pdu = 22;</code>
      */
     public int getPdu() {
       return pdu_;
     }
 
-    public static final int SERVICECENTERTIMESTAMP_FIELD_NUMBER = 20;
+    public static final int SERVICECENTERTIMESTAMP_FIELD_NUMBER = 23;
     private volatile java.lang.Object serviceCenterTimeStamp_;
     /**
      * <pre>
      *scts
      * </pre>
      *
-     * <code>optional string serviceCenterTimeStamp = 20;</code>
+     * <code>optional string serviceCenterTimeStamp = 23;</code>
      */
     public java.lang.String getServiceCenterTimeStamp() {
       java.lang.Object ref = serviceCenterTimeStamp_;
@@ -37204,7 +38121,7 @@ public final class ATCommand {
      *scts
      * </pre>
      *
-     * <code>optional string serviceCenterTimeStamp = 20;</code>
+     * <code>optional string serviceCenterTimeStamp = 23;</code>
      */
     public com.google.protobuf.ByteString
         getServiceCenterTimeStampBytes() {
@@ -37220,71 +38137,71 @@ public final class ATCommand {
       }
     }
 
-    public static final int TPDESTINATIONADDRESS_FIELD_NUMBER = 21;
+    public static final int TPDESTINATIONADDRESS_FIELD_NUMBER = 24;
     private int tPDestinationAddress_;
     /**
      * <pre>
      *toda
      * </pre>
      *
-     * <code>optional int32 TPDestinationAddress = 21;</code>
+     * <code>optional int32 TPDestinationAddress = 24;</code>
      */
     public int getTPDestinationAddress() {
       return tPDestinationAddress_;
     }
 
-    public static final int TPORIGINATINGADDRESS_FIELD_NUMBER = 22;
+    public static final int TPORIGINATINGADDRESS_FIELD_NUMBER = 25;
     private int tPOriginatingAddress_;
     /**
      * <pre>
      *tooa
      * </pre>
      *
-     * <code>optional int32 TPOriginatingAddress = 22;</code>
+     * <code>optional int32 TPOriginatingAddress = 25;</code>
      */
     public int getTPOriginatingAddress() {
       return tPOriginatingAddress_;
     }
 
-    public static final int FO_FIELD_NUMBER = 23;
+    public static final int FO_FIELD_NUMBER = 26;
     private int fo_;
     /**
-     * <code>optional int32 fo = 23;</code>
+     * <code>optional int32 fo = 26;</code>
      */
     public int getFo() {
       return fo_;
     }
 
-    public static final int MESSAGEIDENTIFIER_FIELD_NUMBER = 24;
+    public static final int MESSAGEIDENTIFIER_FIELD_NUMBER = 27;
     private int messageIdentifier_;
     /**
      * <pre>
      *mid
      * </pre>
      *
-     * <code>optional int32 messageIdentifier = 24;</code>
+     * <code>optional int32 messageIdentifier = 27;</code>
      */
     public int getMessageIdentifier() {
       return messageIdentifier_;
     }
 
-    public static final int PROTOCOLIDENTIFIER_FIELD_NUMBER = 25;
+    public static final int PROTOCOLIDENTIFIER_FIELD_NUMBER = 28;
     private int protocolIdentifier_;
     /**
      * <pre>
      *pid
      * </pre>
      *
-     * <code>optional int32 protocolIdentifier = 25;</code>
+     * <code>optional int32 protocolIdentifier = 28;</code>
      */
     public int getProtocolIdentifier() {
       return protocolIdentifier_;
     }
 
-    public static final int STAT_FIELD_NUMBER = 26;
+    public static final int STAT_FIELD_NUMBER = 29;
     private volatile java.lang.Object stat_;
     /**
-     * <code>optional string stat = 26;</code>
+     * <code>optional string stat = 29;</code>
      */
     public java.lang.String getStat() {
       java.lang.Object ref = stat_;
@@ -37299,7 +38216,7 @@ public final class ATCommand {
       }
     }
     /**
-     * <code>optional string stat = 26;</code>
+     * <code>optional string stat = 29;</code>
      */
     public com.google.protobuf.ByteString
         getStatBytes() {
@@ -37315,131 +38232,102 @@ public final class ATCommand {
       }
     }
 
-    public static final int VALIDITYPERIOD_FIELD_NUMBER = 27;
-    private volatile java.lang.Object validityPeriod_;
+    public static final int VALIDITYPERIOD_FIELD_NUMBER = 30;
+    private int validityPeriod_;
     /**
      * <pre>
      *vp
      * </pre>
      *
-     * <code>optional string validityPeriod = 27;</code>
+     * <code>optional int32 validityPeriod = 30;</code>
      */
-    public java.lang.String getValidityPeriod() {
-      java.lang.Object ref = validityPeriod_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        validityPeriod_ = s;
-        return s;
-      }
-    }
-    /**
-     * <pre>
-     *vp
-     * </pre>
-     *
-     * <code>optional string validityPeriod = 27;</code>
-     */
-    public com.google.protobuf.ByteString
-        getValidityPeriodBytes() {
-      java.lang.Object ref = validityPeriod_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        validityPeriod_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+    public int getValidityPeriod() {
+      return validityPeriod_;
     }
 
-    public static final int MESSAGEREFERENCE_FIELD_NUMBER = 28;
+    public static final int MESSAGEREFERENCE_FIELD_NUMBER = 31;
     private int messageReference_;
     /**
      * <pre>
      *mr
      * </pre>
      *
-     * <code>optional int32 messageReference = 28;</code>
+     * <code>optional int32 messageReference = 31;</code>
      */
     public int getMessageReference() {
       return messageReference_;
     }
 
-    public static final int ACKPDU_FIELD_NUMBER = 29;
+    public static final int ACKPDU_FIELD_NUMBER = 32;
     private int ackpdu_;
     /**
-     * <code>optional int32 ackpdu = 29;</code>
+     * <code>optional int32 ackpdu = 32;</code>
      */
     public int getAckpdu() {
       return ackpdu_;
     }
 
-    public static final int COMMANDTYPE_FIELD_NUMBER = 30;
+    public static final int COMMANDTYPE_FIELD_NUMBER = 33;
     private int commandType_;
     /**
      * <pre>
      *ct
      * </pre>
      *
-     * <code>optional int32 commandType = 30;</code>
+     * <code>optional int32 commandType = 33;</code>
      */
     public int getCommandType() {
       return commandType_;
     }
 
-    public static final int MESSAGENUMBER_FIELD_NUMBER = 31;
+    public static final int MESSAGENUMBER_FIELD_NUMBER = 34;
     private int messageNumber_;
     /**
      * <pre>
      *mn
      * </pre>
      *
-     * <code>optional int32 messageNumber = 31;</code>
+     * <code>optional int32 messageNumber = 34;</code>
      */
     public int getMessageNumber() {
       return messageNumber_;
     }
 
-    public static final int DS_FIELD_NUMBER = 32;
+    public static final int DS_FIELD_NUMBER = 35;
     private int ds_;
     /**
-     * <code>optional int32 ds = 32;</code>
+     * <code>optional int32 ds = 35;</code>
      */
     public int getDs() {
       return ds_;
     }
 
-    public static final int BUFFER_FIELD_NUMBER = 33;
+    public static final int BUFFER_FIELD_NUMBER = 36;
     private int buffer_;
     /**
-     * <code>optional int32 buffer = 33;</code>
+     * <code>optional int32 buffer = 36;</code>
      */
     public int getBuffer() {
       return buffer_;
     }
 
-    public static final int PROFILE_FIELD_NUMBER = 34;
+    public static final int PROFILE_FIELD_NUMBER = 37;
     private int profile_;
     /**
-     * <code>optional int32 profile = 34;</code>
+     * <code>optional int32 profile = 37;</code>
      */
     public int getProfile() {
       return profile_;
     }
 
-    public static final int MESSAGEIDENTIFIERS_FIELD_NUMBER = 35;
+    public static final int MESSAGEIDENTIFIERS_FIELD_NUMBER = 38;
     private volatile java.lang.Object messageIdentifiers_;
     /**
      * <pre>
      *mids
      * </pre>
      *
-     * <code>optional string messageIdentifiers = 35;</code>
+     * <code>optional string messageIdentifiers = 38;</code>
      */
     public java.lang.String getMessageIdentifiers() {
       java.lang.Object ref = messageIdentifiers_;
@@ -37458,7 +38346,7 @@ public final class ATCommand {
      *mids
      * </pre>
      *
-     * <code>optional string messageIdentifiers = 35;</code>
+     * <code>optional string messageIdentifiers = 38;</code>
      */
     public com.google.protobuf.ByteString
         getMessageIdentifiersBytes() {
@@ -37474,10 +38362,10 @@ public final class ATCommand {
       }
     }
 
-    public static final int DCSS_FIELD_NUMBER = 36;
+    public static final int DCSS_FIELD_NUMBER = 39;
     private volatile java.lang.Object dcss_;
     /**
-     * <code>optional string dcss = 36;</code>
+     * <code>optional string dcss = 39;</code>
      */
     public java.lang.String getDcss() {
       java.lang.Object ref = dcss_;
@@ -37492,7 +38380,7 @@ public final class ATCommand {
       }
     }
     /**
-     * <code>optional string dcss = 36;</code>
+     * <code>optional string dcss = 39;</code>
      */
     public com.google.protobuf.ByteString
         getDcssBytes() {
@@ -37508,32 +38396,32 @@ public final class ATCommand {
       }
     }
 
-    public static final int SHOW_FIELD_NUMBER = 37;
+    public static final int SHOW_FIELD_NUMBER = 40;
     private int show_;
     /**
-     * <code>optional int32 show = 37;</code>
+     * <code>optional int32 show = 40;</code>
      */
     public int getShow() {
       return show_;
     }
 
-    public static final int DATACODINSCHEME_FIELD_NUMBER = 38;
+    public static final int DATACODINSCHEME_FIELD_NUMBER = 41;
     private int dataCodinScheme_;
     /**
      * <pre>
      *dcs
      * </pre>
      *
-     * <code>optional int32 dataCodinScheme = 38;</code>
+     * <code>optional int32 dataCodinScheme = 41;</code>
      */
     public int getDataCodinScheme() {
       return dataCodinScheme_;
     }
 
-    public static final int TYPE_FIELD_NUMBER = 39;
+    public static final int TYPE_FIELD_NUMBER = 42;
     private volatile java.lang.Object type_;
     /**
-     * <code>optional string type = 39;</code>
+     * <code>optional string type = 42;</code>
      */
     public java.lang.String getType() {
       java.lang.Object ref = type_;
@@ -37548,7 +38436,7 @@ public final class ATCommand {
       }
     }
     /**
-     * <code>optional string type = 39;</code>
+     * <code>optional string type = 42;</code>
      */
     public com.google.protobuf.ByteString
         getTypeBytes() {
@@ -37564,23 +38452,23 @@ public final class ATCommand {
       }
     }
 
-    public static final int STATUS_FIELD_NUMBER = 40;
+    public static final int STATUS_FIELD_NUMBER = 43;
     private int status_;
     /**
-     * <code>optional int32 status = 40;</code>
+     * <code>optional int32 status = 43;</code>
      */
     public int getStatus() {
       return status_;
     }
 
-    public static final int FIRSTOCTET_FIELD_NUMBER = 41;
+    public static final int FIRSTOCTET_FIELD_NUMBER = 44;
     private int firstOctet_;
     /**
      * <pre>
      *fo
      * </pre>
      *
-     * <code>optional int32 firstOctet = 41;</code>
+     * <code>optional int32 firstOctet = 44;</code>
      */
     public int getFirstOctet() {
       return firstOctet_;
@@ -37601,125 +38489,134 @@ public final class ATCommand {
       if (messsageType_ != com.rtrk.atcommands.ATCommand.SMSMessageType.SELECT_MESSAGE_SERVICE.getNumber()) {
         output.writeEnum(1, messsageType_);
       }
+      if (test_ != false) {
+        output.writeBool(2, test_);
+      }
+      if (read_ != false) {
+        output.writeBool(3, read_);
+      }
+      if (execution_ != false) {
+        output.writeBool(4, execution_);
+      }
       if (service_ != 0) {
-        output.writeInt32(2, service_);
+        output.writeInt32(5, service_);
       }
       if (mobileTerminatedMessage_ != 0) {
-        output.writeInt32(3, mobileTerminatedMessage_);
+        output.writeInt32(6, mobileTerminatedMessage_);
       }
       if (mobileOrientedMessage_ != 0) {
-        output.writeInt32(4, mobileOrientedMessage_);
+        output.writeInt32(7, mobileOrientedMessage_);
       }
       if (broadcastTypeMessage_ != 0) {
-        output.writeInt32(5, broadcastTypeMessage_);
+        output.writeInt32(8, broadcastTypeMessage_);
       }
       if (mode_ != 0) {
-        output.writeInt32(6, mode_);
+        output.writeInt32(9, mode_);
       }
       if (!getSCAddressBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 7, sCAddress_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 10, sCAddress_);
       }
       if (toSCAddress_ != 0) {
-        output.writeInt32(8, toSCAddress_);
+        output.writeInt32(11, toSCAddress_);
       }
       if (!getMem1Bytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 9, mem1_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 12, mem1_);
       }
       if (!getMem2Bytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 10, mem2_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 13, mem2_);
       }
       if (!getMem3Bytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 11, mem3_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 14, mem3_);
       }
       if (index_ != 0) {
-        output.writeInt32(12, index_);
+        output.writeInt32(15, index_);
       }
       if (delflag_ != 0) {
-        output.writeInt32(13, delflag_);
+        output.writeInt32(16, delflag_);
       }
       if (!getAlphaBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 14, alpha_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 17, alpha_);
       }
       if (!getDestinationAddressBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 15, destinationAddress_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 18, destinationAddress_);
       }
       if (!data_.isEmpty()) {
-        output.writeBytes(16, data_);
+        output.writeBytes(19, data_);
       }
       if (length_ != 0) {
-        output.writeInt32(17, length_);
+        output.writeInt32(20, length_);
       }
       if (!getOriginatingAddressBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 18, originatingAddress_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 21, originatingAddress_);
       }
       if (pdu_ != 0) {
-        output.writeInt32(19, pdu_);
+        output.writeInt32(22, pdu_);
       }
       if (!getServiceCenterTimeStampBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 20, serviceCenterTimeStamp_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 23, serviceCenterTimeStamp_);
       }
       if (tPDestinationAddress_ != 0) {
-        output.writeInt32(21, tPDestinationAddress_);
+        output.writeInt32(24, tPDestinationAddress_);
       }
       if (tPOriginatingAddress_ != 0) {
-        output.writeInt32(22, tPOriginatingAddress_);
+        output.writeInt32(25, tPOriginatingAddress_);
       }
       if (fo_ != 0) {
-        output.writeInt32(23, fo_);
+        output.writeInt32(26, fo_);
       }
       if (messageIdentifier_ != 0) {
-        output.writeInt32(24, messageIdentifier_);
+        output.writeInt32(27, messageIdentifier_);
       }
       if (protocolIdentifier_ != 0) {
-        output.writeInt32(25, protocolIdentifier_);
+        output.writeInt32(28, protocolIdentifier_);
       }
       if (!getStatBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 26, stat_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 29, stat_);
       }
-      if (!getValidityPeriodBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 27, validityPeriod_);
+      if (validityPeriod_ != 0) {
+        output.writeInt32(30, validityPeriod_);
       }
       if (messageReference_ != 0) {
-        output.writeInt32(28, messageReference_);
+        output.writeInt32(31, messageReference_);
       }
       if (ackpdu_ != 0) {
-        output.writeInt32(29, ackpdu_);
+        output.writeInt32(32, ackpdu_);
       }
       if (commandType_ != 0) {
-        output.writeInt32(30, commandType_);
+        output.writeInt32(33, commandType_);
       }
       if (messageNumber_ != 0) {
-        output.writeInt32(31, messageNumber_);
+        output.writeInt32(34, messageNumber_);
       }
       if (ds_ != 0) {
-        output.writeInt32(32, ds_);
+        output.writeInt32(35, ds_);
       }
       if (buffer_ != 0) {
-        output.writeInt32(33, buffer_);
+        output.writeInt32(36, buffer_);
       }
       if (profile_ != 0) {
-        output.writeInt32(34, profile_);
+        output.writeInt32(37, profile_);
       }
       if (!getMessageIdentifiersBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 35, messageIdentifiers_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 38, messageIdentifiers_);
       }
       if (!getDcssBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 36, dcss_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 39, dcss_);
       }
       if (show_ != 0) {
-        output.writeInt32(37, show_);
+        output.writeInt32(40, show_);
       }
       if (dataCodinScheme_ != 0) {
-        output.writeInt32(38, dataCodinScheme_);
+        output.writeInt32(41, dataCodinScheme_);
       }
       if (!getTypeBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 39, type_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 42, type_);
       }
       if (status_ != 0) {
-        output.writeInt32(40, status_);
+        output.writeInt32(43, status_);
       }
       if (firstOctet_ != 0) {
-        output.writeInt32(41, firstOctet_);
+        output.writeInt32(44, firstOctet_);
       }
     }
 
@@ -37732,152 +38629,165 @@ public final class ATCommand {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(1, messsageType_);
       }
+      if (test_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(2, test_);
+      }
+      if (read_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(3, read_);
+      }
+      if (execution_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(4, execution_);
+      }
       if (service_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(2, service_);
+          .computeInt32Size(5, service_);
       }
       if (mobileTerminatedMessage_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(3, mobileTerminatedMessage_);
+          .computeInt32Size(6, mobileTerminatedMessage_);
       }
       if (mobileOrientedMessage_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(4, mobileOrientedMessage_);
+          .computeInt32Size(7, mobileOrientedMessage_);
       }
       if (broadcastTypeMessage_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(5, broadcastTypeMessage_);
+          .computeInt32Size(8, broadcastTypeMessage_);
       }
       if (mode_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(6, mode_);
+          .computeInt32Size(9, mode_);
       }
       if (!getSCAddressBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, sCAddress_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(10, sCAddress_);
       }
       if (toSCAddress_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(8, toSCAddress_);
+          .computeInt32Size(11, toSCAddress_);
       }
       if (!getMem1Bytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, mem1_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(12, mem1_);
       }
       if (!getMem2Bytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(10, mem2_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(13, mem2_);
       }
       if (!getMem3Bytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(11, mem3_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(14, mem3_);
       }
       if (index_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(12, index_);
+          .computeInt32Size(15, index_);
       }
       if (delflag_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(13, delflag_);
+          .computeInt32Size(16, delflag_);
       }
       if (!getAlphaBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(14, alpha_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(17, alpha_);
       }
       if (!getDestinationAddressBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(15, destinationAddress_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(18, destinationAddress_);
       }
       if (!data_.isEmpty()) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(16, data_);
+          .computeBytesSize(19, data_);
       }
       if (length_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(17, length_);
+          .computeInt32Size(20, length_);
       }
       if (!getOriginatingAddressBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(18, originatingAddress_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(21, originatingAddress_);
       }
       if (pdu_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(19, pdu_);
+          .computeInt32Size(22, pdu_);
       }
       if (!getServiceCenterTimeStampBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(20, serviceCenterTimeStamp_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(23, serviceCenterTimeStamp_);
       }
       if (tPDestinationAddress_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(21, tPDestinationAddress_);
+          .computeInt32Size(24, tPDestinationAddress_);
       }
       if (tPOriginatingAddress_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(22, tPOriginatingAddress_);
+          .computeInt32Size(25, tPOriginatingAddress_);
       }
       if (fo_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(23, fo_);
+          .computeInt32Size(26, fo_);
       }
       if (messageIdentifier_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(24, messageIdentifier_);
+          .computeInt32Size(27, messageIdentifier_);
       }
       if (protocolIdentifier_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(25, protocolIdentifier_);
+          .computeInt32Size(28, protocolIdentifier_);
       }
       if (!getStatBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(26, stat_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(29, stat_);
       }
-      if (!getValidityPeriodBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(27, validityPeriod_);
+      if (validityPeriod_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(30, validityPeriod_);
       }
       if (messageReference_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(28, messageReference_);
+          .computeInt32Size(31, messageReference_);
       }
       if (ackpdu_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(29, ackpdu_);
+          .computeInt32Size(32, ackpdu_);
       }
       if (commandType_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(30, commandType_);
+          .computeInt32Size(33, commandType_);
       }
       if (messageNumber_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(31, messageNumber_);
+          .computeInt32Size(34, messageNumber_);
       }
       if (ds_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(32, ds_);
+          .computeInt32Size(35, ds_);
       }
       if (buffer_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(33, buffer_);
+          .computeInt32Size(36, buffer_);
       }
       if (profile_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(34, profile_);
+          .computeInt32Size(37, profile_);
       }
       if (!getMessageIdentifiersBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(35, messageIdentifiers_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(38, messageIdentifiers_);
       }
       if (!getDcssBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(36, dcss_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(39, dcss_);
       }
       if (show_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(37, show_);
+          .computeInt32Size(40, show_);
       }
       if (dataCodinScheme_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(38, dataCodinScheme_);
+          .computeInt32Size(41, dataCodinScheme_);
       }
       if (!getTypeBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(39, type_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(42, type_);
       }
       if (status_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(40, status_);
+          .computeInt32Size(43, status_);
       }
       if (firstOctet_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(41, firstOctet_);
+          .computeInt32Size(44, firstOctet_);
       }
       memoizedSize = size;
       return size;
@@ -37896,6 +38806,12 @@ public final class ATCommand {
 
       boolean result = true;
       result = result && messsageType_ == other.messsageType_;
+      result = result && (getTest()
+          == other.getTest());
+      result = result && (getRead()
+          == other.getRead());
+      result = result && (getExecution()
+          == other.getExecution());
       result = result && (getService()
           == other.getService());
       result = result && (getMobileTerminatedMessage()
@@ -37946,8 +38862,8 @@ public final class ATCommand {
           == other.getProtocolIdentifier());
       result = result && getStat()
           .equals(other.getStat());
-      result = result && getValidityPeriod()
-          .equals(other.getValidityPeriod());
+      result = result && (getValidityPeriod()
+          == other.getValidityPeriod());
       result = result && (getMessageReference()
           == other.getMessageReference());
       result = result && (getAckpdu()
@@ -37988,6 +38904,15 @@ public final class ATCommand {
       hash = (19 * hash) + getDescriptorForType().hashCode();
       hash = (37 * hash) + MESSSAGETYPE_FIELD_NUMBER;
       hash = (53 * hash) + messsageType_;
+      hash = (37 * hash) + TEST_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getTest());
+      hash = (37 * hash) + READ_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getRead());
+      hash = (37 * hash) + EXECUTION_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getExecution());
       hash = (37 * hash) + SERVICE_FIELD_NUMBER;
       hash = (53 * hash) + getService();
       hash = (37 * hash) + MOBILETERMINATEDMESSAGE_FIELD_NUMBER;
@@ -38039,7 +38964,7 @@ public final class ATCommand {
       hash = (37 * hash) + STAT_FIELD_NUMBER;
       hash = (53 * hash) + getStat().hashCode();
       hash = (37 * hash) + VALIDITYPERIOD_FIELD_NUMBER;
-      hash = (53 * hash) + getValidityPeriod().hashCode();
+      hash = (53 * hash) + getValidityPeriod();
       hash = (37 * hash) + MESSAGEREFERENCE_FIELD_NUMBER;
       hash = (53 * hash) + getMessageReference();
       hash = (37 * hash) + ACKPDU_FIELD_NUMBER;
@@ -38188,6 +39113,12 @@ public final class ATCommand {
         super.clear();
         messsageType_ = 0;
 
+        test_ = false;
+
+        read_ = false;
+
+        execution_ = false;
+
         service_ = 0;
 
         mobileTerminatedMessage_ = 0;
@@ -38238,7 +39169,7 @@ public final class ATCommand {
 
         stat_ = "";
 
-        validityPeriod_ = "";
+        validityPeriod_ = 0;
 
         messageReference_ = 0;
 
@@ -38291,6 +39222,9 @@ public final class ATCommand {
       public com.rtrk.atcommands.ATCommand.SMSCommand buildPartial() {
         com.rtrk.atcommands.ATCommand.SMSCommand result = new com.rtrk.atcommands.ATCommand.SMSCommand(this);
         result.messsageType_ = messsageType_;
+        result.test_ = test_;
+        result.read_ = read_;
+        result.execution_ = execution_;
         result.service_ = service_;
         result.mobileTerminatedMessage_ = mobileTerminatedMessage_;
         result.mobileOrientedMessage_ = mobileOrientedMessage_;
@@ -38374,6 +39308,15 @@ public final class ATCommand {
         if (other == com.rtrk.atcommands.ATCommand.SMSCommand.getDefaultInstance()) return this;
         if (other.messsageType_ != 0) {
           setMesssageTypeValue(other.getMesssageTypeValue());
+        }
+        if (other.getTest() != false) {
+          setTest(other.getTest());
+        }
+        if (other.getRead() != false) {
+          setRead(other.getRead());
+        }
+        if (other.getExecution() != false) {
+          setExecution(other.getExecution());
         }
         if (other.getService() != 0) {
           setService(other.getService());
@@ -38459,9 +39402,8 @@ public final class ATCommand {
           stat_ = other.stat_;
           onChanged();
         }
-        if (!other.getValidityPeriod().isEmpty()) {
-          validityPeriod_ = other.validityPeriod_;
-          onChanged();
+        if (other.getValidityPeriod() != 0) {
+          setValidityPeriod(other.getValidityPeriod());
         }
         if (other.getMessageReference() != 0) {
           setMessageReference(other.getMessageReference());
@@ -38578,15 +39520,93 @@ public final class ATCommand {
         return this;
       }
 
+      private boolean test_ ;
+      /**
+       * <code>optional bool test = 2;</code>
+       */
+      public boolean getTest() {
+        return test_;
+      }
+      /**
+       * <code>optional bool test = 2;</code>
+       */
+      public Builder setTest(boolean value) {
+        
+        test_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool test = 2;</code>
+       */
+      public Builder clearTest() {
+        
+        test_ = false;
+        onChanged();
+        return this;
+      }
+
+      private boolean read_ ;
+      /**
+       * <code>optional bool read = 3;</code>
+       */
+      public boolean getRead() {
+        return read_;
+      }
+      /**
+       * <code>optional bool read = 3;</code>
+       */
+      public Builder setRead(boolean value) {
+        
+        read_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool read = 3;</code>
+       */
+      public Builder clearRead() {
+        
+        read_ = false;
+        onChanged();
+        return this;
+      }
+
+      private boolean execution_ ;
+      /**
+       * <code>optional bool execution = 4;</code>
+       */
+      public boolean getExecution() {
+        return execution_;
+      }
+      /**
+       * <code>optional bool execution = 4;</code>
+       */
+      public Builder setExecution(boolean value) {
+        
+        execution_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool execution = 4;</code>
+       */
+      public Builder clearExecution() {
+        
+        execution_ = false;
+        onChanged();
+        return this;
+      }
+
       private int service_ ;
       /**
-       * <code>optional int32 service = 2;</code>
+       * <code>optional int32 service = 5;</code>
        */
       public int getService() {
         return service_;
       }
       /**
-       * <code>optional int32 service = 2;</code>
+       * <code>optional int32 service = 5;</code>
        */
       public Builder setService(int value) {
         
@@ -38595,7 +39615,7 @@ public final class ATCommand {
         return this;
       }
       /**
-       * <code>optional int32 service = 2;</code>
+       * <code>optional int32 service = 5;</code>
        */
       public Builder clearService() {
         
@@ -38610,7 +39630,7 @@ public final class ATCommand {
        *mt
        * </pre>
        *
-       * <code>optional int32 mobileTerminatedMessage = 3;</code>
+       * <code>optional int32 mobileTerminatedMessage = 6;</code>
        */
       public int getMobileTerminatedMessage() {
         return mobileTerminatedMessage_;
@@ -38620,7 +39640,7 @@ public final class ATCommand {
        *mt
        * </pre>
        *
-       * <code>optional int32 mobileTerminatedMessage = 3;</code>
+       * <code>optional int32 mobileTerminatedMessage = 6;</code>
        */
       public Builder setMobileTerminatedMessage(int value) {
         
@@ -38633,7 +39653,7 @@ public final class ATCommand {
        *mt
        * </pre>
        *
-       * <code>optional int32 mobileTerminatedMessage = 3;</code>
+       * <code>optional int32 mobileTerminatedMessage = 6;</code>
        */
       public Builder clearMobileTerminatedMessage() {
         
@@ -38648,7 +39668,7 @@ public final class ATCommand {
        *mo
        * </pre>
        *
-       * <code>optional int32 mobileOrientedMessage = 4;</code>
+       * <code>optional int32 mobileOrientedMessage = 7;</code>
        */
       public int getMobileOrientedMessage() {
         return mobileOrientedMessage_;
@@ -38658,7 +39678,7 @@ public final class ATCommand {
        *mo
        * </pre>
        *
-       * <code>optional int32 mobileOrientedMessage = 4;</code>
+       * <code>optional int32 mobileOrientedMessage = 7;</code>
        */
       public Builder setMobileOrientedMessage(int value) {
         
@@ -38671,7 +39691,7 @@ public final class ATCommand {
        *mo
        * </pre>
        *
-       * <code>optional int32 mobileOrientedMessage = 4;</code>
+       * <code>optional int32 mobileOrientedMessage = 7;</code>
        */
       public Builder clearMobileOrientedMessage() {
         
@@ -38686,7 +39706,7 @@ public final class ATCommand {
        *bm
        * </pre>
        *
-       * <code>optional int32 broadcastTypeMessage = 5;</code>
+       * <code>optional int32 broadcastTypeMessage = 8;</code>
        */
       public int getBroadcastTypeMessage() {
         return broadcastTypeMessage_;
@@ -38696,7 +39716,7 @@ public final class ATCommand {
        *bm
        * </pre>
        *
-       * <code>optional int32 broadcastTypeMessage = 5;</code>
+       * <code>optional int32 broadcastTypeMessage = 8;</code>
        */
       public Builder setBroadcastTypeMessage(int value) {
         
@@ -38709,7 +39729,7 @@ public final class ATCommand {
        *bm
        * </pre>
        *
-       * <code>optional int32 broadcastTypeMessage = 5;</code>
+       * <code>optional int32 broadcastTypeMessage = 8;</code>
        */
       public Builder clearBroadcastTypeMessage() {
         
@@ -38720,13 +39740,13 @@ public final class ATCommand {
 
       private int mode_ ;
       /**
-       * <code>optional int32 mode = 6;</code>
+       * <code>optional int32 mode = 9;</code>
        */
       public int getMode() {
         return mode_;
       }
       /**
-       * <code>optional int32 mode = 6;</code>
+       * <code>optional int32 mode = 9;</code>
        */
       public Builder setMode(int value) {
         
@@ -38735,7 +39755,7 @@ public final class ATCommand {
         return this;
       }
       /**
-       * <code>optional int32 mode = 6;</code>
+       * <code>optional int32 mode = 9;</code>
        */
       public Builder clearMode() {
         
@@ -38750,7 +39770,7 @@ public final class ATCommand {
        *sca
        * </pre>
        *
-       * <code>optional string SCAddress = 7;</code>
+       * <code>optional string SCAddress = 10;</code>
        */
       public java.lang.String getSCAddress() {
         java.lang.Object ref = sCAddress_;
@@ -38769,7 +39789,7 @@ public final class ATCommand {
        *sca
        * </pre>
        *
-       * <code>optional string SCAddress = 7;</code>
+       * <code>optional string SCAddress = 10;</code>
        */
       public com.google.protobuf.ByteString
           getSCAddressBytes() {
@@ -38789,7 +39809,7 @@ public final class ATCommand {
        *sca
        * </pre>
        *
-       * <code>optional string SCAddress = 7;</code>
+       * <code>optional string SCAddress = 10;</code>
        */
       public Builder setSCAddress(
           java.lang.String value) {
@@ -38806,7 +39826,7 @@ public final class ATCommand {
        *sca
        * </pre>
        *
-       * <code>optional string SCAddress = 7;</code>
+       * <code>optional string SCAddress = 10;</code>
        */
       public Builder clearSCAddress() {
         
@@ -38819,7 +39839,7 @@ public final class ATCommand {
        *sca
        * </pre>
        *
-       * <code>optional string SCAddress = 7;</code>
+       * <code>optional string SCAddress = 10;</code>
        */
       public Builder setSCAddressBytes(
           com.google.protobuf.ByteString value) {
@@ -38839,7 +39859,7 @@ public final class ATCommand {
        *tosca
        * </pre>
        *
-       * <code>optional int32 toSCAddress = 8;</code>
+       * <code>optional int32 toSCAddress = 11;</code>
        */
       public int getToSCAddress() {
         return toSCAddress_;
@@ -38849,7 +39869,7 @@ public final class ATCommand {
        *tosca
        * </pre>
        *
-       * <code>optional int32 toSCAddress = 8;</code>
+       * <code>optional int32 toSCAddress = 11;</code>
        */
       public Builder setToSCAddress(int value) {
         
@@ -38862,7 +39882,7 @@ public final class ATCommand {
        *tosca
        * </pre>
        *
-       * <code>optional int32 toSCAddress = 8;</code>
+       * <code>optional int32 toSCAddress = 11;</code>
        */
       public Builder clearToSCAddress() {
         
@@ -38873,7 +39893,7 @@ public final class ATCommand {
 
       private java.lang.Object mem1_ = "";
       /**
-       * <code>optional string mem1 = 9;</code>
+       * <code>optional string mem1 = 12;</code>
        */
       public java.lang.String getMem1() {
         java.lang.Object ref = mem1_;
@@ -38888,7 +39908,7 @@ public final class ATCommand {
         }
       }
       /**
-       * <code>optional string mem1 = 9;</code>
+       * <code>optional string mem1 = 12;</code>
        */
       public com.google.protobuf.ByteString
           getMem1Bytes() {
@@ -38904,7 +39924,7 @@ public final class ATCommand {
         }
       }
       /**
-       * <code>optional string mem1 = 9;</code>
+       * <code>optional string mem1 = 12;</code>
        */
       public Builder setMem1(
           java.lang.String value) {
@@ -38917,7 +39937,7 @@ public final class ATCommand {
         return this;
       }
       /**
-       * <code>optional string mem1 = 9;</code>
+       * <code>optional string mem1 = 12;</code>
        */
       public Builder clearMem1() {
         
@@ -38926,7 +39946,7 @@ public final class ATCommand {
         return this;
       }
       /**
-       * <code>optional string mem1 = 9;</code>
+       * <code>optional string mem1 = 12;</code>
        */
       public Builder setMem1Bytes(
           com.google.protobuf.ByteString value) {
@@ -38942,7 +39962,7 @@ public final class ATCommand {
 
       private java.lang.Object mem2_ = "";
       /**
-       * <code>optional string mem2 = 10;</code>
+       * <code>optional string mem2 = 13;</code>
        */
       public java.lang.String getMem2() {
         java.lang.Object ref = mem2_;
@@ -38957,7 +39977,7 @@ public final class ATCommand {
         }
       }
       /**
-       * <code>optional string mem2 = 10;</code>
+       * <code>optional string mem2 = 13;</code>
        */
       public com.google.protobuf.ByteString
           getMem2Bytes() {
@@ -38973,7 +39993,7 @@ public final class ATCommand {
         }
       }
       /**
-       * <code>optional string mem2 = 10;</code>
+       * <code>optional string mem2 = 13;</code>
        */
       public Builder setMem2(
           java.lang.String value) {
@@ -38986,7 +40006,7 @@ public final class ATCommand {
         return this;
       }
       /**
-       * <code>optional string mem2 = 10;</code>
+       * <code>optional string mem2 = 13;</code>
        */
       public Builder clearMem2() {
         
@@ -38995,7 +40015,7 @@ public final class ATCommand {
         return this;
       }
       /**
-       * <code>optional string mem2 = 10;</code>
+       * <code>optional string mem2 = 13;</code>
        */
       public Builder setMem2Bytes(
           com.google.protobuf.ByteString value) {
@@ -39011,7 +40031,7 @@ public final class ATCommand {
 
       private java.lang.Object mem3_ = "";
       /**
-       * <code>optional string mem3 = 11;</code>
+       * <code>optional string mem3 = 14;</code>
        */
       public java.lang.String getMem3() {
         java.lang.Object ref = mem3_;
@@ -39026,7 +40046,7 @@ public final class ATCommand {
         }
       }
       /**
-       * <code>optional string mem3 = 11;</code>
+       * <code>optional string mem3 = 14;</code>
        */
       public com.google.protobuf.ByteString
           getMem3Bytes() {
@@ -39042,7 +40062,7 @@ public final class ATCommand {
         }
       }
       /**
-       * <code>optional string mem3 = 11;</code>
+       * <code>optional string mem3 = 14;</code>
        */
       public Builder setMem3(
           java.lang.String value) {
@@ -39055,7 +40075,7 @@ public final class ATCommand {
         return this;
       }
       /**
-       * <code>optional string mem3 = 11;</code>
+       * <code>optional string mem3 = 14;</code>
        */
       public Builder clearMem3() {
         
@@ -39064,7 +40084,7 @@ public final class ATCommand {
         return this;
       }
       /**
-       * <code>optional string mem3 = 11;</code>
+       * <code>optional string mem3 = 14;</code>
        */
       public Builder setMem3Bytes(
           com.google.protobuf.ByteString value) {
@@ -39080,13 +40100,13 @@ public final class ATCommand {
 
       private int index_ ;
       /**
-       * <code>optional int32 index = 12;</code>
+       * <code>optional int32 index = 15;</code>
        */
       public int getIndex() {
         return index_;
       }
       /**
-       * <code>optional int32 index = 12;</code>
+       * <code>optional int32 index = 15;</code>
        */
       public Builder setIndex(int value) {
         
@@ -39095,7 +40115,7 @@ public final class ATCommand {
         return this;
       }
       /**
-       * <code>optional int32 index = 12;</code>
+       * <code>optional int32 index = 15;</code>
        */
       public Builder clearIndex() {
         
@@ -39106,13 +40126,13 @@ public final class ATCommand {
 
       private int delflag_ ;
       /**
-       * <code>optional int32 delflag = 13;</code>
+       * <code>optional int32 delflag = 16;</code>
        */
       public int getDelflag() {
         return delflag_;
       }
       /**
-       * <code>optional int32 delflag = 13;</code>
+       * <code>optional int32 delflag = 16;</code>
        */
       public Builder setDelflag(int value) {
         
@@ -39121,7 +40141,7 @@ public final class ATCommand {
         return this;
       }
       /**
-       * <code>optional int32 delflag = 13;</code>
+       * <code>optional int32 delflag = 16;</code>
        */
       public Builder clearDelflag() {
         
@@ -39132,7 +40152,7 @@ public final class ATCommand {
 
       private java.lang.Object alpha_ = "";
       /**
-       * <code>optional string alpha = 14;</code>
+       * <code>optional string alpha = 17;</code>
        */
       public java.lang.String getAlpha() {
         java.lang.Object ref = alpha_;
@@ -39147,7 +40167,7 @@ public final class ATCommand {
         }
       }
       /**
-       * <code>optional string alpha = 14;</code>
+       * <code>optional string alpha = 17;</code>
        */
       public com.google.protobuf.ByteString
           getAlphaBytes() {
@@ -39163,7 +40183,7 @@ public final class ATCommand {
         }
       }
       /**
-       * <code>optional string alpha = 14;</code>
+       * <code>optional string alpha = 17;</code>
        */
       public Builder setAlpha(
           java.lang.String value) {
@@ -39176,7 +40196,7 @@ public final class ATCommand {
         return this;
       }
       /**
-       * <code>optional string alpha = 14;</code>
+       * <code>optional string alpha = 17;</code>
        */
       public Builder clearAlpha() {
         
@@ -39185,7 +40205,7 @@ public final class ATCommand {
         return this;
       }
       /**
-       * <code>optional string alpha = 14;</code>
+       * <code>optional string alpha = 17;</code>
        */
       public Builder setAlphaBytes(
           com.google.protobuf.ByteString value) {
@@ -39205,7 +40225,7 @@ public final class ATCommand {
        *da
        * </pre>
        *
-       * <code>optional string destinationAddress = 15;</code>
+       * <code>optional string destinationAddress = 18;</code>
        */
       public java.lang.String getDestinationAddress() {
         java.lang.Object ref = destinationAddress_;
@@ -39224,7 +40244,7 @@ public final class ATCommand {
        *da
        * </pre>
        *
-       * <code>optional string destinationAddress = 15;</code>
+       * <code>optional string destinationAddress = 18;</code>
        */
       public com.google.protobuf.ByteString
           getDestinationAddressBytes() {
@@ -39244,7 +40264,7 @@ public final class ATCommand {
        *da
        * </pre>
        *
-       * <code>optional string destinationAddress = 15;</code>
+       * <code>optional string destinationAddress = 18;</code>
        */
       public Builder setDestinationAddress(
           java.lang.String value) {
@@ -39261,7 +40281,7 @@ public final class ATCommand {
        *da
        * </pre>
        *
-       * <code>optional string destinationAddress = 15;</code>
+       * <code>optional string destinationAddress = 18;</code>
        */
       public Builder clearDestinationAddress() {
         
@@ -39274,7 +40294,7 @@ public final class ATCommand {
        *da
        * </pre>
        *
-       * <code>optional string destinationAddress = 15;</code>
+       * <code>optional string destinationAddress = 18;</code>
        */
       public Builder setDestinationAddressBytes(
           com.google.protobuf.ByteString value) {
@@ -39290,13 +40310,13 @@ public final class ATCommand {
 
       private com.google.protobuf.ByteString data_ = com.google.protobuf.ByteString.EMPTY;
       /**
-       * <code>optional bytes data = 16;</code>
+       * <code>optional bytes data = 19;</code>
        */
       public com.google.protobuf.ByteString getData() {
         return data_;
       }
       /**
-       * <code>optional bytes data = 16;</code>
+       * <code>optional bytes data = 19;</code>
        */
       public Builder setData(com.google.protobuf.ByteString value) {
         if (value == null) {
@@ -39308,7 +40328,7 @@ public final class ATCommand {
         return this;
       }
       /**
-       * <code>optional bytes data = 16;</code>
+       * <code>optional bytes data = 19;</code>
        */
       public Builder clearData() {
         
@@ -39319,13 +40339,13 @@ public final class ATCommand {
 
       private int length_ ;
       /**
-       * <code>optional int32 length = 17;</code>
+       * <code>optional int32 length = 20;</code>
        */
       public int getLength() {
         return length_;
       }
       /**
-       * <code>optional int32 length = 17;</code>
+       * <code>optional int32 length = 20;</code>
        */
       public Builder setLength(int value) {
         
@@ -39334,7 +40354,7 @@ public final class ATCommand {
         return this;
       }
       /**
-       * <code>optional int32 length = 17;</code>
+       * <code>optional int32 length = 20;</code>
        */
       public Builder clearLength() {
         
@@ -39349,7 +40369,7 @@ public final class ATCommand {
        *oa
        * </pre>
        *
-       * <code>optional string originatingAddress = 18;</code>
+       * <code>optional string originatingAddress = 21;</code>
        */
       public java.lang.String getOriginatingAddress() {
         java.lang.Object ref = originatingAddress_;
@@ -39368,7 +40388,7 @@ public final class ATCommand {
        *oa
        * </pre>
        *
-       * <code>optional string originatingAddress = 18;</code>
+       * <code>optional string originatingAddress = 21;</code>
        */
       public com.google.protobuf.ByteString
           getOriginatingAddressBytes() {
@@ -39388,7 +40408,7 @@ public final class ATCommand {
        *oa
        * </pre>
        *
-       * <code>optional string originatingAddress = 18;</code>
+       * <code>optional string originatingAddress = 21;</code>
        */
       public Builder setOriginatingAddress(
           java.lang.String value) {
@@ -39405,7 +40425,7 @@ public final class ATCommand {
        *oa
        * </pre>
        *
-       * <code>optional string originatingAddress = 18;</code>
+       * <code>optional string originatingAddress = 21;</code>
        */
       public Builder clearOriginatingAddress() {
         
@@ -39418,7 +40438,7 @@ public final class ATCommand {
        *oa
        * </pre>
        *
-       * <code>optional string originatingAddress = 18;</code>
+       * <code>optional string originatingAddress = 21;</code>
        */
       public Builder setOriginatingAddressBytes(
           com.google.protobuf.ByteString value) {
@@ -39434,13 +40454,13 @@ public final class ATCommand {
 
       private int pdu_ ;
       /**
-       * <code>optional int32 pdu = 19;</code>
+       * <code>optional int32 pdu = 22;</code>
        */
       public int getPdu() {
         return pdu_;
       }
       /**
-       * <code>optional int32 pdu = 19;</code>
+       * <code>optional int32 pdu = 22;</code>
        */
       public Builder setPdu(int value) {
         
@@ -39449,7 +40469,7 @@ public final class ATCommand {
         return this;
       }
       /**
-       * <code>optional int32 pdu = 19;</code>
+       * <code>optional int32 pdu = 22;</code>
        */
       public Builder clearPdu() {
         
@@ -39464,7 +40484,7 @@ public final class ATCommand {
        *scts
        * </pre>
        *
-       * <code>optional string serviceCenterTimeStamp = 20;</code>
+       * <code>optional string serviceCenterTimeStamp = 23;</code>
        */
       public java.lang.String getServiceCenterTimeStamp() {
         java.lang.Object ref = serviceCenterTimeStamp_;
@@ -39483,7 +40503,7 @@ public final class ATCommand {
        *scts
        * </pre>
        *
-       * <code>optional string serviceCenterTimeStamp = 20;</code>
+       * <code>optional string serviceCenterTimeStamp = 23;</code>
        */
       public com.google.protobuf.ByteString
           getServiceCenterTimeStampBytes() {
@@ -39503,7 +40523,7 @@ public final class ATCommand {
        *scts
        * </pre>
        *
-       * <code>optional string serviceCenterTimeStamp = 20;</code>
+       * <code>optional string serviceCenterTimeStamp = 23;</code>
        */
       public Builder setServiceCenterTimeStamp(
           java.lang.String value) {
@@ -39520,7 +40540,7 @@ public final class ATCommand {
        *scts
        * </pre>
        *
-       * <code>optional string serviceCenterTimeStamp = 20;</code>
+       * <code>optional string serviceCenterTimeStamp = 23;</code>
        */
       public Builder clearServiceCenterTimeStamp() {
         
@@ -39533,7 +40553,7 @@ public final class ATCommand {
        *scts
        * </pre>
        *
-       * <code>optional string serviceCenterTimeStamp = 20;</code>
+       * <code>optional string serviceCenterTimeStamp = 23;</code>
        */
       public Builder setServiceCenterTimeStampBytes(
           com.google.protobuf.ByteString value) {
@@ -39553,7 +40573,7 @@ public final class ATCommand {
        *toda
        * </pre>
        *
-       * <code>optional int32 TPDestinationAddress = 21;</code>
+       * <code>optional int32 TPDestinationAddress = 24;</code>
        */
       public int getTPDestinationAddress() {
         return tPDestinationAddress_;
@@ -39563,7 +40583,7 @@ public final class ATCommand {
        *toda
        * </pre>
        *
-       * <code>optional int32 TPDestinationAddress = 21;</code>
+       * <code>optional int32 TPDestinationAddress = 24;</code>
        */
       public Builder setTPDestinationAddress(int value) {
         
@@ -39576,7 +40596,7 @@ public final class ATCommand {
        *toda
        * </pre>
        *
-       * <code>optional int32 TPDestinationAddress = 21;</code>
+       * <code>optional int32 TPDestinationAddress = 24;</code>
        */
       public Builder clearTPDestinationAddress() {
         
@@ -39591,7 +40611,7 @@ public final class ATCommand {
        *tooa
        * </pre>
        *
-       * <code>optional int32 TPOriginatingAddress = 22;</code>
+       * <code>optional int32 TPOriginatingAddress = 25;</code>
        */
       public int getTPOriginatingAddress() {
         return tPOriginatingAddress_;
@@ -39601,7 +40621,7 @@ public final class ATCommand {
        *tooa
        * </pre>
        *
-       * <code>optional int32 TPOriginatingAddress = 22;</code>
+       * <code>optional int32 TPOriginatingAddress = 25;</code>
        */
       public Builder setTPOriginatingAddress(int value) {
         
@@ -39614,7 +40634,7 @@ public final class ATCommand {
        *tooa
        * </pre>
        *
-       * <code>optional int32 TPOriginatingAddress = 22;</code>
+       * <code>optional int32 TPOriginatingAddress = 25;</code>
        */
       public Builder clearTPOriginatingAddress() {
         
@@ -39625,13 +40645,13 @@ public final class ATCommand {
 
       private int fo_ ;
       /**
-       * <code>optional int32 fo = 23;</code>
+       * <code>optional int32 fo = 26;</code>
        */
       public int getFo() {
         return fo_;
       }
       /**
-       * <code>optional int32 fo = 23;</code>
+       * <code>optional int32 fo = 26;</code>
        */
       public Builder setFo(int value) {
         
@@ -39640,7 +40660,7 @@ public final class ATCommand {
         return this;
       }
       /**
-       * <code>optional int32 fo = 23;</code>
+       * <code>optional int32 fo = 26;</code>
        */
       public Builder clearFo() {
         
@@ -39655,7 +40675,7 @@ public final class ATCommand {
        *mid
        * </pre>
        *
-       * <code>optional int32 messageIdentifier = 24;</code>
+       * <code>optional int32 messageIdentifier = 27;</code>
        */
       public int getMessageIdentifier() {
         return messageIdentifier_;
@@ -39665,7 +40685,7 @@ public final class ATCommand {
        *mid
        * </pre>
        *
-       * <code>optional int32 messageIdentifier = 24;</code>
+       * <code>optional int32 messageIdentifier = 27;</code>
        */
       public Builder setMessageIdentifier(int value) {
         
@@ -39678,7 +40698,7 @@ public final class ATCommand {
        *mid
        * </pre>
        *
-       * <code>optional int32 messageIdentifier = 24;</code>
+       * <code>optional int32 messageIdentifier = 27;</code>
        */
       public Builder clearMessageIdentifier() {
         
@@ -39693,7 +40713,7 @@ public final class ATCommand {
        *pid
        * </pre>
        *
-       * <code>optional int32 protocolIdentifier = 25;</code>
+       * <code>optional int32 protocolIdentifier = 28;</code>
        */
       public int getProtocolIdentifier() {
         return protocolIdentifier_;
@@ -39703,7 +40723,7 @@ public final class ATCommand {
        *pid
        * </pre>
        *
-       * <code>optional int32 protocolIdentifier = 25;</code>
+       * <code>optional int32 protocolIdentifier = 28;</code>
        */
       public Builder setProtocolIdentifier(int value) {
         
@@ -39716,7 +40736,7 @@ public final class ATCommand {
        *pid
        * </pre>
        *
-       * <code>optional int32 protocolIdentifier = 25;</code>
+       * <code>optional int32 protocolIdentifier = 28;</code>
        */
       public Builder clearProtocolIdentifier() {
         
@@ -39727,7 +40747,7 @@ public final class ATCommand {
 
       private java.lang.Object stat_ = "";
       /**
-       * <code>optional string stat = 26;</code>
+       * <code>optional string stat = 29;</code>
        */
       public java.lang.String getStat() {
         java.lang.Object ref = stat_;
@@ -39742,7 +40762,7 @@ public final class ATCommand {
         }
       }
       /**
-       * <code>optional string stat = 26;</code>
+       * <code>optional string stat = 29;</code>
        */
       public com.google.protobuf.ByteString
           getStatBytes() {
@@ -39758,7 +40778,7 @@ public final class ATCommand {
         }
       }
       /**
-       * <code>optional string stat = 26;</code>
+       * <code>optional string stat = 29;</code>
        */
       public Builder setStat(
           java.lang.String value) {
@@ -39771,7 +40791,7 @@ public final class ATCommand {
         return this;
       }
       /**
-       * <code>optional string stat = 26;</code>
+       * <code>optional string stat = 29;</code>
        */
       public Builder clearStat() {
         
@@ -39780,7 +40800,7 @@ public final class ATCommand {
         return this;
       }
       /**
-       * <code>optional string stat = 26;</code>
+       * <code>optional string stat = 29;</code>
        */
       public Builder setStatBytes(
           com.google.protobuf.ByteString value) {
@@ -39794,59 +40814,26 @@ public final class ATCommand {
         return this;
       }
 
-      private java.lang.Object validityPeriod_ = "";
+      private int validityPeriod_ ;
       /**
        * <pre>
        *vp
        * </pre>
        *
-       * <code>optional string validityPeriod = 27;</code>
+       * <code>optional int32 validityPeriod = 30;</code>
        */
-      public java.lang.String getValidityPeriod() {
-        java.lang.Object ref = validityPeriod_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          validityPeriod_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+      public int getValidityPeriod() {
+        return validityPeriod_;
       }
       /**
        * <pre>
        *vp
        * </pre>
        *
-       * <code>optional string validityPeriod = 27;</code>
+       * <code>optional int32 validityPeriod = 30;</code>
        */
-      public com.google.protobuf.ByteString
-          getValidityPeriodBytes() {
-        java.lang.Object ref = validityPeriod_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          validityPeriod_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <pre>
-       *vp
-       * </pre>
-       *
-       * <code>optional string validityPeriod = 27;</code>
-       */
-      public Builder setValidityPeriod(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      public Builder setValidityPeriod(int value) {
+        
         validityPeriod_ = value;
         onChanged();
         return this;
@@ -39856,29 +40843,11 @@ public final class ATCommand {
        *vp
        * </pre>
        *
-       * <code>optional string validityPeriod = 27;</code>
+       * <code>optional int32 validityPeriod = 30;</code>
        */
       public Builder clearValidityPeriod() {
         
-        validityPeriod_ = getDefaultInstance().getValidityPeriod();
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       *vp
-       * </pre>
-       *
-       * <code>optional string validityPeriod = 27;</code>
-       */
-      public Builder setValidityPeriodBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        validityPeriod_ = value;
+        validityPeriod_ = 0;
         onChanged();
         return this;
       }
@@ -39889,7 +40858,7 @@ public final class ATCommand {
        *mr
        * </pre>
        *
-       * <code>optional int32 messageReference = 28;</code>
+       * <code>optional int32 messageReference = 31;</code>
        */
       public int getMessageReference() {
         return messageReference_;
@@ -39899,7 +40868,7 @@ public final class ATCommand {
        *mr
        * </pre>
        *
-       * <code>optional int32 messageReference = 28;</code>
+       * <code>optional int32 messageReference = 31;</code>
        */
       public Builder setMessageReference(int value) {
         
@@ -39912,7 +40881,7 @@ public final class ATCommand {
        *mr
        * </pre>
        *
-       * <code>optional int32 messageReference = 28;</code>
+       * <code>optional int32 messageReference = 31;</code>
        */
       public Builder clearMessageReference() {
         
@@ -39923,13 +40892,13 @@ public final class ATCommand {
 
       private int ackpdu_ ;
       /**
-       * <code>optional int32 ackpdu = 29;</code>
+       * <code>optional int32 ackpdu = 32;</code>
        */
       public int getAckpdu() {
         return ackpdu_;
       }
       /**
-       * <code>optional int32 ackpdu = 29;</code>
+       * <code>optional int32 ackpdu = 32;</code>
        */
       public Builder setAckpdu(int value) {
         
@@ -39938,7 +40907,7 @@ public final class ATCommand {
         return this;
       }
       /**
-       * <code>optional int32 ackpdu = 29;</code>
+       * <code>optional int32 ackpdu = 32;</code>
        */
       public Builder clearAckpdu() {
         
@@ -39953,7 +40922,7 @@ public final class ATCommand {
        *ct
        * </pre>
        *
-       * <code>optional int32 commandType = 30;</code>
+       * <code>optional int32 commandType = 33;</code>
        */
       public int getCommandType() {
         return commandType_;
@@ -39963,7 +40932,7 @@ public final class ATCommand {
        *ct
        * </pre>
        *
-       * <code>optional int32 commandType = 30;</code>
+       * <code>optional int32 commandType = 33;</code>
        */
       public Builder setCommandType(int value) {
         
@@ -39976,7 +40945,7 @@ public final class ATCommand {
        *ct
        * </pre>
        *
-       * <code>optional int32 commandType = 30;</code>
+       * <code>optional int32 commandType = 33;</code>
        */
       public Builder clearCommandType() {
         
@@ -39991,7 +40960,7 @@ public final class ATCommand {
        *mn
        * </pre>
        *
-       * <code>optional int32 messageNumber = 31;</code>
+       * <code>optional int32 messageNumber = 34;</code>
        */
       public int getMessageNumber() {
         return messageNumber_;
@@ -40001,7 +40970,7 @@ public final class ATCommand {
        *mn
        * </pre>
        *
-       * <code>optional int32 messageNumber = 31;</code>
+       * <code>optional int32 messageNumber = 34;</code>
        */
       public Builder setMessageNumber(int value) {
         
@@ -40014,7 +40983,7 @@ public final class ATCommand {
        *mn
        * </pre>
        *
-       * <code>optional int32 messageNumber = 31;</code>
+       * <code>optional int32 messageNumber = 34;</code>
        */
       public Builder clearMessageNumber() {
         
@@ -40025,13 +40994,13 @@ public final class ATCommand {
 
       private int ds_ ;
       /**
-       * <code>optional int32 ds = 32;</code>
+       * <code>optional int32 ds = 35;</code>
        */
       public int getDs() {
         return ds_;
       }
       /**
-       * <code>optional int32 ds = 32;</code>
+       * <code>optional int32 ds = 35;</code>
        */
       public Builder setDs(int value) {
         
@@ -40040,7 +41009,7 @@ public final class ATCommand {
         return this;
       }
       /**
-       * <code>optional int32 ds = 32;</code>
+       * <code>optional int32 ds = 35;</code>
        */
       public Builder clearDs() {
         
@@ -40051,13 +41020,13 @@ public final class ATCommand {
 
       private int buffer_ ;
       /**
-       * <code>optional int32 buffer = 33;</code>
+       * <code>optional int32 buffer = 36;</code>
        */
       public int getBuffer() {
         return buffer_;
       }
       /**
-       * <code>optional int32 buffer = 33;</code>
+       * <code>optional int32 buffer = 36;</code>
        */
       public Builder setBuffer(int value) {
         
@@ -40066,7 +41035,7 @@ public final class ATCommand {
         return this;
       }
       /**
-       * <code>optional int32 buffer = 33;</code>
+       * <code>optional int32 buffer = 36;</code>
        */
       public Builder clearBuffer() {
         
@@ -40077,13 +41046,13 @@ public final class ATCommand {
 
       private int profile_ ;
       /**
-       * <code>optional int32 profile = 34;</code>
+       * <code>optional int32 profile = 37;</code>
        */
       public int getProfile() {
         return profile_;
       }
       /**
-       * <code>optional int32 profile = 34;</code>
+       * <code>optional int32 profile = 37;</code>
        */
       public Builder setProfile(int value) {
         
@@ -40092,7 +41061,7 @@ public final class ATCommand {
         return this;
       }
       /**
-       * <code>optional int32 profile = 34;</code>
+       * <code>optional int32 profile = 37;</code>
        */
       public Builder clearProfile() {
         
@@ -40107,7 +41076,7 @@ public final class ATCommand {
        *mids
        * </pre>
        *
-       * <code>optional string messageIdentifiers = 35;</code>
+       * <code>optional string messageIdentifiers = 38;</code>
        */
       public java.lang.String getMessageIdentifiers() {
         java.lang.Object ref = messageIdentifiers_;
@@ -40126,7 +41095,7 @@ public final class ATCommand {
        *mids
        * </pre>
        *
-       * <code>optional string messageIdentifiers = 35;</code>
+       * <code>optional string messageIdentifiers = 38;</code>
        */
       public com.google.protobuf.ByteString
           getMessageIdentifiersBytes() {
@@ -40146,7 +41115,7 @@ public final class ATCommand {
        *mids
        * </pre>
        *
-       * <code>optional string messageIdentifiers = 35;</code>
+       * <code>optional string messageIdentifiers = 38;</code>
        */
       public Builder setMessageIdentifiers(
           java.lang.String value) {
@@ -40163,7 +41132,7 @@ public final class ATCommand {
        *mids
        * </pre>
        *
-       * <code>optional string messageIdentifiers = 35;</code>
+       * <code>optional string messageIdentifiers = 38;</code>
        */
       public Builder clearMessageIdentifiers() {
         
@@ -40176,7 +41145,7 @@ public final class ATCommand {
        *mids
        * </pre>
        *
-       * <code>optional string messageIdentifiers = 35;</code>
+       * <code>optional string messageIdentifiers = 38;</code>
        */
       public Builder setMessageIdentifiersBytes(
           com.google.protobuf.ByteString value) {
@@ -40192,7 +41161,7 @@ public final class ATCommand {
 
       private java.lang.Object dcss_ = "";
       /**
-       * <code>optional string dcss = 36;</code>
+       * <code>optional string dcss = 39;</code>
        */
       public java.lang.String getDcss() {
         java.lang.Object ref = dcss_;
@@ -40207,7 +41176,7 @@ public final class ATCommand {
         }
       }
       /**
-       * <code>optional string dcss = 36;</code>
+       * <code>optional string dcss = 39;</code>
        */
       public com.google.protobuf.ByteString
           getDcssBytes() {
@@ -40223,7 +41192,7 @@ public final class ATCommand {
         }
       }
       /**
-       * <code>optional string dcss = 36;</code>
+       * <code>optional string dcss = 39;</code>
        */
       public Builder setDcss(
           java.lang.String value) {
@@ -40236,7 +41205,7 @@ public final class ATCommand {
         return this;
       }
       /**
-       * <code>optional string dcss = 36;</code>
+       * <code>optional string dcss = 39;</code>
        */
       public Builder clearDcss() {
         
@@ -40245,7 +41214,7 @@ public final class ATCommand {
         return this;
       }
       /**
-       * <code>optional string dcss = 36;</code>
+       * <code>optional string dcss = 39;</code>
        */
       public Builder setDcssBytes(
           com.google.protobuf.ByteString value) {
@@ -40261,13 +41230,13 @@ public final class ATCommand {
 
       private int show_ ;
       /**
-       * <code>optional int32 show = 37;</code>
+       * <code>optional int32 show = 40;</code>
        */
       public int getShow() {
         return show_;
       }
       /**
-       * <code>optional int32 show = 37;</code>
+       * <code>optional int32 show = 40;</code>
        */
       public Builder setShow(int value) {
         
@@ -40276,7 +41245,7 @@ public final class ATCommand {
         return this;
       }
       /**
-       * <code>optional int32 show = 37;</code>
+       * <code>optional int32 show = 40;</code>
        */
       public Builder clearShow() {
         
@@ -40291,7 +41260,7 @@ public final class ATCommand {
        *dcs
        * </pre>
        *
-       * <code>optional int32 dataCodinScheme = 38;</code>
+       * <code>optional int32 dataCodinScheme = 41;</code>
        */
       public int getDataCodinScheme() {
         return dataCodinScheme_;
@@ -40301,7 +41270,7 @@ public final class ATCommand {
        *dcs
        * </pre>
        *
-       * <code>optional int32 dataCodinScheme = 38;</code>
+       * <code>optional int32 dataCodinScheme = 41;</code>
        */
       public Builder setDataCodinScheme(int value) {
         
@@ -40314,7 +41283,7 @@ public final class ATCommand {
        *dcs
        * </pre>
        *
-       * <code>optional int32 dataCodinScheme = 38;</code>
+       * <code>optional int32 dataCodinScheme = 41;</code>
        */
       public Builder clearDataCodinScheme() {
         
@@ -40325,7 +41294,7 @@ public final class ATCommand {
 
       private java.lang.Object type_ = "";
       /**
-       * <code>optional string type = 39;</code>
+       * <code>optional string type = 42;</code>
        */
       public java.lang.String getType() {
         java.lang.Object ref = type_;
@@ -40340,7 +41309,7 @@ public final class ATCommand {
         }
       }
       /**
-       * <code>optional string type = 39;</code>
+       * <code>optional string type = 42;</code>
        */
       public com.google.protobuf.ByteString
           getTypeBytes() {
@@ -40356,7 +41325,7 @@ public final class ATCommand {
         }
       }
       /**
-       * <code>optional string type = 39;</code>
+       * <code>optional string type = 42;</code>
        */
       public Builder setType(
           java.lang.String value) {
@@ -40369,7 +41338,7 @@ public final class ATCommand {
         return this;
       }
       /**
-       * <code>optional string type = 39;</code>
+       * <code>optional string type = 42;</code>
        */
       public Builder clearType() {
         
@@ -40378,7 +41347,7 @@ public final class ATCommand {
         return this;
       }
       /**
-       * <code>optional string type = 39;</code>
+       * <code>optional string type = 42;</code>
        */
       public Builder setTypeBytes(
           com.google.protobuf.ByteString value) {
@@ -40394,13 +41363,13 @@ public final class ATCommand {
 
       private int status_ ;
       /**
-       * <code>optional int32 status = 40;</code>
+       * <code>optional int32 status = 43;</code>
        */
       public int getStatus() {
         return status_;
       }
       /**
-       * <code>optional int32 status = 40;</code>
+       * <code>optional int32 status = 43;</code>
        */
       public Builder setStatus(int value) {
         
@@ -40409,7 +41378,7 @@ public final class ATCommand {
         return this;
       }
       /**
-       * <code>optional int32 status = 40;</code>
+       * <code>optional int32 status = 43;</code>
        */
       public Builder clearStatus() {
         
@@ -40424,7 +41393,7 @@ public final class ATCommand {
        *fo
        * </pre>
        *
-       * <code>optional int32 firstOctet = 41;</code>
+       * <code>optional int32 firstOctet = 44;</code>
        */
       public int getFirstOctet() {
         return firstOctet_;
@@ -40434,7 +41403,7 @@ public final class ATCommand {
        *fo
        * </pre>
        *
-       * <code>optional int32 firstOctet = 41;</code>
+       * <code>optional int32 firstOctet = 44;</code>
        */
       public Builder setFirstOctet(int value) {
         
@@ -40447,7 +41416,7 @@ public final class ATCommand {
        *fo
        * </pre>
        *
-       * <code>optional int32 firstOctet = 41;</code>
+       * <code>optional int32 firstOctet = 44;</code>
        */
       public Builder clearFirstOctet() {
         
@@ -55273,509 +56242,515 @@ public final class ATCommand {
       " \001(\005\022\033\n\023wakeUpResponseTimer\030\022 \001(\005\022\023\n\013win",
       "dowsSize\030\023 \001(\005\022\020\n\010baudRate\030\024 \001(\005\022\020\n\010data" +
       "Bits\030\025 \001(\005\022\020\n\010stopBits\030\026 \001(\005\022\014\n\004mode\030\027 \001" +
-      "(\005\"\377\002\n\024StatusControlCommand\022@\n\013messageTy" +
+      "(\005\"\243\003\n\024StatusControlCommand\022@\n\013messageTy" +
       "pe\030\001 \001(\0162+.com.rtrk.protobuf.StatusContr" +
-      "olMessageType\022\022\n\nlocationID\030\002 \001(\005\022\r\n\005cau" +
-      "se\030\003 \001(\t\022\013\n\003pas\030\004 \001(\005\022\016\n\006status\030\005 \001(\005\022\021\n" +
-      "\trefuseSMS\030\006 \001(\005\022\022\n\nrefuseCall\030\007 \001(\005\022\014\n\004" +
-      "mode\030\010 \001(\005\022\020\n\010extunsol\030\t \001(\t\022\r\n\005state\030\n " +
-      "\001(\005\022\016\n\006enable\030\013 \001(\005\022\014\n\004time\030\014 \001(\t\022\032\n\022dat" +
-      "lightSavingTime\030\r \001(\t\022\023\n\013insertLevel\030\016 \001",
-      "(\005\022\021\n\tpinChoice\030\017 \001(\005\022\024\n\014insertStatus\030\020 " +
-      "\001(\005\022\t\n\001n\030\021 \001(\005\022\014\n\004type\030\022 \001(\005\"\224\004\n\021SIMRela" +
-      "tedCommand\022=\n\013messageType\030\001 \001(\0162(.com.rt" +
-      "rk.protobuf.SIMRelatedMessageType\022\013\n\003fac" +
-      "\030\002 \001(\t\022\014\n\004mode\030\003 \001(\005\022\020\n\010password\030\004 \001(\t\022\r" +
-      "\n\005class\030\005 \001(\005\022\016\n\006status\030\006 \001(\005\022\013\n\003pin\030\007 \001" +
-      "(\t\022\016\n\006newPin\030\010 \001(\t\022\021\n\tpwdLength\030\t \001(\005\022\016\n" +
-      "\006oldPwd\030\n \001(\t\022\016\n\006newPwd\030\013 \001(\t\022\017\n\007command" +
-      "\030\014 \001(\005\022\016\n\006fileID\030\r \001(\005\022\n\n\002P1\030\016 \001(\005\022\n\n\002P2" +
-      "\030\017 \001(\005\022\n\n\002P3\030\020 \001(\005\022\013\n\003SW1\030\021 \001(\005\022\013\n\003SW2\030\022",
-      " \001(\005\022\014\n\004data\030\023 \001(\t\022\020\n\010response\030\024 \001(\t\022\016\n\006" +
-      "length\030\025 \001(\005\022\020\n\010CCIDData\030\026 \001(\t\022\014\n\004GID1\030\027" +
-      " \001(\005\022\014\n\004GID2\030\030 \001(\005\022\032\n\022serviceProvideName" +
-      "\030\031 \001(\t\022\023\n\013displayMode\030\032 \001(\005\022\014\n\004chv1\030\033 \001(" +
-      "\005\022\014\n\004chv2\030\034 \001(\005\022\014\n\004puk1\030\035 \001(\005\022\014\n\004puk2\030\036 " +
-      "\001(\005\"\264\003\n\025NetworkServiceCommand\022A\n\013message" +
-      "Type\030\001 \001(\0162,.com.rtrk.protobuf.NetworkSe" +
-      "rviceMessageType\022\016\n\006status\030\002 \001(\005\022\020\n\010oper" +
-      "ator\030\003 \001(\005\022\014\n\004mode\030\004 \001(\005\022\016\n\006format\030\005 \001(\005" +
-      "\022\t\n\001n\030\006 \001(\005\022\030\n\020locationAreaCode\030\007 \001(\t\022\016\n",
-      "\006cellID\030\010 \001(\t\022\014\n\004rssi\030\t \001(\005\022\013\n\003ber\030\n \001(\005" +
-      "\022\r\n\005index\030\013 \001(\005\022\020\n\010numericn\030\014 \001(\t\022\016\n\006alp" +
-      "han\030\r \001(\t\022\016\n\006opBand\030\016 \001(\t\022\014\n\004dump\030\017 \001(\005\022" +
-      "\014\n\004band\030\020 \001(\005\022\021\n\tfrequency\030\021 \001(\005\022\026\n\016sign" +
-      "alStrength\030\022 \001(\005\022\020\n\010band1900\030\023 \001(\005\022\016\n\006ar" +
-      "fcn1\030\024 \001(\005\022\016\n\006arfcn2\030\025 \001(\005\022\016\n\006arfcn3\030\026 \001" +
-      "(\005\"\260\003\n\022CallRelatedCommand\022>\n\013messageType" +
-      "\030\001 \001(\0162).com.rtrk.protobuf.CallRelatedMe" +
-      "ssageType\022\016\n\006number\030\002 \001(\t\022\023\n\013GSMModifier" +
-      "\030\003 \001(\t\022\036\n\026interworkinWindowsSize\030\030 \001(\005\022\030",
-      "\n\020mobileWindowSize\030\005 \001(\005\022\032\n\022acknowledmen" +
-      "tTimer\030\006 \001(\005\022\037\n\027retransimissionAttempts\030" +
-      "\007 \001(\005\022\022\n\nRPLVersion\030\010 \001(\005\022\032\n\022resequencin" +
-      "gPeriod\030\t \001(\005\022\t\n\001n\030\n \001(\005\022\014\n\004type\030\013 \001(\005\022\r" +
-      "\n\005index\030\014 \001(\005\022\013\n\003dir\030\r \001(\005\022\014\n\004stat\030\016 \001(\005" +
-      "\022\014\n\004mode\030\017 \001(\005\022\022\n\nmultiparty\030\020 \001(\005\022\025\n\rsp" +
-      "eechChannel\030\021 \001(\005\022\022\n\ndisableATH\030\022 \001(\010\"\361\006" +
-      "\n\nSMSCommand\0227\n\014messsageType\030\001 \001(\0162!.com" +
-      ".rtrk.protobuf.SMSMessageType\022\017\n\007service" +
-      "\030\002 \001(\005\022\037\n\027mobileTerminatedMessage\030\003 \001(\005\022",
-      "\035\n\025mobileOrientedMessage\030\004 \001(\005\022\034\n\024broadc" +
-      "astTypeMessage\030\005 \001(\005\022\014\n\004mode\030\006 \001(\005\022\021\n\tSC" +
-      "Address\030\007 \001(\t\022\023\n\013toSCAddress\030\010 \001(\005\022\014\n\004me" +
-      "m1\030\t \001(\t\022\014\n\004mem2\030\n \001(\t\022\014\n\004mem3\030\013 \001(\t\022\r\n\005" +
-      "index\030\014 \001(\005\022\017\n\007delflag\030\r \001(\005\022\r\n\005alpha\030\016 " +
-      "\001(\t\022\032\n\022destinationAddress\030\017 \001(\t\022\014\n\004data\030" +
-      "\020 \001(\014\022\016\n\006length\030\021 \001(\005\022\032\n\022originatingAddr" +
-      "ess\030\022 \001(\t\022\013\n\003pdu\030\023 \001(\005\022\036\n\026serviceCenterT" +
-      "imeStamp\030\024 \001(\t\022\034\n\024TPDestinationAddress\030\025" +
-      " \001(\005\022\034\n\024TPOriginatingAddress\030\026 \001(\005\022\n\n\002fo",
-      "\030\027 \001(\005\022\031\n\021messageIdentifier\030\030 \001(\005\022\032\n\022pro" +
-      "tocolIdentifier\030\031 \001(\005\022\014\n\004stat\030\032 \001(\t\022\026\n\016v" +
-      "alidityPeriod\030\033 \001(\t\022\030\n\020messageReference\030" +
-      "\034 \001(\005\022\016\n\006ackpdu\030\035 \001(\005\022\023\n\013commandType\030\036 \001" +
-      "(\005\022\025\n\rmessageNumber\030\037 \001(\005\022\n\n\002ds\030  \001(\005\022\016\n" +
-      "\006buffer\030! \001(\005\022\017\n\007profile\030\" \001(\005\022\032\n\022messag" +
-      "eIdentifiers\030# \001(\t\022\014\n\004dcss\030$ \001(\t\022\014\n\004show" +
-      "\030% \001(\005\022\027\n\017dataCodinScheme\030& \001(\005\022\014\n\004type\030" +
-      "\' \001(\t\022\016\n\006status\030( \001(\005\022\022\n\nfirstOctet\030) \001(" +
-      "\005\"\240\002\n\020PhonebookCommand\022<\n\013messageType\030\001 ",
-      "\001(\0162\'.com.rtrk.protobuf.PhonebookMessage" +
-      "Type\022\017\n\007storage\030\002 \001(\t\022\017\n\007nlength\030\003 \001(\005\022\017" +
-      "\n\007tlength\030\004 \001(\005\022\r\n\005index\030\005 \001(\005\022\016\n\006number" +
-      "\030\006 \001(\t\022\014\n\004type\030\007 \001(\005\022\014\n\004text\030\010 \001(\t\022\016\n\006in" +
-      "dex1\030\t \001(\005\022\016\n\006index2\030\n \001(\005\022\020\n\010findText\030\013" +
-      " \001(\t\022\016\n\006alphax\030\014 \001(\t\022\017\n\007numberx\030\r \001(\t\022\r\n" +
-      "\005typex\030\016 \001(\005\"\363\002\n\013GPRSCommand\0227\n\013messageT" +
-      "ype\030\001 \001(\0162\".com.rtrk.protobuf.GPRSMessag" +
-      "eType\022\r\n\005state\030\002 \001(\005\022\013\n\003cid\030\003 \001(\005\022\017\n\007PDP" +
-      "Type\030\004 \001(\t\022\013\n\003APN\030\005 \001(\t\022\022\n\nPDPAddress\030\006 ",
-      "\001(\t\022\r\n\005dComp\030\007 \001(\005\022\r\n\005hComp\030\010 \001(\005\022\022\n\npre" +
-      "cedence\030\t \001(\005\022\r\n\005delay\030\n \001(\005\022\023\n\013reliabil" +
-      "ity\030\013 \001(\005\022\014\n\004peek\030\014 \001(\005\022\014\n\004mean\030\r \001(\005\022\013\n" +
-      "\003L2P\030\016 \001(\t\022\r\n\005class\030\017 \001(\t\022\014\n\004mode\030\020 \001(\005\022" +
-      "\t\n\001n\030\021 \001(\005\022\014\n\004stat\030\022 \001(\005\022\013\n\003lac\030\023 \001(\t\022\n\n" +
-      "\002ci\030\024 \001(\t\022\017\n\007service\030\025 \001(\005\"\316\006\n\014TCPIPComm" +
-      "and\0228\n\013messageType\030\001 \001(\0162#.com.rtrk.prot" +
-      "obuf.TCPIPMessageType\022\r\n\005index\030\002 \001(\005\022\014\n\004" +
-      "mode\030\003 \001(\t\022\021\n\tIPAddress\030\004 \001(\t\022\014\n\004port\030\005 " +
-      "\001(\005\022\022\n\ndomainName\030\006 \001(\t\022\016\n\006length\030\007 \001(\005\022",
-      "\013\n\003APN\030\010 \001(\t\022\020\n\010username\030\t \001(\t\022\020\n\010passwo" +
-      "rd\030\n \001(\t\022\014\n\004rate\030\013 \001(\005\022\r\n\005state\030\014 \001(\t\022\023\n" +
-      "\013socketState\030\r \001(\t\022\023\n\013serverState\030\016 \001(\t\022" +
-      "\022\n\nprimaryDNS\030\017 \001(\t\022\023\n\013seondaryDNS\030\020 \001(\t" +
-      "\022\r\n\005error\030\021 \001(\005\022\014\n\004time\030\022 \001(\003\022\022\n\nsendPro" +
-      "mpt\030\023 \001(\005\022\013\n\003num\030\024 \001(\005\022\014\n\004type\030\025 \001(\005\022\013\n\003" +
-      "max\030\026 \001(\003\022\022\n\ndialNumber\030\027 \001(\t\022\022\n\nconnect" +
-      "ion\030\030 \001(\005\022\025\n\rnumberOfRetry\030\031 \001(\005\022\020\n\010wait" +
-      "Time\030\032 \001(\005\022\020\n\010sendSize\030\033 \001(\005\022\016\n\006escape\030\034" +
-      " \001(\010\022\017\n\007channel\030\035 \001(\005\022\t\n\001n\030\036 \001(\005\022\014\n\004sent",
-      "\030\037 \001(\005\022\r\n\005acked\030  \001(\005\022\016\n\006nAcked\030! \001(\005\022\t\n" +
-      "\001m\030\" \001(\005\022\n\n\002id\030# \001(\005\022\n\n\002sc\030$ \001(\005\022\013\n\003sid\030" +
-      "% \001(\005\022\016\n\006number\030& \001(\005\022\014\n\004host\030\' \001(\t\022\017\n\007t" +
-      "imeout\030( \001(\005\022\022\n\npingNumber\030) \001(\005\022\016\n\006resu" +
-      "lt\030* \001(\005\022\r\n\005bytes\030+ \001(\005\022\013\n\003ttl\030, \001(\005\022\023\n\013" +
-      "finalResult\030- \001(\005\022\020\n\010received\030. \001(\005\022\014\n\004l" +
-      "ost\030/ \001(\005\022\013\n\003min\0300 \001(\003\022\013\n\003avg\0301 \001(\003\"\335\002\n\033" +
-      "SupplementaryServiceCommand\022G\n\013messageTy" +
-      "pe\030\001 \001(\01622.com.rtrk.protobuf.Supplementa" +
-      "ryServiceMessageType\022\r\n\005reads\030\002 \001(\005\022\014\n\004m",
-      "ode\030\003 \001(\005\022\016\n\006number\030\004 \001(\t\022\014\n\004type\030\005 \001(\005\022" +
-      "\022\n\nsubaddress\030\006 \001(\t\022\016\n\006satype\030\007 \001(\005\022\r\n\005c" +
-      "lass\030\010 \001(\005\022\014\n\004time\030\t \001(\005\022\016\n\006status\030\n \001(\005" +
-      "\022\t\n\001n\030\013 \001(\005\022\r\n\005index\030\014 \001(\005\022\014\n\004info\030\r \001(\005" +
-      "\022\t\n\001m\030\016 \001(\005\022\013\n\003str\030\017 \001(\t\022\013\n\003dcs\030\020 \001(\005\022\r\n" +
-      "\005code1\030\021 \001(\005\022\r\n\005code2\030\022 \001(\005\"\312\004\n\014AudioCom" +
-      "mand\0228\n\013messageType\030\001 \001(\0162#.com.rtrk.pro" +
-      "tobuf.AudioMessageType\022\r\n\005value\030\002 \001(\005\022\030\n" +
-      "\020internalDuration\030\003 \001(\005\022\020\n\010duration\030\004 \001(" +
-      "\005\022\022\n\ndtmfString\030\005 \001(\t\022\014\n\004mode\030\006 \001(\005\022\r\n\005l",
-      "evel\030\007 \001(\005\022\t\n\001n\030\010 \001(\005\022\021\n\tgainLevel\030\t \001(\005" +
-      "\022\017\n\007channel\030\n \001(\005\022\r\n\005state\030\013 \001(\005\022\014\n\004type" +
-      "\030\014 \001(\005\022\021\n\tfrequency\030\r \001(\005\022\020\n\010periodON\030\016 " +
-      "\001(\005\022\021\n\tperiodOFF\030\017 \001(\005\022\022\n\noutputPath\030\020 \001" +
-      "(\005\022\027\n\017operateFunction\030\021 \001(\005\022\026\n\016functionS" +
-      "tatus\030\022 \001(\005\022\017\n\007operate\030\023 \001(\005\022\023\n\013prefixPa" +
-      "use\030\024 \001(\005\022\024\n\014lowThreshold\030\025 \001(\005\022\025\n\rhighT" +
-      "hreshold\030\026 \001(\005\022\020\n\010dtmfCode\030\027 \001(\t\022\027\n\017pers" +
-      "istenceTime\030\030 \001(\005\022\020\n\010ulVolume\030\031 \001(\005\022\020\n\010d" +
-      "lVolume\030\032 \001(\005\022\027\n\017continuanceTime\030\033 \001(\003\022\020",
-      "\n\010muteTime\030\034 \001(\003\"\250\002\n\026HardwareRelatedComm" +
-      "and\022B\n\013messageType\030\001 \001(\0162-.com.rtrk.prot" +
-      "obuf.HardwareRelatedMessageType\022\014\n\004time\030" +
-      "\002 \001(\t\022\r\n\005state\030\003 \001(\005\022\016\n\006repeat\030\004 \001(\005\022\r\n\005" +
-      "power\030\005 \001(\005\022\013\n\003bcs\030\006 \001(\005\022\013\n\003bcl\030\007 \001(\005\022\017\n" +
-      "\007voltage\030\010 \001(\005\022\016\n\006status\030\t \001(\005\022\r\n\005value\030" +
-      "\n \001(\005\022\t\n\001n\030\013 \001(\005\022\017\n\007ledMode\030\014 \001(\005\022\025\n\rthr" +
-      "esholdType\030\r \001(\005\022\021\n\tthreshold\030\016 \001(\005\"\207\001\n\r" +
-      "OthersCommand\0229\n\013messageType\030\001 \001(\0162$.com" +
-      ".rtrk.protobuf.OthersMessageType\022\r\n\005valu",
-      "e\030\002 \001(\005\022\t\n\001n\030\003 \001(\005\022\020\n\010timeMode\030\004 \001(\005\022\017\n\007" +
-      "indMode\030\005 \001(\005*\207\002\n\021OthersMessageType\022#\n\037R" +
-      "EISSUES_THE_LAST_COMMAND_GIVEN\020\000\022\031\n\025SET_" +
-      "COMMAND_ECHO_MODE\020\001\022*\n&SET_COMMAND_LINE_" +
-      "TERMINATION_CHARACTER\020\002\022%\n!SET_RESPONSE_" +
-      "FORMATTING_CHARACTER\020\003\022&\n\"SET_COMMAND_LI" +
-      "NE_EDITING_CHARACTER\020\004\022\017\n\013SET_RI_TIME\020\005\022" +
-      "&\n\"BURST_TRANSITION_SIGNAL_INDICATION\020\006*" +
-      "\302\001\n\032HardwareRelatedMessageType\022\t\n\005CLOCK\020" +
-      "\000\022\r\n\tSET_ALARM\020\001\022\022\n\016BATTERY_CHARGE\020\002\022\014\n\010",
-      "READ_ADC\020\003\022\030\n\024CONFIGURE_SHOW_CLOCK\020\004\022&\n\"" +
-      "CONFIGURE_THE_NETWORK_LED_PATTERNS\020\005\022&\n\"" +
-      "CONFIGURE_THE_THRESHOLD_OF_VOLTAGE\020\006*\231\004\n" +
-      "\020AudioMessageType\022 \n\034SET_MONITOR_SPEAKER" +
-      "_LOUDNESS\020\000\022\034\n\030SET_MONITOR_SPEAKER_MODE\020" +
-      "\001\022\021\n\rTONE_DURATION\020\002\022\034\n\030DTMF_AND_TONE_GE" +
-      "NERATION\020\003\022\024\n\020ALERT_SOUND_MODE\020\004\022\026\n\022RING" +
-      "ER_SOUND_LEVEL\020\005\022\035\n\031LOUD_SPEAKER_VOLUME_" +
-      "LEVEL\020\006\022\020\n\014MUTE_CONTROL\020\007\022#\n\037CHANGE_THE_" +
-      "SIDE_TONE_GAIN_LEVEL\020\010\022$\n CHANGE_THE_MIC",
-      "ROPHONE_GAIN_LEVEL\020\t\022\035\n\031GENERATE_LOCAL_D" +
-      "TMF_TONES\020\n\022\033\n\027SWAP_THE_AUDIO_CHANNELS\020\013" +
-      "\022 \n\034AUDIO_CHANNEL_LOOP_BACK_TEST\020\014\022 \n\034GE" +
-      "NERATE_LOCAL_SPECIFIC_TONE\020\r\022\030\n\024SET_DTMF" +
-      "_OUTPUT_PATH\020\016\022\033\n\027SET_TONE_DETECTION_MOD" +
-      "E\020\017\022\017\n\013DETECT_DTMF\020\020\022\"\n\036PLAY_DTMF_TONE_D" +
-      "URING_THE_CALL\020\021*\311\003\n\037SupplementaryServic" +
-      "eMessageType\0221\n-CALL_FORWARDING_NUMBER_A" +
-      "ND_CONDITIONS_CONTROL\020\000\022\035\n\031CLOSED_USER_G" +
-      "ROUP_CONTROL\020\001\022\030\n\024CALL_WAITING_CONTROL\020\002",
-      "\022\034\n\030CALL_HOLD_AND_MULTIPARTY\020\003\022,\n(CALLIN" +
-      "G_LINE_IDENTIFICATION_PRESENTATION\020\004\022C\n?" +
-      "CONTROL_WHETHER_OR_NOT_TO_SHOW_THE_NAME_" +
-      "OF_INCOMING_CALL_NUMBER\020\005\022.\n*CONNECTED_L" +
-      "INE_IDENTIFICATION_PRESENTATION\020\006\022#\n\037SHO" +
-      "W_ALPHA_FIELD_IN_COLP_STRING\020\007\022+\n\'UNSTRU" +
-      "CTURED_SUPPLEMENTARY_SERVICE_DATA\020\010\022\'\n#S" +
-      "UPPLEMENTARY_SERVICES_NOTIFICATION\020\t*\252\n\n" +
-      "\020TCPIPMessageType\022 \n\034SET_UP_TCP_OR_UDP_C" +
-      "ONNECTION\020\000\022+\n\'SEND_DATA_THROUGH_TCP_OR_",
-      "UDP_CONNECTION\020\001\022\037\n\033CLOSE_TCP_OR_UDP_CON" +
-      "NECTION\020\002\022#\n\037DEACTIVATE_GPRS_CSD_PDP_CON" +
-      "TEXT\020\003\022\022\n\016SET_LOCAL_PORT\020\004\022.\n*START_TCPI" +
-      "P_TASK_APN_USERNAME_AND_PASSWORD\020\005\022\033\n\027AC" +
-      "TIVE_GPRS_CSD_CONTEXT\020\006\022\030\n\024GET_LOCAL_IP_" +
-      "ADDRESS\020\007\022#\n\037QUERY_CURRENT_CONNECTION_ST" +
-      "ATUS\020\010\022-\n)QUERY_CONNECTION_STATUS_OF_CUR" +
-      "RENT_ACCESS\020\t\022\037\n\033QUERT_CURRENT_SERVER_ST" +
-      "ATUS\020\n\022 \n\034CONFIGURE_DOMAIN_NAME_SERVER\020\013" +
-      "\022-\n)QUERY_THE_IP_ADDRESS_OF_GIVEN_DOMAIN",
-      "_NAME\020\014\0221\n-CONNECT_WITH_IP_ADDRESS_OR_DO" +
-      "MAIN_NAME_SERVER\020\r\022(\n$ADD_AN_IP_HEADER_W" +
-      "HEN_RECEIVING_DATE\020\016\022\033\n\027SET_AUDIO_SENDIN" +
-      "G_TIMER\020\017\022\037\n\033SET_PROMT_WHEN_SENDING_DATA" +
-      "\020\020\022\027\n\023CONFIGURE_AS_SERVER\020\021\022$\n SELECT_CS" +
-      "D_OR_GPRS_AS_THE_BEARER\020\022\022\025\n\021CHOOSE_CONN" +
-      "ECTION\020\023\0227\n3SET_WHETHER_OR_NOT_TO_DISPLA" +
-      "Y_THE_ADDRESS_OF_SENDER\020\024\022\"\n\036SAVE_TCPIP_" +
-      "APPLICATION_CONTEXT\020\025\022\036\n\032SELECT_TCPIP_TR" +
-      "ANSFER_MODE\020\026\0224\n0CONTROL_WHETHER_OR_NOT_",
-      "TO_SHOW_THE_PROTOCOL_TYPE\020\027\022;\n7CONTROL_W" +
-      "HETHER_OR_NOT_TO_ENABLE_MULTIPLE_TCPIP_S" +
-      "ESSION\020\030\0226\n2CONTROL_WHETHER_OR_NOT_TO_DI" +
-      "SPLAY_LOCAL_IP_ADDRESS\020\031\022*\n&SELECT_A_CON" +
-      "TEXT_AS_FOREGROUND_CONTEXT\020\032\022*\n&QUETY_TH" +
-      "E_DATA_INFORMATION_FOR_SENDING\020\033\0220\n,SET_" +
-      "THE_METHOD_TO_HANDLE_RECEIVED_TCPIP_DATA" +
-      "\020\034\022$\n RETRIEVE_THE_RECEIVED_TCPIP_DATA\020\035" +
-      "\0225\n1CONTRO_WHETHER_OR_NOT_TO_ECHO_THE_DA" +
-      "TA_FOR_QISEND\020\036\022\030\n\024PING_A_REMOTE_SERVER\020",
-      "\037\022&\n\"SYNCHRONIZE_THE_LOCAL_TIME_VIA_NTP\020" +
-      " *\225\003\n\017GPRSMessageType\022 \n\034ATTACH_DEATTACH" +
-      "_GPRS_SERVICE\020\000\022\026\n\022DEFINE_PDP_CONTEXT\020\001\022" +
-      "\031\n\025QOS_PROFILE_REQUESTED\020\002\022\"\n\036QOS_PROFIL" +
-      "E_MINIMUM_ACCEPTABLE\020\003\022&\n\"PDP_CONTEXT_AC" +
-      "TIVATE_OR_DEACTIVATE\020\004\022\024\n\020ENTER_DATA_STA" +
-      "TE\020\005\022\024\n\020SHOW_PDP_ADDRESS\020\006\022\035\n\031GPRS_MOBIL" +
-      "E_STATION_CLASS\020\007\022-\n)CONTROL_UNSOLICITED" +
-      "_GPRS_EVETNT_REPORTING\020\010\022\037\n\033NETWORK_REGI" +
-      "STRATION_STATUS\020\t\022%\n!SELECT_SERVICE_FOR_",
-      "MO_SMS_MESSAGE\020\n\022\037\n\033CHANGE_GPRS_MULTISLO" +
-      "T_CLASS\020\013*\255\001\n\024PhonebookMessageType\022#\n\037SE" +
-      "LECT_PHONEBOOK_MEMORY_STORAGE\020\000\022\031\n\025WRITE" +
-      "_PHONEBOOK_ENTRY\020\001\022\"\n\036READ_CURRENT_PHONE" +
-      "BOOK_ENTRIES\020\002\022\032\n\026FIND_PHONEBOOK_ENTRIES" +
-      "\020\003\022\025\n\021SUBSCRIBER_NUMBER\020\004*\377\004\n\016SMSMessage" +
-      "Type\022\032\n\026SELECT_MESSAGE_SERVICE\020\000\022\035\n\031SELE" +
-      "CT_SMS_MESSAGE_FORMAT\020\001\022\036\n\032SMS_SERVICE_C" +
-      "ENTER_ADDRESS\020\002\022!\n\035PREFERRED_SMS_MESSAGE" +
-      "_STORAGE\020\003\022\026\n\022DELETE_SMS_MESSAGE\020\004\022+\n\'LI",
-      "ST_SMS_MESSAGE_FROM_PREFERRED_STORAGE\020\005\022" +
-      "\024\n\020READ_SMS_MESSAGE\020\006\022\024\n\020SEND_SMS_MESSAG" +
-      "E\020\007\022\037\n\033WRITE_SMS_MESSAGE_TO_MEMORY\020\010\022!\n\035" +
-      "SEND_SMS_MESSAGE_FROM_STORAGE\020\t\022\024\n\020SEND_" +
-      "SMS_COMMAND\020\n\022\036\n\032NEW_SMS_MESSAGE_INDICAT" +
-      "ION\020\013\022\030\n\024RESTORE_SMS_SETTINGS\020\014\022\025\n\021SAVE_" +
-      "SMS_SETTINGS\020\r\022%\n!SELECT_CALL_BROADCAST_" +
-      "SMS_MESSAGE\020\016\022!\n\035SHOW_SMS_TEXT_MODE_PARA" +
-      "METERS\020\017\022 \n\034SET_SMS_TEXT_MODE_PARAMETERS" +
-      "\020\020\0226\n2STRORE_CLASS0_SMS_TO_SIM_WHEN_RECE",
-      "IVING_CLASS0_SMS\020\021\022\022\n\016DELETE_ALL_SMS\020\022\022\033" +
-      "\n\027CONFIGURE_SMS_CODE_MODE\020\023*\367\006\n\026CallRela" +
-      "tedMessageType\022\033\n\027ANSWER_AN_INCOMING_CAL" +
-      "L\020\000\022)\n%MOBILE_ORIENTED_CALL_TO_DIAL_A_NU" +
-      "MBER\020\001\022\"\n\036DISCONNECT_EXISTING_CONNECTION" +
-      "\020\002\022)\n%SWITCH_FROM_DATA_MODE_TO_COMMAND_M" +
-      "ODE\020\003\022)\n%SWITCH_FROM_COMMAND_MODE_TO_DAT" +
-      "A_MODE\020\004\022\030\n\024SELECT_PULSE_DIALING\020\005\0229\n5SE" +
-      "T_NUMBER_OF_RINGS_BEFORE_AUTOMATICLY_ANS" +
-      "WERING_CALL\020\006\022\"\n\036SET_PAUSE_BEFORE_BLIND_",
-      "DIALING\020\007\022;\n7SET_NUMBER_OF_SECONDS_TO_WA" +
-      "IT_FOR_CONNECTION_COMPLETION\020\010\0229\n5SET_NU" +
-      "MBER_OF_SECONDS_TO_WAIT_FOR_COMMA_DIAL_M" +
-      "ODIFIER\020\t\022A\n=SET_DISCONNECT_DELAY_AFTER_" +
-      "INDICATING_ABSENCE_OF_DATA_CARRIER\020\n\022\027\n\023" +
-      "SELECT_TONE_DIALING\020\013\022\032\n\026SELECT_TYPE_OF_" +
-      "ADDRESS\020\014\022\034\n\030LIST_CURRENT_CALLS_OF_ME\020\r\022" +
-      "\035\n\031SERVICE_REPORTING_CONTROL\020\016\0229\n5SET_CE" +
-      "LLULAR_RESULT_CODE_FOR_INCOMING_CALL_IND" +
-      "ICATION\020\017\022(\n$SELECT_RADIO_LINK_PROTOCOL_",
-      "PARAMETER\020\020\022\033\n\027SINGLE_NUMBERING_SCHEME\020\021" +
-      "\022$\n CONFIGURE_ALTERNATING_MODE_CALLS\020\022\022\034" +
-      "\n\030PREFERENCE_SPEACH_CODING\020\023\022\036\n\032SPEECH_C" +
-      "HANNEL_TYPE_REPORT\020\024\022\017\n\013DISABLE_ATH\020\025*\265\002" +
-      "\n\031NetworkServiceMessageType\022\026\n\022OPERATOR_" +
-      "SELECTION\020\000\022\030\n\024NETWORK_REGISTRATION\020\001\022\031\n" +
-      "\025SIGNAL_QUALITY_REPORT\020\002\022\033\n\027PREFERRED_OP" +
-      "ERATOR_LIST\020\003\022\027\n\023READ_OPEARATR_NAMES\020\004\022%" +
-      "\n!GET_AND_SET_MOBILE_OPERATION_BAND\020\005\0225\n" +
-      "1NETWORK_SERVICE_SWITCH_ON_OR_OFF_ENGINE",
-      "ERING_MODE\020\006\022\037\n\033SCAN_POWER_OF_GSM_FREQUE" +
-      "NCY\020\007\022\026\n\022LOCK_GSM_FREQUENCY\020\010*\347\002\n\025SIMRel" +
-      "atedMessageType\022\020\n\014REQUEST_IMSI\020\000\022\021\n\rFAC" +
-      "ILITY_LOCK\020\001\022\r\n\tENTER_PIN\020\002\022\023\n\017CHANGE_PA" +
-      "SSWORD\020\003\022\031\n\025RESTRICTED_SIM_ACCESS\020\004\022\026\n\022G" +
-      "ENERIC_SIM_ACCESS\020\005\022\034\n\030CHANGE_PS_SUPER_P" +
-      "ASSWORD\020\006\022\r\n\tSHOW_CCID\020\007\022\023\n\017SHOW_CCID_QC" +
-      "CID\020\010\022!\n\035GET_SIM_CARD_GROUP_IDENTIFIER\020\t" +
-      "\022%\n!SELECT_SIM_CARD_OPERATING_VOLTAGE\020\n\022" +
-      "\035\n\031GET_SERVICE_PROVIDER_NAME\020\013\022\'\n#TIME_R",
-      "EMAINING_TO_INPUT_SIM_PIN_PUK\020\014*\262\005\n\030Stat" +
-      "usControlMessageType\022\031\n\025EXTENDED_ERROR_R" +
-      "EPORT\020\000\022$\n MOBILE_EQUIPMENT_ACTIVITY_STA" +
-      "TUS\020\001\022\036\n\032INDICATE_RI_WHEN_USING_URC\020\002\022(\n" +
-      "$SHOW_STATE_OF_MOBILE_ORIGINATED_CELL\020\003\022" +
-      ".\n*REFUSE_TO_RECEIVE_SMS_INCOMING_CALL_O" +
-      "R_NOT\020\004\022.\n*ENABLE_OR_DISABLE_INITIAL_URC" +
-      "_PRESENTATION\020\005\0229\n5ENABLE_OR_DISABLE_PRO" +
-      "PRIETARY_UNSOLICITED_INDICATIONS\020\006\022!\n\035QU" +
-      "ERY_STATE_OF_INITIALIZATION\020\007\022\034\n\030QUERY_G",
-      "SM_NETWORK_STATUS\020\010\022\035\n\031NETWORK_TIME_SYNC" +
-      "HRONIZED\020\t\022+\n\'OBTAIN_LATEST_NETWORK_TIME" +
-      "_SYNCHRONIZED\020\n\0228\n4NETWORK_TIME_SYNCHRON" +
-      "IZATION_AND_UPDATE_THE_RTC_TIME\020\013\022\'\n#NET" +
-      "WORK_TIME_SYNCHRONIZATION_REPORT\020\014\022\'\n#SW" +
-      "ITCH_ON_OR_OFF_DETECTING_SIM_CARD\020\r\022!\n\035S" +
-      "IM_INSERTED_STATUS_REPORTING\020\016\0224\n0CSC_CA" +
-      "LL_OR_GPRS_PDP_CONTEXT_TERMINAL_INDICATI" +
-      "ON\020\017*\335\002\n!SerialInterfaceControlMessageTy" +
-      "pe\022\031\n\025SET_DCD_FUNCTION_MODE\020\000\022\031\n\025SET_DTR",
-      "_FUNCTION_MODE\020\001\022\'\n#SET_TE_TA_CONTROL_CH" +
-      "ARACTER_FRAMING\020\002\022%\n!SET_TE_TA_LOCAL_DAT" +
-      "A_FLOW_CONTROL\020\003\022,\n(SET_TE_TA_LOCAL_DATA" +
-      "_RATE_REPORTING_MODE\020\004\022\036\n\032SET_TE_TA_FIXE" +
-      "D_LOCAL_RATE\020\005\022\027\n\023MULTIPLEXER_CONTROL\020\006\022" +
-      " \n\034CONFIGURE_DUAL_UART_FUNCTION\020\007\022)\n%CON" +
-      "FIGURE_PARAMETERS_OF_THE_DUAL_UART\020\010*\376\006\n" +
-      "\023GeneralMesssageType\022.\n*DISPLAY_PRODUCT_" +
-      "IDENTIFICATION_INFORMATION\020\000\022\'\n#REQUEST_" +
-      "MANUFACTURER_IDENTIFICATION\020\001\022#\n\037REQUEST",
-      "_TA_MODEL_IDENTIFICATION\020\002\022&\n\"REQUEST_TA" +
-      "_REVISION_IDENTIFICATION\020\003\022(\n$REQUEST_GL" +
-      "OBAL_OBJECT_IDENTIFICATION\020\004\022,\n(REQUEST_" +
-      "MANUFACTURER_IDENTIFICATION_CGMI\020\005\022 \n\034RE" +
-      "QUEST_MODEL_IDENTIFICATION\020\006\022+\n\'REQUEST_" +
-      "TA_REVISION_IDENTIFICATION_CGMR\020\007\022\020\n\014REQ" +
-      "UEST_IMEI\020\010\0220\n,REQUEST_PRODUCT_SERIAL_NU" +
-      "MBER_IDENTIFICATION\020\t\022\025\n\021REQUEST_IMEI_QG" +
-      "SN\020\n\0227\n3SET_ALL_CURRENT_PARAMETERS_TO_MA" +
-      "NUFACTURER_DEFAULTS\020\013\022!\n\035DISPLAY_CURRENT",
-      "_CONFIGURATION\020\014\0224\n0STORE_CURRENT_PARAME" +
-      "TERS_TO_USER_DEFINED_PROFILE\020\r\022%\n!SET_RE" +
-      "SULT_CODE_PRESENTATION_CODE\020\016\022\026\n\022TA_RESP" +
-      "ONSE_FORMAT\020\017\022\"\n\036SET_CONNECT_RESULT_CODE" +
-      "_FORMAT\020\020\0226\n2SET_ALL_CURRENT_PARAMETERS_" +
-      "TO_USER_DEFINED_PROFILE\020\021\022\033\n\027SET_PHONE_F" +
-      "UNCTIONALITY\020\022\022\r\n\tPOWER_OFF\020\023\022!\n\035REPORT_" +
-      "MOBILE_EQUIPMENT_ERROR\020\024\022\030\n\024SET_TE_CHARA" +
-      "CTER_SET\020\025\022)\n%REQUEST_COMPLETE_TA_CAPABI" +
-      "LITIES_LIST\020\026*\312\003\n\017SMTPMessageType\022(\n$SET",
-      "_THE_USER_NAME_FOR_AUTHENTICATION\020\000\022\'\n#S" +
-      "ET_THE_PASSWORD_FOR_AUTHENTICATION\020\001\022\'\n#" +
-      "SET_THE_EMAIL_ADDRESS_OF_THE_SENDER\020\002\022\030\n" +
-      "\024SET_THE_SENDERS_NAME\020\003\022+\n\'SET_THE_ADDRE" +
-      "SS_AND_PORT_OD_SMTP_SERVER\020\004\022\034\n\030ADD_OR_D" +
-      "ELETE_RECIPIENTS\020\005\022!\n\035EDIT_THE_SUBJECT_O" +
-      "F_THE_EMAIL\020\006\022!\n\035EDIT_THE_CONTENT_OF_THE" +
-      "_EMAIL\020\007\022#\n\037ADD_AN_ATTACHMENT_FOR_THE_EM" +
-      "AIL\020\010\022\030\n\024DELETE_AN_ATTACHMENT\020\t\022)\n%CLEAR" +
-      "_ALL_CONFIGURATIONS_AND_CONTENTS\020\n\022\026\n\022SM",
-      "TP_CONFIGURATION\020\013\022\016\n\nSEND_EMAIL\020\014*_\n\024Re" +
-      "cordingMessageType\022\025\n\021RECORD_MEDIA_FILE\020" +
-      "\000\022\023\n\017PLAY_MEDIA_FILE\020\001\022\033\n\027STOP_PLAYING_M" +
-      "EDIA_FILE\020\002*\352\001\n\023QuecCellMessageType\022\"\n\036S" +
-      "CAN_BASIC_STATION_INFORMATION\020\000\022%\n!SWITC" +
-      "H_ON_OR_OFF_ENGINEERING_MODE\020\001\022\031\n\025LOCK_T" +
-      "HE_BASE_STATION\020\002\022\036\n\032SCAN_ARFCN_RECEIVIN" +
-      "G_LEVEL\020\003\022\033\n\027GET_CHANNEL_INFORMATION\020\004\022\033" +
-      "\n\027GET_LAST_VALID_TA_VALUE\020\005\022\023\n\017FORBID_OP" +
-      "ERATOR\020\006*\337\003\n\016MMSMessageType\022\033\n\027SET_THE_U",
-      "RL_OF_THE_MMSC\020\000\022\025\n\021SET_THE_MMS_PROXY\020\001\022" +
-      "-\n)SET_THE_PARAMETER_FOR_SENDING_MMS_MES" +
-      "SAGE\020\002\022%\n!SET_CHARACTER_SETS_AND_INPUT_M" +
-      "ODE\020\003\022\025\n\021WRITE_MMS_MESSAGE\020\004\022\024\n\020SEND_MMS" +
-      "_MESSAGE\020\005\022#\n\037MENAGE_THE_RECEIVED_MMS_ME" +
-      "SSAGE\020\006\022\035\n\031READ_RECEIVED_MMS_MESSAGE\020\007\022%" +
-      "\n!RECEIVE_MMS_MESSAGE_FROM_THE_MMSC\020\010\022(\n" +
-      "$SET_PRIORITY_OF_MMS_MESSAGE_AND_CALL\020\t\022" +
-      ".\n*SET_DUR_ATTRIBUTE_VALUE_IN_THE_SMIL_S" +
-      "CRIPT\020\n\022\032\n\026SET_MMS_SMS_TRANSACTOR\020\013\022\036\n\032E",
-      "NABLE_OUTPUT_TEXT_IN_USC2\020\014\022\025\n\021OUTPUT_FI" +
-      "LE_STYLE\020\r*\350\001\n\016STKMessageType\022\034\n\030TURN_ON" +
-      "_OFF_STK_FUNCTION\020\000\022\030\n\024STK_PROFILE_DOWNL" +
-      "OAD\020\001\022\030\n\024STK_ENVELOPE_COMMAND\020\002\022\031\n\025STK_T" +
-      "ERMINAL_RESPONSE\020\003\022\024\n\020TRIGGER_STK_CALL\020\004" +
-      "\022\023\n\017TRIGGER_STK_SMS\020\005\022\022\n\016TRIGGER_STK_SS\020" +
-      "\006\022\024\n\020TRIGGER_STK_USSD\020\007\022\024\n\020TRIGGER_STK_D" +
-      "TMF\020\010*\356\006\n\016FTPMessageType\022/\n+OPEN_AN_FTP_" +
-      "SERVICE_TO_THE_GIVEN_FTP_SERVER\020\000\022\031\n\025CLO" +
-      "SE_THE_FTP_SERVICE\020\001\022#\n\037UPLOAD_A_FILE_TO",
-      "_THE_FTP_SERVER\020\002\022\'\n#DOWNLOAD_A_FILE_FRO" +
-      "M_THE_FTP_SERVER\020\003\022=\n9SET_THE_PATH_IN_TH" +
-      "E_FTP_SERVER_TO_UPLOAD_OR_DOWNLOAD_FILE\020" +
-      "\004\0228\n4SET_THE_USER_NAME_OF_THE_ACCOUNT_TO" +
-      "_OPEN_FTP_SERVICE\020\005\0227\n3SET_THE_PASSWORD_" +
-      "OF_THE_ACCOUNT_TO_OPEN_FTP_SERVICE\020\006\0228\n4" +
-      "SET_SOME_CONFIGURABLE_PARAMETERS_FOR_THE" +
-      "_FTP_SERVICE\020\007\022\037\n\033QUERY_STATUS_OF_FTP_SE" +
-      "RVICE\020\010\0229\n5QUERY_THE_REAL_SIZE_TRANSFERE" +
-      "D_IN_THE_LATEST_TRANSFER\020\t\0220\n,RENAME_FIL",
-      "E_OR_FOLDER_NAME_ON_THE_FTP_SERVER\020\n\0226\n2" +
-      "QUERY_THE_SIZE_OF_APPOINTED_FILE_ON_THE_" +
-      "FTP_SERVER\020\013\022/\n+DELETE_THE_APPOINTED_FIL" +
-      "E_ON_THE_FTP_SERVER\020\014\0220\n,ESTABLISH_A_NEW" +
-      "_FILEFOLDER_ON_THE_FTP_SERVER\020\r\022)\n%REMOV" +
-      "E_A_FILEFOLDER_ON_THE_FTP_SERVER\020\016\022D\n@LI" +
-      "ST_CONTENTS_OF_DIRECTORY_OR_FILE_INFORMA" +
-      "TION_ON_THE_FTP_SERVER\020\017\022<\n8LIST_FILE_NA" +
-      "MES_IN_THE_GIVEN_DIRECTORY_ON_THE_FTP_SE" +
-      "RVER\020\020*\375\002\n\017FileMessageType\022\031\n\025GET_STORAG",
-      "E_DATE_SIZE\020\000\022\016\n\nLIST_FILES\020\001\022\032\n\026UPLOAD_" +
-      "FILE_TO_STORAGE\020\002\022\036\n\032DOWNLOAD_FILE_FROM_" +
-      "STORAGE\020\003\022\032\n\026DELETE_FILE_IN_STORAGE\020\004\022\r\n" +
-      "\tMOVE_FILE\020\005\022\r\n\tOPEN_FILE\020\006\022\r\n\tREAD_FILE" +
-      "\020\007\022\016\n\nWRITE_FILE\020\010\022\r\n\tSEEK_FILE\020\t\022\016\n\nCLO" +
-      "SE_FILE\020\n\022\"\n\036GET_OFFSET_OF_THE_FILE_POIN" +
-      "TER\020\013\0224\n0FORCE_TO_WRITE_DATA_REMAINING_I" +
-      "N_THE_FILE_BUFFER\020\014\0221\n-TRUNCATE_THE_SPEC" +
-      "IFIED_FILE_FROM_FILE_POINTER\020\r*\244\001\n\017HTTPM" +
-      "essageType\022\027\n\023SET_HTTP_SERVER_URL\020\000\022\031\n\025S",
-      "END_HTTP_GET_REQUEST\020\001\022\035\n\031READ_HTTP_SERV" +
-      "ER_RESPONSE\020\002\022\032\n\026SEND_HTTP_POST_REQUEST\020" +
-      "\003\022\"\n\036DOWNLODA_FILE_FROM_HTTP_SERVER\020\004*\240\037" +
-      "\n\005Error\022\006\n\002OK\020\000\022\020\n\014UNKNOW_ERROR\020\001\022\020\n\014SER" +
-      "VICE_BUSY\020\003\022\034\n\030FAILED_TO_GET_IP_ADDRESS\020" +
-      "\004\022\021\n\rNETWORK_ERROR\020\005\022\026\n\022FTP_SESSION_CLOS" +
-      "ED\020\006\022\032\n\026DATA_CONNECTION_CLOSED\020\007\022#\n\037GPRS" +
-      "_CSD_CONTEXT_IS_DEACTIVATED\020\010\022\013\n\007TIMEOUT" +
-      "\020\t\022\033\n\027INPUT_PARAMETER_ILLEGAL\020\n\022$\n FILE_" +
-      "NOT_FOUND_IN_LOCAL_POSITION\020\013\022(\n$FAILED_",
-      "TO_GET_FILE_IN_LOCAL_POSITION\020\014\022\024\n\020NO_EN" +
-      "OUGH_MEMORY\020\r\022!\n\035FAILED_TO_SAVE_THE_ATTA" +
-      "CHMENT\020\016\022 \n\034THE_INPUT_PARAMETER_IS_WRONG" +
-      "\020\017\022$\n\037FTP_SERVER_CANT_SUPPORT_SERVICE\020\245\003" +
-      "\022#\n\036FAILDE_TO_OPEN_DATA_CONNECTION\020\251\003\022/\n" +
-      "*THE_CONNECTION_IS_CLOSED_AND_STOP_TRANS" +
-      "FER\020\252\003\022\'\n\"THE_REQUEST_FOR_FILE_ISNT_OPER" +
-      "ATED\020\302\003\022)\n$THE_FTP_SERVER_HAS_NOT_ENOUGH" +
-      "_MEMORY\020\304\003\022+\n&THE_FORMAT_OF_THE_FTP_COMM" +
-      "AND_IS_WRONG\020\364\003\022,\n\'THE_PATTERN_OF_THE_FT",
-      "P_COMMAND_IS_WRONG\020\365\003\0220\n+THE_FTP_COMMAND" +
-      "_ISNT_OPERATED_BY_FTP_SERVER\020\366\003\022\035\n\030BAD_S" +
-      "EQUENCE_OF_COMMANDS\020\367\003\022&\n!COMMAND_PARAME" +
-      "TER_NOT_IMPLEMENTED\020\370\003\022!\n\034DOMAIN_DOES_NO" +
-      "T_ACCEPT_EMAIL\020\211\004\022\034\n\027NOT_LOGIN_TO_FTP_SE" +
-      "RVER\020\222\004\022\"\n\035NEEDED_INFORMATION_OF_ACCOUNT" +
-      "\020\224\004\022\032\n\025AUTHENTICATION_FAILED\020\227\004\022 \n\033THE_R" +
-      "EQUEST_IS_NOT_OPERATED\020\246\004\022\033\n\026THE_REQUEST" +
-      "_IS_STOPPED\020\247\004\022%\n THE_REQUEST_OF_A_FILE_" +
-      "IS_STOPPED\020\250\004\022\031\n\024FILE_NAME_IS_ILLEGAL\020\251\004",
-      "\022\027\n\022TRANSACTION_FAILED\020\252\004\022\022\n\rHTTP_TIME_O" +
-      "UT\020\331\035\022\016\n\tHTTP_BUSY\020\332\035\022\023\n\016HTTP_UART_BUSY\020" +
-      "\333\035\022\030\n\023HTTP_GET_NO_REQUEST\020\334\035\022\026\n\021HTTP_NET" +
-      "WORK_BUSY\020\335\035\022\035\n\030HTTP_NETWORK_OPEN_FAILED" +
-      "\020\336\035\022\033\n\026HTTP_NETWORK_NO_CONFIG\020\337\035\022\032\n\025HTTP" +
-      "_NETWORK_DEACTIVE\020\340\035\022\027\n\022HTTP_NETWORK_ERR" +
-      "OR\020\341\035\022\023\n\016HTTP_URL_ERROR\020\342\035\022\023\n\016HTTP_EMPTY" +
-      "_URL\020\343\035\022\027\n\022HTTP_IP_ADDR_ERROR\020\344\035\022\023\n\016HTTP" +
-      "_DNS_ERROR\020\345\035\022\035\n\030HTTP_SOCKET_CREATE_ERRO" +
-      "R\020\346\035\022\036\n\031HTTP_SOCKET_CONNECT_ERROR\020\347\035\022\033\n\026",
-      "HTTP_SOCKET_READ_ERROR\020\350\035\022\034\n\027HTTP_SOCKET" +
-      "_WRITE_ERROR\020\351\035\022\026\n\021HTTP_SOCKET_CLOSE\020\352\035\022" +
-      "\033\n\026HTTP_DATA_ENCODE_ERROR\020\353\035\022\033\n\026HTTP_DAT" +
-      "A_DECODE_ERROR\020\354\035\022\031\n\024HTTP_TO_READ_TIMEOU" +
-      "T\020\355\035\022\031\n\024HTTP_RESPONSE_FAILED\020\356\035\022\027\n\022INCOM" +
-      "ING_CALL_BUSY\020\357\035\022\024\n\017VOICE_CALL_BUSY\020\360\035\022\022" +
-      "\n\rINPUT_TIMEOUT\020\361\035\022\026\n\021WAIT_DATA_TIMEOUT\020" +
-      "\362\035\022\037\n\032WAIT_HTTP_RESPONSE_TIMEOUT\020\363\035\022\026\n\021A" +
-      "LLOC_MEMORY_FAIL\020\364\035\022\031\n\024HTTP_NEED_RELOCAT" +
-      "ION\020\365\035\022\030\n\023INVALID_INPUT_VALUE\020\231\036\022\021\n\014MMS_",
-      "TIME_OUT\020\275\036\022\021\n\014URL_TOO_LONG\020\276\036\022\020\n\013INVALI" +
-      "D_URL\020\277\036\022\026\n\021UNSUPPORTED_PROXY\020\300\036\022\032\n\025INVA" +
-      "LID_PROXY_ADDRESS\020\301\036\022\025\n\020IP_ADDRESS_ERROR" +
-      "\020\302\036\022\016\n\tDNS_ERROR\020\303\036\022\024\n\017PARAMETER_ERROR\020\304" +
-      "\036\022\030\n\023TO_ADDRESS_EXCEEDED\020\305\036\022\030\n\023CC_ADDRES" +
-      "S_EXCEEDED\020\306\036\022\031\n\024BCC_ADDRESS_EXCEEDED\020\307\036" +
-      "\022$\n\037APPENDED_FILE_CAPACITY_EXCEEDED\020\310\036\022\027" +
-      "\n\022FILE_NAME_TOO_LONG\020\311\036\022 \n\033THE_NUMBER_OF" +
-      "_FILE_EXCEEDED\020\312\036\022\031\n\024NON_EXISTENT_ADDRES" +
-      "S\020\313\036\022\025\n\020UFS_STORAGE_FULL\020\314\036\022\017\n\nDRIVE_FUL",
-      "L\020\315\036\022\020\n\013DRIVE_ERROR\020\316\036\022\016\n\tNOT_FOUND\020\317\036\022\026" +
-      "\n\021INVALID_FILE_NAME\020\320\036\022\031\n\024FILE_ALREADY_E" +
-      "XISTED\020\321\036\022\032\n\025FAILED_TO_CREATE_FILE\020\322\036\022\031\n" +
-      "\024FAILED_TO_WRITE_FILE\020\323\036\022\030\n\023FAILED_TO_OP" +
-      "EN_FILE\020\324\036\022\030\n\023FAILED_TO_READ_FILE\020\325\036\022\r\n\010" +
-      "MMS_BUSY\020\326\036\022\025\n\020SENDING_MMS_BUSY\020\327\036\022\030\n\023SE" +
-      "NDING_MMS_STOPPED\020\330\036\022\034\n\027ALREADY_STOPPED_" +
-      "TO_SEND\020\331\036\022\027\n\022RECEIVING_MMS_BUSY\020\332\036\022\032\n\025R" +
-      "ECEIVING_MMS_STOPPED\020\333\036\022\034\n\027ALREADY_STOPP" +
-      "ED_RECEIVE\020\334\036\022\032\n\025HTTP_RESPONSE_FALIURE\020\335",
-      "\036\022\031\n\024INVALID_MMS_RESPONSE\020\336\036\022\027\n\022MMS_RESP" +
-      "ONSE_ERROR\020\337\036\022\031\n\024INVALID_PUSH_MESSAGE\020\340\036" +
-      "\022\027\n\022ALREADY_DONWLOADED\020\341\036\022\021\n\014NETWORK_BUS" +
-      "Y\020\342\036\022\033\n\026FAILED_TO_OPEN_NETWORK\020\343\036\022\032\n\025NET" +
-      "WORK_NO_CONFIGURED\020\344\036\022\030\n\023NETWORK_DEACTIV" +
-      "ATED\020\345\036\022\026\n\021MMS_NETWORK_ERROR\020\346\036\022\025\n\020NETWO" +
-      "RK_SHUTDOWN\020\347\036\022\016\n\tUART_BUSY\020\350\036\022\021\n\014UART_E" +
-      "SCAPED\020\351\036\022\034\n\027FAILED_TO_CREATE_SOCKET\020\352\036\022" +
-      "\035\n\030FAILED_TO_CONNECT_SOCKET\020\353\036\022\032\n\025FAILED" +
-      "_TO_READ_SOCKET\020\354\036\022\033\n\026FAILED_TO_WRITE_SO",
-      "CKET\020\355\036\022\022\n\rSOCKET_CLOSED\020\356\036\022\025\n\020MMS_LENGT" +
-      "H_ERROR\020\357\036\022\031\n\024FAILED_TO_ENCODE_MMS\020\360\036\022\031\n" +
-      "\024FAILED_TO_DECODE_MMS\020\361\036\022\032\n\025FAILED_TO_DE" +
-      "CODE_HTTP\020\362\036\022\"\n\035FAILED_TO_DECODE_PUSH_ME" +
-      "SSAGE\020\363\036\022\024\n\017PDU_ALIGN_ERROR\020\364\036\022\030\n\023PDU_CH" +
-      "ARACTER_ERROR\020\365\036\022\024\n\017STRING_TOO_LONG\020\366\036\022\r" +
-      "\n\010MMS_FULL\020\367\036\022\025\n\020NON_EXISTENT_MMS\020\370\036\022\024\n\017" +
-      "INVALID_ADDRESS\020\371\036\022\030\n\023MMS_VOICE_CALL_BUS" +
-      "Y\020\372\036\022\030\n\023ALLOC_MEMORY_FAILED\020\373\036\022\026\n\021EXCEED" +
-      "_MAX_LENGTH\020\240\037\022\023\n\016OPEN_FILE_FAIL\020\241\037\022\024\n\017W",
-      "RITE_FILE_FAIL\020\242\037\022\022\n\rGET_SIZE_FAIL\020\243\037\022\016\n" +
-      "\tREAD_FAIL\020\244\037\022\023\n\016LIST_FILE_FAIL\020\245\037\022\025\n\020DE" +
-      "LETE_FILE_FAIL\020\246\037\022\027\n\022GET_DISC_INFO_FAIL\020" +
-      "\247\037\022\r\n\010NO_SPACE\020\250\037\022\r\n\010TIME_OUT\020\251\037\022\030\n\023HTTP" +
-      "_FILE_NOT_FOUND\020\252\037\022\023\n\016FILE_TOO_LARGE\020\253\037\022" +
-      "\027\n\022FILE_ALREADY_EXIST\020\254\037\022\026\n\021INVALID_PARA" +
-      "METER\020\255\037\022\021\n\014DRIVER_ERROR\020\256\037\022\020\n\013CREATE_FA" +
-      "IL\020\257\037\022\022\n\rACCESS_DENIED\020\260\037\022\026\n\021FILE_IS_TOO" +
-      "_LARGE\020\261\037\022\021\n\014WRONG_FORMAT\020\314!\022\024\n\017AUDIO_TA" +
-      "SK_BUSY\020\316!\022\027\n\022CREATE_FILE_FAILED\020\317!\022/\n*A",
-      "DDITIONAL_RECORDING_IN_A_DIFFERENT_FORMA" +
-      "T\020\320!\022\016\n\tDISC_FULL\020\321!\022\035\n\030WRITE_PROTECTION" +
-      "_ON_FILE\020\322!\022\033\n\026RECORDING_UNKNOW_ERROR\020\223#" +
-      "B \n\023com.rtrk.atcommandsB\tATCommandb\006prot" +
-      "o3"
+      "olMessageType\022\014\n\004test\030\002 \001(\010\022\014\n\004read\030\003 \001(" +
+      "\010\022\021\n\texecution\030\004 \001(\010\022\022\n\nlocationID\030\005 \001(\005" +
+      "\022\r\n\005cause\030\006 \001(\t\022\013\n\003pas\030\007 \001(\005\022\016\n\006status\030\010" +
+      " \001(\005\022\021\n\trefuseSMS\030\t \001(\010\022\022\n\nrefuseCall\030\n " +
+      "\001(\010\022\014\n\004mode\030\013 \001(\005\022\020\n\010extunsol\030\014 \001(\t\022\r\n\005s" +
+      "tate\030\r \001(\005\022\016\n\006enable\030\016 \001(\010\022\014\n\004time\030\017 \001(\t",
+      "\022\032\n\022datlightSavingTime\030\020 \001(\t\022\023\n\013insertLe" +
+      "vel\030\021 \001(\005\022\021\n\tpinChoice\030\022 \001(\005\022\024\n\014insertSt" +
+      "atus\030\023 \001(\005\022\014\n\004type\030\024 \001(\005\"\303\004\n\021SIMRelatedC" +
+      "ommand\022=\n\013messageType\030\001 \001(\0162(.com.rtrk.p" +
+      "rotobuf.SIMRelatedMessageType\022\014\n\004test\030\002 " +
+      "\001(\010\022\014\n\004read\030\003 \001(\010\022\021\n\texecution\030\004 \001(\010\022\013\n\003" +
+      "fac\030\037 \001(\t\022\014\n\004mode\030  \001(\005\022\020\n\010password\030! \001(" +
+      "\t\022\r\n\005class\030\005 \001(\005\022\016\n\006status\030\006 \001(\005\022\013\n\003pin\030" +
+      "\007 \001(\t\022\016\n\006newPin\030\010 \001(\t\022\021\n\tpwdLength\030\t \001(\005" +
+      "\022\016\n\006oldPwd\030\n \001(\t\022\016\n\006newPwd\030\013 \001(\t\022\017\n\007comm",
+      "and\030\014 \001(\t\022\016\n\006fileID\030\r \001(\005\022\n\n\002P1\030\016 \001(\005\022\n\n" +
+      "\002P2\030\017 \001(\005\022\n\n\002P3\030\020 \001(\005\022\013\n\003SW1\030\021 \001(\005\022\013\n\003SW" +
+      "2\030\022 \001(\005\022\014\n\004data\030\023 \001(\t\022\020\n\010response\030\024 \001(\t\022" +
+      "\016\n\006length\030\025 \001(\005\022\020\n\010CCIDData\030\026 \001(\t\022\014\n\004GID" +
+      "1\030\027 \001(\005\022\014\n\004GID2\030\030 \001(\005\022\032\n\022serviceProvideN" +
+      "ame\030\031 \001(\t\022\023\n\013displayMode\030\032 \001(\005\022\014\n\004chv1\030\033" +
+      " \001(\005\022\014\n\004chv2\030\034 \001(\005\022\014\n\004puk1\030\035 \001(\005\022\014\n\004puk2" +
+      "\030\036 \001(\005\"\343\003\n\025NetworkServiceCommand\022A\n\013mess" +
+      "ageType\030\001 \001(\0162,.com.rtrk.protobuf.Networ" +
+      "kServiceMessageType\022\014\n\004test\030\002 \001(\010\022\014\n\004rea",
+      "d\030\003 \001(\010\022\021\n\texecution\030\004 \001(\010\022\016\n\006status\030\005 \001" +
+      "(\005\022\020\n\010operator\030\006 \001(\005\022\014\n\004mode\030\007 \001(\005\022\016\n\006fo" +
+      "rmat\030\010 \001(\005\022\t\n\001n\030\t \001(\005\022\030\n\020locationAreaCod" +
+      "e\030\n \001(\t\022\016\n\006cellID\030\013 \001(\t\022\014\n\004rssi\030\014 \001(\005\022\013\n" +
+      "\003ber\030\r \001(\005\022\r\n\005index\030\016 \001(\005\022\020\n\010numericn\030\017 " +
+      "\001(\t\022\016\n\006alphan\030\020 \001(\t\022\016\n\006opBand\030\021 \001(\t\022\014\n\004d" +
+      "ump\030\022 \001(\005\022\014\n\004band\030\023 \001(\005\022\021\n\tfrequency\030\024 \001" +
+      "(\005\022\026\n\016signalStrength\030\025 \001(\005\022\020\n\010band1900\030\026" +
+      " \001(\005\022\016\n\006arfcn1\030\027 \001(\005\022\016\n\006arfcn2\030\030 \001(\005\022\016\n\006" +
+      "arfcn3\030\031 \001(\005\"\367\003\n\022CallRelatedCommand\022>\n\013m",
+      "essageType\030\001 \001(\0162).com.rtrk.protobuf.Cal" +
+      "lRelatedMessageType\022\014\n\004test\030\002 \001(\010\022\014\n\004rea" +
+      "d\030\003 \001(\010\022\021\n\texecution\030\004 \001(\010\022\016\n\006number\030\005 \001" +
+      "(\t\022\023\n\013GSMModifier\030\006 \001(\t\022\036\n\026interworkinWi" +
+      "ndowsSize\030\007 \001(\005\022\030\n\020mobileWindowSize\030\010 \001(" +
+      "\005\022\032\n\022acknowledmentTimer\030\t \001(\005\022\037\n\027retrans" +
+      "imissionAttempts\030\n \001(\005\022\022\n\nRPLVersion\030\013 \001" +
+      "(\005\022\032\n\022resequencingPeriod\030\014 \001(\005\022\t\n\001n\030\r \001(" +
+      "\005\022\014\n\004type\030\016 \001(\005\022\r\n\005index\030\017 \001(\005\022\013\n\003dir\030\020 " +
+      "\001(\005\022\014\n\004stat\030\021 \001(\005\022\014\n\004mode\030\022 \001(\005\022\022\n\nmulti",
+      "party\030\023 \001(\005\022\025\n\rspeechChannel\030\024 \001(\005\022\022\n\ndi" +
+      "sableATH\030\025 \001(\010\022\026\n\016setUpVoiceCall\030\026 \001(\010\"\240" +
+      "\007\n\nSMSCommand\0227\n\014messsageType\030\001 \001(\0162!.co" +
+      "m.rtrk.protobuf.SMSMessageType\022\014\n\004test\030\002" +
+      " \001(\010\022\014\n\004read\030\003 \001(\010\022\021\n\texecution\030\004 \001(\010\022\017\n" +
+      "\007service\030\005 \001(\005\022\037\n\027mobileTerminatedMessag" +
+      "e\030\006 \001(\005\022\035\n\025mobileOrientedMessage\030\007 \001(\005\022\034" +
+      "\n\024broadcastTypeMessage\030\010 \001(\005\022\014\n\004mode\030\t \001" +
+      "(\005\022\021\n\tSCAddress\030\n \001(\t\022\023\n\013toSCAddress\030\013 \001" +
+      "(\005\022\014\n\004mem1\030\014 \001(\t\022\014\n\004mem2\030\r \001(\t\022\014\n\004mem3\030\016",
+      " \001(\t\022\r\n\005index\030\017 \001(\005\022\017\n\007delflag\030\020 \001(\005\022\r\n\005" +
+      "alpha\030\021 \001(\t\022\032\n\022destinationAddress\030\022 \001(\t\022" +
+      "\014\n\004data\030\023 \001(\014\022\016\n\006length\030\024 \001(\005\022\032\n\022origina" +
+      "tingAddress\030\025 \001(\t\022\013\n\003pdu\030\026 \001(\005\022\036\n\026servic" +
+      "eCenterTimeStamp\030\027 \001(\t\022\034\n\024TPDestinationA" +
+      "ddress\030\030 \001(\005\022\034\n\024TPOriginatingAddress\030\031 \001" +
+      "(\005\022\n\n\002fo\030\032 \001(\005\022\031\n\021messageIdentifier\030\033 \001(" +
+      "\005\022\032\n\022protocolIdentifier\030\034 \001(\005\022\014\n\004stat\030\035 " +
+      "\001(\t\022\026\n\016validityPeriod\030\036 \001(\005\022\030\n\020messageRe" +
+      "ference\030\037 \001(\005\022\016\n\006ackpdu\030  \001(\005\022\023\n\013command",
+      "Type\030! \001(\005\022\025\n\rmessageNumber\030\" \001(\005\022\n\n\002ds\030" +
+      "# \001(\005\022\016\n\006buffer\030$ \001(\005\022\017\n\007profile\030% \001(\005\022\032" +
+      "\n\022messageIdentifiers\030& \001(\t\022\014\n\004dcss\030\' \001(\t" +
+      "\022\014\n\004show\030( \001(\005\022\027\n\017dataCodinScheme\030) \001(\005\022" +
+      "\014\n\004type\030* \001(\t\022\016\n\006status\030+ \001(\005\022\022\n\nfirstOc" +
+      "tet\030, \001(\005\"\240\002\n\020PhonebookCommand\022<\n\013messag" +
+      "eType\030\001 \001(\0162\'.com.rtrk.protobuf.Phoneboo" +
+      "kMessageType\022\017\n\007storage\030\002 \001(\t\022\017\n\007nlength" +
+      "\030\003 \001(\005\022\017\n\007tlength\030\004 \001(\005\022\r\n\005index\030\005 \001(\005\022\016" +
+      "\n\006number\030\006 \001(\t\022\014\n\004type\030\007 \001(\005\022\014\n\004text\030\010 \001",
+      "(\t\022\016\n\006index1\030\t \001(\005\022\016\n\006index2\030\n \001(\005\022\020\n\010fi" +
+      "ndText\030\013 \001(\t\022\016\n\006alphax\030\014 \001(\t\022\017\n\007numberx\030" +
+      "\r \001(\t\022\r\n\005typex\030\016 \001(\005\"\363\002\n\013GPRSCommand\0227\n\013" +
+      "messageType\030\001 \001(\0162\".com.rtrk.protobuf.GP" +
+      "RSMessageType\022\r\n\005state\030\002 \001(\005\022\013\n\003cid\030\003 \001(" +
+      "\005\022\017\n\007PDPType\030\004 \001(\t\022\013\n\003APN\030\005 \001(\t\022\022\n\nPDPAd" +
+      "dress\030\006 \001(\t\022\r\n\005dComp\030\007 \001(\005\022\r\n\005hComp\030\010 \001(" +
+      "\005\022\022\n\nprecedence\030\t \001(\005\022\r\n\005delay\030\n \001(\005\022\023\n\013" +
+      "reliability\030\013 \001(\005\022\014\n\004peek\030\014 \001(\005\022\014\n\004mean\030" +
+      "\r \001(\005\022\013\n\003L2P\030\016 \001(\t\022\r\n\005class\030\017 \001(\t\022\014\n\004mod",
+      "e\030\020 \001(\005\022\t\n\001n\030\021 \001(\005\022\014\n\004stat\030\022 \001(\005\022\013\n\003lac\030" +
+      "\023 \001(\t\022\n\n\002ci\030\024 \001(\t\022\017\n\007service\030\025 \001(\005\"\316\006\n\014T" +
+      "CPIPCommand\0228\n\013messageType\030\001 \001(\0162#.com.r" +
+      "trk.protobuf.TCPIPMessageType\022\r\n\005index\030\002" +
+      " \001(\005\022\014\n\004mode\030\003 \001(\t\022\021\n\tIPAddress\030\004 \001(\t\022\014\n" +
+      "\004port\030\005 \001(\005\022\022\n\ndomainName\030\006 \001(\t\022\016\n\006lengt" +
+      "h\030\007 \001(\005\022\013\n\003APN\030\010 \001(\t\022\020\n\010username\030\t \001(\t\022\020" +
+      "\n\010password\030\n \001(\t\022\014\n\004rate\030\013 \001(\005\022\r\n\005state\030" +
+      "\014 \001(\t\022\023\n\013socketState\030\r \001(\t\022\023\n\013serverStat" +
+      "e\030\016 \001(\t\022\022\n\nprimaryDNS\030\017 \001(\t\022\023\n\013seondaryD",
+      "NS\030\020 \001(\t\022\r\n\005error\030\021 \001(\005\022\014\n\004time\030\022 \001(\003\022\022\n" +
+      "\nsendPrompt\030\023 \001(\005\022\013\n\003num\030\024 \001(\005\022\014\n\004type\030\025" +
+      " \001(\005\022\013\n\003max\030\026 \001(\003\022\022\n\ndialNumber\030\027 \001(\t\022\022\n" +
+      "\nconnection\030\030 \001(\005\022\025\n\rnumberOfRetry\030\031 \001(\005" +
+      "\022\020\n\010waitTime\030\032 \001(\005\022\020\n\010sendSize\030\033 \001(\005\022\016\n\006" +
+      "escape\030\034 \001(\010\022\017\n\007channel\030\035 \001(\005\022\t\n\001n\030\036 \001(\005" +
+      "\022\014\n\004sent\030\037 \001(\005\022\r\n\005acked\030  \001(\005\022\016\n\006nAcked\030" +
+      "! \001(\005\022\t\n\001m\030\" \001(\005\022\n\n\002id\030# \001(\005\022\n\n\002sc\030$ \001(\005" +
+      "\022\013\n\003sid\030% \001(\005\022\016\n\006number\030& \001(\005\022\014\n\004host\030\' " +
+      "\001(\t\022\017\n\007timeout\030( \001(\005\022\022\n\npingNumber\030) \001(\005",
+      "\022\016\n\006result\030* \001(\005\022\r\n\005bytes\030+ \001(\005\022\013\n\003ttl\030," +
+      " \001(\005\022\023\n\013finalResult\030- \001(\005\022\020\n\010received\030. " +
+      "\001(\005\022\014\n\004lost\030/ \001(\005\022\013\n\003min\0300 \001(\003\022\013\n\003avg\0301 " +
+      "\001(\003\"\335\002\n\033SupplementaryServiceCommand\022G\n\013m" +
+      "essageType\030\001 \001(\01622.com.rtrk.protobuf.Sup" +
+      "plementaryServiceMessageType\022\r\n\005reads\030\002 " +
+      "\001(\005\022\014\n\004mode\030\003 \001(\005\022\016\n\006number\030\004 \001(\t\022\014\n\004typ" +
+      "e\030\005 \001(\005\022\022\n\nsubaddress\030\006 \001(\t\022\016\n\006satype\030\007 " +
+      "\001(\005\022\r\n\005class\030\010 \001(\005\022\014\n\004time\030\t \001(\005\022\016\n\006stat" +
+      "us\030\n \001(\005\022\t\n\001n\030\013 \001(\005\022\r\n\005index\030\014 \001(\005\022\014\n\004in",
+      "fo\030\r \001(\005\022\t\n\001m\030\016 \001(\005\022\013\n\003str\030\017 \001(\t\022\013\n\003dcs\030" +
+      "\020 \001(\005\022\r\n\005code1\030\021 \001(\005\022\r\n\005code2\030\022 \001(\005\"\312\004\n\014" +
+      "AudioCommand\0228\n\013messageType\030\001 \001(\0162#.com." +
+      "rtrk.protobuf.AudioMessageType\022\r\n\005value\030" +
+      "\002 \001(\005\022\030\n\020internalDuration\030\003 \001(\005\022\020\n\010durat" +
+      "ion\030\004 \001(\005\022\022\n\ndtmfString\030\005 \001(\t\022\014\n\004mode\030\006 " +
+      "\001(\005\022\r\n\005level\030\007 \001(\005\022\t\n\001n\030\010 \001(\005\022\021\n\tgainLev" +
+      "el\030\t \001(\005\022\017\n\007channel\030\n \001(\005\022\r\n\005state\030\013 \001(\005" +
+      "\022\014\n\004type\030\014 \001(\005\022\021\n\tfrequency\030\r \001(\005\022\020\n\010per" +
+      "iodON\030\016 \001(\005\022\021\n\tperiodOFF\030\017 \001(\005\022\022\n\noutput",
+      "Path\030\020 \001(\005\022\027\n\017operateFunction\030\021 \001(\005\022\026\n\016f" +
+      "unctionStatus\030\022 \001(\005\022\017\n\007operate\030\023 \001(\005\022\023\n\013" +
+      "prefixPause\030\024 \001(\005\022\024\n\014lowThreshold\030\025 \001(\005\022" +
+      "\025\n\rhighThreshold\030\026 \001(\005\022\020\n\010dtmfCode\030\027 \001(\t" +
+      "\022\027\n\017persistenceTime\030\030 \001(\005\022\020\n\010ulVolume\030\031 " +
+      "\001(\005\022\020\n\010dlVolume\030\032 \001(\005\022\027\n\017continuanceTime" +
+      "\030\033 \001(\003\022\020\n\010muteTime\030\034 \001(\003\"\250\002\n\026HardwareRel" +
+      "atedCommand\022B\n\013messageType\030\001 \001(\0162-.com.r" +
+      "trk.protobuf.HardwareRelatedMessageType\022" +
+      "\014\n\004time\030\002 \001(\t\022\r\n\005state\030\003 \001(\005\022\016\n\006repeat\030\004",
+      " \001(\005\022\r\n\005power\030\005 \001(\005\022\013\n\003bcs\030\006 \001(\005\022\013\n\003bcl\030" +
+      "\007 \001(\005\022\017\n\007voltage\030\010 \001(\005\022\016\n\006status\030\t \001(\005\022\r" +
+      "\n\005value\030\n \001(\005\022\t\n\001n\030\013 \001(\005\022\017\n\007ledMode\030\014 \001(" +
+      "\005\022\025\n\rthresholdType\030\r \001(\005\022\021\n\tthreshold\030\016 " +
+      "\001(\005\"\207\001\n\rOthersCommand\0229\n\013messageType\030\001 \001" +
+      "(\0162$.com.rtrk.protobuf.OthersMessageType" +
+      "\022\r\n\005value\030\002 \001(\005\022\t\n\001n\030\003 \001(\005\022\020\n\010timeMode\030\004" +
+      " \001(\005\022\017\n\007indMode\030\005 \001(\005*\207\002\n\021OthersMessageT" +
+      "ype\022#\n\037REISSUES_THE_LAST_COMMAND_GIVEN\020\000" +
+      "\022\031\n\025SET_COMMAND_ECHO_MODE\020\001\022*\n&SET_COMMA",
+      "ND_LINE_TERMINATION_CHARACTER\020\002\022%\n!SET_R" +
+      "ESPONSE_FORMATTING_CHARACTER\020\003\022&\n\"SET_CO" +
+      "MMAND_LINE_EDITING_CHARACTER\020\004\022\017\n\013SET_RI" +
+      "_TIME\020\005\022&\n\"BURST_TRANSITION_SIGNAL_INDIC" +
+      "ATION\020\006*\302\001\n\032HardwareRelatedMessageType\022\t" +
+      "\n\005CLOCK\020\000\022\r\n\tSET_ALARM\020\001\022\022\n\016BATTERY_CHAR" +
+      "GE\020\002\022\014\n\010READ_ADC\020\003\022\030\n\024CONFIGURE_SHOW_CLO" +
+      "CK\020\004\022&\n\"CONFIGURE_THE_NETWORK_LED_PATTER" +
+      "NS\020\005\022&\n\"CONFIGURE_THE_THRESHOLD_OF_VOLTA" +
+      "GE\020\006*\231\004\n\020AudioMessageType\022 \n\034SET_MONITOR",
+      "_SPEAKER_LOUDNESS\020\000\022\034\n\030SET_MONITOR_SPEAK" +
+      "ER_MODE\020\001\022\021\n\rTONE_DURATION\020\002\022\034\n\030DTMF_AND" +
+      "_TONE_GENERATION\020\003\022\024\n\020ALERT_SOUND_MODE\020\004" +
+      "\022\026\n\022RINGER_SOUND_LEVEL\020\005\022\035\n\031LOUD_SPEAKER" +
+      "_VOLUME_LEVEL\020\006\022\020\n\014MUTE_CONTROL\020\007\022#\n\037CHA" +
+      "NGE_THE_SIDE_TONE_GAIN_LEVEL\020\010\022$\n CHANGE" +
+      "_THE_MICROPHONE_GAIN_LEVEL\020\t\022\035\n\031GENERATE" +
+      "_LOCAL_DTMF_TONES\020\n\022\033\n\027SWAP_THE_AUDIO_CH" +
+      "ANNELS\020\013\022 \n\034AUDIO_CHANNEL_LOOP_BACK_TEST" +
+      "\020\014\022 \n\034GENERATE_LOCAL_SPECIFIC_TONE\020\r\022\030\n\024",
+      "SET_DTMF_OUTPUT_PATH\020\016\022\033\n\027SET_TONE_DETEC" +
+      "TION_MODE\020\017\022\017\n\013DETECT_DTMF\020\020\022\"\n\036PLAY_DTM" +
+      "F_TONE_DURING_THE_CALL\020\021*\311\003\n\037Supplementa" +
+      "ryServiceMessageType\0221\n-CALL_FORWARDING_" +
+      "NUMBER_AND_CONDITIONS_CONTROL\020\000\022\035\n\031CLOSE" +
+      "D_USER_GROUP_CONTROL\020\001\022\030\n\024CALL_WAITING_C" +
+      "ONTROL\020\002\022\034\n\030CALL_HOLD_AND_MULTIPARTY\020\003\022," +
+      "\n(CALLING_LINE_IDENTIFICATION_PRESENTATI" +
+      "ON\020\004\022C\n?CONTROL_WHETHER_OR_NOT_TO_SHOW_T" +
+      "HE_NAME_OF_INCOMING_CALL_NUMBER\020\005\022.\n*CON",
+      "NECTED_LINE_IDENTIFICATION_PRESENTATION\020" +
+      "\006\022#\n\037SHOW_ALPHA_FIELD_IN_COLP_STRING\020\007\022+" +
+      "\n\'UNSTRUCTURED_SUPPLEMENTARY_SERVICE_DAT" +
+      "A\020\010\022\'\n#SUPPLEMENTARY_SERVICES_NOTIFICATI" +
+      "ON\020\t*\252\n\n\020TCPIPMessageType\022 \n\034SET_UP_TCP_" +
+      "OR_UDP_CONNECTION\020\000\022+\n\'SEND_DATA_THROUGH" +
+      "_TCP_OR_UDP_CONNECTION\020\001\022\037\n\033CLOSE_TCP_OR" +
+      "_UDP_CONNECTION\020\002\022#\n\037DEACTIVATE_GPRS_CSD" +
+      "_PDP_CONTEXT\020\003\022\022\n\016SET_LOCAL_PORT\020\004\022.\n*ST" +
+      "ART_TCPIP_TASK_APN_USERNAME_AND_PASSWORD",
+      "\020\005\022\033\n\027ACTIVE_GPRS_CSD_CONTEXT\020\006\022\030\n\024GET_L" +
+      "OCAL_IP_ADDRESS\020\007\022#\n\037QUERY_CURRENT_CONNE" +
+      "CTION_STATUS\020\010\022-\n)QUERY_CONNECTION_STATU" +
+      "S_OF_CURRENT_ACCESS\020\t\022\037\n\033QUERT_CURRENT_S" +
+      "ERVER_STATUS\020\n\022 \n\034CONFIGURE_DOMAIN_NAME_" +
+      "SERVER\020\013\022-\n)QUERY_THE_IP_ADDRESS_OF_GIVE" +
+      "N_DOMAIN_NAME\020\014\0221\n-CONNECT_WITH_IP_ADDRE" +
+      "SS_OR_DOMAIN_NAME_SERVER\020\r\022(\n$ADD_AN_IP_" +
+      "HEADER_WHEN_RECEIVING_DATE\020\016\022\033\n\027SET_AUDI" +
+      "O_SENDING_TIMER\020\017\022\037\n\033SET_PROMT_WHEN_SEND",
+      "ING_DATA\020\020\022\027\n\023CONFIGURE_AS_SERVER\020\021\022$\n S" +
+      "ELECT_CSD_OR_GPRS_AS_THE_BEARER\020\022\022\025\n\021CHO" +
+      "OSE_CONNECTION\020\023\0227\n3SET_WHETHER_OR_NOT_T" +
+      "O_DISPLAY_THE_ADDRESS_OF_SENDER\020\024\022\"\n\036SAV" +
+      "E_TCPIP_APPLICATION_CONTEXT\020\025\022\036\n\032SELECT_" +
+      "TCPIP_TRANSFER_MODE\020\026\0224\n0CONTROL_WHETHER" +
+      "_OR_NOT_TO_SHOW_THE_PROTOCOL_TYPE\020\027\022;\n7C" +
+      "ONTROL_WHETHER_OR_NOT_TO_ENABLE_MULTIPLE" +
+      "_TCPIP_SESSION\020\030\0226\n2CONTROL_WHETHER_OR_N" +
+      "OT_TO_DISPLAY_LOCAL_IP_ADDRESS\020\031\022*\n&SELE",
+      "CT_A_CONTEXT_AS_FOREGROUND_CONTEXT\020\032\022*\n&" +
+      "QUETY_THE_DATA_INFORMATION_FOR_SENDING\020\033" +
+      "\0220\n,SET_THE_METHOD_TO_HANDLE_RECEIVED_TC" +
+      "PIP_DATA\020\034\022$\n RETRIEVE_THE_RECEIVED_TCPI" +
+      "P_DATA\020\035\0225\n1CONTRO_WHETHER_OR_NOT_TO_ECH" +
+      "O_THE_DATA_FOR_QISEND\020\036\022\030\n\024PING_A_REMOTE" +
+      "_SERVER\020\037\022&\n\"SYNCHRONIZE_THE_LOCAL_TIME_" +
+      "VIA_NTP\020 *\225\003\n\017GPRSMessageType\022 \n\034ATTACH_" +
+      "DEATTACH_GPRS_SERVICE\020\000\022\026\n\022DEFINE_PDP_CO" +
+      "NTEXT\020\001\022\031\n\025QOS_PROFILE_REQUESTED\020\002\022\"\n\036QO",
+      "S_PROFILE_MINIMUM_ACCEPTABLE\020\003\022&\n\"PDP_CO" +
+      "NTEXT_ACTIVATE_OR_DEACTIVATE\020\004\022\024\n\020ENTER_" +
+      "DATA_STATE\020\005\022\024\n\020SHOW_PDP_ADDRESS\020\006\022\035\n\031GP" +
+      "RS_MOBILE_STATION_CLASS\020\007\022-\n)CONTROL_UNS" +
+      "OLICITED_GPRS_EVETNT_REPORTING\020\010\022\037\n\033NETW" +
+      "ORK_REGISTRATION_STATUS\020\t\022%\n!SELECT_SERV" +
+      "ICE_FOR_MO_SMS_MESSAGE\020\n\022\037\n\033CHANGE_GPRS_" +
+      "MULTISLOT_CLASS\020\013*\255\001\n\024PhonebookMessageTy" +
+      "pe\022#\n\037SELECT_PHONEBOOK_MEMORY_STORAGE\020\000\022" +
+      "\031\n\025WRITE_PHONEBOOK_ENTRY\020\001\022\"\n\036READ_CURRE",
+      "NT_PHONEBOOK_ENTRIES\020\002\022\032\n\026FIND_PHONEBOOK" +
+      "_ENTRIES\020\003\022\025\n\021SUBSCRIBER_NUMBER\020\004*\377\004\n\016SM" +
+      "SMessageType\022\032\n\026SELECT_MESSAGE_SERVICE\020\000" +
+      "\022\035\n\031SELECT_SMS_MESSAGE_FORMAT\020\001\022\036\n\032SMS_S" +
+      "ERVICE_CENTER_ADDRESS\020\002\022!\n\035PREFERRED_SMS" +
+      "_MESSAGE_STORAGE\020\003\022\026\n\022DELETE_SMS_MESSAGE" +
+      "\020\004\022+\n\'LIST_SMS_MESSAGE_FROM_PREFERRED_ST" +
+      "ORAGE\020\005\022\024\n\020READ_SMS_MESSAGE\020\006\022\024\n\020SEND_SM" +
+      "S_MESSAGE\020\007\022\037\n\033WRITE_SMS_MESSAGE_TO_MEMO" +
+      "RY\020\010\022!\n\035SEND_SMS_MESSAGE_FROM_STORAGE\020\t\022",
+      "\024\n\020SEND_SMS_COMMAND\020\n\022\036\n\032NEW_SMS_MESSAGE" +
+      "_INDICATION\020\013\022\030\n\024RESTORE_SMS_SETTINGS\020\014\022" +
+      "\025\n\021SAVE_SMS_SETTINGS\020\r\022%\n!SELECT_CELL_BR" +
+      "OADCAST_SMS_MESSAGE\020\016\022!\n\035SHOW_SMS_TEXT_M" +
+      "ODE_PARAMETERS\020\017\022 \n\034SET_SMS_TEXT_MODE_PA" +
+      "RAMETERS\020\020\0226\n2STRORE_CLASS0_SMS_TO_SIM_W" +
+      "HEN_RECEIVING_CLASS0_SMS\020\021\022\022\n\016DELETE_ALL" +
+      "_SMS\020\022\022\033\n\027CONFIGURE_SMS_CODE_MODE\020\023*\367\006\n\026" +
+      "CallRelatedMessageType\022\033\n\027ANSWER_AN_INCO" +
+      "MING_CALL\020\000\022)\n%MOBILE_ORIENTED_CALL_TO_D",
+      "IAL_A_NUMBER\020\001\022\"\n\036DISCONNECT_EXISTING_CO" +
+      "NNECTION\020\002\022)\n%SWITCH_FROM_DATA_MODE_TO_C" +
+      "OMMAND_MODE\020\003\022)\n%SWITCH_FROM_COMMAND_MOD" +
+      "E_TO_DATA_MODE\020\004\022\030\n\024SELECT_PULSE_DIALING" +
+      "\020\005\0229\n5SET_NUMBER_OF_RINGS_BEFORE_AUTOMAT" +
+      "ICLY_ANSWERING_CALL\020\006\022\"\n\036SET_PAUSE_BEFOR" +
+      "E_BLIND_DIALING\020\007\022;\n7SET_NUMBER_OF_SECON" +
+      "DS_TO_WAIT_FOR_CONNECTION_COMPLETION\020\010\0229" +
+      "\n5SET_NUMBER_OF_SECONDS_TO_WAIT_FOR_COMM" +
+      "A_DIAL_MODIFIER\020\t\022A\n=SET_DISCONNECT_DELA",
+      "Y_AFTER_INDICATING_ABSENCE_OF_DATA_CARRI" +
+      "ER\020\n\022\027\n\023SELECT_TONE_DIALING\020\013\022\032\n\026SELECT_" +
+      "TYPE_OF_ADDRESS\020\014\022\034\n\030LIST_CURRENT_CALLS_" +
+      "OF_ME\020\r\022\035\n\031SERVICE_REPORTING_CONTROL\020\016\0229" +
+      "\n5SET_CELLULAR_RESULT_CODE_FOR_INCOMING_" +
+      "CALL_INDICATION\020\017\022(\n$SELECT_RADIO_LINK_P" +
+      "ROTOCOL_PARAMETER\020\020\022\033\n\027SINGLE_NUMBERING_" +
+      "SCHEME\020\021\022$\n CONFIGURE_ALTERNATING_MODE_C" +
+      "ALLS\020\022\022\034\n\030PREFERENCE_SPEACH_CODING\020\023\022\036\n\032" +
+      "SPEECH_CHANNEL_TYPE_REPORT\020\024\022\017\n\013DISABLE_",
+      "ATH\020\025*\265\002\n\031NetworkServiceMessageType\022\026\n\022O" +
+      "PERATOR_SELECTION\020\000\022\030\n\024NETWORK_REGISTRAT" +
+      "ION\020\001\022\031\n\025SIGNAL_QUALITY_REPORT\020\002\022\033\n\027PREF" +
+      "ERRED_OPERATOR_LIST\020\003\022\027\n\023READ_OPEARATR_N" +
+      "AMES\020\004\022%\n!GET_AND_SET_MOBILE_OPERATION_B" +
+      "AND\020\005\0225\n1NETWORK_SERVICE_SWITCH_ON_OR_OF" +
+      "F_ENGINEERING_MODE\020\006\022\037\n\033SCAN_POWER_OF_GS" +
+      "M_FREQUENCY\020\007\022\026\n\022LOCK_GSM_FREQUENCY\020\010*\347\002" +
+      "\n\025SIMRelatedMessageType\022\020\n\014REQUEST_IMSI\020" +
+      "\000\022\021\n\rFACILITY_LOCK\020\001\022\r\n\tENTER_PIN\020\002\022\023\n\017C",
+      "HANGE_PASSWORD\020\003\022\031\n\025RESTRICTED_SIM_ACCES" +
+      "S\020\004\022\026\n\022GENERIC_SIM_ACCESS\020\005\022\034\n\030CHANGE_PS" +
+      "_SUPER_PASSWORD\020\006\022\r\n\tSHOW_CCID\020\007\022\023\n\017SHOW" +
+      "_CCID_QCCID\020\010\022!\n\035GET_SIM_CARD_GROUP_IDEN" +
+      "TIFIER\020\t\022%\n!SELECT_SIM_CARD_OPERATING_VO" +
+      "LTAGE\020\n\022\035\n\031GET_SERVICE_PROVIDER_NAME\020\013\022\'" +
+      "\n#TIME_REMAINING_TO_INPUT_SIM_PIN_PUK\020\014*" +
+      "\265\005\n\030StatusControlMessageType\022\031\n\025EXTENDED" +
+      "_ERROR_REPORT\020\000\022$\n MOBILE_EQUIPMENT_ACTI" +
+      "VITY_STATUS\020\001\022\036\n\032INDICATE_RI_WHEN_USING_",
+      "URC\020\002\022(\n$SHOW_STATE_OF_MOBILE_ORIGINATED" +
+      "_CELL\020\003\022.\n*REFUSE_TO_RECEIVE_SMS_INCOMIN" +
+      "G_CALL_OR_NOT\020\004\022.\n*ENABLE_OR_DISABLE_INI" +
+      "TIAL_URC_PRESENTATION\020\005\0229\n5ENABLE_OR_DIS" +
+      "ABLE_PROPRIETARY_UNSOLICITED_INDICATIONS" +
+      "\020\006\022!\n\035QUERY_STATE_OF_INITIALIZATION\020\007\022\034\n" +
+      "\030QUERY_GSM_NETWORK_STATUS\020\010\022 \n\034NETWORK_T" +
+      "IME_SYNCHRONIZATION\020\t\022+\n\'OBTAIN_LATEST_N" +
+      "ETWORK_TIME_SYNCHRONIZED\020\n\0228\n4NETWORK_TI" +
+      "ME_SYNCHRONIZATION_AND_UPDATE_THE_RTC_TI",
+      "ME\020\013\022\'\n#NETWORK_TIME_SYNCHRONIZATION_REP" +
+      "ORT\020\014\022\'\n#SWITCH_ON_OR_OFF_DETECTING_SIM_" +
+      "CARD\020\r\022!\n\035SIM_INSERTED_STATUS_REPORTING\020" +
+      "\016\0224\n0CSC_CALL_OR_GPRS_PDP_CONTEXT_TERMIN" +
+      "AL_INDICATION\020\017*\335\002\n!SerialInterfaceContr" +
+      "olMessageType\022\031\n\025SET_DCD_FUNCTION_MODE\020\000" +
+      "\022\031\n\025SET_DTR_FUNCTION_MODE\020\001\022\'\n#SET_TE_TA" +
+      "_CONTROL_CHARACTER_FRAMING\020\002\022%\n!SET_TE_T" +
+      "A_LOCAL_DATA_FLOW_CONTROL\020\003\022,\n(SET_TE_TA" +
+      "_LOCAL_DATA_RATE_REPORTING_MODE\020\004\022\036\n\032SET",
+      "_TE_TA_FIXED_LOCAL_RATE\020\005\022\027\n\023MULTIPLEXER" +
+      "_CONTROL\020\006\022 \n\034CONFIGURE_DUAL_UART_FUNCTI" +
+      "ON\020\007\022)\n%CONFIGURE_PARAMETERS_OF_THE_DUAL" +
+      "_UART\020\010*\376\006\n\023GeneralMesssageType\022.\n*DISPL" +
+      "AY_PRODUCT_IDENTIFICATION_INFORMATION\020\000\022" +
+      "\'\n#REQUEST_MANUFACTURER_IDENTIFICATION\020\001" +
+      "\022#\n\037REQUEST_TA_MODEL_IDENTIFICATION\020\002\022&\n" +
+      "\"REQUEST_TA_REVISION_IDENTIFICATION\020\003\022(\n" +
+      "$REQUEST_GLOBAL_OBJECT_IDENTIFICATION\020\004\022" +
+      ",\n(REQUEST_MANUFACTURER_IDENTIFICATION_C",
+      "GMI\020\005\022 \n\034REQUEST_MODEL_IDENTIFICATION\020\006\022" +
+      "+\n\'REQUEST_TA_REVISION_IDENTIFICATION_CG" +
+      "MR\020\007\022\020\n\014REQUEST_IMEI\020\010\0220\n,REQUEST_PRODUC" +
+      "T_SERIAL_NUMBER_IDENTIFICATION\020\t\022\025\n\021REQU" +
+      "EST_IMEI_QGSN\020\n\0227\n3SET_ALL_CURRENT_PARAM" +
+      "ETERS_TO_MANUFACTURER_DEFAULTS\020\013\022!\n\035DISP" +
+      "LAY_CURRENT_CONFIGURATION\020\014\0224\n0STORE_CUR" +
+      "RENT_PARAMETERS_TO_USER_DEFINED_PROFILE\020" +
+      "\r\022%\n!SET_RESULT_CODE_PRESENTATION_CODE\020\016" +
+      "\022\026\n\022TA_RESPONSE_FORMAT\020\017\022\"\n\036SET_CONNECT_",
+      "RESULT_CODE_FORMAT\020\020\0226\n2SET_ALL_CURRENT_" +
+      "PARAMETERS_TO_USER_DEFINED_PROFILE\020\021\022\033\n\027" +
+      "SET_PHONE_FUNCTIONALITY\020\022\022\r\n\tPOWER_OFF\020\023" +
+      "\022!\n\035REPORT_MOBILE_EQUIPMENT_ERROR\020\024\022\030\n\024S" +
+      "ET_TE_CHARACTER_SET\020\025\022)\n%REQUEST_COMPLET" +
+      "E_TA_CAPABILITIES_LIST\020\026*\312\003\n\017SMTPMessage" +
+      "Type\022(\n$SET_THE_USER_NAME_FOR_AUTHENTICA" +
+      "TION\020\000\022\'\n#SET_THE_PASSWORD_FOR_AUTHENTIC" +
+      "ATION\020\001\022\'\n#SET_THE_EMAIL_ADDRESS_OF_THE_" +
+      "SENDER\020\002\022\030\n\024SET_THE_SENDERS_NAME\020\003\022+\n\'SE",
+      "T_THE_ADDRESS_AND_PORT_OD_SMTP_SERVER\020\004\022" +
+      "\034\n\030ADD_OR_DELETE_RECIPIENTS\020\005\022!\n\035EDIT_TH" +
+      "E_SUBJECT_OF_THE_EMAIL\020\006\022!\n\035EDIT_THE_CON" +
+      "TENT_OF_THE_EMAIL\020\007\022#\n\037ADD_AN_ATTACHMENT" +
+      "_FOR_THE_EMAIL\020\010\022\030\n\024DELETE_AN_ATTACHMENT" +
+      "\020\t\022)\n%CLEAR_ALL_CONFIGURATIONS_AND_CONTE" +
+      "NTS\020\n\022\026\n\022SMTP_CONFIGURATION\020\013\022\016\n\nSEND_EM" +
+      "AIL\020\014*_\n\024RecordingMessageType\022\025\n\021RECORD_" +
+      "MEDIA_FILE\020\000\022\023\n\017PLAY_MEDIA_FILE\020\001\022\033\n\027STO" +
+      "P_PLAYING_MEDIA_FILE\020\002*\352\001\n\023QuecCellMessa",
+      "geType\022\"\n\036SCAN_BASIC_STATION_INFORMATION" +
+      "\020\000\022%\n!SWITCH_ON_OR_OFF_ENGINEERING_MODE\020" +
+      "\001\022\031\n\025LOCK_THE_BASE_STATION\020\002\022\036\n\032SCAN_ARF" +
+      "CN_RECEIVING_LEVEL\020\003\022\033\n\027GET_CHANNEL_INFO" +
+      "RMATION\020\004\022\033\n\027GET_LAST_VALID_TA_VALUE\020\005\022\023" +
+      "\n\017FORBID_OPERATOR\020\006*\337\003\n\016MMSMessageType\022\033" +
+      "\n\027SET_THE_URL_OF_THE_MMSC\020\000\022\025\n\021SET_THE_M" +
+      "MS_PROXY\020\001\022-\n)SET_THE_PARAMETER_FOR_SEND" +
+      "ING_MMS_MESSAGE\020\002\022%\n!SET_CHARACTER_SETS_" +
+      "AND_INPUT_MODE\020\003\022\025\n\021WRITE_MMS_MESSAGE\020\004\022",
+      "\024\n\020SEND_MMS_MESSAGE\020\005\022#\n\037MENAGE_THE_RECE" +
+      "IVED_MMS_MESSAGE\020\006\022\035\n\031READ_RECEIVED_MMS_" +
+      "MESSAGE\020\007\022%\n!RECEIVE_MMS_MESSAGE_FROM_TH" +
+      "E_MMSC\020\010\022(\n$SET_PRIORITY_OF_MMS_MESSAGE_" +
+      "AND_CALL\020\t\022.\n*SET_DUR_ATTRIBUTE_VALUE_IN" +
+      "_THE_SMIL_SCRIPT\020\n\022\032\n\026SET_MMS_SMS_TRANSA" +
+      "CTOR\020\013\022\036\n\032ENABLE_OUTPUT_TEXT_IN_USC2\020\014\022\025" +
+      "\n\021OUTPUT_FILE_STYLE\020\r*\350\001\n\016STKMessageType" +
+      "\022\034\n\030TURN_ON_OFF_STK_FUNCTION\020\000\022\030\n\024STK_PR" +
+      "OFILE_DOWNLOAD\020\001\022\030\n\024STK_ENVELOPE_COMMAND",
+      "\020\002\022\031\n\025STK_TERMINAL_RESPONSE\020\003\022\024\n\020TRIGGER" +
+      "_STK_CALL\020\004\022\023\n\017TRIGGER_STK_SMS\020\005\022\022\n\016TRIG" +
+      "GER_STK_SS\020\006\022\024\n\020TRIGGER_STK_USSD\020\007\022\024\n\020TR" +
+      "IGGER_STK_DTMF\020\010*\356\006\n\016FTPMessageType\022/\n+O" +
+      "PEN_AN_FTP_SERVICE_TO_THE_GIVEN_FTP_SERV" +
+      "ER\020\000\022\031\n\025CLOSE_THE_FTP_SERVICE\020\001\022#\n\037UPLOA" +
+      "D_A_FILE_TO_THE_FTP_SERVER\020\002\022\'\n#DOWNLOAD" +
+      "_A_FILE_FROM_THE_FTP_SERVER\020\003\022=\n9SET_THE" +
+      "_PATH_IN_THE_FTP_SERVER_TO_UPLOAD_OR_DOW" +
+      "NLOAD_FILE\020\004\0228\n4SET_THE_USER_NAME_OF_THE",
+      "_ACCOUNT_TO_OPEN_FTP_SERVICE\020\005\0227\n3SET_TH" +
+      "E_PASSWORD_OF_THE_ACCOUNT_TO_OPEN_FTP_SE" +
+      "RVICE\020\006\0228\n4SET_SOME_CONFIGURABLE_PARAMET" +
+      "ERS_FOR_THE_FTP_SERVICE\020\007\022\037\n\033QUERY_STATU" +
+      "S_OF_FTP_SERVICE\020\010\0229\n5QUERY_THE_REAL_SIZ" +
+      "E_TRANSFERED_IN_THE_LATEST_TRANSFER\020\t\0220\n" +
+      ",RENAME_FILE_OR_FOLDER_NAME_ON_THE_FTP_S" +
+      "ERVER\020\n\0226\n2QUERY_THE_SIZE_OF_APPOINTED_F" +
+      "ILE_ON_THE_FTP_SERVER\020\013\022/\n+DELETE_THE_AP" +
+      "POINTED_FILE_ON_THE_FTP_SERVER\020\014\0220\n,ESTA",
+      "BLISH_A_NEW_FILEFOLDER_ON_THE_FTP_SERVER" +
+      "\020\r\022)\n%REMOVE_A_FILEFOLDER_ON_THE_FTP_SER" +
+      "VER\020\016\022D\n@LIST_CONTENTS_OF_DIRECTORY_OR_F" +
+      "ILE_INFORMATION_ON_THE_FTP_SERVER\020\017\022<\n8L" +
+      "IST_FILE_NAMES_IN_THE_GIVEN_DIRECTORY_ON" +
+      "_THE_FTP_SERVER\020\020*\375\002\n\017FileMessageType\022\031\n" +
+      "\025GET_STORAGE_DATE_SIZE\020\000\022\016\n\nLIST_FILES\020\001" +
+      "\022\032\n\026UPLOAD_FILE_TO_STORAGE\020\002\022\036\n\032DOWNLOAD" +
+      "_FILE_FROM_STORAGE\020\003\022\032\n\026DELETE_FILE_IN_S" +
+      "TORAGE\020\004\022\r\n\tMOVE_FILE\020\005\022\r\n\tOPEN_FILE\020\006\022\r",
+      "\n\tREAD_FILE\020\007\022\016\n\nWRITE_FILE\020\010\022\r\n\tSEEK_FI" +
+      "LE\020\t\022\016\n\nCLOSE_FILE\020\n\022\"\n\036GET_OFFSET_OF_TH" +
+      "E_FILE_POINTER\020\013\0224\n0FORCE_TO_WRITE_DATA_" +
+      "REMAINING_IN_THE_FILE_BUFFER\020\014\0221\n-TRUNCA" +
+      "TE_THE_SPECIFIED_FILE_FROM_FILE_POINTER\020" +
+      "\r*\244\001\n\017HTTPMessageType\022\027\n\023SET_HTTP_SERVER" +
+      "_URL\020\000\022\031\n\025SEND_HTTP_GET_REQUEST\020\001\022\035\n\031REA" +
+      "D_HTTP_SERVER_RESPONSE\020\002\022\032\n\026SEND_HTTP_PO" +
+      "ST_REQUEST\020\003\022\"\n\036DOWNLODA_FILE_FROM_HTTP_" +
+      "SERVER\020\004*\240\037\n\005Error\022\006\n\002OK\020\000\022\020\n\014UNKNOW_ERR",
+      "OR\020\001\022\020\n\014SERVICE_BUSY\020\003\022\034\n\030FAILED_TO_GET_" +
+      "IP_ADDRESS\020\004\022\021\n\rNETWORK_ERROR\020\005\022\026\n\022FTP_S" +
+      "ESSION_CLOSED\020\006\022\032\n\026DATA_CONNECTION_CLOSE" +
+      "D\020\007\022#\n\037GPRS_CSD_CONTEXT_IS_DEACTIVATED\020\010" +
+      "\022\013\n\007TIMEOUT\020\t\022\033\n\027INPUT_PARAMETER_ILLEGAL" +
+      "\020\n\022$\n FILE_NOT_FOUND_IN_LOCAL_POSITION\020\013" +
+      "\022(\n$FAILED_TO_GET_FILE_IN_LOCAL_POSITION" +
+      "\020\014\022\024\n\020NO_ENOUGH_MEMORY\020\r\022!\n\035FAILED_TO_SA" +
+      "VE_THE_ATTACHMENT\020\016\022 \n\034THE_INPUT_PARAMET" +
+      "ER_IS_WRONG\020\017\022$\n\037FTP_SERVER_CANT_SUPPORT",
+      "_SERVICE\020\245\003\022#\n\036FAILDE_TO_OPEN_DATA_CONNE" +
+      "CTION\020\251\003\022/\n*THE_CONNECTION_IS_CLOSED_AND" +
+      "_STOP_TRANSFER\020\252\003\022\'\n\"THE_REQUEST_FOR_FIL" +
+      "E_ISNT_OPERATED\020\302\003\022)\n$THE_FTP_SERVER_HAS" +
+      "_NOT_ENOUGH_MEMORY\020\304\003\022+\n&THE_FORMAT_OF_T" +
+      "HE_FTP_COMMAND_IS_WRONG\020\364\003\022,\n\'THE_PATTER" +
+      "N_OF_THE_FTP_COMMAND_IS_WRONG\020\365\003\0220\n+THE_" +
+      "FTP_COMMAND_ISNT_OPERATED_BY_FTP_SERVER\020" +
+      "\366\003\022\035\n\030BAD_SEQUENCE_OF_COMMANDS\020\367\003\022&\n!COM" +
+      "MAND_PARAMETER_NOT_IMPLEMENTED\020\370\003\022!\n\034DOM",
+      "AIN_DOES_NOT_ACCEPT_EMAIL\020\211\004\022\034\n\027NOT_LOGI" +
+      "N_TO_FTP_SERVER\020\222\004\022\"\n\035NEEDED_INFORMATION" +
+      "_OF_ACCOUNT\020\224\004\022\032\n\025AUTHENTICATION_FAILED\020" +
+      "\227\004\022 \n\033THE_REQUEST_IS_NOT_OPERATED\020\246\004\022\033\n\026" +
+      "THE_REQUEST_IS_STOPPED\020\247\004\022%\n THE_REQUEST" +
+      "_OF_A_FILE_IS_STOPPED\020\250\004\022\031\n\024FILE_NAME_IS" +
+      "_ILLEGAL\020\251\004\022\027\n\022TRANSACTION_FAILED\020\252\004\022\022\n\r" +
+      "HTTP_TIME_OUT\020\331\035\022\016\n\tHTTP_BUSY\020\332\035\022\023\n\016HTTP" +
+      "_UART_BUSY\020\333\035\022\030\n\023HTTP_GET_NO_REQUEST\020\334\035\022" +
+      "\026\n\021HTTP_NETWORK_BUSY\020\335\035\022\035\n\030HTTP_NETWORK_",
+      "OPEN_FAILED\020\336\035\022\033\n\026HTTP_NETWORK_NO_CONFIG" +
+      "\020\337\035\022\032\n\025HTTP_NETWORK_DEACTIVE\020\340\035\022\027\n\022HTTP_" +
+      "NETWORK_ERROR\020\341\035\022\023\n\016HTTP_URL_ERROR\020\342\035\022\023\n" +
+      "\016HTTP_EMPTY_URL\020\343\035\022\027\n\022HTTP_IP_ADDR_ERROR" +
+      "\020\344\035\022\023\n\016HTTP_DNS_ERROR\020\345\035\022\035\n\030HTTP_SOCKET_" +
+      "CREATE_ERROR\020\346\035\022\036\n\031HTTP_SOCKET_CONNECT_E" +
+      "RROR\020\347\035\022\033\n\026HTTP_SOCKET_READ_ERROR\020\350\035\022\034\n\027" +
+      "HTTP_SOCKET_WRITE_ERROR\020\351\035\022\026\n\021HTTP_SOCKE" +
+      "T_CLOSE\020\352\035\022\033\n\026HTTP_DATA_ENCODE_ERROR\020\353\035\022" +
+      "\033\n\026HTTP_DATA_DECODE_ERROR\020\354\035\022\031\n\024HTTP_TO_",
+      "READ_TIMEOUT\020\355\035\022\031\n\024HTTP_RESPONSE_FAILED\020" +
+      "\356\035\022\027\n\022INCOMING_CALL_BUSY\020\357\035\022\024\n\017VOICE_CAL" +
+      "L_BUSY\020\360\035\022\022\n\rINPUT_TIMEOUT\020\361\035\022\026\n\021WAIT_DA" +
+      "TA_TIMEOUT\020\362\035\022\037\n\032WAIT_HTTP_RESPONSE_TIME" +
+      "OUT\020\363\035\022\026\n\021ALLOC_MEMORY_FAIL\020\364\035\022\031\n\024HTTP_N" +
+      "EED_RELOCATION\020\365\035\022\030\n\023INVALID_INPUT_VALUE" +
+      "\020\231\036\022\021\n\014MMS_TIME_OUT\020\275\036\022\021\n\014URL_TOO_LONG\020\276" +
+      "\036\022\020\n\013INVALID_URL\020\277\036\022\026\n\021UNSUPPORTED_PROXY" +
+      "\020\300\036\022\032\n\025INVALID_PROXY_ADDRESS\020\301\036\022\025\n\020IP_AD" +
+      "DRESS_ERROR\020\302\036\022\016\n\tDNS_ERROR\020\303\036\022\024\n\017PARAME",
+      "TER_ERROR\020\304\036\022\030\n\023TO_ADDRESS_EXCEEDED\020\305\036\022\030" +
+      "\n\023CC_ADDRESS_EXCEEDED\020\306\036\022\031\n\024BCC_ADDRESS_" +
+      "EXCEEDED\020\307\036\022$\n\037APPENDED_FILE_CAPACITY_EX" +
+      "CEEDED\020\310\036\022\027\n\022FILE_NAME_TOO_LONG\020\311\036\022 \n\033TH" +
+      "E_NUMBER_OF_FILE_EXCEEDED\020\312\036\022\031\n\024NON_EXIS" +
+      "TENT_ADDRESS\020\313\036\022\025\n\020UFS_STORAGE_FULL\020\314\036\022\017" +
+      "\n\nDRIVE_FULL\020\315\036\022\020\n\013DRIVE_ERROR\020\316\036\022\016\n\tNOT" +
+      "_FOUND\020\317\036\022\026\n\021INVALID_FILE_NAME\020\320\036\022\031\n\024FIL" +
+      "E_ALREADY_EXISTED\020\321\036\022\032\n\025FAILED_TO_CREATE" +
+      "_FILE\020\322\036\022\031\n\024FAILED_TO_WRITE_FILE\020\323\036\022\030\n\023F",
+      "AILED_TO_OPEN_FILE\020\324\036\022\030\n\023FAILED_TO_READ_" +
+      "FILE\020\325\036\022\r\n\010MMS_BUSY\020\326\036\022\025\n\020SENDING_MMS_BU" +
+      "SY\020\327\036\022\030\n\023SENDING_MMS_STOPPED\020\330\036\022\034\n\027ALREA" +
+      "DY_STOPPED_TO_SEND\020\331\036\022\027\n\022RECEIVING_MMS_B" +
+      "USY\020\332\036\022\032\n\025RECEIVING_MMS_STOPPED\020\333\036\022\034\n\027AL" +
+      "READY_STOPPED_RECEIVE\020\334\036\022\032\n\025HTTP_RESPONS" +
+      "E_FALIURE\020\335\036\022\031\n\024INVALID_MMS_RESPONSE\020\336\036\022" +
+      "\027\n\022MMS_RESPONSE_ERROR\020\337\036\022\031\n\024INVALID_PUSH" +
+      "_MESSAGE\020\340\036\022\027\n\022ALREADY_DONWLOADED\020\341\036\022\021\n\014" +
+      "NETWORK_BUSY\020\342\036\022\033\n\026FAILED_TO_OPEN_NETWOR",
+      "K\020\343\036\022\032\n\025NETWORK_NO_CONFIGURED\020\344\036\022\030\n\023NETW" +
+      "ORK_DEACTIVATED\020\345\036\022\026\n\021MMS_NETWORK_ERROR\020" +
+      "\346\036\022\025\n\020NETWORK_SHUTDOWN\020\347\036\022\016\n\tUART_BUSY\020\350" +
+      "\036\022\021\n\014UART_ESCAPED\020\351\036\022\034\n\027FAILED_TO_CREATE" +
+      "_SOCKET\020\352\036\022\035\n\030FAILED_TO_CONNECT_SOCKET\020\353" +
+      "\036\022\032\n\025FAILED_TO_READ_SOCKET\020\354\036\022\033\n\026FAILED_" +
+      "TO_WRITE_SOCKET\020\355\036\022\022\n\rSOCKET_CLOSED\020\356\036\022\025" +
+      "\n\020MMS_LENGTH_ERROR\020\357\036\022\031\n\024FAILED_TO_ENCOD" +
+      "E_MMS\020\360\036\022\031\n\024FAILED_TO_DECODE_MMS\020\361\036\022\032\n\025F" +
+      "AILED_TO_DECODE_HTTP\020\362\036\022\"\n\035FAILED_TO_DEC",
+      "ODE_PUSH_MESSAGE\020\363\036\022\024\n\017PDU_ALIGN_ERROR\020\364" +
+      "\036\022\030\n\023PDU_CHARACTER_ERROR\020\365\036\022\024\n\017STRING_TO" +
+      "O_LONG\020\366\036\022\r\n\010MMS_FULL\020\367\036\022\025\n\020NON_EXISTENT" +
+      "_MMS\020\370\036\022\024\n\017INVALID_ADDRESS\020\371\036\022\030\n\023MMS_VOI" +
+      "CE_CALL_BUSY\020\372\036\022\030\n\023ALLOC_MEMORY_FAILED\020\373" +
+      "\036\022\026\n\021EXCEED_MAX_LENGTH\020\240\037\022\023\n\016OPEN_FILE_F" +
+      "AIL\020\241\037\022\024\n\017WRITE_FILE_FAIL\020\242\037\022\022\n\rGET_SIZE" +
+      "_FAIL\020\243\037\022\016\n\tREAD_FAIL\020\244\037\022\023\n\016LIST_FILE_FA" +
+      "IL\020\245\037\022\025\n\020DELETE_FILE_FAIL\020\246\037\022\027\n\022GET_DISC" +
+      "_INFO_FAIL\020\247\037\022\r\n\010NO_SPACE\020\250\037\022\r\n\010TIME_OUT",
+      "\020\251\037\022\030\n\023HTTP_FILE_NOT_FOUND\020\252\037\022\023\n\016FILE_TO" +
+      "O_LARGE\020\253\037\022\027\n\022FILE_ALREADY_EXIST\020\254\037\022\026\n\021I" +
+      "NVALID_PARAMETER\020\255\037\022\021\n\014DRIVER_ERROR\020\256\037\022\020" +
+      "\n\013CREATE_FAIL\020\257\037\022\022\n\rACCESS_DENIED\020\260\037\022\026\n\021" +
+      "FILE_IS_TOO_LARGE\020\261\037\022\021\n\014WRONG_FORMAT\020\314!\022" +
+      "\024\n\017AUDIO_TASK_BUSY\020\316!\022\027\n\022CREATE_FILE_FAI" +
+      "LED\020\317!\022/\n*ADDITIONAL_RECORDING_IN_A_DIFF" +
+      "ERENT_FORMAT\020\320!\022\016\n\tDISC_FULL\020\321!\022\035\n\030WRITE" +
+      "_PROTECTION_ON_FILE\020\322!\022\033\n\026RECORDING_UNKN" +
+      "OW_ERROR\020\223#B \n\023com.rtrk.atcommandsB\tATCo",
+      "mmandb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -55854,31 +56829,31 @@ public final class ATCommand {
     internal_static_com_rtrk_protobuf_StatusControlCommand_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_rtrk_protobuf_StatusControlCommand_descriptor,
-        new java.lang.String[] { "MessageType", "LocationID", "Cause", "Pas", "Status", "RefuseSMS", "RefuseCall", "Mode", "Extunsol", "State", "Enable", "Time", "DatlightSavingTime", "InsertLevel", "PinChoice", "InsertStatus", "N", "Type", });
+        new java.lang.String[] { "MessageType", "Test", "Read", "Execution", "LocationID", "Cause", "Pas", "Status", "RefuseSMS", "RefuseCall", "Mode", "Extunsol", "State", "Enable", "Time", "DatlightSavingTime", "InsertLevel", "PinChoice", "InsertStatus", "Type", });
     internal_static_com_rtrk_protobuf_SIMRelatedCommand_descriptor =
       getDescriptor().getMessageTypes().get(11);
     internal_static_com_rtrk_protobuf_SIMRelatedCommand_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_rtrk_protobuf_SIMRelatedCommand_descriptor,
-        new java.lang.String[] { "MessageType", "Fac", "Mode", "Password", "Class_", "Status", "Pin", "NewPin", "PwdLength", "OldPwd", "NewPwd", "Command", "FileID", "P1", "P2", "P3", "SW1", "SW2", "Data", "Response", "Length", "CCIDData", "GID1", "GID2", "ServiceProvideName", "DisplayMode", "Chv1", "Chv2", "Puk1", "Puk2", });
+        new java.lang.String[] { "MessageType", "Test", "Read", "Execution", "Fac", "Mode", "Password", "Class_", "Status", "Pin", "NewPin", "PwdLength", "OldPwd", "NewPwd", "Command", "FileID", "P1", "P2", "P3", "SW1", "SW2", "Data", "Response", "Length", "CCIDData", "GID1", "GID2", "ServiceProvideName", "DisplayMode", "Chv1", "Chv2", "Puk1", "Puk2", });
     internal_static_com_rtrk_protobuf_NetworkServiceCommand_descriptor =
       getDescriptor().getMessageTypes().get(12);
     internal_static_com_rtrk_protobuf_NetworkServiceCommand_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_rtrk_protobuf_NetworkServiceCommand_descriptor,
-        new java.lang.String[] { "MessageType", "Status", "Operator", "Mode", "Format", "N", "LocationAreaCode", "CellID", "Rssi", "Ber", "Index", "Numericn", "Alphan", "OpBand", "Dump", "Band", "Frequency", "SignalStrength", "Band1900", "Arfcn1", "Arfcn2", "Arfcn3", });
+        new java.lang.String[] { "MessageType", "Test", "Read", "Execution", "Status", "Operator", "Mode", "Format", "N", "LocationAreaCode", "CellID", "Rssi", "Ber", "Index", "Numericn", "Alphan", "OpBand", "Dump", "Band", "Frequency", "SignalStrength", "Band1900", "Arfcn1", "Arfcn2", "Arfcn3", });
     internal_static_com_rtrk_protobuf_CallRelatedCommand_descriptor =
       getDescriptor().getMessageTypes().get(13);
     internal_static_com_rtrk_protobuf_CallRelatedCommand_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_rtrk_protobuf_CallRelatedCommand_descriptor,
-        new java.lang.String[] { "MessageType", "Number", "GSMModifier", "InterworkinWindowsSize", "MobileWindowSize", "AcknowledmentTimer", "RetransimissionAttempts", "RPLVersion", "ResequencingPeriod", "N", "Type", "Index", "Dir", "Stat", "Mode", "Multiparty", "SpeechChannel", "DisableATH", });
+        new java.lang.String[] { "MessageType", "Test", "Read", "Execution", "Number", "GSMModifier", "InterworkinWindowsSize", "MobileWindowSize", "AcknowledmentTimer", "RetransimissionAttempts", "RPLVersion", "ResequencingPeriod", "N", "Type", "Index", "Dir", "Stat", "Mode", "Multiparty", "SpeechChannel", "DisableATH", "SetUpVoiceCall", });
     internal_static_com_rtrk_protobuf_SMSCommand_descriptor =
       getDescriptor().getMessageTypes().get(14);
     internal_static_com_rtrk_protobuf_SMSCommand_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_rtrk_protobuf_SMSCommand_descriptor,
-        new java.lang.String[] { "MesssageType", "Service", "MobileTerminatedMessage", "MobileOrientedMessage", "BroadcastTypeMessage", "Mode", "SCAddress", "ToSCAddress", "Mem1", "Mem2", "Mem3", "Index", "Delflag", "Alpha", "DestinationAddress", "Data", "Length", "OriginatingAddress", "Pdu", "ServiceCenterTimeStamp", "TPDestinationAddress", "TPOriginatingAddress", "Fo", "MessageIdentifier", "ProtocolIdentifier", "Stat", "ValidityPeriod", "MessageReference", "Ackpdu", "CommandType", "MessageNumber", "Ds", "Buffer", "Profile", "MessageIdentifiers", "Dcss", "Show", "DataCodinScheme", "Type", "Status", "FirstOctet", });
+        new java.lang.String[] { "MesssageType", "Test", "Read", "Execution", "Service", "MobileTerminatedMessage", "MobileOrientedMessage", "BroadcastTypeMessage", "Mode", "SCAddress", "ToSCAddress", "Mem1", "Mem2", "Mem3", "Index", "Delflag", "Alpha", "DestinationAddress", "Data", "Length", "OriginatingAddress", "Pdu", "ServiceCenterTimeStamp", "TPDestinationAddress", "TPOriginatingAddress", "Fo", "MessageIdentifier", "ProtocolIdentifier", "Stat", "ValidityPeriod", "MessageReference", "Ackpdu", "CommandType", "MessageNumber", "Ds", "Buffer", "Profile", "MessageIdentifiers", "Dcss", "Show", "DataCodinScheme", "Type", "Status", "FirstOctet", });
     internal_static_com_rtrk_protobuf_PhonebookCommand_descriptor =
       getDescriptor().getMessageTypes().get(15);
     internal_static_com_rtrk_protobuf_PhonebookCommand_fieldAccessorTable = new

@@ -124,9 +124,9 @@ message MMSCommand {
 
 message QuecCellCommand {
 	QuecCellMessageType messageType = 1;
-	bool test=2;
-	bool read=3;
-	bool execution=4;
+	bool test = 2;
+	bool read = 3;
+	bool execution = 4;
 	int32 status = 5;
 	string operatorInString = 6;
 	string operatorInShortString = 7;
@@ -220,9 +220,9 @@ message STKCommand {
 
 message GeneralCommand {
 	GeneralMesssageType messageType = 1;
-	bool test=2;
-	bool read=3;
-	bool execution=4;
+	bool test = 2;
+	bool read = 3;
+	bool execution = 4;
 	int32 value = 5;
 	int32 n = 6;
 	int32 functionality = 7;
@@ -232,9 +232,9 @@ message GeneralCommand {
 
 message SerialInterfaceControlCommand {
 	SerialInterfaceControlMessageType messageType = 1;
-	bool test=2;
-	bool read=3;
-	bool execution=4;
+	bool test = 2;
+	bool read = 3;
+	bool execution = 4;
 	int32 value = 5;
 	int32 format = 6;
 	int32 partity = 7;
@@ -258,30 +258,35 @@ message SerialInterfaceControlCommand {
 
 message StatusControlCommand {
 	StatusControlMessageType messageType = 1;
-	int32 locationID = 2;
-	string cause = 3;
-	int32 pas = 4;
-	int32 status = 5;
-	int32 refuseSMS = 6;
-	int32 refuseCall = 7;
-	int32 mode = 8;
-	string extunsol = 9;
-	int32 state = 10;
-	int32 enable = 11;
-	string time = 12;
-	string datlightSavingTime = 13; //ds
-	int32 insertLevel = 14;
-	int32 pinChoice = 15;
-	int32 insertStatus = 16;
-	int32 n = 17;
-	int32 type = 18;
+	bool test = 2;
+	bool read = 3;
+	bool execution = 4;
+	int32 locationID = 5;
+	string cause = 6;
+	int32 pas = 7;
+	int32 status = 8;
+	bool refuseSMS = 9;
+	bool refuseCall = 10;
+	int32 mode = 11;
+	string extunsol = 12;
+	int32 state = 13;
+	bool enable = 14;
+	string time = 15;
+	string datlightSavingTime = 16; //ds
+	int32 insertLevel = 17;
+	int32 pinChoice = 18;
+	int32 insertStatus = 19;
+	int32 type = 20;
 }
 
 message SIMRelatedCommand {
 	SIMRelatedMessageType messageType = 1;
-	string fac = 2;
-	int32 mode = 3;
-	string password = 4;
+	bool test = 2;
+	bool read = 3;
+	bool execution = 4;
+	string fac = 31;
+	int32 mode = 32;
+	string password = 33;
 	int32 class = 5;
 	int32 status = 6;
 	string pin = 7;
@@ -289,7 +294,7 @@ message SIMRelatedCommand {
 	int32 pwdLength = 9;
 	string oldPwd = 10;
 	string newPwd = 11;
-	int32 command = 12;
+	string command = 12;
 	int32 fileID = 13;
 	int32 P1 = 14;
 	int32 P2 = 15;
@@ -312,92 +317,102 @@ message SIMRelatedCommand {
 
 message NetworkServiceCommand {
 	NetworkServiceMessageType messageType = 1;
-	int32 status = 2;
-	int32 operator = 3;
-	int32 mode = 4;
-	int32 format = 5;
-	int32 n = 6;
-	string locationAreaCode = 7;
-	string cellID = 8;
-	int32 rssi = 9;
-	int32 ber = 10;
-	int32 index = 11;
-	string numericn = 12;
-	string alphan = 13;
-	string opBand = 14;
-	int32 dump = 15;
-	int32 band = 16;
-	int32 frequency = 17;
-	int32 signalStrength = 18; //dbm
-	int32 band1900 = 19;
-	int32 arfcn1 = 20;
-	int32 arfcn2 = 21;
-	int32 arfcn3 = 22;
+	bool test = 2;
+	bool read = 3;
+	bool execution = 4;
+	int32 status = 5;
+	int32 operator = 6;
+	int32 mode = 7;
+	int32 format = 8;
+	int32 n = 9;
+	string locationAreaCode = 10;
+	string cellID = 11;
+	int32 rssi = 12;
+	int32 ber = 13;
+	int32 index = 14;
+	string numericn = 15;
+	string alphan = 16;
+	string opBand = 17;
+	int32 dump = 18;
+	int32 band = 19;
+	int32 frequency = 20;
+	int32 signalStrength = 21; //dbm
+	int32 band1900 = 22;
+	int32 arfcn1 = 23;
+	int32 arfcn2 = 24;
+	int32 arfcn3 = 25;
 }
 
 message CallRelatedCommand {
 	CallRelatedMessageType messageType = 1;
-	string number = 2;
-	string GSMModifier = 3; //mgsm
-	int32 interworkinWindowsSize = 24; //iws
-	int32 mobileWindowSize = 5; //mws
-	int32 acknowledmentTimer = 6; //T1
-	int32 retransimissionAttempts = 7; //N2
-	int32 RPLVersion = 8; //verx
-	int32 resequencingPeriod = 9; //T4
-	int32 n = 10;
-	int32 type = 11;
-	int32 index = 12;
-	int32 dir = 13;
-	int32 stat = 14;
-	int32 mode = 15;
-	int32 multiparty = 16;
-	int32 speechChannel = 17;
-	bool disableATH = 18;
+	bool test = 2;
+	bool read = 3;
+	bool execution = 4;
+	string number = 5;
+	string GSMModifier = 6; //mgsm
+	int32 interworkinWindowsSize = 7; //iws
+	int32 mobileWindowSize = 8; //mws
+	int32 acknowledmentTimer = 9; //T1
+	int32 retransimissionAttempts = 10; //N2
+	int32 RPLVersion = 11; //verx
+	int32 resequencingPeriod = 12; //T4
+	int32 n = 13;
+	int32 type = 14;
+	int32 index = 15;
+	int32 dir = 16;
+	int32 stat = 17;
+	int32 mode = 18;
+	int32 multiparty = 19;
+	int32 speechChannel = 20;
+	bool disableATH = 21;
+	bool setUpVoiceCall = 22; //;
 }
 
 message SMSCommand {
 	SMSMessageType messsageType = 1;
-	int32 service = 2;
-	int32 mobileTerminatedMessage = 3; //mt
-	int32 mobileOrientedMessage = 4; //mo
-	int32 broadcastTypeMessage = 5; //bm
-	int32 mode = 6;
-	string SCAddress = 7; //sca
-	int32 toSCAddress = 8; //tosca
-	string mem1 = 9;
-	string mem2 = 10;
-	string mem3 = 11;
-	int32 index = 12;
-	int32 delflag = 13;
-	string alpha = 14;
-	string destinationAddress = 15; //da
-	bytes data = 16;
-	int32 length = 17;
-	string originatingAddress = 18; //oa
-	int32 pdu = 19;
-	string serviceCenterTimeStamp = 20; //scts
-	int32 TPDestinationAddress = 21; //toda
-	int32 TPOriginatingAddress = 22; //tooa
-	int32 fo = 23;
-	int32 messageIdentifier = 24; //mid
-	int32 protocolIdentifier = 25; //pid
-	string stat = 26;
-	string validityPeriod = 27; //vp
-	int32 messageReference = 28; //mr
-	int32 ackpdu = 29;
-	int32 commandType = 30; //ct
-	int32 messageNumber = 31; //mn
-	int32 ds = 32;
-	int32 buffer = 33;
-	int32 profile = 34;
-	string messageIdentifiers = 35; //mids
-	string dcss = 36;
-	int32 show = 37;
-	int32 dataCodinScheme = 38; //dcs
-	string type = 39;
-	int32 status = 40;
-	int32 firstOctet = 41; //fo
+	bool test=2;
+	bool read=3;
+	bool execution=4;
+	int32 service = 5;
+	int32 mobileTerminatedMessage = 6; //mt
+	int32 mobileOrientedMessage = 7; //mo
+	int32 broadcastTypeMessage = 8; //bm
+	int32 mode = 9;
+	string SCAddress = 10; //sca
+	int32 toSCAddress = 11; //tosca
+	string mem1 = 12;
+	string mem2 = 13;
+	string mem3 = 14;
+	int32 index = 15;
+	int32 delflag = 16;
+	string alpha = 17;
+	string destinationAddress = 18; //da
+	bytes data = 19;
+	int32 length = 20;
+	string originatingAddress = 21; //oa
+	int32 pdu = 22;
+	string serviceCenterTimeStamp = 23; //scts
+	int32 TPDestinationAddress = 24; //toda
+	int32 TPOriginatingAddress = 25; //tooa
+	int32 fo = 26;
+	int32 messageIdentifier = 27; //mid
+	int32 protocolIdentifier = 28; //pid
+	string stat = 29;
+	int32 validityPeriod = 30; //vp
+	int32 messageReference = 31; //mr
+	int32 ackpdu = 32;
+	int32 commandType = 33; //ct
+	int32 messageNumber = 34; //mn
+	int32 ds = 35;
+	int32 buffer = 36;
+	int32 profile = 37;
+	string messageIdentifiers = 38; //mids
+	string dcss = 39;
+	int32 show = 40;
+	int32 dataCodinScheme = 41; //dcs
+	string type = 42;
+	int32 status = 43;
+	int32 firstOctet = 44; //fo
 }
 
 message PhonebookCommand {
@@ -698,7 +713,7 @@ enum SMSMessageType {
 	NEW_SMS_MESSAGE_INDICATION = 11;
 	RESTORE_SMS_SETTINGS = 12;
 	SAVE_SMS_SETTINGS = 13;
-	SELECT_CALL_BROADCAST_SMS_MESSAGE = 14;
+	SELECT_CELL_BROADCAST_SMS_MESSAGE = 14;
 	SHOW_SMS_TEXT_MODE_PARAMETERS = 15;
 	SET_SMS_TEXT_MODE_PARAMETERS = 16;
 	STRORE_CLASS0_SMS_TO_SIM_WHEN_RECEIVING_CLASS0_SMS = 17;
@@ -769,7 +784,7 @@ enum StatusControlMessageType {
 	ENABLE_OR_DISABLE_PROPRIETARY_UNSOLICITED_INDICATIONS = 6;
 	QUERY_STATE_OF_INITIALIZATION = 7;
 	QUERY_GSM_NETWORK_STATUS = 8;
-	NETWORK_TIME_SYNCHRONIZED = 9;
+	NETWORK_TIME_SYNCHRONIZATION = 9;
 	OBTAIN_LATEST_NETWORK_TIME_SYNCHRONIZED = 10;
 	NETWORK_TIME_SYNCHRONIZATION_AND_UPDATE_THE_RTC_TIME = 11;
 	NETWORK_TIME_SYNCHRONIZATION_REPORT = 12;
