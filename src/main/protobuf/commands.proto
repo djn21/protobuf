@@ -370,9 +370,9 @@ message CallRelatedCommand {
 
 message SMSCommand {
 	SMSMessageType messsageType = 1;
-	bool test=2;
-	bool read=3;
-	bool execution=4;
+	bool test = 2;
+	bool read = 3;
+	bool execution = 4;
 	int32 service = 5;
 	int32 mobileTerminatedMessage = 6; //mt
 	int32 mobileOrientedMessage = 7; //mo
@@ -417,116 +417,130 @@ message SMSCommand {
 
 message PhonebookCommand {
 	PhonebookMessageType messageType = 1;
-	string storage = 2;
-	int32 nlength = 3;
-	int32 tlength = 4;
-	int32 index = 5;
-	string number = 6;
-	int32 type = 7;
-	string text = 8;
-	int32 index1 = 9;
-	int32 index2 = 10;
-	string findText = 11;
-	string alphax = 12;
-	string numberx = 13;
-	int32 typex = 14;
+	bool test = 2;
+	bool read = 3;
+	bool execute = 4;
+	string storage = 5;
+	int32 nlength = 6;
+	int32 tlength = 7;
+	int32 index = 8;
+	string number = 9;
+	int32 type = 10;
+	string text = 11;
+	int32 index1 = 12;
+	int32 index2 = 13;
+	string findText = 14;
+	string alphax = 15;
+	string numberx = 16;
+	int32 typex = 17;
 }
 
 message GPRSCommand {
 	GPRSMessageType messageType = 1;
-	int32 state = 2;
-	int32 cid = 3;
-	string PDPType = 4;
-	string APN = 5;
-	string PDPAddress = 6;
-	int32 dComp = 7;
-	int32 hComp = 8;
-	int32 precedence = 9;
-	int32 delay = 10;
-	int32 reliability = 11;
-	int32 peek = 12;
-	int32 mean = 13;
-	string L2P = 14;
-	string class = 15;
-	int32 mode = 16;
-	int32 n = 17;
-	int32 stat = 18;
-	string lac = 19;
-	string ci = 20;
-	int32 service = 21;
+	bool test = 2;
+	bool read = 3;
+	bool execute = 4;
+	int32 state = 5;
+	int32 cid = 6;
+	string PDPType = 7;
+	string APN = 8;
+	string PDPAddress = 9;
+	int32 dComp = 10;
+	int32 hComp = 11;
+	int32 precedence = 12;
+	int32 delay = 13;
+	int32 reliability = 14;
+	int32 peek = 15;
+	int32 mean = 16;
+	string L2P = 17;
+	string class = 18;
+	int32 mode = 19;
+	int32 n = 20;
+	int32 stat = 21;
+	string lac = 22;
+	string ci = 23;
+	int32 service = 24;
+	int32 multislotClass = 25;
 }
 
 message TCPIPCommand {
 	TCPIPMessageType messageType = 1;
-	int32 index = 2;
-	string mode = 3;
-	string IPAddress = 4;
-	int32 port = 5;
-	string domainName = 6;
-	int32 length = 7;
-	string APN = 8;
-	string username = 9;
-	string password = 10;
-	int32 rate = 11;
-	string state = 12;
-	string socketState = 13;
-	string serverState = 14;
-	string primaryDNS = 15;
-	string seondaryDNS = 16;
-	int32 error = 17;
-	int64 time = 18;
-	int32 sendPrompt = 19;
-	int32 num = 20;
-	int32 type = 21;
-	int64 max = 22;
-	string dialNumber = 23;
-	int32 connection = 24;
-	int32 numberOfRetry = 25;
-	int32 waitTime = 26;
-	int32 sendSize = 27;
-	bool escape = 28;
-	int32 channel = 29;
-	int32 n = 30;
-	int32 sent = 31;
-	int32 acked = 32;
-	int32 nAcked = 33;
-	int32 m = 34;
-	int32 id = 35;
-	int32 sc = 36;
-	int32 sid = 37;
-	int32 number = 38;
-	string host = 39;
-	int32 timeout = 40;
-	int32 pingNumber = 41;
-	int32 result = 42;
-	int32 bytes = 43;
-	int32 ttl = 44;
-	int32 finalResult = 45;
-	int32 received = 46;
-	int32 lost = 47;
-	int64 min = 48;
-	int64 avg = 49;
+	bool test = 2;
+	bool read = 3;
+	bool execute = 4;
+	int32 index = 5;
+	string mode = 6;
+	int32 modeInt = 7;
+	int32 port = 8;
+	string domainName = 9;
+	int32 length = 10;
+	string APN = 11;
+	string username = 12;
+	string password = 13;
+	int32 rate = 14;
+	string state = 15;
+	string socketState = 16;
+	string serverState = 17;
+	string primaryDNS = 18;
+	string seondaryDNS = 19;
+	int32 error = 20;
+	int64 time = 21;
+	int32 sendPrompt = 22;
+	int32 num = 23;
+	int32 type = 24;
+	int64 max = 25;
+	string dialNumber = 26;
+	int32 connection = 27;
+	int32 numberOfRetry = 28;
+	int32 waitTime = 29;
+	int32 sendSize = 30;
+	bool escape = 31;
+	int32 channel = 32;
+	int32 n = 33;
+	int32 sent = 34;
+	int32 acked = 35;
+	int32 nAcked = 36;
+	int32 m = 37;
+	int32 id = 38;
+	int32 sc = 39;
+	int32 sid = 40;
+	int32 number = 41;
+	string host = 42;
+	int32 timeout = 43;
+	int32 pingNumber = 44;
+	int32 result = 45;
+	int32 bytes = 46;
+	int32 ttl = 47;
+	int32 finalResult = 48;
+	int32 received = 49;
+	int32 lost = 50;
+	int64 min = 51;
+	int64 avg = 52;
+	string server = 53;
 }
 
 message SupplementaryServiceCommand {
 	SupplementaryServiceMessageType messageType = 1;
-	int32 reads = 2;
-	int32 mode = 3;
-	string number = 4;
-	int32 type = 5;
-	string subaddress = 6;
-	int32 satype = 7;
-	int32 class = 8;
-	int32 time = 9;
-	int32 status = 10;
-	int32 n = 11;
-	int32 index = 12;
-	int32 info = 13;
-	int32 m = 14;
-	string str = 15;
-	int32 dcs = 16;
-	int32 code1 = 17;
-	int32 code2 = 18;
+	bool test = 2;
+	bool read = 3;
+	bool execute = 4;
+	int32 reads = 5;
+	int32 mode = 6;
+	string number = 7;
+	int32 type = 8;
+	string subaddress = 9;
+	int32 satype = 10;
+	int32 class = 11;
+	int32 time = 12;
+	int32 status = 13;
+	int32 n = 14;
+	int32 index = 15;
+	int32 info = 16;
+	int32 m = 17;
+	string USSDString = 18;
+	int32 dataCodingScheme = 19;
+	int32 code1 = 20;
+	int32 code2 = 21;
 }
 
 message AudioCommand {
@@ -579,10 +593,13 @@ message HardwareRelatedCommand {
 
 message OthersCommand {
 	OthersMessageType messageType = 1;
-	int32 value = 2;
-	int32 n = 3;
-	int32 timeMode = 4;
-	int32 indMode = 5;
+	bool test = 2;
+	bool read = 3;
+	bool execute = 4;
+	int32 value = 5;
+	int32 n = 6;
+	int32 timeMode = 7;
+	int32 indMode = 8;
 }
 
 enum OthersMessageType {
@@ -637,6 +654,7 @@ enum SupplementaryServiceMessageType {
 	SHOW_ALPHA_FIELD_IN_COLP_STRING = 7;
 	UNSTRUCTURED_SUPPLEMENTARY_SERVICE_DATA = 8;
 	SUPPLEMENTARY_SERVICES_NOTIFICATION = 9;
+	CALLING_LINE_IDENTIFICATION_RESTRICTION = 10;
 }
 
 enum TCPIPMessageType {
@@ -650,7 +668,7 @@ enum TCPIPMessageType {
 	GET_LOCAL_IP_ADDRESS = 7;
 	QUERY_CURRENT_CONNECTION_STATUS = 8;
 	QUERY_CONNECTION_STATUS_OF_CURRENT_ACCESS = 9;
-	QUERT_CURRENT_SERVER_STATUS = 10;
+	QUERY_CURRENT_SERVER_STATUS = 10;
 	CONFIGURE_DOMAIN_NAME_SERVER = 11;
 	QUERY_THE_IP_ADDRESS_OF_GIVEN_DOMAIN_NAME = 12;
 	CONNECT_WITH_IP_ADDRESS_OR_DOMAIN_NAME_SERVER = 13;
@@ -663,16 +681,17 @@ enum TCPIPMessageType {
 	SET_WHETHER_OR_NOT_TO_DISPLAY_THE_ADDRESS_OF_SENDER = 20;
 	SAVE_TCPIP_APPLICATION_CONTEXT = 21;
 	SELECT_TCPIP_TRANSFER_MODE = 22;
-	CONTROL_WHETHER_OR_NOT_TO_SHOW_THE_PROTOCOL_TYPE = 23;
-	CONTROL_WHETHER_OR_NOT_TO_ENABLE_MULTIPLE_TCPIP_SESSION = 24;
-	CONTROL_WHETHER_OR_NOT_TO_DISPLAY_LOCAL_IP_ADDRESS = 25;
-	SELECT_A_CONTEXT_AS_FOREGROUND_CONTEXT = 26;
-	QUETY_THE_DATA_INFORMATION_FOR_SENDING = 27;
-	SET_THE_METHOD_TO_HANDLE_RECEIVED_TCPIP_DATA = 28;
-	RETRIEVE_THE_RECEIVED_TCPIP_DATA = 29;
-	CONTRO_WHETHER_OR_NOT_TO_ECHO_THE_DATA_FOR_QISEND = 30;
-	PING_A_REMOTE_SERVER = 31;
-	SYNCHRONIZE_THE_LOCAL_TIME_VIA_NTP = 32;
+	CONFIGURE_TRANSPARENT_TRANSFER_MODE = 23;
+	CONTROL_WHETHER_OR_NOT_TO_SHOW_THE_PROTOCOL_TYPE = 24;
+	CONTROL_WHETHER_OR_NOT_TO_ENABLE_MULTIPLE_TCPIP_SESSION = 25;
+	CONTROL_WHETHER_OR_NOT_TO_DISPLAY_LOCAL_IP_ADDRESS = 26;
+	SELECT_A_CONTEXT_AS_FOREGROUND_CONTEXT = 27;
+	QUETY_THE_DATA_INFORMATION_FOR_SENDING = 28;
+	SET_THE_METHOD_TO_HANDLE_RECEIVED_TCPIP_DATA = 29;
+	RETRIEVE_THE_RECEIVED_TCPIP_DATA = 30;
+	CONTRO_WHETHER_OR_NOT_TO_ECHO_THE_DATA_FOR_QISEND = 31;
+	PING_A_REMOTE_SERVER = 32;
+	SYNCHRONIZE_THE_LOCAL_TIME_VIA_NTP = 33;
 }
 
 enum GPRSMessageType {
