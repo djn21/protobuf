@@ -545,50 +545,57 @@ message SupplementaryServiceCommand {
 
 message AudioCommand {
 	AudioMessageType messageType = 1;
-	int32 value = 2;
-	int32 internalDuration = 3;
-	int32 duration = 4;
-	string dtmfString = 5;
-	int32 mode = 6;
-	int32 level = 7;
-	int32 n = 8;
-	int32 gainLevel = 9;
-	int32 channel = 10;
-	int32 state = 11;
-	int32 type = 12;
-	int32 frequency = 13;
-	int32 periodON = 14;
-	int32 periodOFF = 15;
-	int32 outputPath = 16;
-	int32 operateFunction = 17;
-	int32 functionStatus = 18;
-	int32 operate = 19;
-	int32 prefixPause = 20;
-	int32 lowThreshold = 21;
-	int32 highThreshold = 22;
-	string dtmfCode = 23;
-	int32 persistenceTime = 24;
-	int32 ulVolume = 25;
-	int32 dlVolume = 26;
-	int64 continuanceTime = 27;
-	int64 muteTime = 28;
+	bool test = 2;
+	bool read = 3;
+	bool execute = 4;
+	int32 value = 5;
+	int32 internalDuration = 6;
+	int64 duration = 7;
+	string DTMFString = 8;
+	int32 mode = 9;
+	int32 level = 10;
+	bool mute = 11;
+	int32 gainLevel = 12;
+	int32 channel = 13;
+	int32 state = 14;
+	int32 type = 15;
+	int32 frequency = 16;
+	int32 periodON = 17;
+	int32 periodOFF = 18;
+	int32 outputPath = 19;
+	int32 operateFunction = 20;
+	int32 functionStatus = 21;
+	int32 operate = 22;
+	int32 prefixPause = 23;
+	int32 lowThreshold = 24;
+	int32 highThreshold = 25;
+	string dtmfCode = 26;
+	int32 persistenceTime = 27;
+	int32 uplinkVolume = 28;
+	int32 downlinkVolume = 29;
+	int64 continuanceTime = 30;
+	int64 muteTime = 31;
+	int32 audioChannel = 32;
 }
 
 message HardwareRelatedCommand {
 	HardwareRelatedMessageType messageType = 1;
-	string time = 2;
-	int32 state = 3;
-	int32 repeat = 4;
-	int32 power = 5;
-	int32 bcs = 6;
-	int32 bcl = 7;
-	int32 voltage = 8;
-	int32 status = 9;
-	int32 value = 10;
-	int32 n = 11;
-	int32 ledMode = 12;
-	int32 thresholdType = 13;
-	int32 threshold = 14;
+	bool test = 2;
+	bool read = 3;
+	bool execute = 4;
+	string time = 5;
+	int32 state = 6;
+	int32 repeat = 7;
+	int32 power = 8;
+	int32 bcs = 9;
+	int32 bcl = 10;
+	int32 voltage = 11;
+	int32 status = 12;
+	int32 value = 13;
+	int32 n = 14;
+	int32 ledMode = 15;
+	int32 thresholdType = 16;
+	int32 threshold = 17;
 }
 
 message OthersCommand {
