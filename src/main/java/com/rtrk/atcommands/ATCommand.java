@@ -4367,9 +4367,9 @@ public final class ATCommand {
   }
 
   /**
-   * Protobuf enum {@code com.rtrk.protobuf.Error}
+   * Protobuf enum {@code com.rtrk.protobuf.ErrorMessageType}
    */
-  public enum Error
+  public enum ErrorMessageType
       implements com.google.protobuf.ProtocolMessageEnum {
     /**
      * <code>OK = 0;</code>
@@ -4392,13 +4392,13 @@ public final class ATCommand {
      */
     NETWORK_ERROR(5),
     /**
-     * <code>FTP_SESSION_CLOSED = 6;</code>
+     * <code>UNSUPPORTED_AUTHENTICATION_TYPE = 6;</code>
      */
-    FTP_SESSION_CLOSED(6),
+    UNSUPPORTED_AUTHENTICATION_TYPE(6),
     /**
-     * <code>DATA_CONNECTION_CLOSED = 7;</code>
+     * <code>SERVICE_CLOSED = 7;</code>
      */
-    DATA_CONNECTION_CLOSED(7),
+    SERVICE_CLOSED(7),
     /**
      * <code>GPRS_CSD_CONTEXT_IS_DEACTIVATED = 8;</code>
      */
@@ -4408,21 +4408,21 @@ public final class ATCommand {
      */
     TIMEOUT(9),
     /**
-     * <code>INPUT_PARAMETER_ILLEGAL = 10;</code>
+     * <code>NO_RECIPIENT_FOR_SMTP_SERVICE = 10;</code>
      */
-    INPUT_PARAMETER_ILLEGAL(10),
+    NO_RECIPIENT_FOR_SMTP_SERVICE(10),
     /**
-     * <code>FILE_NOT_FOUND_IN_LOCAL_POSITION = 11;</code>
+     * <code>FAILED_TO_SEND_EMAIL = 11;</code>
      */
-    FILE_NOT_FOUND_IN_LOCAL_POSITION(11),
+    FAILED_TO_SEND_EMAIL(11),
     /**
-     * <code>FAILED_TO_GET_FILE_IN_LOCAL_POSITION = 12;</code>
+     * <code>FAILED_TO_OPEN_FILE_FOR_ATTACHMENT = 12;</code>
      */
-    FAILED_TO_GET_FILE_IN_LOCAL_POSITION(12),
+    FAILED_TO_OPEN_FILE_FOR_ATTACHMENT(12),
     /**
-     * <code>NO_ENOUGH_MEMORY = 13;</code>
+     * <code>NO_ENOUGH_MEMORY_FOR_ATTACHMENT = 13;</code>
      */
-    NO_ENOUGH_MEMORY(13),
+    NO_ENOUGH_MEMORY_FOR_ATTACHMENT(13),
     /**
      * <code>FAILED_TO_SAVE_THE_ATTACHMENT = 14;</code>
      */
@@ -4432,37 +4432,33 @@ public final class ATCommand {
      */
     THE_INPUT_PARAMETER_IS_WRONG(15),
     /**
-     * <code>FTP_SERVER_CANT_SUPPORT_SERVICE = 421;</code>
+     * <code>SERVICE_NOT_AVAILABLE = 421;</code>
      */
-    FTP_SERVER_CANT_SUPPORT_SERVICE(421),
+    SERVICE_NOT_AVAILABLE(421),
     /**
-     * <code>FAILDE_TO_OPEN_DATA_CONNECTION = 425;</code>
+     * <code>REQUESTED_MAIL_ACTION_NOT_TAKEN = 450;</code>
      */
-    FAILDE_TO_OPEN_DATA_CONNECTION(425),
+    REQUESTED_MAIL_ACTION_NOT_TAKEN(450),
     /**
-     * <code>THE_CONNECTION_IS_CLOSED_AND_STOP_TRANSFER = 426;</code>
+     * <code>REQUESTED_ACTION_ABORTED = 451;</code>
      */
-    THE_CONNECTION_IS_CLOSED_AND_STOP_TRANSFER(426),
+    REQUESTED_ACTION_ABORTED(451),
     /**
-     * <code>THE_REQUEST_FOR_FILE_ISNT_OPERATED = 450;</code>
+     * <code>REQUESTED_ACTION_NOT_TAKEN_INSUFFICIENT_SYSTEM_STORAGE = 452;</code>
      */
-    THE_REQUEST_FOR_FILE_ISNT_OPERATED(450),
+    REQUESTED_ACTION_NOT_TAKEN_INSUFFICIENT_SYSTEM_STORAGE(452),
     /**
-     * <code>THE_FTP_SERVER_HAS_NOT_ENOUGH_MEMORY = 452;</code>
+     * <code>SYNTAX_ERROR_COMMAND_UNRECOGNIZED = 500;</code>
      */
-    THE_FTP_SERVER_HAS_NOT_ENOUGH_MEMORY(452),
+    SYNTAX_ERROR_COMMAND_UNRECOGNIZED(500),
     /**
-     * <code>THE_FORMAT_OF_THE_FTP_COMMAND_IS_WRONG = 500;</code>
+     * <code>SYNTAX_ERROR_IN_PARAMETERS_OR_ARGUMENTS = 501;</code>
      */
-    THE_FORMAT_OF_THE_FTP_COMMAND_IS_WRONG(500),
+    SYNTAX_ERROR_IN_PARAMETERS_OR_ARGUMENTS(501),
     /**
-     * <code>THE_PATTERN_OF_THE_FTP_COMMAND_IS_WRONG = 501;</code>
+     * <code>COMMAND_NOT_IMPLEMENTED = 502;</code>
      */
-    THE_PATTERN_OF_THE_FTP_COMMAND_IS_WRONG(501),
-    /**
-     * <code>THE_FTP_COMMAND_ISNT_OPERATED_BY_FTP_SERVER = 502;</code>
-     */
-    THE_FTP_COMMAND_ISNT_OPERATED_BY_FTP_SERVER(502),
+    COMMAND_NOT_IMPLEMENTED(502),
     /**
      * <code>BAD_SEQUENCE_OF_COMMANDS = 503;</code>
      */
@@ -4476,33 +4472,29 @@ public final class ATCommand {
      */
     DOMAIN_DOES_NOT_ACCEPT_EMAIL(521),
     /**
-     * <code>NOT_LOGIN_TO_FTP_SERVER = 530;</code>
+     * <code>ACCESS_DENIED_FOR_SMTP_SERVICE = 530;</code>
      */
-    NOT_LOGIN_TO_FTP_SERVER(530),
-    /**
-     * <code>NEEDED_INFORMATION_OF_ACCOUNT = 532;</code>
-     */
-    NEEDED_INFORMATION_OF_ACCOUNT(532),
+    ACCESS_DENIED_FOR_SMTP_SERVICE(530),
     /**
      * <code>AUTHENTICATION_FAILED = 535;</code>
      */
     AUTHENTICATION_FAILED(535),
     /**
-     * <code>THE_REQUEST_IS_NOT_OPERATED = 550;</code>
+     * <code>REQUESTED_ACTION_NOT_TAKEN = 550;</code>
      */
-    THE_REQUEST_IS_NOT_OPERATED(550),
+    REQUESTED_ACTION_NOT_TAKEN(550),
     /**
-     * <code>THE_REQUEST_IS_STOPPED = 551;</code>
+     * <code>USER_NOT_LOCAL = 551;</code>
      */
-    THE_REQUEST_IS_STOPPED(551),
+    USER_NOT_LOCAL(551),
     /**
-     * <code>THE_REQUEST_OF_A_FILE_IS_STOPPED = 552;</code>
+     * <code>REQUESTED_MAIL_ACTION_ABORTED_EXCEEDED_STORAGE_NOT_ALLOWED = 552;</code>
      */
-    THE_REQUEST_OF_A_FILE_IS_STOPPED(552),
+    REQUESTED_MAIL_ACTION_ABORTED_EXCEEDED_STORAGE_NOT_ALLOWED(552),
     /**
-     * <code>FILE_NAME_IS_ILLEGAL = 553;</code>
+     * <code>REQUESTED_ACTION_NOT_TAKEN_MAILBOX_NAME_NOT_ALLOWED = 553;</code>
      */
-    FILE_NAME_IS_ILLEGAL(553),
+    REQUESTED_ACTION_NOT_TAKEN_MAILBOX_NAME_NOT_ALLOWED(553),
     /**
      * <code>TRANSACTION_FAILED = 554;</code>
      */
@@ -4720,9 +4712,9 @@ public final class ATCommand {
      */
     FAILED_TO_WRITE_FILE(3923),
     /**
-     * <code>FAILED_TO_OPEN_FILE = 3924;</code>
+     * <code>FAILED_TO_OPEN_REQUESTED_FILE = 3924;</code>
      */
-    FAILED_TO_OPEN_FILE(3924),
+    FAILED_TO_OPEN_REQUESTED_FILE(3924),
     /**
      * <code>FAILED_TO_READ_FILE = 3925;</code>
      */
@@ -5003,13 +4995,13 @@ public final class ATCommand {
      */
     public static final int NETWORK_ERROR_VALUE = 5;
     /**
-     * <code>FTP_SESSION_CLOSED = 6;</code>
+     * <code>UNSUPPORTED_AUTHENTICATION_TYPE = 6;</code>
      */
-    public static final int FTP_SESSION_CLOSED_VALUE = 6;
+    public static final int UNSUPPORTED_AUTHENTICATION_TYPE_VALUE = 6;
     /**
-     * <code>DATA_CONNECTION_CLOSED = 7;</code>
+     * <code>SERVICE_CLOSED = 7;</code>
      */
-    public static final int DATA_CONNECTION_CLOSED_VALUE = 7;
+    public static final int SERVICE_CLOSED_VALUE = 7;
     /**
      * <code>GPRS_CSD_CONTEXT_IS_DEACTIVATED = 8;</code>
      */
@@ -5019,21 +5011,21 @@ public final class ATCommand {
      */
     public static final int TIMEOUT_VALUE = 9;
     /**
-     * <code>INPUT_PARAMETER_ILLEGAL = 10;</code>
+     * <code>NO_RECIPIENT_FOR_SMTP_SERVICE = 10;</code>
      */
-    public static final int INPUT_PARAMETER_ILLEGAL_VALUE = 10;
+    public static final int NO_RECIPIENT_FOR_SMTP_SERVICE_VALUE = 10;
     /**
-     * <code>FILE_NOT_FOUND_IN_LOCAL_POSITION = 11;</code>
+     * <code>FAILED_TO_SEND_EMAIL = 11;</code>
      */
-    public static final int FILE_NOT_FOUND_IN_LOCAL_POSITION_VALUE = 11;
+    public static final int FAILED_TO_SEND_EMAIL_VALUE = 11;
     /**
-     * <code>FAILED_TO_GET_FILE_IN_LOCAL_POSITION = 12;</code>
+     * <code>FAILED_TO_OPEN_FILE_FOR_ATTACHMENT = 12;</code>
      */
-    public static final int FAILED_TO_GET_FILE_IN_LOCAL_POSITION_VALUE = 12;
+    public static final int FAILED_TO_OPEN_FILE_FOR_ATTACHMENT_VALUE = 12;
     /**
-     * <code>NO_ENOUGH_MEMORY = 13;</code>
+     * <code>NO_ENOUGH_MEMORY_FOR_ATTACHMENT = 13;</code>
      */
-    public static final int NO_ENOUGH_MEMORY_VALUE = 13;
+    public static final int NO_ENOUGH_MEMORY_FOR_ATTACHMENT_VALUE = 13;
     /**
      * <code>FAILED_TO_SAVE_THE_ATTACHMENT = 14;</code>
      */
@@ -5043,37 +5035,33 @@ public final class ATCommand {
      */
     public static final int THE_INPUT_PARAMETER_IS_WRONG_VALUE = 15;
     /**
-     * <code>FTP_SERVER_CANT_SUPPORT_SERVICE = 421;</code>
+     * <code>SERVICE_NOT_AVAILABLE = 421;</code>
      */
-    public static final int FTP_SERVER_CANT_SUPPORT_SERVICE_VALUE = 421;
+    public static final int SERVICE_NOT_AVAILABLE_VALUE = 421;
     /**
-     * <code>FAILDE_TO_OPEN_DATA_CONNECTION = 425;</code>
+     * <code>REQUESTED_MAIL_ACTION_NOT_TAKEN = 450;</code>
      */
-    public static final int FAILDE_TO_OPEN_DATA_CONNECTION_VALUE = 425;
+    public static final int REQUESTED_MAIL_ACTION_NOT_TAKEN_VALUE = 450;
     /**
-     * <code>THE_CONNECTION_IS_CLOSED_AND_STOP_TRANSFER = 426;</code>
+     * <code>REQUESTED_ACTION_ABORTED = 451;</code>
      */
-    public static final int THE_CONNECTION_IS_CLOSED_AND_STOP_TRANSFER_VALUE = 426;
+    public static final int REQUESTED_ACTION_ABORTED_VALUE = 451;
     /**
-     * <code>THE_REQUEST_FOR_FILE_ISNT_OPERATED = 450;</code>
+     * <code>REQUESTED_ACTION_NOT_TAKEN_INSUFFICIENT_SYSTEM_STORAGE = 452;</code>
      */
-    public static final int THE_REQUEST_FOR_FILE_ISNT_OPERATED_VALUE = 450;
+    public static final int REQUESTED_ACTION_NOT_TAKEN_INSUFFICIENT_SYSTEM_STORAGE_VALUE = 452;
     /**
-     * <code>THE_FTP_SERVER_HAS_NOT_ENOUGH_MEMORY = 452;</code>
+     * <code>SYNTAX_ERROR_COMMAND_UNRECOGNIZED = 500;</code>
      */
-    public static final int THE_FTP_SERVER_HAS_NOT_ENOUGH_MEMORY_VALUE = 452;
+    public static final int SYNTAX_ERROR_COMMAND_UNRECOGNIZED_VALUE = 500;
     /**
-     * <code>THE_FORMAT_OF_THE_FTP_COMMAND_IS_WRONG = 500;</code>
+     * <code>SYNTAX_ERROR_IN_PARAMETERS_OR_ARGUMENTS = 501;</code>
      */
-    public static final int THE_FORMAT_OF_THE_FTP_COMMAND_IS_WRONG_VALUE = 500;
+    public static final int SYNTAX_ERROR_IN_PARAMETERS_OR_ARGUMENTS_VALUE = 501;
     /**
-     * <code>THE_PATTERN_OF_THE_FTP_COMMAND_IS_WRONG = 501;</code>
+     * <code>COMMAND_NOT_IMPLEMENTED = 502;</code>
      */
-    public static final int THE_PATTERN_OF_THE_FTP_COMMAND_IS_WRONG_VALUE = 501;
-    /**
-     * <code>THE_FTP_COMMAND_ISNT_OPERATED_BY_FTP_SERVER = 502;</code>
-     */
-    public static final int THE_FTP_COMMAND_ISNT_OPERATED_BY_FTP_SERVER_VALUE = 502;
+    public static final int COMMAND_NOT_IMPLEMENTED_VALUE = 502;
     /**
      * <code>BAD_SEQUENCE_OF_COMMANDS = 503;</code>
      */
@@ -5087,33 +5075,29 @@ public final class ATCommand {
      */
     public static final int DOMAIN_DOES_NOT_ACCEPT_EMAIL_VALUE = 521;
     /**
-     * <code>NOT_LOGIN_TO_FTP_SERVER = 530;</code>
+     * <code>ACCESS_DENIED_FOR_SMTP_SERVICE = 530;</code>
      */
-    public static final int NOT_LOGIN_TO_FTP_SERVER_VALUE = 530;
-    /**
-     * <code>NEEDED_INFORMATION_OF_ACCOUNT = 532;</code>
-     */
-    public static final int NEEDED_INFORMATION_OF_ACCOUNT_VALUE = 532;
+    public static final int ACCESS_DENIED_FOR_SMTP_SERVICE_VALUE = 530;
     /**
      * <code>AUTHENTICATION_FAILED = 535;</code>
      */
     public static final int AUTHENTICATION_FAILED_VALUE = 535;
     /**
-     * <code>THE_REQUEST_IS_NOT_OPERATED = 550;</code>
+     * <code>REQUESTED_ACTION_NOT_TAKEN = 550;</code>
      */
-    public static final int THE_REQUEST_IS_NOT_OPERATED_VALUE = 550;
+    public static final int REQUESTED_ACTION_NOT_TAKEN_VALUE = 550;
     /**
-     * <code>THE_REQUEST_IS_STOPPED = 551;</code>
+     * <code>USER_NOT_LOCAL = 551;</code>
      */
-    public static final int THE_REQUEST_IS_STOPPED_VALUE = 551;
+    public static final int USER_NOT_LOCAL_VALUE = 551;
     /**
-     * <code>THE_REQUEST_OF_A_FILE_IS_STOPPED = 552;</code>
+     * <code>REQUESTED_MAIL_ACTION_ABORTED_EXCEEDED_STORAGE_NOT_ALLOWED = 552;</code>
      */
-    public static final int THE_REQUEST_OF_A_FILE_IS_STOPPED_VALUE = 552;
+    public static final int REQUESTED_MAIL_ACTION_ABORTED_EXCEEDED_STORAGE_NOT_ALLOWED_VALUE = 552;
     /**
-     * <code>FILE_NAME_IS_ILLEGAL = 553;</code>
+     * <code>REQUESTED_ACTION_NOT_TAKEN_MAILBOX_NAME_NOT_ALLOWED = 553;</code>
      */
-    public static final int FILE_NAME_IS_ILLEGAL_VALUE = 553;
+    public static final int REQUESTED_ACTION_NOT_TAKEN_MAILBOX_NAME_NOT_ALLOWED_VALUE = 553;
     /**
      * <code>TRANSACTION_FAILED = 554;</code>
      */
@@ -5331,9 +5315,9 @@ public final class ATCommand {
      */
     public static final int FAILED_TO_WRITE_FILE_VALUE = 3923;
     /**
-     * <code>FAILED_TO_OPEN_FILE = 3924;</code>
+     * <code>FAILED_TO_OPEN_REQUESTED_FILE = 3924;</code>
      */
-    public static final int FAILED_TO_OPEN_FILE_VALUE = 3924;
+    public static final int FAILED_TO_OPEN_REQUESTED_FILE_VALUE = 3924;
     /**
      * <code>FAILED_TO_READ_FILE = 3925;</code>
      */
@@ -5604,45 +5588,43 @@ public final class ATCommand {
      * @deprecated Use {@link #forNumber(int)} instead.
      */
     @java.lang.Deprecated
-    public static Error valueOf(int value) {
+    public static ErrorMessageType valueOf(int value) {
       return forNumber(value);
     }
 
-    public static Error forNumber(int value) {
+    public static ErrorMessageType forNumber(int value) {
       switch (value) {
         case 0: return OK;
         case 1: return UNKNOW_ERROR;
         case 3: return SERVICE_BUSY;
         case 4: return FAILED_TO_GET_IP_ADDRESS;
         case 5: return NETWORK_ERROR;
-        case 6: return FTP_SESSION_CLOSED;
-        case 7: return DATA_CONNECTION_CLOSED;
+        case 6: return UNSUPPORTED_AUTHENTICATION_TYPE;
+        case 7: return SERVICE_CLOSED;
         case 8: return GPRS_CSD_CONTEXT_IS_DEACTIVATED;
         case 9: return TIMEOUT;
-        case 10: return INPUT_PARAMETER_ILLEGAL;
-        case 11: return FILE_NOT_FOUND_IN_LOCAL_POSITION;
-        case 12: return FAILED_TO_GET_FILE_IN_LOCAL_POSITION;
-        case 13: return NO_ENOUGH_MEMORY;
+        case 10: return NO_RECIPIENT_FOR_SMTP_SERVICE;
+        case 11: return FAILED_TO_SEND_EMAIL;
+        case 12: return FAILED_TO_OPEN_FILE_FOR_ATTACHMENT;
+        case 13: return NO_ENOUGH_MEMORY_FOR_ATTACHMENT;
         case 14: return FAILED_TO_SAVE_THE_ATTACHMENT;
         case 15: return THE_INPUT_PARAMETER_IS_WRONG;
-        case 421: return FTP_SERVER_CANT_SUPPORT_SERVICE;
-        case 425: return FAILDE_TO_OPEN_DATA_CONNECTION;
-        case 426: return THE_CONNECTION_IS_CLOSED_AND_STOP_TRANSFER;
-        case 450: return THE_REQUEST_FOR_FILE_ISNT_OPERATED;
-        case 452: return THE_FTP_SERVER_HAS_NOT_ENOUGH_MEMORY;
-        case 500: return THE_FORMAT_OF_THE_FTP_COMMAND_IS_WRONG;
-        case 501: return THE_PATTERN_OF_THE_FTP_COMMAND_IS_WRONG;
-        case 502: return THE_FTP_COMMAND_ISNT_OPERATED_BY_FTP_SERVER;
+        case 421: return SERVICE_NOT_AVAILABLE;
+        case 450: return REQUESTED_MAIL_ACTION_NOT_TAKEN;
+        case 451: return REQUESTED_ACTION_ABORTED;
+        case 452: return REQUESTED_ACTION_NOT_TAKEN_INSUFFICIENT_SYSTEM_STORAGE;
+        case 500: return SYNTAX_ERROR_COMMAND_UNRECOGNIZED;
+        case 501: return SYNTAX_ERROR_IN_PARAMETERS_OR_ARGUMENTS;
+        case 502: return COMMAND_NOT_IMPLEMENTED;
         case 503: return BAD_SEQUENCE_OF_COMMANDS;
         case 504: return COMMAND_PARAMETER_NOT_IMPLEMENTED;
         case 521: return DOMAIN_DOES_NOT_ACCEPT_EMAIL;
-        case 530: return NOT_LOGIN_TO_FTP_SERVER;
-        case 532: return NEEDED_INFORMATION_OF_ACCOUNT;
+        case 530: return ACCESS_DENIED_FOR_SMTP_SERVICE;
         case 535: return AUTHENTICATION_FAILED;
-        case 550: return THE_REQUEST_IS_NOT_OPERATED;
-        case 551: return THE_REQUEST_IS_STOPPED;
-        case 552: return THE_REQUEST_OF_A_FILE_IS_STOPPED;
-        case 553: return FILE_NAME_IS_ILLEGAL;
+        case 550: return REQUESTED_ACTION_NOT_TAKEN;
+        case 551: return USER_NOT_LOCAL;
+        case 552: return REQUESTED_MAIL_ACTION_ABORTED_EXCEEDED_STORAGE_NOT_ALLOWED;
+        case 553: return REQUESTED_ACTION_NOT_TAKEN_MAILBOX_NAME_NOT_ALLOWED;
         case 554: return TRANSACTION_FAILED;
         case 3801: return HTTP_TIME_OUT;
         case 3802: return HTTP_BUSY;
@@ -5697,7 +5679,7 @@ public final class ATCommand {
         case 3921: return FILE_ALREADY_EXISTED;
         case 3922: return FAILED_TO_CREATE_FILE;
         case 3923: return FAILED_TO_WRITE_FILE;
-        case 3924: return FAILED_TO_OPEN_FILE;
+        case 3924: return FAILED_TO_OPEN_REQUESTED_FILE;
         case 3925: return FAILED_TO_READ_FILE;
         case 3926: return MMS_BUSY;
         case 3927: return SENDING_MMS_BUSY;
@@ -5766,15 +5748,15 @@ public final class ATCommand {
       }
     }
 
-    public static com.google.protobuf.Internal.EnumLiteMap<Error>
+    public static com.google.protobuf.Internal.EnumLiteMap<ErrorMessageType>
         internalGetValueMap() {
       return internalValueMap;
     }
     private static final com.google.protobuf.Internal.EnumLiteMap<
-        Error> internalValueMap =
-          new com.google.protobuf.Internal.EnumLiteMap<Error>() {
-            public Error findValueByNumber(int number) {
-              return Error.forNumber(number);
+        ErrorMessageType> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<ErrorMessageType>() {
+            public ErrorMessageType findValueByNumber(int number) {
+              return ErrorMessageType.forNumber(number);
             }
           };
 
@@ -5791,9 +5773,9 @@ public final class ATCommand {
       return com.rtrk.atcommands.ATCommand.getDescriptor().getEnumTypes().get(22);
     }
 
-    private static final Error[] VALUES = values();
+    private static final ErrorMessageType[] VALUES = values();
 
-    public static Error valueOf(
+    public static ErrorMessageType valueOf(
         com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
       if (desc.getType() != getDescriptor()) {
         throw new java.lang.IllegalArgumentException(
@@ -5807,11 +5789,334 @@ public final class ATCommand {
 
     private final int value;
 
-    private Error(int value) {
+    private ErrorMessageType(int value) {
       this.value = value;
     }
 
-    // @@protoc_insertion_point(enum_scope:com.rtrk.protobuf.Error)
+    // @@protoc_insertion_point(enum_scope:com.rtrk.protobuf.ErrorMessageType)
+  }
+
+  /**
+   * Protobuf enum {@code com.rtrk.protobuf.FTPErrorMessageType}
+   */
+  public enum FTPErrorMessageType
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>FTP_OK = 0;</code>
+     */
+    FTP_OK(0),
+    /**
+     * <code>FTP_UNKNOW_ERROR = 1;</code>
+     */
+    FTP_UNKNOW_ERROR(1),
+    /**
+     * <code>FTP_SERVICE_BUSY = 3;</code>
+     */
+    FTP_SERVICE_BUSY(3),
+    /**
+     * <code>FAILED_TO_GET_IP_ADDRESS_ACCORDING_TO_DOMAIN_NAME = 4;</code>
+     */
+    FAILED_TO_GET_IP_ADDRESS_ACCORDING_TO_DOMAIN_NAME(4),
+    /**
+     * <code>FTP_NETWORK_ERROR = 5;</code>
+     */
+    FTP_NETWORK_ERROR(5),
+    /**
+     * <code>FTP_SESSION_CLOSED_BY_FTP_SERVER = 6;</code>
+     */
+    FTP_SESSION_CLOSED_BY_FTP_SERVER(6),
+    /**
+     * <code>DATA_CONNECTION_OF_FTP_SERVICE_IS_CLOSED = 7;</code>
+     */
+    DATA_CONNECTION_OF_FTP_SERVICE_IS_CLOSED(7),
+    /**
+     * <code>FTP_GPRS_CSD_CONTEXT_IS_DEACTIVATED = 8;</code>
+     */
+    FTP_GPRS_CSD_CONTEXT_IS_DEACTIVATED(8),
+    /**
+     * <code>FTP_TIMEOUT = 9;</code>
+     */
+    FTP_TIMEOUT(9),
+    /**
+     * <code>INPUT_PARAMETAR_IS_ILLEGAL = 10;</code>
+     */
+    INPUT_PARAMETAR_IS_ILLEGAL(10),
+    /**
+     * <code>FILE_NOT_FOUND_IN_LOCAL_POSITION = 11;</code>
+     */
+    FILE_NOT_FOUND_IN_LOCAL_POSITION(11),
+    /**
+     * <code>FAILED_TO_GET_FILE_IN_LOCAL_POSITION = 12;</code>
+     */
+    FAILED_TO_GET_FILE_IN_LOCAL_POSITION(12),
+    /**
+     * <code>FTP_NO_ENOUGH_MEMORY_FOR_ATTACHMENT = 13;</code>
+     */
+    FTP_NO_ENOUGH_MEMORY_FOR_ATTACHMENT(13),
+    /**
+     * <code>FTP_SERVER_CANT_SUPPORT_SERVICE = 421;</code>
+     */
+    FTP_SERVER_CANT_SUPPORT_SERVICE(421),
+    /**
+     * <code>FAILED_TO_OPEN_DATA_CONNECTION = 425;</code>
+     */
+    FAILED_TO_OPEN_DATA_CONNECTION(425),
+    /**
+     * <code>CONNECTION_CLOSED_AND_STOP_TRANSFERRING = 426;</code>
+     */
+    CONNECTION_CLOSED_AND_STOP_TRANSFERRING(426),
+    /**
+     * <code>REQUEST_FOR_FILE_ISNT_OPERATED = 450;</code>
+     */
+    REQUEST_FOR_FILE_ISNT_OPERATED(450),
+    /**
+     * <code>FTP_SERVER_HAS_NOT_ENOUGH_MEMORY = 452;</code>
+     */
+    FTP_SERVER_HAS_NOT_ENOUGH_MEMORY(452),
+    /**
+     * <code>FORMAT_OF_FTP_COMMAND_IS_WRONG = 500;</code>
+     */
+    FORMAT_OF_FTP_COMMAND_IS_WRONG(500),
+    /**
+     * <code>PARAMETER_OF_FTP_COMMAND_IS_WRONG = 501;</code>
+     */
+    PARAMETER_OF_FTP_COMMAND_IS_WRONG(501),
+    /**
+     * <code>FTP_COMMAND_ISNT_OPERATED_BY_FTP_SERVER = 502;</code>
+     */
+    FTP_COMMAND_ISNT_OPERATED_BY_FTP_SERVER(502),
+    /**
+     * <code>NOT_LOGIN_FTP_SERVER = 530;</code>
+     */
+    NOT_LOGIN_FTP_SERVER(530),
+    /**
+     * <code>NEED_INFORMATION_OF_ACCOUNT = 532;</code>
+     */
+    NEED_INFORMATION_OF_ACCOUNT(532),
+    /**
+     * <code>REQUEST_ISNT_OPERATED = 550;</code>
+     */
+    REQUEST_ISNT_OPERATED(550),
+    /**
+     * <code>REQUEST_IS_STOPPED = 551;</code>
+     */
+    REQUEST_IS_STOPPED(551),
+    /**
+     * <code>REQUEST_OF_FILE_IS_STOPPED = 552;</code>
+     */
+    REQUEST_OF_FILE_IS_STOPPED(552),
+    /**
+     * <code>FILE_NAME_IS_ILLEGAL = 553;</code>
+     */
+    FILE_NAME_IS_ILLEGAL(553),
+    UNRECOGNIZED(-1),
+    ;
+
+    /**
+     * <code>FTP_OK = 0;</code>
+     */
+    public static final int FTP_OK_VALUE = 0;
+    /**
+     * <code>FTP_UNKNOW_ERROR = 1;</code>
+     */
+    public static final int FTP_UNKNOW_ERROR_VALUE = 1;
+    /**
+     * <code>FTP_SERVICE_BUSY = 3;</code>
+     */
+    public static final int FTP_SERVICE_BUSY_VALUE = 3;
+    /**
+     * <code>FAILED_TO_GET_IP_ADDRESS_ACCORDING_TO_DOMAIN_NAME = 4;</code>
+     */
+    public static final int FAILED_TO_GET_IP_ADDRESS_ACCORDING_TO_DOMAIN_NAME_VALUE = 4;
+    /**
+     * <code>FTP_NETWORK_ERROR = 5;</code>
+     */
+    public static final int FTP_NETWORK_ERROR_VALUE = 5;
+    /**
+     * <code>FTP_SESSION_CLOSED_BY_FTP_SERVER = 6;</code>
+     */
+    public static final int FTP_SESSION_CLOSED_BY_FTP_SERVER_VALUE = 6;
+    /**
+     * <code>DATA_CONNECTION_OF_FTP_SERVICE_IS_CLOSED = 7;</code>
+     */
+    public static final int DATA_CONNECTION_OF_FTP_SERVICE_IS_CLOSED_VALUE = 7;
+    /**
+     * <code>FTP_GPRS_CSD_CONTEXT_IS_DEACTIVATED = 8;</code>
+     */
+    public static final int FTP_GPRS_CSD_CONTEXT_IS_DEACTIVATED_VALUE = 8;
+    /**
+     * <code>FTP_TIMEOUT = 9;</code>
+     */
+    public static final int FTP_TIMEOUT_VALUE = 9;
+    /**
+     * <code>INPUT_PARAMETAR_IS_ILLEGAL = 10;</code>
+     */
+    public static final int INPUT_PARAMETAR_IS_ILLEGAL_VALUE = 10;
+    /**
+     * <code>FILE_NOT_FOUND_IN_LOCAL_POSITION = 11;</code>
+     */
+    public static final int FILE_NOT_FOUND_IN_LOCAL_POSITION_VALUE = 11;
+    /**
+     * <code>FAILED_TO_GET_FILE_IN_LOCAL_POSITION = 12;</code>
+     */
+    public static final int FAILED_TO_GET_FILE_IN_LOCAL_POSITION_VALUE = 12;
+    /**
+     * <code>FTP_NO_ENOUGH_MEMORY_FOR_ATTACHMENT = 13;</code>
+     */
+    public static final int FTP_NO_ENOUGH_MEMORY_FOR_ATTACHMENT_VALUE = 13;
+    /**
+     * <code>FTP_SERVER_CANT_SUPPORT_SERVICE = 421;</code>
+     */
+    public static final int FTP_SERVER_CANT_SUPPORT_SERVICE_VALUE = 421;
+    /**
+     * <code>FAILED_TO_OPEN_DATA_CONNECTION = 425;</code>
+     */
+    public static final int FAILED_TO_OPEN_DATA_CONNECTION_VALUE = 425;
+    /**
+     * <code>CONNECTION_CLOSED_AND_STOP_TRANSFERRING = 426;</code>
+     */
+    public static final int CONNECTION_CLOSED_AND_STOP_TRANSFERRING_VALUE = 426;
+    /**
+     * <code>REQUEST_FOR_FILE_ISNT_OPERATED = 450;</code>
+     */
+    public static final int REQUEST_FOR_FILE_ISNT_OPERATED_VALUE = 450;
+    /**
+     * <code>FTP_SERVER_HAS_NOT_ENOUGH_MEMORY = 452;</code>
+     */
+    public static final int FTP_SERVER_HAS_NOT_ENOUGH_MEMORY_VALUE = 452;
+    /**
+     * <code>FORMAT_OF_FTP_COMMAND_IS_WRONG = 500;</code>
+     */
+    public static final int FORMAT_OF_FTP_COMMAND_IS_WRONG_VALUE = 500;
+    /**
+     * <code>PARAMETER_OF_FTP_COMMAND_IS_WRONG = 501;</code>
+     */
+    public static final int PARAMETER_OF_FTP_COMMAND_IS_WRONG_VALUE = 501;
+    /**
+     * <code>FTP_COMMAND_ISNT_OPERATED_BY_FTP_SERVER = 502;</code>
+     */
+    public static final int FTP_COMMAND_ISNT_OPERATED_BY_FTP_SERVER_VALUE = 502;
+    /**
+     * <code>NOT_LOGIN_FTP_SERVER = 530;</code>
+     */
+    public static final int NOT_LOGIN_FTP_SERVER_VALUE = 530;
+    /**
+     * <code>NEED_INFORMATION_OF_ACCOUNT = 532;</code>
+     */
+    public static final int NEED_INFORMATION_OF_ACCOUNT_VALUE = 532;
+    /**
+     * <code>REQUEST_ISNT_OPERATED = 550;</code>
+     */
+    public static final int REQUEST_ISNT_OPERATED_VALUE = 550;
+    /**
+     * <code>REQUEST_IS_STOPPED = 551;</code>
+     */
+    public static final int REQUEST_IS_STOPPED_VALUE = 551;
+    /**
+     * <code>REQUEST_OF_FILE_IS_STOPPED = 552;</code>
+     */
+    public static final int REQUEST_OF_FILE_IS_STOPPED_VALUE = 552;
+    /**
+     * <code>FILE_NAME_IS_ILLEGAL = 553;</code>
+     */
+    public static final int FILE_NAME_IS_ILLEGAL_VALUE = 553;
+
+
+    public final int getNumber() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalArgumentException(
+            "Can't get the number of an unknown enum value.");
+      }
+      return value;
+    }
+
+    /**
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static FTPErrorMessageType valueOf(int value) {
+      return forNumber(value);
+    }
+
+    public static FTPErrorMessageType forNumber(int value) {
+      switch (value) {
+        case 0: return FTP_OK;
+        case 1: return FTP_UNKNOW_ERROR;
+        case 3: return FTP_SERVICE_BUSY;
+        case 4: return FAILED_TO_GET_IP_ADDRESS_ACCORDING_TO_DOMAIN_NAME;
+        case 5: return FTP_NETWORK_ERROR;
+        case 6: return FTP_SESSION_CLOSED_BY_FTP_SERVER;
+        case 7: return DATA_CONNECTION_OF_FTP_SERVICE_IS_CLOSED;
+        case 8: return FTP_GPRS_CSD_CONTEXT_IS_DEACTIVATED;
+        case 9: return FTP_TIMEOUT;
+        case 10: return INPUT_PARAMETAR_IS_ILLEGAL;
+        case 11: return FILE_NOT_FOUND_IN_LOCAL_POSITION;
+        case 12: return FAILED_TO_GET_FILE_IN_LOCAL_POSITION;
+        case 13: return FTP_NO_ENOUGH_MEMORY_FOR_ATTACHMENT;
+        case 421: return FTP_SERVER_CANT_SUPPORT_SERVICE;
+        case 425: return FAILED_TO_OPEN_DATA_CONNECTION;
+        case 426: return CONNECTION_CLOSED_AND_STOP_TRANSFERRING;
+        case 450: return REQUEST_FOR_FILE_ISNT_OPERATED;
+        case 452: return FTP_SERVER_HAS_NOT_ENOUGH_MEMORY;
+        case 500: return FORMAT_OF_FTP_COMMAND_IS_WRONG;
+        case 501: return PARAMETER_OF_FTP_COMMAND_IS_WRONG;
+        case 502: return FTP_COMMAND_ISNT_OPERATED_BY_FTP_SERVER;
+        case 530: return NOT_LOGIN_FTP_SERVER;
+        case 532: return NEED_INFORMATION_OF_ACCOUNT;
+        case 550: return REQUEST_ISNT_OPERATED;
+        case 551: return REQUEST_IS_STOPPED;
+        case 552: return REQUEST_OF_FILE_IS_STOPPED;
+        case 553: return FILE_NAME_IS_ILLEGAL;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<FTPErrorMessageType>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        FTPErrorMessageType> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<FTPErrorMessageType>() {
+            public FTPErrorMessageType findValueByNumber(int number) {
+              return FTPErrorMessageType.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return com.rtrk.atcommands.ATCommand.getDescriptor().getEnumTypes().get(23);
+    }
+
+    private static final FTPErrorMessageType[] VALUES = values();
+
+    public static FTPErrorMessageType valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      if (desc.getIndex() == -1) {
+        return UNRECOGNIZED;
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private FTPErrorMessageType(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:com.rtrk.protobuf.FTPErrorMessageType)
   }
 
   public interface HTTPCommandOrBuilder extends
@@ -5888,24 +6193,6 @@ public final class ATCommand {
     int getContentLength();
 
     /**
-     * <code>optional .com.rtrk.protobuf.Error errorcode = 13;</code>
-     */
-    int getErrorcodeValue();
-    /**
-     * <code>optional .com.rtrk.protobuf.Error errorcode = 13;</code>
-     */
-    com.rtrk.atcommands.ATCommand.Error getErrorcode();
-
-    /**
-     * <code>optional .com.rtrk.protobuf.Error error = 14;</code>
-     */
-    int getErrorValue();
-    /**
-     * <code>optional .com.rtrk.protobuf.Error error = 14;</code>
-     */
-    com.rtrk.atcommands.ATCommand.Error getError();
-
-    /**
      * <code>optional bytes data = 15;</code>
      */
     com.google.protobuf.ByteString getData();
@@ -5914,6 +6201,21 @@ public final class ATCommand {
      * <code>optional bytes bodyData = 16;</code>
      */
     com.google.protobuf.ByteString getBodyData();
+
+    /**
+     * <code>optional string description = 17;</code>
+     */
+    java.lang.String getDescription();
+    /**
+     * <code>optional string description = 17;</code>
+     */
+    com.google.protobuf.ByteString
+        getDescriptionBytes();
+
+    /**
+     * <code>optional bool isRespone = 18;</code>
+     */
+    boolean getIsRespone();
   }
   /**
    * Protobuf type {@code com.rtrk.protobuf.HTTPCommand}
@@ -5939,10 +6241,10 @@ public final class ATCommand {
       length_ = 0;
       downloadSize_ = 0;
       contentLength_ = 0;
-      errorcode_ = 0;
-      error_ = 0;
       data_ = com.google.protobuf.ByteString.EMPTY;
       bodyData_ = com.google.protobuf.ByteString.EMPTY;
+      description_ = "";
+      isRespone_ = false;
     }
 
     @java.lang.Override
@@ -6032,18 +6334,6 @@ public final class ATCommand {
               contentLength_ = input.readInt32();
               break;
             }
-            case 104: {
-              int rawValue = input.readEnum();
-
-              errorcode_ = rawValue;
-              break;
-            }
-            case 112: {
-              int rawValue = input.readEnum();
-
-              error_ = rawValue;
-              break;
-            }
             case 122: {
 
               data_ = input.readBytes();
@@ -6052,6 +6342,17 @@ public final class ATCommand {
             case 130: {
 
               bodyData_ = input.readBytes();
+              break;
+            }
+            case 138: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              description_ = s;
+              break;
+            }
+            case 144: {
+
+              isRespone_ = input.readBool();
               break;
             }
           }
@@ -6217,38 +6518,6 @@ public final class ATCommand {
       return contentLength_;
     }
 
-    public static final int ERRORCODE_FIELD_NUMBER = 13;
-    private int errorcode_;
-    /**
-     * <code>optional .com.rtrk.protobuf.Error errorcode = 13;</code>
-     */
-    public int getErrorcodeValue() {
-      return errorcode_;
-    }
-    /**
-     * <code>optional .com.rtrk.protobuf.Error errorcode = 13;</code>
-     */
-    public com.rtrk.atcommands.ATCommand.Error getErrorcode() {
-      com.rtrk.atcommands.ATCommand.Error result = com.rtrk.atcommands.ATCommand.Error.valueOf(errorcode_);
-      return result == null ? com.rtrk.atcommands.ATCommand.Error.UNRECOGNIZED : result;
-    }
-
-    public static final int ERROR_FIELD_NUMBER = 14;
-    private int error_;
-    /**
-     * <code>optional .com.rtrk.protobuf.Error error = 14;</code>
-     */
-    public int getErrorValue() {
-      return error_;
-    }
-    /**
-     * <code>optional .com.rtrk.protobuf.Error error = 14;</code>
-     */
-    public com.rtrk.atcommands.ATCommand.Error getError() {
-      com.rtrk.atcommands.ATCommand.Error result = com.rtrk.atcommands.ATCommand.Error.valueOf(error_);
-      return result == null ? com.rtrk.atcommands.ATCommand.Error.UNRECOGNIZED : result;
-    }
-
     public static final int DATA_FIELD_NUMBER = 15;
     private com.google.protobuf.ByteString data_;
     /**
@@ -6265,6 +6534,49 @@ public final class ATCommand {
      */
     public com.google.protobuf.ByteString getBodyData() {
       return bodyData_;
+    }
+
+    public static final int DESCRIPTION_FIELD_NUMBER = 17;
+    private volatile java.lang.Object description_;
+    /**
+     * <code>optional string description = 17;</code>
+     */
+    public java.lang.String getDescription() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        description_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>optional string description = 17;</code>
+     */
+    public com.google.protobuf.ByteString
+        getDescriptionBytes() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        description_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ISRESPONE_FIELD_NUMBER = 18;
+    private boolean isRespone_;
+    /**
+     * <code>optional bool isRespone = 18;</code>
+     */
+    public boolean getIsRespone() {
+      return isRespone_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -6315,17 +6627,17 @@ public final class ATCommand {
       if (contentLength_ != 0) {
         output.writeInt32(12, contentLength_);
       }
-      if (errorcode_ != com.rtrk.atcommands.ATCommand.Error.OK.getNumber()) {
-        output.writeEnum(13, errorcode_);
-      }
-      if (error_ != com.rtrk.atcommands.ATCommand.Error.OK.getNumber()) {
-        output.writeEnum(14, error_);
-      }
       if (!data_.isEmpty()) {
         output.writeBytes(15, data_);
       }
       if (!bodyData_.isEmpty()) {
         output.writeBytes(16, bodyData_);
+      }
+      if (!getDescriptionBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 17, description_);
+      }
+      if (isRespone_ != false) {
+        output.writeBool(18, isRespone_);
       }
     }
 
@@ -6381,14 +6693,6 @@ public final class ATCommand {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(12, contentLength_);
       }
-      if (errorcode_ != com.rtrk.atcommands.ATCommand.Error.OK.getNumber()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(13, errorcode_);
-      }
-      if (error_ != com.rtrk.atcommands.ATCommand.Error.OK.getNumber()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(14, error_);
-      }
       if (!data_.isEmpty()) {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(15, data_);
@@ -6396,6 +6700,13 @@ public final class ATCommand {
       if (!bodyData_.isEmpty()) {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(16, bodyData_);
+      }
+      if (!getDescriptionBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(17, description_);
+      }
+      if (isRespone_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(18, isRespone_);
       }
       memoizedSize = size;
       return size;
@@ -6436,12 +6747,14 @@ public final class ATCommand {
           == other.getDownloadSize());
       result = result && (getContentLength()
           == other.getContentLength());
-      result = result && errorcode_ == other.errorcode_;
-      result = result && error_ == other.error_;
       result = result && getData()
           .equals(other.getData());
       result = result && getBodyData()
           .equals(other.getBodyData());
+      result = result && getDescription()
+          .equals(other.getDescription());
+      result = result && (getIsRespone()
+          == other.getIsRespone());
       return result;
     }
 
@@ -6478,14 +6791,15 @@ public final class ATCommand {
       hash = (53 * hash) + getDownloadSize();
       hash = (37 * hash) + CONTENTLENGTH_FIELD_NUMBER;
       hash = (53 * hash) + getContentLength();
-      hash = (37 * hash) + ERRORCODE_FIELD_NUMBER;
-      hash = (53 * hash) + errorcode_;
-      hash = (37 * hash) + ERROR_FIELD_NUMBER;
-      hash = (53 * hash) + error_;
       hash = (37 * hash) + DATA_FIELD_NUMBER;
       hash = (53 * hash) + getData().hashCode();
       hash = (37 * hash) + BODYDATA_FIELD_NUMBER;
       hash = (53 * hash) + getBodyData().hashCode();
+      hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
+      hash = (53 * hash) + getDescription().hashCode();
+      hash = (37 * hash) + ISRESPONE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getIsRespone());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -6628,13 +6942,13 @@ public final class ATCommand {
 
         contentLength_ = 0;
 
-        errorcode_ = 0;
-
-        error_ = 0;
-
         data_ = com.google.protobuf.ByteString.EMPTY;
 
         bodyData_ = com.google.protobuf.ByteString.EMPTY;
+
+        description_ = "";
+
+        isRespone_ = false;
 
         return this;
       }
@@ -6670,10 +6984,10 @@ public final class ATCommand {
         result.length_ = length_;
         result.downloadSize_ = downloadSize_;
         result.contentLength_ = contentLength_;
-        result.errorcode_ = errorcode_;
-        result.error_ = error_;
         result.data_ = data_;
         result.bodyData_ = bodyData_;
+        result.description_ = description_;
+        result.isRespone_ = isRespone_;
         onBuilt();
         return result;
       }
@@ -6752,17 +7066,18 @@ public final class ATCommand {
         if (other.getContentLength() != 0) {
           setContentLength(other.getContentLength());
         }
-        if (other.errorcode_ != 0) {
-          setErrorcodeValue(other.getErrorcodeValue());
-        }
-        if (other.error_ != 0) {
-          setErrorValue(other.getErrorValue());
-        }
         if (other.getData() != com.google.protobuf.ByteString.EMPTY) {
           setData(other.getData());
         }
         if (other.getBodyData() != com.google.protobuf.ByteString.EMPTY) {
           setBodyData(other.getBodyData());
+        }
+        if (!other.getDescription().isEmpty()) {
+          description_ = other.description_;
+          onChanged();
+        }
+        if (other.getIsRespone() != false) {
+          setIsRespone(other.getIsRespone());
         }
         onChanged();
         return this;
@@ -7163,94 +7478,6 @@ public final class ATCommand {
         return this;
       }
 
-      private int errorcode_ = 0;
-      /**
-       * <code>optional .com.rtrk.protobuf.Error errorcode = 13;</code>
-       */
-      public int getErrorcodeValue() {
-        return errorcode_;
-      }
-      /**
-       * <code>optional .com.rtrk.protobuf.Error errorcode = 13;</code>
-       */
-      public Builder setErrorcodeValue(int value) {
-        errorcode_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional .com.rtrk.protobuf.Error errorcode = 13;</code>
-       */
-      public com.rtrk.atcommands.ATCommand.Error getErrorcode() {
-        com.rtrk.atcommands.ATCommand.Error result = com.rtrk.atcommands.ATCommand.Error.valueOf(errorcode_);
-        return result == null ? com.rtrk.atcommands.ATCommand.Error.UNRECOGNIZED : result;
-      }
-      /**
-       * <code>optional .com.rtrk.protobuf.Error errorcode = 13;</code>
-       */
-      public Builder setErrorcode(com.rtrk.atcommands.ATCommand.Error value) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        
-        errorcode_ = value.getNumber();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional .com.rtrk.protobuf.Error errorcode = 13;</code>
-       */
-      public Builder clearErrorcode() {
-        
-        errorcode_ = 0;
-        onChanged();
-        return this;
-      }
-
-      private int error_ = 0;
-      /**
-       * <code>optional .com.rtrk.protobuf.Error error = 14;</code>
-       */
-      public int getErrorValue() {
-        return error_;
-      }
-      /**
-       * <code>optional .com.rtrk.protobuf.Error error = 14;</code>
-       */
-      public Builder setErrorValue(int value) {
-        error_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional .com.rtrk.protobuf.Error error = 14;</code>
-       */
-      public com.rtrk.atcommands.ATCommand.Error getError() {
-        com.rtrk.atcommands.ATCommand.Error result = com.rtrk.atcommands.ATCommand.Error.valueOf(error_);
-        return result == null ? com.rtrk.atcommands.ATCommand.Error.UNRECOGNIZED : result;
-      }
-      /**
-       * <code>optional .com.rtrk.protobuf.Error error = 14;</code>
-       */
-      public Builder setError(com.rtrk.atcommands.ATCommand.Error value) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        
-        error_ = value.getNumber();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional .com.rtrk.protobuf.Error error = 14;</code>
-       */
-      public Builder clearError() {
-        
-        error_ = 0;
-        onChanged();
-        return this;
-      }
-
       private com.google.protobuf.ByteString data_ = com.google.protobuf.ByteString.EMPTY;
       /**
        * <code>optional bytes data = 15;</code>
@@ -7305,6 +7532,101 @@ public final class ATCommand {
       public Builder clearBodyData() {
         
         bodyData_ = getDefaultInstance().getBodyData();
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object description_ = "";
+      /**
+       * <code>optional string description = 17;</code>
+       */
+      public java.lang.String getDescription() {
+        java.lang.Object ref = description_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          description_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string description = 17;</code>
+       */
+      public com.google.protobuf.ByteString
+          getDescriptionBytes() {
+        java.lang.Object ref = description_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          description_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string description = 17;</code>
+       */
+      public Builder setDescription(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        description_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string description = 17;</code>
+       */
+      public Builder clearDescription() {
+        
+        description_ = getDefaultInstance().getDescription();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string description = 17;</code>
+       */
+      public Builder setDescriptionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        description_ = value;
+        onChanged();
+        return this;
+      }
+
+      private boolean isRespone_ ;
+      /**
+       * <code>optional bool isRespone = 18;</code>
+       */
+      public boolean getIsRespone() {
+        return isRespone_;
+      }
+      /**
+       * <code>optional bool isRespone = 18;</code>
+       */
+      public Builder setIsRespone(boolean value) {
+        
+        isRespone_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool isRespone = 18;</code>
+       */
+      public Builder clearIsRespone() {
+        
+        isRespone_ = false;
         onChanged();
         return this;
       }
@@ -7541,13 +7863,24 @@ public final class ATCommand {
     int getChecksum();
 
     /**
-     * <code>optional .com.rtrk.protobuf.Error error = 31;</code>
+     * <code>optional int32 downloadSize = 31;</code>
      */
-    int getErrorValue();
+    int getDownloadSize();
+
     /**
-     * <code>optional .com.rtrk.protobuf.Error error = 31;</code>
+     * <code>optional bool isResponse = 32;</code>
      */
-    com.rtrk.atcommands.ATCommand.Error getError();
+    boolean getIsResponse();
+
+    /**
+     * <code>optional string description = 33;</code>
+     */
+    java.lang.String getDescription();
+    /**
+     * <code>optional string description = 33;</code>
+     */
+    com.google.protobuf.ByteString
+        getDescriptionBytes();
   }
   /**
    * Protobuf type {@code com.rtrk.protobuf.FileCommand}
@@ -7591,7 +7924,9 @@ public final class ATCommand {
       offset_ = 0;
       position_ = 0;
       checksum_ = 0;
-      error_ = 0;
+      downloadSize_ = 0;
+      isResponse_ = false;
+      description_ = "";
     }
 
     @java.lang.Override
@@ -7605,6 +7940,7 @@ public final class ATCommand {
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       int mutable_bitField0_ = 0;
+      int mutable_bitField1_ = 0;
       try {
         boolean done = false;
         while (!done) {
@@ -7776,9 +8112,19 @@ public final class ATCommand {
               break;
             }
             case 248: {
-              int rawValue = input.readEnum();
 
-              error_ = rawValue;
+              downloadSize_ = input.readInt32();
+              break;
+            }
+            case 256: {
+
+              isResponse_ = input.readBool();
+              break;
+            }
+            case 266: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              description_ = s;
               break;
             }
           }
@@ -8206,20 +8552,56 @@ public final class ATCommand {
       return checksum_;
     }
 
-    public static final int ERROR_FIELD_NUMBER = 31;
-    private int error_;
+    public static final int DOWNLOADSIZE_FIELD_NUMBER = 31;
+    private int downloadSize_;
     /**
-     * <code>optional .com.rtrk.protobuf.Error error = 31;</code>
+     * <code>optional int32 downloadSize = 31;</code>
      */
-    public int getErrorValue() {
-      return error_;
+    public int getDownloadSize() {
+      return downloadSize_;
+    }
+
+    public static final int ISRESPONSE_FIELD_NUMBER = 32;
+    private boolean isResponse_;
+    /**
+     * <code>optional bool isResponse = 32;</code>
+     */
+    public boolean getIsResponse() {
+      return isResponse_;
+    }
+
+    public static final int DESCRIPTION_FIELD_NUMBER = 33;
+    private volatile java.lang.Object description_;
+    /**
+     * <code>optional string description = 33;</code>
+     */
+    public java.lang.String getDescription() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        description_ = s;
+        return s;
+      }
     }
     /**
-     * <code>optional .com.rtrk.protobuf.Error error = 31;</code>
+     * <code>optional string description = 33;</code>
      */
-    public com.rtrk.atcommands.ATCommand.Error getError() {
-      com.rtrk.atcommands.ATCommand.Error result = com.rtrk.atcommands.ATCommand.Error.valueOf(error_);
-      return result == null ? com.rtrk.atcommands.ATCommand.Error.UNRECOGNIZED : result;
+    public com.google.protobuf.ByteString
+        getDescriptionBytes() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        description_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
     }
 
     private byte memoizedIsInitialized = -1;
@@ -8324,8 +8706,14 @@ public final class ATCommand {
       if (checksum_ != 0) {
         output.writeInt32(30, checksum_);
       }
-      if (error_ != com.rtrk.atcommands.ATCommand.Error.OK.getNumber()) {
-        output.writeEnum(31, error_);
+      if (downloadSize_ != 0) {
+        output.writeInt32(31, downloadSize_);
+      }
+      if (isResponse_ != false) {
+        output.writeBool(32, isResponse_);
+      }
+      if (!getDescriptionBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 33, description_);
       }
     }
 
@@ -8449,9 +8837,16 @@ public final class ATCommand {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(30, checksum_);
       }
-      if (error_ != com.rtrk.atcommands.ATCommand.Error.OK.getNumber()) {
+      if (downloadSize_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(31, error_);
+          .computeInt32Size(31, downloadSize_);
+      }
+      if (isResponse_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(32, isResponse_);
+      }
+      if (!getDescriptionBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(33, description_);
       }
       memoizedSize = size;
       return size;
@@ -8528,7 +8923,12 @@ public final class ATCommand {
           == other.getPosition());
       result = result && (getChecksum()
           == other.getChecksum());
-      result = result && error_ == other.error_;
+      result = result && (getDownloadSize()
+          == other.getDownloadSize());
+      result = result && (getIsResponse()
+          == other.getIsResponse());
+      result = result && getDescription()
+          .equals(other.getDescription());
       return result;
     }
 
@@ -8606,8 +9006,13 @@ public final class ATCommand {
       hash = (53 * hash) + getPosition();
       hash = (37 * hash) + CHECKSUM_FIELD_NUMBER;
       hash = (53 * hash) + getChecksum();
-      hash = (37 * hash) + ERROR_FIELD_NUMBER;
-      hash = (53 * hash) + error_;
+      hash = (37 * hash) + DOWNLOADSIZE_FIELD_NUMBER;
+      hash = (53 * hash) + getDownloadSize();
+      hash = (37 * hash) + ISRESPONSE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getIsResponse());
+      hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
+      hash = (53 * hash) + getDescription().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -8786,7 +9191,11 @@ public final class ATCommand {
 
         checksum_ = 0;
 
-        error_ = 0;
+        downloadSize_ = 0;
+
+        isResponse_ = false;
+
+        description_ = "";
 
         return this;
       }
@@ -8840,7 +9249,9 @@ public final class ATCommand {
         result.offset_ = offset_;
         result.position_ = position_;
         result.checksum_ = checksum_;
-        result.error_ = error_;
+        result.downloadSize_ = downloadSize_;
+        result.isResponse_ = isResponse_;
+        result.description_ = description_;
         onBuilt();
         return result;
       }
@@ -8977,8 +9388,15 @@ public final class ATCommand {
         if (other.getChecksum() != 0) {
           setChecksum(other.getChecksum());
         }
-        if (other.error_ != 0) {
-          setErrorValue(other.getErrorValue());
+        if (other.getDownloadSize() != 0) {
+          setDownloadSize(other.getDownloadSize());
+        }
+        if (other.getIsResponse() != false) {
+          setIsResponse(other.getIsResponse());
+        }
+        if (!other.getDescription().isEmpty()) {
+          description_ = other.description_;
+          onChanged();
         }
         onChanged();
         return this;
@@ -10019,46 +10437,123 @@ public final class ATCommand {
         return this;
       }
 
-      private int error_ = 0;
+      private int downloadSize_ ;
       /**
-       * <code>optional .com.rtrk.protobuf.Error error = 31;</code>
+       * <code>optional int32 downloadSize = 31;</code>
        */
-      public int getErrorValue() {
-        return error_;
+      public int getDownloadSize() {
+        return downloadSize_;
       }
       /**
-       * <code>optional .com.rtrk.protobuf.Error error = 31;</code>
+       * <code>optional int32 downloadSize = 31;</code>
        */
-      public Builder setErrorValue(int value) {
-        error_ = value;
+      public Builder setDownloadSize(int value) {
+        
+        downloadSize_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>optional .com.rtrk.protobuf.Error error = 31;</code>
+       * <code>optional int32 downloadSize = 31;</code>
        */
-      public com.rtrk.atcommands.ATCommand.Error getError() {
-        com.rtrk.atcommands.ATCommand.Error result = com.rtrk.atcommands.ATCommand.Error.valueOf(error_);
-        return result == null ? com.rtrk.atcommands.ATCommand.Error.UNRECOGNIZED : result;
+      public Builder clearDownloadSize() {
+        
+        downloadSize_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private boolean isResponse_ ;
+      /**
+       * <code>optional bool isResponse = 32;</code>
+       */
+      public boolean getIsResponse() {
+        return isResponse_;
       }
       /**
-       * <code>optional .com.rtrk.protobuf.Error error = 31;</code>
+       * <code>optional bool isResponse = 32;</code>
        */
-      public Builder setError(com.rtrk.atcommands.ATCommand.Error value) {
-        if (value == null) {
-          throw new NullPointerException();
+      public Builder setIsResponse(boolean value) {
+        
+        isResponse_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool isResponse = 32;</code>
+       */
+      public Builder clearIsResponse() {
+        
+        isResponse_ = false;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object description_ = "";
+      /**
+       * <code>optional string description = 33;</code>
+       */
+      public java.lang.String getDescription() {
+        java.lang.Object ref = description_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          description_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
         }
-        
-        error_ = value.getNumber();
+      }
+      /**
+       * <code>optional string description = 33;</code>
+       */
+      public com.google.protobuf.ByteString
+          getDescriptionBytes() {
+        java.lang.Object ref = description_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          description_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string description = 33;</code>
+       */
+      public Builder setDescription(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        description_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>optional .com.rtrk.protobuf.Error error = 31;</code>
+       * <code>optional string description = 33;</code>
        */
-      public Builder clearError() {
+      public Builder clearDescription() {
         
-        error_ = 0;
+        description_ = getDefaultInstance().getDescription();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string description = 33;</code>
+       */
+      public Builder setDescriptionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        description_ = value;
         onChanged();
         return this;
       }
@@ -10158,15 +10653,6 @@ public final class ATCommand {
      * <code>optional int32 port = 7;</code>
      */
     int getPort();
-
-    /**
-     * <code>optional .com.rtrk.protobuf.Error error = 25;</code>
-     */
-    int getErrorValue();
-    /**
-     * <code>optional .com.rtrk.protobuf.Error error = 25;</code>
-     */
-    com.rtrk.atcommands.ATCommand.Error getError();
 
     /**
      * <code>optional string fileName = 8;</code>
@@ -10297,6 +10783,21 @@ public final class ATCommand {
      */
     com.google.protobuf.ByteString
         getDirectoryNameBytes();
+
+    /**
+     * <code>optional bool isResponse = 25;</code>
+     */
+    boolean getIsResponse();
+
+    /**
+     * <code>optional string description = 26;</code>
+     */
+    java.lang.String getDescription();
+    /**
+     * <code>optional string description = 26;</code>
+     */
+    com.google.protobuf.ByteString
+        getDescriptionBytes();
   }
   /**
    * Protobuf type {@code com.rtrk.protobuf.FTPCommand}
@@ -10317,7 +10818,6 @@ public final class ATCommand {
       execution_ = false;
       hostName_ = "";
       port_ = 0;
-      error_ = 0;
       fileName_ = "";
       fileSize_ = 0;
       time_ = 0;
@@ -10335,6 +10835,8 @@ public final class ATCommand {
       name_ = "";
       return_ = 0;
       directoryName_ = "";
+      isResponse_ = false;
+      description_ = "";
     }
 
     @java.lang.Override
@@ -10494,9 +10996,14 @@ public final class ATCommand {
               break;
             }
             case 200: {
-              int rawValue = input.readEnum();
 
-              error_ = rawValue;
+              isResponse_ = input.readBool();
+              break;
+            }
+            case 210: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              description_ = s;
               break;
             }
           }
@@ -10615,22 +11122,6 @@ public final class ATCommand {
      */
     public int getPort() {
       return port_;
-    }
-
-    public static final int ERROR_FIELD_NUMBER = 25;
-    private int error_;
-    /**
-     * <code>optional .com.rtrk.protobuf.Error error = 25;</code>
-     */
-    public int getErrorValue() {
-      return error_;
-    }
-    /**
-     * <code>optional .com.rtrk.protobuf.Error error = 25;</code>
-     */
-    public com.rtrk.atcommands.ATCommand.Error getError() {
-      com.rtrk.atcommands.ATCommand.Error result = com.rtrk.atcommands.ATCommand.Error.valueOf(error_);
-      return result == null ? com.rtrk.atcommands.ATCommand.Error.UNRECOGNIZED : result;
     }
 
     public static final int FILENAME_FIELD_NUMBER = 8;
@@ -11011,6 +11502,49 @@ public final class ATCommand {
       }
     }
 
+    public static final int ISRESPONSE_FIELD_NUMBER = 25;
+    private boolean isResponse_;
+    /**
+     * <code>optional bool isResponse = 25;</code>
+     */
+    public boolean getIsResponse() {
+      return isResponse_;
+    }
+
+    public static final int DESCRIPTION_FIELD_NUMBER = 26;
+    private volatile java.lang.Object description_;
+    /**
+     * <code>optional string description = 26;</code>
+     */
+    public java.lang.String getDescription() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        description_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>optional string description = 26;</code>
+     */
+    public com.google.protobuf.ByteString
+        getDescriptionBytes() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        description_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
@@ -11095,8 +11629,11 @@ public final class ATCommand {
       if (!getDirectoryNameBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 24, directoryName_);
       }
-      if (error_ != com.rtrk.atcommands.ATCommand.Error.OK.getNumber()) {
-        output.writeEnum(25, error_);
+      if (isResponse_ != false) {
+        output.writeBool(25, isResponse_);
+      }
+      if (!getDescriptionBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 26, description_);
       }
     }
 
@@ -11191,9 +11728,12 @@ public final class ATCommand {
       if (!getDirectoryNameBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(24, directoryName_);
       }
-      if (error_ != com.rtrk.atcommands.ATCommand.Error.OK.getNumber()) {
+      if (isResponse_ != false) {
         size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(25, error_);
+          .computeBoolSize(25, isResponse_);
+      }
+      if (!getDescriptionBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(26, description_);
       }
       memoizedSize = size;
       return size;
@@ -11224,7 +11764,6 @@ public final class ATCommand {
           .equals(other.getHostName());
       result = result && (getPort()
           == other.getPort());
-      result = result && error_ == other.error_;
       result = result && getFileName()
           .equals(other.getFileName());
       result = result && (getFileSize()
@@ -11259,6 +11798,10 @@ public final class ATCommand {
           == other.getReturn());
       result = result && getDirectoryName()
           .equals(other.getDirectoryName());
+      result = result && (getIsResponse()
+          == other.getIsResponse());
+      result = result && getDescription()
+          .equals(other.getDescription());
       return result;
     }
 
@@ -11287,8 +11830,6 @@ public final class ATCommand {
       hash = (53 * hash) + getHostName().hashCode();
       hash = (37 * hash) + PORT_FIELD_NUMBER;
       hash = (53 * hash) + getPort();
-      hash = (37 * hash) + ERROR_FIELD_NUMBER;
-      hash = (53 * hash) + error_;
       hash = (37 * hash) + FILENAME_FIELD_NUMBER;
       hash = (53 * hash) + getFileName().hashCode();
       hash = (37 * hash) + FILESIZE_FIELD_NUMBER;
@@ -11323,6 +11864,11 @@ public final class ATCommand {
       hash = (53 * hash) + getReturn();
       hash = (37 * hash) + DIRECTORYNAME_FIELD_NUMBER;
       hash = (53 * hash) + getDirectoryName().hashCode();
+      hash = (37 * hash) + ISRESPONSE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getIsResponse());
+      hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
+      hash = (53 * hash) + getDescription().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -11455,8 +12001,6 @@ public final class ATCommand {
 
         port_ = 0;
 
-        error_ = 0;
-
         fileName_ = "";
 
         fileSize_ = 0;
@@ -11491,6 +12035,10 @@ public final class ATCommand {
 
         directoryName_ = "";
 
+        isResponse_ = false;
+
+        description_ = "";
+
         return this;
       }
 
@@ -11520,7 +12068,6 @@ public final class ATCommand {
         result.execution_ = execution_;
         result.hostName_ = hostName_;
         result.port_ = port_;
-        result.error_ = error_;
         result.fileName_ = fileName_;
         result.fileSize_ = fileSize_;
         result.time_ = time_;
@@ -11538,6 +12085,8 @@ public final class ATCommand {
         result.name_ = name_;
         result.return_ = return_;
         result.directoryName_ = directoryName_;
+        result.isResponse_ = isResponse_;
+        result.description_ = description_;
         onBuilt();
         return result;
       }
@@ -11601,9 +12150,6 @@ public final class ATCommand {
         if (other.getPort() != 0) {
           setPort(other.getPort());
         }
-        if (other.error_ != 0) {
-          setErrorValue(other.getErrorValue());
-        }
         if (!other.getFileName().isEmpty()) {
           fileName_ = other.fileName_;
           onChanged();
@@ -11662,6 +12208,13 @@ public final class ATCommand {
         }
         if (!other.getDirectoryName().isEmpty()) {
           directoryName_ = other.directoryName_;
+          onChanged();
+        }
+        if (other.getIsResponse() != false) {
+          setIsResponse(other.getIsResponse());
+        }
+        if (!other.getDescription().isEmpty()) {
+          description_ = other.description_;
           onChanged();
         }
         onChanged();
@@ -11929,50 +12482,6 @@ public final class ATCommand {
       public Builder clearPort() {
         
         port_ = 0;
-        onChanged();
-        return this;
-      }
-
-      private int error_ = 0;
-      /**
-       * <code>optional .com.rtrk.protobuf.Error error = 25;</code>
-       */
-      public int getErrorValue() {
-        return error_;
-      }
-      /**
-       * <code>optional .com.rtrk.protobuf.Error error = 25;</code>
-       */
-      public Builder setErrorValue(int value) {
-        error_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional .com.rtrk.protobuf.Error error = 25;</code>
-       */
-      public com.rtrk.atcommands.ATCommand.Error getError() {
-        com.rtrk.atcommands.ATCommand.Error result = com.rtrk.atcommands.ATCommand.Error.valueOf(error_);
-        return result == null ? com.rtrk.atcommands.ATCommand.Error.UNRECOGNIZED : result;
-      }
-      /**
-       * <code>optional .com.rtrk.protobuf.Error error = 25;</code>
-       */
-      public Builder setError(com.rtrk.atcommands.ATCommand.Error value) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        
-        error_ = value.getNumber();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional .com.rtrk.protobuf.Error error = 25;</code>
-       */
-      public Builder clearError() {
-        
-        error_ = 0;
         onChanged();
         return this;
       }
@@ -12805,6 +13314,101 @@ public final class ATCommand {
         onChanged();
         return this;
       }
+
+      private boolean isResponse_ ;
+      /**
+       * <code>optional bool isResponse = 25;</code>
+       */
+      public boolean getIsResponse() {
+        return isResponse_;
+      }
+      /**
+       * <code>optional bool isResponse = 25;</code>
+       */
+      public Builder setIsResponse(boolean value) {
+        
+        isResponse_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool isResponse = 25;</code>
+       */
+      public Builder clearIsResponse() {
+        
+        isResponse_ = false;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object description_ = "";
+      /**
+       * <code>optional string description = 26;</code>
+       */
+      public java.lang.String getDescription() {
+        java.lang.Object ref = description_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          description_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string description = 26;</code>
+       */
+      public com.google.protobuf.ByteString
+          getDescriptionBytes() {
+        java.lang.Object ref = description_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          description_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string description = 26;</code>
+       */
+      public Builder setDescription(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        description_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string description = 26;</code>
+       */
+      public Builder clearDescription() {
+        
+        description_ = getDefaultInstance().getDescription();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string description = 26;</code>
+       */
+      public Builder setDescriptionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        description_ = value;
+        onChanged();
+        return this;
+      }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return this;
@@ -13088,13 +13692,19 @@ public final class ATCommand {
     int getFileType();
 
     /**
-     * <code>optional .com.rtrk.protobuf.Error error = 37;</code>
+     * <code>optional bool isResponse = 39;</code>
      */
-    int getErrorValue();
+    boolean getIsResponse();
+
     /**
-     * <code>optional .com.rtrk.protobuf.Error error = 37;</code>
+     * <code>optional string description = 40;</code>
      */
-    com.rtrk.atcommands.ATCommand.Error getError();
+    java.lang.String getDescription();
+    /**
+     * <code>optional string description = 40;</code>
+     */
+    com.google.protobuf.ByteString
+        getDescriptionBytes();
   }
   /**
    * Protobuf type {@code com.rtrk.protobuf.MMSCommand}
@@ -13145,7 +13755,8 @@ public final class ATCommand {
       bigEndian_ = false;
       outputStyle_ = 0;
       fileType_ = 0;
-      error_ = 0;
+      isResponse_ = false;
+      description_ = "";
     }
 
     @java.lang.Override
@@ -13363,15 +13974,20 @@ public final class ATCommand {
               fileType_ = input.readInt32();
               break;
             }
-            case 296: {
-              int rawValue = input.readEnum();
-
-              error_ = rawValue;
-              break;
-            }
             case 304: {
 
               inputMode_ = input.readInt32();
+              break;
+            }
+            case 312: {
+
+              isResponse_ = input.readBool();
+              break;
+            }
+            case 322: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              description_ = s;
               break;
             }
           }
@@ -13937,20 +14553,47 @@ public final class ATCommand {
       return fileType_;
     }
 
-    public static final int ERROR_FIELD_NUMBER = 37;
-    private int error_;
+    public static final int ISRESPONSE_FIELD_NUMBER = 39;
+    private boolean isResponse_;
     /**
-     * <code>optional .com.rtrk.protobuf.Error error = 37;</code>
+     * <code>optional bool isResponse = 39;</code>
      */
-    public int getErrorValue() {
-      return error_;
+    public boolean getIsResponse() {
+      return isResponse_;
+    }
+
+    public static final int DESCRIPTION_FIELD_NUMBER = 40;
+    private volatile java.lang.Object description_;
+    /**
+     * <code>optional string description = 40;</code>
+     */
+    public java.lang.String getDescription() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        description_ = s;
+        return s;
+      }
     }
     /**
-     * <code>optional .com.rtrk.protobuf.Error error = 37;</code>
+     * <code>optional string description = 40;</code>
      */
-    public com.rtrk.atcommands.ATCommand.Error getError() {
-      com.rtrk.atcommands.ATCommand.Error result = com.rtrk.atcommands.ATCommand.Error.valueOf(error_);
-      return result == null ? com.rtrk.atcommands.ATCommand.Error.UNRECOGNIZED : result;
+    public com.google.protobuf.ByteString
+        getDescriptionBytes() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        description_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
     }
 
     private byte memoizedIsInitialized = -1;
@@ -14073,11 +14716,14 @@ public final class ATCommand {
       if (fileType_ != 0) {
         output.writeInt32(36, fileType_);
       }
-      if (error_ != com.rtrk.atcommands.ATCommand.Error.OK.getNumber()) {
-        output.writeEnum(37, error_);
-      }
       if (inputMode_ != 0) {
         output.writeInt32(38, inputMode_);
+      }
+      if (isResponse_ != false) {
+        output.writeBool(39, isResponse_);
+      }
+      if (!getDescriptionBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 40, description_);
       }
     }
 
@@ -14222,13 +14868,16 @@ public final class ATCommand {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(36, fileType_);
       }
-      if (error_ != com.rtrk.atcommands.ATCommand.Error.OK.getNumber()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(37, error_);
-      }
       if (inputMode_ != 0) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(38, inputMode_);
+      }
+      if (isResponse_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(39, isResponse_);
+      }
+      if (!getDescriptionBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(40, description_);
       }
       memoizedSize = size;
       return size;
@@ -14319,7 +14968,10 @@ public final class ATCommand {
           == other.getOutputStyle());
       result = result && (getFileType()
           == other.getFileType());
-      result = result && error_ == other.error_;
+      result = result && (getIsResponse()
+          == other.getIsResponse());
+      result = result && getDescription()
+          .equals(other.getDescription());
       return result;
     }
 
@@ -14413,8 +15065,11 @@ public final class ATCommand {
       hash = (53 * hash) + getOutputStyle();
       hash = (37 * hash) + FILETYPE_FIELD_NUMBER;
       hash = (53 * hash) + getFileType();
-      hash = (37 * hash) + ERROR_FIELD_NUMBER;
-      hash = (53 * hash) + error_;
+      hash = (37 * hash) + ISRESPONSE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getIsResponse());
+      hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
+      hash = (53 * hash) + getDescription().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -14607,7 +15262,9 @@ public final class ATCommand {
 
         fileType_ = 0;
 
-        error_ = 0;
+        isResponse_ = false;
+
+        description_ = "";
 
         return this;
       }
@@ -14668,7 +15325,8 @@ public final class ATCommand {
         result.bigEndian_ = bigEndian_;
         result.outputStyle_ = outputStyle_;
         result.fileType_ = fileType_;
-        result.error_ = error_;
+        result.isResponse_ = isResponse_;
+        result.description_ = description_;
         onBuilt();
         return result;
       }
@@ -14829,8 +15487,12 @@ public final class ATCommand {
         if (other.getFileType() != 0) {
           setFileType(other.getFileType());
         }
-        if (other.error_ != 0) {
-          setErrorValue(other.getErrorValue());
+        if (other.getIsResponse() != false) {
+          setIsResponse(other.getIsResponse());
+        }
+        if (!other.getDescription().isEmpty()) {
+          description_ = other.description_;
+          onChanged();
         }
         onChanged();
         return this;
@@ -16182,46 +16844,97 @@ public final class ATCommand {
         return this;
       }
 
-      private int error_ = 0;
+      private boolean isResponse_ ;
       /**
-       * <code>optional .com.rtrk.protobuf.Error error = 37;</code>
+       * <code>optional bool isResponse = 39;</code>
        */
-      public int getErrorValue() {
-        return error_;
+      public boolean getIsResponse() {
+        return isResponse_;
       }
       /**
-       * <code>optional .com.rtrk.protobuf.Error error = 37;</code>
+       * <code>optional bool isResponse = 39;</code>
        */
-      public Builder setErrorValue(int value) {
-        error_ = value;
+      public Builder setIsResponse(boolean value) {
+        
+        isResponse_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>optional .com.rtrk.protobuf.Error error = 37;</code>
+       * <code>optional bool isResponse = 39;</code>
        */
-      public com.rtrk.atcommands.ATCommand.Error getError() {
-        com.rtrk.atcommands.ATCommand.Error result = com.rtrk.atcommands.ATCommand.Error.valueOf(error_);
-        return result == null ? com.rtrk.atcommands.ATCommand.Error.UNRECOGNIZED : result;
+      public Builder clearIsResponse() {
+        
+        isResponse_ = false;
+        onChanged();
+        return this;
       }
+
+      private java.lang.Object description_ = "";
       /**
-       * <code>optional .com.rtrk.protobuf.Error error = 37;</code>
+       * <code>optional string description = 40;</code>
        */
-      public Builder setError(com.rtrk.atcommands.ATCommand.Error value) {
-        if (value == null) {
-          throw new NullPointerException();
+      public java.lang.String getDescription() {
+        java.lang.Object ref = description_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          description_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
         }
-        
-        error_ = value.getNumber();
+      }
+      /**
+       * <code>optional string description = 40;</code>
+       */
+      public com.google.protobuf.ByteString
+          getDescriptionBytes() {
+        java.lang.Object ref = description_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          description_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string description = 40;</code>
+       */
+      public Builder setDescription(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        description_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>optional .com.rtrk.protobuf.Error error = 37;</code>
+       * <code>optional string description = 40;</code>
        */
-      public Builder clearError() {
+      public Builder clearDescription() {
         
-        error_ = 0;
+        description_ = getDefaultInstance().getDescription();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string description = 40;</code>
+       */
+      public Builder setDescriptionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        description_ = value;
         onChanged();
         return this;
       }
@@ -16529,6 +17242,21 @@ public final class ATCommand {
      * <code>optional int32 arcfn3 = 43;</code>
      */
     int getArcfn3();
+
+    /**
+     * <code>optional bool isResponse = 45;</code>
+     */
+    boolean getIsResponse();
+
+    /**
+     * <code>optional string description = 46;</code>
+     */
+    java.lang.String getDescription();
+    /**
+     * <code>optional string description = 46;</code>
+     */
+    com.google.protobuf.ByteString
+        getDescriptionBytes();
   }
   /**
    * Protobuf type {@code com.rtrk.protobuf.QuecCellCommand}
@@ -16586,6 +17314,8 @@ public final class ATCommand {
       arcfn1_ = 0;
       arcfn2_ = 0;
       arcfn3_ = 0;
+      isResponse_ = false;
+      description_ = "";
     }
 
     @java.lang.Override
@@ -16837,6 +17567,17 @@ public final class ATCommand {
             case 352: {
 
               mode_ = input.readInt32();
+              break;
+            }
+            case 360: {
+
+              isResponse_ = input.readBool();
+              break;
+            }
+            case 370: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              description_ = s;
               break;
             }
           }
@@ -17373,6 +18114,49 @@ public final class ATCommand {
       return arcfn3_;
     }
 
+    public static final int ISRESPONSE_FIELD_NUMBER = 45;
+    private boolean isResponse_;
+    /**
+     * <code>optional bool isResponse = 45;</code>
+     */
+    public boolean getIsResponse() {
+      return isResponse_;
+    }
+
+    public static final int DESCRIPTION_FIELD_NUMBER = 46;
+    private volatile java.lang.Object description_;
+    /**
+     * <code>optional string description = 46;</code>
+     */
+    public java.lang.String getDescription() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        description_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>optional string description = 46;</code>
+     */
+    public com.google.protobuf.ByteString
+        getDescriptionBytes() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        description_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
@@ -17516,6 +18300,12 @@ public final class ATCommand {
       }
       if (mode_ != 0) {
         output.writeInt32(44, mode_);
+      }
+      if (isResponse_ != false) {
+        output.writeBool(45, isResponse_);
+      }
+      if (!getDescriptionBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 46, description_);
       }
     }
 
@@ -17696,6 +18486,13 @@ public final class ATCommand {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(44, mode_);
       }
+      if (isResponse_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(45, isResponse_);
+      }
+      if (!getDescriptionBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(46, description_);
+      }
       memoizedSize = size;
       return size;
     }
@@ -17805,6 +18602,10 @@ public final class ATCommand {
           == other.getArcfn2());
       result = result && (getArcfn3()
           == other.getArcfn3());
+      result = result && (getIsResponse()
+          == other.getIsResponse());
+      result = result && getDescription()
+          .equals(other.getDescription());
       return result;
     }
 
@@ -17912,6 +18713,11 @@ public final class ATCommand {
       hash = (53 * hash) + getArcfn2();
       hash = (37 * hash) + ARCFN3_FIELD_NUMBER;
       hash = (53 * hash) + getArcfn3();
+      hash = (37 * hash) + ISRESPONSE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getIsResponse());
+      hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
+      hash = (53 * hash) + getDescription().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -18118,6 +18924,10 @@ public final class ATCommand {
 
         arcfn3_ = 0;
 
+        isResponse_ = false;
+
+        description_ = "";
+
         return this;
       }
 
@@ -18184,6 +18994,8 @@ public final class ATCommand {
         result.arcfn1_ = arcfn1_;
         result.arcfn2_ = arcfn2_;
         result.arcfn3_ = arcfn3_;
+        result.isResponse_ = isResponse_;
+        result.description_ = description_;
         onBuilt();
         return result;
       }
@@ -18360,6 +19172,13 @@ public final class ATCommand {
         }
         if (other.getArcfn3() != 0) {
           setArcfn3(other.getArcfn3());
+        }
+        if (other.getIsResponse() != false) {
+          setIsResponse(other.getIsResponse());
+        }
+        if (!other.getDescription().isEmpty()) {
+          description_ = other.description_;
+          onChanged();
         }
         onChanged();
         return this;
@@ -19744,6 +20563,101 @@ public final class ATCommand {
         onChanged();
         return this;
       }
+
+      private boolean isResponse_ ;
+      /**
+       * <code>optional bool isResponse = 45;</code>
+       */
+      public boolean getIsResponse() {
+        return isResponse_;
+      }
+      /**
+       * <code>optional bool isResponse = 45;</code>
+       */
+      public Builder setIsResponse(boolean value) {
+        
+        isResponse_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool isResponse = 45;</code>
+       */
+      public Builder clearIsResponse() {
+        
+        isResponse_ = false;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object description_ = "";
+      /**
+       * <code>optional string description = 46;</code>
+       */
+      public java.lang.String getDescription() {
+        java.lang.Object ref = description_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          description_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string description = 46;</code>
+       */
+      public com.google.protobuf.ByteString
+          getDescriptionBytes() {
+        java.lang.Object ref = description_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          description_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string description = 46;</code>
+       */
+      public Builder setDescription(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        description_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string description = 46;</code>
+       */
+      public Builder clearDescription() {
+        
+        description_ = getDefaultInstance().getDescription();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string description = 46;</code>
+       */
+      public Builder setDescriptionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        description_ = value;
+        onChanged();
+        return this;
+      }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return this;
@@ -19867,13 +20781,19 @@ public final class ATCommand {
     int getControl();
 
     /**
-     * <code>optional .com.rtrk.protobuf.Error error = 12;</code>
+     * <code>optional bool isResponse = 14;</code>
      */
-    int getErrorValue();
+    boolean getIsResponse();
+
     /**
-     * <code>optional .com.rtrk.protobuf.Error error = 12;</code>
+     * <code>optional string description = 15;</code>
      */
-    com.rtrk.atcommands.ATCommand.Error getError();
+    java.lang.String getDescription();
+    /**
+     * <code>optional string description = 15;</code>
+     */
+    com.google.protobuf.ByteString
+        getDescriptionBytes();
   }
   /**
    * Protobuf type {@code com.rtrk.protobuf.RecordingCommand}
@@ -19899,7 +20819,8 @@ public final class ATCommand {
       volume_ = 0;
       channel_ = 0;
       control_ = 0;
-      error_ = 0;
+      isResponse_ = false;
+      description_ = "";
     }
 
     @java.lang.Override
@@ -19984,15 +20905,20 @@ public final class ATCommand {
               control_ = input.readInt32();
               break;
             }
-            case 96: {
-              int rawValue = input.readEnum();
-
-              error_ = rawValue;
-              break;
-            }
             case 104: {
 
               write_ = input.readBool();
+              break;
+            }
+            case 112: {
+
+              isResponse_ = input.readBool();
+              break;
+            }
+            case 122: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              description_ = s;
               break;
             }
           }
@@ -20158,20 +21084,47 @@ public final class ATCommand {
       return control_;
     }
 
-    public static final int ERROR_FIELD_NUMBER = 12;
-    private int error_;
+    public static final int ISRESPONSE_FIELD_NUMBER = 14;
+    private boolean isResponse_;
     /**
-     * <code>optional .com.rtrk.protobuf.Error error = 12;</code>
+     * <code>optional bool isResponse = 14;</code>
      */
-    public int getErrorValue() {
-      return error_;
+    public boolean getIsResponse() {
+      return isResponse_;
+    }
+
+    public static final int DESCRIPTION_FIELD_NUMBER = 15;
+    private volatile java.lang.Object description_;
+    /**
+     * <code>optional string description = 15;</code>
+     */
+    public java.lang.String getDescription() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        description_ = s;
+        return s;
+      }
     }
     /**
-     * <code>optional .com.rtrk.protobuf.Error error = 12;</code>
+     * <code>optional string description = 15;</code>
      */
-    public com.rtrk.atcommands.ATCommand.Error getError() {
-      com.rtrk.atcommands.ATCommand.Error result = com.rtrk.atcommands.ATCommand.Error.valueOf(error_);
-      return result == null ? com.rtrk.atcommands.ATCommand.Error.UNRECOGNIZED : result;
+    public com.google.protobuf.ByteString
+        getDescriptionBytes() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        description_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
     }
 
     private byte memoizedIsInitialized = -1;
@@ -20219,11 +21172,14 @@ public final class ATCommand {
       if (control_ != 0) {
         output.writeInt32(11, control_);
       }
-      if (error_ != com.rtrk.atcommands.ATCommand.Error.OK.getNumber()) {
-        output.writeEnum(12, error_);
-      }
       if (write_ != false) {
         output.writeBool(13, write_);
+      }
+      if (isResponse_ != false) {
+        output.writeBool(14, isResponse_);
+      }
+      if (!getDescriptionBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 15, description_);
       }
     }
 
@@ -20275,13 +21231,16 @@ public final class ATCommand {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(11, control_);
       }
-      if (error_ != com.rtrk.atcommands.ATCommand.Error.OK.getNumber()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(12, error_);
-      }
       if (write_ != false) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(13, write_);
+      }
+      if (isResponse_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(14, isResponse_);
+      }
+      if (!getDescriptionBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(15, description_);
       }
       memoizedSize = size;
       return size;
@@ -20322,7 +21281,10 @@ public final class ATCommand {
           == other.getChannel());
       result = result && (getControl()
           == other.getControl());
-      result = result && error_ == other.error_;
+      result = result && (getIsResponse()
+          == other.getIsResponse());
+      result = result && getDescription()
+          .equals(other.getDescription());
       return result;
     }
 
@@ -20362,8 +21324,11 @@ public final class ATCommand {
       hash = (53 * hash) + getChannel();
       hash = (37 * hash) + CONTROL_FIELD_NUMBER;
       hash = (53 * hash) + getControl();
-      hash = (37 * hash) + ERROR_FIELD_NUMBER;
-      hash = (53 * hash) + error_;
+      hash = (37 * hash) + ISRESPONSE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getIsResponse());
+      hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
+      hash = (53 * hash) + getDescription().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -20506,7 +21471,9 @@ public final class ATCommand {
 
         control_ = 0;
 
-        error_ = 0;
+        isResponse_ = false;
+
+        description_ = "";
 
         return this;
       }
@@ -20542,7 +21509,8 @@ public final class ATCommand {
         result.volume_ = volume_;
         result.channel_ = channel_;
         result.control_ = control_;
-        result.error_ = error_;
+        result.isResponse_ = isResponse_;
+        result.description_ = description_;
         onBuilt();
         return result;
       }
@@ -20621,8 +21589,12 @@ public final class ATCommand {
         if (other.getControl() != 0) {
           setControl(other.getControl());
         }
-        if (other.error_ != 0) {
-          setErrorValue(other.getErrorValue());
+        if (other.getIsResponse() != false) {
+          setIsResponse(other.getIsResponse());
+        }
+        if (!other.getDescription().isEmpty()) {
+          description_ = other.description_;
+          onChanged();
         }
         onChanged();
         return this;
@@ -21023,46 +21995,97 @@ public final class ATCommand {
         return this;
       }
 
-      private int error_ = 0;
+      private boolean isResponse_ ;
       /**
-       * <code>optional .com.rtrk.protobuf.Error error = 12;</code>
+       * <code>optional bool isResponse = 14;</code>
        */
-      public int getErrorValue() {
-        return error_;
+      public boolean getIsResponse() {
+        return isResponse_;
       }
       /**
-       * <code>optional .com.rtrk.protobuf.Error error = 12;</code>
+       * <code>optional bool isResponse = 14;</code>
        */
-      public Builder setErrorValue(int value) {
-        error_ = value;
+      public Builder setIsResponse(boolean value) {
+        
+        isResponse_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>optional .com.rtrk.protobuf.Error error = 12;</code>
+       * <code>optional bool isResponse = 14;</code>
        */
-      public com.rtrk.atcommands.ATCommand.Error getError() {
-        com.rtrk.atcommands.ATCommand.Error result = com.rtrk.atcommands.ATCommand.Error.valueOf(error_);
-        return result == null ? com.rtrk.atcommands.ATCommand.Error.UNRECOGNIZED : result;
+      public Builder clearIsResponse() {
+        
+        isResponse_ = false;
+        onChanged();
+        return this;
       }
+
+      private java.lang.Object description_ = "";
       /**
-       * <code>optional .com.rtrk.protobuf.Error error = 12;</code>
+       * <code>optional string description = 15;</code>
        */
-      public Builder setError(com.rtrk.atcommands.ATCommand.Error value) {
-        if (value == null) {
-          throw new NullPointerException();
+      public java.lang.String getDescription() {
+        java.lang.Object ref = description_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          description_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
         }
-        
-        error_ = value.getNumber();
+      }
+      /**
+       * <code>optional string description = 15;</code>
+       */
+      public com.google.protobuf.ByteString
+          getDescriptionBytes() {
+        java.lang.Object ref = description_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          description_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string description = 15;</code>
+       */
+      public Builder setDescription(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        description_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>optional .com.rtrk.protobuf.Error error = 12;</code>
+       * <code>optional string description = 15;</code>
        */
-      public Builder clearError() {
+      public Builder clearDescription() {
         
-        error_ = 0;
+        description_ = getDefaultInstance().getDescription();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string description = 15;</code>
+       */
+      public Builder setDescriptionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        description_ = value;
         onChanged();
         return this;
       }
@@ -21272,6 +22295,21 @@ public final class ATCommand {
      * <code>optional int32 value = 21;</code>
      */
     int getValue();
+
+    /**
+     * <code>optional bool isResponse = 23;</code>
+     */
+    boolean getIsResponse();
+
+    /**
+     * <code>optional string description = 24;</code>
+     */
+    java.lang.String getDescription();
+    /**
+     * <code>optional string description = 24;</code>
+     */
+    com.google.protobuf.ByteString
+        getDescriptionBytes();
   }
   /**
    * Protobuf type {@code com.rtrk.protobuf.SMTPCommand}
@@ -21307,6 +22345,8 @@ public final class ATCommand {
       fileName_ = "";
       fileSize_ = 0;
       value_ = 0;
+      isResponse_ = false;
+      description_ = "";
     }
 
     @java.lang.Override
@@ -21451,6 +22491,17 @@ public final class ATCommand {
             case 176: {
 
               charset_ = input.readInt32();
+              break;
+            }
+            case 184: {
+
+              isResponse_ = input.readBool();
+              break;
+            }
+            case 194: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              description_ = s;
               break;
             }
           }
@@ -21881,6 +22932,49 @@ public final class ATCommand {
       return value_;
     }
 
+    public static final int ISRESPONSE_FIELD_NUMBER = 23;
+    private boolean isResponse_;
+    /**
+     * <code>optional bool isResponse = 23;</code>
+     */
+    public boolean getIsResponse() {
+      return isResponse_;
+    }
+
+    public static final int DESCRIPTION_FIELD_NUMBER = 24;
+    private volatile java.lang.Object description_;
+    /**
+     * <code>optional string description = 24;</code>
+     */
+    public java.lang.String getDescription() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        description_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>optional string description = 24;</code>
+     */
+    public com.google.protobuf.ByteString
+        getDescriptionBytes() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        description_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
@@ -21958,6 +23052,12 @@ public final class ATCommand {
       }
       if (charset_ != 0) {
         output.writeInt32(22, charset_);
+      }
+      if (isResponse_ != false) {
+        output.writeBool(23, isResponse_);
+      }
+      if (!getDescriptionBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 24, description_);
       }
     }
 
@@ -22046,6 +23146,13 @@ public final class ATCommand {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(22, charset_);
       }
+      if (isResponse_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(23, isResponse_);
+      }
+      if (!getDescriptionBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(24, description_);
+      }
       memoizedSize = size;
       return size;
     }
@@ -22105,6 +23212,10 @@ public final class ATCommand {
           == other.getFileSize());
       result = result && (getValue()
           == other.getValue());
+      result = result && (getIsResponse()
+          == other.getIsResponse());
+      result = result && getDescription()
+          .equals(other.getDescription());
       return result;
     }
 
@@ -22163,6 +23274,11 @@ public final class ATCommand {
       hash = (53 * hash) + getFileSize();
       hash = (37 * hash) + VALUE_FIELD_NUMBER;
       hash = (53 * hash) + getValue();
+      hash = (37 * hash) + ISRESPONSE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getIsResponse());
+      hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
+      hash = (53 * hash) + getDescription().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -22325,6 +23441,10 @@ public final class ATCommand {
 
         value_ = 0;
 
+        isResponse_ = false;
+
+        description_ = "";
+
         return this;
       }
 
@@ -22369,6 +23489,8 @@ public final class ATCommand {
         result.fileName_ = fileName_;
         result.fileSize_ = fileSize_;
         result.value_ = value_;
+        result.isResponse_ = isResponse_;
+        result.description_ = description_;
         onBuilt();
         return result;
       }
@@ -22483,6 +23605,13 @@ public final class ATCommand {
         }
         if (other.getValue() != 0) {
           setValue(other.getValue());
+        }
+        if (other.getIsResponse() != false) {
+          setIsResponse(other.getIsResponse());
+        }
+        if (!other.getDescription().isEmpty()) {
+          description_ = other.description_;
+          onChanged();
         }
         onChanged();
         return this;
@@ -23443,6 +24572,101 @@ public final class ATCommand {
         onChanged();
         return this;
       }
+
+      private boolean isResponse_ ;
+      /**
+       * <code>optional bool isResponse = 23;</code>
+       */
+      public boolean getIsResponse() {
+        return isResponse_;
+      }
+      /**
+       * <code>optional bool isResponse = 23;</code>
+       */
+      public Builder setIsResponse(boolean value) {
+        
+        isResponse_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool isResponse = 23;</code>
+       */
+      public Builder clearIsResponse() {
+        
+        isResponse_ = false;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object description_ = "";
+      /**
+       * <code>optional string description = 24;</code>
+       */
+      public java.lang.String getDescription() {
+        java.lang.Object ref = description_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          description_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string description = 24;</code>
+       */
+      public com.google.protobuf.ByteString
+          getDescriptionBytes() {
+        java.lang.Object ref = description_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          description_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string description = 24;</code>
+       */
+      public Builder setDescription(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        description_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string description = 24;</code>
+       */
+      public Builder clearDescription() {
+        
+        description_ = getDefaultInstance().getDescription();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string description = 24;</code>
+       */
+      public Builder setDescriptionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        description_ = value;
+        onChanged();
+        return this;
+      }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return this;
@@ -23559,6 +24783,21 @@ public final class ATCommand {
      */
     com.google.protobuf.ByteString
         getTerminalResponseBytes();
+
+    /**
+     * <code>optional bool isResponse = 10;</code>
+     */
+    boolean getIsResponse();
+
+    /**
+     * <code>optional string description = 11;</code>
+     */
+    java.lang.String getDescription();
+    /**
+     * <code>optional string description = 11;</code>
+     */
+    com.google.protobuf.ByteString
+        getDescriptionBytes();
   }
   /**
    * Protobuf type {@code com.rtrk.protobuf.STKCommand}
@@ -23581,6 +24820,8 @@ public final class ATCommand {
       profile_ = "";
       satCommand_ = "";
       terminalResponse_ = "";
+      isResponse_ = false;
+      description_ = "";
     }
 
     @java.lang.Override
@@ -23655,6 +24896,17 @@ public final class ATCommand {
               java.lang.String s = input.readStringRequireUtf8();
 
               terminalResponse_ = s;
+              break;
+            }
+            case 80: {
+
+              isResponse_ = input.readBool();
+              break;
+            }
+            case 90: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              description_ = s;
               break;
             }
           }
@@ -23843,6 +25095,49 @@ public final class ATCommand {
       }
     }
 
+    public static final int ISRESPONSE_FIELD_NUMBER = 10;
+    private boolean isResponse_;
+    /**
+     * <code>optional bool isResponse = 10;</code>
+     */
+    public boolean getIsResponse() {
+      return isResponse_;
+    }
+
+    public static final int DESCRIPTION_FIELD_NUMBER = 11;
+    private volatile java.lang.Object description_;
+    /**
+     * <code>optional string description = 11;</code>
+     */
+    public java.lang.String getDescription() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        description_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>optional string description = 11;</code>
+     */
+    public com.google.protobuf.ByteString
+        getDescriptionBytes() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        description_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
@@ -23881,6 +25176,12 @@ public final class ATCommand {
       }
       if (!getTerminalResponseBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 9, terminalResponse_);
+      }
+      if (isResponse_ != false) {
+        output.writeBool(10, isResponse_);
+      }
+      if (!getDescriptionBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 11, description_);
       }
     }
 
@@ -23922,6 +25223,13 @@ public final class ATCommand {
       if (!getTerminalResponseBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, terminalResponse_);
       }
+      if (isResponse_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(10, isResponse_);
+      }
+      if (!getDescriptionBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(11, description_);
+      }
       memoizedSize = size;
       return size;
     }
@@ -23955,6 +25263,10 @@ public final class ATCommand {
           .equals(other.getSatCommand());
       result = result && getTerminalResponse()
           .equals(other.getTerminalResponse());
+      result = result && (getIsResponse()
+          == other.getIsResponse());
+      result = result && getDescription()
+          .equals(other.getDescription());
       return result;
     }
 
@@ -23987,6 +25299,11 @@ public final class ATCommand {
       hash = (53 * hash) + getSatCommand().hashCode();
       hash = (37 * hash) + TERMINALRESPONSE_FIELD_NUMBER;
       hash = (53 * hash) + getTerminalResponse().hashCode();
+      hash = (37 * hash) + ISRESPONSE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getIsResponse());
+      hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
+      hash = (53 * hash) + getDescription().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -24123,6 +25440,10 @@ public final class ATCommand {
 
         terminalResponse_ = "";
 
+        isResponse_ = false;
+
+        description_ = "";
+
         return this;
       }
 
@@ -24154,6 +25475,8 @@ public final class ATCommand {
         result.profile_ = profile_;
         result.satCommand_ = satCommand_;
         result.terminalResponse_ = terminalResponse_;
+        result.isResponse_ = isResponse_;
+        result.description_ = description_;
         onBuilt();
         return result;
       }
@@ -24223,6 +25546,13 @@ public final class ATCommand {
         }
         if (!other.getTerminalResponse().isEmpty()) {
           terminalResponse_ = other.terminalResponse_;
+          onChanged();
+        }
+        if (other.getIsResponse() != false) {
+          setIsResponse(other.getIsResponse());
+        }
+        if (!other.getDescription().isEmpty()) {
+          description_ = other.description_;
           onChanged();
         }
         onChanged();
@@ -24631,6 +25961,101 @@ public final class ATCommand {
         onChanged();
         return this;
       }
+
+      private boolean isResponse_ ;
+      /**
+       * <code>optional bool isResponse = 10;</code>
+       */
+      public boolean getIsResponse() {
+        return isResponse_;
+      }
+      /**
+       * <code>optional bool isResponse = 10;</code>
+       */
+      public Builder setIsResponse(boolean value) {
+        
+        isResponse_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool isResponse = 10;</code>
+       */
+      public Builder clearIsResponse() {
+        
+        isResponse_ = false;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object description_ = "";
+      /**
+       * <code>optional string description = 11;</code>
+       */
+      public java.lang.String getDescription() {
+        java.lang.Object ref = description_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          description_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string description = 11;</code>
+       */
+      public com.google.protobuf.ByteString
+          getDescriptionBytes() {
+        java.lang.Object ref = description_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          description_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string description = 11;</code>
+       */
+      public Builder setDescription(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        description_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string description = 11;</code>
+       */
+      public Builder clearDescription() {
+        
+        description_ = getDefaultInstance().getDescription();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string description = 11;</code>
+       */
+      public Builder setDescriptionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        description_ = value;
+        onChanged();
+        return this;
+      }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return this;
@@ -24742,6 +26167,21 @@ public final class ATCommand {
      */
     com.google.protobuf.ByteString
         getCharacterSetBytes();
+
+    /**
+     * <code>optional bool isResponse = 11;</code>
+     */
+    boolean getIsResponse();
+
+    /**
+     * <code>optional string description = 12;</code>
+     */
+    java.lang.String getDescription();
+    /**
+     * <code>optional string description = 12;</code>
+     */
+    com.google.protobuf.ByteString
+        getDescriptionBytes();
   }
   /**
    * Protobuf type {@code com.rtrk.protobuf.GeneralCommand}
@@ -24765,6 +26205,8 @@ public final class ATCommand {
       functionality_ = 0;
       reset_ = 0;
       characterSet_ = "";
+      isResponse_ = false;
+      description_ = "";
     }
 
     @java.lang.Override
@@ -24842,6 +26284,17 @@ public final class ATCommand {
             case 80: {
 
               write_ = input.readBool();
+              break;
+            }
+            case 88: {
+
+              isResponse_ = input.readBool();
+              break;
+            }
+            case 98: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              description_ = s;
               break;
             }
           }
@@ -24989,6 +26442,49 @@ public final class ATCommand {
       }
     }
 
+    public static final int ISRESPONSE_FIELD_NUMBER = 11;
+    private boolean isResponse_;
+    /**
+     * <code>optional bool isResponse = 11;</code>
+     */
+    public boolean getIsResponse() {
+      return isResponse_;
+    }
+
+    public static final int DESCRIPTION_FIELD_NUMBER = 12;
+    private volatile java.lang.Object description_;
+    /**
+     * <code>optional string description = 12;</code>
+     */
+    public java.lang.String getDescription() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        description_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>optional string description = 12;</code>
+     */
+    public com.google.protobuf.ByteString
+        getDescriptionBytes() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        description_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
@@ -25030,6 +26526,12 @@ public final class ATCommand {
       }
       if (write_ != false) {
         output.writeBool(10, write_);
+      }
+      if (isResponse_ != false) {
+        output.writeBool(11, isResponse_);
+      }
+      if (!getDescriptionBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 12, description_);
       }
     }
 
@@ -25077,6 +26579,13 @@ public final class ATCommand {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(10, write_);
       }
+      if (isResponse_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(11, isResponse_);
+      }
+      if (!getDescriptionBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(12, description_);
+      }
       memoizedSize = size;
       return size;
     }
@@ -25112,6 +26621,10 @@ public final class ATCommand {
           == other.getReset());
       result = result && getCharacterSet()
           .equals(other.getCharacterSet());
+      result = result && (getIsResponse()
+          == other.getIsResponse());
+      result = result && getDescription()
+          .equals(other.getDescription());
       return result;
     }
 
@@ -25146,6 +26659,11 @@ public final class ATCommand {
       hash = (53 * hash) + getReset();
       hash = (37 * hash) + CHARACTERSET_FIELD_NUMBER;
       hash = (53 * hash) + getCharacterSet().hashCode();
+      hash = (37 * hash) + ISRESPONSE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getIsResponse());
+      hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
+      hash = (53 * hash) + getDescription().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -25284,6 +26802,10 @@ public final class ATCommand {
 
         characterSet_ = "";
 
+        isResponse_ = false;
+
+        description_ = "";
+
         return this;
       }
 
@@ -25316,6 +26838,8 @@ public final class ATCommand {
         result.functionality_ = functionality_;
         result.reset_ = reset_;
         result.characterSet_ = characterSet_;
+        result.isResponse_ = isResponse_;
+        result.description_ = description_;
         onBuilt();
         return result;
       }
@@ -25386,6 +26910,13 @@ public final class ATCommand {
         }
         if (!other.getCharacterSet().isEmpty()) {
           characterSet_ = other.characterSet_;
+          onChanged();
+        }
+        if (other.getIsResponse() != false) {
+          setIsResponse(other.getIsResponse());
+        }
+        if (!other.getDescription().isEmpty()) {
+          description_ = other.description_;
           onChanged();
         }
         onChanged();
@@ -25734,6 +27265,101 @@ public final class ATCommand {
         onChanged();
         return this;
       }
+
+      private boolean isResponse_ ;
+      /**
+       * <code>optional bool isResponse = 11;</code>
+       */
+      public boolean getIsResponse() {
+        return isResponse_;
+      }
+      /**
+       * <code>optional bool isResponse = 11;</code>
+       */
+      public Builder setIsResponse(boolean value) {
+        
+        isResponse_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool isResponse = 11;</code>
+       */
+      public Builder clearIsResponse() {
+        
+        isResponse_ = false;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object description_ = "";
+      /**
+       * <code>optional string description = 12;</code>
+       */
+      public java.lang.String getDescription() {
+        java.lang.Object ref = description_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          description_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string description = 12;</code>
+       */
+      public com.google.protobuf.ByteString
+          getDescriptionBytes() {
+        java.lang.Object ref = description_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          description_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string description = 12;</code>
+       */
+      public Builder setDescription(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        description_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string description = 12;</code>
+       */
+      public Builder clearDescription() {
+        
+        description_ = getDefaultInstance().getDescription();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string description = 12;</code>
+       */
+      public Builder setDescriptionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        description_ = value;
+        onChanged();
+        return this;
+      }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return this;
@@ -25934,6 +27560,21 @@ public final class ATCommand {
      * <code>optional int32 mode = 24;</code>
      */
     int getMode();
+
+    /**
+     * <code>optional bool isResponse = 25;</code>
+     */
+    boolean getIsResponse();
+
+    /**
+     * <code>optional string description = 26;</code>
+     */
+    java.lang.String getDescription();
+    /**
+     * <code>optional string description = 26;</code>
+     */
+    com.google.protobuf.ByteString
+        getDescriptionBytes();
   }
   /**
    * Protobuf type {@code com.rtrk.protobuf.SerialInterfaceControlCommand}
@@ -25971,6 +27612,8 @@ public final class ATCommand {
       dataBits_ = 0;
       stopBits_ = 0;
       mode_ = 0;
+      isResponse_ = false;
+      description_ = "";
     }
 
     @java.lang.Override
@@ -26117,6 +27760,17 @@ public final class ATCommand {
             case 192: {
 
               mode_ = input.readInt32();
+              break;
+            }
+            case 200: {
+
+              isResponse_ = input.readBool();
+              break;
+            }
+            case 210: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              description_ = s;
               break;
             }
           }
@@ -26389,6 +28043,49 @@ public final class ATCommand {
       return mode_;
     }
 
+    public static final int ISRESPONSE_FIELD_NUMBER = 25;
+    private boolean isResponse_;
+    /**
+     * <code>optional bool isResponse = 25;</code>
+     */
+    public boolean getIsResponse() {
+      return isResponse_;
+    }
+
+    public static final int DESCRIPTION_FIELD_NUMBER = 26;
+    private volatile java.lang.Object description_;
+    /**
+     * <code>optional string description = 26;</code>
+     */
+    public java.lang.String getDescription() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        description_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>optional string description = 26;</code>
+     */
+    public com.google.protobuf.ByteString
+        getDescriptionBytes() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        description_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
@@ -26472,6 +28169,12 @@ public final class ATCommand {
       }
       if (mode_ != 0) {
         output.writeInt32(24, mode_);
+      }
+      if (isResponse_ != false) {
+        output.writeBool(25, isResponse_);
+      }
+      if (!getDescriptionBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 26, description_);
       }
     }
 
@@ -26576,6 +28279,13 @@ public final class ATCommand {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(24, mode_);
       }
+      if (isResponse_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(25, isResponse_);
+      }
+      if (!getDescriptionBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(26, description_);
+      }
       memoizedSize = size;
       return size;
     }
@@ -26639,6 +28349,10 @@ public final class ATCommand {
           == other.getStopBits());
       result = result && (getMode()
           == other.getMode());
+      result = result && (getIsResponse()
+          == other.getIsResponse());
+      result = result && getDescription()
+          .equals(other.getDescription());
       return result;
     }
 
@@ -26702,6 +28416,11 @@ public final class ATCommand {
       hash = (53 * hash) + getStopBits();
       hash = (37 * hash) + MODE_FIELD_NUMBER;
       hash = (53 * hash) + getMode();
+      hash = (37 * hash) + ISRESPONSE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getIsResponse());
+      hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
+      hash = (53 * hash) + getDescription().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -26868,6 +28587,10 @@ public final class ATCommand {
 
         mode_ = 0;
 
+        isResponse_ = false;
+
+        description_ = "";
+
         return this;
       }
 
@@ -26914,6 +28637,8 @@ public final class ATCommand {
         result.dataBits_ = dataBits_;
         result.stopBits_ = stopBits_;
         result.mode_ = mode_;
+        result.isResponse_ = isResponse_;
+        result.description_ = description_;
         onBuilt();
         return result;
       }
@@ -27026,6 +28751,13 @@ public final class ATCommand {
         }
         if (other.getMode() != 0) {
           setMode(other.getMode());
+        }
+        if (other.getIsResponse() != false) {
+          setIsResponse(other.getIsResponse());
+        }
+        if (!other.getDescription().isEmpty()) {
+          description_ = other.description_;
+          onChanged();
         }
         onChanged();
         return this;
@@ -27766,6 +29498,101 @@ public final class ATCommand {
         onChanged();
         return this;
       }
+
+      private boolean isResponse_ ;
+      /**
+       * <code>optional bool isResponse = 25;</code>
+       */
+      public boolean getIsResponse() {
+        return isResponse_;
+      }
+      /**
+       * <code>optional bool isResponse = 25;</code>
+       */
+      public Builder setIsResponse(boolean value) {
+        
+        isResponse_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool isResponse = 25;</code>
+       */
+      public Builder clearIsResponse() {
+        
+        isResponse_ = false;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object description_ = "";
+      /**
+       * <code>optional string description = 26;</code>
+       */
+      public java.lang.String getDescription() {
+        java.lang.Object ref = description_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          description_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string description = 26;</code>
+       */
+      public com.google.protobuf.ByteString
+          getDescriptionBytes() {
+        java.lang.Object ref = description_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          description_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string description = 26;</code>
+       */
+      public Builder setDescription(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        description_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string description = 26;</code>
+       */
+      public Builder clearDescription() {
+        
+        description_ = getDefaultInstance().getDescription();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string description = 26;</code>
+       */
+      public Builder setDescriptionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        description_ = value;
+        onChanged();
+        return this;
+      }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return this;
@@ -27955,6 +29782,21 @@ public final class ATCommand {
      * <code>optional int32 type = 21;</code>
      */
     int getType();
+
+    /**
+     * <code>optional bool isResponse = 22;</code>
+     */
+    boolean getIsResponse();
+
+    /**
+     * <code>optional string description = 23;</code>
+     */
+    java.lang.String getDescription();
+    /**
+     * <code>optional string description = 23;</code>
+     */
+    com.google.protobuf.ByteString
+        getDescriptionBytes();
   }
   /**
    * Protobuf type {@code com.rtrk.protobuf.StatusControlCommand}
@@ -27989,6 +29831,8 @@ public final class ATCommand {
       pinChoice_ = 0;
       insertStatus_ = 0;
       type_ = 0;
+      isResponse_ = false;
+      description_ = "";
     }
 
     @java.lang.Override
@@ -28124,6 +29968,17 @@ public final class ATCommand {
             case 168: {
 
               type_ = input.readInt32();
+              break;
+            }
+            case 176: {
+
+              isResponse_ = input.readBool();
+              break;
+            }
+            case 186: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              description_ = s;
               break;
             }
           }
@@ -28453,6 +30308,49 @@ public final class ATCommand {
       return type_;
     }
 
+    public static final int ISRESPONSE_FIELD_NUMBER = 22;
+    private boolean isResponse_;
+    /**
+     * <code>optional bool isResponse = 22;</code>
+     */
+    public boolean getIsResponse() {
+      return isResponse_;
+    }
+
+    public static final int DESCRIPTION_FIELD_NUMBER = 23;
+    private volatile java.lang.Object description_;
+    /**
+     * <code>optional string description = 23;</code>
+     */
+    public java.lang.String getDescription() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        description_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>optional string description = 23;</code>
+     */
+    public com.google.protobuf.ByteString
+        getDescriptionBytes() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        description_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
@@ -28527,6 +30425,12 @@ public final class ATCommand {
       }
       if (type_ != 0) {
         output.writeInt32(21, type_);
+      }
+      if (isResponse_ != false) {
+        output.writeBool(22, isResponse_);
+      }
+      if (!getDescriptionBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 23, description_);
       }
     }
 
@@ -28615,6 +30519,13 @@ public final class ATCommand {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(21, type_);
       }
+      if (isResponse_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(22, isResponse_);
+      }
+      if (!getDescriptionBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(23, description_);
+      }
       memoizedSize = size;
       return size;
     }
@@ -28672,6 +30583,10 @@ public final class ATCommand {
           == other.getInsertStatus());
       result = result && (getType()
           == other.getType());
+      result = result && (getIsResponse()
+          == other.getIsResponse());
+      result = result && getDescription()
+          .equals(other.getDescription());
       return result;
     }
 
@@ -28731,6 +30646,11 @@ public final class ATCommand {
       hash = (53 * hash) + getInsertStatus();
       hash = (37 * hash) + TYPE_FIELD_NUMBER;
       hash = (53 * hash) + getType();
+      hash = (37 * hash) + ISRESPONSE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getIsResponse());
+      hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
+      hash = (53 * hash) + getDescription().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -28891,6 +30811,10 @@ public final class ATCommand {
 
         type_ = 0;
 
+        isResponse_ = false;
+
+        description_ = "";
+
         return this;
       }
 
@@ -28934,6 +30858,8 @@ public final class ATCommand {
         result.pinChoice_ = pinChoice_;
         result.insertStatus_ = insertStatus_;
         result.type_ = type_;
+        result.isResponse_ = isResponse_;
+        result.description_ = description_;
         onBuilt();
         return result;
       }
@@ -29041,6 +30967,13 @@ public final class ATCommand {
         }
         if (other.getType() != 0) {
           setType(other.getType());
+        }
+        if (other.getIsResponse() != false) {
+          setIsResponse(other.getIsResponse());
+        }
+        if (!other.getDescription().isEmpty()) {
+          description_ = other.description_;
+          onChanged();
         }
         onChanged();
         return this;
@@ -29823,6 +31756,101 @@ public final class ATCommand {
         onChanged();
         return this;
       }
+
+      private boolean isResponse_ ;
+      /**
+       * <code>optional bool isResponse = 22;</code>
+       */
+      public boolean getIsResponse() {
+        return isResponse_;
+      }
+      /**
+       * <code>optional bool isResponse = 22;</code>
+       */
+      public Builder setIsResponse(boolean value) {
+        
+        isResponse_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool isResponse = 22;</code>
+       */
+      public Builder clearIsResponse() {
+        
+        isResponse_ = false;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object description_ = "";
+      /**
+       * <code>optional string description = 23;</code>
+       */
+      public java.lang.String getDescription() {
+        java.lang.Object ref = description_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          description_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string description = 23;</code>
+       */
+      public com.google.protobuf.ByteString
+          getDescriptionBytes() {
+        java.lang.Object ref = description_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          description_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string description = 23;</code>
+       */
+      public Builder setDescription(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        description_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string description = 23;</code>
+       */
+      public Builder clearDescription() {
+        
+        description_ = getDefaultInstance().getDescription();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string description = 23;</code>
+       */
+      public Builder setDescriptionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        description_ = value;
+        onChanged();
+        return this;
+      }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return this;
@@ -30112,6 +32140,21 @@ public final class ATCommand {
      * <code>optional int32 puk2 = 30;</code>
      */
     int getPuk2();
+
+    /**
+     * <code>optional bool isResponse = 35;</code>
+     */
+    boolean getIsResponse();
+
+    /**
+     * <code>optional string description = 36;</code>
+     */
+    java.lang.String getDescription();
+    /**
+     * <code>optional string description = 36;</code>
+     */
+    com.google.protobuf.ByteString
+        getDescriptionBytes();
   }
   /**
    * Protobuf type {@code com.rtrk.protobuf.SIMRelatedCommand}
@@ -30159,6 +32202,8 @@ public final class ATCommand {
       chv2_ = 0;
       puk1_ = 0;
       puk2_ = 0;
+      isResponse_ = false;
+      description_ = "";
     }
 
     @java.lang.Override
@@ -30367,6 +32412,17 @@ public final class ATCommand {
             case 272: {
 
               class__ = input.readInt32();
+              break;
+            }
+            case 280: {
+
+              isResponse_ = input.readBool();
+              break;
+            }
+            case 290: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              description_ = s;
               break;
             }
           }
@@ -30988,6 +33044,49 @@ public final class ATCommand {
       return puk2_;
     }
 
+    public static final int ISRESPONSE_FIELD_NUMBER = 35;
+    private boolean isResponse_;
+    /**
+     * <code>optional bool isResponse = 35;</code>
+     */
+    public boolean getIsResponse() {
+      return isResponse_;
+    }
+
+    public static final int DESCRIPTION_FIELD_NUMBER = 36;
+    private volatile java.lang.Object description_;
+    /**
+     * <code>optional string description = 36;</code>
+     */
+    public java.lang.String getDescription() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        description_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>optional string description = 36;</code>
+     */
+    public com.google.protobuf.ByteString
+        getDescriptionBytes() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        description_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
@@ -31101,6 +33200,12 @@ public final class ATCommand {
       }
       if (class__ != 0) {
         output.writeInt32(34, class__);
+      }
+      if (isResponse_ != false) {
+        output.writeBool(35, isResponse_);
+      }
+      if (!getDescriptionBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 36, description_);
       }
     }
 
@@ -31234,6 +33339,13 @@ public final class ATCommand {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(34, class__);
       }
+      if (isResponse_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(35, isResponse_);
+      }
+      if (!getDescriptionBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(36, description_);
+      }
       memoizedSize = size;
       return size;
     }
@@ -31317,6 +33429,10 @@ public final class ATCommand {
           == other.getPuk1());
       result = result && (getPuk2()
           == other.getPuk2());
+      result = result && (getIsResponse()
+          == other.getIsResponse());
+      result = result && getDescription()
+          .equals(other.getDescription());
       return result;
     }
 
@@ -31399,6 +33515,11 @@ public final class ATCommand {
       hash = (53 * hash) + getPuk1();
       hash = (37 * hash) + PUK2_FIELD_NUMBER;
       hash = (53 * hash) + getPuk2();
+      hash = (37 * hash) + ISRESPONSE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getIsResponse());
+      hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
+      hash = (53 * hash) + getDescription().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -31585,6 +33706,10 @@ public final class ATCommand {
 
         puk2_ = 0;
 
+        isResponse_ = false;
+
+        description_ = "";
+
         return this;
       }
 
@@ -31641,6 +33766,8 @@ public final class ATCommand {
         result.chv2_ = chv2_;
         result.puk1_ = puk1_;
         result.puk2_ = puk2_;
+        result.isResponse_ = isResponse_;
+        result.description_ = description_;
         onBuilt();
         return result;
       }
@@ -31794,6 +33921,13 @@ public final class ATCommand {
         }
         if (other.getPuk2() != 0) {
           setPuk2(other.getPuk2());
+        }
+        if (other.getIsResponse() != false) {
+          setIsResponse(other.getIsResponse());
+        }
+        if (!other.getDescription().isEmpty()) {
+          description_ = other.description_;
+          onChanged();
         }
         onChanged();
         return this;
@@ -33215,6 +35349,101 @@ public final class ATCommand {
         onChanged();
         return this;
       }
+
+      private boolean isResponse_ ;
+      /**
+       * <code>optional bool isResponse = 35;</code>
+       */
+      public boolean getIsResponse() {
+        return isResponse_;
+      }
+      /**
+       * <code>optional bool isResponse = 35;</code>
+       */
+      public Builder setIsResponse(boolean value) {
+        
+        isResponse_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool isResponse = 35;</code>
+       */
+      public Builder clearIsResponse() {
+        
+        isResponse_ = false;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object description_ = "";
+      /**
+       * <code>optional string description = 36;</code>
+       */
+      public java.lang.String getDescription() {
+        java.lang.Object ref = description_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          description_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string description = 36;</code>
+       */
+      public com.google.protobuf.ByteString
+          getDescriptionBytes() {
+        java.lang.Object ref = description_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          description_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string description = 36;</code>
+       */
+      public Builder setDescription(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        description_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string description = 36;</code>
+       */
+      public Builder clearDescription() {
+        
+        description_ = getDefaultInstance().getDescription();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string description = 36;</code>
+       */
+      public Builder setDescriptionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        description_ = value;
+        onChanged();
+        return this;
+      }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return this;
@@ -33430,6 +35659,21 @@ public final class ATCommand {
      * <code>optional int32 arfcn3 = 26;</code>
      */
     int getArfcn3();
+
+    /**
+     * <code>optional bool isResponse = 27;</code>
+     */
+    boolean getIsResponse();
+
+    /**
+     * <code>optional string description = 28;</code>
+     */
+    java.lang.String getDescription();
+    /**
+     * <code>optional string description = 28;</code>
+     */
+    com.google.protobuf.ByteString
+        getDescriptionBytes();
   }
   /**
    * Protobuf type {@code com.rtrk.protobuf.NetworkServiceCommand}
@@ -33469,6 +35713,8 @@ public final class ATCommand {
       arfcn1_ = 0;
       arfcn2_ = 0;
       arfcn3_ = 0;
+      isResponse_ = false;
+      description_ = "";
     }
 
     @java.lang.Override
@@ -33630,6 +35876,17 @@ public final class ATCommand {
             case 208: {
 
               arfcn3_ = input.readInt32();
+              break;
+            }
+            case 216: {
+
+              isResponse_ = input.readBool();
+              break;
+            }
+            case 226: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              description_ = s;
               break;
             }
           }
@@ -34025,6 +36282,49 @@ public final class ATCommand {
       return arfcn3_;
     }
 
+    public static final int ISRESPONSE_FIELD_NUMBER = 27;
+    private boolean isResponse_;
+    /**
+     * <code>optional bool isResponse = 27;</code>
+     */
+    public boolean getIsResponse() {
+      return isResponse_;
+    }
+
+    public static final int DESCRIPTION_FIELD_NUMBER = 28;
+    private volatile java.lang.Object description_;
+    /**
+     * <code>optional string description = 28;</code>
+     */
+    public java.lang.String getDescription() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        description_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>optional string description = 28;</code>
+     */
+    public com.google.protobuf.ByteString
+        getDescriptionBytes() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        description_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
@@ -34114,6 +36414,12 @@ public final class ATCommand {
       }
       if (arfcn3_ != 0) {
         output.writeInt32(26, arfcn3_);
+      }
+      if (isResponse_ != false) {
+        output.writeBool(27, isResponse_);
+      }
+      if (!getDescriptionBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 28, description_);
       }
     }
 
@@ -34221,6 +36527,13 @@ public final class ATCommand {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(26, arfcn3_);
       }
+      if (isResponse_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(27, isResponse_);
+      }
+      if (!getDescriptionBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(28, description_);
+      }
       memoizedSize = size;
       return size;
     }
@@ -34288,6 +36601,10 @@ public final class ATCommand {
           == other.getArfcn2());
       result = result && (getArfcn3()
           == other.getArfcn3());
+      result = result && (getIsResponse()
+          == other.getIsResponse());
+      result = result && getDescription()
+          .equals(other.getDescription());
       return result;
     }
 
@@ -34354,6 +36671,11 @@ public final class ATCommand {
       hash = (53 * hash) + getArfcn2();
       hash = (37 * hash) + ARFCN3_FIELD_NUMBER;
       hash = (53 * hash) + getArfcn3();
+      hash = (37 * hash) + ISRESPONSE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getIsResponse());
+      hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
+      hash = (53 * hash) + getDescription().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -34524,6 +36846,10 @@ public final class ATCommand {
 
         arfcn3_ = 0;
 
+        isResponse_ = false;
+
+        description_ = "";
+
         return this;
       }
 
@@ -34572,6 +36898,8 @@ public final class ATCommand {
         result.arfcn1_ = arfcn1_;
         result.arfcn2_ = arfcn2_;
         result.arfcn3_ = arfcn3_;
+        result.isResponse_ = isResponse_;
+        result.description_ = description_;
         onBuilt();
         return result;
       }
@@ -34695,6 +37023,13 @@ public final class ATCommand {
         }
         if (other.getArfcn3() != 0) {
           setArfcn3(other.getArfcn3());
+        }
+        if (other.getIsResponse() != false) {
+          setIsResponse(other.getIsResponse());
+        }
+        if (!other.getDescription().isEmpty()) {
+          description_ = other.description_;
+          onChanged();
         }
         onChanged();
         return this;
@@ -35642,6 +37977,101 @@ public final class ATCommand {
         onChanged();
         return this;
       }
+
+      private boolean isResponse_ ;
+      /**
+       * <code>optional bool isResponse = 27;</code>
+       */
+      public boolean getIsResponse() {
+        return isResponse_;
+      }
+      /**
+       * <code>optional bool isResponse = 27;</code>
+       */
+      public Builder setIsResponse(boolean value) {
+        
+        isResponse_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool isResponse = 27;</code>
+       */
+      public Builder clearIsResponse() {
+        
+        isResponse_ = false;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object description_ = "";
+      /**
+       * <code>optional string description = 28;</code>
+       */
+      public java.lang.String getDescription() {
+        java.lang.Object ref = description_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          description_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string description = 28;</code>
+       */
+      public com.google.protobuf.ByteString
+          getDescriptionBytes() {
+        java.lang.Object ref = description_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          description_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string description = 28;</code>
+       */
+      public Builder setDescription(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        description_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string description = 28;</code>
+       */
+      public Builder clearDescription() {
+        
+        description_ = getDefaultInstance().getDescription();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string description = 28;</code>
+       */
+      public Builder setDescriptionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        description_ = value;
+        onChanged();
+        return this;
+      }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return this;
@@ -35859,6 +38289,21 @@ public final class ATCommand {
      * <code>optional bool setUpVoiceCall = 22;</code>
      */
     boolean getSetUpVoiceCall();
+
+    /**
+     * <code>optional bool isResponse = 24;</code>
+     */
+    boolean getIsResponse();
+
+    /**
+     * <code>optional string description = 25;</code>
+     */
+    java.lang.String getDescription();
+    /**
+     * <code>optional string description = 25;</code>
+     */
+    com.google.protobuf.ByteString
+        getDescriptionBytes();
   }
   /**
    * Protobuf type {@code com.rtrk.protobuf.CallRelatedCommand}
@@ -35895,6 +38340,8 @@ public final class ATCommand {
       speechChannel_ = 0;
       disableATH_ = false;
       setUpVoiceCall_ = false;
+      isResponse_ = false;
+      description_ = "";
     }
 
     @java.lang.Override
@@ -36038,6 +38485,17 @@ public final class ATCommand {
               java.lang.String s = input.readStringRequireUtf8();
 
               number_ = s;
+              break;
+            }
+            case 192: {
+
+              isResponse_ = input.readBool();
+              break;
+            }
+            case 202: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              description_ = s;
               break;
             }
           }
@@ -36363,6 +38821,49 @@ public final class ATCommand {
       return setUpVoiceCall_;
     }
 
+    public static final int ISRESPONSE_FIELD_NUMBER = 24;
+    private boolean isResponse_;
+    /**
+     * <code>optional bool isResponse = 24;</code>
+     */
+    public boolean getIsResponse() {
+      return isResponse_;
+    }
+
+    public static final int DESCRIPTION_FIELD_NUMBER = 25;
+    private volatile java.lang.Object description_;
+    /**
+     * <code>optional string description = 25;</code>
+     */
+    public java.lang.String getDescription() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        description_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>optional string description = 25;</code>
+     */
+    public com.google.protobuf.ByteString
+        getDescriptionBytes() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        description_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
@@ -36443,6 +38944,12 @@ public final class ATCommand {
       }
       if (!getNumberBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 23, number_);
+      }
+      if (isResponse_ != false) {
+        output.writeBool(24, isResponse_);
+      }
+      if (!getDescriptionBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 25, description_);
       }
     }
 
@@ -36541,6 +39048,13 @@ public final class ATCommand {
       if (!getNumberBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(23, number_);
       }
+      if (isResponse_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(24, isResponse_);
+      }
+      if (!getDescriptionBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(25, description_);
+      }
       memoizedSize = size;
       return size;
     }
@@ -36602,6 +39116,10 @@ public final class ATCommand {
           == other.getDisableATH());
       result = result && (getSetUpVoiceCall()
           == other.getSetUpVoiceCall());
+      result = result && (getIsResponse()
+          == other.getIsResponse());
+      result = result && getDescription()
+          .equals(other.getDescription());
       return result;
     }
 
@@ -36664,6 +39182,11 @@ public final class ATCommand {
       hash = (37 * hash) + SETUPVOICECALL_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getSetUpVoiceCall());
+      hash = (37 * hash) + ISRESPONSE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getIsResponse());
+      hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
+      hash = (53 * hash) + getDescription().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -36828,6 +39351,10 @@ public final class ATCommand {
 
         setUpVoiceCall_ = false;
 
+        isResponse_ = false;
+
+        description_ = "";
+
         return this;
       }
 
@@ -36873,6 +39400,8 @@ public final class ATCommand {
         result.speechChannel_ = speechChannel_;
         result.disableATH_ = disableATH_;
         result.setUpVoiceCall_ = setUpVoiceCall_;
+        result.isResponse_ = isResponse_;
+        result.description_ = description_;
         onBuilt();
         return result;
       }
@@ -36984,6 +39513,13 @@ public final class ATCommand {
         }
         if (other.getSetUpVoiceCall() != false) {
           setSetUpVoiceCall(other.getSetUpVoiceCall());
+        }
+        if (other.getIsResponse() != false) {
+          setIsResponse(other.getIsResponse());
+        }
+        if (!other.getDescription().isEmpty()) {
+          description_ = other.description_;
+          onChanged();
         }
         onChanged();
         return this;
@@ -37816,6 +40352,101 @@ public final class ATCommand {
         onChanged();
         return this;
       }
+
+      private boolean isResponse_ ;
+      /**
+       * <code>optional bool isResponse = 24;</code>
+       */
+      public boolean getIsResponse() {
+        return isResponse_;
+      }
+      /**
+       * <code>optional bool isResponse = 24;</code>
+       */
+      public Builder setIsResponse(boolean value) {
+        
+        isResponse_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool isResponse = 24;</code>
+       */
+      public Builder clearIsResponse() {
+        
+        isResponse_ = false;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object description_ = "";
+      /**
+       * <code>optional string description = 25;</code>
+       */
+      public java.lang.String getDescription() {
+        java.lang.Object ref = description_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          description_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string description = 25;</code>
+       */
+      public com.google.protobuf.ByteString
+          getDescriptionBytes() {
+        java.lang.Object ref = description_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          description_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string description = 25;</code>
+       */
+      public Builder setDescription(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        description_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string description = 25;</code>
+       */
+      public Builder clearDescription() {
+        
+        description_ = getDefaultInstance().getDescription();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string description = 25;</code>
+       */
+      public Builder setDescriptionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        description_ = value;
+        onChanged();
+        return this;
+      }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return this;
@@ -38253,6 +40884,21 @@ public final class ATCommand {
      * <code>optional int32 firstOctet = 44;</code>
      */
     int getFirstOctet();
+
+    /**
+     * <code>optional bool isResponse = 46;</code>
+     */
+    boolean getIsResponse();
+
+    /**
+     * <code>optional string description = 47;</code>
+     */
+    java.lang.String getDescription();
+    /**
+     * <code>optional string description = 47;</code>
+     */
+    com.google.protobuf.ByteString
+        getDescriptionBytes();
   }
   /**
    * Protobuf type {@code com.rtrk.protobuf.SMSCommand}
@@ -38311,6 +40957,8 @@ public final class ATCommand {
       type_ = "";
       status_ = 0;
       firstOctet_ = 0;
+      isResponse_ = false;
+      description_ = "";
     }
 
     @java.lang.Override
@@ -38575,6 +41223,17 @@ public final class ATCommand {
             case 360: {
 
               service_ = input.readInt32();
+              break;
+            }
+            case 368: {
+
+              isResponse_ = input.readBool();
+              break;
+            }
+            case 378: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              description_ = s;
               break;
             }
           }
@@ -39408,6 +42067,49 @@ public final class ATCommand {
       return firstOctet_;
     }
 
+    public static final int ISRESPONSE_FIELD_NUMBER = 46;
+    private boolean isResponse_;
+    /**
+     * <code>optional bool isResponse = 46;</code>
+     */
+    public boolean getIsResponse() {
+      return isResponse_;
+    }
+
+    public static final int DESCRIPTION_FIELD_NUMBER = 47;
+    private volatile java.lang.Object description_;
+    /**
+     * <code>optional string description = 47;</code>
+     */
+    public java.lang.String getDescription() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        description_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>optional string description = 47;</code>
+     */
+    public com.google.protobuf.ByteString
+        getDescriptionBytes() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        description_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
@@ -39554,6 +42256,12 @@ public final class ATCommand {
       }
       if (service_ != 0) {
         output.writeInt32(45, service_);
+      }
+      if (isResponse_ != false) {
+        output.writeBool(46, isResponse_);
+      }
+      if (!getDescriptionBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 47, description_);
       }
     }
 
@@ -39730,6 +42438,13 @@ public final class ATCommand {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(45, service_);
       }
+      if (isResponse_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(46, isResponse_);
+      }
+      if (!getDescriptionBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(47, description_);
+      }
       memoizedSize = size;
       return size;
     }
@@ -39835,6 +42550,10 @@ public final class ATCommand {
           == other.getStatus());
       result = result && (getFirstOctet()
           == other.getFirstOctet());
+      result = result && (getIsResponse()
+          == other.getIsResponse());
+      result = result && getDescription()
+          .equals(other.getDescription());
       return result;
     }
 
@@ -39939,6 +42658,11 @@ public final class ATCommand {
       hash = (53 * hash) + getStatus();
       hash = (37 * hash) + FIRSTOCTET_FIELD_NUMBER;
       hash = (53 * hash) + getFirstOctet();
+      hash = (37 * hash) + ISRESPONSE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getIsResponse());
+      hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
+      hash = (53 * hash) + getDescription().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -40147,6 +42871,10 @@ public final class ATCommand {
 
         firstOctet_ = 0;
 
+        isResponse_ = false;
+
+        description_ = "";
+
         return this;
       }
 
@@ -40214,6 +42942,8 @@ public final class ATCommand {
         result.type_ = type_;
         result.status_ = status_;
         result.firstOctet_ = firstOctet_;
+        result.isResponse_ = isResponse_;
+        result.description_ = description_;
         onBuilt();
         return result;
       }
@@ -40401,6 +43131,13 @@ public final class ATCommand {
         }
         if (other.getFirstOctet() != 0) {
           setFirstOctet(other.getFirstOctet());
+        }
+        if (other.getIsResponse() != false) {
+          setIsResponse(other.getIsResponse());
+        }
+        if (!other.getDescription().isEmpty()) {
+          description_ = other.description_;
+          onChanged();
         }
         onChanged();
         return this;
@@ -42402,6 +45139,101 @@ public final class ATCommand {
         onChanged();
         return this;
       }
+
+      private boolean isResponse_ ;
+      /**
+       * <code>optional bool isResponse = 46;</code>
+       */
+      public boolean getIsResponse() {
+        return isResponse_;
+      }
+      /**
+       * <code>optional bool isResponse = 46;</code>
+       */
+      public Builder setIsResponse(boolean value) {
+        
+        isResponse_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool isResponse = 46;</code>
+       */
+      public Builder clearIsResponse() {
+        
+        isResponse_ = false;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object description_ = "";
+      /**
+       * <code>optional string description = 47;</code>
+       */
+      public java.lang.String getDescription() {
+        java.lang.Object ref = description_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          description_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string description = 47;</code>
+       */
+      public com.google.protobuf.ByteString
+          getDescriptionBytes() {
+        java.lang.Object ref = description_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          description_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string description = 47;</code>
+       */
+      public Builder setDescription(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        description_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string description = 47;</code>
+       */
+      public Builder clearDescription() {
+        
+        description_ = getDefaultInstance().getDescription();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string description = 47;</code>
+       */
+      public Builder setDescriptionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        description_ = value;
+        onChanged();
+        return this;
+      }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return this;
@@ -42578,6 +45410,21 @@ public final class ATCommand {
      * <code>optional int32 typex = 17;</code>
      */
     int getTypex();
+
+    /**
+     * <code>optional bool isResponse = 19;</code>
+     */
+    boolean getIsResponse();
+
+    /**
+     * <code>optional string description = 20;</code>
+     */
+    java.lang.String getDescription();
+    /**
+     * <code>optional string description = 20;</code>
+     */
+    com.google.protobuf.ByteString
+        getDescriptionBytes();
   }
   /**
    * Protobuf type {@code com.rtrk.protobuf.PhonebookCommand}
@@ -42609,6 +45456,8 @@ public final class ATCommand {
       alphax_ = "";
       numberx_ = "";
       typex_ = 0;
+      isResponse_ = false;
+      description_ = "";
     }
 
     @java.lang.Override
@@ -42731,6 +45580,17 @@ public final class ATCommand {
               java.lang.String s = input.readStringRequireUtf8();
 
               storage_ = s;
+              break;
+            }
+            case 152: {
+
+              isResponse_ = input.readBool();
+              break;
+            }
+            case 162: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              description_ = s;
               break;
             }
           }
@@ -43075,6 +45935,49 @@ public final class ATCommand {
       return typex_;
     }
 
+    public static final int ISRESPONSE_FIELD_NUMBER = 19;
+    private boolean isResponse_;
+    /**
+     * <code>optional bool isResponse = 19;</code>
+     */
+    public boolean getIsResponse() {
+      return isResponse_;
+    }
+
+    public static final int DESCRIPTION_FIELD_NUMBER = 20;
+    private volatile java.lang.Object description_;
+    /**
+     * <code>optional string description = 20;</code>
+     */
+    public java.lang.String getDescription() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        description_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>optional string description = 20;</code>
+     */
+    public com.google.protobuf.ByteString
+        getDescriptionBytes() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        description_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
@@ -43140,6 +46043,12 @@ public final class ATCommand {
       }
       if (!getStorageBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 18, storage_);
+      }
+      if (isResponse_ != false) {
+        output.writeBool(19, isResponse_);
+      }
+      if (!getDescriptionBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 20, description_);
       }
     }
 
@@ -43214,6 +46123,13 @@ public final class ATCommand {
       if (!getStorageBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(18, storage_);
       }
+      if (isResponse_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(19, isResponse_);
+      }
+      if (!getDescriptionBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(20, description_);
+      }
       memoizedSize = size;
       return size;
     }
@@ -43265,6 +46181,10 @@ public final class ATCommand {
           .equals(other.getNumberx());
       result = result && (getTypex()
           == other.getTypex());
+      result = result && (getIsResponse()
+          == other.getIsResponse());
+      result = result && getDescription()
+          .equals(other.getDescription());
       return result;
     }
 
@@ -43315,6 +46235,11 @@ public final class ATCommand {
       hash = (53 * hash) + getNumberx().hashCode();
       hash = (37 * hash) + TYPEX_FIELD_NUMBER;
       hash = (53 * hash) + getTypex();
+      hash = (37 * hash) + ISRESPONSE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getIsResponse());
+      hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
+      hash = (53 * hash) + getDescription().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -43469,6 +46394,10 @@ public final class ATCommand {
 
         typex_ = 0;
 
+        isResponse_ = false;
+
+        description_ = "";
+
         return this;
       }
 
@@ -43509,6 +46438,8 @@ public final class ATCommand {
         result.alphax_ = alphax_;
         result.numberx_ = numberx_;
         result.typex_ = typex_;
+        result.isResponse_ = isResponse_;
+        result.description_ = description_;
         onBuilt();
         return result;
       }
@@ -43609,6 +46540,13 @@ public final class ATCommand {
         }
         if (other.getTypex() != 0) {
           setTypex(other.getTypex());
+        }
+        if (other.getIsResponse() != false) {
+          setIsResponse(other.getIsResponse());
+        }
+        if (!other.getDescription().isEmpty()) {
+          description_ = other.description_;
+          onChanged();
         }
         onChanged();
         return this;
@@ -44376,6 +47314,101 @@ public final class ATCommand {
       public Builder clearTypex() {
         
         typex_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private boolean isResponse_ ;
+      /**
+       * <code>optional bool isResponse = 19;</code>
+       */
+      public boolean getIsResponse() {
+        return isResponse_;
+      }
+      /**
+       * <code>optional bool isResponse = 19;</code>
+       */
+      public Builder setIsResponse(boolean value) {
+        
+        isResponse_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool isResponse = 19;</code>
+       */
+      public Builder clearIsResponse() {
+        
+        isResponse_ = false;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object description_ = "";
+      /**
+       * <code>optional string description = 20;</code>
+       */
+      public java.lang.String getDescription() {
+        java.lang.Object ref = description_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          description_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string description = 20;</code>
+       */
+      public com.google.protobuf.ByteString
+          getDescriptionBytes() {
+        java.lang.Object ref = description_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          description_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string description = 20;</code>
+       */
+      public Builder setDescription(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        description_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string description = 20;</code>
+       */
+      public Builder clearDescription() {
+        
+        description_ = getDefaultInstance().getDescription();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string description = 20;</code>
+       */
+      public Builder setDescriptionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        description_ = value;
         onChanged();
         return this;
       }
@@ -58963,6 +61996,556 @@ public final class ATCommand {
 
   }
 
+  public interface ErrorCommandOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:com.rtrk.protobuf.ErrorCommand)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional .com.rtrk.protobuf.ErrorMessageType errorMessageType = 1;</code>
+     */
+    int getErrorMessageTypeValue();
+    /**
+     * <code>optional .com.rtrk.protobuf.ErrorMessageType errorMessageType = 1;</code>
+     */
+    com.rtrk.atcommands.ATCommand.ErrorMessageType getErrorMessageType();
+
+    /**
+     * <code>optional .com.rtrk.protobuf.FTPErrorMessageType FTPErrorMessagetType = 2;</code>
+     */
+    int getFTPErrorMessagetTypeValue();
+    /**
+     * <code>optional .com.rtrk.protobuf.FTPErrorMessageType FTPErrorMessagetType = 2;</code>
+     */
+    com.rtrk.atcommands.ATCommand.FTPErrorMessageType getFTPErrorMessagetType();
+  }
+  /**
+   * Protobuf type {@code com.rtrk.protobuf.ErrorCommand}
+   */
+  public  static final class ErrorCommand extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:com.rtrk.protobuf.ErrorCommand)
+      ErrorCommandOrBuilder {
+    // Use ErrorCommand.newBuilder() to construct.
+    private ErrorCommand(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ErrorCommand() {
+      errorMessageType_ = 0;
+      fTPErrorMessagetType_ = 0;
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+    }
+    private ErrorCommand(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      int mutable_bitField0_ = 0;
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!input.skipField(tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+              int rawValue = input.readEnum();
+
+              errorMessageType_ = rawValue;
+              break;
+            }
+            case 16: {
+              int rawValue = input.readEnum();
+
+              fTPErrorMessagetType_ = rawValue;
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.rtrk.atcommands.ATCommand.internal_static_com_rtrk_protobuf_ErrorCommand_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.rtrk.atcommands.ATCommand.internal_static_com_rtrk_protobuf_ErrorCommand_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.rtrk.atcommands.ATCommand.ErrorCommand.class, com.rtrk.atcommands.ATCommand.ErrorCommand.Builder.class);
+    }
+
+    public static final int ERRORMESSAGETYPE_FIELD_NUMBER = 1;
+    private int errorMessageType_;
+    /**
+     * <code>optional .com.rtrk.protobuf.ErrorMessageType errorMessageType = 1;</code>
+     */
+    public int getErrorMessageTypeValue() {
+      return errorMessageType_;
+    }
+    /**
+     * <code>optional .com.rtrk.protobuf.ErrorMessageType errorMessageType = 1;</code>
+     */
+    public com.rtrk.atcommands.ATCommand.ErrorMessageType getErrorMessageType() {
+      com.rtrk.atcommands.ATCommand.ErrorMessageType result = com.rtrk.atcommands.ATCommand.ErrorMessageType.valueOf(errorMessageType_);
+      return result == null ? com.rtrk.atcommands.ATCommand.ErrorMessageType.UNRECOGNIZED : result;
+    }
+
+    public static final int FTPERRORMESSAGETTYPE_FIELD_NUMBER = 2;
+    private int fTPErrorMessagetType_;
+    /**
+     * <code>optional .com.rtrk.protobuf.FTPErrorMessageType FTPErrorMessagetType = 2;</code>
+     */
+    public int getFTPErrorMessagetTypeValue() {
+      return fTPErrorMessagetType_;
+    }
+    /**
+     * <code>optional .com.rtrk.protobuf.FTPErrorMessageType FTPErrorMessagetType = 2;</code>
+     */
+    public com.rtrk.atcommands.ATCommand.FTPErrorMessageType getFTPErrorMessagetType() {
+      com.rtrk.atcommands.ATCommand.FTPErrorMessageType result = com.rtrk.atcommands.ATCommand.FTPErrorMessageType.valueOf(fTPErrorMessagetType_);
+      return result == null ? com.rtrk.atcommands.ATCommand.FTPErrorMessageType.UNRECOGNIZED : result;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (errorMessageType_ != com.rtrk.atcommands.ATCommand.ErrorMessageType.OK.getNumber()) {
+        output.writeEnum(1, errorMessageType_);
+      }
+      if (fTPErrorMessagetType_ != com.rtrk.atcommands.ATCommand.FTPErrorMessageType.FTP_OK.getNumber()) {
+        output.writeEnum(2, fTPErrorMessagetType_);
+      }
+    }
+
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (errorMessageType_ != com.rtrk.atcommands.ATCommand.ErrorMessageType.OK.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(1, errorMessageType_);
+      }
+      if (fTPErrorMessagetType_ != com.rtrk.atcommands.ATCommand.FTPErrorMessageType.FTP_OK.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(2, fTPErrorMessagetType_);
+      }
+      memoizedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.rtrk.atcommands.ATCommand.ErrorCommand)) {
+        return super.equals(obj);
+      }
+      com.rtrk.atcommands.ATCommand.ErrorCommand other = (com.rtrk.atcommands.ATCommand.ErrorCommand) obj;
+
+      boolean result = true;
+      result = result && errorMessageType_ == other.errorMessageType_;
+      result = result && fTPErrorMessagetType_ == other.fTPErrorMessagetType_;
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptorForType().hashCode();
+      hash = (37 * hash) + ERRORMESSAGETYPE_FIELD_NUMBER;
+      hash = (53 * hash) + errorMessageType_;
+      hash = (37 * hash) + FTPERRORMESSAGETTYPE_FIELD_NUMBER;
+      hash = (53 * hash) + fTPErrorMessagetType_;
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.rtrk.atcommands.ATCommand.ErrorCommand parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.rtrk.atcommands.ATCommand.ErrorCommand parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.rtrk.atcommands.ATCommand.ErrorCommand parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.rtrk.atcommands.ATCommand.ErrorCommand parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.rtrk.atcommands.ATCommand.ErrorCommand parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.rtrk.atcommands.ATCommand.ErrorCommand parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.rtrk.atcommands.ATCommand.ErrorCommand parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.rtrk.atcommands.ATCommand.ErrorCommand parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.rtrk.atcommands.ATCommand.ErrorCommand parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.rtrk.atcommands.ATCommand.ErrorCommand parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.rtrk.atcommands.ATCommand.ErrorCommand prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code com.rtrk.protobuf.ErrorCommand}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:com.rtrk.protobuf.ErrorCommand)
+        com.rtrk.atcommands.ATCommand.ErrorCommandOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.rtrk.atcommands.ATCommand.internal_static_com_rtrk_protobuf_ErrorCommand_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.rtrk.atcommands.ATCommand.internal_static_com_rtrk_protobuf_ErrorCommand_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.rtrk.atcommands.ATCommand.ErrorCommand.class, com.rtrk.atcommands.ATCommand.ErrorCommand.Builder.class);
+      }
+
+      // Construct using com.rtrk.atcommands.ATCommand.ErrorCommand.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        errorMessageType_ = 0;
+
+        fTPErrorMessagetType_ = 0;
+
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.rtrk.atcommands.ATCommand.internal_static_com_rtrk_protobuf_ErrorCommand_descriptor;
+      }
+
+      public com.rtrk.atcommands.ATCommand.ErrorCommand getDefaultInstanceForType() {
+        return com.rtrk.atcommands.ATCommand.ErrorCommand.getDefaultInstance();
+      }
+
+      public com.rtrk.atcommands.ATCommand.ErrorCommand build() {
+        com.rtrk.atcommands.ATCommand.ErrorCommand result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public com.rtrk.atcommands.ATCommand.ErrorCommand buildPartial() {
+        com.rtrk.atcommands.ATCommand.ErrorCommand result = new com.rtrk.atcommands.ATCommand.ErrorCommand(this);
+        result.errorMessageType_ = errorMessageType_;
+        result.fTPErrorMessagetType_ = fTPErrorMessagetType_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.rtrk.atcommands.ATCommand.ErrorCommand) {
+          return mergeFrom((com.rtrk.atcommands.ATCommand.ErrorCommand)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.rtrk.atcommands.ATCommand.ErrorCommand other) {
+        if (other == com.rtrk.atcommands.ATCommand.ErrorCommand.getDefaultInstance()) return this;
+        if (other.errorMessageType_ != 0) {
+          setErrorMessageTypeValue(other.getErrorMessageTypeValue());
+        }
+        if (other.fTPErrorMessagetType_ != 0) {
+          setFTPErrorMessagetTypeValue(other.getFTPErrorMessagetTypeValue());
+        }
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.rtrk.atcommands.ATCommand.ErrorCommand parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.rtrk.atcommands.ATCommand.ErrorCommand) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private int errorMessageType_ = 0;
+      /**
+       * <code>optional .com.rtrk.protobuf.ErrorMessageType errorMessageType = 1;</code>
+       */
+      public int getErrorMessageTypeValue() {
+        return errorMessageType_;
+      }
+      /**
+       * <code>optional .com.rtrk.protobuf.ErrorMessageType errorMessageType = 1;</code>
+       */
+      public Builder setErrorMessageTypeValue(int value) {
+        errorMessageType_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .com.rtrk.protobuf.ErrorMessageType errorMessageType = 1;</code>
+       */
+      public com.rtrk.atcommands.ATCommand.ErrorMessageType getErrorMessageType() {
+        com.rtrk.atcommands.ATCommand.ErrorMessageType result = com.rtrk.atcommands.ATCommand.ErrorMessageType.valueOf(errorMessageType_);
+        return result == null ? com.rtrk.atcommands.ATCommand.ErrorMessageType.UNRECOGNIZED : result;
+      }
+      /**
+       * <code>optional .com.rtrk.protobuf.ErrorMessageType errorMessageType = 1;</code>
+       */
+      public Builder setErrorMessageType(com.rtrk.atcommands.ATCommand.ErrorMessageType value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        errorMessageType_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .com.rtrk.protobuf.ErrorMessageType errorMessageType = 1;</code>
+       */
+      public Builder clearErrorMessageType() {
+        
+        errorMessageType_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int fTPErrorMessagetType_ = 0;
+      /**
+       * <code>optional .com.rtrk.protobuf.FTPErrorMessageType FTPErrorMessagetType = 2;</code>
+       */
+      public int getFTPErrorMessagetTypeValue() {
+        return fTPErrorMessagetType_;
+      }
+      /**
+       * <code>optional .com.rtrk.protobuf.FTPErrorMessageType FTPErrorMessagetType = 2;</code>
+       */
+      public Builder setFTPErrorMessagetTypeValue(int value) {
+        fTPErrorMessagetType_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .com.rtrk.protobuf.FTPErrorMessageType FTPErrorMessagetType = 2;</code>
+       */
+      public com.rtrk.atcommands.ATCommand.FTPErrorMessageType getFTPErrorMessagetType() {
+        com.rtrk.atcommands.ATCommand.FTPErrorMessageType result = com.rtrk.atcommands.ATCommand.FTPErrorMessageType.valueOf(fTPErrorMessagetType_);
+        return result == null ? com.rtrk.atcommands.ATCommand.FTPErrorMessageType.UNRECOGNIZED : result;
+      }
+      /**
+       * <code>optional .com.rtrk.protobuf.FTPErrorMessageType FTPErrorMessagetType = 2;</code>
+       */
+      public Builder setFTPErrorMessagetType(com.rtrk.atcommands.ATCommand.FTPErrorMessageType value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        fTPErrorMessagetType_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .com.rtrk.protobuf.FTPErrorMessageType FTPErrorMessagetType = 2;</code>
+       */
+      public Builder clearFTPErrorMessagetType() {
+        
+        fTPErrorMessagetType_ = 0;
+        onChanged();
+        return this;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return this;
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return this;
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:com.rtrk.protobuf.ErrorCommand)
+    }
+
+    // @@protoc_insertion_point(class_scope:com.rtrk.protobuf.ErrorCommand)
+    private static final com.rtrk.atcommands.ATCommand.ErrorCommand DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.rtrk.atcommands.ATCommand.ErrorCommand();
+    }
+
+    public static com.rtrk.atcommands.ATCommand.ErrorCommand getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ErrorCommand>
+        PARSER = new com.google.protobuf.AbstractParser<ErrorCommand>() {
+      public ErrorCommand parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+          return new ErrorCommand(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ErrorCommand> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ErrorCommand> getParserForType() {
+      return PARSER;
+    }
+
+    public com.rtrk.atcommands.ATCommand.ErrorCommand getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_rtrk_protobuf_HTTPCommand_descriptor;
   private static final 
@@ -59073,6 +62656,11 @@ public final class ATCommand {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_com_rtrk_protobuf_OthersCommand_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_com_rtrk_protobuf_ErrorCommand_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_com_rtrk_protobuf_ErrorCommand_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -59082,658 +62670,695 @@ public final class ATCommand {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\016commands.proto\022\021com.rtrk.protobuf\"\206\003\n\013" +
+      "\n\016commands.proto\022\021com.rtrk.protobuf\"\330\002\n\013" +
       "HTTPCommand\0227\n\013messageType\030\001 \001(\0162\".com.r" +
       "trk.protobuf.HTTPMessageType\022\014\n\004test\030\002 \001" +
       "(\010\022\r\n\005write\030\003 \001(\010\022\021\n\tURLLength\030\004 \001(\005\022\021\n\t" +
       "inputTime\030\005 \001(\005\022\022\n\ntoReadTime\030\006 \001(\005\022\020\n\010w" +
       "aitTime\030\007 \001(\005\022\020\n\010bodySize\030\010 \001(\005\022\020\n\010fileN" +
       "ame\030\t \001(\t\022\016\n\006length\030\n \001(\005\022\024\n\014downloadSiz" +
-      "e\030\013 \001(\005\022\025\n\rcontentLength\030\014 \001(\005\022+\n\terrorc" +
-      "ode\030\r \001(\0162\030.com.rtrk.protobuf.Error\022\'\n\005e" +
-      "rror\030\016 \001(\0162\030.com.rtrk.protobuf.Error\022\014\n\004",
-      "data\030\017 \001(\014\022\020\n\010bodyData\030\020 \001(\014\"\206\005\n\013FileCom" +
-      "mand\0227\n\013messageType\030\001 \001(\0162\".com.rtrk.pro" +
-      "tobuf.FileMessageType\022\014\n\004test\030\002 \001(\010\022\014\n\004r" +
-      "ead\030\003 \001(\010\022\r\n\005write\030\004 \001(\010\022\021\n\texecution\030\005 " +
-      "\001(\010\022\023\n\013namePattern\030\006 \001(\t\022\020\n\010freeSize\030\007 \001" +
-      "(\005\022\021\n\ttotalSize\030\010 \001(\005\022\024\n\014maxAllocSize\030\t " +
-      "\001(\005\022\023\n\013UFSFileSize\030\n \001(\005\022\025\n\rUFSFileNumbe" +
-      "r\030\013 \001(\005\022\020\n\010fileName\030\014 \001(\t\022\020\n\010fileSize\030\r " +
-      "\001(\005\022\017\n\007ramSize\030\016 \001(\005\022\022\n\nuploadSize\030\017 \001(\005" +
-      "\022\017\n\007timeout\030\020 \001(\005\022\017\n\007ackMode\030\021 \001(\010\022\023\n\013sr",
-      "cFileName\030\022 \001(\t\022\024\n\014destFileName\030\023 \001(\t\022\014\n" +
-      "\004copy\030\024 \001(\010\022\021\n\towerwrite\030\025 \001(\010\022\014\n\004mode\030\026" +
-      " \001(\005\022\016\n\006length\030\027 \001(\005\022\022\n\nfileHandle\030\030 \001(\t" +
-      "\022\022\n\nreadLength\030\031 \001(\005\022\025\n\rwrittenLength\030\032 " +
-      "\001(\005\022\023\n\013totalLength\030\033 \001(\005\022\016\n\006offset\030\034 \001(\005" +
-      "\022\020\n\010position\030\035 \001(\005\022\020\n\010checksum\030\036 \001(\005\022\'\n\005" +
-      "error\030\037 \001(\0162\030.com.rtrk.protobuf.Error\"\367\003" +
-      "\n\nFTPCommand\0226\n\013messageType\030\001 \001(\0162!.com." +
-      "rtrk.protobuf.FTPMessageType\022\014\n\004test\030\002 \001" +
-      "(\010\022\014\n\004read\030\003 \001(\010\022\r\n\005write\030\004 \001(\010\022\021\n\texecu",
-      "tion\030\005 \001(\010\022\020\n\010hostName\030\006 \001(\t\022\014\n\004port\030\007 \001" +
-      "(\005\022\'\n\005error\030\031 \001(\0162\030.com.rtrk.protobuf.Er" +
-      "ror\022\020\n\010fileName\030\010 \001(\t\022\020\n\010fileSize\030\t \001(\005\022" +
-      "\014\n\004time\030\n \001(\005\022\022\n\nuploadSize\030\013 \001(\005\022\024\n\014dow" +
-      "nloadSize\030\014 \001(\005\022\020\n\010pathName\030\r \001(\t\022\020\n\010use" +
-      "rname\030\016 \001(\t\022\020\n\010password\030\017 \001(\t\022\014\n\004type\030\020 " +
-      "\001(\005\022\r\n\005value\030\021 \001(\005\022\016\n\006status\030\022 \001(\t\022\016\n\006le" +
-      "ngth\030\023 \001(\005\022\022\n\nsourceName\030\024 \001(\t\022\022\n\ntarget" +
-      "Name\030\025 \001(\t\022\014\n\004name\030\026 \001(\t\022\016\n\006return\030\027 \001(\005" +
-      "\022\025\n\rdirectoryName\030\030 \001(\t\"\341\005\n\nMMSCommand\0226",
-      "\n\013messageType\030\001 \001(\0162!.com.rtrk.protobuf." +
-      "MMSMessageType\022\014\n\004test\030\002 \001(\010\022\014\n\004read\030\003 \001" +
-      "(\010\022\r\n\005write\030\004 \001(\010\022\017\n\007MMSCURL\030\005 \001(\t\022\014\n\004ty" +
-      "pe\030\006 \001(\005\022\017\n\007gateway\030\007 \001(\t\022\014\n\004port\030\010 \001(\005\022" +
-      "\r\n\005valid\030\t \001(\005\022\020\n\010priority\030\n \001(\005\022\022\n\nsend" +
-      "Report\030\013 \001(\010\022\022\n\nreadReport\030\014 \001(\010\022\017\n\007visi" +
-      "ble\030\r \001(\005\022\r\n\005class\030\016 \001(\005\022\017\n\007charset\030\017 \001(" +
-      "\t\022\021\n\tinputMode\030& \001(\005\022\020\n\010function\030\020 \001(\005\022\017" +
-      "\n\007operate\030\021 \001(\005\022\020\n\010opstring\030\022 \001(\t\022\014\n\004fro" +
-      "m\030\023 \001(\005\022\n\n\002to\030\024 \001(\005\022\020\n\010MMSIndex\030\025 \001(\005\022\023\n",
-      "\013fromAddress\030\026 \001(\t\022\027\n\017isNotDownloaded\030\027 " +
-      "\001(\010\022\014\n\004date\030\030 \001(\t\022\014\n\004time\030\031 \001(\t\022\023\n\013messa" +
-      "geSize\030\032 \001(\005\022\014\n\004para\030\033 \001(\005\022\020\n\010fileName\030\034" +
-      " \001(\t\022\024\n\014downloadSize\030\035 \001(\005\022\020\n\010checksum\030\036" +
-      " \001(\005\022\024\n\014DURAttribute\030\037 \001(\003\022\020\n\010SMSToSIM\030 " +
-      " \001(\005\022\022\n\nenableUSC2\030! \001(\010\022\021\n\tbigEndian\030\" " +
-      "\001(\010\022\023\n\013outputStyle\030# \001(\005\022\020\n\010fileType\030$ \001" +
-      "(\005\022\'\n\005error\030% \001(\0162\030.com.rtrk.protobuf.Er" +
-      "ror\"\335\007\n\017QuecCellCommand\022;\n\013messageType\030\001" +
-      " \001(\0162&.com.rtrk.protobuf.QuecCellMessage",
+      "e\030\013 \001(\005\022\025\n\rcontentLength\030\014 \001(\005\022\014\n\004data\030\017" +
+      " \001(\014\022\020\n\010bodyData\030\020 \001(\014\022\023\n\013description\030\021 " +
+      "\001(\t\022\021\n\tisRespone\030\022 \001(\010\"\234\005\n\013FileCommand\0227",
+      "\n\013messageType\030\001 \001(\0162\".com.rtrk.protobuf." +
+      "FileMessageType\022\014\n\004test\030\002 \001(\010\022\014\n\004read\030\003 " +
+      "\001(\010\022\r\n\005write\030\004 \001(\010\022\021\n\texecution\030\005 \001(\010\022\023\n" +
+      "\013namePattern\030\006 \001(\t\022\020\n\010freeSize\030\007 \001(\005\022\021\n\t" +
+      "totalSize\030\010 \001(\005\022\024\n\014maxAllocSize\030\t \001(\005\022\023\n" +
+      "\013UFSFileSize\030\n \001(\005\022\025\n\rUFSFileNumber\030\013 \001(" +
+      "\005\022\020\n\010fileName\030\014 \001(\t\022\020\n\010fileSize\030\r \001(\005\022\017\n" +
+      "\007ramSize\030\016 \001(\005\022\022\n\nuploadSize\030\017 \001(\005\022\017\n\007ti" +
+      "meout\030\020 \001(\005\022\017\n\007ackMode\030\021 \001(\010\022\023\n\013srcFileN" +
+      "ame\030\022 \001(\t\022\024\n\014destFileName\030\023 \001(\t\022\014\n\004copy\030",
+      "\024 \001(\010\022\021\n\towerwrite\030\025 \001(\010\022\014\n\004mode\030\026 \001(\005\022\016" +
+      "\n\006length\030\027 \001(\005\022\022\n\nfileHandle\030\030 \001(\t\022\022\n\nre" +
+      "adLength\030\031 \001(\005\022\025\n\rwrittenLength\030\032 \001(\005\022\023\n" +
+      "\013totalLength\030\033 \001(\005\022\016\n\006offset\030\034 \001(\005\022\020\n\010po" +
+      "sition\030\035 \001(\005\022\020\n\010checksum\030\036 \001(\005\022\024\n\014downlo" +
+      "adSize\030\037 \001(\005\022\022\n\nisResponse\030  \001(\010\022\023\n\013desc" +
+      "ription\030! \001(\t\"\367\003\n\nFTPCommand\0226\n\013messageT" +
+      "ype\030\001 \001(\0162!.com.rtrk.protobuf.FTPMessage" +
       "Type\022\014\n\004test\030\002 \001(\010\022\014\n\004read\030\003 \001(\010\022\r\n\005writ" +
-      "e\030\004 \001(\010\022\021\n\texecution\030\005 \001(\010\022\016\n\006status\030\006 \001" +
-      "(\005\022\030\n\020operatorInString\030\007 \001(\t\022\035\n\025operator" +
-      "InShortString\030\010 \001(\t\022\030\n\020operatorInNumber\030" +
-      "\t \001(\005\022\016\n\006indexN\030\n \001(\005\022\030\n\020locationAreaCod" +
-      "e\030\013 \001(\005\022\016\n\006cellID\030\014 \001(\005\022\037\n\027baseStationId" +
-      "entityCode\030\r \001(\005\022\024\n\014receiveLevel\030\016 \001(\005\022+" +
-      "\n#absoluteRadioFrequencyChannelNumber\030\017 " +
-      "\001(\001\022\014\n\004mode\030, \001(\005\022\014\n\004dump\030\020 \001(\005\022\031\n\021mobil" +
-      "eCountryCode\030\021 \001(\005\022\031\n\021mobileNetworkCode\030",
-      "\022 \001(\005\022\037\n\027broadcastControlChannel\030\023 \001(\005\022\031" +
-      "\n\021receiveSignalLeve\030\024 \001(\001\022\n\n\002c1\030\025 \001(\005\022\n\n" +
-      "\002c2\030\026 \001(\005\022\034\n\024transmitPowerMaximum\030\027 \001(\001\022" +
-      "\032\n\022receiveLevelAccess\030\030 \001(\005\022\021\n\ttimeslots" +
-      "\030\031 \001(\005\022\021\n\tMAIOValue\030\032 \001(\005\022\020\n\010HSNValue\030\033 " +
-      "\001(\005\022\013\n\003TCH\030\034 \001(\005\022\025\n\rtimingAdvance\030\035 \001(\005\022" +
-      "\024\n\014RXQualitySub\030\036 \001(\005\022\025\n\rRXQualityFull\030\037" +
-      " \001(\005\022\"\n\032numberOfNeighboringSixCell\030  \001(\005" +
-      "\022\020\n\010band1900\030! \001(\010\022\017\n\007rrState\030\" \001(\005\022\023\n\013c" +
-      "hannelType\030# \001(\t\022\027\n\017automaticReport\030$ \001(",
-      "\010\022\014\n\004line\030% \001(\005\022\025\n\rforbiddenData\030& \001(\t\022\014" +
-      "\n\004band\030\' \001(\005\022\r\n\005value\030( \001(\005\022\016\n\006arcfn1\030) " +
-      "\001(\005\022\016\n\006arcfn2\030* \001(\005\022\016\n\006arcfn3\030+ \001(\005\"\252\002\n\020" +
-      "RecordingCommand\022<\n\013messageType\030\001 \001(\0162\'." +
-      "com.rtrk.protobuf.RecordingMessageType\022\014" +
-      "\n\004test\030\002 \001(\010\022\014\n\004read\030\003 \001(\010\022\r\n\005write\030\r \001(" +
-      "\010\022\021\n\texecution\030\004 \001(\010\022\r\n\005state\030\005 \001(\005\022\020\n\010f" +
-      "ileName\030\006 \001(\t\022\016\n\006format\030\007 \001(\005\022\016\n\006repeat\030" +
-      "\010 \001(\010\022\016\n\006volume\030\t \001(\005\022\017\n\007channel\030\n \001(\005\022\017" +
-      "\n\007control\030\013 \001(\005\022\'\n\005error\030\014 \001(\0162\030.com.rtr",
-      "k.protobuf.Error\"\241\003\n\013SMTPCommand\0227\n\013mess" +
-      "ageType\030\001 \001(\0162\".com.rtrk.protobuf.SMTPMe" +
-      "ssageType\022\014\n\004test\030\002 \001(\010\022\014\n\004read\030\003 \001(\010\022\r\n" +
-      "\005write\030\004 \001(\010\022\021\n\texecution\030\005 \001(\010\022\014\n\004user\030" +
-      "\006 \001(\t\022\020\n\010password\030\007 \001(\t\022\017\n\007address\030\010 \001(\t" +
-      "\022\014\n\004name\030\t \001(\t\022\025\n\rserverAddress\030\n \001(\t\022\014\n" +
-      "\004port\030\013 \001(\005\022\014\n\004mode\030\014 \001(\005\022\014\n\004type\030\r \001(\005\022" +
-      "\024\n\014emailAddress\030\016 \001(\t\022\016\n\006result\030\017 \001(\005\022\017\n" +
-      "\007charset\030\026 \001(\005\022\r\n\005title\030\020 \001(\t\022\017\n\007timeout" +
-      "\030\021 \001(\005\022\021\n\tfileIndex\030\022 \001(\005\022\020\n\010fileName\030\023 ",
-      "\001(\t\022\020\n\010fileSize\030\024 \001(\005\022\r\n\005value\030\025 \001(\005\"\314\001\n" +
-      "\nSTKCommand\0226\n\013messageType\030\001 \001(\0162!.com.r" +
-      "trk.protobuf.STKMessageType\022\014\n\004test\030\002 \001(" +
-      "\010\022\014\n\004read\030\003 \001(\010\022\r\n\005write\030\004 \001(\010\022\021\n\texecut" +
-      "ion\030\005 \001(\010\022\t\n\001n\030\006 \001(\005\022\017\n\007profile\030\007 \001(\t\022\022\n" +
-      "\nsatCommand\030\010 \001(\t\022\030\n\020terminalResponse\030\t " +
-      "\001(\t\"\341\001\n\016GeneralCommand\022;\n\013messageType\030\001 " +
-      "\001(\0162&.com.rtrk.protobuf.GeneralMesssageT" +
-      "ype\022\014\n\004test\030\002 \001(\010\022\014\n\004read\030\003 \001(\010\022\r\n\005write" +
-      "\030\n \001(\010\022\021\n\texecution\030\004 \001(\010\022\r\n\005value\030\005 \001(\005",
-      "\022\t\n\001n\030\006 \001(\005\022\025\n\rfunctionality\030\007 \001(\005\022\r\n\005re" +
-      "set\030\010 \001(\005\022\024\n\014characterSet\030\t \001(\t\"\260\004\n\035Seri" +
-      "alInterfaceControlCommand\022I\n\013messageType" +
-      "\030\001 \001(\01624.com.rtrk.protobuf.SerialInterfa" +
-      "ceControlMessageType\022\014\n\004test\030\002 \001(\010\022\014\n\004re" +
+      "e\030\004 \001(\010\022\021\n\texecution\030\005 \001(\010\022\020\n\010hostName\030\006",
+      " \001(\t\022\014\n\004port\030\007 \001(\005\022\020\n\010fileName\030\010 \001(\t\022\020\n\010" +
+      "fileSize\030\t \001(\005\022\014\n\004time\030\n \001(\005\022\022\n\nuploadSi" +
+      "ze\030\013 \001(\005\022\024\n\014downloadSize\030\014 \001(\005\022\020\n\010pathNa" +
+      "me\030\r \001(\t\022\020\n\010username\030\016 \001(\t\022\020\n\010password\030\017" +
+      " \001(\t\022\014\n\004type\030\020 \001(\005\022\r\n\005value\030\021 \001(\005\022\016\n\006sta" +
+      "tus\030\022 \001(\t\022\016\n\006length\030\023 \001(\005\022\022\n\nsourceName\030" +
+      "\024 \001(\t\022\022\n\ntargetName\030\025 \001(\t\022\014\n\004name\030\026 \001(\t\022" +
+      "\016\n\006return\030\027 \001(\005\022\025\n\rdirectoryName\030\030 \001(\t\022\022" +
+      "\n\nisResponse\030\031 \001(\010\022\023\n\013description\030\032 \001(\t\"" +
+      "\341\005\n\nMMSCommand\0226\n\013messageType\030\001 \001(\0162!.co",
+      "m.rtrk.protobuf.MMSMessageType\022\014\n\004test\030\002" +
+      " \001(\010\022\014\n\004read\030\003 \001(\010\022\r\n\005write\030\004 \001(\010\022\017\n\007MMS" +
+      "CURL\030\005 \001(\t\022\014\n\004type\030\006 \001(\005\022\017\n\007gateway\030\007 \001(" +
+      "\t\022\014\n\004port\030\010 \001(\005\022\r\n\005valid\030\t \001(\005\022\020\n\010priori" +
+      "ty\030\n \001(\005\022\022\n\nsendReport\030\013 \001(\010\022\022\n\nreadRepo" +
+      "rt\030\014 \001(\010\022\017\n\007visible\030\r \001(\005\022\r\n\005class\030\016 \001(\005" +
+      "\022\017\n\007charset\030\017 \001(\t\022\021\n\tinputMode\030& \001(\005\022\020\n\010" +
+      "function\030\020 \001(\005\022\017\n\007operate\030\021 \001(\005\022\020\n\010opstr" +
+      "ing\030\022 \001(\t\022\014\n\004from\030\023 \001(\005\022\n\n\002to\030\024 \001(\005\022\020\n\010M" +
+      "MSIndex\030\025 \001(\005\022\023\n\013fromAddress\030\026 \001(\t\022\027\n\017is",
+      "NotDownloaded\030\027 \001(\010\022\014\n\004date\030\030 \001(\t\022\014\n\004tim" +
+      "e\030\031 \001(\t\022\023\n\013messageSize\030\032 \001(\005\022\014\n\004para\030\033 \001" +
+      "(\005\022\020\n\010fileName\030\034 \001(\t\022\024\n\014downloadSize\030\035 \001" +
+      "(\005\022\020\n\010checksum\030\036 \001(\005\022\024\n\014DURAttribute\030\037 \001" +
+      "(\003\022\020\n\010SMSToSIM\030  \001(\005\022\022\n\nenableUSC2\030! \001(\010" +
+      "\022\021\n\tbigEndian\030\" \001(\010\022\023\n\013outputStyle\030# \001(\005" +
+      "\022\020\n\010fileType\030$ \001(\005\022\022\n\nisResponse\030\' \001(\010\022\023" +
+      "\n\013description\030( \001(\t\"\206\010\n\017QuecCellCommand\022" +
+      ";\n\013messageType\030\001 \001(\0162&.com.rtrk.protobuf" +
+      ".QuecCellMessageType\022\014\n\004test\030\002 \001(\010\022\014\n\004re",
       "ad\030\003 \001(\010\022\r\n\005write\030\004 \001(\010\022\021\n\texecution\030\005 \001" +
-      "(\010\022\r\n\005value\030\006 \001(\005\022\016\n\006format\030\007 \001(\005\022\017\n\007par" +
-      "tity\030\010 \001(\005\022\020\n\010DCEByDTE\030\t \001(\005\022\020\n\010DTEByDCE" +
-      "\030\n \001(\005\022\014\n\004rate\030\013 \001(\005\022\026\n\016enableDualUART\030\014" +
-      " \001(\010\022\016\n\006subset\030\r \001(\005\022\021\n\tportSpeed\030\016 \001(\005\022",
-      "\030\n\020maximumFrameSize\030\017 \001(\005\022\032\n\022acknowledme" +
-      "ntTimer\030\020 \001(\005\022&\n\036maximumNumberOfRetransm" +
-      "issions\030\021 \001(\005\022\025\n\rresponseTimer\030\022 \001(\005\022\033\n\023" +
-      "wakeUpResponseTimer\030\023 \001(\005\022\023\n\013windowsSize" +
-      "\030\024 \001(\005\022\020\n\010baudRate\030\025 \001(\005\022\020\n\010dataBits\030\026 \001" +
-      "(\005\022\020\n\010stopBits\030\027 \001(\005\022\014\n\004mode\030\030 \001(\005\"\262\003\n\024S" +
-      "tatusControlCommand\022@\n\013messageType\030\001 \001(\016" +
-      "2+.com.rtrk.protobuf.StatusControlMessag" +
+      "(\010\022\016\n\006status\030\006 \001(\005\022\030\n\020operatorInString\030\007" +
+      " \001(\t\022\035\n\025operatorInShortString\030\010 \001(\t\022\030\n\020o" +
+      "peratorInNumber\030\t \001(\005\022\016\n\006indexN\030\n \001(\005\022\030\n" +
+      "\020locationAreaCode\030\013 \001(\005\022\016\n\006cellID\030\014 \001(\005\022" +
+      "\037\n\027baseStationIdentityCode\030\r \001(\005\022\024\n\014rece" +
+      "iveLevel\030\016 \001(\005\022+\n#absoluteRadioFrequency" +
+      "ChannelNumber\030\017 \001(\001\022\014\n\004mode\030, \001(\005\022\014\n\004dum" +
+      "p\030\020 \001(\005\022\031\n\021mobileCountryCode\030\021 \001(\005\022\031\n\021mo" +
+      "bileNetworkCode\030\022 \001(\005\022\037\n\027broadcastContro",
+      "lChannel\030\023 \001(\005\022\031\n\021receiveSignalLeve\030\024 \001(" +
+      "\001\022\n\n\002c1\030\025 \001(\005\022\n\n\002c2\030\026 \001(\005\022\034\n\024transmitPow" +
+      "erMaximum\030\027 \001(\001\022\032\n\022receiveLevelAccess\030\030 " +
+      "\001(\005\022\021\n\ttimeslots\030\031 \001(\005\022\021\n\tMAIOValue\030\032 \001(" +
+      "\005\022\020\n\010HSNValue\030\033 \001(\005\022\013\n\003TCH\030\034 \001(\005\022\025\n\rtimi" +
+      "ngAdvance\030\035 \001(\005\022\024\n\014RXQualitySub\030\036 \001(\005\022\025\n" +
+      "\rRXQualityFull\030\037 \001(\005\022\"\n\032numberOfNeighbor" +
+      "ingSixCell\030  \001(\005\022\020\n\010band1900\030! \001(\010\022\017\n\007rr" +
+      "State\030\" \001(\005\022\023\n\013channelType\030# \001(\t\022\027\n\017auto" +
+      "maticReport\030$ \001(\010\022\014\n\004line\030% \001(\005\022\025\n\rforbi",
+      "ddenData\030& \001(\t\022\014\n\004band\030\' \001(\005\022\r\n\005value\030( " +
+      "\001(\005\022\016\n\006arcfn1\030) \001(\005\022\016\n\006arcfn2\030* \001(\005\022\016\n\006a" +
+      "rcfn3\030+ \001(\005\022\022\n\nisResponse\030- \001(\010\022\023\n\013descr" +
+      "iption\030. \001(\t\"\252\002\n\020RecordingCommand\022<\n\013mes" +
+      "sageType\030\001 \001(\0162\'.com.rtrk.protobuf.Recor" +
+      "dingMessageType\022\014\n\004test\030\002 \001(\010\022\014\n\004read\030\003 " +
+      "\001(\010\022\r\n\005write\030\r \001(\010\022\021\n\texecution\030\004 \001(\010\022\r\n" +
+      "\005state\030\005 \001(\005\022\020\n\010fileName\030\006 \001(\t\022\016\n\006format" +
+      "\030\007 \001(\005\022\016\n\006repeat\030\010 \001(\010\022\016\n\006volume\030\t \001(\005\022\017" +
+      "\n\007channel\030\n \001(\005\022\017\n\007control\030\013 \001(\005\022\022\n\nisRe",
+      "sponse\030\016 \001(\010\022\023\n\013description\030\017 \001(\t\"\312\003\n\013SM" +
+      "TPCommand\0227\n\013messageType\030\001 \001(\0162\".com.rtr" +
+      "k.protobuf.SMTPMessageType\022\014\n\004test\030\002 \001(\010" +
+      "\022\014\n\004read\030\003 \001(\010\022\r\n\005write\030\004 \001(\010\022\021\n\texecuti" +
+      "on\030\005 \001(\010\022\014\n\004user\030\006 \001(\t\022\020\n\010password\030\007 \001(\t" +
+      "\022\017\n\007address\030\010 \001(\t\022\014\n\004name\030\t \001(\t\022\025\n\rserve" +
+      "rAddress\030\n \001(\t\022\014\n\004port\030\013 \001(\005\022\014\n\004mode\030\014 \001" +
+      "(\005\022\014\n\004type\030\r \001(\005\022\024\n\014emailAddress\030\016 \001(\t\022\016" +
+      "\n\006result\030\017 \001(\005\022\017\n\007charset\030\026 \001(\005\022\r\n\005title" +
+      "\030\020 \001(\t\022\017\n\007timeout\030\021 \001(\005\022\021\n\tfileIndex\030\022 \001",
+      "(\005\022\020\n\010fileName\030\023 \001(\t\022\020\n\010fileSize\030\024 \001(\005\022\r" +
+      "\n\005value\030\025 \001(\005\022\022\n\nisResponse\030\027 \001(\010\022\023\n\013des" +
+      "cription\030\030 \001(\t\"\365\001\n\nSTKCommand\0226\n\013message" +
+      "Type\030\001 \001(\0162!.com.rtrk.protobuf.STKMessag" +
       "eType\022\014\n\004test\030\002 \001(\010\022\014\n\004read\030\003 \001(\010\022\r\n\005wri" +
-      "te\030\004 \001(\010\022\021\n\texecution\030\005 \001(\010\022\022\n\nlocationI",
-      "D\030\006 \001(\005\022\r\n\005cause\030\007 \001(\t\022\013\n\003pas\030\010 \001(\005\022\016\n\006s" +
-      "tatus\030\t \001(\005\022\021\n\trefuseSMS\030\n \001(\010\022\022\n\nrefuse" +
-      "Call\030\013 \001(\010\022\014\n\004mode\030\014 \001(\005\022\020\n\010extunsol\030\r \001" +
-      "(\t\022\r\n\005state\030\016 \001(\005\022\016\n\006enable\030\017 \001(\010\022\014\n\004tim" +
-      "e\030\020 \001(\t\022\032\n\022datlightSavingTime\030\021 \001(\t\022\023\n\013i" +
-      "nsertLevel\030\022 \001(\005\022\021\n\tpinChoice\030\023 \001(\005\022\024\n\014i" +
-      "nsertStatus\030\024 \001(\005\022\014\n\004type\030\025 \001(\005\"\322\004\n\021SIMR" +
-      "elatedCommand\022=\n\013messageType\030\001 \001(\0162(.com" +
-      ".rtrk.protobuf.SIMRelatedMessageType\022\014\n\004" +
-      "test\030\002 \001(\010\022\014\n\004read\030\003 \001(\010\022\r\n\005write\030\004 \001(\010\022",
-      "\021\n\texecution\030\005 \001(\010\022\013\n\003fac\030\037 \001(\t\022\014\n\004mode\030" +
-      "  \001(\005\022\020\n\010password\030! \001(\t\022\r\n\005class\030\" \001(\005\022\016" +
-      "\n\006status\030\006 \001(\005\022\013\n\003pin\030\007 \001(\t\022\016\n\006newPin\030\010 " +
-      "\001(\t\022\021\n\tpwdLength\030\t \001(\005\022\016\n\006oldPwd\030\n \001(\t\022\016" +
-      "\n\006newPwd\030\013 \001(\t\022\017\n\007command\030\014 \001(\t\022\016\n\006fileI" +
-      "D\030\r \001(\005\022\n\n\002P1\030\016 \001(\005\022\n\n\002P2\030\017 \001(\005\022\n\n\002P3\030\020 " +
-      "\001(\005\022\013\n\003SW1\030\021 \001(\005\022\013\n\003SW2\030\022 \001(\005\022\014\n\004data\030\023 " +
-      "\001(\t\022\020\n\010response\030\024 \001(\t\022\016\n\006length\030\025 \001(\005\022\020\n" +
-      "\010CCIDData\030\026 \001(\t\022\014\n\004GID1\030\027 \001(\005\022\014\n\004GID2\030\030 " +
-      "\001(\005\022\032\n\022serviceProvideName\030\031 \001(\t\022\023\n\013displ",
-      "ayMode\030\032 \001(\005\022\014\n\004chv1\030\033 \001(\005\022\014\n\004chv2\030\034 \001(\005" +
-      "\022\014\n\004puk1\030\035 \001(\005\022\014\n\004puk2\030\036 \001(\005\"\362\003\n\025Network" +
-      "ServiceCommand\022A\n\013messageType\030\001 \001(\0162,.co" +
-      "m.rtrk.protobuf.NetworkServiceMessageTyp" +
-      "e\022\014\n\004test\030\002 \001(\010\022\014\n\004read\030\003 \001(\010\022\r\n\005writw\030\004" +
-      " \001(\010\022\021\n\texecution\030\005 \001(\010\022\016\n\006status\030\006 \001(\005\022" +
-      "\020\n\010operator\030\007 \001(\005\022\014\n\004mode\030\010 \001(\005\022\016\n\006forma" +
-      "t\030\t \001(\005\022\t\n\001n\030\n \001(\005\022\030\n\020locationAreaCode\030\013" +
-      " \001(\t\022\016\n\006cellID\030\014 \001(\t\022\014\n\004rssi\030\r \001(\005\022\013\n\003be" +
-      "r\030\016 \001(\005\022\r\n\005index\030\017 \001(\005\022\020\n\010numericn\030\020 \001(\t",
-      "\022\016\n\006alphan\030\021 \001(\t\022\016\n\006opBand\030\022 \001(\t\022\014\n\004dump" +
-      "\030\023 \001(\005\022\014\n\004band\030\024 \001(\005\022\021\n\tfrequency\030\025 \001(\005\022" +
-      "\026\n\016signalStrength\030\026 \001(\005\022\020\n\010band1900\030\027 \001(" +
-      "\005\022\016\n\006arfcn1\030\030 \001(\005\022\016\n\006arfcn2\030\031 \001(\005\022\016\n\006arf" +
-      "cn3\030\032 \001(\005\"\206\004\n\022CallRelatedCommand\022>\n\013mess" +
-      "ageType\030\001 \001(\0162).com.rtrk.protobuf.CallRe" +
+      "te\030\004 \001(\010\022\021\n\texecution\030\005 \001(\010\022\t\n\001n\030\006 \001(\005\022\017" +
+      "\n\007profile\030\007 \001(\t\022\022\n\nsatCommand\030\010 \001(\t\022\030\n\020t" +
+      "erminalResponse\030\t \001(\t\022\022\n\nisResponse\030\n \001(" +
+      "\010\022\023\n\013description\030\013 \001(\t\"\212\002\n\016GeneralComman" +
+      "d\022;\n\013messageType\030\001 \001(\0162&.com.rtrk.protob",
+      "uf.GeneralMesssageType\022\014\n\004test\030\002 \001(\010\022\014\n\004" +
+      "read\030\003 \001(\010\022\r\n\005write\030\n \001(\010\022\021\n\texecution\030\004" +
+      " \001(\010\022\r\n\005value\030\005 \001(\005\022\t\n\001n\030\006 \001(\005\022\025\n\rfuncti" +
+      "onality\030\007 \001(\005\022\r\n\005reset\030\010 \001(\005\022\024\n\014characte" +
+      "rSet\030\t \001(\t\022\022\n\nisResponse\030\013 \001(\010\022\023\n\013descri" +
+      "ption\030\014 \001(\t\"\331\004\n\035SerialInterfaceControlCo" +
+      "mmand\022I\n\013messageType\030\001 \001(\01624.com.rtrk.pr" +
+      "otobuf.SerialInterfaceControlMessageType" +
+      "\022\014\n\004test\030\002 \001(\010\022\014\n\004read\030\003 \001(\010\022\r\n\005write\030\004 " +
+      "\001(\010\022\021\n\texecution\030\005 \001(\010\022\r\n\005value\030\006 \001(\005\022\016\n",
+      "\006format\030\007 \001(\005\022\017\n\007partity\030\010 \001(\005\022\020\n\010DCEByD" +
+      "TE\030\t \001(\005\022\020\n\010DTEByDCE\030\n \001(\005\022\014\n\004rate\030\013 \001(\005" +
+      "\022\026\n\016enableDualUART\030\014 \001(\010\022\016\n\006subset\030\r \001(\005" +
+      "\022\021\n\tportSpeed\030\016 \001(\005\022\030\n\020maximumFrameSize\030" +
+      "\017 \001(\005\022\032\n\022acknowledmentTimer\030\020 \001(\005\022&\n\036max" +
+      "imumNumberOfRetransmissions\030\021 \001(\005\022\025\n\rres" +
+      "ponseTimer\030\022 \001(\005\022\033\n\023wakeUpResponseTimer\030" +
+      "\023 \001(\005\022\023\n\013windowsSize\030\024 \001(\005\022\020\n\010baudRate\030\025" +
+      " \001(\005\022\020\n\010dataBits\030\026 \001(\005\022\020\n\010stopBits\030\027 \001(\005" +
+      "\022\014\n\004mode\030\030 \001(\005\022\022\n\nisResponse\030\031 \001(\010\022\023\n\013de",
+      "scription\030\032 \001(\t\"\333\003\n\024StatusControlCommand" +
+      "\022@\n\013messageType\030\001 \001(\0162+.com.rtrk.protobu" +
+      "f.StatusControlMessageType\022\014\n\004test\030\002 \001(\010" +
+      "\022\014\n\004read\030\003 \001(\010\022\r\n\005write\030\004 \001(\010\022\021\n\texecuti" +
+      "on\030\005 \001(\010\022\022\n\nlocationID\030\006 \001(\005\022\r\n\005cause\030\007 " +
+      "\001(\t\022\013\n\003pas\030\010 \001(\005\022\016\n\006status\030\t \001(\005\022\021\n\trefu" +
+      "seSMS\030\n \001(\010\022\022\n\nrefuseCall\030\013 \001(\010\022\014\n\004mode\030" +
+      "\014 \001(\005\022\020\n\010extunsol\030\r \001(\t\022\r\n\005state\030\016 \001(\005\022\016" +
+      "\n\006enable\030\017 \001(\010\022\014\n\004time\030\020 \001(\t\022\032\n\022datlight" +
+      "SavingTime\030\021 \001(\t\022\023\n\013insertLevel\030\022 \001(\005\022\021\n",
+      "\tpinChoice\030\023 \001(\005\022\024\n\014insertStatus\030\024 \001(\005\022\014" +
+      "\n\004type\030\025 \001(\005\022\022\n\nisResponse\030\026 \001(\010\022\023\n\013desc" +
+      "ription\030\027 \001(\t\"\373\004\n\021SIMRelatedCommand\022=\n\013m" +
+      "essageType\030\001 \001(\0162(.com.rtrk.protobuf.SIM" +
+      "RelatedMessageType\022\014\n\004test\030\002 \001(\010\022\014\n\004read" +
+      "\030\003 \001(\010\022\r\n\005write\030\004 \001(\010\022\021\n\texecution\030\005 \001(\010" +
+      "\022\013\n\003fac\030\037 \001(\t\022\014\n\004mode\030  \001(\005\022\020\n\010password\030" +
+      "! \001(\t\022\r\n\005class\030\" \001(\005\022\016\n\006status\030\006 \001(\005\022\013\n\003" +
+      "pin\030\007 \001(\t\022\016\n\006newPin\030\010 \001(\t\022\021\n\tpwdLength\030\t" +
+      " \001(\005\022\016\n\006oldPwd\030\n \001(\t\022\016\n\006newPwd\030\013 \001(\t\022\017\n\007",
+      "command\030\014 \001(\t\022\016\n\006fileID\030\r \001(\005\022\n\n\002P1\030\016 \001(" +
+      "\005\022\n\n\002P2\030\017 \001(\005\022\n\n\002P3\030\020 \001(\005\022\013\n\003SW1\030\021 \001(\005\022\013" +
+      "\n\003SW2\030\022 \001(\005\022\014\n\004data\030\023 \001(\t\022\020\n\010response\030\024 " +
+      "\001(\t\022\016\n\006length\030\025 \001(\005\022\020\n\010CCIDData\030\026 \001(\t\022\014\n" +
+      "\004GID1\030\027 \001(\005\022\014\n\004GID2\030\030 \001(\005\022\032\n\022serviceProv" +
+      "ideName\030\031 \001(\t\022\023\n\013displayMode\030\032 \001(\005\022\014\n\004ch" +
+      "v1\030\033 \001(\005\022\014\n\004chv2\030\034 \001(\005\022\014\n\004puk1\030\035 \001(\005\022\014\n\004" +
+      "puk2\030\036 \001(\005\022\022\n\nisResponse\030# \001(\010\022\023\n\013descri" +
+      "ption\030$ \001(\t\"\233\004\n\025NetworkServiceCommand\022A\n" +
+      "\013messageType\030\001 \001(\0162,.com.rtrk.protobuf.N",
+      "etworkServiceMessageType\022\014\n\004test\030\002 \001(\010\022\014" +
+      "\n\004read\030\003 \001(\010\022\r\n\005writw\030\004 \001(\010\022\021\n\texecution" +
+      "\030\005 \001(\010\022\016\n\006status\030\006 \001(\005\022\020\n\010operator\030\007 \001(\005" +
+      "\022\014\n\004mode\030\010 \001(\005\022\016\n\006format\030\t \001(\005\022\t\n\001n\030\n \001(" +
+      "\005\022\030\n\020locationAreaCode\030\013 \001(\t\022\016\n\006cellID\030\014 " +
+      "\001(\t\022\014\n\004rssi\030\r \001(\005\022\013\n\003ber\030\016 \001(\005\022\r\n\005index\030" +
+      "\017 \001(\005\022\020\n\010numericn\030\020 \001(\t\022\016\n\006alphan\030\021 \001(\t\022" +
+      "\016\n\006opBand\030\022 \001(\t\022\014\n\004dump\030\023 \001(\005\022\014\n\004band\030\024 " +
+      "\001(\005\022\021\n\tfrequency\030\025 \001(\005\022\026\n\016signalStrength" +
+      "\030\026 \001(\005\022\020\n\010band1900\030\027 \001(\005\022\016\n\006arfcn1\030\030 \001(\005",
+      "\022\016\n\006arfcn2\030\031 \001(\005\022\016\n\006arfcn3\030\032 \001(\005\022\022\n\nisRe" +
+      "sponse\030\033 \001(\010\022\023\n\013description\030\034 \001(\t\"\257\004\n\022Ca" +
+      "llRelatedCommand\022>\n\013messageType\030\001 \001(\0162)." +
+      "com.rtrk.protobuf.CallRelatedMessageType" +
+      "\022\014\n\004test\030\002 \001(\010\022\014\n\004read\030\003 \001(\010\022\r\n\005write\030\004 " +
+      "\001(\010\022\021\n\texecution\030\005 \001(\010\022\016\n\006number\030\027 \001(\t\022\023" +
+      "\n\013GSMModifier\030\006 \001(\t\022\036\n\026interworkinWindow" +
+      "sSize\030\007 \001(\005\022\030\n\020mobileWindowSize\030\010 \001(\005\022\032\n" +
+      "\022acknowledmentTimer\030\t \001(\005\022\037\n\027retransimis" +
+      "sionAttempts\030\n \001(\005\022\022\n\nRPLVersion\030\013 \001(\005\022\032",
+      "\n\022resequencingPeriod\030\014 \001(\005\022\t\n\001n\030\r \001(\005\022\014\n" +
+      "\004type\030\016 \001(\005\022\r\n\005index\030\017 \001(\005\022\013\n\003dir\030\020 \001(\005\022" +
+      "\014\n\004stat\030\021 \001(\005\022\014\n\004mode\030\022 \001(\005\022\022\n\nmultipart" +
+      "y\030\023 \001(\005\022\025\n\rspeechChannel\030\024 \001(\005\022\022\n\ndisabl" +
+      "eATH\030\025 \001(\010\022\026\n\016setUpVoiceCall\030\026 \001(\010\022\022\n\nis" +
+      "Response\030\030 \001(\010\022\023\n\013description\030\031 \001(\t\"\330\007\n\n" +
+      "SMSCommand\0227\n\014messsageType\030\001 \001(\0162!.com.r" +
+      "trk.protobuf.SMSMessageType\022\014\n\004test\030\002 \001(" +
+      "\010\022\014\n\004read\030\003 \001(\010\022\r\n\005write\030\004 \001(\010\022\021\n\texecut" +
+      "ion\030\005 \001(\010\022\017\n\007service\030- \001(\005\022\037\n\027mobileTerm",
+      "inatedMessage\030\006 \001(\005\022\035\n\025mobileOrientedMes" +
+      "sage\030\007 \001(\005\022\034\n\024broadcastTypeMessage\030\010 \001(\005" +
+      "\022\014\n\004mode\030\t \001(\005\022\021\n\tSCAddress\030\n \001(\t\022\023\n\013toS" +
+      "CAddress\030\013 \001(\005\022\014\n\004mem1\030\014 \001(\t\022\014\n\004mem2\030\r \001" +
+      "(\t\022\014\n\004mem3\030\016 \001(\t\022\r\n\005index\030\017 \001(\005\022\017\n\007delfl" +
+      "ag\030\020 \001(\005\022\r\n\005alpha\030\021 \001(\t\022\032\n\022destinationAd" +
+      "dress\030\022 \001(\t\022\014\n\004data\030\023 \001(\014\022\016\n\006length\030\024 \001(" +
+      "\005\022\032\n\022originatingAddress\030\025 \001(\t\022\013\n\003pdu\030\026 \001" +
+      "(\005\022\036\n\026serviceCenterTimeStamp\030\027 \001(\t\022\034\n\024TP" +
+      "DestinationAddress\030\030 \001(\005\022\034\n\024TPOriginatin",
+      "gAddress\030\031 \001(\005\022\n\n\002fo\030\032 \001(\005\022\031\n\021messageIde" +
+      "ntifier\030\033 \001(\005\022\032\n\022protocolIdentifier\030\034 \001(" +
+      "\005\022\014\n\004stat\030\035 \001(\t\022\026\n\016validityPeriod\030\036 \001(\005\022" +
+      "\030\n\020messageReference\030\037 \001(\005\022\016\n\006ackpdu\030  \001(" +
+      "\005\022\023\n\013commandType\030! \001(\005\022\025\n\rmessageNumber\030" +
+      "\" \001(\005\022\n\n\002ds\030# \001(\005\022\016\n\006buffer\030$ \001(\005\022\017\n\007pro" +
+      "file\030% \001(\005\022\032\n\022messageIdentifiers\030& \001(\t\022\014" +
+      "\n\004dcss\030\' \001(\t\022\014\n\004show\030( \001(\005\022\027\n\017dataCodinS" +
+      "cheme\030) \001(\005\022\014\n\004type\030* \001(\t\022\016\n\006status\030+ \001(" +
+      "\005\022\022\n\nfirstOctet\030, \001(\005\022\022\n\nisResponse\030. \001(",
+      "\010\022\023\n\013description\030/ \001(\t\"\207\003\n\020PhonebookComm" +
+      "and\022<\n\013messageType\030\001 \001(\0162\'.com.rtrk.prot" +
+      "obuf.PhonebookMessageType\022\014\n\004test\030\002 \001(\010\022" +
+      "\014\n\004read\030\003 \001(\010\022\r\n\005write\030\004 \001(\010\022\021\n\texecutio" +
+      "n\030\005 \001(\010\022\017\n\007storage\030\022 \001(\t\022\017\n\007nlength\030\006 \001(" +
+      "\005\022\017\n\007tlength\030\007 \001(\005\022\r\n\005index\030\010 \001(\005\022\016\n\006num" +
+      "ber\030\t \001(\t\022\014\n\004type\030\n \001(\005\022\014\n\004text\030\013 \001(\t\022\016\n" +
+      "\006index1\030\014 \001(\005\022\016\n\006index2\030\r \001(\005\022\020\n\010findTex" +
+      "t\030\016 \001(\t\022\016\n\006alphax\030\017 \001(\t\022\017\n\007numberx\030\020 \001(\t" +
+      "\022\r\n\005typex\030\021 \001(\005\022\022\n\nisResponse\030\023 \001(\010\022\023\n\013d",
+      "escription\030\024 \001(\t\"\311\003\n\013GPRSCommand\0227\n\013mess" +
+      "ageType\030\001 \001(\0162\".com.rtrk.protobuf.GPRSMe" +
+      "ssageType\022\014\n\004test\030\002 \001(\010\022\014\n\004read\030\003 \001(\010\022\r\n" +
+      "\005write\030\004 \001(\010\022\021\n\texecution\030\005 \001(\010\022\r\n\005state" +
+      "\030\032 \001(\005\022\013\n\003cid\030\006 \001(\005\022\017\n\007PDPType\030\007 \001(\t\022\013\n\003" +
+      "APN\030\010 \001(\t\022\022\n\nPDPAddress\030\t \001(\t\022\r\n\005dComp\030\n" +
+      " \001(\005\022\r\n\005hComp\030\013 \001(\005\022\022\n\nprecedence\030\014 \001(\005\022" +
+      "\r\n\005delay\030\r \001(\005\022\023\n\013reliability\030\016 \001(\005\022\014\n\004p" +
+      "eek\030\017 \001(\005\022\014\n\004mean\030\020 \001(\005\022\013\n\003L2P\030\021 \001(\t\022\r\n\005" +
+      "class\030\022 \001(\t\022\014\n\004mode\030\023 \001(\005\022\t\n\001n\030\024 \001(\005\022\014\n\004",
+      "stat\030\025 \001(\005\022\013\n\003lac\030\026 \001(\t\022\n\n\002ci\030\027 \001(\t\022\017\n\007s" +
+      "ervice\030\030 \001(\005\022\026\n\016multislotClass\030\031 \001(\005\"\232\007\n" +
+      "\014TCPIPCommand\0228\n\013messageType\030\001 \001(\0162#.com" +
+      ".rtrk.protobuf.TCPIPMessageType\022\014\n\004test\030" +
+      "\002 \001(\010\022\014\n\004read\030\003 \001(\010\022\r\n\005write\030\004 \001(\010\022\021\n\tex" +
+      "ecution\030\005 \001(\010\022\r\n\005index\0306 \001(\005\022\014\n\004mode\030\006 \001" +
+      "(\t\022\017\n\007modeInt\030\007 \001(\005\022\014\n\004port\030\010 \001(\005\022\022\n\ndom" +
+      "ainName\030\t \001(\t\022\016\n\006length\030\n \001(\005\022\013\n\003APN\030\013 \001" +
+      "(\t\022\020\n\010username\030\014 \001(\t\022\020\n\010password\030\r \001(\t\022\014" +
+      "\n\004rate\030\016 \001(\005\022\r\n\005state\030\017 \001(\t\022\023\n\013socketSta",
+      "te\030\020 \001(\t\022\023\n\013serverState\030\021 \001(\t\022\022\n\nprimary" +
+      "DNS\030\022 \001(\t\022\023\n\013seondaryDNS\030\023 \001(\t\022\r\n\005error\030" +
+      "\024 \001(\005\022\014\n\004time\030\025 \001(\003\022\022\n\nsendPrompt\030\026 \001(\005\022" +
+      "\013\n\003num\030\027 \001(\005\022\014\n\004type\030\030 \001(\005\022\013\n\003max\030\031 \001(\003\022" +
+      "\022\n\ndialNumber\030\032 \001(\t\022\022\n\nconnection\030\033 \001(\005\022" +
+      "\025\n\rnumberOfRetry\030\034 \001(\005\022\020\n\010waitTime\030\035 \001(\005" +
+      "\022\020\n\010sendSize\030\036 \001(\005\022\016\n\006escape\030\037 \001(\010\022\017\n\007ch" +
+      "annel\030  \001(\005\022\t\n\001n\030! \001(\005\022\014\n\004sent\030\" \001(\005\022\r\n\005" +
+      "acked\030# \001(\005\022\016\n\006nAcked\030$ \001(\005\022\t\n\001m\030% \001(\005\022\n" +
+      "\n\002id\030& \001(\005\022\n\n\002sc\030\' \001(\005\022\013\n\003sid\030( \001(\005\022\016\n\006n",
+      "umber\030) \001(\005\022\014\n\004host\030* \001(\t\022\017\n\007timeout\030+ \001" +
+      "(\005\022\022\n\npingNumber\030, \001(\005\022\016\n\006result\030- \001(\005\022\r" +
+      "\n\005bytes\030. \001(\005\022\013\n\003ttl\030/ \001(\005\022\023\n\013finalResul" +
+      "t\0300 \001(\005\022\020\n\010received\0301 \001(\005\022\014\n\004lost\0302 \001(\005\022" +
+      "\013\n\003min\0303 \001(\003\022\013\n\003avg\0304 \001(\003\022\016\n\006server\0305 \001(" +
+      "\t\"\257\003\n\033SupplementaryServiceCommand\022G\n\013mes" +
+      "sageType\030\001 \001(\01622.com.rtrk.protobuf.Suppl" +
+      "ementaryServiceMessageType\022\014\n\004test\030\002 \001(\010" +
+      "\022\014\n\004read\030\003 \001(\010\022\r\n\005write\030\004 \001(\010\022\021\n\texecuti" +
+      "on\030\005 \001(\010\022\r\n\005reads\030\026 \001(\005\022\014\n\004mode\030\006 \001(\005\022\016\n",
+      "\006number\030\007 \001(\t\022\014\n\004type\030\010 \001(\005\022\022\n\nsubaddres" +
+      "s\030\t \001(\t\022\016\n\006satype\030\n \001(\005\022\r\n\005class\030\013 \001(\005\022\014" +
+      "\n\004time\030\014 \001(\005\022\016\n\006status\030\r \001(\005\022\t\n\001n\030\016 \001(\005\022" +
+      "\r\n\005index\030\017 \001(\005\022\014\n\004info\030\020 \001(\005\022\t\n\001m\030\021 \001(\005\022" +
+      "\022\n\nUSSDString\030\022 \001(\t\022\030\n\020dataCodingScheme\030" +
+      "\023 \001(\005\022\r\n\005code1\030\024 \001(\005\022\r\n\005code2\030\025 \001(\005\"\253\005\n\014" +
+      "AudioCommand\0228\n\013messageType\030\001 \001(\0162#.com." +
+      "rtrk.protobuf.AudioMessageType\022\014\n\004test\030\002" +
+      " \001(\010\022\014\n\004read\030\003 \001(\010\022\r\n\005write\030\004 \001(\010\022\021\n\texe" +
+      "cution\030\005 \001(\010\022\r\n\005value\030! \001(\005\022\030\n\020internalD",
+      "uration\030\006 \001(\005\022\020\n\010duration\030\007 \001(\003\022\022\n\nDTMFS" +
+      "tring\030\010 \001(\t\022\014\n\004mode\030\t \001(\005\022\r\n\005level\030\n \001(\005" +
+      "\022\014\n\004mute\030\013 \001(\010\022\021\n\tgainLevel\030\014 \001(\005\022\017\n\007cha" +
+      "nnel\030\r \001(\005\022\r\n\005state\030\016 \001(\005\022\014\n\004type\030\017 \001(\005\022" +
+      "\021\n\tfrequency\030\020 \001(\005\022\020\n\010periodON\030\021 \001(\005\022\021\n\t" +
+      "periodOFF\030\022 \001(\005\022\022\n\noutputPath\030\023 \001(\005\022\027\n\017o" +
+      "perateFunction\030\024 \001(\005\022\026\n\016functionStatus\030\025" +
+      " \001(\005\022\017\n\007operate\030\026 \001(\005\022\023\n\013prefixPause\030\027 \001" +
+      "(\005\022\024\n\014lowThreshold\030\030 \001(\005\022\025\n\rhighThreshol" +
+      "d\030\031 \001(\005\022\020\n\010dtmfCode\030\032 \001(\t\022\027\n\017persistence",
+      "Time\030\033 \001(\005\022\024\n\014uplinkVolume\030\034 \001(\005\022\026\n\016down" +
+      "linkVolume\030\035 \001(\005\022\027\n\017continuanceTime\030\036 \001(" +
+      "\003\022\020\n\010muteTime\030\037 \001(\003\022\024\n\014audioChannel\030  \001(" +
+      "\005\"\346\002\n\026HardwareRelatedCommand\022B\n\013messageT" +
+      "ype\030\001 \001(\0162-.com.rtrk.protobuf.HardwareRe" +
       "latedMessageType\022\014\n\004test\030\002 \001(\010\022\014\n\004read\030\003" +
-      " \001(\010\022\r\n\005write\030\004 \001(\010\022\021\n\texecution\030\005 \001(\010\022\016" +
-      "\n\006number\030\027 \001(\t\022\023\n\013GSMModifier\030\006 \001(\t\022\036\n\026i" +
-      "nterworkinWindowsSize\030\007 \001(\005\022\030\n\020mobileWin",
-      "dowSize\030\010 \001(\005\022\032\n\022acknowledmentTimer\030\t \001(" +
-      "\005\022\037\n\027retransimissionAttempts\030\n \001(\005\022\022\n\nRP" +
-      "LVersion\030\013 \001(\005\022\032\n\022resequencingPeriod\030\014 \001" +
-      "(\005\022\t\n\001n\030\r \001(\005\022\014\n\004type\030\016 \001(\005\022\r\n\005index\030\017 \001" +
-      "(\005\022\013\n\003dir\030\020 \001(\005\022\014\n\004stat\030\021 \001(\005\022\014\n\004mode\030\022 " +
-      "\001(\005\022\022\n\nmultiparty\030\023 \001(\005\022\025\n\rspeechChannel" +
-      "\030\024 \001(\005\022\022\n\ndisableATH\030\025 \001(\010\022\026\n\016setUpVoice" +
-      "Call\030\026 \001(\010\"\257\007\n\nSMSCommand\0227\n\014messsageTyp" +
-      "e\030\001 \001(\0162!.com.rtrk.protobuf.SMSMessageTy" +
-      "pe\022\014\n\004test\030\002 \001(\010\022\014\n\004read\030\003 \001(\010\022\r\n\005write\030",
-      "\004 \001(\010\022\021\n\texecution\030\005 \001(\010\022\017\n\007service\030- \001(" +
-      "\005\022\037\n\027mobileTerminatedMessage\030\006 \001(\005\022\035\n\025mo" +
-      "bileOrientedMessage\030\007 \001(\005\022\034\n\024broadcastTy" +
-      "peMessage\030\010 \001(\005\022\014\n\004mode\030\t \001(\005\022\021\n\tSCAddre" +
-      "ss\030\n \001(\t\022\023\n\013toSCAddress\030\013 \001(\005\022\014\n\004mem1\030\014 " +
-      "\001(\t\022\014\n\004mem2\030\r \001(\t\022\014\n\004mem3\030\016 \001(\t\022\r\n\005index" +
-      "\030\017 \001(\005\022\017\n\007delflag\030\020 \001(\005\022\r\n\005alpha\030\021 \001(\t\022\032" +
-      "\n\022destinationAddress\030\022 \001(\t\022\014\n\004data\030\023 \001(\014" +
-      "\022\016\n\006length\030\024 \001(\005\022\032\n\022originatingAddress\030\025" +
-      " \001(\t\022\013\n\003pdu\030\026 \001(\005\022\036\n\026serviceCenterTimeSt",
-      "amp\030\027 \001(\t\022\034\n\024TPDestinationAddress\030\030 \001(\005\022" +
-      "\034\n\024TPOriginatingAddress\030\031 \001(\005\022\n\n\002fo\030\032 \001(" +
-      "\005\022\031\n\021messageIdentifier\030\033 \001(\005\022\032\n\022protocol" +
-      "Identifier\030\034 \001(\005\022\014\n\004stat\030\035 \001(\t\022\026\n\016validi" +
-      "tyPeriod\030\036 \001(\005\022\030\n\020messageReference\030\037 \001(\005" +
-      "\022\016\n\006ackpdu\030  \001(\005\022\023\n\013commandType\030! \001(\005\022\025\n" +
-      "\rmessageNumber\030\" \001(\005\022\n\n\002ds\030# \001(\005\022\016\n\006buff" +
-      "er\030$ \001(\005\022\017\n\007profile\030% \001(\005\022\032\n\022messageIden" +
-      "tifiers\030& \001(\t\022\014\n\004dcss\030\' \001(\t\022\014\n\004show\030( \001(" +
-      "\005\022\027\n\017dataCodinScheme\030) \001(\005\022\014\n\004type\030* \001(\t",
-      "\022\016\n\006status\030+ \001(\005\022\022\n\nfirstOctet\030, \001(\005\"\336\002\n" +
-      "\020PhonebookCommand\022<\n\013messageType\030\001 \001(\0162\'" +
-      ".com.rtrk.protobuf.PhonebookMessageType\022" +
+      " \001(\010\022\r\n\005write\030\004 \001(\010\022\021\n\texecution\030\005 \001(\010\022\014" +
+      "\n\004time\030\022 \001(\t\022\r\n\005state\030\006 \001(\005\022\016\n\006repeat\030\007 " +
+      "\001(\005\022\r\n\005power\030\010 \001(\005\022\013\n\003bcs\030\t \001(\005\022\013\n\003bcl\030\n" +
+      " \001(\005\022\017\n\007voltage\030\013 \001(\005\022\016\n\006status\030\014 \001(\005\022\r\n",
+      "\005value\030\r \001(\005\022\t\n\001n\030\016 \001(\005\022\017\n\007ledMode\030\017 \001(\005" +
+      "\022\025\n\rthresholdType\030\020 \001(\005\022\021\n\tthreshold\030\021 \001" +
+      "(\005\"\305\001\n\rOthersCommand\0229\n\013messageType\030\001 \001(" +
+      "\0162$.com.rtrk.protobuf.OthersMessageType\022" +
       "\014\n\004test\030\002 \001(\010\022\014\n\004read\030\003 \001(\010\022\r\n\005write\030\004 \001" +
-      "(\010\022\021\n\texecution\030\005 \001(\010\022\017\n\007storage\030\022 \001(\t\022\017" +
-      "\n\007nlength\030\006 \001(\005\022\017\n\007tlength\030\007 \001(\005\022\r\n\005inde" +
-      "x\030\010 \001(\005\022\016\n\006number\030\t \001(\t\022\014\n\004type\030\n \001(\005\022\014\n" +
-      "\004text\030\013 \001(\t\022\016\n\006index1\030\014 \001(\005\022\016\n\006index2\030\r " +
-      "\001(\005\022\020\n\010findText\030\016 \001(\t\022\016\n\006alphax\030\017 \001(\t\022\017\n" +
-      "\007numberx\030\020 \001(\t\022\r\n\005typex\030\021 \001(\005\"\311\003\n\013GPRSCo",
-      "mmand\0227\n\013messageType\030\001 \001(\0162\".com.rtrk.pr" +
-      "otobuf.GPRSMessageType\022\014\n\004test\030\002 \001(\010\022\014\n\004" +
-      "read\030\003 \001(\010\022\r\n\005write\030\004 \001(\010\022\021\n\texecution\030\005" +
-      " \001(\010\022\r\n\005state\030\032 \001(\005\022\013\n\003cid\030\006 \001(\005\022\017\n\007PDPT" +
-      "ype\030\007 \001(\t\022\013\n\003APN\030\010 \001(\t\022\022\n\nPDPAddress\030\t \001" +
-      "(\t\022\r\n\005dComp\030\n \001(\005\022\r\n\005hComp\030\013 \001(\005\022\022\n\nprec" +
-      "edence\030\014 \001(\005\022\r\n\005delay\030\r \001(\005\022\023\n\013reliabili" +
-      "ty\030\016 \001(\005\022\014\n\004peek\030\017 \001(\005\022\014\n\004mean\030\020 \001(\005\022\013\n\003" +
-      "L2P\030\021 \001(\t\022\r\n\005class\030\022 \001(\t\022\014\n\004mode\030\023 \001(\005\022\t" +
-      "\n\001n\030\024 \001(\005\022\014\n\004stat\030\025 \001(\005\022\013\n\003lac\030\026 \001(\t\022\n\n\002",
-      "ci\030\027 \001(\t\022\017\n\007service\030\030 \001(\005\022\026\n\016multislotCl" +
-      "ass\030\031 \001(\005\"\232\007\n\014TCPIPCommand\0228\n\013messageTyp" +
-      "e\030\001 \001(\0162#.com.rtrk.protobuf.TCPIPMessage" +
-      "Type\022\014\n\004test\030\002 \001(\010\022\014\n\004read\030\003 \001(\010\022\r\n\005writ" +
-      "e\030\004 \001(\010\022\021\n\texecution\030\005 \001(\010\022\r\n\005index\0306 \001(" +
-      "\005\022\014\n\004mode\030\006 \001(\t\022\017\n\007modeInt\030\007 \001(\005\022\014\n\004port" +
-      "\030\010 \001(\005\022\022\n\ndomainName\030\t \001(\t\022\016\n\006length\030\n \001" +
-      "(\005\022\013\n\003APN\030\013 \001(\t\022\020\n\010username\030\014 \001(\t\022\020\n\010pas" +
-      "sword\030\r \001(\t\022\014\n\004rate\030\016 \001(\005\022\r\n\005state\030\017 \001(\t" +
-      "\022\023\n\013socketState\030\020 \001(\t\022\023\n\013serverState\030\021 \001",
-      "(\t\022\022\n\nprimaryDNS\030\022 \001(\t\022\023\n\013seondaryDNS\030\023 " +
-      "\001(\t\022\r\n\005error\030\024 \001(\005\022\014\n\004time\030\025 \001(\003\022\022\n\nsend" +
-      "Prompt\030\026 \001(\005\022\013\n\003num\030\027 \001(\005\022\014\n\004type\030\030 \001(\005\022" +
-      "\013\n\003max\030\031 \001(\003\022\022\n\ndialNumber\030\032 \001(\t\022\022\n\nconn" +
-      "ection\030\033 \001(\005\022\025\n\rnumberOfRetry\030\034 \001(\005\022\020\n\010w" +
-      "aitTime\030\035 \001(\005\022\020\n\010sendSize\030\036 \001(\005\022\016\n\006escap" +
-      "e\030\037 \001(\010\022\017\n\007channel\030  \001(\005\022\t\n\001n\030! \001(\005\022\014\n\004s" +
-      "ent\030\" \001(\005\022\r\n\005acked\030# \001(\005\022\016\n\006nAcked\030$ \001(\005" +
-      "\022\t\n\001m\030% \001(\005\022\n\n\002id\030& \001(\005\022\n\n\002sc\030\' \001(\005\022\013\n\003s" +
-      "id\030( \001(\005\022\016\n\006number\030) \001(\005\022\014\n\004host\030* \001(\t\022\017",
-      "\n\007timeout\030+ \001(\005\022\022\n\npingNumber\030, \001(\005\022\016\n\006r" +
-      "esult\030- \001(\005\022\r\n\005bytes\030. \001(\005\022\013\n\003ttl\030/ \001(\005\022" +
-      "\023\n\013finalResult\0300 \001(\005\022\020\n\010received\0301 \001(\005\022\014" +
-      "\n\004lost\0302 \001(\005\022\013\n\003min\0303 \001(\003\022\013\n\003avg\0304 \001(\003\022\016" +
-      "\n\006server\0305 \001(\t\"\257\003\n\033SupplementaryServiceC" +
-      "ommand\022G\n\013messageType\030\001 \001(\01622.com.rtrk.p" +
-      "rotobuf.SupplementaryServiceMessageType\022" +
-      "\014\n\004test\030\002 \001(\010\022\014\n\004read\030\003 \001(\010\022\r\n\005write\030\004 \001" +
-      "(\010\022\021\n\texecution\030\005 \001(\010\022\r\n\005reads\030\026 \001(\005\022\014\n\004" +
-      "mode\030\006 \001(\005\022\016\n\006number\030\007 \001(\t\022\014\n\004type\030\010 \001(\005",
-      "\022\022\n\nsubaddress\030\t \001(\t\022\016\n\006satype\030\n \001(\005\022\r\n\005" +
-      "class\030\013 \001(\005\022\014\n\004time\030\014 \001(\005\022\016\n\006status\030\r \001(" +
-      "\005\022\t\n\001n\030\016 \001(\005\022\r\n\005index\030\017 \001(\005\022\014\n\004info\030\020 \001(" +
-      "\005\022\t\n\001m\030\021 \001(\005\022\022\n\nUSSDString\030\022 \001(\t\022\030\n\020data" +
-      "CodingScheme\030\023 \001(\005\022\r\n\005code1\030\024 \001(\005\022\r\n\005cod" +
-      "e2\030\025 \001(\005\"\253\005\n\014AudioCommand\0228\n\013messageType" +
-      "\030\001 \001(\0162#.com.rtrk.protobuf.AudioMessageT" +
-      "ype\022\014\n\004test\030\002 \001(\010\022\014\n\004read\030\003 \001(\010\022\r\n\005write" +
-      "\030\004 \001(\010\022\021\n\texecution\030\005 \001(\010\022\r\n\005value\030! \001(\005" +
-      "\022\030\n\020internalDuration\030\006 \001(\005\022\020\n\010duration\030\007",
-      " \001(\003\022\022\n\nDTMFString\030\010 \001(\t\022\014\n\004mode\030\t \001(\005\022\r" +
-      "\n\005level\030\n \001(\005\022\014\n\004mute\030\013 \001(\010\022\021\n\tgainLevel" +
-      "\030\014 \001(\005\022\017\n\007channel\030\r \001(\005\022\r\n\005state\030\016 \001(\005\022\014" +
-      "\n\004type\030\017 \001(\005\022\021\n\tfrequency\030\020 \001(\005\022\020\n\010perio" +
-      "dON\030\021 \001(\005\022\021\n\tperiodOFF\030\022 \001(\005\022\022\n\noutputPa" +
-      "th\030\023 \001(\005\022\027\n\017operateFunction\030\024 \001(\005\022\026\n\016fun" +
-      "ctionStatus\030\025 \001(\005\022\017\n\007operate\030\026 \001(\005\022\023\n\013pr" +
-      "efixPause\030\027 \001(\005\022\024\n\014lowThreshold\030\030 \001(\005\022\025\n" +
-      "\rhighThreshold\030\031 \001(\005\022\020\n\010dtmfCode\030\032 \001(\t\022\027" +
-      "\n\017persistenceTime\030\033 \001(\005\022\024\n\014uplinkVolume\030",
-      "\034 \001(\005\022\026\n\016downlinkVolume\030\035 \001(\005\022\027\n\017continu" +
-      "anceTime\030\036 \001(\003\022\020\n\010muteTime\030\037 \001(\003\022\024\n\014audi" +
-      "oChannel\030  \001(\005\"\346\002\n\026HardwareRelatedComman" +
-      "d\022B\n\013messageType\030\001 \001(\0162-.com.rtrk.protob" +
-      "uf.HardwareRelatedMessageType\022\014\n\004test\030\002 " +
-      "\001(\010\022\014\n\004read\030\003 \001(\010\022\r\n\005write\030\004 \001(\010\022\021\n\texec" +
-      "ution\030\005 \001(\010\022\014\n\004time\030\022 \001(\t\022\r\n\005state\030\006 \001(\005" +
-      "\022\016\n\006repeat\030\007 \001(\005\022\r\n\005power\030\010 \001(\005\022\013\n\003bcs\030\t" +
-      " \001(\005\022\013\n\003bcl\030\n \001(\005\022\017\n\007voltage\030\013 \001(\005\022\016\n\006st" +
-      "atus\030\014 \001(\005\022\r\n\005value\030\r \001(\005\022\t\n\001n\030\016 \001(\005\022\017\n\007",
-      "ledMode\030\017 \001(\005\022\025\n\rthresholdType\030\020 \001(\005\022\021\n\t" +
-      "threshold\030\021 \001(\005\"\305\001\n\rOthersCommand\0229\n\013mes" +
-      "sageType\030\001 \001(\0162$.com.rtrk.protobuf.Other" +
-      "sMessageType\022\014\n\004test\030\002 \001(\010\022\014\n\004read\030\003 \001(\010" +
-      "\022\r\n\005write\030\004 \001(\010\022\021\n\texecution\030\005 \001(\010\022\r\n\005va" +
-      "lue\030\006 \001(\005\022\t\n\001n\030\007 \001(\005\022\020\n\010timeMode\030\010 \001(\005\022\017" +
-      "\n\007indMode\030\t \001(\005*\207\002\n\021OthersMessageType\022#\n" +
-      "\037REISSUES_THE_LAST_COMMAND_GIVEN\020\000\022\031\n\025SE" +
-      "T_COMMAND_ECHO_MODE\020\001\022*\n&SET_COMMAND_LIN" +
-      "E_TERMINATION_CHARACTER\020\002\022%\n!SET_RESPONS",
-      "E_FORMATTING_CHARACTER\020\003\022&\n\"SET_COMMAND_" +
-      "LINE_EDITING_CHARACTER\020\004\022\017\n\013SET_RI_TIME\020" +
-      "\005\022&\n\"BURST_TRANSITION_SIGNAL_INDICATION\020" +
-      "\006*\302\001\n\032HardwareRelatedMessageType\022\t\n\005CLOC" +
-      "K\020\000\022\r\n\tSET_ALARM\020\001\022\022\n\016BATTERY_CHARGE\020\002\022\014" +
-      "\n\010READ_ADC\020\003\022\030\n\024CONFIGURE_SHOW_CLOCK\020\004\022&" +
-      "\n\"CONFIGURE_THE_NETWORK_LED_PATTERNS\020\005\022&" +
-      "\n\"CONFIGURE_THE_THRESHOLD_OF_VOLTAGE\020\006*\231" +
-      "\004\n\020AudioMessageType\022 \n\034SET_MONITOR_SPEAK" +
-      "ER_LOUDNESS\020\000\022\034\n\030SET_MONITOR_SPEAKER_MOD",
-      "E\020\001\022\021\n\rTONE_DURATION\020\002\022\034\n\030DTMF_AND_TONE_" +
-      "GENERATION\020\003\022\024\n\020ALERT_SOUND_MODE\020\004\022\026\n\022RI" +
-      "NGER_SOUND_LEVEL\020\005\022\035\n\031LOUD_SPEAKER_VOLUM" +
-      "E_LEVEL\020\006\022\020\n\014MUTE_CONTROL\020\007\022#\n\037CHANGE_TH" +
-      "E_SIDE_TONE_GAIN_LEVEL\020\010\022$\n CHANGE_THE_M" +
-      "ICROPHONE_GAIN_LEVEL\020\t\022\035\n\031GENERATE_LOCAL" +
-      "_DTMF_TONES\020\n\022\033\n\027SWAP_THE_AUDIO_CHANNELS" +
-      "\020\013\022 \n\034AUDIO_CHANNEL_LOOP_BACK_TEST\020\014\022 \n\034" +
-      "GENERATE_LOCAL_SPECIFIC_TONE\020\r\022\030\n\024SET_DT" +
-      "MF_OUTPUT_PATH\020\016\022\033\n\027SET_TONE_DETECTION_M",
-      "ODE\020\017\022\017\n\013DETECT_DTMF\020\020\022\"\n\036PLAY_DTMF_TONE" +
-      "_DURING_THE_CALL\020\021*\366\003\n\037SupplementaryServ" +
-      "iceMessageType\0221\n-CALL_FORWARDING_NUMBER" +
-      "_AND_CONDITIONS_CONTROL\020\000\022\035\n\031CLOSED_USER" +
-      "_GROUP_CONTROL\020\001\022\030\n\024CALL_WAITING_CONTROL" +
-      "\020\002\022\034\n\030CALL_HOLD_AND_MULTIPARTY\020\003\022,\n(CALL" +
-      "ING_LINE_IDENTIFICATION_PRESENTATION\020\004\022C" +
-      "\n?CONTROL_WHETHER_OR_NOT_TO_SHOW_THE_NAM" +
-      "E_OF_INCOMING_CALL_NUMBER\020\005\022.\n*CONNECTED" +
-      "_LINE_IDENTIFICATION_PRESENTATION\020\006\022#\n\037S",
-      "HOW_ALPHA_FIELD_IN_COLP_STRING\020\007\022+\n\'UNST" +
-      "RUCTURED_SUPPLEMENTARY_SERVICE_DATA\020\010\022\'\n" +
-      "#SUPPLEMENTARY_SERVICES_NOTIFICATION\020\t\022+" +
-      "\n\'CALLING_LINE_IDENTIFICATION_RESTRICTIO" +
-      "N\020\n*\323\n\n\020TCPIPMessageType\022 \n\034SET_UP_TCP_O" +
-      "R_UDP_CONNECTION\020\000\022+\n\'SEND_DATA_THROUGH_" +
-      "TCP_OR_UDP_CONNECTION\020\001\022\037\n\033CLOSE_TCP_OR_" +
-      "UDP_CONNECTION\020\002\022#\n\037DEACTIVATE_GPRS_CSD_" +
-      "PDP_CONTEXT\020\003\022\022\n\016SET_LOCAL_PORT\020\004\022.\n*STA" +
-      "RT_TCPIP_TASK_APN_USERNAME_AND_PASSWORD\020",
-      "\005\022\033\n\027ACTIVE_GPRS_CSD_CONTEXT\020\006\022\030\n\024GET_LO" +
-      "CAL_IP_ADDRESS\020\007\022#\n\037QUERY_CURRENT_CONNEC" +
-      "TION_STATUS\020\010\022-\n)QUERY_CONNECTION_STATUS" +
-      "_OF_CURRENT_ACCESS\020\t\022\037\n\033QUERY_CURRENT_SE" +
-      "RVER_STATUS\020\n\022 \n\034CONFIGURE_DOMAIN_NAME_S" +
-      "ERVER\020\013\022-\n)QUERY_THE_IP_ADDRESS_OF_GIVEN" +
-      "_DOMAIN_NAME\020\014\0221\n-CONNECT_WITH_IP_ADDRES" +
-      "S_OR_DOMAIN_NAME_SERVER\020\r\022(\n$ADD_AN_IP_H" +
-      "EADER_WHEN_RECEIVING_DATE\020\016\022\033\n\027SET_AUDIO" +
-      "_SENDING_TIMER\020\017\022\037\n\033SET_PROMT_WHEN_SENDI",
-      "NG_DATA\020\020\022\027\n\023CONFIGURE_AS_SERVER\020\021\022$\n SE" +
-      "LECT_CSD_OR_GPRS_AS_THE_BEARER\020\022\022\025\n\021CHOO" +
-      "SE_CONNECTION\020\023\0227\n3SET_WHETHER_OR_NOT_TO" +
-      "_DISPLAY_THE_ADDRESS_OF_SENDER\020\024\022\"\n\036SAVE" +
-      "_TCPIP_APPLICATION_CONTEXT\020\025\022\036\n\032SELECT_T" +
-      "CPIP_TRANSFER_MODE\020\026\022\'\n#CONFIGURE_TRANSP" +
-      "ARENT_TRANSFER_MODE\020\027\0224\n0CONTROL_WHETHER" +
-      "_OR_NOT_TO_SHOW_THE_PROTOCOL_TYPE\020\030\022;\n7C" +
-      "ONTROL_WHETHER_OR_NOT_TO_ENABLE_MULTIPLE" +
-      "_TCPIP_SESSION\020\031\0226\n2CONTROL_WHETHER_OR_N",
-      "OT_TO_DISPLAY_LOCAL_IP_ADDRESS\020\032\022*\n&SELE" +
-      "CT_A_CONTEXT_AS_FOREGROUND_CONTEXT\020\033\022*\n&" +
-      "QUETY_THE_DATA_INFORMATION_FOR_SENDING\020\034" +
-      "\0220\n,SET_THE_METHOD_TO_HANDLE_RECEIVED_TC" +
-      "PIP_DATA\020\035\022$\n RETRIEVE_THE_RECEIVED_TCPI" +
-      "P_DATA\020\036\0225\n1CONTRO_WHETHER_OR_NOT_TO_ECH" +
-      "O_THE_DATA_FOR_QISEND\020\037\022\030\n\024PING_A_REMOTE" +
-      "_SERVER\020 \022&\n\"SYNCHRONIZE_THE_LOCAL_TIME_" +
-      "VIA_NTP\020!*\225\003\n\017GPRSMessageType\022 \n\034ATTACH_" +
-      "DEATTACH_GPRS_SERVICE\020\000\022\026\n\022DEFINE_PDP_CO",
-      "NTEXT\020\001\022\031\n\025QOS_PROFILE_REQUESTED\020\002\022\"\n\036QO" +
-      "S_PROFILE_MINIMUM_ACCEPTABLE\020\003\022&\n\"PDP_CO" +
-      "NTEXT_ACTIVATE_OR_DEACTIVATE\020\004\022\024\n\020ENTER_" +
-      "DATA_STATE\020\005\022\024\n\020SHOW_PDP_ADDRESS\020\006\022\035\n\031GP" +
-      "RS_MOBILE_STATION_CLASS\020\007\022-\n)CONTROL_UNS" +
-      "OLICITED_GPRS_EVETNT_REPORTING\020\010\022\037\n\033NETW" +
-      "ORK_REGISTRATION_STATUS\020\t\022%\n!SELECT_SERV" +
-      "ICE_FOR_MO_SMS_MESSAGE\020\n\022\037\n\033CHANGE_GPRS_" +
-      "MULTISLOT_CLASS\020\013*\255\001\n\024PhonebookMessageTy" +
-      "pe\022#\n\037SELECT_PHONEBOOK_MEMORY_STORAGE\020\000\022",
-      "\031\n\025WRITE_PHONEBOOK_ENTRY\020\001\022\"\n\036READ_CURRE" +
-      "NT_PHONEBOOK_ENTRIES\020\002\022\032\n\026FIND_PHONEBOOK" +
-      "_ENTRIES\020\003\022\025\n\021SUBSCRIBER_NUMBER\020\004*\377\004\n\016SM" +
-      "SMessageType\022\032\n\026SELECT_MESSAGE_SERVICE\020\000" +
-      "\022\035\n\031SELECT_SMS_MESSAGE_FORMAT\020\001\022\036\n\032SMS_S" +
-      "ERVICE_CENTER_ADDRESS\020\002\022!\n\035PREFERRED_SMS" +
-      "_MESSAGE_STORAGE\020\003\022\026\n\022DELETE_SMS_MESSAGE" +
-      "\020\004\022+\n\'LIST_SMS_MESSAGE_FROM_PREFERRED_ST" +
-      "ORAGE\020\005\022\024\n\020READ_SMS_MESSAGE\020\006\022\024\n\020SEND_SM" +
-      "S_MESSAGE\020\007\022\037\n\033WRITE_SMS_MESSAGE_TO_MEMO",
-      "RY\020\010\022!\n\035SEND_SMS_MESSAGE_FROM_STORAGE\020\t\022" +
-      "\024\n\020SEND_SMS_COMMAND\020\n\022\036\n\032NEW_SMS_MESSAGE" +
-      "_INDICATION\020\013\022\030\n\024RESTORE_SMS_SETTINGS\020\014\022" +
-      "\025\n\021SAVE_SMS_SETTINGS\020\r\022%\n!SELECT_CELL_BR" +
-      "OADCAST_SMS_MESSAGE\020\016\022!\n\035SHOW_SMS_TEXT_M" +
-      "ODE_PARAMETERS\020\017\022 \n\034SET_SMS_TEXT_MODE_PA" +
-      "RAMETERS\020\020\0226\n2STRORE_CLASS0_SMS_TO_SIM_W" +
-      "HEN_RECEIVING_CLASS0_SMS\020\021\022\022\n\016DELETE_ALL" +
-      "_SMS\020\022\022\033\n\027CONFIGURE_SMS_CODE_MODE\020\023*\367\006\n\026" +
-      "CallRelatedMessageType\022\033\n\027ANSWER_AN_INCO",
-      "MING_CALL\020\000\022)\n%MOBILE_ORIENTED_CALL_TO_D" +
-      "IAL_A_NUMBER\020\001\022\"\n\036DISCONNECT_EXISTING_CO" +
-      "NNECTION\020\002\022)\n%SWITCH_FROM_DATA_MODE_TO_C" +
-      "OMMAND_MODE\020\003\022)\n%SWITCH_FROM_COMMAND_MOD" +
-      "E_TO_DATA_MODE\020\004\022\030\n\024SELECT_PULSE_DIALING" +
-      "\020\005\0229\n5SET_NUMBER_OF_RINGS_BEFORE_AUTOMAT" +
-      "ICLY_ANSWERING_CALL\020\006\022\"\n\036SET_PAUSE_BEFOR" +
-      "E_BLIND_DIALING\020\007\022;\n7SET_NUMBER_OF_SECON" +
-      "DS_TO_WAIT_FOR_CONNECTION_COMPLETION\020\010\0229" +
-      "\n5SET_NUMBER_OF_SECONDS_TO_WAIT_FOR_COMM",
-      "A_DIAL_MODIFIER\020\t\022A\n=SET_DISCONNECT_DELA" +
-      "Y_AFTER_INDICATING_ABSENCE_OF_DATA_CARRI" +
-      "ER\020\n\022\027\n\023SELECT_TONE_DIALING\020\013\022\032\n\026SELECT_" +
-      "TYPE_OF_ADDRESS\020\014\022\034\n\030LIST_CURRENT_CALLS_" +
-      "OF_ME\020\r\022\035\n\031SERVICE_REPORTING_CONTROL\020\016\0229" +
-      "\n5SET_CELLULAR_RESULT_CODE_FOR_INCOMING_" +
-      "CALL_INDICATION\020\017\022(\n$SELECT_RADIO_LINK_P" +
-      "ROTOCOL_PARAMETER\020\020\022\033\n\027SINGLE_NUMBERING_" +
-      "SCHEME\020\021\022$\n CONFIGURE_ALTERNATING_MODE_C" +
-      "ALLS\020\022\022\034\n\030PREFERENCE_SPEACH_CODING\020\023\022\036\n\032",
-      "SPEECH_CHANNEL_TYPE_REPORT\020\024\022\017\n\013DISABLE_" +
-      "ATH\020\025*\265\002\n\031NetworkServiceMessageType\022\026\n\022O" +
-      "PERATOR_SELECTION\020\000\022\030\n\024NETWORK_REGISTRAT" +
-      "ION\020\001\022\031\n\025SIGNAL_QUALITY_REPORT\020\002\022\033\n\027PREF" +
-      "ERRED_OPERATOR_LIST\020\003\022\027\n\023READ_OPEARATR_N" +
-      "AMES\020\004\022%\n!GET_AND_SET_MOBILE_OPERATION_B" +
-      "AND\020\005\0225\n1NETWORK_SERVICE_SWITCH_ON_OR_OF" +
-      "F_ENGINEERING_MODE\020\006\022\037\n\033SCAN_POWER_OF_GS" +
-      "M_FREQUENCY\020\007\022\026\n\022LOCK_GSM_FREQUENCY\020\010*\347\002" +
-      "\n\025SIMRelatedMessageType\022\020\n\014REQUEST_IMSI\020",
-      "\000\022\021\n\rFACILITY_LOCK\020\001\022\r\n\tENTER_PIN\020\002\022\023\n\017C" +
-      "HANGE_PASSWORD\020\003\022\031\n\025RESTRICTED_SIM_ACCES" +
-      "S\020\004\022\026\n\022GENERIC_SIM_ACCESS\020\005\022\034\n\030CHANGE_PS" +
-      "_SUPER_PASSWORD\020\006\022\r\n\tSHOW_CCID\020\007\022\023\n\017SHOW" +
-      "_CCID_QCCID\020\010\022!\n\035GET_SIM_CARD_GROUP_IDEN" +
-      "TIFIER\020\t\022%\n!SELECT_SIM_CARD_OPERATING_VO" +
-      "LTAGE\020\n\022\035\n\031GET_SERVICE_PROVIDER_NAME\020\013\022\'" +
-      "\n#TIME_REMAINING_TO_INPUT_SIM_PIN_PUK\020\014*" +
-      "\265\005\n\030StatusControlMessageType\022\031\n\025EXTENDED" +
-      "_ERROR_REPORT\020\000\022$\n MOBILE_EQUIPMENT_ACTI",
-      "VITY_STATUS\020\001\022\036\n\032INDICATE_RI_WHEN_USING_" +
-      "URC\020\002\022(\n$SHOW_STATE_OF_MOBILE_ORIGINATED" +
-      "_CELL\020\003\022.\n*REFUSE_TO_RECEIVE_SMS_INCOMIN" +
-      "G_CALL_OR_NOT\020\004\022.\n*ENABLE_OR_DISABLE_INI" +
-      "TIAL_URC_PRESENTATION\020\005\0229\n5ENABLE_OR_DIS" +
-      "ABLE_PROPRIETARY_UNSOLICITED_INDICATIONS" +
-      "\020\006\022!\n\035QUERY_STATE_OF_INITIALIZATION\020\007\022\034\n" +
-      "\030QUERY_GSM_NETWORK_STATUS\020\010\022 \n\034NETWORK_T" +
-      "IME_SYNCHRONIZATION\020\t\022+\n\'OBTAIN_LATEST_N" +
-      "ETWORK_TIME_SYNCHRONIZED\020\n\0228\n4NETWORK_TI",
-      "ME_SYNCHRONIZATION_AND_UPDATE_THE_RTC_TI" +
-      "ME\020\013\022\'\n#NETWORK_TIME_SYNCHRONIZATION_REP" +
-      "ORT\020\014\022\'\n#SWITCH_ON_OR_OFF_DETECTING_SIM_" +
-      "CARD\020\r\022!\n\035SIM_INSERTED_STATUS_REPORTING\020" +
-      "\016\0224\n0CSC_CALL_OR_GPRS_PDP_CONTEXT_TERMIN" +
-      "AL_INDICATION\020\017*\335\002\n!SerialInterfaceContr" +
-      "olMessageType\022\031\n\025SET_DCD_FUNCTION_MODE\020\000" +
-      "\022\031\n\025SET_DTR_FUNCTION_MODE\020\001\022\'\n#SET_TE_TA" +
-      "_CONTROL_CHARACTER_FRAMING\020\002\022%\n!SET_TE_T" +
-      "A_LOCAL_DATA_FLOW_CONTROL\020\003\022,\n(SET_TE_TA",
-      "_LOCAL_DATA_RATE_REPORTING_MODE\020\004\022\036\n\032SET" +
-      "_TE_TA_FIXED_LOCAL_RATE\020\005\022\027\n\023MULTIPLEXER" +
-      "_CONTROL\020\006\022 \n\034CONFIGURE_DUAL_UART_FUNCTI" +
-      "ON\020\007\022)\n%CONFIGURE_PARAMETERS_OF_THE_DUAL" +
-      "_UART\020\010*\376\006\n\023GeneralMesssageType\022.\n*DISPL" +
-      "AY_PRODUCT_IDENTIFICATION_INFORMATION\020\000\022" +
-      "\'\n#REQUEST_MANUFACTURER_IDENTIFICATION\020\001" +
-      "\022#\n\037REQUEST_TA_MODEL_IDENTIFICATION\020\002\022&\n" +
-      "\"REQUEST_TA_REVISION_IDENTIFICATION\020\003\022(\n" +
-      "$REQUEST_GLOBAL_OBJECT_IDENTIFICATION\020\004\022",
-      ",\n(REQUEST_MANUFACTURER_IDENTIFICATION_C" +
-      "GMI\020\005\022 \n\034REQUEST_MODEL_IDENTIFICATION\020\006\022" +
-      "+\n\'REQUEST_TA_REVISION_IDENTIFICATION_CG" +
-      "MR\020\007\022\020\n\014REQUEST_IMEI\020\010\0220\n,REQUEST_PRODUC" +
-      "T_SERIAL_NUMBER_IDENTIFICATION\020\t\022\025\n\021REQU" +
-      "EST_IMEI_QGSN\020\n\0227\n3SET_ALL_CURRENT_PARAM" +
-      "ETERS_TO_MANUFACTURER_DEFAULTS\020\013\022!\n\035DISP" +
-      "LAY_CURRENT_CONFIGURATION\020\014\0224\n0STORE_CUR" +
-      "RENT_PARAMETERS_TO_USER_DEFINED_PROFILE\020" +
-      "\r\022%\n!SET_RESULT_CODE_PRESENTATION_CODE\020\016",
-      "\022\026\n\022TA_RESPONSE_FORMAT\020\017\022\"\n\036SET_CONNECT_" +
-      "RESULT_CODE_FORMAT\020\020\0226\n2SET_ALL_CURRENT_" +
-      "PARAMETERS_TO_USER_DEFINED_PROFILE\020\021\022\033\n\027" +
-      "SET_PHONE_FUNCTIONALITY\020\022\022\r\n\tPOWER_OFF\020\023" +
-      "\022!\n\035REPORT_MOBILE_EQUIPMENT_ERROR\020\024\022\030\n\024S" +
-      "ET_TE_CHARACTER_SET\020\025\022)\n%REQUEST_COMPLET" +
-      "E_TA_CAPABILITIES_LIST\020\026*\312\003\n\017SMTPMessage" +
-      "Type\022(\n$SET_THE_USER_NAME_FOR_AUTHENTICA" +
-      "TION\020\000\022\'\n#SET_THE_PASSWORD_FOR_AUTHENTIC" +
-      "ATION\020\001\022\'\n#SET_THE_EMAIL_ADDRESS_OF_THE_",
-      "SENDER\020\002\022\030\n\024SET_THE_SENDERS_NAME\020\003\022+\n\'SE" +
-      "T_THE_ADDRESS_AND_PORT_OD_SMTP_SERVER\020\004\022" +
-      "\034\n\030ADD_OR_DELETE_RECIPIENTS\020\005\022!\n\035EDIT_TH" +
-      "E_SUBJECT_OF_THE_EMAIL\020\006\022!\n\035EDIT_THE_CON" +
-      "TENT_OF_THE_EMAIL\020\007\022#\n\037ADD_AN_ATTACHMENT" +
-      "_FOR_THE_EMAIL\020\010\022\030\n\024DELETE_AN_ATTACHMENT" +
-      "\020\t\022)\n%CLEAR_ALL_CONFIGURATIONS_AND_CONTE" +
-      "NTS\020\n\022\026\n\022SMTP_CONFIGURATION\020\013\022\016\n\nSEND_EM" +
-      "AIL\020\014*_\n\024RecordingMessageType\022\025\n\021RECORD_" +
-      "MEDIA_FILE\020\000\022\023\n\017PLAY_MEDIA_FILE\020\001\022\033\n\027STO",
-      "P_PLAYING_MEDIA_FILE\020\002*\352\001\n\023QuecCellMessa" +
-      "geType\022\"\n\036SCAN_BASIC_STATION_INFORMATION" +
-      "\020\000\022%\n!SWITCH_ON_OR_OFF_ENGINEERING_MODE\020" +
-      "\001\022\031\n\025LOCK_THE_BASE_STATION\020\002\022\036\n\032SCAN_ARF" +
-      "CN_RECEIVING_LEVEL\020\003\022\033\n\027GET_CHANNEL_INFO" +
-      "RMATION\020\004\022\033\n\027GET_LAST_VALID_TA_VALUE\020\005\022\023" +
-      "\n\017FORBID_OPERATOR\020\006*\337\003\n\016MMSMessageType\022\033" +
-      "\n\027SET_THE_URL_OF_THE_MMSC\020\000\022\025\n\021SET_THE_M" +
-      "MS_PROXY\020\001\022-\n)SET_THE_PARAMETER_FOR_SEND" +
-      "ING_MMS_MESSAGE\020\002\022%\n!SET_CHARACTER_SETS_",
-      "AND_INPUT_MODE\020\003\022\025\n\021WRITE_MMS_MESSAGE\020\004\022" +
-      "\024\n\020SEND_MMS_MESSAGE\020\005\022#\n\037MENAGE_THE_RECE" +
-      "IVED_MMS_MESSAGE\020\006\022\035\n\031READ_RECEIVED_MMS_" +
-      "MESSAGE\020\007\022%\n!RECEIVE_MMS_MESSAGE_FROM_TH" +
-      "E_MMSC\020\010\022(\n$SET_PRIORITY_OF_MMS_MESSAGE_" +
-      "AND_CALL\020\t\022.\n*SET_DUR_ATTRIBUTE_VALUE_IN" +
-      "_THE_SMIL_SCRIPT\020\n\022\032\n\026SET_MMS_SMS_TRANSA" +
-      "CTOR\020\013\022\036\n\032ENABLE_OUTPUT_TEXT_IN_USC2\020\014\022\025" +
-      "\n\021OUTPUT_FILE_STYLE\020\r*\350\001\n\016STKMessageType" +
-      "\022\034\n\030TURN_ON_OFF_STK_FUNCTION\020\000\022\030\n\024STK_PR",
-      "OFILE_DOWNLOAD\020\001\022\030\n\024STK_ENVELOPE_COMMAND" +
-      "\020\002\022\031\n\025STK_TERMINAL_RESPONSE\020\003\022\024\n\020TRIGGER" +
-      "_STK_CALL\020\004\022\023\n\017TRIGGER_STK_SMS\020\005\022\022\n\016TRIG" +
-      "GER_STK_SS\020\006\022\024\n\020TRIGGER_STK_USSD\020\007\022\024\n\020TR" +
-      "IGGER_STK_DTMF\020\010*\356\006\n\016FTPMessageType\022/\n+O" +
-      "PEN_AN_FTP_SERVICE_TO_THE_GIVEN_FTP_SERV" +
-      "ER\020\000\022\031\n\025CLOSE_THE_FTP_SERVICE\020\001\022#\n\037UPLOA" +
-      "D_A_FILE_TO_THE_FTP_SERVER\020\002\022\'\n#DOWNLOAD" +
-      "_A_FILE_FROM_THE_FTP_SERVER\020\003\022=\n9SET_THE" +
-      "_PATH_IN_THE_FTP_SERVER_TO_UPLOAD_OR_DOW",
-      "NLOAD_FILE\020\004\0228\n4SET_THE_USER_NAME_OF_THE" +
-      "_ACCOUNT_TO_OPEN_FTP_SERVICE\020\005\0227\n3SET_TH" +
-      "E_PASSWORD_OF_THE_ACCOUNT_TO_OPEN_FTP_SE" +
-      "RVICE\020\006\0228\n4SET_SOME_CONFIGURABLE_PARAMET" +
-      "ERS_FOR_THE_FTP_SERVICE\020\007\022\037\n\033QUERY_STATU" +
-      "S_OF_FTP_SERVICE\020\010\0229\n5QUERY_THE_REAL_SIZ" +
-      "E_TRANSFERED_IN_THE_LATEST_TRANSFER\020\t\0220\n" +
-      ",RENAME_FILE_OR_FOLDER_NAME_ON_THE_FTP_S" +
-      "ERVER\020\n\0226\n2QUERY_THE_SIZE_OF_APPOINTED_F" +
-      "ILE_ON_THE_FTP_SERVER\020\013\022/\n+DELETE_THE_AP",
-      "POINTED_FILE_ON_THE_FTP_SERVER\020\014\0220\n,ESTA" +
-      "BLISH_A_NEW_FILEFOLDER_ON_THE_FTP_SERVER" +
-      "\020\r\022)\n%REMOVE_A_FILEFOLDER_ON_THE_FTP_SER" +
-      "VER\020\016\022D\n@LIST_CONTENTS_OF_DIRECTORY_OR_F" +
-      "ILE_INFORMATION_ON_THE_FTP_SERVER\020\017\022<\n8L" +
-      "IST_FILE_NAMES_IN_THE_GIVEN_DIRECTORY_ON" +
-      "_THE_FTP_SERVER\020\020*\375\002\n\017FileMessageType\022\031\n" +
-      "\025GET_STORAGE_DATE_SIZE\020\000\022\016\n\nLIST_FILES\020\001" +
-      "\022\032\n\026UPLOAD_FILE_TO_STORAGE\020\002\022\036\n\032DOWNLOAD" +
-      "_FILE_FROM_STORAGE\020\003\022\032\n\026DELETE_FILE_IN_S",
-      "TORAGE\020\004\022\r\n\tMOVE_FILE\020\005\022\r\n\tOPEN_FILE\020\006\022\r" +
-      "\n\tREAD_FILE\020\007\022\016\n\nWRITE_FILE\020\010\022\r\n\tSEEK_FI" +
-      "LE\020\t\022\016\n\nCLOSE_FILE\020\n\022\"\n\036GET_OFFSET_OF_TH" +
-      "E_FILE_POINTER\020\013\0224\n0FORCE_TO_WRITE_DATA_" +
-      "REMAINING_IN_THE_FILE_BUFFER\020\014\0221\n-TRUNCA" +
-      "TE_THE_SPECIFIED_FILE_FROM_FILE_POINTER\020" +
-      "\r*\244\001\n\017HTTPMessageType\022\027\n\023SET_HTTP_SERVER" +
-      "_URL\020\000\022\031\n\025SEND_HTTP_GET_REQUEST\020\001\022\035\n\031REA" +
-      "D_HTTP_SERVER_RESPONSE\020\002\022\032\n\026SEND_HTTP_PO" +
-      "ST_REQUEST\020\003\022\"\n\036DOWNLODA_FILE_FROM_HTTP_",
-      "SERVER\020\004*\240\037\n\005Error\022\006\n\002OK\020\000\022\020\n\014UNKNOW_ERR" +
-      "OR\020\001\022\020\n\014SERVICE_BUSY\020\003\022\034\n\030FAILED_TO_GET_" +
-      "IP_ADDRESS\020\004\022\021\n\rNETWORK_ERROR\020\005\022\026\n\022FTP_S" +
-      "ESSION_CLOSED\020\006\022\032\n\026DATA_CONNECTION_CLOSE" +
-      "D\020\007\022#\n\037GPRS_CSD_CONTEXT_IS_DEACTIVATED\020\010" +
-      "\022\013\n\007TIMEOUT\020\t\022\033\n\027INPUT_PARAMETER_ILLEGAL" +
-      "\020\n\022$\n FILE_NOT_FOUND_IN_LOCAL_POSITION\020\013" +
-      "\022(\n$FAILED_TO_GET_FILE_IN_LOCAL_POSITION" +
-      "\020\014\022\024\n\020NO_ENOUGH_MEMORY\020\r\022!\n\035FAILED_TO_SA" +
-      "VE_THE_ATTACHMENT\020\016\022 \n\034THE_INPUT_PARAMET",
-      "ER_IS_WRONG\020\017\022$\n\037FTP_SERVER_CANT_SUPPORT" +
-      "_SERVICE\020\245\003\022#\n\036FAILDE_TO_OPEN_DATA_CONNE" +
-      "CTION\020\251\003\022/\n*THE_CONNECTION_IS_CLOSED_AND" +
-      "_STOP_TRANSFER\020\252\003\022\'\n\"THE_REQUEST_FOR_FIL" +
-      "E_ISNT_OPERATED\020\302\003\022)\n$THE_FTP_SERVER_HAS" +
-      "_NOT_ENOUGH_MEMORY\020\304\003\022+\n&THE_FORMAT_OF_T" +
-      "HE_FTP_COMMAND_IS_WRONG\020\364\003\022,\n\'THE_PATTER" +
-      "N_OF_THE_FTP_COMMAND_IS_WRONG\020\365\003\0220\n+THE_" +
-      "FTP_COMMAND_ISNT_OPERATED_BY_FTP_SERVER\020" +
-      "\366\003\022\035\n\030BAD_SEQUENCE_OF_COMMANDS\020\367\003\022&\n!COM",
-      "MAND_PARAMETER_NOT_IMPLEMENTED\020\370\003\022!\n\034DOM" +
-      "AIN_DOES_NOT_ACCEPT_EMAIL\020\211\004\022\034\n\027NOT_LOGI" +
-      "N_TO_FTP_SERVER\020\222\004\022\"\n\035NEEDED_INFORMATION" +
-      "_OF_ACCOUNT\020\224\004\022\032\n\025AUTHENTICATION_FAILED\020" +
-      "\227\004\022 \n\033THE_REQUEST_IS_NOT_OPERATED\020\246\004\022\033\n\026" +
-      "THE_REQUEST_IS_STOPPED\020\247\004\022%\n THE_REQUEST" +
-      "_OF_A_FILE_IS_STOPPED\020\250\004\022\031\n\024FILE_NAME_IS" +
-      "_ILLEGAL\020\251\004\022\027\n\022TRANSACTION_FAILED\020\252\004\022\022\n\r" +
-      "HTTP_TIME_OUT\020\331\035\022\016\n\tHTTP_BUSY\020\332\035\022\023\n\016HTTP" +
-      "_UART_BUSY\020\333\035\022\030\n\023HTTP_GET_NO_REQUEST\020\334\035\022",
-      "\026\n\021HTTP_NETWORK_BUSY\020\335\035\022\035\n\030HTTP_NETWORK_" +
-      "OPEN_FAILED\020\336\035\022\033\n\026HTTP_NETWORK_NO_CONFIG" +
-      "\020\337\035\022\032\n\025HTTP_NETWORK_DEACTIVE\020\340\035\022\027\n\022HTTP_" +
-      "NETWORK_ERROR\020\341\035\022\023\n\016HTTP_URL_ERROR\020\342\035\022\023\n" +
-      "\016HTTP_EMPTY_URL\020\343\035\022\027\n\022HTTP_IP_ADDR_ERROR" +
-      "\020\344\035\022\023\n\016HTTP_DNS_ERROR\020\345\035\022\035\n\030HTTP_SOCKET_" +
-      "CREATE_ERROR\020\346\035\022\036\n\031HTTP_SOCKET_CONNECT_E" +
-      "RROR\020\347\035\022\033\n\026HTTP_SOCKET_READ_ERROR\020\350\035\022\034\n\027" +
-      "HTTP_SOCKET_WRITE_ERROR\020\351\035\022\026\n\021HTTP_SOCKE" +
-      "T_CLOSE\020\352\035\022\033\n\026HTTP_DATA_ENCODE_ERROR\020\353\035\022",
-      "\033\n\026HTTP_DATA_DECODE_ERROR\020\354\035\022\031\n\024HTTP_TO_" +
-      "READ_TIMEOUT\020\355\035\022\031\n\024HTTP_RESPONSE_FAILED\020" +
-      "\356\035\022\027\n\022INCOMING_CALL_BUSY\020\357\035\022\024\n\017VOICE_CAL" +
-      "L_BUSY\020\360\035\022\022\n\rINPUT_TIMEOUT\020\361\035\022\026\n\021WAIT_DA" +
-      "TA_TIMEOUT\020\362\035\022\037\n\032WAIT_HTTP_RESPONSE_TIME" +
-      "OUT\020\363\035\022\026\n\021ALLOC_MEMORY_FAIL\020\364\035\022\031\n\024HTTP_N" +
-      "EED_RELOCATION\020\365\035\022\030\n\023INVALID_INPUT_VALUE" +
-      "\020\231\036\022\021\n\014MMS_TIME_OUT\020\275\036\022\021\n\014URL_TOO_LONG\020\276" +
-      "\036\022\020\n\013INVALID_URL\020\277\036\022\026\n\021UNSUPPORTED_PROXY" +
-      "\020\300\036\022\032\n\025INVALID_PROXY_ADDRESS\020\301\036\022\025\n\020IP_AD",
-      "DRESS_ERROR\020\302\036\022\016\n\tDNS_ERROR\020\303\036\022\024\n\017PARAME" +
-      "TER_ERROR\020\304\036\022\030\n\023TO_ADDRESS_EXCEEDED\020\305\036\022\030" +
-      "\n\023CC_ADDRESS_EXCEEDED\020\306\036\022\031\n\024BCC_ADDRESS_" +
-      "EXCEEDED\020\307\036\022$\n\037APPENDED_FILE_CAPACITY_EX" +
-      "CEEDED\020\310\036\022\027\n\022FILE_NAME_TOO_LONG\020\311\036\022 \n\033TH" +
-      "E_NUMBER_OF_FILE_EXCEEDED\020\312\036\022\031\n\024NON_EXIS" +
-      "TENT_ADDRESS\020\313\036\022\025\n\020UFS_STORAGE_FULL\020\314\036\022\017" +
-      "\n\nDRIVE_FULL\020\315\036\022\020\n\013DRIVE_ERROR\020\316\036\022\016\n\tNOT" +
-      "_FOUND\020\317\036\022\026\n\021INVALID_FILE_NAME\020\320\036\022\031\n\024FIL" +
-      "E_ALREADY_EXISTED\020\321\036\022\032\n\025FAILED_TO_CREATE",
-      "_FILE\020\322\036\022\031\n\024FAILED_TO_WRITE_FILE\020\323\036\022\030\n\023F" +
-      "AILED_TO_OPEN_FILE\020\324\036\022\030\n\023FAILED_TO_READ_" +
-      "FILE\020\325\036\022\r\n\010MMS_BUSY\020\326\036\022\025\n\020SENDING_MMS_BU" +
-      "SY\020\327\036\022\030\n\023SENDING_MMS_STOPPED\020\330\036\022\034\n\027ALREA" +
-      "DY_STOPPED_TO_SEND\020\331\036\022\027\n\022RECEIVING_MMS_B" +
-      "USY\020\332\036\022\032\n\025RECEIVING_MMS_STOPPED\020\333\036\022\034\n\027AL" +
-      "READY_STOPPED_RECEIVE\020\334\036\022\032\n\025HTTP_RESPONS" +
-      "E_FALIURE\020\335\036\022\031\n\024INVALID_MMS_RESPONSE\020\336\036\022" +
-      "\027\n\022MMS_RESPONSE_ERROR\020\337\036\022\031\n\024INVALID_PUSH" +
-      "_MESSAGE\020\340\036\022\027\n\022ALREADY_DONWLOADED\020\341\036\022\021\n\014",
-      "NETWORK_BUSY\020\342\036\022\033\n\026FAILED_TO_OPEN_NETWOR" +
-      "K\020\343\036\022\032\n\025NETWORK_NO_CONFIGURED\020\344\036\022\030\n\023NETW" +
-      "ORK_DEACTIVATED\020\345\036\022\026\n\021MMS_NETWORK_ERROR\020" +
-      "\346\036\022\025\n\020NETWORK_SHUTDOWN\020\347\036\022\016\n\tUART_BUSY\020\350" +
-      "\036\022\021\n\014UART_ESCAPED\020\351\036\022\034\n\027FAILED_TO_CREATE" +
-      "_SOCKET\020\352\036\022\035\n\030FAILED_TO_CONNECT_SOCKET\020\353" +
-      "\036\022\032\n\025FAILED_TO_READ_SOCKET\020\354\036\022\033\n\026FAILED_" +
-      "TO_WRITE_SOCKET\020\355\036\022\022\n\rSOCKET_CLOSED\020\356\036\022\025" +
-      "\n\020MMS_LENGTH_ERROR\020\357\036\022\031\n\024FAILED_TO_ENCOD" +
-      "E_MMS\020\360\036\022\031\n\024FAILED_TO_DECODE_MMS\020\361\036\022\032\n\025F",
-      "AILED_TO_DECODE_HTTP\020\362\036\022\"\n\035FAILED_TO_DEC" +
-      "ODE_PUSH_MESSAGE\020\363\036\022\024\n\017PDU_ALIGN_ERROR\020\364" +
-      "\036\022\030\n\023PDU_CHARACTER_ERROR\020\365\036\022\024\n\017STRING_TO" +
-      "O_LONG\020\366\036\022\r\n\010MMS_FULL\020\367\036\022\025\n\020NON_EXISTENT" +
-      "_MMS\020\370\036\022\024\n\017INVALID_ADDRESS\020\371\036\022\030\n\023MMS_VOI" +
-      "CE_CALL_BUSY\020\372\036\022\030\n\023ALLOC_MEMORY_FAILED\020\373" +
-      "\036\022\026\n\021EXCEED_MAX_LENGTH\020\240\037\022\023\n\016OPEN_FILE_F" +
-      "AIL\020\241\037\022\024\n\017WRITE_FILE_FAIL\020\242\037\022\022\n\rGET_SIZE" +
-      "_FAIL\020\243\037\022\016\n\tREAD_FAIL\020\244\037\022\023\n\016LIST_FILE_FA" +
-      "IL\020\245\037\022\025\n\020DELETE_FILE_FAIL\020\246\037\022\027\n\022GET_DISC",
-      "_INFO_FAIL\020\247\037\022\r\n\010NO_SPACE\020\250\037\022\r\n\010TIME_OUT" +
-      "\020\251\037\022\030\n\023HTTP_FILE_NOT_FOUND\020\252\037\022\023\n\016FILE_TO" +
-      "O_LARGE\020\253\037\022\027\n\022FILE_ALREADY_EXIST\020\254\037\022\026\n\021I" +
-      "NVALID_PARAMETER\020\255\037\022\021\n\014DRIVER_ERROR\020\256\037\022\020" +
-      "\n\013CREATE_FAIL\020\257\037\022\022\n\rACCESS_DENIED\020\260\037\022\026\n\021" +
-      "FILE_IS_TOO_LARGE\020\261\037\022\021\n\014WRONG_FORMAT\020\314!\022" +
-      "\024\n\017AUDIO_TASK_BUSY\020\316!\022\027\n\022CREATE_FILE_FAI" +
-      "LED\020\317!\022/\n*ADDITIONAL_RECORDING_IN_A_DIFF" +
-      "ERENT_FORMAT\020\320!\022\016\n\tDISC_FULL\020\321!\022\035\n\030WRITE" +
-      "_PROTECTION_ON_FILE\020\322!\022\033\n\026RECORDING_UNKN",
-      "OW_ERROR\020\223#B \n\023com.rtrk.atcommandsB\tATCo" +
-      "mmandb\006proto3"
+      "(\010\022\021\n\texecution\030\005 \001(\010\022\r\n\005value\030\006 \001(\005\022\t\n\001" +
+      "n\030\007 \001(\005\022\020\n\010timeMode\030\010 \001(\005\022\017\n\007indMode\030\t \001" +
+      "(\005\"\223\001\n\014ErrorCommand\022=\n\020errorMessageType\030" +
+      "\001 \001(\0162#.com.rtrk.protobuf.ErrorMessageTy" +
+      "pe\022D\n\024FTPErrorMessagetType\030\002 \001(\0162&.com.r",
+      "trk.protobuf.FTPErrorMessageType*\207\002\n\021Oth" +
+      "ersMessageType\022#\n\037REISSUES_THE_LAST_COMM" +
+      "AND_GIVEN\020\000\022\031\n\025SET_COMMAND_ECHO_MODE\020\001\022*" +
+      "\n&SET_COMMAND_LINE_TERMINATION_CHARACTER" +
+      "\020\002\022%\n!SET_RESPONSE_FORMATTING_CHARACTER\020" +
+      "\003\022&\n\"SET_COMMAND_LINE_EDITING_CHARACTER\020" +
+      "\004\022\017\n\013SET_RI_TIME\020\005\022&\n\"BURST_TRANSITION_S" +
+      "IGNAL_INDICATION\020\006*\302\001\n\032HardwareRelatedMe" +
+      "ssageType\022\t\n\005CLOCK\020\000\022\r\n\tSET_ALARM\020\001\022\022\n\016B" +
+      "ATTERY_CHARGE\020\002\022\014\n\010READ_ADC\020\003\022\030\n\024CONFIGU",
+      "RE_SHOW_CLOCK\020\004\022&\n\"CONFIGURE_THE_NETWORK" +
+      "_LED_PATTERNS\020\005\022&\n\"CONFIGURE_THE_THRESHO" +
+      "LD_OF_VOLTAGE\020\006*\231\004\n\020AudioMessageType\022 \n\034" +
+      "SET_MONITOR_SPEAKER_LOUDNESS\020\000\022\034\n\030SET_MO" +
+      "NITOR_SPEAKER_MODE\020\001\022\021\n\rTONE_DURATION\020\002\022" +
+      "\034\n\030DTMF_AND_TONE_GENERATION\020\003\022\024\n\020ALERT_S" +
+      "OUND_MODE\020\004\022\026\n\022RINGER_SOUND_LEVEL\020\005\022\035\n\031L" +
+      "OUD_SPEAKER_VOLUME_LEVEL\020\006\022\020\n\014MUTE_CONTR" +
+      "OL\020\007\022#\n\037CHANGE_THE_SIDE_TONE_GAIN_LEVEL\020" +
+      "\010\022$\n CHANGE_THE_MICROPHONE_GAIN_LEVEL\020\t\022",
+      "\035\n\031GENERATE_LOCAL_DTMF_TONES\020\n\022\033\n\027SWAP_T" +
+      "HE_AUDIO_CHANNELS\020\013\022 \n\034AUDIO_CHANNEL_LOO" +
+      "P_BACK_TEST\020\014\022 \n\034GENERATE_LOCAL_SPECIFIC" +
+      "_TONE\020\r\022\030\n\024SET_DTMF_OUTPUT_PATH\020\016\022\033\n\027SET" +
+      "_TONE_DETECTION_MODE\020\017\022\017\n\013DETECT_DTMF\020\020\022" +
+      "\"\n\036PLAY_DTMF_TONE_DURING_THE_CALL\020\021*\366\003\n\037" +
+      "SupplementaryServiceMessageType\0221\n-CALL_" +
+      "FORWARDING_NUMBER_AND_CONDITIONS_CONTROL" +
+      "\020\000\022\035\n\031CLOSED_USER_GROUP_CONTROL\020\001\022\030\n\024CAL" +
+      "L_WAITING_CONTROL\020\002\022\034\n\030CALL_HOLD_AND_MUL",
+      "TIPARTY\020\003\022,\n(CALLING_LINE_IDENTIFICATION" +
+      "_PRESENTATION\020\004\022C\n?CONTROL_WHETHER_OR_NO" +
+      "T_TO_SHOW_THE_NAME_OF_INCOMING_CALL_NUMB" +
+      "ER\020\005\022.\n*CONNECTED_LINE_IDENTIFICATION_PR" +
+      "ESENTATION\020\006\022#\n\037SHOW_ALPHA_FIELD_IN_COLP" +
+      "_STRING\020\007\022+\n\'UNSTRUCTURED_SUPPLEMENTARY_" +
+      "SERVICE_DATA\020\010\022\'\n#SUPPLEMENTARY_SERVICES" +
+      "_NOTIFICATION\020\t\022+\n\'CALLING_LINE_IDENTIFI" +
+      "CATION_RESTRICTION\020\n*\323\n\n\020TCPIPMessageTyp" +
+      "e\022 \n\034SET_UP_TCP_OR_UDP_CONNECTION\020\000\022+\n\'S",
+      "END_DATA_THROUGH_TCP_OR_UDP_CONNECTION\020\001" +
+      "\022\037\n\033CLOSE_TCP_OR_UDP_CONNECTION\020\002\022#\n\037DEA" +
+      "CTIVATE_GPRS_CSD_PDP_CONTEXT\020\003\022\022\n\016SET_LO" +
+      "CAL_PORT\020\004\022.\n*START_TCPIP_TASK_APN_USERN" +
+      "AME_AND_PASSWORD\020\005\022\033\n\027ACTIVE_GPRS_CSD_CO" +
+      "NTEXT\020\006\022\030\n\024GET_LOCAL_IP_ADDRESS\020\007\022#\n\037QUE" +
+      "RY_CURRENT_CONNECTION_STATUS\020\010\022-\n)QUERY_" +
+      "CONNECTION_STATUS_OF_CURRENT_ACCESS\020\t\022\037\n" +
+      "\033QUERY_CURRENT_SERVER_STATUS\020\n\022 \n\034CONFIG" +
+      "URE_DOMAIN_NAME_SERVER\020\013\022-\n)QUERY_THE_IP",
+      "_ADDRESS_OF_GIVEN_DOMAIN_NAME\020\014\0221\n-CONNE" +
+      "CT_WITH_IP_ADDRESS_OR_DOMAIN_NAME_SERVER" +
+      "\020\r\022(\n$ADD_AN_IP_HEADER_WHEN_RECEIVING_DA" +
+      "TE\020\016\022\033\n\027SET_AUDIO_SENDING_TIMER\020\017\022\037\n\033SET" +
+      "_PROMT_WHEN_SENDING_DATA\020\020\022\027\n\023CONFIGURE_" +
+      "AS_SERVER\020\021\022$\n SELECT_CSD_OR_GPRS_AS_THE" +
+      "_BEARER\020\022\022\025\n\021CHOOSE_CONNECTION\020\023\0227\n3SET_" +
+      "WHETHER_OR_NOT_TO_DISPLAY_THE_ADDRESS_OF" +
+      "_SENDER\020\024\022\"\n\036SAVE_TCPIP_APPLICATION_CONT" +
+      "EXT\020\025\022\036\n\032SELECT_TCPIP_TRANSFER_MODE\020\026\022\'\n",
+      "#CONFIGURE_TRANSPARENT_TRANSFER_MODE\020\027\0224" +
+      "\n0CONTROL_WHETHER_OR_NOT_TO_SHOW_THE_PRO" +
+      "TOCOL_TYPE\020\030\022;\n7CONTROL_WHETHER_OR_NOT_T" +
+      "O_ENABLE_MULTIPLE_TCPIP_SESSION\020\031\0226\n2CON" +
+      "TROL_WHETHER_OR_NOT_TO_DISPLAY_LOCAL_IP_" +
+      "ADDRESS\020\032\022*\n&SELECT_A_CONTEXT_AS_FOREGRO" +
+      "UND_CONTEXT\020\033\022*\n&QUETY_THE_DATA_INFORMAT" +
+      "ION_FOR_SENDING\020\034\0220\n,SET_THE_METHOD_TO_H" +
+      "ANDLE_RECEIVED_TCPIP_DATA\020\035\022$\n RETRIEVE_" +
+      "THE_RECEIVED_TCPIP_DATA\020\036\0225\n1CONTRO_WHET",
+      "HER_OR_NOT_TO_ECHO_THE_DATA_FOR_QISEND\020\037" +
+      "\022\030\n\024PING_A_REMOTE_SERVER\020 \022&\n\"SYNCHRONIZ" +
+      "E_THE_LOCAL_TIME_VIA_NTP\020!*\225\003\n\017GPRSMessa" +
+      "geType\022 \n\034ATTACH_DEATTACH_GPRS_SERVICE\020\000" +
+      "\022\026\n\022DEFINE_PDP_CONTEXT\020\001\022\031\n\025QOS_PROFILE_" +
+      "REQUESTED\020\002\022\"\n\036QOS_PROFILE_MINIMUM_ACCEP" +
+      "TABLE\020\003\022&\n\"PDP_CONTEXT_ACTIVATE_OR_DEACT" +
+      "IVATE\020\004\022\024\n\020ENTER_DATA_STATE\020\005\022\024\n\020SHOW_PD" +
+      "P_ADDRESS\020\006\022\035\n\031GPRS_MOBILE_STATION_CLASS" +
+      "\020\007\022-\n)CONTROL_UNSOLICITED_GPRS_EVETNT_RE",
+      "PORTING\020\010\022\037\n\033NETWORK_REGISTRATION_STATUS" +
+      "\020\t\022%\n!SELECT_SERVICE_FOR_MO_SMS_MESSAGE\020" +
+      "\n\022\037\n\033CHANGE_GPRS_MULTISLOT_CLASS\020\013*\255\001\n\024P" +
+      "honebookMessageType\022#\n\037SELECT_PHONEBOOK_" +
+      "MEMORY_STORAGE\020\000\022\031\n\025WRITE_PHONEBOOK_ENTR" +
+      "Y\020\001\022\"\n\036READ_CURRENT_PHONEBOOK_ENTRIES\020\002\022" +
+      "\032\n\026FIND_PHONEBOOK_ENTRIES\020\003\022\025\n\021SUBSCRIBE" +
+      "R_NUMBER\020\004*\377\004\n\016SMSMessageType\022\032\n\026SELECT_" +
+      "MESSAGE_SERVICE\020\000\022\035\n\031SELECT_SMS_MESSAGE_" +
+      "FORMAT\020\001\022\036\n\032SMS_SERVICE_CENTER_ADDRESS\020\002",
+      "\022!\n\035PREFERRED_SMS_MESSAGE_STORAGE\020\003\022\026\n\022D" +
+      "ELETE_SMS_MESSAGE\020\004\022+\n\'LIST_SMS_MESSAGE_" +
+      "FROM_PREFERRED_STORAGE\020\005\022\024\n\020READ_SMS_MES" +
+      "SAGE\020\006\022\024\n\020SEND_SMS_MESSAGE\020\007\022\037\n\033WRITE_SM" +
+      "S_MESSAGE_TO_MEMORY\020\010\022!\n\035SEND_SMS_MESSAG" +
+      "E_FROM_STORAGE\020\t\022\024\n\020SEND_SMS_COMMAND\020\n\022\036" +
+      "\n\032NEW_SMS_MESSAGE_INDICATION\020\013\022\030\n\024RESTOR" +
+      "E_SMS_SETTINGS\020\014\022\025\n\021SAVE_SMS_SETTINGS\020\r\022" +
+      "%\n!SELECT_CELL_BROADCAST_SMS_MESSAGE\020\016\022!" +
+      "\n\035SHOW_SMS_TEXT_MODE_PARAMETERS\020\017\022 \n\034SET",
+      "_SMS_TEXT_MODE_PARAMETERS\020\020\0226\n2STRORE_CL" +
+      "ASS0_SMS_TO_SIM_WHEN_RECEIVING_CLASS0_SM" +
+      "S\020\021\022\022\n\016DELETE_ALL_SMS\020\022\022\033\n\027CONFIGURE_SMS" +
+      "_CODE_MODE\020\023*\367\006\n\026CallRelatedMessageType\022" +
+      "\033\n\027ANSWER_AN_INCOMING_CALL\020\000\022)\n%MOBILE_O" +
+      "RIENTED_CALL_TO_DIAL_A_NUMBER\020\001\022\"\n\036DISCO" +
+      "NNECT_EXISTING_CONNECTION\020\002\022)\n%SWITCH_FR" +
+      "OM_DATA_MODE_TO_COMMAND_MODE\020\003\022)\n%SWITCH" +
+      "_FROM_COMMAND_MODE_TO_DATA_MODE\020\004\022\030\n\024SEL" +
+      "ECT_PULSE_DIALING\020\005\0229\n5SET_NUMBER_OF_RIN",
+      "GS_BEFORE_AUTOMATICLY_ANSWERING_CALL\020\006\022\"" +
+      "\n\036SET_PAUSE_BEFORE_BLIND_DIALING\020\007\022;\n7SE" +
+      "T_NUMBER_OF_SECONDS_TO_WAIT_FOR_CONNECTI" +
+      "ON_COMPLETION\020\010\0229\n5SET_NUMBER_OF_SECONDS" +
+      "_TO_WAIT_FOR_COMMA_DIAL_MODIFIER\020\t\022A\n=SE" +
+      "T_DISCONNECT_DELAY_AFTER_INDICATING_ABSE" +
+      "NCE_OF_DATA_CARRIER\020\n\022\027\n\023SELECT_TONE_DIA" +
+      "LING\020\013\022\032\n\026SELECT_TYPE_OF_ADDRESS\020\014\022\034\n\030LI" +
+      "ST_CURRENT_CALLS_OF_ME\020\r\022\035\n\031SERVICE_REPO" +
+      "RTING_CONTROL\020\016\0229\n5SET_CELLULAR_RESULT_C",
+      "ODE_FOR_INCOMING_CALL_INDICATION\020\017\022(\n$SE" +
+      "LECT_RADIO_LINK_PROTOCOL_PARAMETER\020\020\022\033\n\027" +
+      "SINGLE_NUMBERING_SCHEME\020\021\022$\n CONFIGURE_A" +
+      "LTERNATING_MODE_CALLS\020\022\022\034\n\030PREFERENCE_SP" +
+      "EACH_CODING\020\023\022\036\n\032SPEECH_CHANNEL_TYPE_REP" +
+      "ORT\020\024\022\017\n\013DISABLE_ATH\020\025*\265\002\n\031NetworkServic" +
+      "eMessageType\022\026\n\022OPERATOR_SELECTION\020\000\022\030\n\024" +
+      "NETWORK_REGISTRATION\020\001\022\031\n\025SIGNAL_QUALITY" +
+      "_REPORT\020\002\022\033\n\027PREFERRED_OPERATOR_LIST\020\003\022\027" +
+      "\n\023READ_OPEARATR_NAMES\020\004\022%\n!GET_AND_SET_M",
+      "OBILE_OPERATION_BAND\020\005\0225\n1NETWORK_SERVIC" +
+      "E_SWITCH_ON_OR_OFF_ENGINEERING_MODE\020\006\022\037\n" +
+      "\033SCAN_POWER_OF_GSM_FREQUENCY\020\007\022\026\n\022LOCK_G" +
+      "SM_FREQUENCY\020\010*\347\002\n\025SIMRelatedMessageType" +
+      "\022\020\n\014REQUEST_IMSI\020\000\022\021\n\rFACILITY_LOCK\020\001\022\r\n" +
+      "\tENTER_PIN\020\002\022\023\n\017CHANGE_PASSWORD\020\003\022\031\n\025RES" +
+      "TRICTED_SIM_ACCESS\020\004\022\026\n\022GENERIC_SIM_ACCE" +
+      "SS\020\005\022\034\n\030CHANGE_PS_SUPER_PASSWORD\020\006\022\r\n\tSH" +
+      "OW_CCID\020\007\022\023\n\017SHOW_CCID_QCCID\020\010\022!\n\035GET_SI" +
+      "M_CARD_GROUP_IDENTIFIER\020\t\022%\n!SELECT_SIM_",
+      "CARD_OPERATING_VOLTAGE\020\n\022\035\n\031GET_SERVICE_" +
+      "PROVIDER_NAME\020\013\022\'\n#TIME_REMAINING_TO_INP" +
+      "UT_SIM_PIN_PUK\020\014*\265\005\n\030StatusControlMessag" +
+      "eType\022\031\n\025EXTENDED_ERROR_REPORT\020\000\022$\n MOBI" +
+      "LE_EQUIPMENT_ACTIVITY_STATUS\020\001\022\036\n\032INDICA" +
+      "TE_RI_WHEN_USING_URC\020\002\022(\n$SHOW_STATE_OF_" +
+      "MOBILE_ORIGINATED_CELL\020\003\022.\n*REFUSE_TO_RE" +
+      "CEIVE_SMS_INCOMING_CALL_OR_NOT\020\004\022.\n*ENAB" +
+      "LE_OR_DISABLE_INITIAL_URC_PRESENTATION\020\005" +
+      "\0229\n5ENABLE_OR_DISABLE_PROPRIETARY_UNSOLI",
+      "CITED_INDICATIONS\020\006\022!\n\035QUERY_STATE_OF_IN" +
+      "ITIALIZATION\020\007\022\034\n\030QUERY_GSM_NETWORK_STAT" +
+      "US\020\010\022 \n\034NETWORK_TIME_SYNCHRONIZATION\020\t\022+" +
+      "\n\'OBTAIN_LATEST_NETWORK_TIME_SYNCHRONIZE" +
+      "D\020\n\0228\n4NETWORK_TIME_SYNCHRONIZATION_AND_" +
+      "UPDATE_THE_RTC_TIME\020\013\022\'\n#NETWORK_TIME_SY" +
+      "NCHRONIZATION_REPORT\020\014\022\'\n#SWITCH_ON_OR_O" +
+      "FF_DETECTING_SIM_CARD\020\r\022!\n\035SIM_INSERTED_" +
+      "STATUS_REPORTING\020\016\0224\n0CSC_CALL_OR_GPRS_P" +
+      "DP_CONTEXT_TERMINAL_INDICATION\020\017*\335\002\n!Ser",
+      "ialInterfaceControlMessageType\022\031\n\025SET_DC" +
+      "D_FUNCTION_MODE\020\000\022\031\n\025SET_DTR_FUNCTION_MO" +
+      "DE\020\001\022\'\n#SET_TE_TA_CONTROL_CHARACTER_FRAM" +
+      "ING\020\002\022%\n!SET_TE_TA_LOCAL_DATA_FLOW_CONTR" +
+      "OL\020\003\022,\n(SET_TE_TA_LOCAL_DATA_RATE_REPORT" +
+      "ING_MODE\020\004\022\036\n\032SET_TE_TA_FIXED_LOCAL_RATE" +
+      "\020\005\022\027\n\023MULTIPLEXER_CONTROL\020\006\022 \n\034CONFIGURE" +
+      "_DUAL_UART_FUNCTION\020\007\022)\n%CONFIGURE_PARAM" +
+      "ETERS_OF_THE_DUAL_UART\020\010*\376\006\n\023GeneralMess" +
+      "sageType\022.\n*DISPLAY_PRODUCT_IDENTIFICATI",
+      "ON_INFORMATION\020\000\022\'\n#REQUEST_MANUFACTURER" +
+      "_IDENTIFICATION\020\001\022#\n\037REQUEST_TA_MODEL_ID" +
+      "ENTIFICATION\020\002\022&\n\"REQUEST_TA_REVISION_ID" +
+      "ENTIFICATION\020\003\022(\n$REQUEST_GLOBAL_OBJECT_" +
+      "IDENTIFICATION\020\004\022,\n(REQUEST_MANUFACTURER" +
+      "_IDENTIFICATION_CGMI\020\005\022 \n\034REQUEST_MODEL_" +
+      "IDENTIFICATION\020\006\022+\n\'REQUEST_TA_REVISION_" +
+      "IDENTIFICATION_CGMR\020\007\022\020\n\014REQUEST_IMEI\020\010\022" +
+      "0\n,REQUEST_PRODUCT_SERIAL_NUMBER_IDENTIF" +
+      "ICATION\020\t\022\025\n\021REQUEST_IMEI_QGSN\020\n\0227\n3SET_",
+      "ALL_CURRENT_PARAMETERS_TO_MANUFACTURER_D" +
+      "EFAULTS\020\013\022!\n\035DISPLAY_CURRENT_CONFIGURATI" +
+      "ON\020\014\0224\n0STORE_CURRENT_PARAMETERS_TO_USER" +
+      "_DEFINED_PROFILE\020\r\022%\n!SET_RESULT_CODE_PR" +
+      "ESENTATION_CODE\020\016\022\026\n\022TA_RESPONSE_FORMAT\020" +
+      "\017\022\"\n\036SET_CONNECT_RESULT_CODE_FORMAT\020\020\0226\n" +
+      "2SET_ALL_CURRENT_PARAMETERS_TO_USER_DEFI" +
+      "NED_PROFILE\020\021\022\033\n\027SET_PHONE_FUNCTIONALITY" +
+      "\020\022\022\r\n\tPOWER_OFF\020\023\022!\n\035REPORT_MOBILE_EQUIP" +
+      "MENT_ERROR\020\024\022\030\n\024SET_TE_CHARACTER_SET\020\025\022)",
+      "\n%REQUEST_COMPLETE_TA_CAPABILITIES_LIST\020" +
+      "\026*\312\003\n\017SMTPMessageType\022(\n$SET_THE_USER_NA" +
+      "ME_FOR_AUTHENTICATION\020\000\022\'\n#SET_THE_PASSW" +
+      "ORD_FOR_AUTHENTICATION\020\001\022\'\n#SET_THE_EMAI" +
+      "L_ADDRESS_OF_THE_SENDER\020\002\022\030\n\024SET_THE_SEN" +
+      "DERS_NAME\020\003\022+\n\'SET_THE_ADDRESS_AND_PORT_" +
+      "OD_SMTP_SERVER\020\004\022\034\n\030ADD_OR_DELETE_RECIPI" +
+      "ENTS\020\005\022!\n\035EDIT_THE_SUBJECT_OF_THE_EMAIL\020" +
+      "\006\022!\n\035EDIT_THE_CONTENT_OF_THE_EMAIL\020\007\022#\n\037" +
+      "ADD_AN_ATTACHMENT_FOR_THE_EMAIL\020\010\022\030\n\024DEL",
+      "ETE_AN_ATTACHMENT\020\t\022)\n%CLEAR_ALL_CONFIGU" +
+      "RATIONS_AND_CONTENTS\020\n\022\026\n\022SMTP_CONFIGURA" +
+      "TION\020\013\022\016\n\nSEND_EMAIL\020\014*_\n\024RecordingMessa" +
+      "geType\022\025\n\021RECORD_MEDIA_FILE\020\000\022\023\n\017PLAY_ME" +
+      "DIA_FILE\020\001\022\033\n\027STOP_PLAYING_MEDIA_FILE\020\002*" +
+      "\352\001\n\023QuecCellMessageType\022\"\n\036SCAN_BASIC_ST" +
+      "ATION_INFORMATION\020\000\022%\n!SWITCH_ON_OR_OFF_" +
+      "ENGINEERING_MODE\020\001\022\031\n\025LOCK_THE_BASE_STAT" +
+      "ION\020\002\022\036\n\032SCAN_ARFCN_RECEIVING_LEVEL\020\003\022\033\n" +
+      "\027GET_CHANNEL_INFORMATION\020\004\022\033\n\027GET_LAST_V",
+      "ALID_TA_VALUE\020\005\022\023\n\017FORBID_OPERATOR\020\006*\337\003\n" +
+      "\016MMSMessageType\022\033\n\027SET_THE_URL_OF_THE_MM" +
+      "SC\020\000\022\025\n\021SET_THE_MMS_PROXY\020\001\022-\n)SET_THE_P" +
+      "ARAMETER_FOR_SENDING_MMS_MESSAGE\020\002\022%\n!SE" +
+      "T_CHARACTER_SETS_AND_INPUT_MODE\020\003\022\025\n\021WRI" +
+      "TE_MMS_MESSAGE\020\004\022\024\n\020SEND_MMS_MESSAGE\020\005\022#" +
+      "\n\037MENAGE_THE_RECEIVED_MMS_MESSAGE\020\006\022\035\n\031R" +
+      "EAD_RECEIVED_MMS_MESSAGE\020\007\022%\n!RECEIVE_MM" +
+      "S_MESSAGE_FROM_THE_MMSC\020\010\022(\n$SET_PRIORIT" +
+      "Y_OF_MMS_MESSAGE_AND_CALL\020\t\022.\n*SET_DUR_A",
+      "TTRIBUTE_VALUE_IN_THE_SMIL_SCRIPT\020\n\022\032\n\026S" +
+      "ET_MMS_SMS_TRANSACTOR\020\013\022\036\n\032ENABLE_OUTPUT" +
+      "_TEXT_IN_USC2\020\014\022\025\n\021OUTPUT_FILE_STYLE\020\r*\350" +
+      "\001\n\016STKMessageType\022\034\n\030TURN_ON_OFF_STK_FUN" +
+      "CTION\020\000\022\030\n\024STK_PROFILE_DOWNLOAD\020\001\022\030\n\024STK" +
+      "_ENVELOPE_COMMAND\020\002\022\031\n\025STK_TERMINAL_RESP" +
+      "ONSE\020\003\022\024\n\020TRIGGER_STK_CALL\020\004\022\023\n\017TRIGGER_" +
+      "STK_SMS\020\005\022\022\n\016TRIGGER_STK_SS\020\006\022\024\n\020TRIGGER" +
+      "_STK_USSD\020\007\022\024\n\020TRIGGER_STK_DTMF\020\010*\356\006\n\016FT" +
+      "PMessageType\022/\n+OPEN_AN_FTP_SERVICE_TO_T",
+      "HE_GIVEN_FTP_SERVER\020\000\022\031\n\025CLOSE_THE_FTP_S" +
+      "ERVICE\020\001\022#\n\037UPLOAD_A_FILE_TO_THE_FTP_SER" +
+      "VER\020\002\022\'\n#DOWNLOAD_A_FILE_FROM_THE_FTP_SE" +
+      "RVER\020\003\022=\n9SET_THE_PATH_IN_THE_FTP_SERVER" +
+      "_TO_UPLOAD_OR_DOWNLOAD_FILE\020\004\0228\n4SET_THE" +
+      "_USER_NAME_OF_THE_ACCOUNT_TO_OPEN_FTP_SE" +
+      "RVICE\020\005\0227\n3SET_THE_PASSWORD_OF_THE_ACCOU" +
+      "NT_TO_OPEN_FTP_SERVICE\020\006\0228\n4SET_SOME_CON" +
+      "FIGURABLE_PARAMETERS_FOR_THE_FTP_SERVICE" +
+      "\020\007\022\037\n\033QUERY_STATUS_OF_FTP_SERVICE\020\010\0229\n5Q",
+      "UERY_THE_REAL_SIZE_TRANSFERED_IN_THE_LAT" +
+      "EST_TRANSFER\020\t\0220\n,RENAME_FILE_OR_FOLDER_" +
+      "NAME_ON_THE_FTP_SERVER\020\n\0226\n2QUERY_THE_SI" +
+      "ZE_OF_APPOINTED_FILE_ON_THE_FTP_SERVER\020\013" +
+      "\022/\n+DELETE_THE_APPOINTED_FILE_ON_THE_FTP" +
+      "_SERVER\020\014\0220\n,ESTABLISH_A_NEW_FILEFOLDER_" +
+      "ON_THE_FTP_SERVER\020\r\022)\n%REMOVE_A_FILEFOLD" +
+      "ER_ON_THE_FTP_SERVER\020\016\022D\n@LIST_CONTENTS_" +
+      "OF_DIRECTORY_OR_FILE_INFORMATION_ON_THE_" +
+      "FTP_SERVER\020\017\022<\n8LIST_FILE_NAMES_IN_THE_G",
+      "IVEN_DIRECTORY_ON_THE_FTP_SERVER\020\020*\375\002\n\017F" +
+      "ileMessageType\022\031\n\025GET_STORAGE_DATE_SIZE\020" +
+      "\000\022\016\n\nLIST_FILES\020\001\022\032\n\026UPLOAD_FILE_TO_STOR" +
+      "AGE\020\002\022\036\n\032DOWNLOAD_FILE_FROM_STORAGE\020\003\022\032\n" +
+      "\026DELETE_FILE_IN_STORAGE\020\004\022\r\n\tMOVE_FILE\020\005" +
+      "\022\r\n\tOPEN_FILE\020\006\022\r\n\tREAD_FILE\020\007\022\016\n\nWRITE_" +
+      "FILE\020\010\022\r\n\tSEEK_FILE\020\t\022\016\n\nCLOSE_FILE\020\n\022\"\n" +
+      "\036GET_OFFSET_OF_THE_FILE_POINTER\020\013\0224\n0FOR" +
+      "CE_TO_WRITE_DATA_REMAINING_IN_THE_FILE_B" +
+      "UFFER\020\014\0221\n-TRUNCATE_THE_SPECIFIED_FILE_F",
+      "ROM_FILE_POINTER\020\r*\244\001\n\017HTTPMessageType\022\027" +
+      "\n\023SET_HTTP_SERVER_URL\020\000\022\031\n\025SEND_HTTP_GET" +
+      "_REQUEST\020\001\022\035\n\031READ_HTTP_SERVER_RESPONSE\020" +
+      "\002\022\032\n\026SEND_HTTP_POST_REQUEST\020\003\022\"\n\036DOWNLOD" +
+      "A_FILE_FROM_HTTP_SERVER\020\004*\211\037\n\020ErrorMessa" +
+      "geType\022\006\n\002OK\020\000\022\020\n\014UNKNOW_ERROR\020\001\022\020\n\014SERV" +
+      "ICE_BUSY\020\003\022\034\n\030FAILED_TO_GET_IP_ADDRESS\020\004" +
+      "\022\021\n\rNETWORK_ERROR\020\005\022#\n\037UNSUPPORTED_AUTHE" +
+      "NTICATION_TYPE\020\006\022\022\n\016SERVICE_CLOSED\020\007\022#\n\037" +
+      "GPRS_CSD_CONTEXT_IS_DEACTIVATED\020\010\022\013\n\007TIM",
+      "EOUT\020\t\022!\n\035NO_RECIPIENT_FOR_SMTP_SERVICE\020" +
+      "\n\022\030\n\024FAILED_TO_SEND_EMAIL\020\013\022&\n\"FAILED_TO" +
+      "_OPEN_FILE_FOR_ATTACHMENT\020\014\022#\n\037NO_ENOUGH" +
+      "_MEMORY_FOR_ATTACHMENT\020\r\022!\n\035FAILED_TO_SA" +
+      "VE_THE_ATTACHMENT\020\016\022 \n\034THE_INPUT_PARAMET" +
+      "ER_IS_WRONG\020\017\022\032\n\025SERVICE_NOT_AVAILABLE\020\245" +
+      "\003\022$\n\037REQUESTED_MAIL_ACTION_NOT_TAKEN\020\302\003\022" +
+      "\035\n\030REQUESTED_ACTION_ABORTED\020\303\003\022;\n6REQUES" +
+      "TED_ACTION_NOT_TAKEN_INSUFFICIENT_SYSTEM" +
+      "_STORAGE\020\304\003\022&\n!SYNTAX_ERROR_COMMAND_UNRE",
+      "COGNIZED\020\364\003\022,\n\'SYNTAX_ERROR_IN_PARAMETER" +
+      "S_OR_ARGUMENTS\020\365\003\022\034\n\027COMMAND_NOT_IMPLEME" +
+      "NTED\020\366\003\022\035\n\030BAD_SEQUENCE_OF_COMMANDS\020\367\003\022&" +
+      "\n!COMMAND_PARAMETER_NOT_IMPLEMENTED\020\370\003\022!" +
+      "\n\034DOMAIN_DOES_NOT_ACCEPT_EMAIL\020\211\004\022#\n\036ACC" +
+      "ESS_DENIED_FOR_SMTP_SERVICE\020\222\004\022\032\n\025AUTHEN" +
+      "TICATION_FAILED\020\227\004\022\037\n\032REQUESTED_ACTION_N" +
+      "OT_TAKEN\020\246\004\022\023\n\016USER_NOT_LOCAL\020\247\004\022?\n:REQU" +
+      "ESTED_MAIL_ACTION_ABORTED_EXCEEDED_STORA" +
+      "GE_NOT_ALLOWED\020\250\004\0228\n3REQUESTED_ACTION_NO",
+      "T_TAKEN_MAILBOX_NAME_NOT_ALLOWED\020\251\004\022\027\n\022T" +
+      "RANSACTION_FAILED\020\252\004\022\022\n\rHTTP_TIME_OUT\020\331\035" +
+      "\022\016\n\tHTTP_BUSY\020\332\035\022\023\n\016HTTP_UART_BUSY\020\333\035\022\030\n" +
+      "\023HTTP_GET_NO_REQUEST\020\334\035\022\026\n\021HTTP_NETWORK_" +
+      "BUSY\020\335\035\022\035\n\030HTTP_NETWORK_OPEN_FAILED\020\336\035\022\033" +
+      "\n\026HTTP_NETWORK_NO_CONFIG\020\337\035\022\032\n\025HTTP_NETW" +
+      "ORK_DEACTIVE\020\340\035\022\027\n\022HTTP_NETWORK_ERROR\020\341\035" +
+      "\022\023\n\016HTTP_URL_ERROR\020\342\035\022\023\n\016HTTP_EMPTY_URL\020" +
+      "\343\035\022\027\n\022HTTP_IP_ADDR_ERROR\020\344\035\022\023\n\016HTTP_DNS_" +
+      "ERROR\020\345\035\022\035\n\030HTTP_SOCKET_CREATE_ERROR\020\346\035\022",
+      "\036\n\031HTTP_SOCKET_CONNECT_ERROR\020\347\035\022\033\n\026HTTP_" +
+      "SOCKET_READ_ERROR\020\350\035\022\034\n\027HTTP_SOCKET_WRIT" +
+      "E_ERROR\020\351\035\022\026\n\021HTTP_SOCKET_CLOSE\020\352\035\022\033\n\026HT" +
+      "TP_DATA_ENCODE_ERROR\020\353\035\022\033\n\026HTTP_DATA_DEC" +
+      "ODE_ERROR\020\354\035\022\031\n\024HTTP_TO_READ_TIMEOUT\020\355\035\022" +
+      "\031\n\024HTTP_RESPONSE_FAILED\020\356\035\022\027\n\022INCOMING_C" +
+      "ALL_BUSY\020\357\035\022\024\n\017VOICE_CALL_BUSY\020\360\035\022\022\n\rINP" +
+      "UT_TIMEOUT\020\361\035\022\026\n\021WAIT_DATA_TIMEOUT\020\362\035\022\037\n" +
+      "\032WAIT_HTTP_RESPONSE_TIMEOUT\020\363\035\022\026\n\021ALLOC_" +
+      "MEMORY_FAIL\020\364\035\022\031\n\024HTTP_NEED_RELOCATION\020\365",
+      "\035\022\030\n\023INVALID_INPUT_VALUE\020\231\036\022\021\n\014MMS_TIME_" +
+      "OUT\020\275\036\022\021\n\014URL_TOO_LONG\020\276\036\022\020\n\013INVALID_URL" +
+      "\020\277\036\022\026\n\021UNSUPPORTED_PROXY\020\300\036\022\032\n\025INVALID_P" +
+      "ROXY_ADDRESS\020\301\036\022\025\n\020IP_ADDRESS_ERROR\020\302\036\022\016" +
+      "\n\tDNS_ERROR\020\303\036\022\024\n\017PARAMETER_ERROR\020\304\036\022\030\n\023" +
+      "TO_ADDRESS_EXCEEDED\020\305\036\022\030\n\023CC_ADDRESS_EXC" +
+      "EEDED\020\306\036\022\031\n\024BCC_ADDRESS_EXCEEDED\020\307\036\022$\n\037A" +
+      "PPENDED_FILE_CAPACITY_EXCEEDED\020\310\036\022\027\n\022FIL" +
+      "E_NAME_TOO_LONG\020\311\036\022 \n\033THE_NUMBER_OF_FILE" +
+      "_EXCEEDED\020\312\036\022\031\n\024NON_EXISTENT_ADDRESS\020\313\036\022",
+      "\025\n\020UFS_STORAGE_FULL\020\314\036\022\017\n\nDRIVE_FULL\020\315\036\022" +
+      "\020\n\013DRIVE_ERROR\020\316\036\022\016\n\tNOT_FOUND\020\317\036\022\026\n\021INV" +
+      "ALID_FILE_NAME\020\320\036\022\031\n\024FILE_ALREADY_EXISTE" +
+      "D\020\321\036\022\032\n\025FAILED_TO_CREATE_FILE\020\322\036\022\031\n\024FAIL" +
+      "ED_TO_WRITE_FILE\020\323\036\022\"\n\035FAILED_TO_OPEN_RE" +
+      "QUESTED_FILE\020\324\036\022\030\n\023FAILED_TO_READ_FILE\020\325" +
+      "\036\022\r\n\010MMS_BUSY\020\326\036\022\025\n\020SENDING_MMS_BUSY\020\327\036\022" +
+      "\030\n\023SENDING_MMS_STOPPED\020\330\036\022\034\n\027ALREADY_STO" +
+      "PPED_TO_SEND\020\331\036\022\027\n\022RECEIVING_MMS_BUSY\020\332\036" +
+      "\022\032\n\025RECEIVING_MMS_STOPPED\020\333\036\022\034\n\027ALREADY_",
+      "STOPPED_RECEIVE\020\334\036\022\032\n\025HTTP_RESPONSE_FALI" +
+      "URE\020\335\036\022\031\n\024INVALID_MMS_RESPONSE\020\336\036\022\027\n\022MMS" +
+      "_RESPONSE_ERROR\020\337\036\022\031\n\024INVALID_PUSH_MESSA" +
+      "GE\020\340\036\022\027\n\022ALREADY_DONWLOADED\020\341\036\022\021\n\014NETWOR" +
+      "K_BUSY\020\342\036\022\033\n\026FAILED_TO_OPEN_NETWORK\020\343\036\022\032" +
+      "\n\025NETWORK_NO_CONFIGURED\020\344\036\022\030\n\023NETWORK_DE" +
+      "ACTIVATED\020\345\036\022\026\n\021MMS_NETWORK_ERROR\020\346\036\022\025\n\020" +
+      "NETWORK_SHUTDOWN\020\347\036\022\016\n\tUART_BUSY\020\350\036\022\021\n\014U" +
+      "ART_ESCAPED\020\351\036\022\034\n\027FAILED_TO_CREATE_SOCKE" +
+      "T\020\352\036\022\035\n\030FAILED_TO_CONNECT_SOCKET\020\353\036\022\032\n\025F",
+      "AILED_TO_READ_SOCKET\020\354\036\022\033\n\026FAILED_TO_WRI" +
+      "TE_SOCKET\020\355\036\022\022\n\rSOCKET_CLOSED\020\356\036\022\025\n\020MMS_" +
+      "LENGTH_ERROR\020\357\036\022\031\n\024FAILED_TO_ENCODE_MMS\020" +
+      "\360\036\022\031\n\024FAILED_TO_DECODE_MMS\020\361\036\022\032\n\025FAILED_" +
+      "TO_DECODE_HTTP\020\362\036\022\"\n\035FAILED_TO_DECODE_PU" +
+      "SH_MESSAGE\020\363\036\022\024\n\017PDU_ALIGN_ERROR\020\364\036\022\030\n\023P" +
+      "DU_CHARACTER_ERROR\020\365\036\022\024\n\017STRING_TOO_LONG" +
+      "\020\366\036\022\r\n\010MMS_FULL\020\367\036\022\025\n\020NON_EXISTENT_MMS\020\370" +
+      "\036\022\024\n\017INVALID_ADDRESS\020\371\036\022\030\n\023MMS_VOICE_CAL" +
+      "L_BUSY\020\372\036\022\030\n\023ALLOC_MEMORY_FAILED\020\373\036\022\026\n\021E",
+      "XCEED_MAX_LENGTH\020\240\037\022\023\n\016OPEN_FILE_FAIL\020\241\037" +
+      "\022\024\n\017WRITE_FILE_FAIL\020\242\037\022\022\n\rGET_SIZE_FAIL\020" +
+      "\243\037\022\016\n\tREAD_FAIL\020\244\037\022\023\n\016LIST_FILE_FAIL\020\245\037\022" +
+      "\025\n\020DELETE_FILE_FAIL\020\246\037\022\027\n\022GET_DISC_INFO_" +
+      "FAIL\020\247\037\022\r\n\010NO_SPACE\020\250\037\022\r\n\010TIME_OUT\020\251\037\022\030\n" +
+      "\023HTTP_FILE_NOT_FOUND\020\252\037\022\023\n\016FILE_TOO_LARG" +
+      "E\020\253\037\022\027\n\022FILE_ALREADY_EXIST\020\254\037\022\026\n\021INVALID" +
+      "_PARAMETER\020\255\037\022\021\n\014DRIVER_ERROR\020\256\037\022\020\n\013CREA" +
+      "TE_FAIL\020\257\037\022\022\n\rACCESS_DENIED\020\260\037\022\026\n\021FILE_I" +
+      "S_TOO_LARGE\020\261\037\022\021\n\014WRONG_FORMAT\020\314!\022\024\n\017AUD",
+      "IO_TASK_BUSY\020\316!\022\027\n\022CREATE_FILE_FAILED\020\317!" +
+      "\022/\n*ADDITIONAL_RECORDING_IN_A_DIFFERENT_" +
+      "FORMAT\020\320!\022\016\n\tDISC_FULL\020\321!\022\035\n\030WRITE_PROTE" +
+      "CTION_ON_FILE\020\322!\022\033\n\026RECORDING_UNKNOW_ERR" +
+      "OR\020\223#*\260\007\n\023FTPErrorMessageType\022\n\n\006FTP_OK\020" +
+      "\000\022\024\n\020FTP_UNKNOW_ERROR\020\001\022\024\n\020FTP_SERVICE_B" +
+      "USY\020\003\0225\n1FAILED_TO_GET_IP_ADDRESS_ACCORD" +
+      "ING_TO_DOMAIN_NAME\020\004\022\025\n\021FTP_NETWORK_ERRO" +
+      "R\020\005\022$\n FTP_SESSION_CLOSED_BY_FTP_SERVER\020" +
+      "\006\022,\n(DATA_CONNECTION_OF_FTP_SERVICE_IS_C",
+      "LOSED\020\007\022\'\n#FTP_GPRS_CSD_CONTEXT_IS_DEACT" +
+      "IVATED\020\010\022\017\n\013FTP_TIMEOUT\020\t\022\036\n\032INPUT_PARAM" +
+      "ETAR_IS_ILLEGAL\020\n\022$\n FILE_NOT_FOUND_IN_L" +
+      "OCAL_POSITION\020\013\022(\n$FAILED_TO_GET_FILE_IN" +
+      "_LOCAL_POSITION\020\014\022\'\n#FTP_NO_ENOUGH_MEMOR" +
+      "Y_FOR_ATTACHMENT\020\r\022$\n\037FTP_SERVER_CANT_SU" +
+      "PPORT_SERVICE\020\245\003\022#\n\036FAILED_TO_OPEN_DATA_" +
+      "CONNECTION\020\251\003\022,\n\'CONNECTION_CLOSED_AND_S" +
+      "TOP_TRANSFERRING\020\252\003\022#\n\036REQUEST_FOR_FILE_" +
+      "ISNT_OPERATED\020\302\003\022%\n FTP_SERVER_HAS_NOT_E",
+      "NOUGH_MEMORY\020\304\003\022#\n\036FORMAT_OF_FTP_COMMAND" +
+      "_IS_WRONG\020\364\003\022&\n!PARAMETER_OF_FTP_COMMAND" +
+      "_IS_WRONG\020\365\003\022,\n\'FTP_COMMAND_ISNT_OPERATE" +
+      "D_BY_FTP_SERVER\020\366\003\022\031\n\024NOT_LOGIN_FTP_SERV" +
+      "ER\020\222\004\022 \n\033NEED_INFORMATION_OF_ACCOUNT\020\224\004\022" +
+      "\032\n\025REQUEST_ISNT_OPERATED\020\246\004\022\027\n\022REQUEST_I" +
+      "S_STOPPED\020\247\004\022\037\n\032REQUEST_OF_FILE_IS_STOPP" +
+      "ED\020\250\004\022\031\n\024FILE_NAME_IS_ILLEGAL\020\251\004B \n\023com." +
+      "rtrk.atcommandsB\tATCommandb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -59752,97 +63377,97 @@ public final class ATCommand {
     internal_static_com_rtrk_protobuf_HTTPCommand_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_rtrk_protobuf_HTTPCommand_descriptor,
-        new java.lang.String[] { "MessageType", "Test", "Write", "URLLength", "InputTime", "ToReadTime", "WaitTime", "BodySize", "FileName", "Length", "DownloadSize", "ContentLength", "Errorcode", "Error", "Data", "BodyData", });
+        new java.lang.String[] { "MessageType", "Test", "Write", "URLLength", "InputTime", "ToReadTime", "WaitTime", "BodySize", "FileName", "Length", "DownloadSize", "ContentLength", "Data", "BodyData", "Description", "IsRespone", });
     internal_static_com_rtrk_protobuf_FileCommand_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_com_rtrk_protobuf_FileCommand_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_rtrk_protobuf_FileCommand_descriptor,
-        new java.lang.String[] { "MessageType", "Test", "Read", "Write", "Execution", "NamePattern", "FreeSize", "TotalSize", "MaxAllocSize", "UFSFileSize", "UFSFileNumber", "FileName", "FileSize", "RamSize", "UploadSize", "Timeout", "AckMode", "SrcFileName", "DestFileName", "Copy", "Owerwrite", "Mode", "Length", "FileHandle", "ReadLength", "WrittenLength", "TotalLength", "Offset", "Position", "Checksum", "Error", });
+        new java.lang.String[] { "MessageType", "Test", "Read", "Write", "Execution", "NamePattern", "FreeSize", "TotalSize", "MaxAllocSize", "UFSFileSize", "UFSFileNumber", "FileName", "FileSize", "RamSize", "UploadSize", "Timeout", "AckMode", "SrcFileName", "DestFileName", "Copy", "Owerwrite", "Mode", "Length", "FileHandle", "ReadLength", "WrittenLength", "TotalLength", "Offset", "Position", "Checksum", "DownloadSize", "IsResponse", "Description", });
     internal_static_com_rtrk_protobuf_FTPCommand_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_com_rtrk_protobuf_FTPCommand_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_rtrk_protobuf_FTPCommand_descriptor,
-        new java.lang.String[] { "MessageType", "Test", "Read", "Write", "Execution", "HostName", "Port", "Error", "FileName", "FileSize", "Time", "UploadSize", "DownloadSize", "PathName", "Username", "Password", "Type", "Value", "Status", "Length", "SourceName", "TargetName", "Name", "Return", "DirectoryName", });
+        new java.lang.String[] { "MessageType", "Test", "Read", "Write", "Execution", "HostName", "Port", "FileName", "FileSize", "Time", "UploadSize", "DownloadSize", "PathName", "Username", "Password", "Type", "Value", "Status", "Length", "SourceName", "TargetName", "Name", "Return", "DirectoryName", "IsResponse", "Description", });
     internal_static_com_rtrk_protobuf_MMSCommand_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_com_rtrk_protobuf_MMSCommand_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_rtrk_protobuf_MMSCommand_descriptor,
-        new java.lang.String[] { "MessageType", "Test", "Read", "Write", "MMSCURL", "Type", "Gateway", "Port", "Valid", "Priority", "SendReport", "ReadReport", "Visible", "Class_", "Charset", "InputMode", "Function", "Operate", "Opstring", "From", "To", "MMSIndex", "FromAddress", "IsNotDownloaded", "Date", "Time", "MessageSize", "Para", "FileName", "DownloadSize", "Checksum", "DURAttribute", "SMSToSIM", "EnableUSC2", "BigEndian", "OutputStyle", "FileType", "Error", });
+        new java.lang.String[] { "MessageType", "Test", "Read", "Write", "MMSCURL", "Type", "Gateway", "Port", "Valid", "Priority", "SendReport", "ReadReport", "Visible", "Class_", "Charset", "InputMode", "Function", "Operate", "Opstring", "From", "To", "MMSIndex", "FromAddress", "IsNotDownloaded", "Date", "Time", "MessageSize", "Para", "FileName", "DownloadSize", "Checksum", "DURAttribute", "SMSToSIM", "EnableUSC2", "BigEndian", "OutputStyle", "FileType", "IsResponse", "Description", });
     internal_static_com_rtrk_protobuf_QuecCellCommand_descriptor =
       getDescriptor().getMessageTypes().get(4);
     internal_static_com_rtrk_protobuf_QuecCellCommand_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_rtrk_protobuf_QuecCellCommand_descriptor,
-        new java.lang.String[] { "MessageType", "Test", "Read", "Write", "Execution", "Status", "OperatorInString", "OperatorInShortString", "OperatorInNumber", "IndexN", "LocationAreaCode", "CellID", "BaseStationIdentityCode", "ReceiveLevel", "AbsoluteRadioFrequencyChannelNumber", "Mode", "Dump", "MobileCountryCode", "MobileNetworkCode", "BroadcastControlChannel", "ReceiveSignalLeve", "C1", "C2", "TransmitPowerMaximum", "ReceiveLevelAccess", "Timeslots", "MAIOValue", "HSNValue", "TCH", "TimingAdvance", "RXQualitySub", "RXQualityFull", "NumberOfNeighboringSixCell", "Band1900", "RrState", "ChannelType", "AutomaticReport", "Line", "ForbiddenData", "Band", "Value", "Arcfn1", "Arcfn2", "Arcfn3", });
+        new java.lang.String[] { "MessageType", "Test", "Read", "Write", "Execution", "Status", "OperatorInString", "OperatorInShortString", "OperatorInNumber", "IndexN", "LocationAreaCode", "CellID", "BaseStationIdentityCode", "ReceiveLevel", "AbsoluteRadioFrequencyChannelNumber", "Mode", "Dump", "MobileCountryCode", "MobileNetworkCode", "BroadcastControlChannel", "ReceiveSignalLeve", "C1", "C2", "TransmitPowerMaximum", "ReceiveLevelAccess", "Timeslots", "MAIOValue", "HSNValue", "TCH", "TimingAdvance", "RXQualitySub", "RXQualityFull", "NumberOfNeighboringSixCell", "Band1900", "RrState", "ChannelType", "AutomaticReport", "Line", "ForbiddenData", "Band", "Value", "Arcfn1", "Arcfn2", "Arcfn3", "IsResponse", "Description", });
     internal_static_com_rtrk_protobuf_RecordingCommand_descriptor =
       getDescriptor().getMessageTypes().get(5);
     internal_static_com_rtrk_protobuf_RecordingCommand_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_rtrk_protobuf_RecordingCommand_descriptor,
-        new java.lang.String[] { "MessageType", "Test", "Read", "Write", "Execution", "State", "FileName", "Format", "Repeat", "Volume", "Channel", "Control", "Error", });
+        new java.lang.String[] { "MessageType", "Test", "Read", "Write", "Execution", "State", "FileName", "Format", "Repeat", "Volume", "Channel", "Control", "IsResponse", "Description", });
     internal_static_com_rtrk_protobuf_SMTPCommand_descriptor =
       getDescriptor().getMessageTypes().get(6);
     internal_static_com_rtrk_protobuf_SMTPCommand_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_rtrk_protobuf_SMTPCommand_descriptor,
-        new java.lang.String[] { "MessageType", "Test", "Read", "Write", "Execution", "User", "Password", "Address", "Name", "ServerAddress", "Port", "Mode", "Type", "EmailAddress", "Result", "Charset", "Title", "Timeout", "FileIndex", "FileName", "FileSize", "Value", });
+        new java.lang.String[] { "MessageType", "Test", "Read", "Write", "Execution", "User", "Password", "Address", "Name", "ServerAddress", "Port", "Mode", "Type", "EmailAddress", "Result", "Charset", "Title", "Timeout", "FileIndex", "FileName", "FileSize", "Value", "IsResponse", "Description", });
     internal_static_com_rtrk_protobuf_STKCommand_descriptor =
       getDescriptor().getMessageTypes().get(7);
     internal_static_com_rtrk_protobuf_STKCommand_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_rtrk_protobuf_STKCommand_descriptor,
-        new java.lang.String[] { "MessageType", "Test", "Read", "Write", "Execution", "N", "Profile", "SatCommand", "TerminalResponse", });
+        new java.lang.String[] { "MessageType", "Test", "Read", "Write", "Execution", "N", "Profile", "SatCommand", "TerminalResponse", "IsResponse", "Description", });
     internal_static_com_rtrk_protobuf_GeneralCommand_descriptor =
       getDescriptor().getMessageTypes().get(8);
     internal_static_com_rtrk_protobuf_GeneralCommand_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_rtrk_protobuf_GeneralCommand_descriptor,
-        new java.lang.String[] { "MessageType", "Test", "Read", "Write", "Execution", "Value", "N", "Functionality", "Reset", "CharacterSet", });
+        new java.lang.String[] { "MessageType", "Test", "Read", "Write", "Execution", "Value", "N", "Functionality", "Reset", "CharacterSet", "IsResponse", "Description", });
     internal_static_com_rtrk_protobuf_SerialInterfaceControlCommand_descriptor =
       getDescriptor().getMessageTypes().get(9);
     internal_static_com_rtrk_protobuf_SerialInterfaceControlCommand_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_rtrk_protobuf_SerialInterfaceControlCommand_descriptor,
-        new java.lang.String[] { "MessageType", "Test", "Read", "Write", "Execution", "Value", "Format", "Partity", "DCEByDTE", "DTEByDCE", "Rate", "EnableDualUART", "Subset", "PortSpeed", "MaximumFrameSize", "AcknowledmentTimer", "MaximumNumberOfRetransmissions", "ResponseTimer", "WakeUpResponseTimer", "WindowsSize", "BaudRate", "DataBits", "StopBits", "Mode", });
+        new java.lang.String[] { "MessageType", "Test", "Read", "Write", "Execution", "Value", "Format", "Partity", "DCEByDTE", "DTEByDCE", "Rate", "EnableDualUART", "Subset", "PortSpeed", "MaximumFrameSize", "AcknowledmentTimer", "MaximumNumberOfRetransmissions", "ResponseTimer", "WakeUpResponseTimer", "WindowsSize", "BaudRate", "DataBits", "StopBits", "Mode", "IsResponse", "Description", });
     internal_static_com_rtrk_protobuf_StatusControlCommand_descriptor =
       getDescriptor().getMessageTypes().get(10);
     internal_static_com_rtrk_protobuf_StatusControlCommand_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_rtrk_protobuf_StatusControlCommand_descriptor,
-        new java.lang.String[] { "MessageType", "Test", "Read", "Write", "Execution", "LocationID", "Cause", "Pas", "Status", "RefuseSMS", "RefuseCall", "Mode", "Extunsol", "State", "Enable", "Time", "DatlightSavingTime", "InsertLevel", "PinChoice", "InsertStatus", "Type", });
+        new java.lang.String[] { "MessageType", "Test", "Read", "Write", "Execution", "LocationID", "Cause", "Pas", "Status", "RefuseSMS", "RefuseCall", "Mode", "Extunsol", "State", "Enable", "Time", "DatlightSavingTime", "InsertLevel", "PinChoice", "InsertStatus", "Type", "IsResponse", "Description", });
     internal_static_com_rtrk_protobuf_SIMRelatedCommand_descriptor =
       getDescriptor().getMessageTypes().get(11);
     internal_static_com_rtrk_protobuf_SIMRelatedCommand_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_rtrk_protobuf_SIMRelatedCommand_descriptor,
-        new java.lang.String[] { "MessageType", "Test", "Read", "Write", "Execution", "Fac", "Mode", "Password", "Class_", "Status", "Pin", "NewPin", "PwdLength", "OldPwd", "NewPwd", "Command", "FileID", "P1", "P2", "P3", "SW1", "SW2", "Data", "Response", "Length", "CCIDData", "GID1", "GID2", "ServiceProvideName", "DisplayMode", "Chv1", "Chv2", "Puk1", "Puk2", });
+        new java.lang.String[] { "MessageType", "Test", "Read", "Write", "Execution", "Fac", "Mode", "Password", "Class_", "Status", "Pin", "NewPin", "PwdLength", "OldPwd", "NewPwd", "Command", "FileID", "P1", "P2", "P3", "SW1", "SW2", "Data", "Response", "Length", "CCIDData", "GID1", "GID2", "ServiceProvideName", "DisplayMode", "Chv1", "Chv2", "Puk1", "Puk2", "IsResponse", "Description", });
     internal_static_com_rtrk_protobuf_NetworkServiceCommand_descriptor =
       getDescriptor().getMessageTypes().get(12);
     internal_static_com_rtrk_protobuf_NetworkServiceCommand_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_rtrk_protobuf_NetworkServiceCommand_descriptor,
-        new java.lang.String[] { "MessageType", "Test", "Read", "Writw", "Execution", "Status", "Operator", "Mode", "Format", "N", "LocationAreaCode", "CellID", "Rssi", "Ber", "Index", "Numericn", "Alphan", "OpBand", "Dump", "Band", "Frequency", "SignalStrength", "Band1900", "Arfcn1", "Arfcn2", "Arfcn3", });
+        new java.lang.String[] { "MessageType", "Test", "Read", "Writw", "Execution", "Status", "Operator", "Mode", "Format", "N", "LocationAreaCode", "CellID", "Rssi", "Ber", "Index", "Numericn", "Alphan", "OpBand", "Dump", "Band", "Frequency", "SignalStrength", "Band1900", "Arfcn1", "Arfcn2", "Arfcn3", "IsResponse", "Description", });
     internal_static_com_rtrk_protobuf_CallRelatedCommand_descriptor =
       getDescriptor().getMessageTypes().get(13);
     internal_static_com_rtrk_protobuf_CallRelatedCommand_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_rtrk_protobuf_CallRelatedCommand_descriptor,
-        new java.lang.String[] { "MessageType", "Test", "Read", "Write", "Execution", "Number", "GSMModifier", "InterworkinWindowsSize", "MobileWindowSize", "AcknowledmentTimer", "RetransimissionAttempts", "RPLVersion", "ResequencingPeriod", "N", "Type", "Index", "Dir", "Stat", "Mode", "Multiparty", "SpeechChannel", "DisableATH", "SetUpVoiceCall", });
+        new java.lang.String[] { "MessageType", "Test", "Read", "Write", "Execution", "Number", "GSMModifier", "InterworkinWindowsSize", "MobileWindowSize", "AcknowledmentTimer", "RetransimissionAttempts", "RPLVersion", "ResequencingPeriod", "N", "Type", "Index", "Dir", "Stat", "Mode", "Multiparty", "SpeechChannel", "DisableATH", "SetUpVoiceCall", "IsResponse", "Description", });
     internal_static_com_rtrk_protobuf_SMSCommand_descriptor =
       getDescriptor().getMessageTypes().get(14);
     internal_static_com_rtrk_protobuf_SMSCommand_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_rtrk_protobuf_SMSCommand_descriptor,
-        new java.lang.String[] { "MesssageType", "Test", "Read", "Write", "Execution", "Service", "MobileTerminatedMessage", "MobileOrientedMessage", "BroadcastTypeMessage", "Mode", "SCAddress", "ToSCAddress", "Mem1", "Mem2", "Mem3", "Index", "Delflag", "Alpha", "DestinationAddress", "Data", "Length", "OriginatingAddress", "Pdu", "ServiceCenterTimeStamp", "TPDestinationAddress", "TPOriginatingAddress", "Fo", "MessageIdentifier", "ProtocolIdentifier", "Stat", "ValidityPeriod", "MessageReference", "Ackpdu", "CommandType", "MessageNumber", "Ds", "Buffer", "Profile", "MessageIdentifiers", "Dcss", "Show", "DataCodinScheme", "Type", "Status", "FirstOctet", });
+        new java.lang.String[] { "MesssageType", "Test", "Read", "Write", "Execution", "Service", "MobileTerminatedMessage", "MobileOrientedMessage", "BroadcastTypeMessage", "Mode", "SCAddress", "ToSCAddress", "Mem1", "Mem2", "Mem3", "Index", "Delflag", "Alpha", "DestinationAddress", "Data", "Length", "OriginatingAddress", "Pdu", "ServiceCenterTimeStamp", "TPDestinationAddress", "TPOriginatingAddress", "Fo", "MessageIdentifier", "ProtocolIdentifier", "Stat", "ValidityPeriod", "MessageReference", "Ackpdu", "CommandType", "MessageNumber", "Ds", "Buffer", "Profile", "MessageIdentifiers", "Dcss", "Show", "DataCodinScheme", "Type", "Status", "FirstOctet", "IsResponse", "Description", });
     internal_static_com_rtrk_protobuf_PhonebookCommand_descriptor =
       getDescriptor().getMessageTypes().get(15);
     internal_static_com_rtrk_protobuf_PhonebookCommand_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_rtrk_protobuf_PhonebookCommand_descriptor,
-        new java.lang.String[] { "MessageType", "Test", "Read", "Write", "Execution", "Storage", "Nlength", "Tlength", "Index", "Number", "Type", "Text", "Index1", "Index2", "FindText", "Alphax", "Numberx", "Typex", });
+        new java.lang.String[] { "MessageType", "Test", "Read", "Write", "Execution", "Storage", "Nlength", "Tlength", "Index", "Number", "Type", "Text", "Index1", "Index2", "FindText", "Alphax", "Numberx", "Typex", "IsResponse", "Description", });
     internal_static_com_rtrk_protobuf_GPRSCommand_descriptor =
       getDescriptor().getMessageTypes().get(16);
     internal_static_com_rtrk_protobuf_GPRSCommand_fieldAccessorTable = new
@@ -59879,6 +63504,12 @@ public final class ATCommand {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_rtrk_protobuf_OthersCommand_descriptor,
         new java.lang.String[] { "MessageType", "Test", "Read", "Write", "Execution", "Value", "N", "TimeMode", "IndMode", });
+    internal_static_com_rtrk_protobuf_ErrorCommand_descriptor =
+      getDescriptor().getMessageTypes().get(22);
+    internal_static_com_rtrk_protobuf_ErrorCommand_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_com_rtrk_protobuf_ErrorCommand_descriptor,
+        new java.lang.String[] { "ErrorMessageType", "FTPErrorMessagetType", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

@@ -17,10 +17,10 @@ message HTTPCommand {
 	int32 length = 10;
 	int32 downloadSize = 11;
 	int32 contentLength = 12;
-	Error errorcode = 13;
-	Error error = 14;
 	bytes data = 15;
 	bytes bodyData = 16;
+	string description = 17;
+	bool isRespone = 18;
 }
 
 message FileCommand {
@@ -54,7 +54,9 @@ message FileCommand {
 	int32 offset = 28;
 	int32 position = 29;
 	int32 checksum = 30;
-	Error error = 31;
+	int32 downloadSize = 31;
+	bool isResponse = 32;
+	string description = 33;
 }
 
 message FTPCommand {
@@ -65,7 +67,6 @@ message FTPCommand {
 	bool execution = 5;
 	string hostName = 6;
 	int32 port = 7;
-	Error error = 25;
 	string fileName = 8;
 	int32 fileSize = 9;
 	int32 time = 10;
@@ -83,6 +84,8 @@ message FTPCommand {
 	string name = 22;
 	int32 return = 23;
 	string directoryName = 24;
+	bool isResponse = 25;
+	string description = 26;
 }
 
 message MMSCommand {
@@ -123,7 +126,8 @@ message MMSCommand {
 	bool bigEndian = 34;
 	int32 outputStyle = 35;
 	int32 fileType = 36;
-	Error error = 37;
+	bool isResponse = 39;
+	string description = 40;
 }
 
 message QuecCellCommand {
@@ -171,6 +175,8 @@ message QuecCellCommand {
 	int32 arcfn1 = 41;
 	int32 arcfn2 = 42;
 	int32 arcfn3 = 43;
+	bool isResponse = 45;
+	string description = 46;
 }
 
 message RecordingCommand {
@@ -186,7 +192,8 @@ message RecordingCommand {
 	int32 volume = 9;
 	int32 channel = 10;
 	int32 control = 11;
-	Error error = 12;
+	bool isResponse = 14;
+	string description = 15;
 }
 
 message SMTPCommand {
@@ -212,6 +219,8 @@ message SMTPCommand {
 	string fileName = 19;
 	int32 fileSize = 20;
 	int32 value = 21;
+	bool isResponse = 23;
+	string description = 24;
 }
 
 message STKCommand {
@@ -224,6 +233,8 @@ message STKCommand {
 	string profile = 7;
 	string satCommand = 8;
 	string terminalResponse = 9;
+	bool isResponse = 10;
+	string description = 11;
 }
 
 message GeneralCommand {
@@ -237,6 +248,8 @@ message GeneralCommand {
 	int32 functionality = 7;
 	int32 reset = 8;
 	string characterSet = 9;
+	bool isResponse = 11;
+	string description = 12;
 }
 
 message SerialInterfaceControlCommand {
@@ -264,6 +277,8 @@ message SerialInterfaceControlCommand {
 	int32 dataBits = 22;
 	int32 stopBits = 23;
 	int32 mode = 24;
+	bool isResponse = 25;
+	string description = 26;
 }
 
 message StatusControlCommand {
@@ -288,6 +303,8 @@ message StatusControlCommand {
 	int32 pinChoice = 19;
 	int32 insertStatus = 20;
 	int32 type = 21;
+	bool isResponse = 22;
+	string description = 23;
 }
 
 message SIMRelatedCommand {
@@ -325,6 +342,8 @@ message SIMRelatedCommand {
 	int32 chv2 = 28;
 	int32 puk1 = 29;
 	int32 puk2 = 30;
+	bool isResponse = 35;
+	string description = 36;
 }
 
 message NetworkServiceCommand {
@@ -354,6 +373,8 @@ message NetworkServiceCommand {
 	int32 arfcn1 = 24;
 	int32 arfcn2 = 25;
 	int32 arfcn3 = 26;
+	bool isResponse = 27;
+	string description = 28;
 }
 
 message CallRelatedCommand {
@@ -380,6 +401,8 @@ message CallRelatedCommand {
 	int32 speechChannel = 20;
 	bool disableATH = 21;
 	bool setUpVoiceCall = 22; //;
+	bool isResponse = 24;
+	string description = 25;
 }
 
 message SMSCommand {
@@ -428,6 +451,8 @@ message SMSCommand {
 	string type = 42;
 	int32 status = 43;
 	int32 firstOctet = 44; //fo
+	bool isResponse = 46;
+	string description = 47;
 }
 
 message PhonebookCommand {
@@ -449,6 +474,8 @@ message PhonebookCommand {
 	string alphax = 15;
 	string numberx = 16;
 	int32 typex = 17;
+	bool isResponse = 19;
+	string description = 20;
 }
 
 message GPRSCommand {
@@ -629,6 +656,11 @@ message OthersCommand {
 	int32 n = 7;
 	int32 timeMode = 8;
 	int32 indMode = 9;
+}
+
+message ErrorCommand {
+	ErrorMessageType errorMessageType = 1;
+	FTPErrorMessageType FTPErrorMessagetType = 2;
 }
 
 enum OthersMessageType {
@@ -985,40 +1017,38 @@ enum HTTPMessageType {
 	DOWNLODA_FILE_FROM_HTTP_SERVER = 4;
 }
 
-enum Error {
+enum ErrorMessageType {
 	OK = 0;
 	UNKNOW_ERROR = 1;
 	SERVICE_BUSY = 3;
 	FAILED_TO_GET_IP_ADDRESS = 4;
 	NETWORK_ERROR = 5;
-	FTP_SESSION_CLOSED = 6;
-	DATA_CONNECTION_CLOSED = 7;
+	UNSUPPORTED_AUTHENTICATION_TYPE = 6;
+	SERVICE_CLOSED = 7;
 	GPRS_CSD_CONTEXT_IS_DEACTIVATED = 8;
 	TIMEOUT = 9;
-	INPUT_PARAMETER_ILLEGAL = 10;
-	FILE_NOT_FOUND_IN_LOCAL_POSITION = 11;
-	FAILED_TO_GET_FILE_IN_LOCAL_POSITION = 12;
-	NO_ENOUGH_MEMORY = 13;
+	NO_RECIPIENT_FOR_SMTP_SERVICE = 10;
+	FAILED_TO_SEND_EMAIL = 11;
+	FAILED_TO_OPEN_FILE_FOR_ATTACHMENT = 12;
+	NO_ENOUGH_MEMORY_FOR_ATTACHMENT = 13;
 	FAILED_TO_SAVE_THE_ATTACHMENT = 14;
 	THE_INPUT_PARAMETER_IS_WRONG = 15;
-	FTP_SERVER_CANT_SUPPORT_SERVICE = 421;
-	FAILDE_TO_OPEN_DATA_CONNECTION = 425;
-	THE_CONNECTION_IS_CLOSED_AND_STOP_TRANSFER = 426;
-	THE_REQUEST_FOR_FILE_ISNT_OPERATED = 450;
-	THE_FTP_SERVER_HAS_NOT_ENOUGH_MEMORY = 452;
-	THE_FORMAT_OF_THE_FTP_COMMAND_IS_WRONG = 500;
-	THE_PATTERN_OF_THE_FTP_COMMAND_IS_WRONG = 501;
-	THE_FTP_COMMAND_ISNT_OPERATED_BY_FTP_SERVER = 502;
+	SERVICE_NOT_AVAILABLE = 421;
+	REQUESTED_MAIL_ACTION_NOT_TAKEN = 450;
+	REQUESTED_ACTION_ABORTED = 451;
+	REQUESTED_ACTION_NOT_TAKEN_INSUFFICIENT_SYSTEM_STORAGE = 452;
+	SYNTAX_ERROR_COMMAND_UNRECOGNIZED = 500;
+	SYNTAX_ERROR_IN_PARAMETERS_OR_ARGUMENTS = 501;
+	COMMAND_NOT_IMPLEMENTED = 502;
 	BAD_SEQUENCE_OF_COMMANDS = 503;
 	COMMAND_PARAMETER_NOT_IMPLEMENTED = 504;
 	DOMAIN_DOES_NOT_ACCEPT_EMAIL = 521;
-	NOT_LOGIN_TO_FTP_SERVER = 530;
-	NEEDED_INFORMATION_OF_ACCOUNT = 532;
+	ACCESS_DENIED_FOR_SMTP_SERVICE = 530;
 	AUTHENTICATION_FAILED = 535;
-	THE_REQUEST_IS_NOT_OPERATED = 550;
-	THE_REQUEST_IS_STOPPED = 551;
-	THE_REQUEST_OF_A_FILE_IS_STOPPED = 552;
-	FILE_NAME_IS_ILLEGAL = 553;
+	REQUESTED_ACTION_NOT_TAKEN = 550;
+	USER_NOT_LOCAL = 551;
+	REQUESTED_MAIL_ACTION_ABORTED_EXCEEDED_STORAGE_NOT_ALLOWED = 552;
+	REQUESTED_ACTION_NOT_TAKEN_MAILBOX_NAME_NOT_ALLOWED = 553;
 	TRANSACTION_FAILED = 554;
 	HTTP_TIME_OUT = 3801;
 	HTTP_BUSY = 3802;
@@ -1073,7 +1103,7 @@ enum Error {
 	FILE_ALREADY_EXISTED = 3921;
 	FAILED_TO_CREATE_FILE = 3922;
 	FAILED_TO_WRITE_FILE = 3923;
-	FAILED_TO_OPEN_FILE = 3924;
+	FAILED_TO_OPEN_REQUESTED_FILE = 3924;
 	FAILED_TO_READ_FILE = 3925;
 	MMS_BUSY = 3926;
 	SENDING_MMS_BUSY = 3927;
@@ -1138,4 +1168,34 @@ enum Error {
 	DISC_FULL = 4305;
 	WRITE_PROTECTION_ON_FILE = 4306;
 	RECORDING_UNKNOW_ERROR = 4499;
+}
+
+enum FTPErrorMessageType {
+	FTP_OK = 0;
+	FTP_UNKNOW_ERROR = 1;
+	FTP_SERVICE_BUSY = 3;
+	FAILED_TO_GET_IP_ADDRESS_ACCORDING_TO_DOMAIN_NAME = 4;
+	FTP_NETWORK_ERROR = 5;
+	FTP_SESSION_CLOSED_BY_FTP_SERVER = 6;
+	DATA_CONNECTION_OF_FTP_SERVICE_IS_CLOSED = 7;
+	FTP_GPRS_CSD_CONTEXT_IS_DEACTIVATED = 8;
+	FTP_TIMEOUT = 9;
+	INPUT_PARAMETAR_IS_ILLEGAL = 10;
+	FILE_NOT_FOUND_IN_LOCAL_POSITION = 11;
+	FAILED_TO_GET_FILE_IN_LOCAL_POSITION = 12;
+	FTP_NO_ENOUGH_MEMORY_FOR_ATTACHMENT = 13;
+	FTP_SERVER_CANT_SUPPORT_SERVICE = 421;
+	FAILED_TO_OPEN_DATA_CONNECTION = 425;
+	CONNECTION_CLOSED_AND_STOP_TRANSFERRING = 426;
+	REQUEST_FOR_FILE_ISNT_OPERATED = 450;
+	FTP_SERVER_HAS_NOT_ENOUGH_MEMORY = 452;
+	FORMAT_OF_FTP_COMMAND_IS_WRONG = 500;
+	PARAMETER_OF_FTP_COMMAND_IS_WRONG = 501;
+	FTP_COMMAND_ISNT_OPERATED_BY_FTP_SERVER = 502;
+	NOT_LOGIN_FTP_SERVER = 530;
+	NEED_INFORMATION_OF_ACCOUNT = 532;
+	REQUEST_ISNT_OPERATED = 550;
+	REQUEST_IS_STOPPED = 551;
+	REQUEST_OF_FILE_IS_STOPPED = 552;
+	FILE_NAME_IS_ILLEGAL = 553;
 }
