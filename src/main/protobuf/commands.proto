@@ -91,23 +91,33 @@ message FileCommand {
 	optional int32 ramSize = 14;
 	optional int32 uploadSize = 15;
 	optional int32 timeout = 16;
-	optional bool ackMode = 17;
-	optional string srcFileName = 18;
-	optional string destFileName = 19;
+	optional bool turnOnACTMode = 17;
+	optional string sourceFileName = 18;
+	optional string destinationFileName = 19;
 	optional bool copy = 20;
 	optional bool owerwrite = 21;
-	optional int32 mode = 22;
+	optional FileOpenMode mode = 22;
 	optional int32 length = 23;
 	optional int32 fileHandle = 24;
 	optional int32 readLength = 25;
 	optional int32 writtenLength = 26;
 	optional int32 totalLength = 27;
 	optional int32 offset = 28;
-	optional int32 position = 29;
-	optional int32 checksum = 30;
-	optional int32 downloadSize = 31;
+	optional PointerMovementMode position = 29;
 	optional bool isResponse = 32;
 	optional string description = 33;
+}
+
+enum FileOpenMode {
+	IF_NOT_EXISTS_CREATE_IF_EXISTS_OPEN = 0;
+	IF_EXISTS_CREATE_AND_CLEAR_OLD = 1;
+	IF_EXISTS_OPEN_IN_READ_MODE = 2;
+}
+
+enum PointerMovementMode {
+	FILE_BEGIN = 0;
+	CURRENT_POSITION_OF_POINTER = 1;
+	FILE_END = 2;
 }
 
 message FTPCommand {
@@ -126,17 +136,36 @@ message FTPCommand {
 	optional string pathName = 13;
 	optional string username = 14;
 	optional string password = 15;
-	optional int32 type = 16;
-	optional int32 value = 17;
+	optional TypeOfConfigurableParameters type = 16;
+	optional ParameterValue value = 17;
+	optional string valueString = 28;
 	optional string status = 18;
 	optional int32 length = 19;
 	optional string sourceName = 20;
 	optional string targetName = 21;
 	optional string name = 22;
-	optional int32 return = 23;
+	optional Return return = 23;
 	optional string directoryName = 24;
 	optional bool isResponse = 25;
 	optional string description = 26;
+	optional FTPError error = 27;
+}
+
+enum TypeOfConfigurableParameters {
+	MODE_OF_DATA_CONNECTION = 0;
+	TRANSFER_TYPE = 1;
+	RESUMING_POINT_TO_RESUME_FILE_TRANSFER = 2;
+	LOCAL_POSITION_OF_FILE_TRANSFER = 3;
+}
+
+enum ParameterValue {
+	ACTIVE_MODE_BINARY = 0;
+	PASSIVE_MODE_ASCII = 1;
+}
+
+enum Return {
+	RETURN_NO_INFORMATIONS_TRANSFERED_FROM_FTP = 0;
+	RETURN_OK = 1;
 }
 
 message MMSCommand {
@@ -145,22 +174,23 @@ message MMSCommand {
 	optional bool read = 3;
 	optional bool write = 4;
 	optional string MMSCURL = 5;
-	optional int32 type = 6;
+	optional ProtocolType protocolType = 6;
 	optional string gateway = 7;
 	optional int32 port = 8;
-	optional int32 valid = 9;
-	optional int32 priority = 10;
+	optional ValidityPeriod validityPeriod = 9;
+	optional Priority priority = 10;
 	optional bool sendReport = 11;
 	optional bool readReport = 12;
-	optional int32 visible = 13;
-	optional int32 class = 14;
+	optional AddressVisible addressVisible = 13;
+	optional MMSMessageClass mmsClass = 14;
 	optional string charset = 15;
-	optional int32 inputMode = 38;
-	optional int32 function = 16;
-	optional int32 operate = 17;
+	optional TitleInputMode titleInputMode = 38;
+	optional OperateFunction operateFunction = 16;
+	optional OperateWriteMMS operateWriteMMS = 17;
 	optional string opstring = 18;
 	optional int32 from = 19;
 	optional int32 to = 20;
+	optional OperateManageMMS operateManageMMS = 41;
 	optional int32 MMSIndex = 21;
 	optional string fromAddress = 22;
 	optional bool isNotDownloaded = 23;
@@ -168,17 +198,119 @@ message MMSCommand {
 	optional string time = 25;
 	optional int32 messageSize = 26;
 	optional int32 para = 27;
+	optional TitleInputMode paraOutputMode = 43;
+	optional OperateReadMMS operateReadMMS = 42;
 	optional string fileName = 28;
 	optional int32 downloadSize = 29;
+	optional OperateReceiveMMS operateReceiveMMS = 44;
 	optional int32 checksum = 30;
+	optional bool callHasHigherPriorityThanMMS = 45;
 	optional int64 DURAttribute = 31;
-	optional int32 SMSToSIM = 32;
+	optional bool SMSMessageHandling = 32;
 	optional bool enableUSC2 = 33;
 	optional bool bigEndian = 34;
-	optional int32 outputStyle = 35;
+	optional bool outputStyle = 35;
 	optional int32 fileType = 36;
 	optional bool isResponse = 39;
 	optional string description = 40;
+	optional OperateSendMMS operateSendMMS = 46;
+}
+
+enum FileType {
+	UNKNOW_TYPE = 0;
+	TEXT = 1;
+	TEXT_HTML = 2;
+	TEXT_PLAIN = 3;
+	TEXT_XML = 4;
+	IMAGE = 5;
+	IMAGE_GIF = 6;
+	IMAGE_JPEG = 7;
+	IMAGE_TIFF = 8;
+	IMAGE_PNP = 9;
+	IMAGE_WBMP = 10;
+	AUDIO = 11;
+	VIDEO = 12;
+	SMIL = 13;
+}
+
+enum OperateSendMMS {
+	UNKNOW_OPERATE_SEND_MMS = 0;
+	START_TO_SEND_MMS = 1;
+}
+
+enum OperateReceiveMMS {
+	UNKNOW_OPERATE_RECEIVE_MMS = 0;
+	START_TO_RECEIVE_MMS_MESSAGE = 1;
+}
+
+enum OperateReadMMS {
+	UNKNOW_OPERATE_READ_MMS = 0;
+	VIEW_ORIGINATION_ADDRESS = 1;
+	VIEW_TO_ADDRESS = 2;
+	VIEW_CC_ADDRESS = 3;
+	VIEW_MMS_TITLE = 4;
+	LIST_APPEND_FILE = 5;
+	READ_APPEND_FILE_DATA_OF_MMS_MESSAGE = 6;
+}
+
+enum OperateManageMMS {
+	DELETE_MMS_MESSAGE = 0;
+	LIST_MMS_MESSAGE = 1;
+}
+
+enum OperateWriteMMS {
+	CLEAN_OPERATE = 0;
+	WRITE_OPERATE = 1;
+}
+
+enum OperateFunction {
+	CLEAR_ALL_CONTENT_OF_MMS_MESSAGE = 0;
+	OPERATE_TO_ADDRESS = 1;
+	OPERATE_CC_ADDRESS = 2;
+	OPERATE_BCC_ADDRESS = 3;
+	OPERATE_TITLE = 4;
+	OPERATE_FILE_APPENDED = 5;
+}
+
+enum ProtocolType {
+	UNKNOW = 0;
+	HHTP_PROTOCOL = 1;
+}
+
+enum ValidityPeriod {
+	TIME_1_HOUR = 0;
+	TIME_12_HOURS = 1;
+	TIME_24_HOURS = 2;
+	TIME_2_DAYS = 3;
+	TIME_1_WEEK = 4;
+	MAXIMUM_TIME = 5;
+	USE_NETWORK_CONFIGURATION_TIME = 6;
+}
+
+enum Priority {
+	LOW_PRIORITY = 0;
+	NORMAL_PRIORITY = 1;
+	HIGH_PRIORITY = 2;
+	USE_NETWORK_CONFIGURATION_PRIORITY = 3;
+}
+
+enum AddressVisible {
+	HIDE_ANY_ADDRESS = 0;
+	SHOW_EVEN_SECRET_ADDRESS = 1;
+	USE_NETWORK_CONFIGURATION_ADDRESS_VISIBLE = 2;
+}
+
+enum MMSMessageClass {
+	PERSONAL_CLASS = 0;
+	ADVERTISEMENT_CLASS = 1;
+	INFORMATIONAL_CLASS = 2;
+	AUTO_CLASS = 3;
+	USE_NETWORK_CONFIGURATION_CLASS = 4;
+}
+
+enum TitleInputMode {
+	PDU_HEX_MODE = 0;
+	TEXT_BIN_MODE = 1;
 }
 
 message QuecCellCommand {
@@ -187,7 +319,7 @@ message QuecCellCommand {
 	optional bool read = 3;
 	optional bool write = 4;
 	optional bool execution = 5;
-	optional int32 status = 6;
+	optional OperatorStatus status = 6;
 	optional string operatorInString = 7;
 	optional string operatorInShortString = 8;
 	optional int32 operatorInNumber = 9;
@@ -196,9 +328,9 @@ message QuecCellCommand {
 	optional int32 cellID = 12;
 	optional int32 baseStationIdentityCode = 13;
 	optional int32 receiveLevel = 14; //rxlev
-	optional double absoluteRadioFrequencyChannelNumber = 15;
-	optional int32 mode = 44;
-	optional int32 dump = 16;
+	optional int32 absoluteRadioFrequencyChannelNumber = 15;
+	optional int32 engineeringMode = 44;
+	optional Dump dump = 16;
 	optional int32 mobileCountryCode = 17;
 	optional int32 mobileNetworkCode = 18;
 	optional int32 broadcastControlChannel = 19;
@@ -216,18 +348,68 @@ message QuecCellCommand {
 	optional int32 RXQualityFull = 31;
 	optional int32 numberOfNeighboringSixCell = 32;
 	optional bool band1900 = 33;
-	optional int32 rrState = 34;
+	optional RRState rrState = 34;
 	optional string channelType = 35;
 	optional bool automaticReport = 36;
 	optional int32 line = 37;
 	optional string forbiddenData = 38;
-	optional int32 band = 39;
+	optional Band band = 39;
 	optional int32 value = 40;
 	optional int32 arcfn1 = 41;
 	optional int32 arcfn2 = 42;
 	optional int32 arcfn3 = 43;
 	optional bool isResponse = 45;
 	optional string description = 46;
+	optional bool lockFrequency = 47;
+	optional bool MEHasLocked = 48;
+	optional ForbidOperatorMode forbidOperatorMode = 49;
+	optional bool MEHaveLockedCertainARCFN = 50;
+}
+
+enum Band {
+	GSM_900_BAND = 0;
+	DCS_1800_BAND = 1;
+	PCS_1900_BAND = 2;
+	GSM_850_BAND = 3;
+}
+
+enum ForbidOperatorMode {
+	READ_LINE_OF_FORBIDDEN_DATA = 0;
+	WRITE_LINE_OF_FORBIDDEN_DATA = 1;
+	CLEAN_LINE_OF_FORBIDDEN_DATA = 2;
+	CLEAR_ALL_FORBIDDEN_DATA = 3;
+	READ_FORBIDDEN_DATA = 4;
+	WRITE_FORBIDDEN_DATA = 5;
+}
+
+enum RRState {
+	NULL_STATE = 0;
+	INACTIVE_STATE = 1;
+	CELL_SELECT_STATE = 2;
+	IDLE_STATE = 3;
+	ACCESS_STATE = 4;
+	PACKET_TRANSFER_STATE = 5;
+	DEDICATED_STATE = 6;
+	CELL_RESELECT_STATE = 7;
+}
+
+enum Dump {
+	ONLY_DISPLAY_INFORMATION_OF_SERVING_CALL = 0;
+	DISPLAY_INFORMATION_OF_SERVING_CELL_AND_1_6_NEIGHBORING_CELLS = 1;
+	LIST_OF_ARCFN_AND_CALL_FREQUENCY_LIST_OF_SERVING_CELL = 2;
+}
+
+enum EngineeringMode {
+	SWITCH_OFF_ENGINEERING_MODE = 0;
+	SWITCH_ON_ENGINEERING_MODE = 1;
+	SWITCH_ON_ENGINEERING_MODE_AND_ACTIVATE_URC = 2;
+}
+
+enum OperatorStatus {
+	UNKNOW_OPERATOR = 0;
+	OPERATOR_AVAILABLE = 1;
+	CURRENT_OPERATOR = 2;
+	FORBIDDEN_OPERATOR = 3;
 }
 
 message RecordingCommand {
@@ -255,13 +437,12 @@ message SMTPCommand {
 	optional bool execution = 5;
 	optional string user = 6;
 	optional string password = 7;
-	optional string address = 8;
+	optional string emailAddress = 8;
 	optional string name = 9;
 	optional string serverAddress = 10;
 	optional int32 port = 11;
 	optional int32 mode = 12;
 	optional int32 type = 13;
-	optional string emailAddress = 14;
 	optional int32 result = 15;
 	optional int32 charset = 22;
 	optional string title = 16;
@@ -271,7 +452,7 @@ message SMTPCommand {
 	optional int32 fileSize = 20;
 	optional int32 value = 21;
 	optional bool isResponse = 23;
-	optional string description = 24;
+	optional string description = 14;
 }
 
 message STKCommand {
@@ -722,8 +903,8 @@ message OthersCommand {
 }
 
 message ErrorCommand {
-	optional ErrorMessageType errorMessageType = 1;
-	optional FTPErrorMessageType FTPErrorMessagetType = 2;
+	optional Error error = 1;
+	optional FTPError FTPError = 2;
 }
 
 enum OthersMessageType {
@@ -1080,7 +1261,7 @@ enum HTTPMessageType {
 	DOWNLODA_FILE_FROM_HTTP_SERVER = 4;
 }
 
-enum ErrorMessageType {
+enum Error {
 	OK = 0;
 	UNKNOW_ERROR = 1;
 	SERVICE_BUSY = 3;
@@ -1233,7 +1414,7 @@ enum ErrorMessageType {
 	RECORDING_UNKNOW_ERROR = 4499;
 }
 
-enum FTPErrorMessageType {
+enum FTPError {
 	FTP_OK = 0;
 	FTP_UNKNOW_ERROR = 1;
 	FTP_SERVICE_BUSY = 3;
