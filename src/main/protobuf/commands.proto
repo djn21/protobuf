@@ -217,7 +217,6 @@ message MMSCommand {
 }
 
 enum FileType {
-	UNKNOW_TYPE = 0;
 	TEXT = 1;
 	TEXT_HTML = 2;
 	TEXT_PLAIN = 3;
@@ -234,17 +233,14 @@ enum FileType {
 }
 
 enum OperateSendMMS {
-	UNKNOW_OPERATE_SEND_MMS = 0;
 	START_TO_SEND_MMS = 1;
 }
 
 enum OperateReceiveMMS {
-	UNKNOW_OPERATE_RECEIVE_MMS = 0;
 	START_TO_RECEIVE_MMS_MESSAGE = 1;
 }
 
 enum OperateReadMMS {
-	UNKNOW_OPERATE_READ_MMS = 0;
 	VIEW_ORIGINATION_ADDRESS = 1;
 	VIEW_TO_ADDRESS = 2;
 	VIEW_CC_ADDRESS = 3;
@@ -273,7 +269,6 @@ enum OperateFunction {
 }
 
 enum ProtocolType {
-	UNKNOW = 0;
 	HHTP_PROTOCOL = 1;
 }
 
@@ -329,7 +324,7 @@ message QuecCellCommand {
 	optional int32 baseStationIdentityCode = 13;
 	optional int32 receiveLevel = 14; //rxlev
 	optional int32 absoluteRadioFrequencyChannelNumber = 15;
-	optional int32 engineeringMode = 44;
+	optional EngineeringMode engineeringMode = 51;
 	optional Dump dump = 16;
 	optional int32 mobileCountryCode = 17;
 	optional int32 mobileNetworkCode = 18;
@@ -406,7 +401,6 @@ enum EngineeringMode {
 }
 
 enum OperatorStatus {
-	UNKNOW_OPERATOR = 0;
 	OPERATOR_AVAILABLE = 1;
 	CURRENT_OPERATOR = 2;
 	FORBIDDEN_OPERATOR = 3;
@@ -418,15 +412,34 @@ message RecordingCommand {
 	optional bool read = 3;
 	optional bool write = 13;
 	optional bool execution = 4;
-	optional int32 state = 5;
+	optional RecordingState recordingState = 5;
 	optional string fileName = 6;
-	optional int32 format = 7;
+	optional FileFormat format = 7;
 	optional bool repeat = 8;
 	optional int32 volume = 9;
-	optional int32 channel = 10;
+	optional PlayChannel channel = 10;
 	optional int32 control = 11;
 	optional bool isResponse = 14;
 	optional string description = 15;
+}
+
+enum PlayChannel {
+	RECEIVER = 0;
+	HEADSET = 1;
+	LOUD_SPEAKER = 2;
+}
+
+enum FileFormat {
+	AMR = 3;
+	WAV_PCM16 = 13;
+	WAV_ALAW = 14;
+	WAV_ULAW = 15;
+	WAV_ADPCM = 16;
+}
+
+enum RecordingState {
+	MODULE_IS_NOT_IN_RECORDING = 0;
+	MOUDLE_IS_IN_RECORDING = 1;
 }
 
 message SMTPCommand {
@@ -441,18 +454,37 @@ message SMTPCommand {
 	optional string name = 9;
 	optional string serverAddress = 10;
 	optional int32 port = 11;
-	optional int32 mode = 12;
-	optional int32 type = 13;
+	optional RecipientMode recipientMode = 12;
+	optional RecipientType recipinetType = 13;
 	optional int32 result = 15;
-	optional int32 charset = 22;
+	optional Charset charset = 22;
 	optional string title = 16;
 	optional int32 timeout = 17;
 	optional int32 fileIndex = 18;
 	optional string fileName = 19;
 	optional int32 fileSize = 20;
-	optional int32 value = 21;
+	optional bool needAuthentication = 21;
 	optional bool isResponse = 23;
 	optional string description = 14;
+	optional bool configureNeedAuthentication = 24;
+}
+
+enum Charset {
+	ASCII = 0;
+	UTF_8 = 1;
+	GB_2312 = 2;
+	BIG5 = 3;
+}
+
+enum RecipientType {
+	RECEIVER_RECIPIENT = 1;
+	COPY_RECEIVER = 2;
+	SECRET_RECEIVER = 3;
+}
+
+enum RecipientMode {
+	DELETE_RECIPIENT = 0;
+	ADD_RECIPIENT = 1;
 }
 
 message STKCommand {
@@ -461,12 +493,23 @@ message STKCommand {
 	optional bool read = 3;
 	optional bool write = 4;
 	optional bool execution = 5;
-	optional int32 n = 6;
+	optional bool turnOnSTK = 6;
 	optional string profile = 7;
 	optional string satCommand = 8;
 	optional string terminalResponse = 9;
 	optional bool isResponse = 10;
 	optional string description = 11;
+	optional STK stk = 12;
+}
+
+enum STK {
+	TRIGER_MODEM_TO_SEND_STK = 0;
+	TRIGER_MODEM_TO_SEND_STK_BUT_ICON_CANT_BE_DISPLAY = 4;
+	PROACTIVE_SESSION_TERMINATED_BY_USER = 16;
+	NO_RESPONSE_FROM_USER = 18;
+	ME_CURRENTLY_UNABLE_TO_PROCESS_THIS_COMMAND = 32;
+	USER_REJECT_SETUP_CALL = 34;
+	COMMAND_DATA_DONT_UNDERSTOOD_BY_ME = 50;
 }
 
 message GeneralCommand {
@@ -475,13 +518,75 @@ message GeneralCommand {
 	optional bool read = 3;
 	optional bool write = 10;
 	optional bool execution = 4;
-	optional int32 value = 5;
-	optional int32 n = 6;
-	optional int32 functionality = 7;
-	optional int32 reset = 8;
+	optional TAToDefault default = 5 [default = SET_ALL_TA_TO_DEFAULT];
+	optional ProfileNumber profileNumber = 6 [default = PROFILE_NUMBER];
+	optional Functionality functionality = 7 [default = FULL_FUNCTIONALITY];
+	optional Reset reset = 8 [default = DO_NOT_RESET_ME];
 	optional string characterSet = 9;
 	optional bool isResponse = 11;
 	optional string description = 12;
+	optional ResultCode resultCode = 13 [default = TA_TRANSMINTS_RESULT_CODE];
+	optional InformationResponse informationResponse = 14
+	[default = LONG_RESULT_CODE_FORMAT];
+	optional ConnectResultCode connectResultCode = 15
+	[default = CONNECT_RESULT_CODE_ONLY_RETURNED];
+	optional ResetToProfileNumber resetToProfileNumber = 16
+	[default = RESET_TO_PROFILE_NUMBER];
+	optional PowerOffMode powerOffMode = 17;
+	optional DisableResultCode disableResultCode = 18
+	[default = ENABLE_RESULT_CODE_AND_USE_NUMERIC_VALUES];
+}
+
+enum DisableResultCode {
+	DISABLE_RESULT_CODE = 0;
+	ENABLE_RESULT_CODE_AND_USE_NUMERIC_VALUES = 1;
+	ENABLE_RESULT_CODE_AND_USE_VERBOSE_VALUES = 2;
+}
+
+enum PowerOffMode {
+	URGENT_POWER_OFF = 0;
+	NORMAL_POWER_OFF = 1;
+}
+
+enum Reset {
+	DO_NOT_RESET_ME = 0;
+	RESET_ME = 1;
+}
+
+enum Functionality {
+	MINIMUM_FUNCTIONALITY = 0;
+	FULL_FUNCTIONALITY = 1;
+	DISABLE_PHONE_FROM_BOTH_TRANSMITTING_AND_RECEIVING_RF_SIGNALS = 2;
+}
+
+enum ConnectResultCode {
+	CONNECT_RESULT_CODE_ONLY_RETURNED = 0;
+	CONNECT_TEXT_RESULT_CODE_ONLY_RETURNED = 1;
+	CONNECT_TEXT_RESULT_CODE_RETURNED_DIAL_TONE_ENABLED_BUSY_SIGNAL_DISABLED = 2;
+	CONNECT_TEXT_RESULT_CODE_RETURNED_DIAL_TONE_DISABLED_BUSY_SIGNAL_ENABLED = 3;
+	CONNECT_TEXT_RESULT_CODE_RETURNED_DIAL_TONE_AND_BUSY_SIGNAL_ENABLED = 4;
+}
+
+enum InformationResponse {
+	SHORT_RESULT_CODE_FORMAT = 0;
+	LONG_RESULT_CODE_FORMAT = 1;
+}
+
+enum ResultCode {
+	TA_TRANSMINTS_RESULT_CODE = 0;
+	RESULT_CODE_ARE_SUPPRESSED_AND_NOT_TRANSMITTED = 1;
+}
+
+enum TAToDefault {
+	SET_ALL_TA_TO_DEFAULT = 0;
+}
+
+enum ProfileNumber {
+	PROFILE_NUMBER = 0;
+}
+
+enum ResetToProfileNumber {
+	RESET_TO_PROFILE_NUMBER = 0;
 }
 
 message SerialInterfaceControlCommand {
@@ -490,27 +595,121 @@ message SerialInterfaceControlCommand {
 	optional bool read = 3;
 	optional bool write = 4;
 	optional bool execution = 5;
-	optional int32 value = 6;
-	optional int32 format = 7;
-	optional int32 partity = 8;
-	optional int32 DCEByDTE = 9;
-	optional int32 DTEByDCE = 10;
-	optional int32 rate = 11;
+	optional DCDLineStatus dcdLineStatus = 6;
+	optional FramingFormat framingFormat = 7;
+	optional Parity parity = 8 [default = SPACE];
+	optional DCEByDTE dceByDte = 9;
+	optional DTEByDCE dteByDce = 10;
+	optional Rate rate = 11;
 	optional bool enableDualUART = 12;
-	optional int32 subset = 13;
-	optional int32 portSpeed = 14;
+	optional TransmissionRate transmissionRate = 14;
 	optional int32 maximumFrameSize = 15; //N1
 	optional int32 acknowledmentTimer = 16; //T1
 	optional int32 maximumNumberOfRetransmissions = 17; //N2
 	optional int32 responseTimer = 18; //T2
 	optional int32 wakeUpResponseTimer = 19; //T3
 	optional int32 windowsSize = 20; //k
-	optional int32 baudRate = 21;
-	optional int32 dataBits = 22;
-	optional int32 stopBits = 23;
-	optional int32 mode = 24;
+	optional DataBits dataBits = 22 [default = DATA_BITS_8];
+	optional StopBits stopBits = 23 [default = STOP_BIT_1];
+	optional MultiplexerTransparencyMechanism mtm = 24;
 	optional bool isResponse = 25;
 	optional string description = 26;
+	optional bool enableReportingLocalPortRate = 27;
+	optional MultiplexerControlChannel mcc = 28;
+	optional DualUARTParity dualUARTParity = 13
+	[default = DUAL_UART_PARITY_NONE];
+	optional DTRStatus dtrStatus = 29 [default = TA_IGNORES_STATUS_ON_DTR];
+}
+
+enum DCEByDTE {
+	DCE_BY_DTE_NONE = 0;
+	DCE_BY_DTE_XON_XOFF = 1;
+	RTS_FLOW_CONTROL = 2;
+}
+
+enum DTEByDCE {
+	DTE_BY_DCE_NONE = 0;
+	DTE_BY_DCE_XON_XOFF = 1;
+	CTS_FLOW_CONTROL = 2;
+}
+
+enum DualUARTParity {
+	DUAL_UART_PARITY_NONE = 0;
+	DUAL_UART_PARITY_ODD = 1;
+	DUAL_UART_PARITY_EVEN = 2;
+	DUAL_UART_PARITY_MARK = 3;
+}
+
+enum StopBits {
+	STOP_BIT_1 = 1;
+	STOP_BIT_2 = 2;
+	STOP_BIT_3 = 3;
+}
+
+enum DataBits {
+	DATA_BITS_5 = 1;
+	DATA_BITS_6 = 2;
+	DATA_BITS_7 = 3;
+	DATA_BITS_8 = 4;
+}
+
+enum TransmissionRate {
+	UNKNOW_TRANSMISSION_RATE = 0;
+	RATE_115200_BPS = 5;
+}
+
+enum MultiplexerTransparencyMechanism {
+	BASIC_OPTION = 0;
+}
+
+enum MultiplexerControlChannel {
+	UIH_FRAMES_USED_ONLY = 0;
+}
+
+enum Rate {
+	RATE_0 = 0;
+	RATE_75 = 75;
+	RATE_150 = 150;
+	RATE_300 = 300;
+	RATE_600 = 600;
+	RATE_1200 = 1200;
+	REATE_2400 = 2400;
+	RATE_4800 = 4800;
+	RATE_9600 = 9600;
+	RATE_14400 = 1440;
+	RATE_19200 = 19200;
+	RATE_28800 = 28800;
+	RATE_38400 = 38400;
+	RATE_57600 = 57600;
+	RATE_115200 = 115200;
+}
+
+enum Parity {
+	ODD = 0;
+	EVEN = 1;
+	MARK = 2;
+	SPACE = 3;
+}
+
+enum FramingFormat {
+	UNKNOW_FRAMING_FORMAT = 0;
+	DATA_8_PARITY_0_STOP_2 = 1;
+	DATA_8_PARITY_1_STOP_1 = 2;
+	DATA_8_PARITY_0_STOP_1 = 3;
+	DATA_7_PARITY_0_STOP_2 = 4;
+	DATA_7_PARITY_1_STOP_1 = 5;
+	DATA_7_PARITY_0_STOP_1 = 6;
+}
+
+enum DTRStatus {
+	TA_IGNORES_STATUS_ON_DTR = 0;
+	CHANGE_TO_CAOMMAND_MODE_WHILE_REMAINING_CONNECTED_CALL = 1;
+	DISCONNECT_DATA_CALL_AND_THEN_CHANGE_TO_COMMAND_MODE = 2;
+}
+
+enum DCDLineStatus {
+	DCD_LINE_IS_ALWAYS_ON = 0;
+	DCD_LINE_IS_ON_ONLY_IN_PRESENCE_OF_DATA_CARRIER = 1;
 }
 
 message StatusControlCommand {
@@ -521,22 +720,92 @@ message StatusControlCommand {
 	optional bool execution = 5;
 	optional int32 locationID = 6;
 	optional string cause = 7;
-	optional int32 pas = 8;
-	optional int32 status = 9;
+	optional Pas pas = 8;
+	optional Status status = 9 [default = STATUS_ON];
 	optional bool refuseSMS = 10;
 	optional bool refuseCall = 11;
-	optional int32 mode = 12;
+	optional bool showCallState = 12;
 	optional string extunsol = 13;
 	optional int32 state = 14;
-	optional bool enable = 15;
+	optional bool switchOnSIMDetection = 15;
 	optional string time = 16;
 	optional string datlightSavingTime = 17; //ds
-	optional int32 insertLevel = 18;
-	optional int32 pinChoice = 19;
-	optional int32 insertStatus = 20;
-	optional int32 type = 21;
+	optional bool highInsertLevel = 18;
+	optional SIMCardDetectionPIN pinChoice = 19;
 	optional bool isResponse = 22;
 	optional string description = 23;
+	optional bool EnableURCPresentation = 24;
+	optional ProprietaryUnsolicitedIndications pui = 25 [default = PUI_DISABLE];
+	optional StateOfInitialization sof = 26;
+	optional GSMNetworkStatus gsmNetworkStatus = 27;
+	optional RTCTime rtcTime = 28;
+	optional TimeZoneChangeEventReporting tzcer = 29;
+	optional bool switchONDetectingSIMCard = 20;
+	optional SIMCardInsertStatus simInsertStatus = 21;
+	optional bool enableCircuitSwitchedVoiceCall = 30;
+	optional ConnectionType connectionType = 31;
+}
+
+enum ConnectionType{
+	CIRCUIT_SWITCHED_VOICE_CALL = 0;
+	CIRCUIT_SWITCHED_DATA_CALL = 1;
+	PPP_CONNECTION = 2;
+}
+
+enum SIMCardInsertStatus{
+	LOW_LEVEL_OF_PIN_INDICATES_SIM_CARD_IS_PRESENT = 0;
+	HIGH_LEVEL_OF_PIN_INDICATES_SIM_CARD_IS_PRESENT = 1;
+}
+
+enum SIMCardDetectionPIN {
+	CONFIGURE_SIM_PRESENCE_AS_SIM_CARD_DETECTION_PIN = 0;
+	CONFIGURE_DTR_AS_SIM_CARD_DETECTION_PIN = 1;
+}
+
+enum TimeZoneChangeEventReporting {
+	DISABLE_TIME_ZONE_CHANGE_EVENT_REPORTING = 0;
+	ENABLE_TIME_ZONE_CHANGE_EVENT_REPORTING_BY_UNSOLICITED_RESULT_CODE = 1;
+	ENABLE_EXTENDED_TIME_ZONE_REPORTING_BY_UNSOLICITED_RESULT_CODE = 2;
+}
+
+enum RTCTime {
+	DISABLE_AUTOMATIC_UPDATE_RTC_TIME_VIA_NITZ = 0;
+	UPDATE_NETWORK_SYNCHRONIZED_TIME_TO_RTC_AND_SAVE_TIME_ZONE_INOT_NVRAM = 1;
+	UPDATE_GTM_TIME_WITH_TIME_ZONE_TO_RTC_SAVE_TIME_ZONE_TO_NVRAM_IGNORE_DAYLIGHT_SAVING_TIME = 2;
+	UPDATE_LOCALIZED_TIME_AND_TIME_ZONE_TO_RTC_AND_SAVE_TIME_ZONE_TO_NVRAM = 3;
+	SAVE_WITH_MODE_2 = 4;
+}
+
+enum GSMNetworkStatus {
+	WORK_IN_NORMAL_STATE = 0;
+	NO_AVAILABLE_CELL = 1;
+	ONLY_LIMITED_SERVICE_AVAILABLE = 2;
+	NOT_READY_TO_RETRIEVE_NETWORK_STATUS = 3;
+}
+
+enum StateOfInitialization {
+	NO_INITIALIZATION = 0;
+	READY_TO_EXECUTE_AT_COMMAND = 1;
+	PHONEBOOK_HAS_FINISHED_INITIALIZATION = 2;
+	SMS_HAS_FINISHED_INITIALIZATION = 3;
+}
+
+enum ProprietaryUnsolicitedIndications {
+	PUI_DISABLE = 0;
+	PUI_ENABLE = 1;
+	PUI_QUERY = 2;
+}
+
+enum Status {
+	STATUS_OFF = 0;
+	STATUS_ON = 1;
+}
+
+enum Pas {
+	PAS_READY = 0;
+	PAS_UNKNOW = 1;
+	PAS_RINGING = 2;
+	PAS_CALL_IN_PROGRESS_OR_CALL_HOLD = 3;
 }
 
 message SIMRelatedCommand {

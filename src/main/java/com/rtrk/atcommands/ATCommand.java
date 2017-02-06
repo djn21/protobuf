@@ -722,67 +722,59 @@ public final class ATCommand {
   public enum FileType
       implements com.google.protobuf.ProtocolMessageEnum {
     /**
-     * <code>UNKNOW_TYPE = 0;</code>
-     */
-    UNKNOW_TYPE(0, 0),
-    /**
      * <code>TEXT = 1;</code>
      */
-    TEXT(1, 1),
+    TEXT(0, 1),
     /**
      * <code>TEXT_HTML = 2;</code>
      */
-    TEXT_HTML(2, 2),
+    TEXT_HTML(1, 2),
     /**
      * <code>TEXT_PLAIN = 3;</code>
      */
-    TEXT_PLAIN(3, 3),
+    TEXT_PLAIN(2, 3),
     /**
      * <code>TEXT_XML = 4;</code>
      */
-    TEXT_XML(4, 4),
+    TEXT_XML(3, 4),
     /**
      * <code>IMAGE = 5;</code>
      */
-    IMAGE(5, 5),
+    IMAGE(4, 5),
     /**
      * <code>IMAGE_GIF = 6;</code>
      */
-    IMAGE_GIF(6, 6),
+    IMAGE_GIF(5, 6),
     /**
      * <code>IMAGE_JPEG = 7;</code>
      */
-    IMAGE_JPEG(7, 7),
+    IMAGE_JPEG(6, 7),
     /**
      * <code>IMAGE_TIFF = 8;</code>
      */
-    IMAGE_TIFF(8, 8),
+    IMAGE_TIFF(7, 8),
     /**
      * <code>IMAGE_PNP = 9;</code>
      */
-    IMAGE_PNP(9, 9),
+    IMAGE_PNP(8, 9),
     /**
      * <code>IMAGE_WBMP = 10;</code>
      */
-    IMAGE_WBMP(10, 10),
+    IMAGE_WBMP(9, 10),
     /**
      * <code>AUDIO = 11;</code>
      */
-    AUDIO(11, 11),
+    AUDIO(10, 11),
     /**
      * <code>VIDEO = 12;</code>
      */
-    VIDEO(12, 12),
+    VIDEO(11, 12),
     /**
      * <code>SMIL = 13;</code>
      */
-    SMIL(13, 13),
+    SMIL(12, 13),
     ;
 
-    /**
-     * <code>UNKNOW_TYPE = 0;</code>
-     */
-    public static final int UNKNOW_TYPE_VALUE = 0;
     /**
      * <code>TEXT = 1;</code>
      */
@@ -841,7 +833,6 @@ public final class ATCommand {
 
     public static FileType valueOf(int value) {
       switch (value) {
-        case 0: return UNKNOW_TYPE;
         case 1: return TEXT;
         case 2: return TEXT_HTML;
         case 3: return TEXT_PLAIN;
@@ -912,19 +903,11 @@ public final class ATCommand {
   public enum OperateSendMMS
       implements com.google.protobuf.ProtocolMessageEnum {
     /**
-     * <code>UNKNOW_OPERATE_SEND_MMS = 0;</code>
-     */
-    UNKNOW_OPERATE_SEND_MMS(0, 0),
-    /**
      * <code>START_TO_SEND_MMS = 1;</code>
      */
-    START_TO_SEND_MMS(1, 1),
+    START_TO_SEND_MMS(0, 1),
     ;
 
-    /**
-     * <code>UNKNOW_OPERATE_SEND_MMS = 0;</code>
-     */
-    public static final int UNKNOW_OPERATE_SEND_MMS_VALUE = 0;
     /**
      * <code>START_TO_SEND_MMS = 1;</code>
      */
@@ -935,7 +918,6 @@ public final class ATCommand {
 
     public static OperateSendMMS valueOf(int value) {
       switch (value) {
-        case 0: return UNKNOW_OPERATE_SEND_MMS;
         case 1: return START_TO_SEND_MMS;
         default: return null;
       }
@@ -994,19 +976,11 @@ public final class ATCommand {
   public enum OperateReceiveMMS
       implements com.google.protobuf.ProtocolMessageEnum {
     /**
-     * <code>UNKNOW_OPERATE_RECEIVE_MMS = 0;</code>
-     */
-    UNKNOW_OPERATE_RECEIVE_MMS(0, 0),
-    /**
      * <code>START_TO_RECEIVE_MMS_MESSAGE = 1;</code>
      */
-    START_TO_RECEIVE_MMS_MESSAGE(1, 1),
+    START_TO_RECEIVE_MMS_MESSAGE(0, 1),
     ;
 
-    /**
-     * <code>UNKNOW_OPERATE_RECEIVE_MMS = 0;</code>
-     */
-    public static final int UNKNOW_OPERATE_RECEIVE_MMS_VALUE = 0;
     /**
      * <code>START_TO_RECEIVE_MMS_MESSAGE = 1;</code>
      */
@@ -1017,7 +991,6 @@ public final class ATCommand {
 
     public static OperateReceiveMMS valueOf(int value) {
       switch (value) {
-        case 0: return UNKNOW_OPERATE_RECEIVE_MMS;
         case 1: return START_TO_RECEIVE_MMS_MESSAGE;
         default: return null;
       }
@@ -1076,39 +1049,31 @@ public final class ATCommand {
   public enum OperateReadMMS
       implements com.google.protobuf.ProtocolMessageEnum {
     /**
-     * <code>UNKNOW_OPERATE_READ_MMS = 0;</code>
-     */
-    UNKNOW_OPERATE_READ_MMS(0, 0),
-    /**
      * <code>VIEW_ORIGINATION_ADDRESS = 1;</code>
      */
-    VIEW_ORIGINATION_ADDRESS(1, 1),
+    VIEW_ORIGINATION_ADDRESS(0, 1),
     /**
      * <code>VIEW_TO_ADDRESS = 2;</code>
      */
-    VIEW_TO_ADDRESS(2, 2),
+    VIEW_TO_ADDRESS(1, 2),
     /**
      * <code>VIEW_CC_ADDRESS = 3;</code>
      */
-    VIEW_CC_ADDRESS(3, 3),
+    VIEW_CC_ADDRESS(2, 3),
     /**
      * <code>VIEW_MMS_TITLE = 4;</code>
      */
-    VIEW_MMS_TITLE(4, 4),
+    VIEW_MMS_TITLE(3, 4),
     /**
      * <code>LIST_APPEND_FILE = 5;</code>
      */
-    LIST_APPEND_FILE(5, 5),
+    LIST_APPEND_FILE(4, 5),
     /**
      * <code>READ_APPEND_FILE_DATA_OF_MMS_MESSAGE = 6;</code>
      */
-    READ_APPEND_FILE_DATA_OF_MMS_MESSAGE(6, 6),
+    READ_APPEND_FILE_DATA_OF_MMS_MESSAGE(5, 6),
     ;
 
-    /**
-     * <code>UNKNOW_OPERATE_READ_MMS = 0;</code>
-     */
-    public static final int UNKNOW_OPERATE_READ_MMS_VALUE = 0;
     /**
      * <code>VIEW_ORIGINATION_ADDRESS = 1;</code>
      */
@@ -1139,7 +1104,6 @@ public final class ATCommand {
 
     public static OperateReadMMS valueOf(int value) {
       switch (value) {
-        case 0: return UNKNOW_OPERATE_READ_MMS;
         case 1: return VIEW_ORIGINATION_ADDRESS;
         case 2: return VIEW_TO_ADDRESS;
         case 3: return VIEW_CC_ADDRESS;
@@ -1485,19 +1449,11 @@ public final class ATCommand {
   public enum ProtocolType
       implements com.google.protobuf.ProtocolMessageEnum {
     /**
-     * <code>UNKNOW = 0;</code>
-     */
-    UNKNOW(0, 0),
-    /**
      * <code>HHTP_PROTOCOL = 1;</code>
      */
-    HHTP_PROTOCOL(1, 1),
+    HHTP_PROTOCOL(0, 1),
     ;
 
-    /**
-     * <code>UNKNOW = 0;</code>
-     */
-    public static final int UNKNOW_VALUE = 0;
     /**
      * <code>HHTP_PROTOCOL = 1;</code>
      */
@@ -1508,7 +1464,6 @@ public final class ATCommand {
 
     public static ProtocolType valueOf(int value) {
       switch (value) {
-        case 0: return UNKNOW;
         case 1: return HHTP_PROTOCOL;
         default: return null;
       }
@@ -2612,27 +2567,19 @@ public final class ATCommand {
   public enum OperatorStatus
       implements com.google.protobuf.ProtocolMessageEnum {
     /**
-     * <code>UNKNOW_OPERATOR = 0;</code>
-     */
-    UNKNOW_OPERATOR(0, 0),
-    /**
      * <code>OPERATOR_AVAILABLE = 1;</code>
      */
-    OPERATOR_AVAILABLE(1, 1),
+    OPERATOR_AVAILABLE(0, 1),
     /**
      * <code>CURRENT_OPERATOR = 2;</code>
      */
-    CURRENT_OPERATOR(2, 2),
+    CURRENT_OPERATOR(1, 2),
     /**
      * <code>FORBIDDEN_OPERATOR = 3;</code>
      */
-    FORBIDDEN_OPERATOR(3, 3),
+    FORBIDDEN_OPERATOR(2, 3),
     ;
 
-    /**
-     * <code>UNKNOW_OPERATOR = 0;</code>
-     */
-    public static final int UNKNOW_OPERATOR_VALUE = 0;
     /**
      * <code>OPERATOR_AVAILABLE = 1;</code>
      */
@@ -2651,7 +2598,6 @@ public final class ATCommand {
 
     public static OperatorStatus valueOf(int value) {
       switch (value) {
-        case 0: return UNKNOW_OPERATOR;
         case 1: return OPERATOR_AVAILABLE;
         case 2: return CURRENT_OPERATOR;
         case 3: return FORBIDDEN_OPERATOR;
@@ -2704,6 +2650,3754 @@ public final class ATCommand {
     }
 
     // @@protoc_insertion_point(enum_scope:com.rtrk.protobuf.OperatorStatus)
+  }
+
+  /**
+   * Protobuf enum {@code com.rtrk.protobuf.PlayChannel}
+   */
+  public enum PlayChannel
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>RECEIVER = 0;</code>
+     */
+    RECEIVER(0, 0),
+    /**
+     * <code>HEADSET = 1;</code>
+     */
+    HEADSET(1, 1),
+    /**
+     * <code>LOUD_SPEAKER = 2;</code>
+     */
+    LOUD_SPEAKER(2, 2),
+    ;
+
+    /**
+     * <code>RECEIVER = 0;</code>
+     */
+    public static final int RECEIVER_VALUE = 0;
+    /**
+     * <code>HEADSET = 1;</code>
+     */
+    public static final int HEADSET_VALUE = 1;
+    /**
+     * <code>LOUD_SPEAKER = 2;</code>
+     */
+    public static final int LOUD_SPEAKER_VALUE = 2;
+
+
+    public final int getNumber() { return value; }
+
+    public static PlayChannel valueOf(int value) {
+      switch (value) {
+        case 0: return RECEIVER;
+        case 1: return HEADSET;
+        case 2: return LOUD_SPEAKER;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<PlayChannel>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static com.google.protobuf.Internal.EnumLiteMap<PlayChannel>
+        internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<PlayChannel>() {
+            public PlayChannel findValueByNumber(int number) {
+              return PlayChannel.valueOf(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(index);
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return com.rtrk.atcommands.ATCommand.getDescriptor().getEnumTypes().get(25);
+    }
+
+    private static final PlayChannel[] VALUES = values();
+
+    public static PlayChannel valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int index;
+    private final int value;
+
+    private PlayChannel(int index, int value) {
+      this.index = index;
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:com.rtrk.protobuf.PlayChannel)
+  }
+
+  /**
+   * Protobuf enum {@code com.rtrk.protobuf.FileFormat}
+   */
+  public enum FileFormat
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>AMR = 3;</code>
+     */
+    AMR(0, 3),
+    /**
+     * <code>WAV_PCM16 = 13;</code>
+     */
+    WAV_PCM16(1, 13),
+    /**
+     * <code>WAV_ALAW = 14;</code>
+     */
+    WAV_ALAW(2, 14),
+    /**
+     * <code>WAV_ULAW = 15;</code>
+     */
+    WAV_ULAW(3, 15),
+    /**
+     * <code>WAV_ADPCM = 16;</code>
+     */
+    WAV_ADPCM(4, 16),
+    ;
+
+    /**
+     * <code>AMR = 3;</code>
+     */
+    public static final int AMR_VALUE = 3;
+    /**
+     * <code>WAV_PCM16 = 13;</code>
+     */
+    public static final int WAV_PCM16_VALUE = 13;
+    /**
+     * <code>WAV_ALAW = 14;</code>
+     */
+    public static final int WAV_ALAW_VALUE = 14;
+    /**
+     * <code>WAV_ULAW = 15;</code>
+     */
+    public static final int WAV_ULAW_VALUE = 15;
+    /**
+     * <code>WAV_ADPCM = 16;</code>
+     */
+    public static final int WAV_ADPCM_VALUE = 16;
+
+
+    public final int getNumber() { return value; }
+
+    public static FileFormat valueOf(int value) {
+      switch (value) {
+        case 3: return AMR;
+        case 13: return WAV_PCM16;
+        case 14: return WAV_ALAW;
+        case 15: return WAV_ULAW;
+        case 16: return WAV_ADPCM;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<FileFormat>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static com.google.protobuf.Internal.EnumLiteMap<FileFormat>
+        internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<FileFormat>() {
+            public FileFormat findValueByNumber(int number) {
+              return FileFormat.valueOf(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(index);
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return com.rtrk.atcommands.ATCommand.getDescriptor().getEnumTypes().get(26);
+    }
+
+    private static final FileFormat[] VALUES = values();
+
+    public static FileFormat valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int index;
+    private final int value;
+
+    private FileFormat(int index, int value) {
+      this.index = index;
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:com.rtrk.protobuf.FileFormat)
+  }
+
+  /**
+   * Protobuf enum {@code com.rtrk.protobuf.RecordingState}
+   */
+  public enum RecordingState
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>MODULE_IS_NOT_IN_RECORDING = 0;</code>
+     */
+    MODULE_IS_NOT_IN_RECORDING(0, 0),
+    /**
+     * <code>MOUDLE_IS_IN_RECORDING = 1;</code>
+     */
+    MOUDLE_IS_IN_RECORDING(1, 1),
+    ;
+
+    /**
+     * <code>MODULE_IS_NOT_IN_RECORDING = 0;</code>
+     */
+    public static final int MODULE_IS_NOT_IN_RECORDING_VALUE = 0;
+    /**
+     * <code>MOUDLE_IS_IN_RECORDING = 1;</code>
+     */
+    public static final int MOUDLE_IS_IN_RECORDING_VALUE = 1;
+
+
+    public final int getNumber() { return value; }
+
+    public static RecordingState valueOf(int value) {
+      switch (value) {
+        case 0: return MODULE_IS_NOT_IN_RECORDING;
+        case 1: return MOUDLE_IS_IN_RECORDING;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<RecordingState>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static com.google.protobuf.Internal.EnumLiteMap<RecordingState>
+        internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<RecordingState>() {
+            public RecordingState findValueByNumber(int number) {
+              return RecordingState.valueOf(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(index);
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return com.rtrk.atcommands.ATCommand.getDescriptor().getEnumTypes().get(27);
+    }
+
+    private static final RecordingState[] VALUES = values();
+
+    public static RecordingState valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int index;
+    private final int value;
+
+    private RecordingState(int index, int value) {
+      this.index = index;
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:com.rtrk.protobuf.RecordingState)
+  }
+
+  /**
+   * Protobuf enum {@code com.rtrk.protobuf.Charset}
+   */
+  public enum Charset
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>ASCII = 0;</code>
+     */
+    ASCII(0, 0),
+    /**
+     * <code>UTF_8 = 1;</code>
+     */
+    UTF_8(1, 1),
+    /**
+     * <code>GB_2312 = 2;</code>
+     */
+    GB_2312(2, 2),
+    /**
+     * <code>BIG5 = 3;</code>
+     */
+    BIG5(3, 3),
+    ;
+
+    /**
+     * <code>ASCII = 0;</code>
+     */
+    public static final int ASCII_VALUE = 0;
+    /**
+     * <code>UTF_8 = 1;</code>
+     */
+    public static final int UTF_8_VALUE = 1;
+    /**
+     * <code>GB_2312 = 2;</code>
+     */
+    public static final int GB_2312_VALUE = 2;
+    /**
+     * <code>BIG5 = 3;</code>
+     */
+    public static final int BIG5_VALUE = 3;
+
+
+    public final int getNumber() { return value; }
+
+    public static Charset valueOf(int value) {
+      switch (value) {
+        case 0: return ASCII;
+        case 1: return UTF_8;
+        case 2: return GB_2312;
+        case 3: return BIG5;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<Charset>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static com.google.protobuf.Internal.EnumLiteMap<Charset>
+        internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<Charset>() {
+            public Charset findValueByNumber(int number) {
+              return Charset.valueOf(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(index);
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return com.rtrk.atcommands.ATCommand.getDescriptor().getEnumTypes().get(28);
+    }
+
+    private static final Charset[] VALUES = values();
+
+    public static Charset valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int index;
+    private final int value;
+
+    private Charset(int index, int value) {
+      this.index = index;
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:com.rtrk.protobuf.Charset)
+  }
+
+  /**
+   * Protobuf enum {@code com.rtrk.protobuf.RecipientType}
+   */
+  public enum RecipientType
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>RECEIVER_RECIPIENT = 1;</code>
+     */
+    RECEIVER_RECIPIENT(0, 1),
+    /**
+     * <code>COPY_RECEIVER = 2;</code>
+     */
+    COPY_RECEIVER(1, 2),
+    /**
+     * <code>SECRET_RECEIVER = 3;</code>
+     */
+    SECRET_RECEIVER(2, 3),
+    ;
+
+    /**
+     * <code>RECEIVER_RECIPIENT = 1;</code>
+     */
+    public static final int RECEIVER_RECIPIENT_VALUE = 1;
+    /**
+     * <code>COPY_RECEIVER = 2;</code>
+     */
+    public static final int COPY_RECEIVER_VALUE = 2;
+    /**
+     * <code>SECRET_RECEIVER = 3;</code>
+     */
+    public static final int SECRET_RECEIVER_VALUE = 3;
+
+
+    public final int getNumber() { return value; }
+
+    public static RecipientType valueOf(int value) {
+      switch (value) {
+        case 1: return RECEIVER_RECIPIENT;
+        case 2: return COPY_RECEIVER;
+        case 3: return SECRET_RECEIVER;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<RecipientType>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static com.google.protobuf.Internal.EnumLiteMap<RecipientType>
+        internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<RecipientType>() {
+            public RecipientType findValueByNumber(int number) {
+              return RecipientType.valueOf(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(index);
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return com.rtrk.atcommands.ATCommand.getDescriptor().getEnumTypes().get(29);
+    }
+
+    private static final RecipientType[] VALUES = values();
+
+    public static RecipientType valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int index;
+    private final int value;
+
+    private RecipientType(int index, int value) {
+      this.index = index;
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:com.rtrk.protobuf.RecipientType)
+  }
+
+  /**
+   * Protobuf enum {@code com.rtrk.protobuf.RecipientMode}
+   */
+  public enum RecipientMode
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>DELETE_RECIPIENT = 0;</code>
+     */
+    DELETE_RECIPIENT(0, 0),
+    /**
+     * <code>ADD_RECIPIENT = 1;</code>
+     */
+    ADD_RECIPIENT(1, 1),
+    ;
+
+    /**
+     * <code>DELETE_RECIPIENT = 0;</code>
+     */
+    public static final int DELETE_RECIPIENT_VALUE = 0;
+    /**
+     * <code>ADD_RECIPIENT = 1;</code>
+     */
+    public static final int ADD_RECIPIENT_VALUE = 1;
+
+
+    public final int getNumber() { return value; }
+
+    public static RecipientMode valueOf(int value) {
+      switch (value) {
+        case 0: return DELETE_RECIPIENT;
+        case 1: return ADD_RECIPIENT;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<RecipientMode>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static com.google.protobuf.Internal.EnumLiteMap<RecipientMode>
+        internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<RecipientMode>() {
+            public RecipientMode findValueByNumber(int number) {
+              return RecipientMode.valueOf(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(index);
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return com.rtrk.atcommands.ATCommand.getDescriptor().getEnumTypes().get(30);
+    }
+
+    private static final RecipientMode[] VALUES = values();
+
+    public static RecipientMode valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int index;
+    private final int value;
+
+    private RecipientMode(int index, int value) {
+      this.index = index;
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:com.rtrk.protobuf.RecipientMode)
+  }
+
+  /**
+   * Protobuf enum {@code com.rtrk.protobuf.STK}
+   */
+  public enum STK
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>TRIGER_MODEM_TO_SEND_STK = 0;</code>
+     */
+    TRIGER_MODEM_TO_SEND_STK(0, 0),
+    /**
+     * <code>TRIGER_MODEM_TO_SEND_STK_BUT_ICON_CANT_BE_DISPLAY = 4;</code>
+     */
+    TRIGER_MODEM_TO_SEND_STK_BUT_ICON_CANT_BE_DISPLAY(1, 4),
+    /**
+     * <code>PROACTIVE_SESSION_TERMINATED_BY_USER = 16;</code>
+     */
+    PROACTIVE_SESSION_TERMINATED_BY_USER(2, 16),
+    /**
+     * <code>NO_RESPONSE_FROM_USER = 18;</code>
+     */
+    NO_RESPONSE_FROM_USER(3, 18),
+    /**
+     * <code>ME_CURRENTLY_UNABLE_TO_PROCESS_THIS_COMMAND = 32;</code>
+     */
+    ME_CURRENTLY_UNABLE_TO_PROCESS_THIS_COMMAND(4, 32),
+    /**
+     * <code>USER_REJECT_SETUP_CALL = 34;</code>
+     */
+    USER_REJECT_SETUP_CALL(5, 34),
+    /**
+     * <code>COMMAND_DATA_DONT_UNDERSTOOD_BY_ME = 50;</code>
+     */
+    COMMAND_DATA_DONT_UNDERSTOOD_BY_ME(6, 50),
+    ;
+
+    /**
+     * <code>TRIGER_MODEM_TO_SEND_STK = 0;</code>
+     */
+    public static final int TRIGER_MODEM_TO_SEND_STK_VALUE = 0;
+    /**
+     * <code>TRIGER_MODEM_TO_SEND_STK_BUT_ICON_CANT_BE_DISPLAY = 4;</code>
+     */
+    public static final int TRIGER_MODEM_TO_SEND_STK_BUT_ICON_CANT_BE_DISPLAY_VALUE = 4;
+    /**
+     * <code>PROACTIVE_SESSION_TERMINATED_BY_USER = 16;</code>
+     */
+    public static final int PROACTIVE_SESSION_TERMINATED_BY_USER_VALUE = 16;
+    /**
+     * <code>NO_RESPONSE_FROM_USER = 18;</code>
+     */
+    public static final int NO_RESPONSE_FROM_USER_VALUE = 18;
+    /**
+     * <code>ME_CURRENTLY_UNABLE_TO_PROCESS_THIS_COMMAND = 32;</code>
+     */
+    public static final int ME_CURRENTLY_UNABLE_TO_PROCESS_THIS_COMMAND_VALUE = 32;
+    /**
+     * <code>USER_REJECT_SETUP_CALL = 34;</code>
+     */
+    public static final int USER_REJECT_SETUP_CALL_VALUE = 34;
+    /**
+     * <code>COMMAND_DATA_DONT_UNDERSTOOD_BY_ME = 50;</code>
+     */
+    public static final int COMMAND_DATA_DONT_UNDERSTOOD_BY_ME_VALUE = 50;
+
+
+    public final int getNumber() { return value; }
+
+    public static STK valueOf(int value) {
+      switch (value) {
+        case 0: return TRIGER_MODEM_TO_SEND_STK;
+        case 4: return TRIGER_MODEM_TO_SEND_STK_BUT_ICON_CANT_BE_DISPLAY;
+        case 16: return PROACTIVE_SESSION_TERMINATED_BY_USER;
+        case 18: return NO_RESPONSE_FROM_USER;
+        case 32: return ME_CURRENTLY_UNABLE_TO_PROCESS_THIS_COMMAND;
+        case 34: return USER_REJECT_SETUP_CALL;
+        case 50: return COMMAND_DATA_DONT_UNDERSTOOD_BY_ME;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<STK>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static com.google.protobuf.Internal.EnumLiteMap<STK>
+        internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<STK>() {
+            public STK findValueByNumber(int number) {
+              return STK.valueOf(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(index);
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return com.rtrk.atcommands.ATCommand.getDescriptor().getEnumTypes().get(31);
+    }
+
+    private static final STK[] VALUES = values();
+
+    public static STK valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int index;
+    private final int value;
+
+    private STK(int index, int value) {
+      this.index = index;
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:com.rtrk.protobuf.STK)
+  }
+
+  /**
+   * Protobuf enum {@code com.rtrk.protobuf.DisableResultCode}
+   */
+  public enum DisableResultCode
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>DISABLE_RESULT_CODE = 0;</code>
+     */
+    DISABLE_RESULT_CODE(0, 0),
+    /**
+     * <code>ENABLE_RESULT_CODE_AND_USE_NUMERIC_VALUES = 1;</code>
+     */
+    ENABLE_RESULT_CODE_AND_USE_NUMERIC_VALUES(1, 1),
+    /**
+     * <code>ENABLE_RESULT_CODE_AND_USE_VERBOSE_VALUES = 2;</code>
+     */
+    ENABLE_RESULT_CODE_AND_USE_VERBOSE_VALUES(2, 2),
+    ;
+
+    /**
+     * <code>DISABLE_RESULT_CODE = 0;</code>
+     */
+    public static final int DISABLE_RESULT_CODE_VALUE = 0;
+    /**
+     * <code>ENABLE_RESULT_CODE_AND_USE_NUMERIC_VALUES = 1;</code>
+     */
+    public static final int ENABLE_RESULT_CODE_AND_USE_NUMERIC_VALUES_VALUE = 1;
+    /**
+     * <code>ENABLE_RESULT_CODE_AND_USE_VERBOSE_VALUES = 2;</code>
+     */
+    public static final int ENABLE_RESULT_CODE_AND_USE_VERBOSE_VALUES_VALUE = 2;
+
+
+    public final int getNumber() { return value; }
+
+    public static DisableResultCode valueOf(int value) {
+      switch (value) {
+        case 0: return DISABLE_RESULT_CODE;
+        case 1: return ENABLE_RESULT_CODE_AND_USE_NUMERIC_VALUES;
+        case 2: return ENABLE_RESULT_CODE_AND_USE_VERBOSE_VALUES;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<DisableResultCode>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static com.google.protobuf.Internal.EnumLiteMap<DisableResultCode>
+        internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<DisableResultCode>() {
+            public DisableResultCode findValueByNumber(int number) {
+              return DisableResultCode.valueOf(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(index);
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return com.rtrk.atcommands.ATCommand.getDescriptor().getEnumTypes().get(32);
+    }
+
+    private static final DisableResultCode[] VALUES = values();
+
+    public static DisableResultCode valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int index;
+    private final int value;
+
+    private DisableResultCode(int index, int value) {
+      this.index = index;
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:com.rtrk.protobuf.DisableResultCode)
+  }
+
+  /**
+   * Protobuf enum {@code com.rtrk.protobuf.PowerOffMode}
+   */
+  public enum PowerOffMode
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>URGENT_POWER_OFF = 0;</code>
+     */
+    URGENT_POWER_OFF(0, 0),
+    /**
+     * <code>NORMAL_POWER_OFF = 1;</code>
+     */
+    NORMAL_POWER_OFF(1, 1),
+    ;
+
+    /**
+     * <code>URGENT_POWER_OFF = 0;</code>
+     */
+    public static final int URGENT_POWER_OFF_VALUE = 0;
+    /**
+     * <code>NORMAL_POWER_OFF = 1;</code>
+     */
+    public static final int NORMAL_POWER_OFF_VALUE = 1;
+
+
+    public final int getNumber() { return value; }
+
+    public static PowerOffMode valueOf(int value) {
+      switch (value) {
+        case 0: return URGENT_POWER_OFF;
+        case 1: return NORMAL_POWER_OFF;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<PowerOffMode>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static com.google.protobuf.Internal.EnumLiteMap<PowerOffMode>
+        internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<PowerOffMode>() {
+            public PowerOffMode findValueByNumber(int number) {
+              return PowerOffMode.valueOf(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(index);
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return com.rtrk.atcommands.ATCommand.getDescriptor().getEnumTypes().get(33);
+    }
+
+    private static final PowerOffMode[] VALUES = values();
+
+    public static PowerOffMode valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int index;
+    private final int value;
+
+    private PowerOffMode(int index, int value) {
+      this.index = index;
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:com.rtrk.protobuf.PowerOffMode)
+  }
+
+  /**
+   * Protobuf enum {@code com.rtrk.protobuf.Reset}
+   */
+  public enum Reset
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>DO_NOT_RESET_ME = 0;</code>
+     */
+    DO_NOT_RESET_ME(0, 0),
+    /**
+     * <code>RESET_ME = 1;</code>
+     */
+    RESET_ME(1, 1),
+    ;
+
+    /**
+     * <code>DO_NOT_RESET_ME = 0;</code>
+     */
+    public static final int DO_NOT_RESET_ME_VALUE = 0;
+    /**
+     * <code>RESET_ME = 1;</code>
+     */
+    public static final int RESET_ME_VALUE = 1;
+
+
+    public final int getNumber() { return value; }
+
+    public static Reset valueOf(int value) {
+      switch (value) {
+        case 0: return DO_NOT_RESET_ME;
+        case 1: return RESET_ME;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<Reset>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static com.google.protobuf.Internal.EnumLiteMap<Reset>
+        internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<Reset>() {
+            public Reset findValueByNumber(int number) {
+              return Reset.valueOf(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(index);
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return com.rtrk.atcommands.ATCommand.getDescriptor().getEnumTypes().get(34);
+    }
+
+    private static final Reset[] VALUES = values();
+
+    public static Reset valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int index;
+    private final int value;
+
+    private Reset(int index, int value) {
+      this.index = index;
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:com.rtrk.protobuf.Reset)
+  }
+
+  /**
+   * Protobuf enum {@code com.rtrk.protobuf.Functionality}
+   */
+  public enum Functionality
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>MINIMUM_FUNCTIONALITY = 0;</code>
+     */
+    MINIMUM_FUNCTIONALITY(0, 0),
+    /**
+     * <code>FULL_FUNCTIONALITY = 1;</code>
+     */
+    FULL_FUNCTIONALITY(1, 1),
+    /**
+     * <code>DISABLE_PHONE_FROM_BOTH_TRANSMITTING_AND_RECEIVING_RF_SIGNALS = 2;</code>
+     */
+    DISABLE_PHONE_FROM_BOTH_TRANSMITTING_AND_RECEIVING_RF_SIGNALS(2, 2),
+    ;
+
+    /**
+     * <code>MINIMUM_FUNCTIONALITY = 0;</code>
+     */
+    public static final int MINIMUM_FUNCTIONALITY_VALUE = 0;
+    /**
+     * <code>FULL_FUNCTIONALITY = 1;</code>
+     */
+    public static final int FULL_FUNCTIONALITY_VALUE = 1;
+    /**
+     * <code>DISABLE_PHONE_FROM_BOTH_TRANSMITTING_AND_RECEIVING_RF_SIGNALS = 2;</code>
+     */
+    public static final int DISABLE_PHONE_FROM_BOTH_TRANSMITTING_AND_RECEIVING_RF_SIGNALS_VALUE = 2;
+
+
+    public final int getNumber() { return value; }
+
+    public static Functionality valueOf(int value) {
+      switch (value) {
+        case 0: return MINIMUM_FUNCTIONALITY;
+        case 1: return FULL_FUNCTIONALITY;
+        case 2: return DISABLE_PHONE_FROM_BOTH_TRANSMITTING_AND_RECEIVING_RF_SIGNALS;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<Functionality>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static com.google.protobuf.Internal.EnumLiteMap<Functionality>
+        internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<Functionality>() {
+            public Functionality findValueByNumber(int number) {
+              return Functionality.valueOf(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(index);
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return com.rtrk.atcommands.ATCommand.getDescriptor().getEnumTypes().get(35);
+    }
+
+    private static final Functionality[] VALUES = values();
+
+    public static Functionality valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int index;
+    private final int value;
+
+    private Functionality(int index, int value) {
+      this.index = index;
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:com.rtrk.protobuf.Functionality)
+  }
+
+  /**
+   * Protobuf enum {@code com.rtrk.protobuf.ConnectResultCode}
+   */
+  public enum ConnectResultCode
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>CONNECT_RESULT_CODE_ONLY_RETURNED = 0;</code>
+     */
+    CONNECT_RESULT_CODE_ONLY_RETURNED(0, 0),
+    /**
+     * <code>CONNECT_TEXT_RESULT_CODE_ONLY_RETURNED = 1;</code>
+     */
+    CONNECT_TEXT_RESULT_CODE_ONLY_RETURNED(1, 1),
+    /**
+     * <code>CONNECT_TEXT_RESULT_CODE_RETURNED_DIAL_TONE_ENABLED_BUSY_SIGNAL_DISABLED = 2;</code>
+     */
+    CONNECT_TEXT_RESULT_CODE_RETURNED_DIAL_TONE_ENABLED_BUSY_SIGNAL_DISABLED(2, 2),
+    /**
+     * <code>CONNECT_TEXT_RESULT_CODE_RETURNED_DIAL_TONE_DISABLED_BUSY_SIGNAL_ENABLED = 3;</code>
+     */
+    CONNECT_TEXT_RESULT_CODE_RETURNED_DIAL_TONE_DISABLED_BUSY_SIGNAL_ENABLED(3, 3),
+    /**
+     * <code>CONNECT_TEXT_RESULT_CODE_RETURNED_DIAL_TONE_AND_BUSY_SIGNAL_ENABLED = 4;</code>
+     */
+    CONNECT_TEXT_RESULT_CODE_RETURNED_DIAL_TONE_AND_BUSY_SIGNAL_ENABLED(4, 4),
+    ;
+
+    /**
+     * <code>CONNECT_RESULT_CODE_ONLY_RETURNED = 0;</code>
+     */
+    public static final int CONNECT_RESULT_CODE_ONLY_RETURNED_VALUE = 0;
+    /**
+     * <code>CONNECT_TEXT_RESULT_CODE_ONLY_RETURNED = 1;</code>
+     */
+    public static final int CONNECT_TEXT_RESULT_CODE_ONLY_RETURNED_VALUE = 1;
+    /**
+     * <code>CONNECT_TEXT_RESULT_CODE_RETURNED_DIAL_TONE_ENABLED_BUSY_SIGNAL_DISABLED = 2;</code>
+     */
+    public static final int CONNECT_TEXT_RESULT_CODE_RETURNED_DIAL_TONE_ENABLED_BUSY_SIGNAL_DISABLED_VALUE = 2;
+    /**
+     * <code>CONNECT_TEXT_RESULT_CODE_RETURNED_DIAL_TONE_DISABLED_BUSY_SIGNAL_ENABLED = 3;</code>
+     */
+    public static final int CONNECT_TEXT_RESULT_CODE_RETURNED_DIAL_TONE_DISABLED_BUSY_SIGNAL_ENABLED_VALUE = 3;
+    /**
+     * <code>CONNECT_TEXT_RESULT_CODE_RETURNED_DIAL_TONE_AND_BUSY_SIGNAL_ENABLED = 4;</code>
+     */
+    public static final int CONNECT_TEXT_RESULT_CODE_RETURNED_DIAL_TONE_AND_BUSY_SIGNAL_ENABLED_VALUE = 4;
+
+
+    public final int getNumber() { return value; }
+
+    public static ConnectResultCode valueOf(int value) {
+      switch (value) {
+        case 0: return CONNECT_RESULT_CODE_ONLY_RETURNED;
+        case 1: return CONNECT_TEXT_RESULT_CODE_ONLY_RETURNED;
+        case 2: return CONNECT_TEXT_RESULT_CODE_RETURNED_DIAL_TONE_ENABLED_BUSY_SIGNAL_DISABLED;
+        case 3: return CONNECT_TEXT_RESULT_CODE_RETURNED_DIAL_TONE_DISABLED_BUSY_SIGNAL_ENABLED;
+        case 4: return CONNECT_TEXT_RESULT_CODE_RETURNED_DIAL_TONE_AND_BUSY_SIGNAL_ENABLED;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<ConnectResultCode>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static com.google.protobuf.Internal.EnumLiteMap<ConnectResultCode>
+        internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<ConnectResultCode>() {
+            public ConnectResultCode findValueByNumber(int number) {
+              return ConnectResultCode.valueOf(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(index);
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return com.rtrk.atcommands.ATCommand.getDescriptor().getEnumTypes().get(36);
+    }
+
+    private static final ConnectResultCode[] VALUES = values();
+
+    public static ConnectResultCode valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int index;
+    private final int value;
+
+    private ConnectResultCode(int index, int value) {
+      this.index = index;
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:com.rtrk.protobuf.ConnectResultCode)
+  }
+
+  /**
+   * Protobuf enum {@code com.rtrk.protobuf.InformationResponse}
+   */
+  public enum InformationResponse
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>SHORT_RESULT_CODE_FORMAT = 0;</code>
+     */
+    SHORT_RESULT_CODE_FORMAT(0, 0),
+    /**
+     * <code>LONG_RESULT_CODE_FORMAT = 1;</code>
+     */
+    LONG_RESULT_CODE_FORMAT(1, 1),
+    ;
+
+    /**
+     * <code>SHORT_RESULT_CODE_FORMAT = 0;</code>
+     */
+    public static final int SHORT_RESULT_CODE_FORMAT_VALUE = 0;
+    /**
+     * <code>LONG_RESULT_CODE_FORMAT = 1;</code>
+     */
+    public static final int LONG_RESULT_CODE_FORMAT_VALUE = 1;
+
+
+    public final int getNumber() { return value; }
+
+    public static InformationResponse valueOf(int value) {
+      switch (value) {
+        case 0: return SHORT_RESULT_CODE_FORMAT;
+        case 1: return LONG_RESULT_CODE_FORMAT;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<InformationResponse>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static com.google.protobuf.Internal.EnumLiteMap<InformationResponse>
+        internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<InformationResponse>() {
+            public InformationResponse findValueByNumber(int number) {
+              return InformationResponse.valueOf(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(index);
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return com.rtrk.atcommands.ATCommand.getDescriptor().getEnumTypes().get(37);
+    }
+
+    private static final InformationResponse[] VALUES = values();
+
+    public static InformationResponse valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int index;
+    private final int value;
+
+    private InformationResponse(int index, int value) {
+      this.index = index;
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:com.rtrk.protobuf.InformationResponse)
+  }
+
+  /**
+   * Protobuf enum {@code com.rtrk.protobuf.ResultCode}
+   */
+  public enum ResultCode
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>TA_TRANSMINTS_RESULT_CODE = 0;</code>
+     */
+    TA_TRANSMINTS_RESULT_CODE(0, 0),
+    /**
+     * <code>RESULT_CODE_ARE_SUPPRESSED_AND_NOT_TRANSMITTED = 1;</code>
+     */
+    RESULT_CODE_ARE_SUPPRESSED_AND_NOT_TRANSMITTED(1, 1),
+    ;
+
+    /**
+     * <code>TA_TRANSMINTS_RESULT_CODE = 0;</code>
+     */
+    public static final int TA_TRANSMINTS_RESULT_CODE_VALUE = 0;
+    /**
+     * <code>RESULT_CODE_ARE_SUPPRESSED_AND_NOT_TRANSMITTED = 1;</code>
+     */
+    public static final int RESULT_CODE_ARE_SUPPRESSED_AND_NOT_TRANSMITTED_VALUE = 1;
+
+
+    public final int getNumber() { return value; }
+
+    public static ResultCode valueOf(int value) {
+      switch (value) {
+        case 0: return TA_TRANSMINTS_RESULT_CODE;
+        case 1: return RESULT_CODE_ARE_SUPPRESSED_AND_NOT_TRANSMITTED;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<ResultCode>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static com.google.protobuf.Internal.EnumLiteMap<ResultCode>
+        internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<ResultCode>() {
+            public ResultCode findValueByNumber(int number) {
+              return ResultCode.valueOf(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(index);
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return com.rtrk.atcommands.ATCommand.getDescriptor().getEnumTypes().get(38);
+    }
+
+    private static final ResultCode[] VALUES = values();
+
+    public static ResultCode valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int index;
+    private final int value;
+
+    private ResultCode(int index, int value) {
+      this.index = index;
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:com.rtrk.protobuf.ResultCode)
+  }
+
+  /**
+   * Protobuf enum {@code com.rtrk.protobuf.TAToDefault}
+   */
+  public enum TAToDefault
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>SET_ALL_TA_TO_DEFAULT = 0;</code>
+     */
+    SET_ALL_TA_TO_DEFAULT(0, 0),
+    ;
+
+    /**
+     * <code>SET_ALL_TA_TO_DEFAULT = 0;</code>
+     */
+    public static final int SET_ALL_TA_TO_DEFAULT_VALUE = 0;
+
+
+    public final int getNumber() { return value; }
+
+    public static TAToDefault valueOf(int value) {
+      switch (value) {
+        case 0: return SET_ALL_TA_TO_DEFAULT;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<TAToDefault>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static com.google.protobuf.Internal.EnumLiteMap<TAToDefault>
+        internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<TAToDefault>() {
+            public TAToDefault findValueByNumber(int number) {
+              return TAToDefault.valueOf(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(index);
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return com.rtrk.atcommands.ATCommand.getDescriptor().getEnumTypes().get(39);
+    }
+
+    private static final TAToDefault[] VALUES = values();
+
+    public static TAToDefault valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int index;
+    private final int value;
+
+    private TAToDefault(int index, int value) {
+      this.index = index;
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:com.rtrk.protobuf.TAToDefault)
+  }
+
+  /**
+   * Protobuf enum {@code com.rtrk.protobuf.ProfileNumber}
+   */
+  public enum ProfileNumber
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>PROFILE_NUMBER = 0;</code>
+     */
+    PROFILE_NUMBER(0, 0),
+    ;
+
+    /**
+     * <code>PROFILE_NUMBER = 0;</code>
+     */
+    public static final int PROFILE_NUMBER_VALUE = 0;
+
+
+    public final int getNumber() { return value; }
+
+    public static ProfileNumber valueOf(int value) {
+      switch (value) {
+        case 0: return PROFILE_NUMBER;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<ProfileNumber>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static com.google.protobuf.Internal.EnumLiteMap<ProfileNumber>
+        internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<ProfileNumber>() {
+            public ProfileNumber findValueByNumber(int number) {
+              return ProfileNumber.valueOf(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(index);
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return com.rtrk.atcommands.ATCommand.getDescriptor().getEnumTypes().get(40);
+    }
+
+    private static final ProfileNumber[] VALUES = values();
+
+    public static ProfileNumber valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int index;
+    private final int value;
+
+    private ProfileNumber(int index, int value) {
+      this.index = index;
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:com.rtrk.protobuf.ProfileNumber)
+  }
+
+  /**
+   * Protobuf enum {@code com.rtrk.protobuf.ResetToProfileNumber}
+   */
+  public enum ResetToProfileNumber
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>RESET_TO_PROFILE_NUMBER = 0;</code>
+     */
+    RESET_TO_PROFILE_NUMBER(0, 0),
+    ;
+
+    /**
+     * <code>RESET_TO_PROFILE_NUMBER = 0;</code>
+     */
+    public static final int RESET_TO_PROFILE_NUMBER_VALUE = 0;
+
+
+    public final int getNumber() { return value; }
+
+    public static ResetToProfileNumber valueOf(int value) {
+      switch (value) {
+        case 0: return RESET_TO_PROFILE_NUMBER;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<ResetToProfileNumber>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static com.google.protobuf.Internal.EnumLiteMap<ResetToProfileNumber>
+        internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<ResetToProfileNumber>() {
+            public ResetToProfileNumber findValueByNumber(int number) {
+              return ResetToProfileNumber.valueOf(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(index);
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return com.rtrk.atcommands.ATCommand.getDescriptor().getEnumTypes().get(41);
+    }
+
+    private static final ResetToProfileNumber[] VALUES = values();
+
+    public static ResetToProfileNumber valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int index;
+    private final int value;
+
+    private ResetToProfileNumber(int index, int value) {
+      this.index = index;
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:com.rtrk.protobuf.ResetToProfileNumber)
+  }
+
+  /**
+   * Protobuf enum {@code com.rtrk.protobuf.DCEByDTE}
+   */
+  public enum DCEByDTE
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>DCE_BY_DTE_NONE = 0;</code>
+     */
+    DCE_BY_DTE_NONE(0, 0),
+    /**
+     * <code>DCE_BY_DTE_XON_XOFF = 1;</code>
+     */
+    DCE_BY_DTE_XON_XOFF(1, 1),
+    /**
+     * <code>RTS_FLOW_CONTROL = 2;</code>
+     */
+    RTS_FLOW_CONTROL(2, 2),
+    ;
+
+    /**
+     * <code>DCE_BY_DTE_NONE = 0;</code>
+     */
+    public static final int DCE_BY_DTE_NONE_VALUE = 0;
+    /**
+     * <code>DCE_BY_DTE_XON_XOFF = 1;</code>
+     */
+    public static final int DCE_BY_DTE_XON_XOFF_VALUE = 1;
+    /**
+     * <code>RTS_FLOW_CONTROL = 2;</code>
+     */
+    public static final int RTS_FLOW_CONTROL_VALUE = 2;
+
+
+    public final int getNumber() { return value; }
+
+    public static DCEByDTE valueOf(int value) {
+      switch (value) {
+        case 0: return DCE_BY_DTE_NONE;
+        case 1: return DCE_BY_DTE_XON_XOFF;
+        case 2: return RTS_FLOW_CONTROL;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<DCEByDTE>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static com.google.protobuf.Internal.EnumLiteMap<DCEByDTE>
+        internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<DCEByDTE>() {
+            public DCEByDTE findValueByNumber(int number) {
+              return DCEByDTE.valueOf(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(index);
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return com.rtrk.atcommands.ATCommand.getDescriptor().getEnumTypes().get(42);
+    }
+
+    private static final DCEByDTE[] VALUES = values();
+
+    public static DCEByDTE valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int index;
+    private final int value;
+
+    private DCEByDTE(int index, int value) {
+      this.index = index;
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:com.rtrk.protobuf.DCEByDTE)
+  }
+
+  /**
+   * Protobuf enum {@code com.rtrk.protobuf.DTEByDCE}
+   */
+  public enum DTEByDCE
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>DTE_BY_DCE_NONE = 0;</code>
+     */
+    DTE_BY_DCE_NONE(0, 0),
+    /**
+     * <code>DTE_BY_DCE_XON_XOFF = 1;</code>
+     */
+    DTE_BY_DCE_XON_XOFF(1, 1),
+    /**
+     * <code>CTS_FLOW_CONTROL = 2;</code>
+     */
+    CTS_FLOW_CONTROL(2, 2),
+    ;
+
+    /**
+     * <code>DTE_BY_DCE_NONE = 0;</code>
+     */
+    public static final int DTE_BY_DCE_NONE_VALUE = 0;
+    /**
+     * <code>DTE_BY_DCE_XON_XOFF = 1;</code>
+     */
+    public static final int DTE_BY_DCE_XON_XOFF_VALUE = 1;
+    /**
+     * <code>CTS_FLOW_CONTROL = 2;</code>
+     */
+    public static final int CTS_FLOW_CONTROL_VALUE = 2;
+
+
+    public final int getNumber() { return value; }
+
+    public static DTEByDCE valueOf(int value) {
+      switch (value) {
+        case 0: return DTE_BY_DCE_NONE;
+        case 1: return DTE_BY_DCE_XON_XOFF;
+        case 2: return CTS_FLOW_CONTROL;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<DTEByDCE>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static com.google.protobuf.Internal.EnumLiteMap<DTEByDCE>
+        internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<DTEByDCE>() {
+            public DTEByDCE findValueByNumber(int number) {
+              return DTEByDCE.valueOf(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(index);
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return com.rtrk.atcommands.ATCommand.getDescriptor().getEnumTypes().get(43);
+    }
+
+    private static final DTEByDCE[] VALUES = values();
+
+    public static DTEByDCE valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int index;
+    private final int value;
+
+    private DTEByDCE(int index, int value) {
+      this.index = index;
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:com.rtrk.protobuf.DTEByDCE)
+  }
+
+  /**
+   * Protobuf enum {@code com.rtrk.protobuf.DualUARTParity}
+   */
+  public enum DualUARTParity
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>DUAL_UART_PARITY_NONE = 0;</code>
+     */
+    DUAL_UART_PARITY_NONE(0, 0),
+    /**
+     * <code>DUAL_UART_PARITY_ODD = 1;</code>
+     */
+    DUAL_UART_PARITY_ODD(1, 1),
+    /**
+     * <code>DUAL_UART_PARITY_EVEN = 2;</code>
+     */
+    DUAL_UART_PARITY_EVEN(2, 2),
+    /**
+     * <code>DUAL_UART_PARITY_MARK = 3;</code>
+     */
+    DUAL_UART_PARITY_MARK(3, 3),
+    ;
+
+    /**
+     * <code>DUAL_UART_PARITY_NONE = 0;</code>
+     */
+    public static final int DUAL_UART_PARITY_NONE_VALUE = 0;
+    /**
+     * <code>DUAL_UART_PARITY_ODD = 1;</code>
+     */
+    public static final int DUAL_UART_PARITY_ODD_VALUE = 1;
+    /**
+     * <code>DUAL_UART_PARITY_EVEN = 2;</code>
+     */
+    public static final int DUAL_UART_PARITY_EVEN_VALUE = 2;
+    /**
+     * <code>DUAL_UART_PARITY_MARK = 3;</code>
+     */
+    public static final int DUAL_UART_PARITY_MARK_VALUE = 3;
+
+
+    public final int getNumber() { return value; }
+
+    public static DualUARTParity valueOf(int value) {
+      switch (value) {
+        case 0: return DUAL_UART_PARITY_NONE;
+        case 1: return DUAL_UART_PARITY_ODD;
+        case 2: return DUAL_UART_PARITY_EVEN;
+        case 3: return DUAL_UART_PARITY_MARK;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<DualUARTParity>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static com.google.protobuf.Internal.EnumLiteMap<DualUARTParity>
+        internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<DualUARTParity>() {
+            public DualUARTParity findValueByNumber(int number) {
+              return DualUARTParity.valueOf(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(index);
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return com.rtrk.atcommands.ATCommand.getDescriptor().getEnumTypes().get(44);
+    }
+
+    private static final DualUARTParity[] VALUES = values();
+
+    public static DualUARTParity valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int index;
+    private final int value;
+
+    private DualUARTParity(int index, int value) {
+      this.index = index;
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:com.rtrk.protobuf.DualUARTParity)
+  }
+
+  /**
+   * Protobuf enum {@code com.rtrk.protobuf.StopBits}
+   */
+  public enum StopBits
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>STOP_BIT_1 = 1;</code>
+     */
+    STOP_BIT_1(0, 1),
+    /**
+     * <code>STOP_BIT_2 = 2;</code>
+     */
+    STOP_BIT_2(1, 2),
+    /**
+     * <code>STOP_BIT_3 = 3;</code>
+     */
+    STOP_BIT_3(2, 3),
+    ;
+
+    /**
+     * <code>STOP_BIT_1 = 1;</code>
+     */
+    public static final int STOP_BIT_1_VALUE = 1;
+    /**
+     * <code>STOP_BIT_2 = 2;</code>
+     */
+    public static final int STOP_BIT_2_VALUE = 2;
+    /**
+     * <code>STOP_BIT_3 = 3;</code>
+     */
+    public static final int STOP_BIT_3_VALUE = 3;
+
+
+    public final int getNumber() { return value; }
+
+    public static StopBits valueOf(int value) {
+      switch (value) {
+        case 1: return STOP_BIT_1;
+        case 2: return STOP_BIT_2;
+        case 3: return STOP_BIT_3;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<StopBits>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static com.google.protobuf.Internal.EnumLiteMap<StopBits>
+        internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<StopBits>() {
+            public StopBits findValueByNumber(int number) {
+              return StopBits.valueOf(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(index);
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return com.rtrk.atcommands.ATCommand.getDescriptor().getEnumTypes().get(45);
+    }
+
+    private static final StopBits[] VALUES = values();
+
+    public static StopBits valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int index;
+    private final int value;
+
+    private StopBits(int index, int value) {
+      this.index = index;
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:com.rtrk.protobuf.StopBits)
+  }
+
+  /**
+   * Protobuf enum {@code com.rtrk.protobuf.DataBits}
+   */
+  public enum DataBits
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>DATA_BITS_5 = 1;</code>
+     */
+    DATA_BITS_5(0, 1),
+    /**
+     * <code>DATA_BITS_6 = 2;</code>
+     */
+    DATA_BITS_6(1, 2),
+    /**
+     * <code>DATA_BITS_7 = 3;</code>
+     */
+    DATA_BITS_7(2, 3),
+    /**
+     * <code>DATA_BITS_8 = 4;</code>
+     */
+    DATA_BITS_8(3, 4),
+    ;
+
+    /**
+     * <code>DATA_BITS_5 = 1;</code>
+     */
+    public static final int DATA_BITS_5_VALUE = 1;
+    /**
+     * <code>DATA_BITS_6 = 2;</code>
+     */
+    public static final int DATA_BITS_6_VALUE = 2;
+    /**
+     * <code>DATA_BITS_7 = 3;</code>
+     */
+    public static final int DATA_BITS_7_VALUE = 3;
+    /**
+     * <code>DATA_BITS_8 = 4;</code>
+     */
+    public static final int DATA_BITS_8_VALUE = 4;
+
+
+    public final int getNumber() { return value; }
+
+    public static DataBits valueOf(int value) {
+      switch (value) {
+        case 1: return DATA_BITS_5;
+        case 2: return DATA_BITS_6;
+        case 3: return DATA_BITS_7;
+        case 4: return DATA_BITS_8;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<DataBits>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static com.google.protobuf.Internal.EnumLiteMap<DataBits>
+        internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<DataBits>() {
+            public DataBits findValueByNumber(int number) {
+              return DataBits.valueOf(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(index);
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return com.rtrk.atcommands.ATCommand.getDescriptor().getEnumTypes().get(46);
+    }
+
+    private static final DataBits[] VALUES = values();
+
+    public static DataBits valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int index;
+    private final int value;
+
+    private DataBits(int index, int value) {
+      this.index = index;
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:com.rtrk.protobuf.DataBits)
+  }
+
+  /**
+   * Protobuf enum {@code com.rtrk.protobuf.TransmissionRate}
+   */
+  public enum TransmissionRate
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>UNKNOW_TRANSMISSION_RATE = 0;</code>
+     */
+    UNKNOW_TRANSMISSION_RATE(0, 0),
+    /**
+     * <code>RATE_115200_BPS = 5;</code>
+     */
+    RATE_115200_BPS(1, 5),
+    ;
+
+    /**
+     * <code>UNKNOW_TRANSMISSION_RATE = 0;</code>
+     */
+    public static final int UNKNOW_TRANSMISSION_RATE_VALUE = 0;
+    /**
+     * <code>RATE_115200_BPS = 5;</code>
+     */
+    public static final int RATE_115200_BPS_VALUE = 5;
+
+
+    public final int getNumber() { return value; }
+
+    public static TransmissionRate valueOf(int value) {
+      switch (value) {
+        case 0: return UNKNOW_TRANSMISSION_RATE;
+        case 5: return RATE_115200_BPS;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<TransmissionRate>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static com.google.protobuf.Internal.EnumLiteMap<TransmissionRate>
+        internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<TransmissionRate>() {
+            public TransmissionRate findValueByNumber(int number) {
+              return TransmissionRate.valueOf(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(index);
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return com.rtrk.atcommands.ATCommand.getDescriptor().getEnumTypes().get(47);
+    }
+
+    private static final TransmissionRate[] VALUES = values();
+
+    public static TransmissionRate valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int index;
+    private final int value;
+
+    private TransmissionRate(int index, int value) {
+      this.index = index;
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:com.rtrk.protobuf.TransmissionRate)
+  }
+
+  /**
+   * Protobuf enum {@code com.rtrk.protobuf.MultiplexerTransparencyMechanism}
+   */
+  public enum MultiplexerTransparencyMechanism
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>BASIC_OPTION = 0;</code>
+     */
+    BASIC_OPTION(0, 0),
+    ;
+
+    /**
+     * <code>BASIC_OPTION = 0;</code>
+     */
+    public static final int BASIC_OPTION_VALUE = 0;
+
+
+    public final int getNumber() { return value; }
+
+    public static MultiplexerTransparencyMechanism valueOf(int value) {
+      switch (value) {
+        case 0: return BASIC_OPTION;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<MultiplexerTransparencyMechanism>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static com.google.protobuf.Internal.EnumLiteMap<MultiplexerTransparencyMechanism>
+        internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<MultiplexerTransparencyMechanism>() {
+            public MultiplexerTransparencyMechanism findValueByNumber(int number) {
+              return MultiplexerTransparencyMechanism.valueOf(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(index);
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return com.rtrk.atcommands.ATCommand.getDescriptor().getEnumTypes().get(48);
+    }
+
+    private static final MultiplexerTransparencyMechanism[] VALUES = values();
+
+    public static MultiplexerTransparencyMechanism valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int index;
+    private final int value;
+
+    private MultiplexerTransparencyMechanism(int index, int value) {
+      this.index = index;
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:com.rtrk.protobuf.MultiplexerTransparencyMechanism)
+  }
+
+  /**
+   * Protobuf enum {@code com.rtrk.protobuf.MultiplexerControlChannel}
+   */
+  public enum MultiplexerControlChannel
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>UIH_FRAMES_USED_ONLY = 0;</code>
+     */
+    UIH_FRAMES_USED_ONLY(0, 0),
+    ;
+
+    /**
+     * <code>UIH_FRAMES_USED_ONLY = 0;</code>
+     */
+    public static final int UIH_FRAMES_USED_ONLY_VALUE = 0;
+
+
+    public final int getNumber() { return value; }
+
+    public static MultiplexerControlChannel valueOf(int value) {
+      switch (value) {
+        case 0: return UIH_FRAMES_USED_ONLY;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<MultiplexerControlChannel>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static com.google.protobuf.Internal.EnumLiteMap<MultiplexerControlChannel>
+        internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<MultiplexerControlChannel>() {
+            public MultiplexerControlChannel findValueByNumber(int number) {
+              return MultiplexerControlChannel.valueOf(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(index);
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return com.rtrk.atcommands.ATCommand.getDescriptor().getEnumTypes().get(49);
+    }
+
+    private static final MultiplexerControlChannel[] VALUES = values();
+
+    public static MultiplexerControlChannel valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int index;
+    private final int value;
+
+    private MultiplexerControlChannel(int index, int value) {
+      this.index = index;
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:com.rtrk.protobuf.MultiplexerControlChannel)
+  }
+
+  /**
+   * Protobuf enum {@code com.rtrk.protobuf.Rate}
+   */
+  public enum Rate
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>RATE_0 = 0;</code>
+     */
+    RATE_0(0, 0),
+    /**
+     * <code>RATE_75 = 75;</code>
+     */
+    RATE_75(1, 75),
+    /**
+     * <code>RATE_150 = 150;</code>
+     */
+    RATE_150(2, 150),
+    /**
+     * <code>RATE_300 = 300;</code>
+     */
+    RATE_300(3, 300),
+    /**
+     * <code>RATE_600 = 600;</code>
+     */
+    RATE_600(4, 600),
+    /**
+     * <code>RATE_1200 = 1200;</code>
+     */
+    RATE_1200(5, 1200),
+    /**
+     * <code>REATE_2400 = 2400;</code>
+     */
+    REATE_2400(6, 2400),
+    /**
+     * <code>RATE_4800 = 4800;</code>
+     */
+    RATE_4800(7, 4800),
+    /**
+     * <code>RATE_9600 = 9600;</code>
+     */
+    RATE_9600(8, 9600),
+    /**
+     * <code>RATE_14400 = 1440;</code>
+     */
+    RATE_14400(9, 1440),
+    /**
+     * <code>RATE_19200 = 19200;</code>
+     */
+    RATE_19200(10, 19200),
+    /**
+     * <code>RATE_28800 = 28800;</code>
+     */
+    RATE_28800(11, 28800),
+    /**
+     * <code>RATE_38400 = 38400;</code>
+     */
+    RATE_38400(12, 38400),
+    /**
+     * <code>RATE_57600 = 57600;</code>
+     */
+    RATE_57600(13, 57600),
+    /**
+     * <code>RATE_115200 = 115200;</code>
+     */
+    RATE_115200(14, 115200),
+    ;
+
+    /**
+     * <code>RATE_0 = 0;</code>
+     */
+    public static final int RATE_0_VALUE = 0;
+    /**
+     * <code>RATE_75 = 75;</code>
+     */
+    public static final int RATE_75_VALUE = 75;
+    /**
+     * <code>RATE_150 = 150;</code>
+     */
+    public static final int RATE_150_VALUE = 150;
+    /**
+     * <code>RATE_300 = 300;</code>
+     */
+    public static final int RATE_300_VALUE = 300;
+    /**
+     * <code>RATE_600 = 600;</code>
+     */
+    public static final int RATE_600_VALUE = 600;
+    /**
+     * <code>RATE_1200 = 1200;</code>
+     */
+    public static final int RATE_1200_VALUE = 1200;
+    /**
+     * <code>REATE_2400 = 2400;</code>
+     */
+    public static final int REATE_2400_VALUE = 2400;
+    /**
+     * <code>RATE_4800 = 4800;</code>
+     */
+    public static final int RATE_4800_VALUE = 4800;
+    /**
+     * <code>RATE_9600 = 9600;</code>
+     */
+    public static final int RATE_9600_VALUE = 9600;
+    /**
+     * <code>RATE_14400 = 1440;</code>
+     */
+    public static final int RATE_14400_VALUE = 1440;
+    /**
+     * <code>RATE_19200 = 19200;</code>
+     */
+    public static final int RATE_19200_VALUE = 19200;
+    /**
+     * <code>RATE_28800 = 28800;</code>
+     */
+    public static final int RATE_28800_VALUE = 28800;
+    /**
+     * <code>RATE_38400 = 38400;</code>
+     */
+    public static final int RATE_38400_VALUE = 38400;
+    /**
+     * <code>RATE_57600 = 57600;</code>
+     */
+    public static final int RATE_57600_VALUE = 57600;
+    /**
+     * <code>RATE_115200 = 115200;</code>
+     */
+    public static final int RATE_115200_VALUE = 115200;
+
+
+    public final int getNumber() { return value; }
+
+    public static Rate valueOf(int value) {
+      switch (value) {
+        case 0: return RATE_0;
+        case 75: return RATE_75;
+        case 150: return RATE_150;
+        case 300: return RATE_300;
+        case 600: return RATE_600;
+        case 1200: return RATE_1200;
+        case 2400: return REATE_2400;
+        case 4800: return RATE_4800;
+        case 9600: return RATE_9600;
+        case 1440: return RATE_14400;
+        case 19200: return RATE_19200;
+        case 28800: return RATE_28800;
+        case 38400: return RATE_38400;
+        case 57600: return RATE_57600;
+        case 115200: return RATE_115200;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<Rate>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static com.google.protobuf.Internal.EnumLiteMap<Rate>
+        internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<Rate>() {
+            public Rate findValueByNumber(int number) {
+              return Rate.valueOf(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(index);
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return com.rtrk.atcommands.ATCommand.getDescriptor().getEnumTypes().get(50);
+    }
+
+    private static final Rate[] VALUES = values();
+
+    public static Rate valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int index;
+    private final int value;
+
+    private Rate(int index, int value) {
+      this.index = index;
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:com.rtrk.protobuf.Rate)
+  }
+
+  /**
+   * Protobuf enum {@code com.rtrk.protobuf.Parity}
+   */
+  public enum Parity
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>ODD = 0;</code>
+     */
+    ODD(0, 0),
+    /**
+     * <code>EVEN = 1;</code>
+     */
+    EVEN(1, 1),
+    /**
+     * <code>MARK = 2;</code>
+     */
+    MARK(2, 2),
+    /**
+     * <code>SPACE = 3;</code>
+     */
+    SPACE(3, 3),
+    ;
+
+    /**
+     * <code>ODD = 0;</code>
+     */
+    public static final int ODD_VALUE = 0;
+    /**
+     * <code>EVEN = 1;</code>
+     */
+    public static final int EVEN_VALUE = 1;
+    /**
+     * <code>MARK = 2;</code>
+     */
+    public static final int MARK_VALUE = 2;
+    /**
+     * <code>SPACE = 3;</code>
+     */
+    public static final int SPACE_VALUE = 3;
+
+
+    public final int getNumber() { return value; }
+
+    public static Parity valueOf(int value) {
+      switch (value) {
+        case 0: return ODD;
+        case 1: return EVEN;
+        case 2: return MARK;
+        case 3: return SPACE;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<Parity>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static com.google.protobuf.Internal.EnumLiteMap<Parity>
+        internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<Parity>() {
+            public Parity findValueByNumber(int number) {
+              return Parity.valueOf(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(index);
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return com.rtrk.atcommands.ATCommand.getDescriptor().getEnumTypes().get(51);
+    }
+
+    private static final Parity[] VALUES = values();
+
+    public static Parity valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int index;
+    private final int value;
+
+    private Parity(int index, int value) {
+      this.index = index;
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:com.rtrk.protobuf.Parity)
+  }
+
+  /**
+   * Protobuf enum {@code com.rtrk.protobuf.FramingFormat}
+   */
+  public enum FramingFormat
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>UNKNOW_FRAMING_FORMAT = 0;</code>
+     */
+    UNKNOW_FRAMING_FORMAT(0, 0),
+    /**
+     * <code>DATA_8_PARITY_0_STOP_2 = 1;</code>
+     */
+    DATA_8_PARITY_0_STOP_2(1, 1),
+    /**
+     * <code>DATA_8_PARITY_1_STOP_1 = 2;</code>
+     */
+    DATA_8_PARITY_1_STOP_1(2, 2),
+    /**
+     * <code>DATA_8_PARITY_0_STOP_1 = 3;</code>
+     */
+    DATA_8_PARITY_0_STOP_1(3, 3),
+    /**
+     * <code>DATA_7_PARITY_0_STOP_2 = 4;</code>
+     */
+    DATA_7_PARITY_0_STOP_2(4, 4),
+    /**
+     * <code>DATA_7_PARITY_1_STOP_1 = 5;</code>
+     */
+    DATA_7_PARITY_1_STOP_1(5, 5),
+    /**
+     * <code>DATA_7_PARITY_0_STOP_1 = 6;</code>
+     */
+    DATA_7_PARITY_0_STOP_1(6, 6),
+    ;
+
+    /**
+     * <code>UNKNOW_FRAMING_FORMAT = 0;</code>
+     */
+    public static final int UNKNOW_FRAMING_FORMAT_VALUE = 0;
+    /**
+     * <code>DATA_8_PARITY_0_STOP_2 = 1;</code>
+     */
+    public static final int DATA_8_PARITY_0_STOP_2_VALUE = 1;
+    /**
+     * <code>DATA_8_PARITY_1_STOP_1 = 2;</code>
+     */
+    public static final int DATA_8_PARITY_1_STOP_1_VALUE = 2;
+    /**
+     * <code>DATA_8_PARITY_0_STOP_1 = 3;</code>
+     */
+    public static final int DATA_8_PARITY_0_STOP_1_VALUE = 3;
+    /**
+     * <code>DATA_7_PARITY_0_STOP_2 = 4;</code>
+     */
+    public static final int DATA_7_PARITY_0_STOP_2_VALUE = 4;
+    /**
+     * <code>DATA_7_PARITY_1_STOP_1 = 5;</code>
+     */
+    public static final int DATA_7_PARITY_1_STOP_1_VALUE = 5;
+    /**
+     * <code>DATA_7_PARITY_0_STOP_1 = 6;</code>
+     */
+    public static final int DATA_7_PARITY_0_STOP_1_VALUE = 6;
+
+
+    public final int getNumber() { return value; }
+
+    public static FramingFormat valueOf(int value) {
+      switch (value) {
+        case 0: return UNKNOW_FRAMING_FORMAT;
+        case 1: return DATA_8_PARITY_0_STOP_2;
+        case 2: return DATA_8_PARITY_1_STOP_1;
+        case 3: return DATA_8_PARITY_0_STOP_1;
+        case 4: return DATA_7_PARITY_0_STOP_2;
+        case 5: return DATA_7_PARITY_1_STOP_1;
+        case 6: return DATA_7_PARITY_0_STOP_1;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<FramingFormat>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static com.google.protobuf.Internal.EnumLiteMap<FramingFormat>
+        internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<FramingFormat>() {
+            public FramingFormat findValueByNumber(int number) {
+              return FramingFormat.valueOf(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(index);
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return com.rtrk.atcommands.ATCommand.getDescriptor().getEnumTypes().get(52);
+    }
+
+    private static final FramingFormat[] VALUES = values();
+
+    public static FramingFormat valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int index;
+    private final int value;
+
+    private FramingFormat(int index, int value) {
+      this.index = index;
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:com.rtrk.protobuf.FramingFormat)
+  }
+
+  /**
+   * Protobuf enum {@code com.rtrk.protobuf.DTRStatus}
+   */
+  public enum DTRStatus
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>TA_IGNORES_STATUS_ON_DTR = 0;</code>
+     */
+    TA_IGNORES_STATUS_ON_DTR(0, 0),
+    /**
+     * <code>CHANGE_TO_CAOMMAND_MODE_WHILE_REMAINING_CONNECTED_CALL = 1;</code>
+     */
+    CHANGE_TO_CAOMMAND_MODE_WHILE_REMAINING_CONNECTED_CALL(1, 1),
+    /**
+     * <code>DISCONNECT_DATA_CALL_AND_THEN_CHANGE_TO_COMMAND_MODE = 2;</code>
+     */
+    DISCONNECT_DATA_CALL_AND_THEN_CHANGE_TO_COMMAND_MODE(2, 2),
+    ;
+
+    /**
+     * <code>TA_IGNORES_STATUS_ON_DTR = 0;</code>
+     */
+    public static final int TA_IGNORES_STATUS_ON_DTR_VALUE = 0;
+    /**
+     * <code>CHANGE_TO_CAOMMAND_MODE_WHILE_REMAINING_CONNECTED_CALL = 1;</code>
+     */
+    public static final int CHANGE_TO_CAOMMAND_MODE_WHILE_REMAINING_CONNECTED_CALL_VALUE = 1;
+    /**
+     * <code>DISCONNECT_DATA_CALL_AND_THEN_CHANGE_TO_COMMAND_MODE = 2;</code>
+     */
+    public static final int DISCONNECT_DATA_CALL_AND_THEN_CHANGE_TO_COMMAND_MODE_VALUE = 2;
+
+
+    public final int getNumber() { return value; }
+
+    public static DTRStatus valueOf(int value) {
+      switch (value) {
+        case 0: return TA_IGNORES_STATUS_ON_DTR;
+        case 1: return CHANGE_TO_CAOMMAND_MODE_WHILE_REMAINING_CONNECTED_CALL;
+        case 2: return DISCONNECT_DATA_CALL_AND_THEN_CHANGE_TO_COMMAND_MODE;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<DTRStatus>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static com.google.protobuf.Internal.EnumLiteMap<DTRStatus>
+        internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<DTRStatus>() {
+            public DTRStatus findValueByNumber(int number) {
+              return DTRStatus.valueOf(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(index);
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return com.rtrk.atcommands.ATCommand.getDescriptor().getEnumTypes().get(53);
+    }
+
+    private static final DTRStatus[] VALUES = values();
+
+    public static DTRStatus valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int index;
+    private final int value;
+
+    private DTRStatus(int index, int value) {
+      this.index = index;
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:com.rtrk.protobuf.DTRStatus)
+  }
+
+  /**
+   * Protobuf enum {@code com.rtrk.protobuf.DCDLineStatus}
+   */
+  public enum DCDLineStatus
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>DCD_LINE_IS_ALWAYS_ON = 0;</code>
+     */
+    DCD_LINE_IS_ALWAYS_ON(0, 0),
+    /**
+     * <code>DCD_LINE_IS_ON_ONLY_IN_PRESENCE_OF_DATA_CARRIER = 1;</code>
+     */
+    DCD_LINE_IS_ON_ONLY_IN_PRESENCE_OF_DATA_CARRIER(1, 1),
+    ;
+
+    /**
+     * <code>DCD_LINE_IS_ALWAYS_ON = 0;</code>
+     */
+    public static final int DCD_LINE_IS_ALWAYS_ON_VALUE = 0;
+    /**
+     * <code>DCD_LINE_IS_ON_ONLY_IN_PRESENCE_OF_DATA_CARRIER = 1;</code>
+     */
+    public static final int DCD_LINE_IS_ON_ONLY_IN_PRESENCE_OF_DATA_CARRIER_VALUE = 1;
+
+
+    public final int getNumber() { return value; }
+
+    public static DCDLineStatus valueOf(int value) {
+      switch (value) {
+        case 0: return DCD_LINE_IS_ALWAYS_ON;
+        case 1: return DCD_LINE_IS_ON_ONLY_IN_PRESENCE_OF_DATA_CARRIER;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<DCDLineStatus>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static com.google.protobuf.Internal.EnumLiteMap<DCDLineStatus>
+        internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<DCDLineStatus>() {
+            public DCDLineStatus findValueByNumber(int number) {
+              return DCDLineStatus.valueOf(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(index);
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return com.rtrk.atcommands.ATCommand.getDescriptor().getEnumTypes().get(54);
+    }
+
+    private static final DCDLineStatus[] VALUES = values();
+
+    public static DCDLineStatus valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int index;
+    private final int value;
+
+    private DCDLineStatus(int index, int value) {
+      this.index = index;
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:com.rtrk.protobuf.DCDLineStatus)
+  }
+
+  /**
+   * Protobuf enum {@code com.rtrk.protobuf.ConnectionType}
+   */
+  public enum ConnectionType
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>CIRCUIT_SWITCHED_VOICE_CALL = 0;</code>
+     */
+    CIRCUIT_SWITCHED_VOICE_CALL(0, 0),
+    /**
+     * <code>CIRCUIT_SWITCHED_DATA_CALL = 1;</code>
+     */
+    CIRCUIT_SWITCHED_DATA_CALL(1, 1),
+    /**
+     * <code>PPP_CONNECTION = 2;</code>
+     */
+    PPP_CONNECTION(2, 2),
+    ;
+
+    /**
+     * <code>CIRCUIT_SWITCHED_VOICE_CALL = 0;</code>
+     */
+    public static final int CIRCUIT_SWITCHED_VOICE_CALL_VALUE = 0;
+    /**
+     * <code>CIRCUIT_SWITCHED_DATA_CALL = 1;</code>
+     */
+    public static final int CIRCUIT_SWITCHED_DATA_CALL_VALUE = 1;
+    /**
+     * <code>PPP_CONNECTION = 2;</code>
+     */
+    public static final int PPP_CONNECTION_VALUE = 2;
+
+
+    public final int getNumber() { return value; }
+
+    public static ConnectionType valueOf(int value) {
+      switch (value) {
+        case 0: return CIRCUIT_SWITCHED_VOICE_CALL;
+        case 1: return CIRCUIT_SWITCHED_DATA_CALL;
+        case 2: return PPP_CONNECTION;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<ConnectionType>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static com.google.protobuf.Internal.EnumLiteMap<ConnectionType>
+        internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<ConnectionType>() {
+            public ConnectionType findValueByNumber(int number) {
+              return ConnectionType.valueOf(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(index);
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return com.rtrk.atcommands.ATCommand.getDescriptor().getEnumTypes().get(55);
+    }
+
+    private static final ConnectionType[] VALUES = values();
+
+    public static ConnectionType valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int index;
+    private final int value;
+
+    private ConnectionType(int index, int value) {
+      this.index = index;
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:com.rtrk.protobuf.ConnectionType)
+  }
+
+  /**
+   * Protobuf enum {@code com.rtrk.protobuf.SIMCardInsertStatus}
+   */
+  public enum SIMCardInsertStatus
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>LOW_LEVEL_OF_PIN_INDICATES_SIM_CARD_IS_PRESENT = 0;</code>
+     */
+    LOW_LEVEL_OF_PIN_INDICATES_SIM_CARD_IS_PRESENT(0, 0),
+    /**
+     * <code>HIGH_LEVEL_OF_PIN_INDICATES_SIM_CARD_IS_PRESENT = 1;</code>
+     */
+    HIGH_LEVEL_OF_PIN_INDICATES_SIM_CARD_IS_PRESENT(1, 1),
+    ;
+
+    /**
+     * <code>LOW_LEVEL_OF_PIN_INDICATES_SIM_CARD_IS_PRESENT = 0;</code>
+     */
+    public static final int LOW_LEVEL_OF_PIN_INDICATES_SIM_CARD_IS_PRESENT_VALUE = 0;
+    /**
+     * <code>HIGH_LEVEL_OF_PIN_INDICATES_SIM_CARD_IS_PRESENT = 1;</code>
+     */
+    public static final int HIGH_LEVEL_OF_PIN_INDICATES_SIM_CARD_IS_PRESENT_VALUE = 1;
+
+
+    public final int getNumber() { return value; }
+
+    public static SIMCardInsertStatus valueOf(int value) {
+      switch (value) {
+        case 0: return LOW_LEVEL_OF_PIN_INDICATES_SIM_CARD_IS_PRESENT;
+        case 1: return HIGH_LEVEL_OF_PIN_INDICATES_SIM_CARD_IS_PRESENT;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<SIMCardInsertStatus>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static com.google.protobuf.Internal.EnumLiteMap<SIMCardInsertStatus>
+        internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<SIMCardInsertStatus>() {
+            public SIMCardInsertStatus findValueByNumber(int number) {
+              return SIMCardInsertStatus.valueOf(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(index);
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return com.rtrk.atcommands.ATCommand.getDescriptor().getEnumTypes().get(56);
+    }
+
+    private static final SIMCardInsertStatus[] VALUES = values();
+
+    public static SIMCardInsertStatus valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int index;
+    private final int value;
+
+    private SIMCardInsertStatus(int index, int value) {
+      this.index = index;
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:com.rtrk.protobuf.SIMCardInsertStatus)
+  }
+
+  /**
+   * Protobuf enum {@code com.rtrk.protobuf.SIMCardDetectionPIN}
+   */
+  public enum SIMCardDetectionPIN
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>CONFIGURE_SIM_PRESENCE_AS_SIM_CARD_DETECTION_PIN = 0;</code>
+     */
+    CONFIGURE_SIM_PRESENCE_AS_SIM_CARD_DETECTION_PIN(0, 0),
+    /**
+     * <code>CONFIGURE_DTR_AS_SIM_CARD_DETECTION_PIN = 1;</code>
+     */
+    CONFIGURE_DTR_AS_SIM_CARD_DETECTION_PIN(1, 1),
+    ;
+
+    /**
+     * <code>CONFIGURE_SIM_PRESENCE_AS_SIM_CARD_DETECTION_PIN = 0;</code>
+     */
+    public static final int CONFIGURE_SIM_PRESENCE_AS_SIM_CARD_DETECTION_PIN_VALUE = 0;
+    /**
+     * <code>CONFIGURE_DTR_AS_SIM_CARD_DETECTION_PIN = 1;</code>
+     */
+    public static final int CONFIGURE_DTR_AS_SIM_CARD_DETECTION_PIN_VALUE = 1;
+
+
+    public final int getNumber() { return value; }
+
+    public static SIMCardDetectionPIN valueOf(int value) {
+      switch (value) {
+        case 0: return CONFIGURE_SIM_PRESENCE_AS_SIM_CARD_DETECTION_PIN;
+        case 1: return CONFIGURE_DTR_AS_SIM_CARD_DETECTION_PIN;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<SIMCardDetectionPIN>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static com.google.protobuf.Internal.EnumLiteMap<SIMCardDetectionPIN>
+        internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<SIMCardDetectionPIN>() {
+            public SIMCardDetectionPIN findValueByNumber(int number) {
+              return SIMCardDetectionPIN.valueOf(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(index);
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return com.rtrk.atcommands.ATCommand.getDescriptor().getEnumTypes().get(57);
+    }
+
+    private static final SIMCardDetectionPIN[] VALUES = values();
+
+    public static SIMCardDetectionPIN valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int index;
+    private final int value;
+
+    private SIMCardDetectionPIN(int index, int value) {
+      this.index = index;
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:com.rtrk.protobuf.SIMCardDetectionPIN)
+  }
+
+  /**
+   * Protobuf enum {@code com.rtrk.protobuf.TimeZoneChangeEventReporting}
+   */
+  public enum TimeZoneChangeEventReporting
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>DISABLE_TIME_ZONE_CHANGE_EVENT_REPORTING = 0;</code>
+     */
+    DISABLE_TIME_ZONE_CHANGE_EVENT_REPORTING(0, 0),
+    /**
+     * <code>ENABLE_TIME_ZONE_CHANGE_EVENT_REPORTING_BY_UNSOLICITED_RESULT_CODE = 1;</code>
+     */
+    ENABLE_TIME_ZONE_CHANGE_EVENT_REPORTING_BY_UNSOLICITED_RESULT_CODE(1, 1),
+    /**
+     * <code>ENABLE_EXTENDED_TIME_ZONE_REPORTING_BY_UNSOLICITED_RESULT_CODE = 2;</code>
+     */
+    ENABLE_EXTENDED_TIME_ZONE_REPORTING_BY_UNSOLICITED_RESULT_CODE(2, 2),
+    ;
+
+    /**
+     * <code>DISABLE_TIME_ZONE_CHANGE_EVENT_REPORTING = 0;</code>
+     */
+    public static final int DISABLE_TIME_ZONE_CHANGE_EVENT_REPORTING_VALUE = 0;
+    /**
+     * <code>ENABLE_TIME_ZONE_CHANGE_EVENT_REPORTING_BY_UNSOLICITED_RESULT_CODE = 1;</code>
+     */
+    public static final int ENABLE_TIME_ZONE_CHANGE_EVENT_REPORTING_BY_UNSOLICITED_RESULT_CODE_VALUE = 1;
+    /**
+     * <code>ENABLE_EXTENDED_TIME_ZONE_REPORTING_BY_UNSOLICITED_RESULT_CODE = 2;</code>
+     */
+    public static final int ENABLE_EXTENDED_TIME_ZONE_REPORTING_BY_UNSOLICITED_RESULT_CODE_VALUE = 2;
+
+
+    public final int getNumber() { return value; }
+
+    public static TimeZoneChangeEventReporting valueOf(int value) {
+      switch (value) {
+        case 0: return DISABLE_TIME_ZONE_CHANGE_EVENT_REPORTING;
+        case 1: return ENABLE_TIME_ZONE_CHANGE_EVENT_REPORTING_BY_UNSOLICITED_RESULT_CODE;
+        case 2: return ENABLE_EXTENDED_TIME_ZONE_REPORTING_BY_UNSOLICITED_RESULT_CODE;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<TimeZoneChangeEventReporting>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static com.google.protobuf.Internal.EnumLiteMap<TimeZoneChangeEventReporting>
+        internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<TimeZoneChangeEventReporting>() {
+            public TimeZoneChangeEventReporting findValueByNumber(int number) {
+              return TimeZoneChangeEventReporting.valueOf(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(index);
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return com.rtrk.atcommands.ATCommand.getDescriptor().getEnumTypes().get(58);
+    }
+
+    private static final TimeZoneChangeEventReporting[] VALUES = values();
+
+    public static TimeZoneChangeEventReporting valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int index;
+    private final int value;
+
+    private TimeZoneChangeEventReporting(int index, int value) {
+      this.index = index;
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:com.rtrk.protobuf.TimeZoneChangeEventReporting)
+  }
+
+  /**
+   * Protobuf enum {@code com.rtrk.protobuf.RTCTime}
+   */
+  public enum RTCTime
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>DISABLE_AUTOMATIC_UPDATE_RTC_TIME_VIA_NITZ = 0;</code>
+     */
+    DISABLE_AUTOMATIC_UPDATE_RTC_TIME_VIA_NITZ(0, 0),
+    /**
+     * <code>UPDATE_NETWORK_SYNCHRONIZED_TIME_TO_RTC_AND_SAVE_TIME_ZONE_INOT_NVRAM = 1;</code>
+     */
+    UPDATE_NETWORK_SYNCHRONIZED_TIME_TO_RTC_AND_SAVE_TIME_ZONE_INOT_NVRAM(1, 1),
+    /**
+     * <code>UPDATE_GTM_TIME_WITH_TIME_ZONE_TO_RTC_SAVE_TIME_ZONE_TO_NVRAM_IGNORE_DAYLIGHT_SAVING_TIME = 2;</code>
+     */
+    UPDATE_GTM_TIME_WITH_TIME_ZONE_TO_RTC_SAVE_TIME_ZONE_TO_NVRAM_IGNORE_DAYLIGHT_SAVING_TIME(2, 2),
+    /**
+     * <code>UPDATE_LOCALIZED_TIME_AND_TIME_ZONE_TO_RTC_AND_SAVE_TIME_ZONE_TO_NVRAM = 3;</code>
+     */
+    UPDATE_LOCALIZED_TIME_AND_TIME_ZONE_TO_RTC_AND_SAVE_TIME_ZONE_TO_NVRAM(3, 3),
+    /**
+     * <code>SAVE_WITH_MODE_2 = 4;</code>
+     */
+    SAVE_WITH_MODE_2(4, 4),
+    ;
+
+    /**
+     * <code>DISABLE_AUTOMATIC_UPDATE_RTC_TIME_VIA_NITZ = 0;</code>
+     */
+    public static final int DISABLE_AUTOMATIC_UPDATE_RTC_TIME_VIA_NITZ_VALUE = 0;
+    /**
+     * <code>UPDATE_NETWORK_SYNCHRONIZED_TIME_TO_RTC_AND_SAVE_TIME_ZONE_INOT_NVRAM = 1;</code>
+     */
+    public static final int UPDATE_NETWORK_SYNCHRONIZED_TIME_TO_RTC_AND_SAVE_TIME_ZONE_INOT_NVRAM_VALUE = 1;
+    /**
+     * <code>UPDATE_GTM_TIME_WITH_TIME_ZONE_TO_RTC_SAVE_TIME_ZONE_TO_NVRAM_IGNORE_DAYLIGHT_SAVING_TIME = 2;</code>
+     */
+    public static final int UPDATE_GTM_TIME_WITH_TIME_ZONE_TO_RTC_SAVE_TIME_ZONE_TO_NVRAM_IGNORE_DAYLIGHT_SAVING_TIME_VALUE = 2;
+    /**
+     * <code>UPDATE_LOCALIZED_TIME_AND_TIME_ZONE_TO_RTC_AND_SAVE_TIME_ZONE_TO_NVRAM = 3;</code>
+     */
+    public static final int UPDATE_LOCALIZED_TIME_AND_TIME_ZONE_TO_RTC_AND_SAVE_TIME_ZONE_TO_NVRAM_VALUE = 3;
+    /**
+     * <code>SAVE_WITH_MODE_2 = 4;</code>
+     */
+    public static final int SAVE_WITH_MODE_2_VALUE = 4;
+
+
+    public final int getNumber() { return value; }
+
+    public static RTCTime valueOf(int value) {
+      switch (value) {
+        case 0: return DISABLE_AUTOMATIC_UPDATE_RTC_TIME_VIA_NITZ;
+        case 1: return UPDATE_NETWORK_SYNCHRONIZED_TIME_TO_RTC_AND_SAVE_TIME_ZONE_INOT_NVRAM;
+        case 2: return UPDATE_GTM_TIME_WITH_TIME_ZONE_TO_RTC_SAVE_TIME_ZONE_TO_NVRAM_IGNORE_DAYLIGHT_SAVING_TIME;
+        case 3: return UPDATE_LOCALIZED_TIME_AND_TIME_ZONE_TO_RTC_AND_SAVE_TIME_ZONE_TO_NVRAM;
+        case 4: return SAVE_WITH_MODE_2;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<RTCTime>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static com.google.protobuf.Internal.EnumLiteMap<RTCTime>
+        internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<RTCTime>() {
+            public RTCTime findValueByNumber(int number) {
+              return RTCTime.valueOf(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(index);
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return com.rtrk.atcommands.ATCommand.getDescriptor().getEnumTypes().get(59);
+    }
+
+    private static final RTCTime[] VALUES = values();
+
+    public static RTCTime valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int index;
+    private final int value;
+
+    private RTCTime(int index, int value) {
+      this.index = index;
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:com.rtrk.protobuf.RTCTime)
+  }
+
+  /**
+   * Protobuf enum {@code com.rtrk.protobuf.GSMNetworkStatus}
+   */
+  public enum GSMNetworkStatus
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>WORK_IN_NORMAL_STATE = 0;</code>
+     */
+    WORK_IN_NORMAL_STATE(0, 0),
+    /**
+     * <code>NO_AVAILABLE_CELL = 1;</code>
+     */
+    NO_AVAILABLE_CELL(1, 1),
+    /**
+     * <code>ONLY_LIMITED_SERVICE_AVAILABLE = 2;</code>
+     */
+    ONLY_LIMITED_SERVICE_AVAILABLE(2, 2),
+    /**
+     * <code>NOT_READY_TO_RETRIEVE_NETWORK_STATUS = 3;</code>
+     */
+    NOT_READY_TO_RETRIEVE_NETWORK_STATUS(3, 3),
+    ;
+
+    /**
+     * <code>WORK_IN_NORMAL_STATE = 0;</code>
+     */
+    public static final int WORK_IN_NORMAL_STATE_VALUE = 0;
+    /**
+     * <code>NO_AVAILABLE_CELL = 1;</code>
+     */
+    public static final int NO_AVAILABLE_CELL_VALUE = 1;
+    /**
+     * <code>ONLY_LIMITED_SERVICE_AVAILABLE = 2;</code>
+     */
+    public static final int ONLY_LIMITED_SERVICE_AVAILABLE_VALUE = 2;
+    /**
+     * <code>NOT_READY_TO_RETRIEVE_NETWORK_STATUS = 3;</code>
+     */
+    public static final int NOT_READY_TO_RETRIEVE_NETWORK_STATUS_VALUE = 3;
+
+
+    public final int getNumber() { return value; }
+
+    public static GSMNetworkStatus valueOf(int value) {
+      switch (value) {
+        case 0: return WORK_IN_NORMAL_STATE;
+        case 1: return NO_AVAILABLE_CELL;
+        case 2: return ONLY_LIMITED_SERVICE_AVAILABLE;
+        case 3: return NOT_READY_TO_RETRIEVE_NETWORK_STATUS;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<GSMNetworkStatus>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static com.google.protobuf.Internal.EnumLiteMap<GSMNetworkStatus>
+        internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<GSMNetworkStatus>() {
+            public GSMNetworkStatus findValueByNumber(int number) {
+              return GSMNetworkStatus.valueOf(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(index);
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return com.rtrk.atcommands.ATCommand.getDescriptor().getEnumTypes().get(60);
+    }
+
+    private static final GSMNetworkStatus[] VALUES = values();
+
+    public static GSMNetworkStatus valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int index;
+    private final int value;
+
+    private GSMNetworkStatus(int index, int value) {
+      this.index = index;
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:com.rtrk.protobuf.GSMNetworkStatus)
+  }
+
+  /**
+   * Protobuf enum {@code com.rtrk.protobuf.StateOfInitialization}
+   */
+  public enum StateOfInitialization
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>NO_INITIALIZATION = 0;</code>
+     */
+    NO_INITIALIZATION(0, 0),
+    /**
+     * <code>READY_TO_EXECUTE_AT_COMMAND = 1;</code>
+     */
+    READY_TO_EXECUTE_AT_COMMAND(1, 1),
+    /**
+     * <code>PHONEBOOK_HAS_FINISHED_INITIALIZATION = 2;</code>
+     */
+    PHONEBOOK_HAS_FINISHED_INITIALIZATION(2, 2),
+    /**
+     * <code>SMS_HAS_FINISHED_INITIALIZATION = 3;</code>
+     */
+    SMS_HAS_FINISHED_INITIALIZATION(3, 3),
+    ;
+
+    /**
+     * <code>NO_INITIALIZATION = 0;</code>
+     */
+    public static final int NO_INITIALIZATION_VALUE = 0;
+    /**
+     * <code>READY_TO_EXECUTE_AT_COMMAND = 1;</code>
+     */
+    public static final int READY_TO_EXECUTE_AT_COMMAND_VALUE = 1;
+    /**
+     * <code>PHONEBOOK_HAS_FINISHED_INITIALIZATION = 2;</code>
+     */
+    public static final int PHONEBOOK_HAS_FINISHED_INITIALIZATION_VALUE = 2;
+    /**
+     * <code>SMS_HAS_FINISHED_INITIALIZATION = 3;</code>
+     */
+    public static final int SMS_HAS_FINISHED_INITIALIZATION_VALUE = 3;
+
+
+    public final int getNumber() { return value; }
+
+    public static StateOfInitialization valueOf(int value) {
+      switch (value) {
+        case 0: return NO_INITIALIZATION;
+        case 1: return READY_TO_EXECUTE_AT_COMMAND;
+        case 2: return PHONEBOOK_HAS_FINISHED_INITIALIZATION;
+        case 3: return SMS_HAS_FINISHED_INITIALIZATION;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<StateOfInitialization>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static com.google.protobuf.Internal.EnumLiteMap<StateOfInitialization>
+        internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<StateOfInitialization>() {
+            public StateOfInitialization findValueByNumber(int number) {
+              return StateOfInitialization.valueOf(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(index);
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return com.rtrk.atcommands.ATCommand.getDescriptor().getEnumTypes().get(61);
+    }
+
+    private static final StateOfInitialization[] VALUES = values();
+
+    public static StateOfInitialization valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int index;
+    private final int value;
+
+    private StateOfInitialization(int index, int value) {
+      this.index = index;
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:com.rtrk.protobuf.StateOfInitialization)
+  }
+
+  /**
+   * Protobuf enum {@code com.rtrk.protobuf.ProprietaryUnsolicitedIndications}
+   */
+  public enum ProprietaryUnsolicitedIndications
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>PUI_DISABLE = 0;</code>
+     */
+    PUI_DISABLE(0, 0),
+    /**
+     * <code>PUI_ENABLE = 1;</code>
+     */
+    PUI_ENABLE(1, 1),
+    /**
+     * <code>PUI_QUERY = 2;</code>
+     */
+    PUI_QUERY(2, 2),
+    ;
+
+    /**
+     * <code>PUI_DISABLE = 0;</code>
+     */
+    public static final int PUI_DISABLE_VALUE = 0;
+    /**
+     * <code>PUI_ENABLE = 1;</code>
+     */
+    public static final int PUI_ENABLE_VALUE = 1;
+    /**
+     * <code>PUI_QUERY = 2;</code>
+     */
+    public static final int PUI_QUERY_VALUE = 2;
+
+
+    public final int getNumber() { return value; }
+
+    public static ProprietaryUnsolicitedIndications valueOf(int value) {
+      switch (value) {
+        case 0: return PUI_DISABLE;
+        case 1: return PUI_ENABLE;
+        case 2: return PUI_QUERY;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<ProprietaryUnsolicitedIndications>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static com.google.protobuf.Internal.EnumLiteMap<ProprietaryUnsolicitedIndications>
+        internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<ProprietaryUnsolicitedIndications>() {
+            public ProprietaryUnsolicitedIndications findValueByNumber(int number) {
+              return ProprietaryUnsolicitedIndications.valueOf(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(index);
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return com.rtrk.atcommands.ATCommand.getDescriptor().getEnumTypes().get(62);
+    }
+
+    private static final ProprietaryUnsolicitedIndications[] VALUES = values();
+
+    public static ProprietaryUnsolicitedIndications valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int index;
+    private final int value;
+
+    private ProprietaryUnsolicitedIndications(int index, int value) {
+      this.index = index;
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:com.rtrk.protobuf.ProprietaryUnsolicitedIndications)
+  }
+
+  /**
+   * Protobuf enum {@code com.rtrk.protobuf.Status}
+   */
+  public enum Status
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>STATUS_OFF = 0;</code>
+     */
+    STATUS_OFF(0, 0),
+    /**
+     * <code>STATUS_ON = 1;</code>
+     */
+    STATUS_ON(1, 1),
+    ;
+
+    /**
+     * <code>STATUS_OFF = 0;</code>
+     */
+    public static final int STATUS_OFF_VALUE = 0;
+    /**
+     * <code>STATUS_ON = 1;</code>
+     */
+    public static final int STATUS_ON_VALUE = 1;
+
+
+    public final int getNumber() { return value; }
+
+    public static Status valueOf(int value) {
+      switch (value) {
+        case 0: return STATUS_OFF;
+        case 1: return STATUS_ON;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<Status>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static com.google.protobuf.Internal.EnumLiteMap<Status>
+        internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<Status>() {
+            public Status findValueByNumber(int number) {
+              return Status.valueOf(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(index);
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return com.rtrk.atcommands.ATCommand.getDescriptor().getEnumTypes().get(63);
+    }
+
+    private static final Status[] VALUES = values();
+
+    public static Status valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int index;
+    private final int value;
+
+    private Status(int index, int value) {
+      this.index = index;
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:com.rtrk.protobuf.Status)
+  }
+
+  /**
+   * Protobuf enum {@code com.rtrk.protobuf.Pas}
+   */
+  public enum Pas
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>PAS_READY = 0;</code>
+     */
+    PAS_READY(0, 0),
+    /**
+     * <code>PAS_UNKNOW = 1;</code>
+     */
+    PAS_UNKNOW(1, 1),
+    /**
+     * <code>PAS_RINGING = 2;</code>
+     */
+    PAS_RINGING(2, 2),
+    /**
+     * <code>PAS_CALL_IN_PROGRESS_OR_CALL_HOLD = 3;</code>
+     */
+    PAS_CALL_IN_PROGRESS_OR_CALL_HOLD(3, 3),
+    ;
+
+    /**
+     * <code>PAS_READY = 0;</code>
+     */
+    public static final int PAS_READY_VALUE = 0;
+    /**
+     * <code>PAS_UNKNOW = 1;</code>
+     */
+    public static final int PAS_UNKNOW_VALUE = 1;
+    /**
+     * <code>PAS_RINGING = 2;</code>
+     */
+    public static final int PAS_RINGING_VALUE = 2;
+    /**
+     * <code>PAS_CALL_IN_PROGRESS_OR_CALL_HOLD = 3;</code>
+     */
+    public static final int PAS_CALL_IN_PROGRESS_OR_CALL_HOLD_VALUE = 3;
+
+
+    public final int getNumber() { return value; }
+
+    public static Pas valueOf(int value) {
+      switch (value) {
+        case 0: return PAS_READY;
+        case 1: return PAS_UNKNOW;
+        case 2: return PAS_RINGING;
+        case 3: return PAS_CALL_IN_PROGRESS_OR_CALL_HOLD;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<Pas>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static com.google.protobuf.Internal.EnumLiteMap<Pas>
+        internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<Pas>() {
+            public Pas findValueByNumber(int number) {
+              return Pas.valueOf(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(index);
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return com.rtrk.atcommands.ATCommand.getDescriptor().getEnumTypes().get(64);
+    }
+
+    private static final Pas[] VALUES = values();
+
+    public static Pas valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int index;
+    private final int value;
+
+    private Pas(int index, int value) {
+      this.index = index;
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:com.rtrk.protobuf.Pas)
   }
 
   /**
@@ -2808,7 +6502,7 @@ public final class ATCommand {
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return com.rtrk.atcommands.ATCommand.getDescriptor().getEnumTypes().get(25);
+      return com.rtrk.atcommands.ATCommand.getDescriptor().getEnumTypes().get(65);
     }
 
     private static final OthersMessageType[] VALUES = values();
@@ -2935,7 +6629,7 @@ public final class ATCommand {
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return com.rtrk.atcommands.ATCommand.getDescriptor().getEnumTypes().get(26);
+      return com.rtrk.atcommands.ATCommand.getDescriptor().getEnumTypes().get(66);
     }
 
     private static final HardwareRelatedMessageType[] VALUES = values();
@@ -3161,7 +6855,7 @@ public final class ATCommand {
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return com.rtrk.atcommands.ATCommand.getDescriptor().getEnumTypes().get(27);
+      return com.rtrk.atcommands.ATCommand.getDescriptor().getEnumTypes().get(67);
     }
 
     private static final AudioMessageType[] VALUES = values();
@@ -3324,7 +7018,7 @@ public final class ATCommand {
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return com.rtrk.atcommands.ATCommand.getDescriptor().getEnumTypes().get(28);
+      return com.rtrk.atcommands.ATCommand.getDescriptor().getEnumTypes().get(68);
     }
 
     private static final SupplementaryServiceMessageType[] VALUES = values();
@@ -3694,7 +7388,7 @@ public final class ATCommand {
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return com.rtrk.atcommands.ATCommand.getDescriptor().getEnumTypes().get(29);
+      return com.rtrk.atcommands.ATCommand.getDescriptor().getEnumTypes().get(69);
     }
 
     private static final TCPIPMessageType[] VALUES = values();
@@ -3866,7 +7560,7 @@ public final class ATCommand {
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return com.rtrk.atcommands.ATCommand.getDescriptor().getEnumTypes().get(30);
+      return com.rtrk.atcommands.ATCommand.getDescriptor().getEnumTypes().get(70);
     }
 
     private static final GPRSMessageType[] VALUES = values();
@@ -3975,7 +7669,7 @@ public final class ATCommand {
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return com.rtrk.atcommands.ATCommand.getDescriptor().getEnumTypes().get(31);
+      return com.rtrk.atcommands.ATCommand.getDescriptor().getEnumTypes().get(71);
     }
 
     private static final PhonebookMessageType[] VALUES = values();
@@ -4219,7 +7913,7 @@ public final class ATCommand {
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return com.rtrk.atcommands.ATCommand.getDescriptor().getEnumTypes().get(32);
+      return com.rtrk.atcommands.ATCommand.getDescriptor().getEnumTypes().get(72);
     }
 
     private static final SMSMessageType[] VALUES = values();
@@ -4481,7 +8175,7 @@ public final class ATCommand {
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return com.rtrk.atcommands.ATCommand.getDescriptor().getEnumTypes().get(33);
+      return com.rtrk.atcommands.ATCommand.getDescriptor().getEnumTypes().get(73);
     }
 
     private static final CallRelatedMessageType[] VALUES = values();
@@ -4626,7 +8320,7 @@ public final class ATCommand {
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return com.rtrk.atcommands.ATCommand.getDescriptor().getEnumTypes().get(34);
+      return com.rtrk.atcommands.ATCommand.getDescriptor().getEnumTypes().get(74);
     }
 
     private static final NetworkServiceMessageType[] VALUES = values();
@@ -4807,7 +8501,7 @@ public final class ATCommand {
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return com.rtrk.atcommands.ATCommand.getDescriptor().getEnumTypes().get(35);
+      return com.rtrk.atcommands.ATCommand.getDescriptor().getEnumTypes().get(75);
     }
 
     private static final SIMRelatedMessageType[] VALUES = values();
@@ -5015,7 +8709,7 @@ public final class ATCommand {
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return com.rtrk.atcommands.ATCommand.getDescriptor().getEnumTypes().get(36);
+      return com.rtrk.atcommands.ATCommand.getDescriptor().getEnumTypes().get(76);
     }
 
     private static final StatusControlMessageType[] VALUES = values();
@@ -5160,7 +8854,7 @@ public final class ATCommand {
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return com.rtrk.atcommands.ATCommand.getDescriptor().getEnumTypes().get(37);
+      return com.rtrk.atcommands.ATCommand.getDescriptor().getEnumTypes().get(77);
     }
 
     private static final SerialInterfaceControlMessageType[] VALUES = values();
@@ -5431,7 +9125,7 @@ public final class ATCommand {
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return com.rtrk.atcommands.ATCommand.getDescriptor().getEnumTypes().get(38);
+      return com.rtrk.atcommands.ATCommand.getDescriptor().getEnumTypes().get(78);
     }
 
     private static final GeneralMesssageType[] VALUES = values();
@@ -5612,7 +9306,7 @@ public final class ATCommand {
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return com.rtrk.atcommands.ATCommand.getDescriptor().getEnumTypes().get(39);
+      return com.rtrk.atcommands.ATCommand.getDescriptor().getEnumTypes().get(79);
     }
 
     private static final SMTPMessageType[] VALUES = values();
@@ -5703,7 +9397,7 @@ public final class ATCommand {
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return com.rtrk.atcommands.ATCommand.getDescriptor().getEnumTypes().get(40);
+      return com.rtrk.atcommands.ATCommand.getDescriptor().getEnumTypes().get(80);
     }
 
     private static final RecordingMessageType[] VALUES = values();
@@ -5830,7 +9524,7 @@ public final class ATCommand {
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return com.rtrk.atcommands.ATCommand.getDescriptor().getEnumTypes().get(41);
+      return com.rtrk.atcommands.ATCommand.getDescriptor().getEnumTypes().get(81);
     }
 
     private static final QuecCellMessageType[] VALUES = values();
@@ -6020,7 +9714,7 @@ public final class ATCommand {
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return com.rtrk.atcommands.ATCommand.getDescriptor().getEnumTypes().get(42);
+      return com.rtrk.atcommands.ATCommand.getDescriptor().getEnumTypes().get(82);
     }
 
     private static final MMSMessageType[] VALUES = values();
@@ -6165,7 +9859,7 @@ public final class ATCommand {
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return com.rtrk.atcommands.ATCommand.getDescriptor().getEnumTypes().get(43);
+      return com.rtrk.atcommands.ATCommand.getDescriptor().getEnumTypes().get(83);
     }
 
     private static final STKMessageType[] VALUES = values();
@@ -6382,7 +10076,7 @@ public final class ATCommand {
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return com.rtrk.atcommands.ATCommand.getDescriptor().getEnumTypes().get(44);
+      return com.rtrk.atcommands.ATCommand.getDescriptor().getEnumTypes().get(84);
     }
 
     private static final FTPMessageType[] VALUES = values();
@@ -6572,7 +10266,7 @@ public final class ATCommand {
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return com.rtrk.atcommands.ATCommand.getDescriptor().getEnumTypes().get(45);
+      return com.rtrk.atcommands.ATCommand.getDescriptor().getEnumTypes().get(85);
     }
 
     private static final FileMessageType[] VALUES = values();
@@ -6681,7 +10375,7 @@ public final class ATCommand {
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return com.rtrk.atcommands.ATCommand.getDescriptor().getEnumTypes().get(46);
+      return com.rtrk.atcommands.ATCommand.getDescriptor().getEnumTypes().get(86);
     }
 
     private static final HTTPMessageType[] VALUES = values();
@@ -8095,7 +11789,7 @@ public final class ATCommand {
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return com.rtrk.atcommands.ATCommand.getDescriptor().getEnumTypes().get(47);
+      return com.rtrk.atcommands.ATCommand.getDescriptor().getEnumTypes().get(87);
     }
 
     private static final Error[] VALUES = values();
@@ -8402,7 +12096,7 @@ public final class ATCommand {
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return com.rtrk.atcommands.ATCommand.getDescriptor().getEnumTypes().get(48);
+      return com.rtrk.atcommands.ATCommand.getDescriptor().getEnumTypes().get(88);
     }
 
     private static final FTPError[] VALUES = values();
@@ -23472,7 +27166,7 @@ public final class ATCommand {
       read_ = false;
       write_ = false;
       mMSCURL_ = "";
-      protocolType_ = com.rtrk.atcommands.ATCommand.ProtocolType.UNKNOW;
+      protocolType_ = com.rtrk.atcommands.ATCommand.ProtocolType.HHTP_PROTOCOL;
       gateway_ = "";
       port_ = 0;
       validityPeriod_ = com.rtrk.atcommands.ATCommand.ValidityPeriod.TIME_1_HOUR;
@@ -23497,10 +27191,10 @@ public final class ATCommand {
       messageSize_ = 0;
       para_ = 0;
       paraOutputMode_ = com.rtrk.atcommands.ATCommand.TitleInputMode.PDU_HEX_MODE;
-      operateReadMMS_ = com.rtrk.atcommands.ATCommand.OperateReadMMS.UNKNOW_OPERATE_READ_MMS;
+      operateReadMMS_ = com.rtrk.atcommands.ATCommand.OperateReadMMS.VIEW_ORIGINATION_ADDRESS;
       fileName_ = "";
       downloadSize_ = 0;
-      operateReceiveMMS_ = com.rtrk.atcommands.ATCommand.OperateReceiveMMS.UNKNOW_OPERATE_RECEIVE_MMS;
+      operateReceiveMMS_ = com.rtrk.atcommands.ATCommand.OperateReceiveMMS.START_TO_RECEIVE_MMS_MESSAGE;
       checksum_ = 0;
       callHasHigherPriorityThanMMS_ = false;
       dURAttribute_ = 0L;
@@ -23511,7 +27205,7 @@ public final class ATCommand {
       fileType_ = 0;
       isResponse_ = false;
       description_ = "";
-      operateSendMMS_ = com.rtrk.atcommands.ATCommand.OperateSendMMS.UNKNOW_OPERATE_SEND_MMS;
+      operateSendMMS_ = com.rtrk.atcommands.ATCommand.OperateSendMMS.START_TO_SEND_MMS;
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -23981,7 +27675,7 @@ public final class ATCommand {
         bitField0_ = (bitField0_ & ~0x00000008);
         mMSCURL_ = "";
         bitField0_ = (bitField0_ & ~0x00000010);
-        protocolType_ = com.rtrk.atcommands.ATCommand.ProtocolType.UNKNOW;
+        protocolType_ = com.rtrk.atcommands.ATCommand.ProtocolType.HHTP_PROTOCOL;
         bitField0_ = (bitField0_ & ~0x00000020);
         gateway_ = "";
         bitField0_ = (bitField0_ & ~0x00000040);
@@ -24031,13 +27725,13 @@ public final class ATCommand {
         bitField0_ = (bitField0_ & ~0x10000000);
         paraOutputMode_ = com.rtrk.atcommands.ATCommand.TitleInputMode.PDU_HEX_MODE;
         bitField0_ = (bitField0_ & ~0x20000000);
-        operateReadMMS_ = com.rtrk.atcommands.ATCommand.OperateReadMMS.UNKNOW_OPERATE_READ_MMS;
+        operateReadMMS_ = com.rtrk.atcommands.ATCommand.OperateReadMMS.VIEW_ORIGINATION_ADDRESS;
         bitField0_ = (bitField0_ & ~0x40000000);
         fileName_ = "";
         bitField0_ = (bitField0_ & ~0x80000000);
         downloadSize_ = 0;
         bitField1_ = (bitField1_ & ~0x00000001);
-        operateReceiveMMS_ = com.rtrk.atcommands.ATCommand.OperateReceiveMMS.UNKNOW_OPERATE_RECEIVE_MMS;
+        operateReceiveMMS_ = com.rtrk.atcommands.ATCommand.OperateReceiveMMS.START_TO_RECEIVE_MMS_MESSAGE;
         bitField1_ = (bitField1_ & ~0x00000002);
         checksum_ = 0;
         bitField1_ = (bitField1_ & ~0x00000004);
@@ -24059,7 +27753,7 @@ public final class ATCommand {
         bitField1_ = (bitField1_ & ~0x00000400);
         description_ = "";
         bitField1_ = (bitField1_ & ~0x00000800);
-        operateSendMMS_ = com.rtrk.atcommands.ATCommand.OperateSendMMS.UNKNOW_OPERATE_SEND_MMS;
+        operateSendMMS_ = com.rtrk.atcommands.ATCommand.OperateSendMMS.START_TO_SEND_MMS;
         bitField1_ = (bitField1_ & ~0x00001000);
         return this;
       }
@@ -24680,7 +28374,7 @@ public final class ATCommand {
         return this;
       }
 
-      private com.rtrk.atcommands.ATCommand.ProtocolType protocolType_ = com.rtrk.atcommands.ATCommand.ProtocolType.UNKNOW;
+      private com.rtrk.atcommands.ATCommand.ProtocolType protocolType_ = com.rtrk.atcommands.ATCommand.ProtocolType.HHTP_PROTOCOL;
       /**
        * <code>optional .com.rtrk.protobuf.ProtocolType protocolType = 6;</code>
        */
@@ -24710,7 +28404,7 @@ public final class ATCommand {
        */
       public Builder clearProtocolType() {
         bitField0_ = (bitField0_ & ~0x00000020);
-        protocolType_ = com.rtrk.atcommands.ATCommand.ProtocolType.UNKNOW;
+        protocolType_ = com.rtrk.atcommands.ATCommand.ProtocolType.HHTP_PROTOCOL;
         onChanged();
         return this;
       }
@@ -25774,7 +29468,7 @@ public final class ATCommand {
         return this;
       }
 
-      private com.rtrk.atcommands.ATCommand.OperateReadMMS operateReadMMS_ = com.rtrk.atcommands.ATCommand.OperateReadMMS.UNKNOW_OPERATE_READ_MMS;
+      private com.rtrk.atcommands.ATCommand.OperateReadMMS operateReadMMS_ = com.rtrk.atcommands.ATCommand.OperateReadMMS.VIEW_ORIGINATION_ADDRESS;
       /**
        * <code>optional .com.rtrk.protobuf.OperateReadMMS operateReadMMS = 42;</code>
        */
@@ -25804,7 +29498,7 @@ public final class ATCommand {
        */
       public Builder clearOperateReadMMS() {
         bitField0_ = (bitField0_ & ~0x40000000);
-        operateReadMMS_ = com.rtrk.atcommands.ATCommand.OperateReadMMS.UNKNOW_OPERATE_READ_MMS;
+        operateReadMMS_ = com.rtrk.atcommands.ATCommand.OperateReadMMS.VIEW_ORIGINATION_ADDRESS;
         onChanged();
         return this;
       }
@@ -25917,7 +29611,7 @@ public final class ATCommand {
         return this;
       }
 
-      private com.rtrk.atcommands.ATCommand.OperateReceiveMMS operateReceiveMMS_ = com.rtrk.atcommands.ATCommand.OperateReceiveMMS.UNKNOW_OPERATE_RECEIVE_MMS;
+      private com.rtrk.atcommands.ATCommand.OperateReceiveMMS operateReceiveMMS_ = com.rtrk.atcommands.ATCommand.OperateReceiveMMS.START_TO_RECEIVE_MMS_MESSAGE;
       /**
        * <code>optional .com.rtrk.protobuf.OperateReceiveMMS operateReceiveMMS = 44;</code>
        */
@@ -25947,7 +29641,7 @@ public final class ATCommand {
        */
       public Builder clearOperateReceiveMMS() {
         bitField1_ = (bitField1_ & ~0x00000002);
-        operateReceiveMMS_ = com.rtrk.atcommands.ATCommand.OperateReceiveMMS.UNKNOW_OPERATE_RECEIVE_MMS;
+        operateReceiveMMS_ = com.rtrk.atcommands.ATCommand.OperateReceiveMMS.START_TO_RECEIVE_MMS_MESSAGE;
         onChanged();
         return this;
       }
@@ -26316,7 +30010,7 @@ public final class ATCommand {
         return this;
       }
 
-      private com.rtrk.atcommands.ATCommand.OperateSendMMS operateSendMMS_ = com.rtrk.atcommands.ATCommand.OperateSendMMS.UNKNOW_OPERATE_SEND_MMS;
+      private com.rtrk.atcommands.ATCommand.OperateSendMMS operateSendMMS_ = com.rtrk.atcommands.ATCommand.OperateSendMMS.START_TO_SEND_MMS;
       /**
        * <code>optional .com.rtrk.protobuf.OperateSendMMS operateSendMMS = 46;</code>
        */
@@ -26346,7 +30040,7 @@ public final class ATCommand {
        */
       public Builder clearOperateSendMMS() {
         bitField1_ = (bitField1_ & ~0x00001000);
-        operateSendMMS_ = com.rtrk.atcommands.ATCommand.OperateSendMMS.UNKNOW_OPERATE_SEND_MMS;
+        operateSendMMS_ = com.rtrk.atcommands.ATCommand.OperateSendMMS.START_TO_SEND_MMS;
         onChanged();
         return this;
       }
@@ -26520,13 +30214,13 @@ public final class ATCommand {
     int getAbsoluteRadioFrequencyChannelNumber();
 
     /**
-     * <code>optional int32 engineeringMode = 44;</code>
+     * <code>optional .com.rtrk.protobuf.EngineeringMode engineeringMode = 51;</code>
      */
     boolean hasEngineeringMode();
     /**
-     * <code>optional int32 engineeringMode = 44;</code>
+     * <code>optional .com.rtrk.protobuf.EngineeringMode engineeringMode = 51;</code>
      */
-    int getEngineeringMode();
+    com.rtrk.atcommands.ATCommand.EngineeringMode getEngineeringMode();
 
     /**
      * <code>optional .com.rtrk.protobuf.Dump dump = 16;</code>
@@ -27159,11 +30853,6 @@ public final class ATCommand {
               arcfn3_ = input.readInt32();
               break;
             }
-            case 352: {
-              bitField0_ |= 0x00008000;
-              engineeringMode_ = input.readInt32();
-              break;
-            }
             case 360: {
               bitField1_ |= 0x00001000;
               isResponse_ = input.readBool();
@@ -27199,6 +30888,17 @@ public final class ATCommand {
             case 400: {
               bitField1_ |= 0x00020000;
               mEHaveLockedCertainARCFN_ = input.readBool();
+              break;
+            }
+            case 408: {
+              int rawValue = input.readEnum();
+              com.rtrk.atcommands.ATCommand.EngineeringMode value = com.rtrk.atcommands.ATCommand.EngineeringMode.valueOf(rawValue);
+              if (value == null) {
+                unknownFields.mergeVarintField(51, rawValue);
+              } else {
+                bitField0_ |= 0x00008000;
+                engineeringMode_ = value;
+              }
               break;
             }
           }
@@ -27529,18 +31229,18 @@ public final class ATCommand {
       return absoluteRadioFrequencyChannelNumber_;
     }
 
-    public static final int ENGINEERINGMODE_FIELD_NUMBER = 44;
-    private int engineeringMode_;
+    public static final int ENGINEERINGMODE_FIELD_NUMBER = 51;
+    private com.rtrk.atcommands.ATCommand.EngineeringMode engineeringMode_;
     /**
-     * <code>optional int32 engineeringMode = 44;</code>
+     * <code>optional .com.rtrk.protobuf.EngineeringMode engineeringMode = 51;</code>
      */
     public boolean hasEngineeringMode() {
       return ((bitField0_ & 0x00008000) == 0x00008000);
     }
     /**
-     * <code>optional int32 engineeringMode = 44;</code>
+     * <code>optional .com.rtrk.protobuf.EngineeringMode engineeringMode = 51;</code>
      */
-    public int getEngineeringMode() {
+    public com.rtrk.atcommands.ATCommand.EngineeringMode getEngineeringMode() {
       return engineeringMode_;
     }
 
@@ -28149,7 +31849,7 @@ public final class ATCommand {
       read_ = false;
       write_ = false;
       execution_ = false;
-      status_ = com.rtrk.atcommands.ATCommand.OperatorStatus.UNKNOW_OPERATOR;
+      status_ = com.rtrk.atcommands.ATCommand.OperatorStatus.OPERATOR_AVAILABLE;
       operatorInString_ = "";
       operatorInShortString_ = "";
       operatorInNumber_ = 0;
@@ -28159,7 +31859,7 @@ public final class ATCommand {
       baseStationIdentityCode_ = 0;
       receiveLevel_ = 0;
       absoluteRadioFrequencyChannelNumber_ = 0;
-      engineeringMode_ = 0;
+      engineeringMode_ = com.rtrk.atcommands.ATCommand.EngineeringMode.SWITCH_OFF_ENGINEERING_MODE;
       dump_ = com.rtrk.atcommands.ATCommand.Dump.ONLY_DISPLAY_INFORMATION_OF_SERVING_CALL;
       mobileCountryCode_ = 0;
       mobileNetworkCode_ = 0;
@@ -28341,9 +32041,6 @@ public final class ATCommand {
       if (((bitField1_ & 0x00000800) == 0x00000800)) {
         output.writeInt32(43, arcfn3_);
       }
-      if (((bitField0_ & 0x00008000) == 0x00008000)) {
-        output.writeInt32(44, engineeringMode_);
-      }
       if (((bitField1_ & 0x00001000) == 0x00001000)) {
         output.writeBool(45, isResponse_);
       }
@@ -28361,6 +32058,9 @@ public final class ATCommand {
       }
       if (((bitField1_ & 0x00020000) == 0x00020000)) {
         output.writeBool(50, mEHaveLockedCertainARCFN_);
+      }
+      if (((bitField0_ & 0x00008000) == 0x00008000)) {
+        output.writeEnum(51, engineeringMode_.getNumber());
       }
       getUnknownFields().writeTo(output);
     }
@@ -28543,10 +32243,6 @@ public final class ATCommand {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(43, arcfn3_);
       }
-      if (((bitField0_ & 0x00008000) == 0x00008000)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(44, engineeringMode_);
-      }
       if (((bitField1_ & 0x00001000) == 0x00001000)) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(45, isResponse_);
@@ -28570,6 +32266,10 @@ public final class ATCommand {
       if (((bitField1_ & 0x00020000) == 0x00020000)) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(50, mEHaveLockedCertainARCFN_);
+      }
+      if (((bitField0_ & 0x00008000) == 0x00008000)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(51, engineeringMode_.getNumber());
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -28698,7 +32398,7 @@ public final class ATCommand {
         bitField0_ = (bitField0_ & ~0x00000008);
         execution_ = false;
         bitField0_ = (bitField0_ & ~0x00000010);
-        status_ = com.rtrk.atcommands.ATCommand.OperatorStatus.UNKNOW_OPERATOR;
+        status_ = com.rtrk.atcommands.ATCommand.OperatorStatus.OPERATOR_AVAILABLE;
         bitField0_ = (bitField0_ & ~0x00000020);
         operatorInString_ = "";
         bitField0_ = (bitField0_ & ~0x00000040);
@@ -28718,7 +32418,7 @@ public final class ATCommand {
         bitField0_ = (bitField0_ & ~0x00002000);
         absoluteRadioFrequencyChannelNumber_ = 0;
         bitField0_ = (bitField0_ & ~0x00004000);
-        engineeringMode_ = 0;
+        engineeringMode_ = com.rtrk.atcommands.ATCommand.EngineeringMode.SWITCH_OFF_ENGINEERING_MODE;
         bitField0_ = (bitField0_ & ~0x00008000);
         dump_ = com.rtrk.atcommands.ATCommand.Dump.ONLY_DISPLAY_INFORMATION_OF_SERVING_CALL;
         bitField0_ = (bitField0_ & ~0x00010000);
@@ -29390,7 +33090,7 @@ public final class ATCommand {
         return this;
       }
 
-      private com.rtrk.atcommands.ATCommand.OperatorStatus status_ = com.rtrk.atcommands.ATCommand.OperatorStatus.UNKNOW_OPERATOR;
+      private com.rtrk.atcommands.ATCommand.OperatorStatus status_ = com.rtrk.atcommands.ATCommand.OperatorStatus.OPERATOR_AVAILABLE;
       /**
        * <code>optional .com.rtrk.protobuf.OperatorStatus status = 6;</code>
        */
@@ -29420,7 +33120,7 @@ public final class ATCommand {
        */
       public Builder clearStatus() {
         bitField0_ = (bitField0_ & ~0x00000020);
-        status_ = com.rtrk.atcommands.ATCommand.OperatorStatus.UNKNOW_OPERATOR;
+        status_ = com.rtrk.atcommands.ATCommand.OperatorStatus.OPERATOR_AVAILABLE;
         onChanged();
         return this;
       }
@@ -29817,34 +33517,37 @@ public final class ATCommand {
         return this;
       }
 
-      private int engineeringMode_ ;
+      private com.rtrk.atcommands.ATCommand.EngineeringMode engineeringMode_ = com.rtrk.atcommands.ATCommand.EngineeringMode.SWITCH_OFF_ENGINEERING_MODE;
       /**
-       * <code>optional int32 engineeringMode = 44;</code>
+       * <code>optional .com.rtrk.protobuf.EngineeringMode engineeringMode = 51;</code>
        */
       public boolean hasEngineeringMode() {
         return ((bitField0_ & 0x00008000) == 0x00008000);
       }
       /**
-       * <code>optional int32 engineeringMode = 44;</code>
+       * <code>optional .com.rtrk.protobuf.EngineeringMode engineeringMode = 51;</code>
        */
-      public int getEngineeringMode() {
+      public com.rtrk.atcommands.ATCommand.EngineeringMode getEngineeringMode() {
         return engineeringMode_;
       }
       /**
-       * <code>optional int32 engineeringMode = 44;</code>
+       * <code>optional .com.rtrk.protobuf.EngineeringMode engineeringMode = 51;</code>
        */
-      public Builder setEngineeringMode(int value) {
+      public Builder setEngineeringMode(com.rtrk.atcommands.ATCommand.EngineeringMode value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
         bitField0_ |= 0x00008000;
         engineeringMode_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>optional int32 engineeringMode = 44;</code>
+       * <code>optional .com.rtrk.protobuf.EngineeringMode engineeringMode = 51;</code>
        */
       public Builder clearEngineeringMode() {
         bitField0_ = (bitField0_ & ~0x00008000);
-        engineeringMode_ = 0;
+        engineeringMode_ = com.rtrk.atcommands.ATCommand.EngineeringMode.SWITCH_OFF_ENGINEERING_MODE;
         onChanged();
         return this;
       }
@@ -31158,13 +34861,13 @@ public final class ATCommand {
     boolean getExecution();
 
     /**
-     * <code>optional int32 state = 5;</code>
+     * <code>optional .com.rtrk.protobuf.RecordingState recordingState = 5;</code>
      */
-    boolean hasState();
+    boolean hasRecordingState();
     /**
-     * <code>optional int32 state = 5;</code>
+     * <code>optional .com.rtrk.protobuf.RecordingState recordingState = 5;</code>
      */
-    int getState();
+    com.rtrk.atcommands.ATCommand.RecordingState getRecordingState();
 
     /**
      * <code>optional string fileName = 6;</code>
@@ -31181,13 +34884,13 @@ public final class ATCommand {
         getFileNameBytes();
 
     /**
-     * <code>optional int32 format = 7;</code>
+     * <code>optional .com.rtrk.protobuf.FileFormat format = 7;</code>
      */
     boolean hasFormat();
     /**
-     * <code>optional int32 format = 7;</code>
+     * <code>optional .com.rtrk.protobuf.FileFormat format = 7;</code>
      */
-    int getFormat();
+    com.rtrk.atcommands.ATCommand.FileFormat getFormat();
 
     /**
      * <code>optional bool repeat = 8;</code>
@@ -31208,13 +34911,13 @@ public final class ATCommand {
     int getVolume();
 
     /**
-     * <code>optional int32 channel = 10;</code>
+     * <code>optional .com.rtrk.protobuf.PlayChannel channel = 10;</code>
      */
     boolean hasChannel();
     /**
-     * <code>optional int32 channel = 10;</code>
+     * <code>optional .com.rtrk.protobuf.PlayChannel channel = 10;</code>
      */
-    int getChannel();
+    com.rtrk.atcommands.ATCommand.PlayChannel getChannel();
 
     /**
      * <code>optional int32 control = 11;</code>
@@ -31327,8 +35030,14 @@ public final class ATCommand {
               break;
             }
             case 40: {
-              bitField0_ |= 0x00000020;
-              state_ = input.readInt32();
+              int rawValue = input.readEnum();
+              com.rtrk.atcommands.ATCommand.RecordingState value = com.rtrk.atcommands.ATCommand.RecordingState.valueOf(rawValue);
+              if (value == null) {
+                unknownFields.mergeVarintField(5, rawValue);
+              } else {
+                bitField0_ |= 0x00000020;
+                recordingState_ = value;
+              }
               break;
             }
             case 50: {
@@ -31338,8 +35047,14 @@ public final class ATCommand {
               break;
             }
             case 56: {
-              bitField0_ |= 0x00000080;
-              format_ = input.readInt32();
+              int rawValue = input.readEnum();
+              com.rtrk.atcommands.ATCommand.FileFormat value = com.rtrk.atcommands.ATCommand.FileFormat.valueOf(rawValue);
+              if (value == null) {
+                unknownFields.mergeVarintField(7, rawValue);
+              } else {
+                bitField0_ |= 0x00000080;
+                format_ = value;
+              }
               break;
             }
             case 64: {
@@ -31353,8 +35068,14 @@ public final class ATCommand {
               break;
             }
             case 80: {
-              bitField0_ |= 0x00000400;
-              channel_ = input.readInt32();
+              int rawValue = input.readEnum();
+              com.rtrk.atcommands.ATCommand.PlayChannel value = com.rtrk.atcommands.ATCommand.PlayChannel.valueOf(rawValue);
+              if (value == null) {
+                unknownFields.mergeVarintField(10, rawValue);
+              } else {
+                bitField0_ |= 0x00000400;
+                channel_ = value;
+              }
               break;
             }
             case 88: {
@@ -31493,19 +35214,19 @@ public final class ATCommand {
       return execution_;
     }
 
-    public static final int STATE_FIELD_NUMBER = 5;
-    private int state_;
+    public static final int RECORDINGSTATE_FIELD_NUMBER = 5;
+    private com.rtrk.atcommands.ATCommand.RecordingState recordingState_;
     /**
-     * <code>optional int32 state = 5;</code>
+     * <code>optional .com.rtrk.protobuf.RecordingState recordingState = 5;</code>
      */
-    public boolean hasState() {
+    public boolean hasRecordingState() {
       return ((bitField0_ & 0x00000020) == 0x00000020);
     }
     /**
-     * <code>optional int32 state = 5;</code>
+     * <code>optional .com.rtrk.protobuf.RecordingState recordingState = 5;</code>
      */
-    public int getState() {
-      return state_;
+    public com.rtrk.atcommands.ATCommand.RecordingState getRecordingState() {
+      return recordingState_;
     }
 
     public static final int FILENAME_FIELD_NUMBER = 6;
@@ -31551,17 +35272,17 @@ public final class ATCommand {
     }
 
     public static final int FORMAT_FIELD_NUMBER = 7;
-    private int format_;
+    private com.rtrk.atcommands.ATCommand.FileFormat format_;
     /**
-     * <code>optional int32 format = 7;</code>
+     * <code>optional .com.rtrk.protobuf.FileFormat format = 7;</code>
      */
     public boolean hasFormat() {
       return ((bitField0_ & 0x00000080) == 0x00000080);
     }
     /**
-     * <code>optional int32 format = 7;</code>
+     * <code>optional .com.rtrk.protobuf.FileFormat format = 7;</code>
      */
-    public int getFormat() {
+    public com.rtrk.atcommands.ATCommand.FileFormat getFormat() {
       return format_;
     }
 
@@ -31596,17 +35317,17 @@ public final class ATCommand {
     }
 
     public static final int CHANNEL_FIELD_NUMBER = 10;
-    private int channel_;
+    private com.rtrk.atcommands.ATCommand.PlayChannel channel_;
     /**
-     * <code>optional int32 channel = 10;</code>
+     * <code>optional .com.rtrk.protobuf.PlayChannel channel = 10;</code>
      */
     public boolean hasChannel() {
       return ((bitField0_ & 0x00000400) == 0x00000400);
     }
     /**
-     * <code>optional int32 channel = 10;</code>
+     * <code>optional .com.rtrk.protobuf.PlayChannel channel = 10;</code>
      */
-    public int getChannel() {
+    public com.rtrk.atcommands.ATCommand.PlayChannel getChannel() {
       return channel_;
     }
 
@@ -31688,12 +35409,12 @@ public final class ATCommand {
       read_ = false;
       write_ = false;
       execution_ = false;
-      state_ = 0;
+      recordingState_ = com.rtrk.atcommands.ATCommand.RecordingState.MODULE_IS_NOT_IN_RECORDING;
       fileName_ = "";
-      format_ = 0;
+      format_ = com.rtrk.atcommands.ATCommand.FileFormat.AMR;
       repeat_ = false;
       volume_ = 0;
-      channel_ = 0;
+      channel_ = com.rtrk.atcommands.ATCommand.PlayChannel.RECEIVER;
       control_ = 0;
       isResponse_ = false;
       description_ = "";
@@ -31728,13 +35449,13 @@ public final class ATCommand {
         output.writeBool(4, execution_);
       }
       if (((bitField0_ & 0x00000020) == 0x00000020)) {
-        output.writeInt32(5, state_);
+        output.writeEnum(5, recordingState_.getNumber());
       }
       if (((bitField0_ & 0x00000040) == 0x00000040)) {
         output.writeBytes(6, getFileNameBytes());
       }
       if (((bitField0_ & 0x00000080) == 0x00000080)) {
-        output.writeInt32(7, format_);
+        output.writeEnum(7, format_.getNumber());
       }
       if (((bitField0_ & 0x00000100) == 0x00000100)) {
         output.writeBool(8, repeat_);
@@ -31743,7 +35464,7 @@ public final class ATCommand {
         output.writeInt32(9, volume_);
       }
       if (((bitField0_ & 0x00000400) == 0x00000400)) {
-        output.writeInt32(10, channel_);
+        output.writeEnum(10, channel_.getNumber());
       }
       if (((bitField0_ & 0x00000800) == 0x00000800)) {
         output.writeInt32(11, control_);
@@ -31784,7 +35505,7 @@ public final class ATCommand {
       }
       if (((bitField0_ & 0x00000020) == 0x00000020)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(5, state_);
+          .computeEnumSize(5, recordingState_.getNumber());
       }
       if (((bitField0_ & 0x00000040) == 0x00000040)) {
         size += com.google.protobuf.CodedOutputStream
@@ -31792,7 +35513,7 @@ public final class ATCommand {
       }
       if (((bitField0_ & 0x00000080) == 0x00000080)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(7, format_);
+          .computeEnumSize(7, format_.getNumber());
       }
       if (((bitField0_ & 0x00000100) == 0x00000100)) {
         size += com.google.protobuf.CodedOutputStream
@@ -31804,7 +35525,7 @@ public final class ATCommand {
       }
       if (((bitField0_ & 0x00000400) == 0x00000400)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(10, channel_);
+          .computeEnumSize(10, channel_.getNumber());
       }
       if (((bitField0_ & 0x00000800) == 0x00000800)) {
         size += com.google.protobuf.CodedOutputStream
@@ -31949,17 +35670,17 @@ public final class ATCommand {
         bitField0_ = (bitField0_ & ~0x00000008);
         execution_ = false;
         bitField0_ = (bitField0_ & ~0x00000010);
-        state_ = 0;
+        recordingState_ = com.rtrk.atcommands.ATCommand.RecordingState.MODULE_IS_NOT_IN_RECORDING;
         bitField0_ = (bitField0_ & ~0x00000020);
         fileName_ = "";
         bitField0_ = (bitField0_ & ~0x00000040);
-        format_ = 0;
+        format_ = com.rtrk.atcommands.ATCommand.FileFormat.AMR;
         bitField0_ = (bitField0_ & ~0x00000080);
         repeat_ = false;
         bitField0_ = (bitField0_ & ~0x00000100);
         volume_ = 0;
         bitField0_ = (bitField0_ & ~0x00000200);
-        channel_ = 0;
+        channel_ = com.rtrk.atcommands.ATCommand.PlayChannel.RECEIVER;
         bitField0_ = (bitField0_ & ~0x00000400);
         control_ = 0;
         bitField0_ = (bitField0_ & ~0x00000800);
@@ -32018,7 +35739,7 @@ public final class ATCommand {
         if (((from_bitField0_ & 0x00000020) == 0x00000020)) {
           to_bitField0_ |= 0x00000020;
         }
-        result.state_ = state_;
+        result.recordingState_ = recordingState_;
         if (((from_bitField0_ & 0x00000040) == 0x00000040)) {
           to_bitField0_ |= 0x00000040;
         }
@@ -32082,8 +35803,8 @@ public final class ATCommand {
         if (other.hasExecution()) {
           setExecution(other.getExecution());
         }
-        if (other.hasState()) {
-          setState(other.getState());
+        if (other.hasRecordingState()) {
+          setRecordingState(other.getRecordingState());
         }
         if (other.hasFileName()) {
           bitField0_ |= 0x00000040;
@@ -32307,34 +36028,37 @@ public final class ATCommand {
         return this;
       }
 
-      private int state_ ;
+      private com.rtrk.atcommands.ATCommand.RecordingState recordingState_ = com.rtrk.atcommands.ATCommand.RecordingState.MODULE_IS_NOT_IN_RECORDING;
       /**
-       * <code>optional int32 state = 5;</code>
+       * <code>optional .com.rtrk.protobuf.RecordingState recordingState = 5;</code>
        */
-      public boolean hasState() {
+      public boolean hasRecordingState() {
         return ((bitField0_ & 0x00000020) == 0x00000020);
       }
       /**
-       * <code>optional int32 state = 5;</code>
+       * <code>optional .com.rtrk.protobuf.RecordingState recordingState = 5;</code>
        */
-      public int getState() {
-        return state_;
+      public com.rtrk.atcommands.ATCommand.RecordingState getRecordingState() {
+        return recordingState_;
       }
       /**
-       * <code>optional int32 state = 5;</code>
+       * <code>optional .com.rtrk.protobuf.RecordingState recordingState = 5;</code>
        */
-      public Builder setState(int value) {
+      public Builder setRecordingState(com.rtrk.atcommands.ATCommand.RecordingState value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
         bitField0_ |= 0x00000020;
-        state_ = value;
+        recordingState_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>optional int32 state = 5;</code>
+       * <code>optional .com.rtrk.protobuf.RecordingState recordingState = 5;</code>
        */
-      public Builder clearState() {
+      public Builder clearRecordingState() {
         bitField0_ = (bitField0_ & ~0x00000020);
-        state_ = 0;
+        recordingState_ = com.rtrk.atcommands.ATCommand.RecordingState.MODULE_IS_NOT_IN_RECORDING;
         onChanged();
         return this;
       }
@@ -32415,34 +36139,37 @@ public final class ATCommand {
         return this;
       }
 
-      private int format_ ;
+      private com.rtrk.atcommands.ATCommand.FileFormat format_ = com.rtrk.atcommands.ATCommand.FileFormat.AMR;
       /**
-       * <code>optional int32 format = 7;</code>
+       * <code>optional .com.rtrk.protobuf.FileFormat format = 7;</code>
        */
       public boolean hasFormat() {
         return ((bitField0_ & 0x00000080) == 0x00000080);
       }
       /**
-       * <code>optional int32 format = 7;</code>
+       * <code>optional .com.rtrk.protobuf.FileFormat format = 7;</code>
        */
-      public int getFormat() {
+      public com.rtrk.atcommands.ATCommand.FileFormat getFormat() {
         return format_;
       }
       /**
-       * <code>optional int32 format = 7;</code>
+       * <code>optional .com.rtrk.protobuf.FileFormat format = 7;</code>
        */
-      public Builder setFormat(int value) {
+      public Builder setFormat(com.rtrk.atcommands.ATCommand.FileFormat value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
         bitField0_ |= 0x00000080;
         format_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>optional int32 format = 7;</code>
+       * <code>optional .com.rtrk.protobuf.FileFormat format = 7;</code>
        */
       public Builder clearFormat() {
         bitField0_ = (bitField0_ & ~0x00000080);
-        format_ = 0;
+        format_ = com.rtrk.atcommands.ATCommand.FileFormat.AMR;
         onChanged();
         return this;
       }
@@ -32511,34 +36238,37 @@ public final class ATCommand {
         return this;
       }
 
-      private int channel_ ;
+      private com.rtrk.atcommands.ATCommand.PlayChannel channel_ = com.rtrk.atcommands.ATCommand.PlayChannel.RECEIVER;
       /**
-       * <code>optional int32 channel = 10;</code>
+       * <code>optional .com.rtrk.protobuf.PlayChannel channel = 10;</code>
        */
       public boolean hasChannel() {
         return ((bitField0_ & 0x00000400) == 0x00000400);
       }
       /**
-       * <code>optional int32 channel = 10;</code>
+       * <code>optional .com.rtrk.protobuf.PlayChannel channel = 10;</code>
        */
-      public int getChannel() {
+      public com.rtrk.atcommands.ATCommand.PlayChannel getChannel() {
         return channel_;
       }
       /**
-       * <code>optional int32 channel = 10;</code>
+       * <code>optional .com.rtrk.protobuf.PlayChannel channel = 10;</code>
        */
-      public Builder setChannel(int value) {
+      public Builder setChannel(com.rtrk.atcommands.ATCommand.PlayChannel value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
         bitField0_ |= 0x00000400;
         channel_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>optional int32 channel = 10;</code>
+       * <code>optional .com.rtrk.protobuf.PlayChannel channel = 10;</code>
        */
       public Builder clearChannel() {
         bitField0_ = (bitField0_ & ~0x00000400);
-        channel_ = 0;
+        channel_ = com.rtrk.atcommands.ATCommand.PlayChannel.RECEIVER;
         onChanged();
         return this;
       }
@@ -32823,22 +36553,22 @@ public final class ATCommand {
     int getPort();
 
     /**
-     * <code>optional int32 mode = 12;</code>
+     * <code>optional .com.rtrk.protobuf.RecipientMode recipientMode = 12;</code>
      */
-    boolean hasMode();
+    boolean hasRecipientMode();
     /**
-     * <code>optional int32 mode = 12;</code>
+     * <code>optional .com.rtrk.protobuf.RecipientMode recipientMode = 12;</code>
      */
-    int getMode();
+    com.rtrk.atcommands.ATCommand.RecipientMode getRecipientMode();
 
     /**
-     * <code>optional int32 type = 13;</code>
+     * <code>optional .com.rtrk.protobuf.RecipientType recipinetType = 13;</code>
      */
-    boolean hasType();
+    boolean hasRecipinetType();
     /**
-     * <code>optional int32 type = 13;</code>
+     * <code>optional .com.rtrk.protobuf.RecipientType recipinetType = 13;</code>
      */
-    int getType();
+    com.rtrk.atcommands.ATCommand.RecipientType getRecipinetType();
 
     /**
      * <code>optional int32 result = 15;</code>
@@ -32850,13 +36580,13 @@ public final class ATCommand {
     int getResult();
 
     /**
-     * <code>optional int32 charset = 22;</code>
+     * <code>optional .com.rtrk.protobuf.Charset charset = 22;</code>
      */
     boolean hasCharset();
     /**
-     * <code>optional int32 charset = 22;</code>
+     * <code>optional .com.rtrk.protobuf.Charset charset = 22;</code>
      */
-    int getCharset();
+    com.rtrk.atcommands.ATCommand.Charset getCharset();
 
     /**
      * <code>optional string title = 16;</code>
@@ -32914,13 +36644,13 @@ public final class ATCommand {
     int getFileSize();
 
     /**
-     * <code>optional int32 value = 21;</code>
+     * <code>optional bool needAuthentication = 21;</code>
      */
-    boolean hasValue();
+    boolean hasNeedAuthentication();
     /**
-     * <code>optional int32 value = 21;</code>
+     * <code>optional bool needAuthentication = 21;</code>
      */
-    int getValue();
+    boolean getNeedAuthentication();
 
     /**
      * <code>optional bool isResponse = 23;</code>
@@ -32944,6 +36674,15 @@ public final class ATCommand {
      */
     com.google.protobuf.ByteString
         getDescriptionBytes();
+
+    /**
+     * <code>optional bool configureNeedAuthentication = 24;</code>
+     */
+    boolean hasConfigureNeedAuthentication();
+    /**
+     * <code>optional bool configureNeedAuthentication = 24;</code>
+     */
+    boolean getConfigureNeedAuthentication();
   }
   /**
    * Protobuf type {@code com.rtrk.protobuf.SMTPCommand}
@@ -33064,13 +36803,25 @@ public final class ATCommand {
               break;
             }
             case 96: {
-              bitField0_ |= 0x00000800;
-              mode_ = input.readInt32();
+              int rawValue = input.readEnum();
+              com.rtrk.atcommands.ATCommand.RecipientMode value = com.rtrk.atcommands.ATCommand.RecipientMode.valueOf(rawValue);
+              if (value == null) {
+                unknownFields.mergeVarintField(12, rawValue);
+              } else {
+                bitField0_ |= 0x00000800;
+                recipientMode_ = value;
+              }
               break;
             }
             case 104: {
-              bitField0_ |= 0x00001000;
-              type_ = input.readInt32();
+              int rawValue = input.readEnum();
+              com.rtrk.atcommands.ATCommand.RecipientType value = com.rtrk.atcommands.ATCommand.RecipientType.valueOf(rawValue);
+              if (value == null) {
+                unknownFields.mergeVarintField(13, rawValue);
+              } else {
+                bitField0_ |= 0x00001000;
+                recipinetType_ = value;
+              }
               break;
             }
             case 114: {
@@ -33113,17 +36864,28 @@ public final class ATCommand {
             }
             case 168: {
               bitField0_ |= 0x00100000;
-              value_ = input.readInt32();
+              needAuthentication_ = input.readBool();
               break;
             }
             case 176: {
-              bitField0_ |= 0x00004000;
-              charset_ = input.readInt32();
+              int rawValue = input.readEnum();
+              com.rtrk.atcommands.ATCommand.Charset value = com.rtrk.atcommands.ATCommand.Charset.valueOf(rawValue);
+              if (value == null) {
+                unknownFields.mergeVarintField(22, rawValue);
+              } else {
+                bitField0_ |= 0x00004000;
+                charset_ = value;
+              }
               break;
             }
             case 184: {
               bitField0_ |= 0x00200000;
               isResponse_ = input.readBool();
+              break;
+            }
+            case 192: {
+              bitField0_ |= 0x00800000;
+              configureNeedAuthentication_ = input.readBool();
               break;
             }
           }
@@ -33466,34 +37228,34 @@ public final class ATCommand {
       return port_;
     }
 
-    public static final int MODE_FIELD_NUMBER = 12;
-    private int mode_;
+    public static final int RECIPIENTMODE_FIELD_NUMBER = 12;
+    private com.rtrk.atcommands.ATCommand.RecipientMode recipientMode_;
     /**
-     * <code>optional int32 mode = 12;</code>
+     * <code>optional .com.rtrk.protobuf.RecipientMode recipientMode = 12;</code>
      */
-    public boolean hasMode() {
+    public boolean hasRecipientMode() {
       return ((bitField0_ & 0x00000800) == 0x00000800);
     }
     /**
-     * <code>optional int32 mode = 12;</code>
+     * <code>optional .com.rtrk.protobuf.RecipientMode recipientMode = 12;</code>
      */
-    public int getMode() {
-      return mode_;
+    public com.rtrk.atcommands.ATCommand.RecipientMode getRecipientMode() {
+      return recipientMode_;
     }
 
-    public static final int TYPE_FIELD_NUMBER = 13;
-    private int type_;
+    public static final int RECIPINETTYPE_FIELD_NUMBER = 13;
+    private com.rtrk.atcommands.ATCommand.RecipientType recipinetType_;
     /**
-     * <code>optional int32 type = 13;</code>
+     * <code>optional .com.rtrk.protobuf.RecipientType recipinetType = 13;</code>
      */
-    public boolean hasType() {
+    public boolean hasRecipinetType() {
       return ((bitField0_ & 0x00001000) == 0x00001000);
     }
     /**
-     * <code>optional int32 type = 13;</code>
+     * <code>optional .com.rtrk.protobuf.RecipientType recipinetType = 13;</code>
      */
-    public int getType() {
-      return type_;
+    public com.rtrk.atcommands.ATCommand.RecipientType getRecipinetType() {
+      return recipinetType_;
     }
 
     public static final int RESULT_FIELD_NUMBER = 15;
@@ -33512,17 +37274,17 @@ public final class ATCommand {
     }
 
     public static final int CHARSET_FIELD_NUMBER = 22;
-    private int charset_;
+    private com.rtrk.atcommands.ATCommand.Charset charset_;
     /**
-     * <code>optional int32 charset = 22;</code>
+     * <code>optional .com.rtrk.protobuf.Charset charset = 22;</code>
      */
     public boolean hasCharset() {
       return ((bitField0_ & 0x00004000) == 0x00004000);
     }
     /**
-     * <code>optional int32 charset = 22;</code>
+     * <code>optional .com.rtrk.protobuf.Charset charset = 22;</code>
      */
-    public int getCharset() {
+    public com.rtrk.atcommands.ATCommand.Charset getCharset() {
       return charset_;
     }
 
@@ -33655,19 +37417,19 @@ public final class ATCommand {
       return fileSize_;
     }
 
-    public static final int VALUE_FIELD_NUMBER = 21;
-    private int value_;
+    public static final int NEEDAUTHENTICATION_FIELD_NUMBER = 21;
+    private boolean needAuthentication_;
     /**
-     * <code>optional int32 value = 21;</code>
+     * <code>optional bool needAuthentication = 21;</code>
      */
-    public boolean hasValue() {
+    public boolean hasNeedAuthentication() {
       return ((bitField0_ & 0x00100000) == 0x00100000);
     }
     /**
-     * <code>optional int32 value = 21;</code>
+     * <code>optional bool needAuthentication = 21;</code>
      */
-    public int getValue() {
-      return value_;
+    public boolean getNeedAuthentication() {
+      return needAuthentication_;
     }
 
     public static final int ISRESPONSE_FIELD_NUMBER = 23;
@@ -33727,6 +37489,21 @@ public final class ATCommand {
       }
     }
 
+    public static final int CONFIGURENEEDAUTHENTICATION_FIELD_NUMBER = 24;
+    private boolean configureNeedAuthentication_;
+    /**
+     * <code>optional bool configureNeedAuthentication = 24;</code>
+     */
+    public boolean hasConfigureNeedAuthentication() {
+      return ((bitField0_ & 0x00800000) == 0x00800000);
+    }
+    /**
+     * <code>optional bool configureNeedAuthentication = 24;</code>
+     */
+    public boolean getConfigureNeedAuthentication() {
+      return configureNeedAuthentication_;
+    }
+
     private void initFields() {
       messageType_ = com.rtrk.atcommands.ATCommand.SMTPMessageType.SET_THE_USER_NAME_FOR_AUTHENTICATION;
       test_ = false;
@@ -33739,18 +37516,19 @@ public final class ATCommand {
       name_ = "";
       serverAddress_ = "";
       port_ = 0;
-      mode_ = 0;
-      type_ = 0;
+      recipientMode_ = com.rtrk.atcommands.ATCommand.RecipientMode.DELETE_RECIPIENT;
+      recipinetType_ = com.rtrk.atcommands.ATCommand.RecipientType.RECEIVER_RECIPIENT;
       result_ = 0;
-      charset_ = 0;
+      charset_ = com.rtrk.atcommands.ATCommand.Charset.ASCII;
       title_ = "";
       timeout_ = 0;
       fileIndex_ = 0;
       fileName_ = "";
       fileSize_ = 0;
-      value_ = 0;
+      needAuthentication_ = false;
       isResponse_ = false;
       description_ = "";
+      configureNeedAuthentication_ = false;
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -33803,10 +37581,10 @@ public final class ATCommand {
         output.writeInt32(11, port_);
       }
       if (((bitField0_ & 0x00000800) == 0x00000800)) {
-        output.writeInt32(12, mode_);
+        output.writeEnum(12, recipientMode_.getNumber());
       }
       if (((bitField0_ & 0x00001000) == 0x00001000)) {
-        output.writeInt32(13, type_);
+        output.writeEnum(13, recipinetType_.getNumber());
       }
       if (((bitField0_ & 0x00400000) == 0x00400000)) {
         output.writeBytes(14, getDescriptionBytes());
@@ -33830,13 +37608,16 @@ public final class ATCommand {
         output.writeInt32(20, fileSize_);
       }
       if (((bitField0_ & 0x00100000) == 0x00100000)) {
-        output.writeInt32(21, value_);
+        output.writeBool(21, needAuthentication_);
       }
       if (((bitField0_ & 0x00004000) == 0x00004000)) {
-        output.writeInt32(22, charset_);
+        output.writeEnum(22, charset_.getNumber());
       }
       if (((bitField0_ & 0x00200000) == 0x00200000)) {
         output.writeBool(23, isResponse_);
+      }
+      if (((bitField0_ & 0x00800000) == 0x00800000)) {
+        output.writeBool(24, configureNeedAuthentication_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -33893,11 +37674,11 @@ public final class ATCommand {
       }
       if (((bitField0_ & 0x00000800) == 0x00000800)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(12, mode_);
+          .computeEnumSize(12, recipientMode_.getNumber());
       }
       if (((bitField0_ & 0x00001000) == 0x00001000)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(13, type_);
+          .computeEnumSize(13, recipinetType_.getNumber());
       }
       if (((bitField0_ & 0x00400000) == 0x00400000)) {
         size += com.google.protobuf.CodedOutputStream
@@ -33929,15 +37710,19 @@ public final class ATCommand {
       }
       if (((bitField0_ & 0x00100000) == 0x00100000)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(21, value_);
+          .computeBoolSize(21, needAuthentication_);
       }
       if (((bitField0_ & 0x00004000) == 0x00004000)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(22, charset_);
+          .computeEnumSize(22, charset_.getNumber());
       }
       if (((bitField0_ & 0x00200000) == 0x00200000)) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(23, isResponse_);
+      }
+      if (((bitField0_ & 0x00800000) == 0x00800000)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(24, configureNeedAuthentication_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -34078,13 +37863,13 @@ public final class ATCommand {
         bitField0_ = (bitField0_ & ~0x00000200);
         port_ = 0;
         bitField0_ = (bitField0_ & ~0x00000400);
-        mode_ = 0;
+        recipientMode_ = com.rtrk.atcommands.ATCommand.RecipientMode.DELETE_RECIPIENT;
         bitField0_ = (bitField0_ & ~0x00000800);
-        type_ = 0;
+        recipinetType_ = com.rtrk.atcommands.ATCommand.RecipientType.RECEIVER_RECIPIENT;
         bitField0_ = (bitField0_ & ~0x00001000);
         result_ = 0;
         bitField0_ = (bitField0_ & ~0x00002000);
-        charset_ = 0;
+        charset_ = com.rtrk.atcommands.ATCommand.Charset.ASCII;
         bitField0_ = (bitField0_ & ~0x00004000);
         title_ = "";
         bitField0_ = (bitField0_ & ~0x00008000);
@@ -34096,12 +37881,14 @@ public final class ATCommand {
         bitField0_ = (bitField0_ & ~0x00040000);
         fileSize_ = 0;
         bitField0_ = (bitField0_ & ~0x00080000);
-        value_ = 0;
+        needAuthentication_ = false;
         bitField0_ = (bitField0_ & ~0x00100000);
         isResponse_ = false;
         bitField0_ = (bitField0_ & ~0x00200000);
         description_ = "";
         bitField0_ = (bitField0_ & ~0x00400000);
+        configureNeedAuthentication_ = false;
+        bitField0_ = (bitField0_ & ~0x00800000);
         return this;
       }
 
@@ -34177,11 +37964,11 @@ public final class ATCommand {
         if (((from_bitField0_ & 0x00000800) == 0x00000800)) {
           to_bitField0_ |= 0x00000800;
         }
-        result.mode_ = mode_;
+        result.recipientMode_ = recipientMode_;
         if (((from_bitField0_ & 0x00001000) == 0x00001000)) {
           to_bitField0_ |= 0x00001000;
         }
-        result.type_ = type_;
+        result.recipinetType_ = recipinetType_;
         if (((from_bitField0_ & 0x00002000) == 0x00002000)) {
           to_bitField0_ |= 0x00002000;
         }
@@ -34213,7 +38000,7 @@ public final class ATCommand {
         if (((from_bitField0_ & 0x00100000) == 0x00100000)) {
           to_bitField0_ |= 0x00100000;
         }
-        result.value_ = value_;
+        result.needAuthentication_ = needAuthentication_;
         if (((from_bitField0_ & 0x00200000) == 0x00200000)) {
           to_bitField0_ |= 0x00200000;
         }
@@ -34222,6 +38009,10 @@ public final class ATCommand {
           to_bitField0_ |= 0x00400000;
         }
         result.description_ = description_;
+        if (((from_bitField0_ & 0x00800000) == 0x00800000)) {
+          to_bitField0_ |= 0x00800000;
+        }
+        result.configureNeedAuthentication_ = configureNeedAuthentication_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -34281,11 +38072,11 @@ public final class ATCommand {
         if (other.hasPort()) {
           setPort(other.getPort());
         }
-        if (other.hasMode()) {
-          setMode(other.getMode());
+        if (other.hasRecipientMode()) {
+          setRecipientMode(other.getRecipientMode());
         }
-        if (other.hasType()) {
-          setType(other.getType());
+        if (other.hasRecipinetType()) {
+          setRecipinetType(other.getRecipinetType());
         }
         if (other.hasResult()) {
           setResult(other.getResult());
@@ -34312,8 +38103,8 @@ public final class ATCommand {
         if (other.hasFileSize()) {
           setFileSize(other.getFileSize());
         }
-        if (other.hasValue()) {
-          setValue(other.getValue());
+        if (other.hasNeedAuthentication()) {
+          setNeedAuthentication(other.getNeedAuthentication());
         }
         if (other.hasIsResponse()) {
           setIsResponse(other.getIsResponse());
@@ -34322,6 +38113,9 @@ public final class ATCommand {
           bitField0_ |= 0x00400000;
           description_ = other.description_;
           onChanged();
+        }
+        if (other.hasConfigureNeedAuthentication()) {
+          setConfigureNeedAuthentication(other.getConfigureNeedAuthentication());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
@@ -34929,66 +38723,72 @@ public final class ATCommand {
         return this;
       }
 
-      private int mode_ ;
+      private com.rtrk.atcommands.ATCommand.RecipientMode recipientMode_ = com.rtrk.atcommands.ATCommand.RecipientMode.DELETE_RECIPIENT;
       /**
-       * <code>optional int32 mode = 12;</code>
+       * <code>optional .com.rtrk.protobuf.RecipientMode recipientMode = 12;</code>
        */
-      public boolean hasMode() {
+      public boolean hasRecipientMode() {
         return ((bitField0_ & 0x00000800) == 0x00000800);
       }
       /**
-       * <code>optional int32 mode = 12;</code>
+       * <code>optional .com.rtrk.protobuf.RecipientMode recipientMode = 12;</code>
        */
-      public int getMode() {
-        return mode_;
+      public com.rtrk.atcommands.ATCommand.RecipientMode getRecipientMode() {
+        return recipientMode_;
       }
       /**
-       * <code>optional int32 mode = 12;</code>
+       * <code>optional .com.rtrk.protobuf.RecipientMode recipientMode = 12;</code>
        */
-      public Builder setMode(int value) {
+      public Builder setRecipientMode(com.rtrk.atcommands.ATCommand.RecipientMode value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
         bitField0_ |= 0x00000800;
-        mode_ = value;
+        recipientMode_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>optional int32 mode = 12;</code>
+       * <code>optional .com.rtrk.protobuf.RecipientMode recipientMode = 12;</code>
        */
-      public Builder clearMode() {
+      public Builder clearRecipientMode() {
         bitField0_ = (bitField0_ & ~0x00000800);
-        mode_ = 0;
+        recipientMode_ = com.rtrk.atcommands.ATCommand.RecipientMode.DELETE_RECIPIENT;
         onChanged();
         return this;
       }
 
-      private int type_ ;
+      private com.rtrk.atcommands.ATCommand.RecipientType recipinetType_ = com.rtrk.atcommands.ATCommand.RecipientType.RECEIVER_RECIPIENT;
       /**
-       * <code>optional int32 type = 13;</code>
+       * <code>optional .com.rtrk.protobuf.RecipientType recipinetType = 13;</code>
        */
-      public boolean hasType() {
+      public boolean hasRecipinetType() {
         return ((bitField0_ & 0x00001000) == 0x00001000);
       }
       /**
-       * <code>optional int32 type = 13;</code>
+       * <code>optional .com.rtrk.protobuf.RecipientType recipinetType = 13;</code>
        */
-      public int getType() {
-        return type_;
+      public com.rtrk.atcommands.ATCommand.RecipientType getRecipinetType() {
+        return recipinetType_;
       }
       /**
-       * <code>optional int32 type = 13;</code>
+       * <code>optional .com.rtrk.protobuf.RecipientType recipinetType = 13;</code>
        */
-      public Builder setType(int value) {
+      public Builder setRecipinetType(com.rtrk.atcommands.ATCommand.RecipientType value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
         bitField0_ |= 0x00001000;
-        type_ = value;
+        recipinetType_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>optional int32 type = 13;</code>
+       * <code>optional .com.rtrk.protobuf.RecipientType recipinetType = 13;</code>
        */
-      public Builder clearType() {
+      public Builder clearRecipinetType() {
         bitField0_ = (bitField0_ & ~0x00001000);
-        type_ = 0;
+        recipinetType_ = com.rtrk.atcommands.ATCommand.RecipientType.RECEIVER_RECIPIENT;
         onChanged();
         return this;
       }
@@ -35025,34 +38825,37 @@ public final class ATCommand {
         return this;
       }
 
-      private int charset_ ;
+      private com.rtrk.atcommands.ATCommand.Charset charset_ = com.rtrk.atcommands.ATCommand.Charset.ASCII;
       /**
-       * <code>optional int32 charset = 22;</code>
+       * <code>optional .com.rtrk.protobuf.Charset charset = 22;</code>
        */
       public boolean hasCharset() {
         return ((bitField0_ & 0x00004000) == 0x00004000);
       }
       /**
-       * <code>optional int32 charset = 22;</code>
+       * <code>optional .com.rtrk.protobuf.Charset charset = 22;</code>
        */
-      public int getCharset() {
+      public com.rtrk.atcommands.ATCommand.Charset getCharset() {
         return charset_;
       }
       /**
-       * <code>optional int32 charset = 22;</code>
+       * <code>optional .com.rtrk.protobuf.Charset charset = 22;</code>
        */
-      public Builder setCharset(int value) {
+      public Builder setCharset(com.rtrk.atcommands.ATCommand.Charset value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
         bitField0_ |= 0x00004000;
         charset_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>optional int32 charset = 22;</code>
+       * <code>optional .com.rtrk.protobuf.Charset charset = 22;</code>
        */
       public Builder clearCharset() {
         bitField0_ = (bitField0_ & ~0x00004000);
-        charset_ = 0;
+        charset_ = com.rtrk.atcommands.ATCommand.Charset.ASCII;
         onChanged();
         return this;
       }
@@ -35305,34 +39108,34 @@ public final class ATCommand {
         return this;
       }
 
-      private int value_ ;
+      private boolean needAuthentication_ ;
       /**
-       * <code>optional int32 value = 21;</code>
+       * <code>optional bool needAuthentication = 21;</code>
        */
-      public boolean hasValue() {
+      public boolean hasNeedAuthentication() {
         return ((bitField0_ & 0x00100000) == 0x00100000);
       }
       /**
-       * <code>optional int32 value = 21;</code>
+       * <code>optional bool needAuthentication = 21;</code>
        */
-      public int getValue() {
-        return value_;
+      public boolean getNeedAuthentication() {
+        return needAuthentication_;
       }
       /**
-       * <code>optional int32 value = 21;</code>
+       * <code>optional bool needAuthentication = 21;</code>
        */
-      public Builder setValue(int value) {
+      public Builder setNeedAuthentication(boolean value) {
         bitField0_ |= 0x00100000;
-        value_ = value;
+        needAuthentication_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>optional int32 value = 21;</code>
+       * <code>optional bool needAuthentication = 21;</code>
        */
-      public Builder clearValue() {
+      public Builder clearNeedAuthentication() {
         bitField0_ = (bitField0_ & ~0x00100000);
-        value_ = 0;
+        needAuthentication_ = false;
         onChanged();
         return this;
       }
@@ -35445,6 +39248,38 @@ public final class ATCommand {
         return this;
       }
 
+      private boolean configureNeedAuthentication_ ;
+      /**
+       * <code>optional bool configureNeedAuthentication = 24;</code>
+       */
+      public boolean hasConfigureNeedAuthentication() {
+        return ((bitField0_ & 0x00800000) == 0x00800000);
+      }
+      /**
+       * <code>optional bool configureNeedAuthentication = 24;</code>
+       */
+      public boolean getConfigureNeedAuthentication() {
+        return configureNeedAuthentication_;
+      }
+      /**
+       * <code>optional bool configureNeedAuthentication = 24;</code>
+       */
+      public Builder setConfigureNeedAuthentication(boolean value) {
+        bitField0_ |= 0x00800000;
+        configureNeedAuthentication_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool configureNeedAuthentication = 24;</code>
+       */
+      public Builder clearConfigureNeedAuthentication() {
+        bitField0_ = (bitField0_ & ~0x00800000);
+        configureNeedAuthentication_ = false;
+        onChanged();
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:com.rtrk.protobuf.SMTPCommand)
     }
 
@@ -35506,13 +39341,13 @@ public final class ATCommand {
     boolean getExecution();
 
     /**
-     * <code>optional int32 n = 6;</code>
+     * <code>optional bool turnOnSTK = 6;</code>
      */
-    boolean hasN();
+    boolean hasTurnOnSTK();
     /**
-     * <code>optional int32 n = 6;</code>
+     * <code>optional bool turnOnSTK = 6;</code>
      */
-    int getN();
+    boolean getTurnOnSTK();
 
     /**
      * <code>optional string profile = 7;</code>
@@ -35578,6 +39413,15 @@ public final class ATCommand {
      */
     com.google.protobuf.ByteString
         getDescriptionBytes();
+
+    /**
+     * <code>optional .com.rtrk.protobuf.STK stk = 12;</code>
+     */
+    boolean hasStk();
+    /**
+     * <code>optional .com.rtrk.protobuf.STK stk = 12;</code>
+     */
+    com.rtrk.atcommands.ATCommand.STK getStk();
   }
   /**
    * Protobuf type {@code com.rtrk.protobuf.STKCommand}
@@ -35664,7 +39508,7 @@ public final class ATCommand {
             }
             case 48: {
               bitField0_ |= 0x00000020;
-              n_ = input.readInt32();
+              turnOnSTK_ = input.readBool();
               break;
             }
             case 58: {
@@ -35694,6 +39538,17 @@ public final class ATCommand {
               com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000400;
               description_ = bs;
+              break;
+            }
+            case 96: {
+              int rawValue = input.readEnum();
+              com.rtrk.atcommands.ATCommand.STK value = com.rtrk.atcommands.ATCommand.STK.valueOf(rawValue);
+              if (value == null) {
+                unknownFields.mergeVarintField(12, rawValue);
+              } else {
+                bitField0_ |= 0x00000800;
+                stk_ = value;
+              }
               break;
             }
           }
@@ -35811,19 +39666,19 @@ public final class ATCommand {
       return execution_;
     }
 
-    public static final int N_FIELD_NUMBER = 6;
-    private int n_;
+    public static final int TURNONSTK_FIELD_NUMBER = 6;
+    private boolean turnOnSTK_;
     /**
-     * <code>optional int32 n = 6;</code>
+     * <code>optional bool turnOnSTK = 6;</code>
      */
-    public boolean hasN() {
+    public boolean hasTurnOnSTK() {
       return ((bitField0_ & 0x00000020) == 0x00000020);
     }
     /**
-     * <code>optional int32 n = 6;</code>
+     * <code>optional bool turnOnSTK = 6;</code>
      */
-    public int getN() {
-      return n_;
+    public boolean getTurnOnSTK() {
+      return turnOnSTK_;
     }
 
     public static final int PROFILE_FIELD_NUMBER = 7;
@@ -36009,18 +39864,34 @@ public final class ATCommand {
       }
     }
 
+    public static final int STK_FIELD_NUMBER = 12;
+    private com.rtrk.atcommands.ATCommand.STK stk_;
+    /**
+     * <code>optional .com.rtrk.protobuf.STK stk = 12;</code>
+     */
+    public boolean hasStk() {
+      return ((bitField0_ & 0x00000800) == 0x00000800);
+    }
+    /**
+     * <code>optional .com.rtrk.protobuf.STK stk = 12;</code>
+     */
+    public com.rtrk.atcommands.ATCommand.STK getStk() {
+      return stk_;
+    }
+
     private void initFields() {
       messageType_ = com.rtrk.atcommands.ATCommand.STKMessageType.TURN_ON_OFF_STK_FUNCTION;
       test_ = false;
       read_ = false;
       write_ = false;
       execution_ = false;
-      n_ = 0;
+      turnOnSTK_ = false;
       profile_ = "";
       satCommand_ = "";
       terminalResponse_ = "";
       isResponse_ = false;
       description_ = "";
+      stk_ = com.rtrk.atcommands.ATCommand.STK.TRIGER_MODEM_TO_SEND_STK;
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -36055,7 +39926,7 @@ public final class ATCommand {
         output.writeBool(5, execution_);
       }
       if (((bitField0_ & 0x00000020) == 0x00000020)) {
-        output.writeInt32(6, n_);
+        output.writeBool(6, turnOnSTK_);
       }
       if (((bitField0_ & 0x00000040) == 0x00000040)) {
         output.writeBytes(7, getProfileBytes());
@@ -36071,6 +39942,9 @@ public final class ATCommand {
       }
       if (((bitField0_ & 0x00000400) == 0x00000400)) {
         output.writeBytes(11, getDescriptionBytes());
+      }
+      if (((bitField0_ & 0x00000800) == 0x00000800)) {
+        output.writeEnum(12, stk_.getNumber());
       }
       getUnknownFields().writeTo(output);
     }
@@ -36103,7 +39977,7 @@ public final class ATCommand {
       }
       if (((bitField0_ & 0x00000020) == 0x00000020)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(6, n_);
+          .computeBoolSize(6, turnOnSTK_);
       }
       if (((bitField0_ & 0x00000040) == 0x00000040)) {
         size += com.google.protobuf.CodedOutputStream
@@ -36124,6 +39998,10 @@ public final class ATCommand {
       if (((bitField0_ & 0x00000400) == 0x00000400)) {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(11, getDescriptionBytes());
+      }
+      if (((bitField0_ & 0x00000800) == 0x00000800)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(12, stk_.getNumber());
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -36252,7 +40130,7 @@ public final class ATCommand {
         bitField0_ = (bitField0_ & ~0x00000008);
         execution_ = false;
         bitField0_ = (bitField0_ & ~0x00000010);
-        n_ = 0;
+        turnOnSTK_ = false;
         bitField0_ = (bitField0_ & ~0x00000020);
         profile_ = "";
         bitField0_ = (bitField0_ & ~0x00000040);
@@ -36264,6 +40142,8 @@ public final class ATCommand {
         bitField0_ = (bitField0_ & ~0x00000200);
         description_ = "";
         bitField0_ = (bitField0_ & ~0x00000400);
+        stk_ = com.rtrk.atcommands.ATCommand.STK.TRIGER_MODEM_TO_SEND_STK;
+        bitField0_ = (bitField0_ & ~0x00000800);
         return this;
       }
 
@@ -36315,7 +40195,7 @@ public final class ATCommand {
         if (((from_bitField0_ & 0x00000020) == 0x00000020)) {
           to_bitField0_ |= 0x00000020;
         }
-        result.n_ = n_;
+        result.turnOnSTK_ = turnOnSTK_;
         if (((from_bitField0_ & 0x00000040) == 0x00000040)) {
           to_bitField0_ |= 0x00000040;
         }
@@ -36336,6 +40216,10 @@ public final class ATCommand {
           to_bitField0_ |= 0x00000400;
         }
         result.description_ = description_;
+        if (((from_bitField0_ & 0x00000800) == 0x00000800)) {
+          to_bitField0_ |= 0x00000800;
+        }
+        result.stk_ = stk_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -36367,8 +40251,8 @@ public final class ATCommand {
         if (other.hasExecution()) {
           setExecution(other.getExecution());
         }
-        if (other.hasN()) {
-          setN(other.getN());
+        if (other.hasTurnOnSTK()) {
+          setTurnOnSTK(other.getTurnOnSTK());
         }
         if (other.hasProfile()) {
           bitField0_ |= 0x00000040;
@@ -36392,6 +40276,9 @@ public final class ATCommand {
           bitField0_ |= 0x00000400;
           description_ = other.description_;
           onChanged();
+        }
+        if (other.hasStk()) {
+          setStk(other.getStk());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
@@ -36587,34 +40474,34 @@ public final class ATCommand {
         return this;
       }
 
-      private int n_ ;
+      private boolean turnOnSTK_ ;
       /**
-       * <code>optional int32 n = 6;</code>
+       * <code>optional bool turnOnSTK = 6;</code>
        */
-      public boolean hasN() {
+      public boolean hasTurnOnSTK() {
         return ((bitField0_ & 0x00000020) == 0x00000020);
       }
       /**
-       * <code>optional int32 n = 6;</code>
+       * <code>optional bool turnOnSTK = 6;</code>
        */
-      public int getN() {
-        return n_;
+      public boolean getTurnOnSTK() {
+        return turnOnSTK_;
       }
       /**
-       * <code>optional int32 n = 6;</code>
+       * <code>optional bool turnOnSTK = 6;</code>
        */
-      public Builder setN(int value) {
+      public Builder setTurnOnSTK(boolean value) {
         bitField0_ |= 0x00000020;
-        n_ = value;
+        turnOnSTK_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>optional int32 n = 6;</code>
+       * <code>optional bool turnOnSTK = 6;</code>
        */
-      public Builder clearN() {
+      public Builder clearTurnOnSTK() {
         bitField0_ = (bitField0_ & ~0x00000020);
-        n_ = 0;
+        turnOnSTK_ = false;
         onChanged();
         return this;
       }
@@ -36955,6 +40842,41 @@ public final class ATCommand {
         return this;
       }
 
+      private com.rtrk.atcommands.ATCommand.STK stk_ = com.rtrk.atcommands.ATCommand.STK.TRIGER_MODEM_TO_SEND_STK;
+      /**
+       * <code>optional .com.rtrk.protobuf.STK stk = 12;</code>
+       */
+      public boolean hasStk() {
+        return ((bitField0_ & 0x00000800) == 0x00000800);
+      }
+      /**
+       * <code>optional .com.rtrk.protobuf.STK stk = 12;</code>
+       */
+      public com.rtrk.atcommands.ATCommand.STK getStk() {
+        return stk_;
+      }
+      /**
+       * <code>optional .com.rtrk.protobuf.STK stk = 12;</code>
+       */
+      public Builder setStk(com.rtrk.atcommands.ATCommand.STK value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000800;
+        stk_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .com.rtrk.protobuf.STK stk = 12;</code>
+       */
+      public Builder clearStk() {
+        bitField0_ = (bitField0_ & ~0x00000800);
+        stk_ = com.rtrk.atcommands.ATCommand.STK.TRIGER_MODEM_TO_SEND_STK;
+        onChanged();
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:com.rtrk.protobuf.STKCommand)
     }
 
@@ -37016,40 +40938,40 @@ public final class ATCommand {
     boolean getExecution();
 
     /**
-     * <code>optional int32 value = 5;</code>
+     * <code>optional .com.rtrk.protobuf.TAToDefault default = 5 [default = SET_ALL_TA_TO_DEFAULT];</code>
      */
-    boolean hasValue();
+    boolean hasDefault();
     /**
-     * <code>optional int32 value = 5;</code>
+     * <code>optional .com.rtrk.protobuf.TAToDefault default = 5 [default = SET_ALL_TA_TO_DEFAULT];</code>
      */
-    int getValue();
+    com.rtrk.atcommands.ATCommand.TAToDefault getDefault();
 
     /**
-     * <code>optional int32 n = 6;</code>
+     * <code>optional .com.rtrk.protobuf.ProfileNumber profileNumber = 6 [default = PROFILE_NUMBER];</code>
      */
-    boolean hasN();
+    boolean hasProfileNumber();
     /**
-     * <code>optional int32 n = 6;</code>
+     * <code>optional .com.rtrk.protobuf.ProfileNumber profileNumber = 6 [default = PROFILE_NUMBER];</code>
      */
-    int getN();
+    com.rtrk.atcommands.ATCommand.ProfileNumber getProfileNumber();
 
     /**
-     * <code>optional int32 functionality = 7;</code>
+     * <code>optional .com.rtrk.protobuf.Functionality functionality = 7 [default = FULL_FUNCTIONALITY];</code>
      */
     boolean hasFunctionality();
     /**
-     * <code>optional int32 functionality = 7;</code>
+     * <code>optional .com.rtrk.protobuf.Functionality functionality = 7 [default = FULL_FUNCTIONALITY];</code>
      */
-    int getFunctionality();
+    com.rtrk.atcommands.ATCommand.Functionality getFunctionality();
 
     /**
-     * <code>optional int32 reset = 8;</code>
+     * <code>optional .com.rtrk.protobuf.Reset reset = 8 [default = DO_NOT_RESET_ME];</code>
      */
     boolean hasReset();
     /**
-     * <code>optional int32 reset = 8;</code>
+     * <code>optional .com.rtrk.protobuf.Reset reset = 8 [default = DO_NOT_RESET_ME];</code>
      */
-    int getReset();
+    com.rtrk.atcommands.ATCommand.Reset getReset();
 
     /**
      * <code>optional string characterSet = 9;</code>
@@ -37087,6 +41009,60 @@ public final class ATCommand {
      */
     com.google.protobuf.ByteString
         getDescriptionBytes();
+
+    /**
+     * <code>optional .com.rtrk.protobuf.ResultCode resultCode = 13 [default = TA_TRANSMINTS_RESULT_CODE];</code>
+     */
+    boolean hasResultCode();
+    /**
+     * <code>optional .com.rtrk.protobuf.ResultCode resultCode = 13 [default = TA_TRANSMINTS_RESULT_CODE];</code>
+     */
+    com.rtrk.atcommands.ATCommand.ResultCode getResultCode();
+
+    /**
+     * <code>optional .com.rtrk.protobuf.InformationResponse informationResponse = 14 [default = LONG_RESULT_CODE_FORMAT];</code>
+     */
+    boolean hasInformationResponse();
+    /**
+     * <code>optional .com.rtrk.protobuf.InformationResponse informationResponse = 14 [default = LONG_RESULT_CODE_FORMAT];</code>
+     */
+    com.rtrk.atcommands.ATCommand.InformationResponse getInformationResponse();
+
+    /**
+     * <code>optional .com.rtrk.protobuf.ConnectResultCode connectResultCode = 15 [default = CONNECT_RESULT_CODE_ONLY_RETURNED];</code>
+     */
+    boolean hasConnectResultCode();
+    /**
+     * <code>optional .com.rtrk.protobuf.ConnectResultCode connectResultCode = 15 [default = CONNECT_RESULT_CODE_ONLY_RETURNED];</code>
+     */
+    com.rtrk.atcommands.ATCommand.ConnectResultCode getConnectResultCode();
+
+    /**
+     * <code>optional .com.rtrk.protobuf.ResetToProfileNumber resetToProfileNumber = 16 [default = RESET_TO_PROFILE_NUMBER];</code>
+     */
+    boolean hasResetToProfileNumber();
+    /**
+     * <code>optional .com.rtrk.protobuf.ResetToProfileNumber resetToProfileNumber = 16 [default = RESET_TO_PROFILE_NUMBER];</code>
+     */
+    com.rtrk.atcommands.ATCommand.ResetToProfileNumber getResetToProfileNumber();
+
+    /**
+     * <code>optional .com.rtrk.protobuf.PowerOffMode powerOffMode = 17;</code>
+     */
+    boolean hasPowerOffMode();
+    /**
+     * <code>optional .com.rtrk.protobuf.PowerOffMode powerOffMode = 17;</code>
+     */
+    com.rtrk.atcommands.ATCommand.PowerOffMode getPowerOffMode();
+
+    /**
+     * <code>optional .com.rtrk.protobuf.DisableResultCode disableResultCode = 18 [default = ENABLE_RESULT_CODE_AND_USE_NUMERIC_VALUES];</code>
+     */
+    boolean hasDisableResultCode();
+    /**
+     * <code>optional .com.rtrk.protobuf.DisableResultCode disableResultCode = 18 [default = ENABLE_RESULT_CODE_AND_USE_NUMERIC_VALUES];</code>
+     */
+    com.rtrk.atcommands.ATCommand.DisableResultCode getDisableResultCode();
   }
   /**
    * Protobuf type {@code com.rtrk.protobuf.GeneralCommand}
@@ -37167,23 +41143,47 @@ public final class ATCommand {
               break;
             }
             case 40: {
-              bitField0_ |= 0x00000020;
-              value_ = input.readInt32();
+              int rawValue = input.readEnum();
+              com.rtrk.atcommands.ATCommand.TAToDefault value = com.rtrk.atcommands.ATCommand.TAToDefault.valueOf(rawValue);
+              if (value == null) {
+                unknownFields.mergeVarintField(5, rawValue);
+              } else {
+                bitField0_ |= 0x00000020;
+                default_ = value;
+              }
               break;
             }
             case 48: {
-              bitField0_ |= 0x00000040;
-              n_ = input.readInt32();
+              int rawValue = input.readEnum();
+              com.rtrk.atcommands.ATCommand.ProfileNumber value = com.rtrk.atcommands.ATCommand.ProfileNumber.valueOf(rawValue);
+              if (value == null) {
+                unknownFields.mergeVarintField(6, rawValue);
+              } else {
+                bitField0_ |= 0x00000040;
+                profileNumber_ = value;
+              }
               break;
             }
             case 56: {
-              bitField0_ |= 0x00000080;
-              functionality_ = input.readInt32();
+              int rawValue = input.readEnum();
+              com.rtrk.atcommands.ATCommand.Functionality value = com.rtrk.atcommands.ATCommand.Functionality.valueOf(rawValue);
+              if (value == null) {
+                unknownFields.mergeVarintField(7, rawValue);
+              } else {
+                bitField0_ |= 0x00000080;
+                functionality_ = value;
+              }
               break;
             }
             case 64: {
-              bitField0_ |= 0x00000100;
-              reset_ = input.readInt32();
+              int rawValue = input.readEnum();
+              com.rtrk.atcommands.ATCommand.Reset value = com.rtrk.atcommands.ATCommand.Reset.valueOf(rawValue);
+              if (value == null) {
+                unknownFields.mergeVarintField(8, rawValue);
+              } else {
+                bitField0_ |= 0x00000100;
+                reset_ = value;
+              }
               break;
             }
             case 74: {
@@ -37206,6 +41206,72 @@ public final class ATCommand {
               com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000800;
               description_ = bs;
+              break;
+            }
+            case 104: {
+              int rawValue = input.readEnum();
+              com.rtrk.atcommands.ATCommand.ResultCode value = com.rtrk.atcommands.ATCommand.ResultCode.valueOf(rawValue);
+              if (value == null) {
+                unknownFields.mergeVarintField(13, rawValue);
+              } else {
+                bitField0_ |= 0x00001000;
+                resultCode_ = value;
+              }
+              break;
+            }
+            case 112: {
+              int rawValue = input.readEnum();
+              com.rtrk.atcommands.ATCommand.InformationResponse value = com.rtrk.atcommands.ATCommand.InformationResponse.valueOf(rawValue);
+              if (value == null) {
+                unknownFields.mergeVarintField(14, rawValue);
+              } else {
+                bitField0_ |= 0x00002000;
+                informationResponse_ = value;
+              }
+              break;
+            }
+            case 120: {
+              int rawValue = input.readEnum();
+              com.rtrk.atcommands.ATCommand.ConnectResultCode value = com.rtrk.atcommands.ATCommand.ConnectResultCode.valueOf(rawValue);
+              if (value == null) {
+                unknownFields.mergeVarintField(15, rawValue);
+              } else {
+                bitField0_ |= 0x00004000;
+                connectResultCode_ = value;
+              }
+              break;
+            }
+            case 128: {
+              int rawValue = input.readEnum();
+              com.rtrk.atcommands.ATCommand.ResetToProfileNumber value = com.rtrk.atcommands.ATCommand.ResetToProfileNumber.valueOf(rawValue);
+              if (value == null) {
+                unknownFields.mergeVarintField(16, rawValue);
+              } else {
+                bitField0_ |= 0x00008000;
+                resetToProfileNumber_ = value;
+              }
+              break;
+            }
+            case 136: {
+              int rawValue = input.readEnum();
+              com.rtrk.atcommands.ATCommand.PowerOffMode value = com.rtrk.atcommands.ATCommand.PowerOffMode.valueOf(rawValue);
+              if (value == null) {
+                unknownFields.mergeVarintField(17, rawValue);
+              } else {
+                bitField0_ |= 0x00010000;
+                powerOffMode_ = value;
+              }
+              break;
+            }
+            case 144: {
+              int rawValue = input.readEnum();
+              com.rtrk.atcommands.ATCommand.DisableResultCode value = com.rtrk.atcommands.ATCommand.DisableResultCode.valueOf(rawValue);
+              if (value == null) {
+                unknownFields.mergeVarintField(18, rawValue);
+              } else {
+                bitField0_ |= 0x00020000;
+                disableResultCode_ = value;
+              }
               break;
             }
           }
@@ -37323,63 +41389,63 @@ public final class ATCommand {
       return execution_;
     }
 
-    public static final int VALUE_FIELD_NUMBER = 5;
-    private int value_;
+    public static final int DEFAULT_FIELD_NUMBER = 5;
+    private com.rtrk.atcommands.ATCommand.TAToDefault default_;
     /**
-     * <code>optional int32 value = 5;</code>
+     * <code>optional .com.rtrk.protobuf.TAToDefault default = 5 [default = SET_ALL_TA_TO_DEFAULT];</code>
      */
-    public boolean hasValue() {
+    public boolean hasDefault() {
       return ((bitField0_ & 0x00000020) == 0x00000020);
     }
     /**
-     * <code>optional int32 value = 5;</code>
+     * <code>optional .com.rtrk.protobuf.TAToDefault default = 5 [default = SET_ALL_TA_TO_DEFAULT];</code>
      */
-    public int getValue() {
-      return value_;
+    public com.rtrk.atcommands.ATCommand.TAToDefault getDefault() {
+      return default_;
     }
 
-    public static final int N_FIELD_NUMBER = 6;
-    private int n_;
+    public static final int PROFILENUMBER_FIELD_NUMBER = 6;
+    private com.rtrk.atcommands.ATCommand.ProfileNumber profileNumber_;
     /**
-     * <code>optional int32 n = 6;</code>
+     * <code>optional .com.rtrk.protobuf.ProfileNumber profileNumber = 6 [default = PROFILE_NUMBER];</code>
      */
-    public boolean hasN() {
+    public boolean hasProfileNumber() {
       return ((bitField0_ & 0x00000040) == 0x00000040);
     }
     /**
-     * <code>optional int32 n = 6;</code>
+     * <code>optional .com.rtrk.protobuf.ProfileNumber profileNumber = 6 [default = PROFILE_NUMBER];</code>
      */
-    public int getN() {
-      return n_;
+    public com.rtrk.atcommands.ATCommand.ProfileNumber getProfileNumber() {
+      return profileNumber_;
     }
 
     public static final int FUNCTIONALITY_FIELD_NUMBER = 7;
-    private int functionality_;
+    private com.rtrk.atcommands.ATCommand.Functionality functionality_;
     /**
-     * <code>optional int32 functionality = 7;</code>
+     * <code>optional .com.rtrk.protobuf.Functionality functionality = 7 [default = FULL_FUNCTIONALITY];</code>
      */
     public boolean hasFunctionality() {
       return ((bitField0_ & 0x00000080) == 0x00000080);
     }
     /**
-     * <code>optional int32 functionality = 7;</code>
+     * <code>optional .com.rtrk.protobuf.Functionality functionality = 7 [default = FULL_FUNCTIONALITY];</code>
      */
-    public int getFunctionality() {
+    public com.rtrk.atcommands.ATCommand.Functionality getFunctionality() {
       return functionality_;
     }
 
     public static final int RESET_FIELD_NUMBER = 8;
-    private int reset_;
+    private com.rtrk.atcommands.ATCommand.Reset reset_;
     /**
-     * <code>optional int32 reset = 8;</code>
+     * <code>optional .com.rtrk.protobuf.Reset reset = 8 [default = DO_NOT_RESET_ME];</code>
      */
     public boolean hasReset() {
       return ((bitField0_ & 0x00000100) == 0x00000100);
     }
     /**
-     * <code>optional int32 reset = 8;</code>
+     * <code>optional .com.rtrk.protobuf.Reset reset = 8 [default = DO_NOT_RESET_ME];</code>
      */
-    public int getReset() {
+    public com.rtrk.atcommands.ATCommand.Reset getReset() {
       return reset_;
     }
 
@@ -37482,19 +41548,115 @@ public final class ATCommand {
       }
     }
 
+    public static final int RESULTCODE_FIELD_NUMBER = 13;
+    private com.rtrk.atcommands.ATCommand.ResultCode resultCode_;
+    /**
+     * <code>optional .com.rtrk.protobuf.ResultCode resultCode = 13 [default = TA_TRANSMINTS_RESULT_CODE];</code>
+     */
+    public boolean hasResultCode() {
+      return ((bitField0_ & 0x00001000) == 0x00001000);
+    }
+    /**
+     * <code>optional .com.rtrk.protobuf.ResultCode resultCode = 13 [default = TA_TRANSMINTS_RESULT_CODE];</code>
+     */
+    public com.rtrk.atcommands.ATCommand.ResultCode getResultCode() {
+      return resultCode_;
+    }
+
+    public static final int INFORMATIONRESPONSE_FIELD_NUMBER = 14;
+    private com.rtrk.atcommands.ATCommand.InformationResponse informationResponse_;
+    /**
+     * <code>optional .com.rtrk.protobuf.InformationResponse informationResponse = 14 [default = LONG_RESULT_CODE_FORMAT];</code>
+     */
+    public boolean hasInformationResponse() {
+      return ((bitField0_ & 0x00002000) == 0x00002000);
+    }
+    /**
+     * <code>optional .com.rtrk.protobuf.InformationResponse informationResponse = 14 [default = LONG_RESULT_CODE_FORMAT];</code>
+     */
+    public com.rtrk.atcommands.ATCommand.InformationResponse getInformationResponse() {
+      return informationResponse_;
+    }
+
+    public static final int CONNECTRESULTCODE_FIELD_NUMBER = 15;
+    private com.rtrk.atcommands.ATCommand.ConnectResultCode connectResultCode_;
+    /**
+     * <code>optional .com.rtrk.protobuf.ConnectResultCode connectResultCode = 15 [default = CONNECT_RESULT_CODE_ONLY_RETURNED];</code>
+     */
+    public boolean hasConnectResultCode() {
+      return ((bitField0_ & 0x00004000) == 0x00004000);
+    }
+    /**
+     * <code>optional .com.rtrk.protobuf.ConnectResultCode connectResultCode = 15 [default = CONNECT_RESULT_CODE_ONLY_RETURNED];</code>
+     */
+    public com.rtrk.atcommands.ATCommand.ConnectResultCode getConnectResultCode() {
+      return connectResultCode_;
+    }
+
+    public static final int RESETTOPROFILENUMBER_FIELD_NUMBER = 16;
+    private com.rtrk.atcommands.ATCommand.ResetToProfileNumber resetToProfileNumber_;
+    /**
+     * <code>optional .com.rtrk.protobuf.ResetToProfileNumber resetToProfileNumber = 16 [default = RESET_TO_PROFILE_NUMBER];</code>
+     */
+    public boolean hasResetToProfileNumber() {
+      return ((bitField0_ & 0x00008000) == 0x00008000);
+    }
+    /**
+     * <code>optional .com.rtrk.protobuf.ResetToProfileNumber resetToProfileNumber = 16 [default = RESET_TO_PROFILE_NUMBER];</code>
+     */
+    public com.rtrk.atcommands.ATCommand.ResetToProfileNumber getResetToProfileNumber() {
+      return resetToProfileNumber_;
+    }
+
+    public static final int POWEROFFMODE_FIELD_NUMBER = 17;
+    private com.rtrk.atcommands.ATCommand.PowerOffMode powerOffMode_;
+    /**
+     * <code>optional .com.rtrk.protobuf.PowerOffMode powerOffMode = 17;</code>
+     */
+    public boolean hasPowerOffMode() {
+      return ((bitField0_ & 0x00010000) == 0x00010000);
+    }
+    /**
+     * <code>optional .com.rtrk.protobuf.PowerOffMode powerOffMode = 17;</code>
+     */
+    public com.rtrk.atcommands.ATCommand.PowerOffMode getPowerOffMode() {
+      return powerOffMode_;
+    }
+
+    public static final int DISABLERESULTCODE_FIELD_NUMBER = 18;
+    private com.rtrk.atcommands.ATCommand.DisableResultCode disableResultCode_;
+    /**
+     * <code>optional .com.rtrk.protobuf.DisableResultCode disableResultCode = 18 [default = ENABLE_RESULT_CODE_AND_USE_NUMERIC_VALUES];</code>
+     */
+    public boolean hasDisableResultCode() {
+      return ((bitField0_ & 0x00020000) == 0x00020000);
+    }
+    /**
+     * <code>optional .com.rtrk.protobuf.DisableResultCode disableResultCode = 18 [default = ENABLE_RESULT_CODE_AND_USE_NUMERIC_VALUES];</code>
+     */
+    public com.rtrk.atcommands.ATCommand.DisableResultCode getDisableResultCode() {
+      return disableResultCode_;
+    }
+
     private void initFields() {
       messageType_ = com.rtrk.atcommands.ATCommand.GeneralMesssageType.DISPLAY_PRODUCT_IDENTIFICATION_INFORMATION;
       test_ = false;
       read_ = false;
       write_ = false;
       execution_ = false;
-      value_ = 0;
-      n_ = 0;
-      functionality_ = 0;
-      reset_ = 0;
+      default_ = com.rtrk.atcommands.ATCommand.TAToDefault.SET_ALL_TA_TO_DEFAULT;
+      profileNumber_ = com.rtrk.atcommands.ATCommand.ProfileNumber.PROFILE_NUMBER;
+      functionality_ = com.rtrk.atcommands.ATCommand.Functionality.FULL_FUNCTIONALITY;
+      reset_ = com.rtrk.atcommands.ATCommand.Reset.DO_NOT_RESET_ME;
       characterSet_ = "";
       isResponse_ = false;
       description_ = "";
+      resultCode_ = com.rtrk.atcommands.ATCommand.ResultCode.TA_TRANSMINTS_RESULT_CODE;
+      informationResponse_ = com.rtrk.atcommands.ATCommand.InformationResponse.LONG_RESULT_CODE_FORMAT;
+      connectResultCode_ = com.rtrk.atcommands.ATCommand.ConnectResultCode.CONNECT_RESULT_CODE_ONLY_RETURNED;
+      resetToProfileNumber_ = com.rtrk.atcommands.ATCommand.ResetToProfileNumber.RESET_TO_PROFILE_NUMBER;
+      powerOffMode_ = com.rtrk.atcommands.ATCommand.PowerOffMode.URGENT_POWER_OFF;
+      disableResultCode_ = com.rtrk.atcommands.ATCommand.DisableResultCode.ENABLE_RESULT_CODE_AND_USE_NUMERIC_VALUES;
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -37526,16 +41688,16 @@ public final class ATCommand {
         output.writeBool(4, execution_);
       }
       if (((bitField0_ & 0x00000020) == 0x00000020)) {
-        output.writeInt32(5, value_);
+        output.writeEnum(5, default_.getNumber());
       }
       if (((bitField0_ & 0x00000040) == 0x00000040)) {
-        output.writeInt32(6, n_);
+        output.writeEnum(6, profileNumber_.getNumber());
       }
       if (((bitField0_ & 0x00000080) == 0x00000080)) {
-        output.writeInt32(7, functionality_);
+        output.writeEnum(7, functionality_.getNumber());
       }
       if (((bitField0_ & 0x00000100) == 0x00000100)) {
-        output.writeInt32(8, reset_);
+        output.writeEnum(8, reset_.getNumber());
       }
       if (((bitField0_ & 0x00000200) == 0x00000200)) {
         output.writeBytes(9, getCharacterSetBytes());
@@ -37548,6 +41710,24 @@ public final class ATCommand {
       }
       if (((bitField0_ & 0x00000800) == 0x00000800)) {
         output.writeBytes(12, getDescriptionBytes());
+      }
+      if (((bitField0_ & 0x00001000) == 0x00001000)) {
+        output.writeEnum(13, resultCode_.getNumber());
+      }
+      if (((bitField0_ & 0x00002000) == 0x00002000)) {
+        output.writeEnum(14, informationResponse_.getNumber());
+      }
+      if (((bitField0_ & 0x00004000) == 0x00004000)) {
+        output.writeEnum(15, connectResultCode_.getNumber());
+      }
+      if (((bitField0_ & 0x00008000) == 0x00008000)) {
+        output.writeEnum(16, resetToProfileNumber_.getNumber());
+      }
+      if (((bitField0_ & 0x00010000) == 0x00010000)) {
+        output.writeEnum(17, powerOffMode_.getNumber());
+      }
+      if (((bitField0_ & 0x00020000) == 0x00020000)) {
+        output.writeEnum(18, disableResultCode_.getNumber());
       }
       getUnknownFields().writeTo(output);
     }
@@ -37576,19 +41756,19 @@ public final class ATCommand {
       }
       if (((bitField0_ & 0x00000020) == 0x00000020)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(5, value_);
+          .computeEnumSize(5, default_.getNumber());
       }
       if (((bitField0_ & 0x00000040) == 0x00000040)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(6, n_);
+          .computeEnumSize(6, profileNumber_.getNumber());
       }
       if (((bitField0_ & 0x00000080) == 0x00000080)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(7, functionality_);
+          .computeEnumSize(7, functionality_.getNumber());
       }
       if (((bitField0_ & 0x00000100) == 0x00000100)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(8, reset_);
+          .computeEnumSize(8, reset_.getNumber());
       }
       if (((bitField0_ & 0x00000200) == 0x00000200)) {
         size += com.google.protobuf.CodedOutputStream
@@ -37605,6 +41785,30 @@ public final class ATCommand {
       if (((bitField0_ & 0x00000800) == 0x00000800)) {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(12, getDescriptionBytes());
+      }
+      if (((bitField0_ & 0x00001000) == 0x00001000)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(13, resultCode_.getNumber());
+      }
+      if (((bitField0_ & 0x00002000) == 0x00002000)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(14, informationResponse_.getNumber());
+      }
+      if (((bitField0_ & 0x00004000) == 0x00004000)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(15, connectResultCode_.getNumber());
+      }
+      if (((bitField0_ & 0x00008000) == 0x00008000)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(16, resetToProfileNumber_.getNumber());
+      }
+      if (((bitField0_ & 0x00010000) == 0x00010000)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(17, powerOffMode_.getNumber());
+      }
+      if (((bitField0_ & 0x00020000) == 0x00020000)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(18, disableResultCode_.getNumber());
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -37733,13 +41937,13 @@ public final class ATCommand {
         bitField0_ = (bitField0_ & ~0x00000008);
         execution_ = false;
         bitField0_ = (bitField0_ & ~0x00000010);
-        value_ = 0;
+        default_ = com.rtrk.atcommands.ATCommand.TAToDefault.SET_ALL_TA_TO_DEFAULT;
         bitField0_ = (bitField0_ & ~0x00000020);
-        n_ = 0;
+        profileNumber_ = com.rtrk.atcommands.ATCommand.ProfileNumber.PROFILE_NUMBER;
         bitField0_ = (bitField0_ & ~0x00000040);
-        functionality_ = 0;
+        functionality_ = com.rtrk.atcommands.ATCommand.Functionality.FULL_FUNCTIONALITY;
         bitField0_ = (bitField0_ & ~0x00000080);
-        reset_ = 0;
+        reset_ = com.rtrk.atcommands.ATCommand.Reset.DO_NOT_RESET_ME;
         bitField0_ = (bitField0_ & ~0x00000100);
         characterSet_ = "";
         bitField0_ = (bitField0_ & ~0x00000200);
@@ -37747,6 +41951,18 @@ public final class ATCommand {
         bitField0_ = (bitField0_ & ~0x00000400);
         description_ = "";
         bitField0_ = (bitField0_ & ~0x00000800);
+        resultCode_ = com.rtrk.atcommands.ATCommand.ResultCode.TA_TRANSMINTS_RESULT_CODE;
+        bitField0_ = (bitField0_ & ~0x00001000);
+        informationResponse_ = com.rtrk.atcommands.ATCommand.InformationResponse.LONG_RESULT_CODE_FORMAT;
+        bitField0_ = (bitField0_ & ~0x00002000);
+        connectResultCode_ = com.rtrk.atcommands.ATCommand.ConnectResultCode.CONNECT_RESULT_CODE_ONLY_RETURNED;
+        bitField0_ = (bitField0_ & ~0x00004000);
+        resetToProfileNumber_ = com.rtrk.atcommands.ATCommand.ResetToProfileNumber.RESET_TO_PROFILE_NUMBER;
+        bitField0_ = (bitField0_ & ~0x00008000);
+        powerOffMode_ = com.rtrk.atcommands.ATCommand.PowerOffMode.URGENT_POWER_OFF;
+        bitField0_ = (bitField0_ & ~0x00010000);
+        disableResultCode_ = com.rtrk.atcommands.ATCommand.DisableResultCode.ENABLE_RESULT_CODE_AND_USE_NUMERIC_VALUES;
+        bitField0_ = (bitField0_ & ~0x00020000);
         return this;
       }
 
@@ -37798,11 +42014,11 @@ public final class ATCommand {
         if (((from_bitField0_ & 0x00000020) == 0x00000020)) {
           to_bitField0_ |= 0x00000020;
         }
-        result.value_ = value_;
+        result.default_ = default_;
         if (((from_bitField0_ & 0x00000040) == 0x00000040)) {
           to_bitField0_ |= 0x00000040;
         }
-        result.n_ = n_;
+        result.profileNumber_ = profileNumber_;
         if (((from_bitField0_ & 0x00000080) == 0x00000080)) {
           to_bitField0_ |= 0x00000080;
         }
@@ -37823,6 +42039,30 @@ public final class ATCommand {
           to_bitField0_ |= 0x00000800;
         }
         result.description_ = description_;
+        if (((from_bitField0_ & 0x00001000) == 0x00001000)) {
+          to_bitField0_ |= 0x00001000;
+        }
+        result.resultCode_ = resultCode_;
+        if (((from_bitField0_ & 0x00002000) == 0x00002000)) {
+          to_bitField0_ |= 0x00002000;
+        }
+        result.informationResponse_ = informationResponse_;
+        if (((from_bitField0_ & 0x00004000) == 0x00004000)) {
+          to_bitField0_ |= 0x00004000;
+        }
+        result.connectResultCode_ = connectResultCode_;
+        if (((from_bitField0_ & 0x00008000) == 0x00008000)) {
+          to_bitField0_ |= 0x00008000;
+        }
+        result.resetToProfileNumber_ = resetToProfileNumber_;
+        if (((from_bitField0_ & 0x00010000) == 0x00010000)) {
+          to_bitField0_ |= 0x00010000;
+        }
+        result.powerOffMode_ = powerOffMode_;
+        if (((from_bitField0_ & 0x00020000) == 0x00020000)) {
+          to_bitField0_ |= 0x00020000;
+        }
+        result.disableResultCode_ = disableResultCode_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -37854,11 +42094,11 @@ public final class ATCommand {
         if (other.hasExecution()) {
           setExecution(other.getExecution());
         }
-        if (other.hasValue()) {
-          setValue(other.getValue());
+        if (other.hasDefault()) {
+          setDefault(other.getDefault());
         }
-        if (other.hasN()) {
-          setN(other.getN());
+        if (other.hasProfileNumber()) {
+          setProfileNumber(other.getProfileNumber());
         }
         if (other.hasFunctionality()) {
           setFunctionality(other.getFunctionality());
@@ -37878,6 +42118,24 @@ public final class ATCommand {
           bitField0_ |= 0x00000800;
           description_ = other.description_;
           onChanged();
+        }
+        if (other.hasResultCode()) {
+          setResultCode(other.getResultCode());
+        }
+        if (other.hasInformationResponse()) {
+          setInformationResponse(other.getInformationResponse());
+        }
+        if (other.hasConnectResultCode()) {
+          setConnectResultCode(other.getConnectResultCode());
+        }
+        if (other.hasResetToProfileNumber()) {
+          setResetToProfileNumber(other.getResetToProfileNumber());
+        }
+        if (other.hasPowerOffMode()) {
+          setPowerOffMode(other.getPowerOffMode());
+        }
+        if (other.hasDisableResultCode()) {
+          setDisableResultCode(other.getDisableResultCode());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
@@ -38073,130 +42331,142 @@ public final class ATCommand {
         return this;
       }
 
-      private int value_ ;
+      private com.rtrk.atcommands.ATCommand.TAToDefault default_ = com.rtrk.atcommands.ATCommand.TAToDefault.SET_ALL_TA_TO_DEFAULT;
       /**
-       * <code>optional int32 value = 5;</code>
+       * <code>optional .com.rtrk.protobuf.TAToDefault default = 5 [default = SET_ALL_TA_TO_DEFAULT];</code>
        */
-      public boolean hasValue() {
+      public boolean hasDefault() {
         return ((bitField0_ & 0x00000020) == 0x00000020);
       }
       /**
-       * <code>optional int32 value = 5;</code>
+       * <code>optional .com.rtrk.protobuf.TAToDefault default = 5 [default = SET_ALL_TA_TO_DEFAULT];</code>
        */
-      public int getValue() {
-        return value_;
+      public com.rtrk.atcommands.ATCommand.TAToDefault getDefault() {
+        return default_;
       }
       /**
-       * <code>optional int32 value = 5;</code>
+       * <code>optional .com.rtrk.protobuf.TAToDefault default = 5 [default = SET_ALL_TA_TO_DEFAULT];</code>
        */
-      public Builder setValue(int value) {
+      public Builder setDefault(com.rtrk.atcommands.ATCommand.TAToDefault value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
         bitField0_ |= 0x00000020;
-        value_ = value;
+        default_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>optional int32 value = 5;</code>
+       * <code>optional .com.rtrk.protobuf.TAToDefault default = 5 [default = SET_ALL_TA_TO_DEFAULT];</code>
        */
-      public Builder clearValue() {
+      public Builder clearDefault() {
         bitField0_ = (bitField0_ & ~0x00000020);
-        value_ = 0;
+        default_ = com.rtrk.atcommands.ATCommand.TAToDefault.SET_ALL_TA_TO_DEFAULT;
         onChanged();
         return this;
       }
 
-      private int n_ ;
+      private com.rtrk.atcommands.ATCommand.ProfileNumber profileNumber_ = com.rtrk.atcommands.ATCommand.ProfileNumber.PROFILE_NUMBER;
       /**
-       * <code>optional int32 n = 6;</code>
+       * <code>optional .com.rtrk.protobuf.ProfileNumber profileNumber = 6 [default = PROFILE_NUMBER];</code>
        */
-      public boolean hasN() {
+      public boolean hasProfileNumber() {
         return ((bitField0_ & 0x00000040) == 0x00000040);
       }
       /**
-       * <code>optional int32 n = 6;</code>
+       * <code>optional .com.rtrk.protobuf.ProfileNumber profileNumber = 6 [default = PROFILE_NUMBER];</code>
        */
-      public int getN() {
-        return n_;
+      public com.rtrk.atcommands.ATCommand.ProfileNumber getProfileNumber() {
+        return profileNumber_;
       }
       /**
-       * <code>optional int32 n = 6;</code>
+       * <code>optional .com.rtrk.protobuf.ProfileNumber profileNumber = 6 [default = PROFILE_NUMBER];</code>
        */
-      public Builder setN(int value) {
+      public Builder setProfileNumber(com.rtrk.atcommands.ATCommand.ProfileNumber value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
         bitField0_ |= 0x00000040;
-        n_ = value;
+        profileNumber_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>optional int32 n = 6;</code>
+       * <code>optional .com.rtrk.protobuf.ProfileNumber profileNumber = 6 [default = PROFILE_NUMBER];</code>
        */
-      public Builder clearN() {
+      public Builder clearProfileNumber() {
         bitField0_ = (bitField0_ & ~0x00000040);
-        n_ = 0;
+        profileNumber_ = com.rtrk.atcommands.ATCommand.ProfileNumber.PROFILE_NUMBER;
         onChanged();
         return this;
       }
 
-      private int functionality_ ;
+      private com.rtrk.atcommands.ATCommand.Functionality functionality_ = com.rtrk.atcommands.ATCommand.Functionality.FULL_FUNCTIONALITY;
       /**
-       * <code>optional int32 functionality = 7;</code>
+       * <code>optional .com.rtrk.protobuf.Functionality functionality = 7 [default = FULL_FUNCTIONALITY];</code>
        */
       public boolean hasFunctionality() {
         return ((bitField0_ & 0x00000080) == 0x00000080);
       }
       /**
-       * <code>optional int32 functionality = 7;</code>
+       * <code>optional .com.rtrk.protobuf.Functionality functionality = 7 [default = FULL_FUNCTIONALITY];</code>
        */
-      public int getFunctionality() {
+      public com.rtrk.atcommands.ATCommand.Functionality getFunctionality() {
         return functionality_;
       }
       /**
-       * <code>optional int32 functionality = 7;</code>
+       * <code>optional .com.rtrk.protobuf.Functionality functionality = 7 [default = FULL_FUNCTIONALITY];</code>
        */
-      public Builder setFunctionality(int value) {
+      public Builder setFunctionality(com.rtrk.atcommands.ATCommand.Functionality value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
         bitField0_ |= 0x00000080;
         functionality_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>optional int32 functionality = 7;</code>
+       * <code>optional .com.rtrk.protobuf.Functionality functionality = 7 [default = FULL_FUNCTIONALITY];</code>
        */
       public Builder clearFunctionality() {
         bitField0_ = (bitField0_ & ~0x00000080);
-        functionality_ = 0;
+        functionality_ = com.rtrk.atcommands.ATCommand.Functionality.FULL_FUNCTIONALITY;
         onChanged();
         return this;
       }
 
-      private int reset_ ;
+      private com.rtrk.atcommands.ATCommand.Reset reset_ = com.rtrk.atcommands.ATCommand.Reset.DO_NOT_RESET_ME;
       /**
-       * <code>optional int32 reset = 8;</code>
+       * <code>optional .com.rtrk.protobuf.Reset reset = 8 [default = DO_NOT_RESET_ME];</code>
        */
       public boolean hasReset() {
         return ((bitField0_ & 0x00000100) == 0x00000100);
       }
       /**
-       * <code>optional int32 reset = 8;</code>
+       * <code>optional .com.rtrk.protobuf.Reset reset = 8 [default = DO_NOT_RESET_ME];</code>
        */
-      public int getReset() {
+      public com.rtrk.atcommands.ATCommand.Reset getReset() {
         return reset_;
       }
       /**
-       * <code>optional int32 reset = 8;</code>
+       * <code>optional .com.rtrk.protobuf.Reset reset = 8 [default = DO_NOT_RESET_ME];</code>
        */
-      public Builder setReset(int value) {
+      public Builder setReset(com.rtrk.atcommands.ATCommand.Reset value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
         bitField0_ |= 0x00000100;
         reset_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>optional int32 reset = 8;</code>
+       * <code>optional .com.rtrk.protobuf.Reset reset = 8 [default = DO_NOT_RESET_ME];</code>
        */
       public Builder clearReset() {
         bitField0_ = (bitField0_ & ~0x00000100);
-        reset_ = 0;
+        reset_ = com.rtrk.atcommands.ATCommand.Reset.DO_NOT_RESET_ME;
         onChanged();
         return this;
       }
@@ -38385,6 +42655,216 @@ public final class ATCommand {
         return this;
       }
 
+      private com.rtrk.atcommands.ATCommand.ResultCode resultCode_ = com.rtrk.atcommands.ATCommand.ResultCode.TA_TRANSMINTS_RESULT_CODE;
+      /**
+       * <code>optional .com.rtrk.protobuf.ResultCode resultCode = 13 [default = TA_TRANSMINTS_RESULT_CODE];</code>
+       */
+      public boolean hasResultCode() {
+        return ((bitField0_ & 0x00001000) == 0x00001000);
+      }
+      /**
+       * <code>optional .com.rtrk.protobuf.ResultCode resultCode = 13 [default = TA_TRANSMINTS_RESULT_CODE];</code>
+       */
+      public com.rtrk.atcommands.ATCommand.ResultCode getResultCode() {
+        return resultCode_;
+      }
+      /**
+       * <code>optional .com.rtrk.protobuf.ResultCode resultCode = 13 [default = TA_TRANSMINTS_RESULT_CODE];</code>
+       */
+      public Builder setResultCode(com.rtrk.atcommands.ATCommand.ResultCode value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00001000;
+        resultCode_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .com.rtrk.protobuf.ResultCode resultCode = 13 [default = TA_TRANSMINTS_RESULT_CODE];</code>
+       */
+      public Builder clearResultCode() {
+        bitField0_ = (bitField0_ & ~0x00001000);
+        resultCode_ = com.rtrk.atcommands.ATCommand.ResultCode.TA_TRANSMINTS_RESULT_CODE;
+        onChanged();
+        return this;
+      }
+
+      private com.rtrk.atcommands.ATCommand.InformationResponse informationResponse_ = com.rtrk.atcommands.ATCommand.InformationResponse.LONG_RESULT_CODE_FORMAT;
+      /**
+       * <code>optional .com.rtrk.protobuf.InformationResponse informationResponse = 14 [default = LONG_RESULT_CODE_FORMAT];</code>
+       */
+      public boolean hasInformationResponse() {
+        return ((bitField0_ & 0x00002000) == 0x00002000);
+      }
+      /**
+       * <code>optional .com.rtrk.protobuf.InformationResponse informationResponse = 14 [default = LONG_RESULT_CODE_FORMAT];</code>
+       */
+      public com.rtrk.atcommands.ATCommand.InformationResponse getInformationResponse() {
+        return informationResponse_;
+      }
+      /**
+       * <code>optional .com.rtrk.protobuf.InformationResponse informationResponse = 14 [default = LONG_RESULT_CODE_FORMAT];</code>
+       */
+      public Builder setInformationResponse(com.rtrk.atcommands.ATCommand.InformationResponse value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00002000;
+        informationResponse_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .com.rtrk.protobuf.InformationResponse informationResponse = 14 [default = LONG_RESULT_CODE_FORMAT];</code>
+       */
+      public Builder clearInformationResponse() {
+        bitField0_ = (bitField0_ & ~0x00002000);
+        informationResponse_ = com.rtrk.atcommands.ATCommand.InformationResponse.LONG_RESULT_CODE_FORMAT;
+        onChanged();
+        return this;
+      }
+
+      private com.rtrk.atcommands.ATCommand.ConnectResultCode connectResultCode_ = com.rtrk.atcommands.ATCommand.ConnectResultCode.CONNECT_RESULT_CODE_ONLY_RETURNED;
+      /**
+       * <code>optional .com.rtrk.protobuf.ConnectResultCode connectResultCode = 15 [default = CONNECT_RESULT_CODE_ONLY_RETURNED];</code>
+       */
+      public boolean hasConnectResultCode() {
+        return ((bitField0_ & 0x00004000) == 0x00004000);
+      }
+      /**
+       * <code>optional .com.rtrk.protobuf.ConnectResultCode connectResultCode = 15 [default = CONNECT_RESULT_CODE_ONLY_RETURNED];</code>
+       */
+      public com.rtrk.atcommands.ATCommand.ConnectResultCode getConnectResultCode() {
+        return connectResultCode_;
+      }
+      /**
+       * <code>optional .com.rtrk.protobuf.ConnectResultCode connectResultCode = 15 [default = CONNECT_RESULT_CODE_ONLY_RETURNED];</code>
+       */
+      public Builder setConnectResultCode(com.rtrk.atcommands.ATCommand.ConnectResultCode value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00004000;
+        connectResultCode_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .com.rtrk.protobuf.ConnectResultCode connectResultCode = 15 [default = CONNECT_RESULT_CODE_ONLY_RETURNED];</code>
+       */
+      public Builder clearConnectResultCode() {
+        bitField0_ = (bitField0_ & ~0x00004000);
+        connectResultCode_ = com.rtrk.atcommands.ATCommand.ConnectResultCode.CONNECT_RESULT_CODE_ONLY_RETURNED;
+        onChanged();
+        return this;
+      }
+
+      private com.rtrk.atcommands.ATCommand.ResetToProfileNumber resetToProfileNumber_ = com.rtrk.atcommands.ATCommand.ResetToProfileNumber.RESET_TO_PROFILE_NUMBER;
+      /**
+       * <code>optional .com.rtrk.protobuf.ResetToProfileNumber resetToProfileNumber = 16 [default = RESET_TO_PROFILE_NUMBER];</code>
+       */
+      public boolean hasResetToProfileNumber() {
+        return ((bitField0_ & 0x00008000) == 0x00008000);
+      }
+      /**
+       * <code>optional .com.rtrk.protobuf.ResetToProfileNumber resetToProfileNumber = 16 [default = RESET_TO_PROFILE_NUMBER];</code>
+       */
+      public com.rtrk.atcommands.ATCommand.ResetToProfileNumber getResetToProfileNumber() {
+        return resetToProfileNumber_;
+      }
+      /**
+       * <code>optional .com.rtrk.protobuf.ResetToProfileNumber resetToProfileNumber = 16 [default = RESET_TO_PROFILE_NUMBER];</code>
+       */
+      public Builder setResetToProfileNumber(com.rtrk.atcommands.ATCommand.ResetToProfileNumber value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00008000;
+        resetToProfileNumber_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .com.rtrk.protobuf.ResetToProfileNumber resetToProfileNumber = 16 [default = RESET_TO_PROFILE_NUMBER];</code>
+       */
+      public Builder clearResetToProfileNumber() {
+        bitField0_ = (bitField0_ & ~0x00008000);
+        resetToProfileNumber_ = com.rtrk.atcommands.ATCommand.ResetToProfileNumber.RESET_TO_PROFILE_NUMBER;
+        onChanged();
+        return this;
+      }
+
+      private com.rtrk.atcommands.ATCommand.PowerOffMode powerOffMode_ = com.rtrk.atcommands.ATCommand.PowerOffMode.URGENT_POWER_OFF;
+      /**
+       * <code>optional .com.rtrk.protobuf.PowerOffMode powerOffMode = 17;</code>
+       */
+      public boolean hasPowerOffMode() {
+        return ((bitField0_ & 0x00010000) == 0x00010000);
+      }
+      /**
+       * <code>optional .com.rtrk.protobuf.PowerOffMode powerOffMode = 17;</code>
+       */
+      public com.rtrk.atcommands.ATCommand.PowerOffMode getPowerOffMode() {
+        return powerOffMode_;
+      }
+      /**
+       * <code>optional .com.rtrk.protobuf.PowerOffMode powerOffMode = 17;</code>
+       */
+      public Builder setPowerOffMode(com.rtrk.atcommands.ATCommand.PowerOffMode value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00010000;
+        powerOffMode_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .com.rtrk.protobuf.PowerOffMode powerOffMode = 17;</code>
+       */
+      public Builder clearPowerOffMode() {
+        bitField0_ = (bitField0_ & ~0x00010000);
+        powerOffMode_ = com.rtrk.atcommands.ATCommand.PowerOffMode.URGENT_POWER_OFF;
+        onChanged();
+        return this;
+      }
+
+      private com.rtrk.atcommands.ATCommand.DisableResultCode disableResultCode_ = com.rtrk.atcommands.ATCommand.DisableResultCode.ENABLE_RESULT_CODE_AND_USE_NUMERIC_VALUES;
+      /**
+       * <code>optional .com.rtrk.protobuf.DisableResultCode disableResultCode = 18 [default = ENABLE_RESULT_CODE_AND_USE_NUMERIC_VALUES];</code>
+       */
+      public boolean hasDisableResultCode() {
+        return ((bitField0_ & 0x00020000) == 0x00020000);
+      }
+      /**
+       * <code>optional .com.rtrk.protobuf.DisableResultCode disableResultCode = 18 [default = ENABLE_RESULT_CODE_AND_USE_NUMERIC_VALUES];</code>
+       */
+      public com.rtrk.atcommands.ATCommand.DisableResultCode getDisableResultCode() {
+        return disableResultCode_;
+      }
+      /**
+       * <code>optional .com.rtrk.protobuf.DisableResultCode disableResultCode = 18 [default = ENABLE_RESULT_CODE_AND_USE_NUMERIC_VALUES];</code>
+       */
+      public Builder setDisableResultCode(com.rtrk.atcommands.ATCommand.DisableResultCode value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00020000;
+        disableResultCode_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .com.rtrk.protobuf.DisableResultCode disableResultCode = 18 [default = ENABLE_RESULT_CODE_AND_USE_NUMERIC_VALUES];</code>
+       */
+      public Builder clearDisableResultCode() {
+        bitField0_ = (bitField0_ & ~0x00020000);
+        disableResultCode_ = com.rtrk.atcommands.ATCommand.DisableResultCode.ENABLE_RESULT_CODE_AND_USE_NUMERIC_VALUES;
+        onChanged();
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:com.rtrk.protobuf.GeneralCommand)
     }
 
@@ -38446,58 +42926,58 @@ public final class ATCommand {
     boolean getExecution();
 
     /**
-     * <code>optional int32 value = 6;</code>
+     * <code>optional .com.rtrk.protobuf.DCDLineStatus dcdLineStatus = 6;</code>
      */
-    boolean hasValue();
+    boolean hasDcdLineStatus();
     /**
-     * <code>optional int32 value = 6;</code>
+     * <code>optional .com.rtrk.protobuf.DCDLineStatus dcdLineStatus = 6;</code>
      */
-    int getValue();
+    com.rtrk.atcommands.ATCommand.DCDLineStatus getDcdLineStatus();
 
     /**
-     * <code>optional int32 format = 7;</code>
+     * <code>optional .com.rtrk.protobuf.FramingFormat framingFormat = 7;</code>
      */
-    boolean hasFormat();
+    boolean hasFramingFormat();
     /**
-     * <code>optional int32 format = 7;</code>
+     * <code>optional .com.rtrk.protobuf.FramingFormat framingFormat = 7;</code>
      */
-    int getFormat();
+    com.rtrk.atcommands.ATCommand.FramingFormat getFramingFormat();
 
     /**
-     * <code>optional int32 partity = 8;</code>
+     * <code>optional .com.rtrk.protobuf.Parity parity = 8 [default = SPACE];</code>
      */
-    boolean hasPartity();
+    boolean hasParity();
     /**
-     * <code>optional int32 partity = 8;</code>
+     * <code>optional .com.rtrk.protobuf.Parity parity = 8 [default = SPACE];</code>
      */
-    int getPartity();
+    com.rtrk.atcommands.ATCommand.Parity getParity();
 
     /**
-     * <code>optional int32 DCEByDTE = 9;</code>
+     * <code>optional .com.rtrk.protobuf.DCEByDTE dceByDte = 9;</code>
      */
-    boolean hasDCEByDTE();
+    boolean hasDceByDte();
     /**
-     * <code>optional int32 DCEByDTE = 9;</code>
+     * <code>optional .com.rtrk.protobuf.DCEByDTE dceByDte = 9;</code>
      */
-    int getDCEByDTE();
+    com.rtrk.atcommands.ATCommand.DCEByDTE getDceByDte();
 
     /**
-     * <code>optional int32 DTEByDCE = 10;</code>
+     * <code>optional .com.rtrk.protobuf.DTEByDCE dteByDce = 10;</code>
      */
-    boolean hasDTEByDCE();
+    boolean hasDteByDce();
     /**
-     * <code>optional int32 DTEByDCE = 10;</code>
+     * <code>optional .com.rtrk.protobuf.DTEByDCE dteByDce = 10;</code>
      */
-    int getDTEByDCE();
+    com.rtrk.atcommands.ATCommand.DTEByDCE getDteByDce();
 
     /**
-     * <code>optional int32 rate = 11;</code>
+     * <code>optional .com.rtrk.protobuf.Rate rate = 11;</code>
      */
     boolean hasRate();
     /**
-     * <code>optional int32 rate = 11;</code>
+     * <code>optional .com.rtrk.protobuf.Rate rate = 11;</code>
      */
-    int getRate();
+    com.rtrk.atcommands.ATCommand.Rate getRate();
 
     /**
      * <code>optional bool enableDualUART = 12;</code>
@@ -38509,22 +42989,13 @@ public final class ATCommand {
     boolean getEnableDualUART();
 
     /**
-     * <code>optional int32 subset = 13;</code>
+     * <code>optional .com.rtrk.protobuf.TransmissionRate transmissionRate = 14;</code>
      */
-    boolean hasSubset();
+    boolean hasTransmissionRate();
     /**
-     * <code>optional int32 subset = 13;</code>
+     * <code>optional .com.rtrk.protobuf.TransmissionRate transmissionRate = 14;</code>
      */
-    int getSubset();
-
-    /**
-     * <code>optional int32 portSpeed = 14;</code>
-     */
-    boolean hasPortSpeed();
-    /**
-     * <code>optional int32 portSpeed = 14;</code>
-     */
-    int getPortSpeed();
+    com.rtrk.atcommands.ATCommand.TransmissionRate getTransmissionRate();
 
     /**
      * <code>optional int32 maximumFrameSize = 15;</code>
@@ -38629,40 +43100,31 @@ public final class ATCommand {
     int getWindowsSize();
 
     /**
-     * <code>optional int32 baudRate = 21;</code>
-     */
-    boolean hasBaudRate();
-    /**
-     * <code>optional int32 baudRate = 21;</code>
-     */
-    int getBaudRate();
-
-    /**
-     * <code>optional int32 dataBits = 22;</code>
+     * <code>optional .com.rtrk.protobuf.DataBits dataBits = 22 [default = DATA_BITS_8];</code>
      */
     boolean hasDataBits();
     /**
-     * <code>optional int32 dataBits = 22;</code>
+     * <code>optional .com.rtrk.protobuf.DataBits dataBits = 22 [default = DATA_BITS_8];</code>
      */
-    int getDataBits();
+    com.rtrk.atcommands.ATCommand.DataBits getDataBits();
 
     /**
-     * <code>optional int32 stopBits = 23;</code>
+     * <code>optional .com.rtrk.protobuf.StopBits stopBits = 23 [default = STOP_BIT_1];</code>
      */
     boolean hasStopBits();
     /**
-     * <code>optional int32 stopBits = 23;</code>
+     * <code>optional .com.rtrk.protobuf.StopBits stopBits = 23 [default = STOP_BIT_1];</code>
      */
-    int getStopBits();
+    com.rtrk.atcommands.ATCommand.StopBits getStopBits();
 
     /**
-     * <code>optional int32 mode = 24;</code>
+     * <code>optional .com.rtrk.protobuf.MultiplexerTransparencyMechanism mtm = 24;</code>
      */
-    boolean hasMode();
+    boolean hasMtm();
     /**
-     * <code>optional int32 mode = 24;</code>
+     * <code>optional .com.rtrk.protobuf.MultiplexerTransparencyMechanism mtm = 24;</code>
      */
-    int getMode();
+    com.rtrk.atcommands.ATCommand.MultiplexerTransparencyMechanism getMtm();
 
     /**
      * <code>optional bool isResponse = 25;</code>
@@ -38686,6 +43148,42 @@ public final class ATCommand {
      */
     com.google.protobuf.ByteString
         getDescriptionBytes();
+
+    /**
+     * <code>optional bool enableReportingLocalPortRate = 27;</code>
+     */
+    boolean hasEnableReportingLocalPortRate();
+    /**
+     * <code>optional bool enableReportingLocalPortRate = 27;</code>
+     */
+    boolean getEnableReportingLocalPortRate();
+
+    /**
+     * <code>optional .com.rtrk.protobuf.MultiplexerControlChannel mcc = 28;</code>
+     */
+    boolean hasMcc();
+    /**
+     * <code>optional .com.rtrk.protobuf.MultiplexerControlChannel mcc = 28;</code>
+     */
+    com.rtrk.atcommands.ATCommand.MultiplexerControlChannel getMcc();
+
+    /**
+     * <code>optional .com.rtrk.protobuf.DualUARTParity dualUARTParity = 13 [default = DUAL_UART_PARITY_NONE];</code>
+     */
+    boolean hasDualUARTParity();
+    /**
+     * <code>optional .com.rtrk.protobuf.DualUARTParity dualUARTParity = 13 [default = DUAL_UART_PARITY_NONE];</code>
+     */
+    com.rtrk.atcommands.ATCommand.DualUARTParity getDualUARTParity();
+
+    /**
+     * <code>optional .com.rtrk.protobuf.DTRStatus dtrStatus = 29 [default = TA_IGNORES_STATUS_ON_DTR];</code>
+     */
+    boolean hasDtrStatus();
+    /**
+     * <code>optional .com.rtrk.protobuf.DTRStatus dtrStatus = 29 [default = TA_IGNORES_STATUS_ON_DTR];</code>
+     */
+    com.rtrk.atcommands.ATCommand.DTRStatus getDtrStatus();
   }
   /**
    * Protobuf type {@code com.rtrk.protobuf.SerialInterfaceControlCommand}
@@ -38771,33 +43269,69 @@ public final class ATCommand {
               break;
             }
             case 48: {
-              bitField0_ |= 0x00000020;
-              value_ = input.readInt32();
+              int rawValue = input.readEnum();
+              com.rtrk.atcommands.ATCommand.DCDLineStatus value = com.rtrk.atcommands.ATCommand.DCDLineStatus.valueOf(rawValue);
+              if (value == null) {
+                unknownFields.mergeVarintField(6, rawValue);
+              } else {
+                bitField0_ |= 0x00000020;
+                dcdLineStatus_ = value;
+              }
               break;
             }
             case 56: {
-              bitField0_ |= 0x00000040;
-              format_ = input.readInt32();
+              int rawValue = input.readEnum();
+              com.rtrk.atcommands.ATCommand.FramingFormat value = com.rtrk.atcommands.ATCommand.FramingFormat.valueOf(rawValue);
+              if (value == null) {
+                unknownFields.mergeVarintField(7, rawValue);
+              } else {
+                bitField0_ |= 0x00000040;
+                framingFormat_ = value;
+              }
               break;
             }
             case 64: {
-              bitField0_ |= 0x00000080;
-              partity_ = input.readInt32();
+              int rawValue = input.readEnum();
+              com.rtrk.atcommands.ATCommand.Parity value = com.rtrk.atcommands.ATCommand.Parity.valueOf(rawValue);
+              if (value == null) {
+                unknownFields.mergeVarintField(8, rawValue);
+              } else {
+                bitField0_ |= 0x00000080;
+                parity_ = value;
+              }
               break;
             }
             case 72: {
-              bitField0_ |= 0x00000100;
-              dCEByDTE_ = input.readInt32();
+              int rawValue = input.readEnum();
+              com.rtrk.atcommands.ATCommand.DCEByDTE value = com.rtrk.atcommands.ATCommand.DCEByDTE.valueOf(rawValue);
+              if (value == null) {
+                unknownFields.mergeVarintField(9, rawValue);
+              } else {
+                bitField0_ |= 0x00000100;
+                dceByDte_ = value;
+              }
               break;
             }
             case 80: {
-              bitField0_ |= 0x00000200;
-              dTEByDCE_ = input.readInt32();
+              int rawValue = input.readEnum();
+              com.rtrk.atcommands.ATCommand.DTEByDCE value = com.rtrk.atcommands.ATCommand.DTEByDCE.valueOf(rawValue);
+              if (value == null) {
+                unknownFields.mergeVarintField(10, rawValue);
+              } else {
+                bitField0_ |= 0x00000200;
+                dteByDce_ = value;
+              }
               break;
             }
             case 88: {
-              bitField0_ |= 0x00000400;
-              rate_ = input.readInt32();
+              int rawValue = input.readEnum();
+              com.rtrk.atcommands.ATCommand.Rate value = com.rtrk.atcommands.ATCommand.Rate.valueOf(rawValue);
+              if (value == null) {
+                unknownFields.mergeVarintField(11, rawValue);
+              } else {
+                bitField0_ |= 0x00000400;
+                rate_ = value;
+              }
               break;
             }
             case 96: {
@@ -38806,74 +43340,126 @@ public final class ATCommand {
               break;
             }
             case 104: {
-              bitField0_ |= 0x00001000;
-              subset_ = input.readInt32();
+              int rawValue = input.readEnum();
+              com.rtrk.atcommands.ATCommand.DualUARTParity value = com.rtrk.atcommands.ATCommand.DualUARTParity.valueOf(rawValue);
+              if (value == null) {
+                unknownFields.mergeVarintField(13, rawValue);
+              } else {
+                bitField0_ |= 0x04000000;
+                dualUARTParity_ = value;
+              }
               break;
             }
             case 112: {
-              bitField0_ |= 0x00002000;
-              portSpeed_ = input.readInt32();
+              int rawValue = input.readEnum();
+              com.rtrk.atcommands.ATCommand.TransmissionRate value = com.rtrk.atcommands.ATCommand.TransmissionRate.valueOf(rawValue);
+              if (value == null) {
+                unknownFields.mergeVarintField(14, rawValue);
+              } else {
+                bitField0_ |= 0x00001000;
+                transmissionRate_ = value;
+              }
               break;
             }
             case 120: {
-              bitField0_ |= 0x00004000;
+              bitField0_ |= 0x00002000;
               maximumFrameSize_ = input.readInt32();
               break;
             }
             case 128: {
-              bitField0_ |= 0x00008000;
+              bitField0_ |= 0x00004000;
               acknowledmentTimer_ = input.readInt32();
               break;
             }
             case 136: {
-              bitField0_ |= 0x00010000;
+              bitField0_ |= 0x00008000;
               maximumNumberOfRetransmissions_ = input.readInt32();
               break;
             }
             case 144: {
-              bitField0_ |= 0x00020000;
+              bitField0_ |= 0x00010000;
               responseTimer_ = input.readInt32();
               break;
             }
             case 152: {
-              bitField0_ |= 0x00040000;
+              bitField0_ |= 0x00020000;
               wakeUpResponseTimer_ = input.readInt32();
               break;
             }
             case 160: {
-              bitField0_ |= 0x00080000;
+              bitField0_ |= 0x00040000;
               windowsSize_ = input.readInt32();
               break;
             }
-            case 168: {
-              bitField0_ |= 0x00100000;
-              baudRate_ = input.readInt32();
-              break;
-            }
             case 176: {
-              bitField0_ |= 0x00200000;
-              dataBits_ = input.readInt32();
+              int rawValue = input.readEnum();
+              com.rtrk.atcommands.ATCommand.DataBits value = com.rtrk.atcommands.ATCommand.DataBits.valueOf(rawValue);
+              if (value == null) {
+                unknownFields.mergeVarintField(22, rawValue);
+              } else {
+                bitField0_ |= 0x00080000;
+                dataBits_ = value;
+              }
               break;
             }
             case 184: {
-              bitField0_ |= 0x00400000;
-              stopBits_ = input.readInt32();
+              int rawValue = input.readEnum();
+              com.rtrk.atcommands.ATCommand.StopBits value = com.rtrk.atcommands.ATCommand.StopBits.valueOf(rawValue);
+              if (value == null) {
+                unknownFields.mergeVarintField(23, rawValue);
+              } else {
+                bitField0_ |= 0x00100000;
+                stopBits_ = value;
+              }
               break;
             }
             case 192: {
-              bitField0_ |= 0x00800000;
-              mode_ = input.readInt32();
+              int rawValue = input.readEnum();
+              com.rtrk.atcommands.ATCommand.MultiplexerTransparencyMechanism value = com.rtrk.atcommands.ATCommand.MultiplexerTransparencyMechanism.valueOf(rawValue);
+              if (value == null) {
+                unknownFields.mergeVarintField(24, rawValue);
+              } else {
+                bitField0_ |= 0x00200000;
+                mtm_ = value;
+              }
               break;
             }
             case 200: {
-              bitField0_ |= 0x01000000;
+              bitField0_ |= 0x00400000;
               isResponse_ = input.readBool();
               break;
             }
             case 210: {
               com.google.protobuf.ByteString bs = input.readBytes();
-              bitField0_ |= 0x02000000;
+              bitField0_ |= 0x00800000;
               description_ = bs;
+              break;
+            }
+            case 216: {
+              bitField0_ |= 0x01000000;
+              enableReportingLocalPortRate_ = input.readBool();
+              break;
+            }
+            case 224: {
+              int rawValue = input.readEnum();
+              com.rtrk.atcommands.ATCommand.MultiplexerControlChannel value = com.rtrk.atcommands.ATCommand.MultiplexerControlChannel.valueOf(rawValue);
+              if (value == null) {
+                unknownFields.mergeVarintField(28, rawValue);
+              } else {
+                bitField0_ |= 0x02000000;
+                mcc_ = value;
+              }
+              break;
+            }
+            case 232: {
+              int rawValue = input.readEnum();
+              com.rtrk.atcommands.ATCommand.DTRStatus value = com.rtrk.atcommands.ATCommand.DTRStatus.valueOf(rawValue);
+              if (value == null) {
+                unknownFields.mergeVarintField(29, rawValue);
+              } else {
+                bitField0_ |= 0x08000000;
+                dtrStatus_ = value;
+              }
               break;
             }
           }
@@ -38991,93 +43577,93 @@ public final class ATCommand {
       return execution_;
     }
 
-    public static final int VALUE_FIELD_NUMBER = 6;
-    private int value_;
+    public static final int DCDLINESTATUS_FIELD_NUMBER = 6;
+    private com.rtrk.atcommands.ATCommand.DCDLineStatus dcdLineStatus_;
     /**
-     * <code>optional int32 value = 6;</code>
+     * <code>optional .com.rtrk.protobuf.DCDLineStatus dcdLineStatus = 6;</code>
      */
-    public boolean hasValue() {
+    public boolean hasDcdLineStatus() {
       return ((bitField0_ & 0x00000020) == 0x00000020);
     }
     /**
-     * <code>optional int32 value = 6;</code>
+     * <code>optional .com.rtrk.protobuf.DCDLineStatus dcdLineStatus = 6;</code>
      */
-    public int getValue() {
-      return value_;
+    public com.rtrk.atcommands.ATCommand.DCDLineStatus getDcdLineStatus() {
+      return dcdLineStatus_;
     }
 
-    public static final int FORMAT_FIELD_NUMBER = 7;
-    private int format_;
+    public static final int FRAMINGFORMAT_FIELD_NUMBER = 7;
+    private com.rtrk.atcommands.ATCommand.FramingFormat framingFormat_;
     /**
-     * <code>optional int32 format = 7;</code>
+     * <code>optional .com.rtrk.protobuf.FramingFormat framingFormat = 7;</code>
      */
-    public boolean hasFormat() {
+    public boolean hasFramingFormat() {
       return ((bitField0_ & 0x00000040) == 0x00000040);
     }
     /**
-     * <code>optional int32 format = 7;</code>
+     * <code>optional .com.rtrk.protobuf.FramingFormat framingFormat = 7;</code>
      */
-    public int getFormat() {
-      return format_;
+    public com.rtrk.atcommands.ATCommand.FramingFormat getFramingFormat() {
+      return framingFormat_;
     }
 
-    public static final int PARTITY_FIELD_NUMBER = 8;
-    private int partity_;
+    public static final int PARITY_FIELD_NUMBER = 8;
+    private com.rtrk.atcommands.ATCommand.Parity parity_;
     /**
-     * <code>optional int32 partity = 8;</code>
+     * <code>optional .com.rtrk.protobuf.Parity parity = 8 [default = SPACE];</code>
      */
-    public boolean hasPartity() {
+    public boolean hasParity() {
       return ((bitField0_ & 0x00000080) == 0x00000080);
     }
     /**
-     * <code>optional int32 partity = 8;</code>
+     * <code>optional .com.rtrk.protobuf.Parity parity = 8 [default = SPACE];</code>
      */
-    public int getPartity() {
-      return partity_;
+    public com.rtrk.atcommands.ATCommand.Parity getParity() {
+      return parity_;
     }
 
     public static final int DCEBYDTE_FIELD_NUMBER = 9;
-    private int dCEByDTE_;
+    private com.rtrk.atcommands.ATCommand.DCEByDTE dceByDte_;
     /**
-     * <code>optional int32 DCEByDTE = 9;</code>
+     * <code>optional .com.rtrk.protobuf.DCEByDTE dceByDte = 9;</code>
      */
-    public boolean hasDCEByDTE() {
+    public boolean hasDceByDte() {
       return ((bitField0_ & 0x00000100) == 0x00000100);
     }
     /**
-     * <code>optional int32 DCEByDTE = 9;</code>
+     * <code>optional .com.rtrk.protobuf.DCEByDTE dceByDte = 9;</code>
      */
-    public int getDCEByDTE() {
-      return dCEByDTE_;
+    public com.rtrk.atcommands.ATCommand.DCEByDTE getDceByDte() {
+      return dceByDte_;
     }
 
     public static final int DTEBYDCE_FIELD_NUMBER = 10;
-    private int dTEByDCE_;
+    private com.rtrk.atcommands.ATCommand.DTEByDCE dteByDce_;
     /**
-     * <code>optional int32 DTEByDCE = 10;</code>
+     * <code>optional .com.rtrk.protobuf.DTEByDCE dteByDce = 10;</code>
      */
-    public boolean hasDTEByDCE() {
+    public boolean hasDteByDce() {
       return ((bitField0_ & 0x00000200) == 0x00000200);
     }
     /**
-     * <code>optional int32 DTEByDCE = 10;</code>
+     * <code>optional .com.rtrk.protobuf.DTEByDCE dteByDce = 10;</code>
      */
-    public int getDTEByDCE() {
-      return dTEByDCE_;
+    public com.rtrk.atcommands.ATCommand.DTEByDCE getDteByDce() {
+      return dteByDce_;
     }
 
     public static final int RATE_FIELD_NUMBER = 11;
-    private int rate_;
+    private com.rtrk.atcommands.ATCommand.Rate rate_;
     /**
-     * <code>optional int32 rate = 11;</code>
+     * <code>optional .com.rtrk.protobuf.Rate rate = 11;</code>
      */
     public boolean hasRate() {
       return ((bitField0_ & 0x00000400) == 0x00000400);
     }
     /**
-     * <code>optional int32 rate = 11;</code>
+     * <code>optional .com.rtrk.protobuf.Rate rate = 11;</code>
      */
-    public int getRate() {
+    public com.rtrk.atcommands.ATCommand.Rate getRate() {
       return rate_;
     }
 
@@ -39096,34 +43682,19 @@ public final class ATCommand {
       return enableDualUART_;
     }
 
-    public static final int SUBSET_FIELD_NUMBER = 13;
-    private int subset_;
+    public static final int TRANSMISSIONRATE_FIELD_NUMBER = 14;
+    private com.rtrk.atcommands.ATCommand.TransmissionRate transmissionRate_;
     /**
-     * <code>optional int32 subset = 13;</code>
+     * <code>optional .com.rtrk.protobuf.TransmissionRate transmissionRate = 14;</code>
      */
-    public boolean hasSubset() {
+    public boolean hasTransmissionRate() {
       return ((bitField0_ & 0x00001000) == 0x00001000);
     }
     /**
-     * <code>optional int32 subset = 13;</code>
+     * <code>optional .com.rtrk.protobuf.TransmissionRate transmissionRate = 14;</code>
      */
-    public int getSubset() {
-      return subset_;
-    }
-
-    public static final int PORTSPEED_FIELD_NUMBER = 14;
-    private int portSpeed_;
-    /**
-     * <code>optional int32 portSpeed = 14;</code>
-     */
-    public boolean hasPortSpeed() {
-      return ((bitField0_ & 0x00002000) == 0x00002000);
-    }
-    /**
-     * <code>optional int32 portSpeed = 14;</code>
-     */
-    public int getPortSpeed() {
-      return portSpeed_;
+    public com.rtrk.atcommands.ATCommand.TransmissionRate getTransmissionRate() {
+      return transmissionRate_;
     }
 
     public static final int MAXIMUMFRAMESIZE_FIELD_NUMBER = 15;
@@ -39136,7 +43707,7 @@ public final class ATCommand {
      * </pre>
      */
     public boolean hasMaximumFrameSize() {
-      return ((bitField0_ & 0x00004000) == 0x00004000);
+      return ((bitField0_ & 0x00002000) == 0x00002000);
     }
     /**
      * <code>optional int32 maximumFrameSize = 15;</code>
@@ -39159,7 +43730,7 @@ public final class ATCommand {
      * </pre>
      */
     public boolean hasAcknowledmentTimer() {
-      return ((bitField0_ & 0x00008000) == 0x00008000);
+      return ((bitField0_ & 0x00004000) == 0x00004000);
     }
     /**
      * <code>optional int32 acknowledmentTimer = 16;</code>
@@ -39182,7 +43753,7 @@ public final class ATCommand {
      * </pre>
      */
     public boolean hasMaximumNumberOfRetransmissions() {
-      return ((bitField0_ & 0x00010000) == 0x00010000);
+      return ((bitField0_ & 0x00008000) == 0x00008000);
     }
     /**
      * <code>optional int32 maximumNumberOfRetransmissions = 17;</code>
@@ -39205,7 +43776,7 @@ public final class ATCommand {
      * </pre>
      */
     public boolean hasResponseTimer() {
-      return ((bitField0_ & 0x00020000) == 0x00020000);
+      return ((bitField0_ & 0x00010000) == 0x00010000);
     }
     /**
      * <code>optional int32 responseTimer = 18;</code>
@@ -39228,7 +43799,7 @@ public final class ATCommand {
      * </pre>
      */
     public boolean hasWakeUpResponseTimer() {
-      return ((bitField0_ & 0x00040000) == 0x00040000);
+      return ((bitField0_ & 0x00020000) == 0x00020000);
     }
     /**
      * <code>optional int32 wakeUpResponseTimer = 19;</code>
@@ -39251,7 +43822,7 @@ public final class ATCommand {
      * </pre>
      */
     public boolean hasWindowsSize() {
-      return ((bitField0_ & 0x00080000) == 0x00080000);
+      return ((bitField0_ & 0x00040000) == 0x00040000);
     }
     /**
      * <code>optional int32 windowsSize = 20;</code>
@@ -39264,64 +43835,49 @@ public final class ATCommand {
       return windowsSize_;
     }
 
-    public static final int BAUDRATE_FIELD_NUMBER = 21;
-    private int baudRate_;
-    /**
-     * <code>optional int32 baudRate = 21;</code>
-     */
-    public boolean hasBaudRate() {
-      return ((bitField0_ & 0x00100000) == 0x00100000);
-    }
-    /**
-     * <code>optional int32 baudRate = 21;</code>
-     */
-    public int getBaudRate() {
-      return baudRate_;
-    }
-
     public static final int DATABITS_FIELD_NUMBER = 22;
-    private int dataBits_;
+    private com.rtrk.atcommands.ATCommand.DataBits dataBits_;
     /**
-     * <code>optional int32 dataBits = 22;</code>
+     * <code>optional .com.rtrk.protobuf.DataBits dataBits = 22 [default = DATA_BITS_8];</code>
      */
     public boolean hasDataBits() {
-      return ((bitField0_ & 0x00200000) == 0x00200000);
+      return ((bitField0_ & 0x00080000) == 0x00080000);
     }
     /**
-     * <code>optional int32 dataBits = 22;</code>
+     * <code>optional .com.rtrk.protobuf.DataBits dataBits = 22 [default = DATA_BITS_8];</code>
      */
-    public int getDataBits() {
+    public com.rtrk.atcommands.ATCommand.DataBits getDataBits() {
       return dataBits_;
     }
 
     public static final int STOPBITS_FIELD_NUMBER = 23;
-    private int stopBits_;
+    private com.rtrk.atcommands.ATCommand.StopBits stopBits_;
     /**
-     * <code>optional int32 stopBits = 23;</code>
+     * <code>optional .com.rtrk.protobuf.StopBits stopBits = 23 [default = STOP_BIT_1];</code>
      */
     public boolean hasStopBits() {
-      return ((bitField0_ & 0x00400000) == 0x00400000);
+      return ((bitField0_ & 0x00100000) == 0x00100000);
     }
     /**
-     * <code>optional int32 stopBits = 23;</code>
+     * <code>optional .com.rtrk.protobuf.StopBits stopBits = 23 [default = STOP_BIT_1];</code>
      */
-    public int getStopBits() {
+    public com.rtrk.atcommands.ATCommand.StopBits getStopBits() {
       return stopBits_;
     }
 
-    public static final int MODE_FIELD_NUMBER = 24;
-    private int mode_;
+    public static final int MTM_FIELD_NUMBER = 24;
+    private com.rtrk.atcommands.ATCommand.MultiplexerTransparencyMechanism mtm_;
     /**
-     * <code>optional int32 mode = 24;</code>
+     * <code>optional .com.rtrk.protobuf.MultiplexerTransparencyMechanism mtm = 24;</code>
      */
-    public boolean hasMode() {
-      return ((bitField0_ & 0x00800000) == 0x00800000);
+    public boolean hasMtm() {
+      return ((bitField0_ & 0x00200000) == 0x00200000);
     }
     /**
-     * <code>optional int32 mode = 24;</code>
+     * <code>optional .com.rtrk.protobuf.MultiplexerTransparencyMechanism mtm = 24;</code>
      */
-    public int getMode() {
-      return mode_;
+    public com.rtrk.atcommands.ATCommand.MultiplexerTransparencyMechanism getMtm() {
+      return mtm_;
     }
 
     public static final int ISRESPONSE_FIELD_NUMBER = 25;
@@ -39330,7 +43886,7 @@ public final class ATCommand {
      * <code>optional bool isResponse = 25;</code>
      */
     public boolean hasIsResponse() {
-      return ((bitField0_ & 0x01000000) == 0x01000000);
+      return ((bitField0_ & 0x00400000) == 0x00400000);
     }
     /**
      * <code>optional bool isResponse = 25;</code>
@@ -39345,7 +43901,7 @@ public final class ATCommand {
      * <code>optional string description = 26;</code>
      */
     public boolean hasDescription() {
-      return ((bitField0_ & 0x02000000) == 0x02000000);
+      return ((bitField0_ & 0x00800000) == 0x00800000);
     }
     /**
      * <code>optional string description = 26;</code>
@@ -39381,33 +43937,95 @@ public final class ATCommand {
       }
     }
 
+    public static final int ENABLEREPORTINGLOCALPORTRATE_FIELD_NUMBER = 27;
+    private boolean enableReportingLocalPortRate_;
+    /**
+     * <code>optional bool enableReportingLocalPortRate = 27;</code>
+     */
+    public boolean hasEnableReportingLocalPortRate() {
+      return ((bitField0_ & 0x01000000) == 0x01000000);
+    }
+    /**
+     * <code>optional bool enableReportingLocalPortRate = 27;</code>
+     */
+    public boolean getEnableReportingLocalPortRate() {
+      return enableReportingLocalPortRate_;
+    }
+
+    public static final int MCC_FIELD_NUMBER = 28;
+    private com.rtrk.atcommands.ATCommand.MultiplexerControlChannel mcc_;
+    /**
+     * <code>optional .com.rtrk.protobuf.MultiplexerControlChannel mcc = 28;</code>
+     */
+    public boolean hasMcc() {
+      return ((bitField0_ & 0x02000000) == 0x02000000);
+    }
+    /**
+     * <code>optional .com.rtrk.protobuf.MultiplexerControlChannel mcc = 28;</code>
+     */
+    public com.rtrk.atcommands.ATCommand.MultiplexerControlChannel getMcc() {
+      return mcc_;
+    }
+
+    public static final int DUALUARTPARITY_FIELD_NUMBER = 13;
+    private com.rtrk.atcommands.ATCommand.DualUARTParity dualUARTParity_;
+    /**
+     * <code>optional .com.rtrk.protobuf.DualUARTParity dualUARTParity = 13 [default = DUAL_UART_PARITY_NONE];</code>
+     */
+    public boolean hasDualUARTParity() {
+      return ((bitField0_ & 0x04000000) == 0x04000000);
+    }
+    /**
+     * <code>optional .com.rtrk.protobuf.DualUARTParity dualUARTParity = 13 [default = DUAL_UART_PARITY_NONE];</code>
+     */
+    public com.rtrk.atcommands.ATCommand.DualUARTParity getDualUARTParity() {
+      return dualUARTParity_;
+    }
+
+    public static final int DTRSTATUS_FIELD_NUMBER = 29;
+    private com.rtrk.atcommands.ATCommand.DTRStatus dtrStatus_;
+    /**
+     * <code>optional .com.rtrk.protobuf.DTRStatus dtrStatus = 29 [default = TA_IGNORES_STATUS_ON_DTR];</code>
+     */
+    public boolean hasDtrStatus() {
+      return ((bitField0_ & 0x08000000) == 0x08000000);
+    }
+    /**
+     * <code>optional .com.rtrk.protobuf.DTRStatus dtrStatus = 29 [default = TA_IGNORES_STATUS_ON_DTR];</code>
+     */
+    public com.rtrk.atcommands.ATCommand.DTRStatus getDtrStatus() {
+      return dtrStatus_;
+    }
+
     private void initFields() {
       messageType_ = com.rtrk.atcommands.ATCommand.SerialInterfaceControlMessageType.SET_DCD_FUNCTION_MODE;
       test_ = false;
       read_ = false;
       write_ = false;
       execution_ = false;
-      value_ = 0;
-      format_ = 0;
-      partity_ = 0;
-      dCEByDTE_ = 0;
-      dTEByDCE_ = 0;
-      rate_ = 0;
+      dcdLineStatus_ = com.rtrk.atcommands.ATCommand.DCDLineStatus.DCD_LINE_IS_ALWAYS_ON;
+      framingFormat_ = com.rtrk.atcommands.ATCommand.FramingFormat.UNKNOW_FRAMING_FORMAT;
+      parity_ = com.rtrk.atcommands.ATCommand.Parity.SPACE;
+      dceByDte_ = com.rtrk.atcommands.ATCommand.DCEByDTE.DCE_BY_DTE_NONE;
+      dteByDce_ = com.rtrk.atcommands.ATCommand.DTEByDCE.DTE_BY_DCE_NONE;
+      rate_ = com.rtrk.atcommands.ATCommand.Rate.RATE_0;
       enableDualUART_ = false;
-      subset_ = 0;
-      portSpeed_ = 0;
+      transmissionRate_ = com.rtrk.atcommands.ATCommand.TransmissionRate.UNKNOW_TRANSMISSION_RATE;
       maximumFrameSize_ = 0;
       acknowledmentTimer_ = 0;
       maximumNumberOfRetransmissions_ = 0;
       responseTimer_ = 0;
       wakeUpResponseTimer_ = 0;
       windowsSize_ = 0;
-      baudRate_ = 0;
-      dataBits_ = 0;
-      stopBits_ = 0;
-      mode_ = 0;
+      dataBits_ = com.rtrk.atcommands.ATCommand.DataBits.DATA_BITS_8;
+      stopBits_ = com.rtrk.atcommands.ATCommand.StopBits.STOP_BIT_1;
+      mtm_ = com.rtrk.atcommands.ATCommand.MultiplexerTransparencyMechanism.BASIC_OPTION;
       isResponse_ = false;
       description_ = "";
+      enableReportingLocalPortRate_ = false;
+      mcc_ = com.rtrk.atcommands.ATCommand.MultiplexerControlChannel.UIH_FRAMES_USED_ONLY;
+      dualUARTParity_ = com.rtrk.atcommands.ATCommand.DualUARTParity.DUAL_UART_PARITY_NONE;
+      dtrStatus_ = com.rtrk.atcommands.ATCommand.DTRStatus.TA_IGNORES_STATUS_ON_DTR;
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -39442,67 +44060,73 @@ public final class ATCommand {
         output.writeBool(5, execution_);
       }
       if (((bitField0_ & 0x00000020) == 0x00000020)) {
-        output.writeInt32(6, value_);
+        output.writeEnum(6, dcdLineStatus_.getNumber());
       }
       if (((bitField0_ & 0x00000040) == 0x00000040)) {
-        output.writeInt32(7, format_);
+        output.writeEnum(7, framingFormat_.getNumber());
       }
       if (((bitField0_ & 0x00000080) == 0x00000080)) {
-        output.writeInt32(8, partity_);
+        output.writeEnum(8, parity_.getNumber());
       }
       if (((bitField0_ & 0x00000100) == 0x00000100)) {
-        output.writeInt32(9, dCEByDTE_);
+        output.writeEnum(9, dceByDte_.getNumber());
       }
       if (((bitField0_ & 0x00000200) == 0x00000200)) {
-        output.writeInt32(10, dTEByDCE_);
+        output.writeEnum(10, dteByDce_.getNumber());
       }
       if (((bitField0_ & 0x00000400) == 0x00000400)) {
-        output.writeInt32(11, rate_);
+        output.writeEnum(11, rate_.getNumber());
       }
       if (((bitField0_ & 0x00000800) == 0x00000800)) {
         output.writeBool(12, enableDualUART_);
       }
+      if (((bitField0_ & 0x04000000) == 0x04000000)) {
+        output.writeEnum(13, dualUARTParity_.getNumber());
+      }
       if (((bitField0_ & 0x00001000) == 0x00001000)) {
-        output.writeInt32(13, subset_);
+        output.writeEnum(14, transmissionRate_.getNumber());
       }
       if (((bitField0_ & 0x00002000) == 0x00002000)) {
-        output.writeInt32(14, portSpeed_);
-      }
-      if (((bitField0_ & 0x00004000) == 0x00004000)) {
         output.writeInt32(15, maximumFrameSize_);
       }
-      if (((bitField0_ & 0x00008000) == 0x00008000)) {
+      if (((bitField0_ & 0x00004000) == 0x00004000)) {
         output.writeInt32(16, acknowledmentTimer_);
       }
-      if (((bitField0_ & 0x00010000) == 0x00010000)) {
+      if (((bitField0_ & 0x00008000) == 0x00008000)) {
         output.writeInt32(17, maximumNumberOfRetransmissions_);
       }
-      if (((bitField0_ & 0x00020000) == 0x00020000)) {
+      if (((bitField0_ & 0x00010000) == 0x00010000)) {
         output.writeInt32(18, responseTimer_);
       }
-      if (((bitField0_ & 0x00040000) == 0x00040000)) {
+      if (((bitField0_ & 0x00020000) == 0x00020000)) {
         output.writeInt32(19, wakeUpResponseTimer_);
       }
-      if (((bitField0_ & 0x00080000) == 0x00080000)) {
+      if (((bitField0_ & 0x00040000) == 0x00040000)) {
         output.writeInt32(20, windowsSize_);
       }
+      if (((bitField0_ & 0x00080000) == 0x00080000)) {
+        output.writeEnum(22, dataBits_.getNumber());
+      }
       if (((bitField0_ & 0x00100000) == 0x00100000)) {
-        output.writeInt32(21, baudRate_);
+        output.writeEnum(23, stopBits_.getNumber());
       }
       if (((bitField0_ & 0x00200000) == 0x00200000)) {
-        output.writeInt32(22, dataBits_);
+        output.writeEnum(24, mtm_.getNumber());
       }
       if (((bitField0_ & 0x00400000) == 0x00400000)) {
-        output.writeInt32(23, stopBits_);
-      }
-      if (((bitField0_ & 0x00800000) == 0x00800000)) {
-        output.writeInt32(24, mode_);
-      }
-      if (((bitField0_ & 0x01000000) == 0x01000000)) {
         output.writeBool(25, isResponse_);
       }
-      if (((bitField0_ & 0x02000000) == 0x02000000)) {
+      if (((bitField0_ & 0x00800000) == 0x00800000)) {
         output.writeBytes(26, getDescriptionBytes());
+      }
+      if (((bitField0_ & 0x01000000) == 0x01000000)) {
+        output.writeBool(27, enableReportingLocalPortRate_);
+      }
+      if (((bitField0_ & 0x02000000) == 0x02000000)) {
+        output.writeEnum(28, mcc_.getNumber());
+      }
+      if (((bitField0_ & 0x08000000) == 0x08000000)) {
+        output.writeEnum(29, dtrStatus_.getNumber());
       }
       getUnknownFields().writeTo(output);
     }
@@ -39535,87 +44159,95 @@ public final class ATCommand {
       }
       if (((bitField0_ & 0x00000020) == 0x00000020)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(6, value_);
+          .computeEnumSize(6, dcdLineStatus_.getNumber());
       }
       if (((bitField0_ & 0x00000040) == 0x00000040)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(7, format_);
+          .computeEnumSize(7, framingFormat_.getNumber());
       }
       if (((bitField0_ & 0x00000080) == 0x00000080)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(8, partity_);
+          .computeEnumSize(8, parity_.getNumber());
       }
       if (((bitField0_ & 0x00000100) == 0x00000100)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(9, dCEByDTE_);
+          .computeEnumSize(9, dceByDte_.getNumber());
       }
       if (((bitField0_ & 0x00000200) == 0x00000200)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(10, dTEByDCE_);
+          .computeEnumSize(10, dteByDce_.getNumber());
       }
       if (((bitField0_ & 0x00000400) == 0x00000400)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(11, rate_);
+          .computeEnumSize(11, rate_.getNumber());
       }
       if (((bitField0_ & 0x00000800) == 0x00000800)) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(12, enableDualUART_);
       }
+      if (((bitField0_ & 0x04000000) == 0x04000000)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(13, dualUARTParity_.getNumber());
+      }
       if (((bitField0_ & 0x00001000) == 0x00001000)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(13, subset_);
+          .computeEnumSize(14, transmissionRate_.getNumber());
       }
       if (((bitField0_ & 0x00002000) == 0x00002000)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(14, portSpeed_);
+          .computeInt32Size(15, maximumFrameSize_);
       }
       if (((bitField0_ & 0x00004000) == 0x00004000)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(15, maximumFrameSize_);
+          .computeInt32Size(16, acknowledmentTimer_);
       }
       if (((bitField0_ & 0x00008000) == 0x00008000)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(16, acknowledmentTimer_);
+          .computeInt32Size(17, maximumNumberOfRetransmissions_);
       }
       if (((bitField0_ & 0x00010000) == 0x00010000)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(17, maximumNumberOfRetransmissions_);
+          .computeInt32Size(18, responseTimer_);
       }
       if (((bitField0_ & 0x00020000) == 0x00020000)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(18, responseTimer_);
+          .computeInt32Size(19, wakeUpResponseTimer_);
       }
       if (((bitField0_ & 0x00040000) == 0x00040000)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(19, wakeUpResponseTimer_);
+          .computeInt32Size(20, windowsSize_);
       }
       if (((bitField0_ & 0x00080000) == 0x00080000)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(20, windowsSize_);
+          .computeEnumSize(22, dataBits_.getNumber());
       }
       if (((bitField0_ & 0x00100000) == 0x00100000)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(21, baudRate_);
+          .computeEnumSize(23, stopBits_.getNumber());
       }
       if (((bitField0_ & 0x00200000) == 0x00200000)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(22, dataBits_);
+          .computeEnumSize(24, mtm_.getNumber());
       }
       if (((bitField0_ & 0x00400000) == 0x00400000)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(23, stopBits_);
+          .computeBoolSize(25, isResponse_);
       }
       if (((bitField0_ & 0x00800000) == 0x00800000)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(24, mode_);
+          .computeBytesSize(26, getDescriptionBytes());
       }
       if (((bitField0_ & 0x01000000) == 0x01000000)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(25, isResponse_);
+          .computeBoolSize(27, enableReportingLocalPortRate_);
       }
       if (((bitField0_ & 0x02000000) == 0x02000000)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(26, getDescriptionBytes());
+          .computeEnumSize(28, mcc_.getNumber());
+      }
+      if (((bitField0_ & 0x08000000) == 0x08000000)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(29, dtrStatus_.getNumber());
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -39744,48 +44376,52 @@ public final class ATCommand {
         bitField0_ = (bitField0_ & ~0x00000008);
         execution_ = false;
         bitField0_ = (bitField0_ & ~0x00000010);
-        value_ = 0;
+        dcdLineStatus_ = com.rtrk.atcommands.ATCommand.DCDLineStatus.DCD_LINE_IS_ALWAYS_ON;
         bitField0_ = (bitField0_ & ~0x00000020);
-        format_ = 0;
+        framingFormat_ = com.rtrk.atcommands.ATCommand.FramingFormat.UNKNOW_FRAMING_FORMAT;
         bitField0_ = (bitField0_ & ~0x00000040);
-        partity_ = 0;
+        parity_ = com.rtrk.atcommands.ATCommand.Parity.SPACE;
         bitField0_ = (bitField0_ & ~0x00000080);
-        dCEByDTE_ = 0;
+        dceByDte_ = com.rtrk.atcommands.ATCommand.DCEByDTE.DCE_BY_DTE_NONE;
         bitField0_ = (bitField0_ & ~0x00000100);
-        dTEByDCE_ = 0;
+        dteByDce_ = com.rtrk.atcommands.ATCommand.DTEByDCE.DTE_BY_DCE_NONE;
         bitField0_ = (bitField0_ & ~0x00000200);
-        rate_ = 0;
+        rate_ = com.rtrk.atcommands.ATCommand.Rate.RATE_0;
         bitField0_ = (bitField0_ & ~0x00000400);
         enableDualUART_ = false;
         bitField0_ = (bitField0_ & ~0x00000800);
-        subset_ = 0;
+        transmissionRate_ = com.rtrk.atcommands.ATCommand.TransmissionRate.UNKNOW_TRANSMISSION_RATE;
         bitField0_ = (bitField0_ & ~0x00001000);
-        portSpeed_ = 0;
-        bitField0_ = (bitField0_ & ~0x00002000);
         maximumFrameSize_ = 0;
-        bitField0_ = (bitField0_ & ~0x00004000);
+        bitField0_ = (bitField0_ & ~0x00002000);
         acknowledmentTimer_ = 0;
-        bitField0_ = (bitField0_ & ~0x00008000);
+        bitField0_ = (bitField0_ & ~0x00004000);
         maximumNumberOfRetransmissions_ = 0;
-        bitField0_ = (bitField0_ & ~0x00010000);
+        bitField0_ = (bitField0_ & ~0x00008000);
         responseTimer_ = 0;
-        bitField0_ = (bitField0_ & ~0x00020000);
+        bitField0_ = (bitField0_ & ~0x00010000);
         wakeUpResponseTimer_ = 0;
-        bitField0_ = (bitField0_ & ~0x00040000);
+        bitField0_ = (bitField0_ & ~0x00020000);
         windowsSize_ = 0;
+        bitField0_ = (bitField0_ & ~0x00040000);
+        dataBits_ = com.rtrk.atcommands.ATCommand.DataBits.DATA_BITS_8;
         bitField0_ = (bitField0_ & ~0x00080000);
-        baudRate_ = 0;
+        stopBits_ = com.rtrk.atcommands.ATCommand.StopBits.STOP_BIT_1;
         bitField0_ = (bitField0_ & ~0x00100000);
-        dataBits_ = 0;
+        mtm_ = com.rtrk.atcommands.ATCommand.MultiplexerTransparencyMechanism.BASIC_OPTION;
         bitField0_ = (bitField0_ & ~0x00200000);
-        stopBits_ = 0;
-        bitField0_ = (bitField0_ & ~0x00400000);
-        mode_ = 0;
-        bitField0_ = (bitField0_ & ~0x00800000);
         isResponse_ = false;
-        bitField0_ = (bitField0_ & ~0x01000000);
+        bitField0_ = (bitField0_ & ~0x00400000);
         description_ = "";
+        bitField0_ = (bitField0_ & ~0x00800000);
+        enableReportingLocalPortRate_ = false;
+        bitField0_ = (bitField0_ & ~0x01000000);
+        mcc_ = com.rtrk.atcommands.ATCommand.MultiplexerControlChannel.UIH_FRAMES_USED_ONLY;
         bitField0_ = (bitField0_ & ~0x02000000);
+        dualUARTParity_ = com.rtrk.atcommands.ATCommand.DualUARTParity.DUAL_UART_PARITY_NONE;
+        bitField0_ = (bitField0_ & ~0x04000000);
+        dtrStatus_ = com.rtrk.atcommands.ATCommand.DTRStatus.TA_IGNORES_STATUS_ON_DTR;
+        bitField0_ = (bitField0_ & ~0x08000000);
         return this;
       }
 
@@ -39837,23 +44473,23 @@ public final class ATCommand {
         if (((from_bitField0_ & 0x00000020) == 0x00000020)) {
           to_bitField0_ |= 0x00000020;
         }
-        result.value_ = value_;
+        result.dcdLineStatus_ = dcdLineStatus_;
         if (((from_bitField0_ & 0x00000040) == 0x00000040)) {
           to_bitField0_ |= 0x00000040;
         }
-        result.format_ = format_;
+        result.framingFormat_ = framingFormat_;
         if (((from_bitField0_ & 0x00000080) == 0x00000080)) {
           to_bitField0_ |= 0x00000080;
         }
-        result.partity_ = partity_;
+        result.parity_ = parity_;
         if (((from_bitField0_ & 0x00000100) == 0x00000100)) {
           to_bitField0_ |= 0x00000100;
         }
-        result.dCEByDTE_ = dCEByDTE_;
+        result.dceByDte_ = dceByDte_;
         if (((from_bitField0_ & 0x00000200) == 0x00000200)) {
           to_bitField0_ |= 0x00000200;
         }
-        result.dTEByDCE_ = dTEByDCE_;
+        result.dteByDce_ = dteByDce_;
         if (((from_bitField0_ & 0x00000400) == 0x00000400)) {
           to_bitField0_ |= 0x00000400;
         }
@@ -39865,59 +44501,67 @@ public final class ATCommand {
         if (((from_bitField0_ & 0x00001000) == 0x00001000)) {
           to_bitField0_ |= 0x00001000;
         }
-        result.subset_ = subset_;
+        result.transmissionRate_ = transmissionRate_;
         if (((from_bitField0_ & 0x00002000) == 0x00002000)) {
           to_bitField0_ |= 0x00002000;
         }
-        result.portSpeed_ = portSpeed_;
+        result.maximumFrameSize_ = maximumFrameSize_;
         if (((from_bitField0_ & 0x00004000) == 0x00004000)) {
           to_bitField0_ |= 0x00004000;
         }
-        result.maximumFrameSize_ = maximumFrameSize_;
+        result.acknowledmentTimer_ = acknowledmentTimer_;
         if (((from_bitField0_ & 0x00008000) == 0x00008000)) {
           to_bitField0_ |= 0x00008000;
         }
-        result.acknowledmentTimer_ = acknowledmentTimer_;
+        result.maximumNumberOfRetransmissions_ = maximumNumberOfRetransmissions_;
         if (((from_bitField0_ & 0x00010000) == 0x00010000)) {
           to_bitField0_ |= 0x00010000;
         }
-        result.maximumNumberOfRetransmissions_ = maximumNumberOfRetransmissions_;
+        result.responseTimer_ = responseTimer_;
         if (((from_bitField0_ & 0x00020000) == 0x00020000)) {
           to_bitField0_ |= 0x00020000;
         }
-        result.responseTimer_ = responseTimer_;
+        result.wakeUpResponseTimer_ = wakeUpResponseTimer_;
         if (((from_bitField0_ & 0x00040000) == 0x00040000)) {
           to_bitField0_ |= 0x00040000;
         }
-        result.wakeUpResponseTimer_ = wakeUpResponseTimer_;
+        result.windowsSize_ = windowsSize_;
         if (((from_bitField0_ & 0x00080000) == 0x00080000)) {
           to_bitField0_ |= 0x00080000;
         }
-        result.windowsSize_ = windowsSize_;
+        result.dataBits_ = dataBits_;
         if (((from_bitField0_ & 0x00100000) == 0x00100000)) {
           to_bitField0_ |= 0x00100000;
         }
-        result.baudRate_ = baudRate_;
+        result.stopBits_ = stopBits_;
         if (((from_bitField0_ & 0x00200000) == 0x00200000)) {
           to_bitField0_ |= 0x00200000;
         }
-        result.dataBits_ = dataBits_;
+        result.mtm_ = mtm_;
         if (((from_bitField0_ & 0x00400000) == 0x00400000)) {
           to_bitField0_ |= 0x00400000;
         }
-        result.stopBits_ = stopBits_;
+        result.isResponse_ = isResponse_;
         if (((from_bitField0_ & 0x00800000) == 0x00800000)) {
           to_bitField0_ |= 0x00800000;
         }
-        result.mode_ = mode_;
+        result.description_ = description_;
         if (((from_bitField0_ & 0x01000000) == 0x01000000)) {
           to_bitField0_ |= 0x01000000;
         }
-        result.isResponse_ = isResponse_;
+        result.enableReportingLocalPortRate_ = enableReportingLocalPortRate_;
         if (((from_bitField0_ & 0x02000000) == 0x02000000)) {
           to_bitField0_ |= 0x02000000;
         }
-        result.description_ = description_;
+        result.mcc_ = mcc_;
+        if (((from_bitField0_ & 0x04000000) == 0x04000000)) {
+          to_bitField0_ |= 0x04000000;
+        }
+        result.dualUARTParity_ = dualUARTParity_;
+        if (((from_bitField0_ & 0x08000000) == 0x08000000)) {
+          to_bitField0_ |= 0x08000000;
+        }
+        result.dtrStatus_ = dtrStatus_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -39949,20 +44593,20 @@ public final class ATCommand {
         if (other.hasExecution()) {
           setExecution(other.getExecution());
         }
-        if (other.hasValue()) {
-          setValue(other.getValue());
+        if (other.hasDcdLineStatus()) {
+          setDcdLineStatus(other.getDcdLineStatus());
         }
-        if (other.hasFormat()) {
-          setFormat(other.getFormat());
+        if (other.hasFramingFormat()) {
+          setFramingFormat(other.getFramingFormat());
         }
-        if (other.hasPartity()) {
-          setPartity(other.getPartity());
+        if (other.hasParity()) {
+          setParity(other.getParity());
         }
-        if (other.hasDCEByDTE()) {
-          setDCEByDTE(other.getDCEByDTE());
+        if (other.hasDceByDte()) {
+          setDceByDte(other.getDceByDte());
         }
-        if (other.hasDTEByDCE()) {
-          setDTEByDCE(other.getDTEByDCE());
+        if (other.hasDteByDce()) {
+          setDteByDce(other.getDteByDce());
         }
         if (other.hasRate()) {
           setRate(other.getRate());
@@ -39970,11 +44614,8 @@ public final class ATCommand {
         if (other.hasEnableDualUART()) {
           setEnableDualUART(other.getEnableDualUART());
         }
-        if (other.hasSubset()) {
-          setSubset(other.getSubset());
-        }
-        if (other.hasPortSpeed()) {
-          setPortSpeed(other.getPortSpeed());
+        if (other.hasTransmissionRate()) {
+          setTransmissionRate(other.getTransmissionRate());
         }
         if (other.hasMaximumFrameSize()) {
           setMaximumFrameSize(other.getMaximumFrameSize());
@@ -39994,25 +44635,34 @@ public final class ATCommand {
         if (other.hasWindowsSize()) {
           setWindowsSize(other.getWindowsSize());
         }
-        if (other.hasBaudRate()) {
-          setBaudRate(other.getBaudRate());
-        }
         if (other.hasDataBits()) {
           setDataBits(other.getDataBits());
         }
         if (other.hasStopBits()) {
           setStopBits(other.getStopBits());
         }
-        if (other.hasMode()) {
-          setMode(other.getMode());
+        if (other.hasMtm()) {
+          setMtm(other.getMtm());
         }
         if (other.hasIsResponse()) {
           setIsResponse(other.getIsResponse());
         }
         if (other.hasDescription()) {
-          bitField0_ |= 0x02000000;
+          bitField0_ |= 0x00800000;
           description_ = other.description_;
           onChanged();
+        }
+        if (other.hasEnableReportingLocalPortRate()) {
+          setEnableReportingLocalPortRate(other.getEnableReportingLocalPortRate());
+        }
+        if (other.hasMcc()) {
+          setMcc(other.getMcc());
+        }
+        if (other.hasDualUARTParity()) {
+          setDualUARTParity(other.getDualUARTParity());
+        }
+        if (other.hasDtrStatus()) {
+          setDtrStatus(other.getDtrStatus());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
@@ -40208,194 +44858,212 @@ public final class ATCommand {
         return this;
       }
 
-      private int value_ ;
+      private com.rtrk.atcommands.ATCommand.DCDLineStatus dcdLineStatus_ = com.rtrk.atcommands.ATCommand.DCDLineStatus.DCD_LINE_IS_ALWAYS_ON;
       /**
-       * <code>optional int32 value = 6;</code>
+       * <code>optional .com.rtrk.protobuf.DCDLineStatus dcdLineStatus = 6;</code>
        */
-      public boolean hasValue() {
+      public boolean hasDcdLineStatus() {
         return ((bitField0_ & 0x00000020) == 0x00000020);
       }
       /**
-       * <code>optional int32 value = 6;</code>
+       * <code>optional .com.rtrk.protobuf.DCDLineStatus dcdLineStatus = 6;</code>
        */
-      public int getValue() {
-        return value_;
+      public com.rtrk.atcommands.ATCommand.DCDLineStatus getDcdLineStatus() {
+        return dcdLineStatus_;
       }
       /**
-       * <code>optional int32 value = 6;</code>
+       * <code>optional .com.rtrk.protobuf.DCDLineStatus dcdLineStatus = 6;</code>
        */
-      public Builder setValue(int value) {
+      public Builder setDcdLineStatus(com.rtrk.atcommands.ATCommand.DCDLineStatus value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
         bitField0_ |= 0x00000020;
-        value_ = value;
+        dcdLineStatus_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>optional int32 value = 6;</code>
+       * <code>optional .com.rtrk.protobuf.DCDLineStatus dcdLineStatus = 6;</code>
        */
-      public Builder clearValue() {
+      public Builder clearDcdLineStatus() {
         bitField0_ = (bitField0_ & ~0x00000020);
-        value_ = 0;
+        dcdLineStatus_ = com.rtrk.atcommands.ATCommand.DCDLineStatus.DCD_LINE_IS_ALWAYS_ON;
         onChanged();
         return this;
       }
 
-      private int format_ ;
+      private com.rtrk.atcommands.ATCommand.FramingFormat framingFormat_ = com.rtrk.atcommands.ATCommand.FramingFormat.UNKNOW_FRAMING_FORMAT;
       /**
-       * <code>optional int32 format = 7;</code>
+       * <code>optional .com.rtrk.protobuf.FramingFormat framingFormat = 7;</code>
        */
-      public boolean hasFormat() {
+      public boolean hasFramingFormat() {
         return ((bitField0_ & 0x00000040) == 0x00000040);
       }
       /**
-       * <code>optional int32 format = 7;</code>
+       * <code>optional .com.rtrk.protobuf.FramingFormat framingFormat = 7;</code>
        */
-      public int getFormat() {
-        return format_;
+      public com.rtrk.atcommands.ATCommand.FramingFormat getFramingFormat() {
+        return framingFormat_;
       }
       /**
-       * <code>optional int32 format = 7;</code>
+       * <code>optional .com.rtrk.protobuf.FramingFormat framingFormat = 7;</code>
        */
-      public Builder setFormat(int value) {
+      public Builder setFramingFormat(com.rtrk.atcommands.ATCommand.FramingFormat value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
         bitField0_ |= 0x00000040;
-        format_ = value;
+        framingFormat_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>optional int32 format = 7;</code>
+       * <code>optional .com.rtrk.protobuf.FramingFormat framingFormat = 7;</code>
        */
-      public Builder clearFormat() {
+      public Builder clearFramingFormat() {
         bitField0_ = (bitField0_ & ~0x00000040);
-        format_ = 0;
+        framingFormat_ = com.rtrk.atcommands.ATCommand.FramingFormat.UNKNOW_FRAMING_FORMAT;
         onChanged();
         return this;
       }
 
-      private int partity_ ;
+      private com.rtrk.atcommands.ATCommand.Parity parity_ = com.rtrk.atcommands.ATCommand.Parity.SPACE;
       /**
-       * <code>optional int32 partity = 8;</code>
+       * <code>optional .com.rtrk.protobuf.Parity parity = 8 [default = SPACE];</code>
        */
-      public boolean hasPartity() {
+      public boolean hasParity() {
         return ((bitField0_ & 0x00000080) == 0x00000080);
       }
       /**
-       * <code>optional int32 partity = 8;</code>
+       * <code>optional .com.rtrk.protobuf.Parity parity = 8 [default = SPACE];</code>
        */
-      public int getPartity() {
-        return partity_;
+      public com.rtrk.atcommands.ATCommand.Parity getParity() {
+        return parity_;
       }
       /**
-       * <code>optional int32 partity = 8;</code>
+       * <code>optional .com.rtrk.protobuf.Parity parity = 8 [default = SPACE];</code>
        */
-      public Builder setPartity(int value) {
+      public Builder setParity(com.rtrk.atcommands.ATCommand.Parity value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
         bitField0_ |= 0x00000080;
-        partity_ = value;
+        parity_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>optional int32 partity = 8;</code>
+       * <code>optional .com.rtrk.protobuf.Parity parity = 8 [default = SPACE];</code>
        */
-      public Builder clearPartity() {
+      public Builder clearParity() {
         bitField0_ = (bitField0_ & ~0x00000080);
-        partity_ = 0;
+        parity_ = com.rtrk.atcommands.ATCommand.Parity.SPACE;
         onChanged();
         return this;
       }
 
-      private int dCEByDTE_ ;
+      private com.rtrk.atcommands.ATCommand.DCEByDTE dceByDte_ = com.rtrk.atcommands.ATCommand.DCEByDTE.DCE_BY_DTE_NONE;
       /**
-       * <code>optional int32 DCEByDTE = 9;</code>
+       * <code>optional .com.rtrk.protobuf.DCEByDTE dceByDte = 9;</code>
        */
-      public boolean hasDCEByDTE() {
+      public boolean hasDceByDte() {
         return ((bitField0_ & 0x00000100) == 0x00000100);
       }
       /**
-       * <code>optional int32 DCEByDTE = 9;</code>
+       * <code>optional .com.rtrk.protobuf.DCEByDTE dceByDte = 9;</code>
        */
-      public int getDCEByDTE() {
-        return dCEByDTE_;
+      public com.rtrk.atcommands.ATCommand.DCEByDTE getDceByDte() {
+        return dceByDte_;
       }
       /**
-       * <code>optional int32 DCEByDTE = 9;</code>
+       * <code>optional .com.rtrk.protobuf.DCEByDTE dceByDte = 9;</code>
        */
-      public Builder setDCEByDTE(int value) {
+      public Builder setDceByDte(com.rtrk.atcommands.ATCommand.DCEByDTE value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
         bitField0_ |= 0x00000100;
-        dCEByDTE_ = value;
+        dceByDte_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>optional int32 DCEByDTE = 9;</code>
+       * <code>optional .com.rtrk.protobuf.DCEByDTE dceByDte = 9;</code>
        */
-      public Builder clearDCEByDTE() {
+      public Builder clearDceByDte() {
         bitField0_ = (bitField0_ & ~0x00000100);
-        dCEByDTE_ = 0;
+        dceByDte_ = com.rtrk.atcommands.ATCommand.DCEByDTE.DCE_BY_DTE_NONE;
         onChanged();
         return this;
       }
 
-      private int dTEByDCE_ ;
+      private com.rtrk.atcommands.ATCommand.DTEByDCE dteByDce_ = com.rtrk.atcommands.ATCommand.DTEByDCE.DTE_BY_DCE_NONE;
       /**
-       * <code>optional int32 DTEByDCE = 10;</code>
+       * <code>optional .com.rtrk.protobuf.DTEByDCE dteByDce = 10;</code>
        */
-      public boolean hasDTEByDCE() {
+      public boolean hasDteByDce() {
         return ((bitField0_ & 0x00000200) == 0x00000200);
       }
       /**
-       * <code>optional int32 DTEByDCE = 10;</code>
+       * <code>optional .com.rtrk.protobuf.DTEByDCE dteByDce = 10;</code>
        */
-      public int getDTEByDCE() {
-        return dTEByDCE_;
+      public com.rtrk.atcommands.ATCommand.DTEByDCE getDteByDce() {
+        return dteByDce_;
       }
       /**
-       * <code>optional int32 DTEByDCE = 10;</code>
+       * <code>optional .com.rtrk.protobuf.DTEByDCE dteByDce = 10;</code>
        */
-      public Builder setDTEByDCE(int value) {
+      public Builder setDteByDce(com.rtrk.atcommands.ATCommand.DTEByDCE value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
         bitField0_ |= 0x00000200;
-        dTEByDCE_ = value;
+        dteByDce_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>optional int32 DTEByDCE = 10;</code>
+       * <code>optional .com.rtrk.protobuf.DTEByDCE dteByDce = 10;</code>
        */
-      public Builder clearDTEByDCE() {
+      public Builder clearDteByDce() {
         bitField0_ = (bitField0_ & ~0x00000200);
-        dTEByDCE_ = 0;
+        dteByDce_ = com.rtrk.atcommands.ATCommand.DTEByDCE.DTE_BY_DCE_NONE;
         onChanged();
         return this;
       }
 
-      private int rate_ ;
+      private com.rtrk.atcommands.ATCommand.Rate rate_ = com.rtrk.atcommands.ATCommand.Rate.RATE_0;
       /**
-       * <code>optional int32 rate = 11;</code>
+       * <code>optional .com.rtrk.protobuf.Rate rate = 11;</code>
        */
       public boolean hasRate() {
         return ((bitField0_ & 0x00000400) == 0x00000400);
       }
       /**
-       * <code>optional int32 rate = 11;</code>
+       * <code>optional .com.rtrk.protobuf.Rate rate = 11;</code>
        */
-      public int getRate() {
+      public com.rtrk.atcommands.ATCommand.Rate getRate() {
         return rate_;
       }
       /**
-       * <code>optional int32 rate = 11;</code>
+       * <code>optional .com.rtrk.protobuf.Rate rate = 11;</code>
        */
-      public Builder setRate(int value) {
+      public Builder setRate(com.rtrk.atcommands.ATCommand.Rate value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
         bitField0_ |= 0x00000400;
         rate_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>optional int32 rate = 11;</code>
+       * <code>optional .com.rtrk.protobuf.Rate rate = 11;</code>
        */
       public Builder clearRate() {
         bitField0_ = (bitField0_ & ~0x00000400);
-        rate_ = 0;
+        rate_ = com.rtrk.atcommands.ATCommand.Rate.RATE_0;
         onChanged();
         return this;
       }
@@ -40432,66 +45100,37 @@ public final class ATCommand {
         return this;
       }
 
-      private int subset_ ;
+      private com.rtrk.atcommands.ATCommand.TransmissionRate transmissionRate_ = com.rtrk.atcommands.ATCommand.TransmissionRate.UNKNOW_TRANSMISSION_RATE;
       /**
-       * <code>optional int32 subset = 13;</code>
+       * <code>optional .com.rtrk.protobuf.TransmissionRate transmissionRate = 14;</code>
        */
-      public boolean hasSubset() {
+      public boolean hasTransmissionRate() {
         return ((bitField0_ & 0x00001000) == 0x00001000);
       }
       /**
-       * <code>optional int32 subset = 13;</code>
+       * <code>optional .com.rtrk.protobuf.TransmissionRate transmissionRate = 14;</code>
        */
-      public int getSubset() {
-        return subset_;
+      public com.rtrk.atcommands.ATCommand.TransmissionRate getTransmissionRate() {
+        return transmissionRate_;
       }
       /**
-       * <code>optional int32 subset = 13;</code>
+       * <code>optional .com.rtrk.protobuf.TransmissionRate transmissionRate = 14;</code>
        */
-      public Builder setSubset(int value) {
+      public Builder setTransmissionRate(com.rtrk.atcommands.ATCommand.TransmissionRate value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
         bitField0_ |= 0x00001000;
-        subset_ = value;
+        transmissionRate_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>optional int32 subset = 13;</code>
+       * <code>optional .com.rtrk.protobuf.TransmissionRate transmissionRate = 14;</code>
        */
-      public Builder clearSubset() {
+      public Builder clearTransmissionRate() {
         bitField0_ = (bitField0_ & ~0x00001000);
-        subset_ = 0;
-        onChanged();
-        return this;
-      }
-
-      private int portSpeed_ ;
-      /**
-       * <code>optional int32 portSpeed = 14;</code>
-       */
-      public boolean hasPortSpeed() {
-        return ((bitField0_ & 0x00002000) == 0x00002000);
-      }
-      /**
-       * <code>optional int32 portSpeed = 14;</code>
-       */
-      public int getPortSpeed() {
-        return portSpeed_;
-      }
-      /**
-       * <code>optional int32 portSpeed = 14;</code>
-       */
-      public Builder setPortSpeed(int value) {
-        bitField0_ |= 0x00002000;
-        portSpeed_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional int32 portSpeed = 14;</code>
-       */
-      public Builder clearPortSpeed() {
-        bitField0_ = (bitField0_ & ~0x00002000);
-        portSpeed_ = 0;
+        transmissionRate_ = com.rtrk.atcommands.ATCommand.TransmissionRate.UNKNOW_TRANSMISSION_RATE;
         onChanged();
         return this;
       }
@@ -40505,7 +45144,7 @@ public final class ATCommand {
        * </pre>
        */
       public boolean hasMaximumFrameSize() {
-        return ((bitField0_ & 0x00004000) == 0x00004000);
+        return ((bitField0_ & 0x00002000) == 0x00002000);
       }
       /**
        * <code>optional int32 maximumFrameSize = 15;</code>
@@ -40525,7 +45164,7 @@ public final class ATCommand {
        * </pre>
        */
       public Builder setMaximumFrameSize(int value) {
-        bitField0_ |= 0x00004000;
+        bitField0_ |= 0x00002000;
         maximumFrameSize_ = value;
         onChanged();
         return this;
@@ -40538,7 +45177,7 @@ public final class ATCommand {
        * </pre>
        */
       public Builder clearMaximumFrameSize() {
-        bitField0_ = (bitField0_ & ~0x00004000);
+        bitField0_ = (bitField0_ & ~0x00002000);
         maximumFrameSize_ = 0;
         onChanged();
         return this;
@@ -40553,7 +45192,7 @@ public final class ATCommand {
        * </pre>
        */
       public boolean hasAcknowledmentTimer() {
-        return ((bitField0_ & 0x00008000) == 0x00008000);
+        return ((bitField0_ & 0x00004000) == 0x00004000);
       }
       /**
        * <code>optional int32 acknowledmentTimer = 16;</code>
@@ -40573,7 +45212,7 @@ public final class ATCommand {
        * </pre>
        */
       public Builder setAcknowledmentTimer(int value) {
-        bitField0_ |= 0x00008000;
+        bitField0_ |= 0x00004000;
         acknowledmentTimer_ = value;
         onChanged();
         return this;
@@ -40586,7 +45225,7 @@ public final class ATCommand {
        * </pre>
        */
       public Builder clearAcknowledmentTimer() {
-        bitField0_ = (bitField0_ & ~0x00008000);
+        bitField0_ = (bitField0_ & ~0x00004000);
         acknowledmentTimer_ = 0;
         onChanged();
         return this;
@@ -40601,7 +45240,7 @@ public final class ATCommand {
        * </pre>
        */
       public boolean hasMaximumNumberOfRetransmissions() {
-        return ((bitField0_ & 0x00010000) == 0x00010000);
+        return ((bitField0_ & 0x00008000) == 0x00008000);
       }
       /**
        * <code>optional int32 maximumNumberOfRetransmissions = 17;</code>
@@ -40621,7 +45260,7 @@ public final class ATCommand {
        * </pre>
        */
       public Builder setMaximumNumberOfRetransmissions(int value) {
-        bitField0_ |= 0x00010000;
+        bitField0_ |= 0x00008000;
         maximumNumberOfRetransmissions_ = value;
         onChanged();
         return this;
@@ -40634,7 +45273,7 @@ public final class ATCommand {
        * </pre>
        */
       public Builder clearMaximumNumberOfRetransmissions() {
-        bitField0_ = (bitField0_ & ~0x00010000);
+        bitField0_ = (bitField0_ & ~0x00008000);
         maximumNumberOfRetransmissions_ = 0;
         onChanged();
         return this;
@@ -40649,7 +45288,7 @@ public final class ATCommand {
        * </pre>
        */
       public boolean hasResponseTimer() {
-        return ((bitField0_ & 0x00020000) == 0x00020000);
+        return ((bitField0_ & 0x00010000) == 0x00010000);
       }
       /**
        * <code>optional int32 responseTimer = 18;</code>
@@ -40669,7 +45308,7 @@ public final class ATCommand {
        * </pre>
        */
       public Builder setResponseTimer(int value) {
-        bitField0_ |= 0x00020000;
+        bitField0_ |= 0x00010000;
         responseTimer_ = value;
         onChanged();
         return this;
@@ -40682,7 +45321,7 @@ public final class ATCommand {
        * </pre>
        */
       public Builder clearResponseTimer() {
-        bitField0_ = (bitField0_ & ~0x00020000);
+        bitField0_ = (bitField0_ & ~0x00010000);
         responseTimer_ = 0;
         onChanged();
         return this;
@@ -40697,7 +45336,7 @@ public final class ATCommand {
        * </pre>
        */
       public boolean hasWakeUpResponseTimer() {
-        return ((bitField0_ & 0x00040000) == 0x00040000);
+        return ((bitField0_ & 0x00020000) == 0x00020000);
       }
       /**
        * <code>optional int32 wakeUpResponseTimer = 19;</code>
@@ -40717,7 +45356,7 @@ public final class ATCommand {
        * </pre>
        */
       public Builder setWakeUpResponseTimer(int value) {
-        bitField0_ |= 0x00040000;
+        bitField0_ |= 0x00020000;
         wakeUpResponseTimer_ = value;
         onChanged();
         return this;
@@ -40730,7 +45369,7 @@ public final class ATCommand {
        * </pre>
        */
       public Builder clearWakeUpResponseTimer() {
-        bitField0_ = (bitField0_ & ~0x00040000);
+        bitField0_ = (bitField0_ & ~0x00020000);
         wakeUpResponseTimer_ = 0;
         onChanged();
         return this;
@@ -40745,7 +45384,7 @@ public final class ATCommand {
        * </pre>
        */
       public boolean hasWindowsSize() {
-        return ((bitField0_ & 0x00080000) == 0x00080000);
+        return ((bitField0_ & 0x00040000) == 0x00040000);
       }
       /**
        * <code>optional int32 windowsSize = 20;</code>
@@ -40765,7 +45404,7 @@ public final class ATCommand {
        * </pre>
        */
       public Builder setWindowsSize(int value) {
-        bitField0_ |= 0x00080000;
+        bitField0_ |= 0x00040000;
         windowsSize_ = value;
         onChanged();
         return this;
@@ -40778,136 +45417,113 @@ public final class ATCommand {
        * </pre>
        */
       public Builder clearWindowsSize() {
-        bitField0_ = (bitField0_ & ~0x00080000);
+        bitField0_ = (bitField0_ & ~0x00040000);
         windowsSize_ = 0;
         onChanged();
         return this;
       }
 
-      private int baudRate_ ;
+      private com.rtrk.atcommands.ATCommand.DataBits dataBits_ = com.rtrk.atcommands.ATCommand.DataBits.DATA_BITS_8;
       /**
-       * <code>optional int32 baudRate = 21;</code>
-       */
-      public boolean hasBaudRate() {
-        return ((bitField0_ & 0x00100000) == 0x00100000);
-      }
-      /**
-       * <code>optional int32 baudRate = 21;</code>
-       */
-      public int getBaudRate() {
-        return baudRate_;
-      }
-      /**
-       * <code>optional int32 baudRate = 21;</code>
-       */
-      public Builder setBaudRate(int value) {
-        bitField0_ |= 0x00100000;
-        baudRate_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional int32 baudRate = 21;</code>
-       */
-      public Builder clearBaudRate() {
-        bitField0_ = (bitField0_ & ~0x00100000);
-        baudRate_ = 0;
-        onChanged();
-        return this;
-      }
-
-      private int dataBits_ ;
-      /**
-       * <code>optional int32 dataBits = 22;</code>
+       * <code>optional .com.rtrk.protobuf.DataBits dataBits = 22 [default = DATA_BITS_8];</code>
        */
       public boolean hasDataBits() {
-        return ((bitField0_ & 0x00200000) == 0x00200000);
+        return ((bitField0_ & 0x00080000) == 0x00080000);
       }
       /**
-       * <code>optional int32 dataBits = 22;</code>
+       * <code>optional .com.rtrk.protobuf.DataBits dataBits = 22 [default = DATA_BITS_8];</code>
        */
-      public int getDataBits() {
+      public com.rtrk.atcommands.ATCommand.DataBits getDataBits() {
         return dataBits_;
       }
       /**
-       * <code>optional int32 dataBits = 22;</code>
+       * <code>optional .com.rtrk.protobuf.DataBits dataBits = 22 [default = DATA_BITS_8];</code>
        */
-      public Builder setDataBits(int value) {
-        bitField0_ |= 0x00200000;
+      public Builder setDataBits(com.rtrk.atcommands.ATCommand.DataBits value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00080000;
         dataBits_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>optional int32 dataBits = 22;</code>
+       * <code>optional .com.rtrk.protobuf.DataBits dataBits = 22 [default = DATA_BITS_8];</code>
        */
       public Builder clearDataBits() {
-        bitField0_ = (bitField0_ & ~0x00200000);
-        dataBits_ = 0;
+        bitField0_ = (bitField0_ & ~0x00080000);
+        dataBits_ = com.rtrk.atcommands.ATCommand.DataBits.DATA_BITS_8;
         onChanged();
         return this;
       }
 
-      private int stopBits_ ;
+      private com.rtrk.atcommands.ATCommand.StopBits stopBits_ = com.rtrk.atcommands.ATCommand.StopBits.STOP_BIT_1;
       /**
-       * <code>optional int32 stopBits = 23;</code>
+       * <code>optional .com.rtrk.protobuf.StopBits stopBits = 23 [default = STOP_BIT_1];</code>
        */
       public boolean hasStopBits() {
-        return ((bitField0_ & 0x00400000) == 0x00400000);
+        return ((bitField0_ & 0x00100000) == 0x00100000);
       }
       /**
-       * <code>optional int32 stopBits = 23;</code>
+       * <code>optional .com.rtrk.protobuf.StopBits stopBits = 23 [default = STOP_BIT_1];</code>
        */
-      public int getStopBits() {
+      public com.rtrk.atcommands.ATCommand.StopBits getStopBits() {
         return stopBits_;
       }
       /**
-       * <code>optional int32 stopBits = 23;</code>
+       * <code>optional .com.rtrk.protobuf.StopBits stopBits = 23 [default = STOP_BIT_1];</code>
        */
-      public Builder setStopBits(int value) {
-        bitField0_ |= 0x00400000;
+      public Builder setStopBits(com.rtrk.atcommands.ATCommand.StopBits value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00100000;
         stopBits_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>optional int32 stopBits = 23;</code>
+       * <code>optional .com.rtrk.protobuf.StopBits stopBits = 23 [default = STOP_BIT_1];</code>
        */
       public Builder clearStopBits() {
-        bitField0_ = (bitField0_ & ~0x00400000);
-        stopBits_ = 0;
+        bitField0_ = (bitField0_ & ~0x00100000);
+        stopBits_ = com.rtrk.atcommands.ATCommand.StopBits.STOP_BIT_1;
         onChanged();
         return this;
       }
 
-      private int mode_ ;
+      private com.rtrk.atcommands.ATCommand.MultiplexerTransparencyMechanism mtm_ = com.rtrk.atcommands.ATCommand.MultiplexerTransparencyMechanism.BASIC_OPTION;
       /**
-       * <code>optional int32 mode = 24;</code>
+       * <code>optional .com.rtrk.protobuf.MultiplexerTransparencyMechanism mtm = 24;</code>
        */
-      public boolean hasMode() {
-        return ((bitField0_ & 0x00800000) == 0x00800000);
+      public boolean hasMtm() {
+        return ((bitField0_ & 0x00200000) == 0x00200000);
       }
       /**
-       * <code>optional int32 mode = 24;</code>
+       * <code>optional .com.rtrk.protobuf.MultiplexerTransparencyMechanism mtm = 24;</code>
        */
-      public int getMode() {
-        return mode_;
+      public com.rtrk.atcommands.ATCommand.MultiplexerTransparencyMechanism getMtm() {
+        return mtm_;
       }
       /**
-       * <code>optional int32 mode = 24;</code>
+       * <code>optional .com.rtrk.protobuf.MultiplexerTransparencyMechanism mtm = 24;</code>
        */
-      public Builder setMode(int value) {
-        bitField0_ |= 0x00800000;
-        mode_ = value;
+      public Builder setMtm(com.rtrk.atcommands.ATCommand.MultiplexerTransparencyMechanism value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00200000;
+        mtm_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>optional int32 mode = 24;</code>
+       * <code>optional .com.rtrk.protobuf.MultiplexerTransparencyMechanism mtm = 24;</code>
        */
-      public Builder clearMode() {
-        bitField0_ = (bitField0_ & ~0x00800000);
-        mode_ = 0;
+      public Builder clearMtm() {
+        bitField0_ = (bitField0_ & ~0x00200000);
+        mtm_ = com.rtrk.atcommands.ATCommand.MultiplexerTransparencyMechanism.BASIC_OPTION;
         onChanged();
         return this;
       }
@@ -40917,7 +45533,7 @@ public final class ATCommand {
        * <code>optional bool isResponse = 25;</code>
        */
       public boolean hasIsResponse() {
-        return ((bitField0_ & 0x01000000) == 0x01000000);
+        return ((bitField0_ & 0x00400000) == 0x00400000);
       }
       /**
        * <code>optional bool isResponse = 25;</code>
@@ -40929,7 +45545,7 @@ public final class ATCommand {
        * <code>optional bool isResponse = 25;</code>
        */
       public Builder setIsResponse(boolean value) {
-        bitField0_ |= 0x01000000;
+        bitField0_ |= 0x00400000;
         isResponse_ = value;
         onChanged();
         return this;
@@ -40938,7 +45554,7 @@ public final class ATCommand {
        * <code>optional bool isResponse = 25;</code>
        */
       public Builder clearIsResponse() {
-        bitField0_ = (bitField0_ & ~0x01000000);
+        bitField0_ = (bitField0_ & ~0x00400000);
         isResponse_ = false;
         onChanged();
         return this;
@@ -40949,7 +45565,7 @@ public final class ATCommand {
        * <code>optional string description = 26;</code>
        */
       public boolean hasDescription() {
-        return ((bitField0_ & 0x02000000) == 0x02000000);
+        return ((bitField0_ & 0x00800000) == 0x00800000);
       }
       /**
        * <code>optional string description = 26;</code>
@@ -40992,7 +45608,7 @@ public final class ATCommand {
         if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x02000000;
+  bitField0_ |= 0x00800000;
         description_ = value;
         onChanged();
         return this;
@@ -41001,7 +45617,7 @@ public final class ATCommand {
        * <code>optional string description = 26;</code>
        */
       public Builder clearDescription() {
-        bitField0_ = (bitField0_ & ~0x02000000);
+        bitField0_ = (bitField0_ & ~0x00800000);
         description_ = getDefaultInstance().getDescription();
         onChanged();
         return this;
@@ -41014,8 +45630,145 @@ public final class ATCommand {
         if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x02000000;
+  bitField0_ |= 0x00800000;
         description_ = value;
+        onChanged();
+        return this;
+      }
+
+      private boolean enableReportingLocalPortRate_ ;
+      /**
+       * <code>optional bool enableReportingLocalPortRate = 27;</code>
+       */
+      public boolean hasEnableReportingLocalPortRate() {
+        return ((bitField0_ & 0x01000000) == 0x01000000);
+      }
+      /**
+       * <code>optional bool enableReportingLocalPortRate = 27;</code>
+       */
+      public boolean getEnableReportingLocalPortRate() {
+        return enableReportingLocalPortRate_;
+      }
+      /**
+       * <code>optional bool enableReportingLocalPortRate = 27;</code>
+       */
+      public Builder setEnableReportingLocalPortRate(boolean value) {
+        bitField0_ |= 0x01000000;
+        enableReportingLocalPortRate_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool enableReportingLocalPortRate = 27;</code>
+       */
+      public Builder clearEnableReportingLocalPortRate() {
+        bitField0_ = (bitField0_ & ~0x01000000);
+        enableReportingLocalPortRate_ = false;
+        onChanged();
+        return this;
+      }
+
+      private com.rtrk.atcommands.ATCommand.MultiplexerControlChannel mcc_ = com.rtrk.atcommands.ATCommand.MultiplexerControlChannel.UIH_FRAMES_USED_ONLY;
+      /**
+       * <code>optional .com.rtrk.protobuf.MultiplexerControlChannel mcc = 28;</code>
+       */
+      public boolean hasMcc() {
+        return ((bitField0_ & 0x02000000) == 0x02000000);
+      }
+      /**
+       * <code>optional .com.rtrk.protobuf.MultiplexerControlChannel mcc = 28;</code>
+       */
+      public com.rtrk.atcommands.ATCommand.MultiplexerControlChannel getMcc() {
+        return mcc_;
+      }
+      /**
+       * <code>optional .com.rtrk.protobuf.MultiplexerControlChannel mcc = 28;</code>
+       */
+      public Builder setMcc(com.rtrk.atcommands.ATCommand.MultiplexerControlChannel value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x02000000;
+        mcc_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .com.rtrk.protobuf.MultiplexerControlChannel mcc = 28;</code>
+       */
+      public Builder clearMcc() {
+        bitField0_ = (bitField0_ & ~0x02000000);
+        mcc_ = com.rtrk.atcommands.ATCommand.MultiplexerControlChannel.UIH_FRAMES_USED_ONLY;
+        onChanged();
+        return this;
+      }
+
+      private com.rtrk.atcommands.ATCommand.DualUARTParity dualUARTParity_ = com.rtrk.atcommands.ATCommand.DualUARTParity.DUAL_UART_PARITY_NONE;
+      /**
+       * <code>optional .com.rtrk.protobuf.DualUARTParity dualUARTParity = 13 [default = DUAL_UART_PARITY_NONE];</code>
+       */
+      public boolean hasDualUARTParity() {
+        return ((bitField0_ & 0x04000000) == 0x04000000);
+      }
+      /**
+       * <code>optional .com.rtrk.protobuf.DualUARTParity dualUARTParity = 13 [default = DUAL_UART_PARITY_NONE];</code>
+       */
+      public com.rtrk.atcommands.ATCommand.DualUARTParity getDualUARTParity() {
+        return dualUARTParity_;
+      }
+      /**
+       * <code>optional .com.rtrk.protobuf.DualUARTParity dualUARTParity = 13 [default = DUAL_UART_PARITY_NONE];</code>
+       */
+      public Builder setDualUARTParity(com.rtrk.atcommands.ATCommand.DualUARTParity value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x04000000;
+        dualUARTParity_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .com.rtrk.protobuf.DualUARTParity dualUARTParity = 13 [default = DUAL_UART_PARITY_NONE];</code>
+       */
+      public Builder clearDualUARTParity() {
+        bitField0_ = (bitField0_ & ~0x04000000);
+        dualUARTParity_ = com.rtrk.atcommands.ATCommand.DualUARTParity.DUAL_UART_PARITY_NONE;
+        onChanged();
+        return this;
+      }
+
+      private com.rtrk.atcommands.ATCommand.DTRStatus dtrStatus_ = com.rtrk.atcommands.ATCommand.DTRStatus.TA_IGNORES_STATUS_ON_DTR;
+      /**
+       * <code>optional .com.rtrk.protobuf.DTRStatus dtrStatus = 29 [default = TA_IGNORES_STATUS_ON_DTR];</code>
+       */
+      public boolean hasDtrStatus() {
+        return ((bitField0_ & 0x08000000) == 0x08000000);
+      }
+      /**
+       * <code>optional .com.rtrk.protobuf.DTRStatus dtrStatus = 29 [default = TA_IGNORES_STATUS_ON_DTR];</code>
+       */
+      public com.rtrk.atcommands.ATCommand.DTRStatus getDtrStatus() {
+        return dtrStatus_;
+      }
+      /**
+       * <code>optional .com.rtrk.protobuf.DTRStatus dtrStatus = 29 [default = TA_IGNORES_STATUS_ON_DTR];</code>
+       */
+      public Builder setDtrStatus(com.rtrk.atcommands.ATCommand.DTRStatus value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x08000000;
+        dtrStatus_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .com.rtrk.protobuf.DTRStatus dtrStatus = 29 [default = TA_IGNORES_STATUS_ON_DTR];</code>
+       */
+      public Builder clearDtrStatus() {
+        bitField0_ = (bitField0_ & ~0x08000000);
+        dtrStatus_ = com.rtrk.atcommands.ATCommand.DTRStatus.TA_IGNORES_STATUS_ON_DTR;
         onChanged();
         return this;
       }
@@ -41104,22 +45857,22 @@ public final class ATCommand {
         getCauseBytes();
 
     /**
-     * <code>optional int32 pas = 8;</code>
+     * <code>optional .com.rtrk.protobuf.Pas pas = 8;</code>
      */
     boolean hasPas();
     /**
-     * <code>optional int32 pas = 8;</code>
+     * <code>optional .com.rtrk.protobuf.Pas pas = 8;</code>
      */
-    int getPas();
+    com.rtrk.atcommands.ATCommand.Pas getPas();
 
     /**
-     * <code>optional int32 status = 9;</code>
+     * <code>optional .com.rtrk.protobuf.Status status = 9 [default = STATUS_ON];</code>
      */
     boolean hasStatus();
     /**
-     * <code>optional int32 status = 9;</code>
+     * <code>optional .com.rtrk.protobuf.Status status = 9 [default = STATUS_ON];</code>
      */
-    int getStatus();
+    com.rtrk.atcommands.ATCommand.Status getStatus();
 
     /**
      * <code>optional bool refuseSMS = 10;</code>
@@ -41140,13 +45893,13 @@ public final class ATCommand {
     boolean getRefuseCall();
 
     /**
-     * <code>optional int32 mode = 12;</code>
+     * <code>optional bool showCallState = 12;</code>
      */
-    boolean hasMode();
+    boolean hasShowCallState();
     /**
-     * <code>optional int32 mode = 12;</code>
+     * <code>optional bool showCallState = 12;</code>
      */
-    int getMode();
+    boolean getShowCallState();
 
     /**
      * <code>optional string extunsol = 13;</code>
@@ -41172,13 +45925,13 @@ public final class ATCommand {
     int getState();
 
     /**
-     * <code>optional bool enable = 15;</code>
+     * <code>optional bool switchOnSIMDetection = 15;</code>
      */
-    boolean hasEnable();
+    boolean hasSwitchOnSIMDetection();
     /**
-     * <code>optional bool enable = 15;</code>
+     * <code>optional bool switchOnSIMDetection = 15;</code>
      */
-    boolean getEnable();
+    boolean getSwitchOnSIMDetection();
 
     /**
      * <code>optional string time = 16;</code>
@@ -41221,40 +45974,22 @@ public final class ATCommand {
         getDatlightSavingTimeBytes();
 
     /**
-     * <code>optional int32 insertLevel = 18;</code>
+     * <code>optional bool highInsertLevel = 18;</code>
      */
-    boolean hasInsertLevel();
+    boolean hasHighInsertLevel();
     /**
-     * <code>optional int32 insertLevel = 18;</code>
+     * <code>optional bool highInsertLevel = 18;</code>
      */
-    int getInsertLevel();
+    boolean getHighInsertLevel();
 
     /**
-     * <code>optional int32 pinChoice = 19;</code>
+     * <code>optional .com.rtrk.protobuf.SIMCardDetectionPIN pinChoice = 19;</code>
      */
     boolean hasPinChoice();
     /**
-     * <code>optional int32 pinChoice = 19;</code>
+     * <code>optional .com.rtrk.protobuf.SIMCardDetectionPIN pinChoice = 19;</code>
      */
-    int getPinChoice();
-
-    /**
-     * <code>optional int32 insertStatus = 20;</code>
-     */
-    boolean hasInsertStatus();
-    /**
-     * <code>optional int32 insertStatus = 20;</code>
-     */
-    int getInsertStatus();
-
-    /**
-     * <code>optional int32 type = 21;</code>
-     */
-    boolean hasType();
-    /**
-     * <code>optional int32 type = 21;</code>
-     */
-    int getType();
+    com.rtrk.atcommands.ATCommand.SIMCardDetectionPIN getPinChoice();
 
     /**
      * <code>optional bool isResponse = 22;</code>
@@ -41278,6 +46013,96 @@ public final class ATCommand {
      */
     com.google.protobuf.ByteString
         getDescriptionBytes();
+
+    /**
+     * <code>optional bool EnableURCPresentation = 24;</code>
+     */
+    boolean hasEnableURCPresentation();
+    /**
+     * <code>optional bool EnableURCPresentation = 24;</code>
+     */
+    boolean getEnableURCPresentation();
+
+    /**
+     * <code>optional .com.rtrk.protobuf.ProprietaryUnsolicitedIndications pui = 25 [default = PUI_DISABLE];</code>
+     */
+    boolean hasPui();
+    /**
+     * <code>optional .com.rtrk.protobuf.ProprietaryUnsolicitedIndications pui = 25 [default = PUI_DISABLE];</code>
+     */
+    com.rtrk.atcommands.ATCommand.ProprietaryUnsolicitedIndications getPui();
+
+    /**
+     * <code>optional .com.rtrk.protobuf.StateOfInitialization sof = 26;</code>
+     */
+    boolean hasSof();
+    /**
+     * <code>optional .com.rtrk.protobuf.StateOfInitialization sof = 26;</code>
+     */
+    com.rtrk.atcommands.ATCommand.StateOfInitialization getSof();
+
+    /**
+     * <code>optional .com.rtrk.protobuf.GSMNetworkStatus gsmNetworkStatus = 27;</code>
+     */
+    boolean hasGsmNetworkStatus();
+    /**
+     * <code>optional .com.rtrk.protobuf.GSMNetworkStatus gsmNetworkStatus = 27;</code>
+     */
+    com.rtrk.atcommands.ATCommand.GSMNetworkStatus getGsmNetworkStatus();
+
+    /**
+     * <code>optional .com.rtrk.protobuf.RTCTime rtcTime = 28;</code>
+     */
+    boolean hasRtcTime();
+    /**
+     * <code>optional .com.rtrk.protobuf.RTCTime rtcTime = 28;</code>
+     */
+    com.rtrk.atcommands.ATCommand.RTCTime getRtcTime();
+
+    /**
+     * <code>optional .com.rtrk.protobuf.TimeZoneChangeEventReporting tzcer = 29;</code>
+     */
+    boolean hasTzcer();
+    /**
+     * <code>optional .com.rtrk.protobuf.TimeZoneChangeEventReporting tzcer = 29;</code>
+     */
+    com.rtrk.atcommands.ATCommand.TimeZoneChangeEventReporting getTzcer();
+
+    /**
+     * <code>optional bool switchONDetectingSIMCard = 20;</code>
+     */
+    boolean hasSwitchONDetectingSIMCard();
+    /**
+     * <code>optional bool switchONDetectingSIMCard = 20;</code>
+     */
+    boolean getSwitchONDetectingSIMCard();
+
+    /**
+     * <code>optional .com.rtrk.protobuf.SIMCardInsertStatus simInsertStatus = 21;</code>
+     */
+    boolean hasSimInsertStatus();
+    /**
+     * <code>optional .com.rtrk.protobuf.SIMCardInsertStatus simInsertStatus = 21;</code>
+     */
+    com.rtrk.atcommands.ATCommand.SIMCardInsertStatus getSimInsertStatus();
+
+    /**
+     * <code>optional bool enableCircuitSwitchedVoiceCall = 30;</code>
+     */
+    boolean hasEnableCircuitSwitchedVoiceCall();
+    /**
+     * <code>optional bool enableCircuitSwitchedVoiceCall = 30;</code>
+     */
+    boolean getEnableCircuitSwitchedVoiceCall();
+
+    /**
+     * <code>optional .com.rtrk.protobuf.ConnectionType connectionType = 31;</code>
+     */
+    boolean hasConnectionType();
+    /**
+     * <code>optional .com.rtrk.protobuf.ConnectionType connectionType = 31;</code>
+     */
+    com.rtrk.atcommands.ATCommand.ConnectionType getConnectionType();
   }
   /**
    * Protobuf type {@code com.rtrk.protobuf.StatusControlCommand}
@@ -41374,13 +46199,25 @@ public final class ATCommand {
               break;
             }
             case 64: {
-              bitField0_ |= 0x00000080;
-              pas_ = input.readInt32();
+              int rawValue = input.readEnum();
+              com.rtrk.atcommands.ATCommand.Pas value = com.rtrk.atcommands.ATCommand.Pas.valueOf(rawValue);
+              if (value == null) {
+                unknownFields.mergeVarintField(8, rawValue);
+              } else {
+                bitField0_ |= 0x00000080;
+                pas_ = value;
+              }
               break;
             }
             case 72: {
-              bitField0_ |= 0x00000100;
-              status_ = input.readInt32();
+              int rawValue = input.readEnum();
+              com.rtrk.atcommands.ATCommand.Status value = com.rtrk.atcommands.ATCommand.Status.valueOf(rawValue);
+              if (value == null) {
+                unknownFields.mergeVarintField(9, rawValue);
+              } else {
+                bitField0_ |= 0x00000100;
+                status_ = value;
+              }
               break;
             }
             case 80: {
@@ -41395,7 +46232,7 @@ public final class ATCommand {
             }
             case 96: {
               bitField0_ |= 0x00000800;
-              mode_ = input.readInt32();
+              showCallState_ = input.readBool();
               break;
             }
             case 106: {
@@ -41411,7 +46248,7 @@ public final class ATCommand {
             }
             case 120: {
               bitField0_ |= 0x00004000;
-              enable_ = input.readBool();
+              switchOnSIMDetection_ = input.readBool();
               break;
             }
             case 130: {
@@ -41428,33 +46265,121 @@ public final class ATCommand {
             }
             case 144: {
               bitField0_ |= 0x00020000;
-              insertLevel_ = input.readInt32();
+              highInsertLevel_ = input.readBool();
               break;
             }
             case 152: {
-              bitField0_ |= 0x00040000;
-              pinChoice_ = input.readInt32();
+              int rawValue = input.readEnum();
+              com.rtrk.atcommands.ATCommand.SIMCardDetectionPIN value = com.rtrk.atcommands.ATCommand.SIMCardDetectionPIN.valueOf(rawValue);
+              if (value == null) {
+                unknownFields.mergeVarintField(19, rawValue);
+              } else {
+                bitField0_ |= 0x00040000;
+                pinChoice_ = value;
+              }
               break;
             }
             case 160: {
-              bitField0_ |= 0x00080000;
-              insertStatus_ = input.readInt32();
+              bitField0_ |= 0x08000000;
+              switchONDetectingSIMCard_ = input.readBool();
               break;
             }
             case 168: {
-              bitField0_ |= 0x00100000;
-              type_ = input.readInt32();
+              int rawValue = input.readEnum();
+              com.rtrk.atcommands.ATCommand.SIMCardInsertStatus value = com.rtrk.atcommands.ATCommand.SIMCardInsertStatus.valueOf(rawValue);
+              if (value == null) {
+                unknownFields.mergeVarintField(21, rawValue);
+              } else {
+                bitField0_ |= 0x10000000;
+                simInsertStatus_ = value;
+              }
               break;
             }
             case 176: {
-              bitField0_ |= 0x00200000;
+              bitField0_ |= 0x00080000;
               isResponse_ = input.readBool();
               break;
             }
             case 186: {
               com.google.protobuf.ByteString bs = input.readBytes();
-              bitField0_ |= 0x00400000;
+              bitField0_ |= 0x00100000;
               description_ = bs;
+              break;
+            }
+            case 192: {
+              bitField0_ |= 0x00200000;
+              enableURCPresentation_ = input.readBool();
+              break;
+            }
+            case 200: {
+              int rawValue = input.readEnum();
+              com.rtrk.atcommands.ATCommand.ProprietaryUnsolicitedIndications value = com.rtrk.atcommands.ATCommand.ProprietaryUnsolicitedIndications.valueOf(rawValue);
+              if (value == null) {
+                unknownFields.mergeVarintField(25, rawValue);
+              } else {
+                bitField0_ |= 0x00400000;
+                pui_ = value;
+              }
+              break;
+            }
+            case 208: {
+              int rawValue = input.readEnum();
+              com.rtrk.atcommands.ATCommand.StateOfInitialization value = com.rtrk.atcommands.ATCommand.StateOfInitialization.valueOf(rawValue);
+              if (value == null) {
+                unknownFields.mergeVarintField(26, rawValue);
+              } else {
+                bitField0_ |= 0x00800000;
+                sof_ = value;
+              }
+              break;
+            }
+            case 216: {
+              int rawValue = input.readEnum();
+              com.rtrk.atcommands.ATCommand.GSMNetworkStatus value = com.rtrk.atcommands.ATCommand.GSMNetworkStatus.valueOf(rawValue);
+              if (value == null) {
+                unknownFields.mergeVarintField(27, rawValue);
+              } else {
+                bitField0_ |= 0x01000000;
+                gsmNetworkStatus_ = value;
+              }
+              break;
+            }
+            case 224: {
+              int rawValue = input.readEnum();
+              com.rtrk.atcommands.ATCommand.RTCTime value = com.rtrk.atcommands.ATCommand.RTCTime.valueOf(rawValue);
+              if (value == null) {
+                unknownFields.mergeVarintField(28, rawValue);
+              } else {
+                bitField0_ |= 0x02000000;
+                rtcTime_ = value;
+              }
+              break;
+            }
+            case 232: {
+              int rawValue = input.readEnum();
+              com.rtrk.atcommands.ATCommand.TimeZoneChangeEventReporting value = com.rtrk.atcommands.ATCommand.TimeZoneChangeEventReporting.valueOf(rawValue);
+              if (value == null) {
+                unknownFields.mergeVarintField(29, rawValue);
+              } else {
+                bitField0_ |= 0x04000000;
+                tzcer_ = value;
+              }
+              break;
+            }
+            case 240: {
+              bitField0_ |= 0x20000000;
+              enableCircuitSwitchedVoiceCall_ = input.readBool();
+              break;
+            }
+            case 248: {
+              int rawValue = input.readEnum();
+              com.rtrk.atcommands.ATCommand.ConnectionType value = com.rtrk.atcommands.ATCommand.ConnectionType.valueOf(rawValue);
+              if (value == null) {
+                unknownFields.mergeVarintField(31, rawValue);
+              } else {
+                bitField0_ |= 0x40000000;
+                connectionType_ = value;
+              }
               break;
             }
           }
@@ -41630,32 +46555,32 @@ public final class ATCommand {
     }
 
     public static final int PAS_FIELD_NUMBER = 8;
-    private int pas_;
+    private com.rtrk.atcommands.ATCommand.Pas pas_;
     /**
-     * <code>optional int32 pas = 8;</code>
+     * <code>optional .com.rtrk.protobuf.Pas pas = 8;</code>
      */
     public boolean hasPas() {
       return ((bitField0_ & 0x00000080) == 0x00000080);
     }
     /**
-     * <code>optional int32 pas = 8;</code>
+     * <code>optional .com.rtrk.protobuf.Pas pas = 8;</code>
      */
-    public int getPas() {
+    public com.rtrk.atcommands.ATCommand.Pas getPas() {
       return pas_;
     }
 
     public static final int STATUS_FIELD_NUMBER = 9;
-    private int status_;
+    private com.rtrk.atcommands.ATCommand.Status status_;
     /**
-     * <code>optional int32 status = 9;</code>
+     * <code>optional .com.rtrk.protobuf.Status status = 9 [default = STATUS_ON];</code>
      */
     public boolean hasStatus() {
       return ((bitField0_ & 0x00000100) == 0x00000100);
     }
     /**
-     * <code>optional int32 status = 9;</code>
+     * <code>optional .com.rtrk.protobuf.Status status = 9 [default = STATUS_ON];</code>
      */
-    public int getStatus() {
+    public com.rtrk.atcommands.ATCommand.Status getStatus() {
       return status_;
     }
 
@@ -41689,19 +46614,19 @@ public final class ATCommand {
       return refuseCall_;
     }
 
-    public static final int MODE_FIELD_NUMBER = 12;
-    private int mode_;
+    public static final int SHOWCALLSTATE_FIELD_NUMBER = 12;
+    private boolean showCallState_;
     /**
-     * <code>optional int32 mode = 12;</code>
+     * <code>optional bool showCallState = 12;</code>
      */
-    public boolean hasMode() {
+    public boolean hasShowCallState() {
       return ((bitField0_ & 0x00000800) == 0x00000800);
     }
     /**
-     * <code>optional int32 mode = 12;</code>
+     * <code>optional bool showCallState = 12;</code>
      */
-    public int getMode() {
-      return mode_;
+    public boolean getShowCallState() {
+      return showCallState_;
     }
 
     public static final int EXTUNSOL_FIELD_NUMBER = 13;
@@ -41761,19 +46686,19 @@ public final class ATCommand {
       return state_;
     }
 
-    public static final int ENABLE_FIELD_NUMBER = 15;
-    private boolean enable_;
+    public static final int SWITCHONSIMDETECTION_FIELD_NUMBER = 15;
+    private boolean switchOnSIMDetection_;
     /**
-     * <code>optional bool enable = 15;</code>
+     * <code>optional bool switchOnSIMDetection = 15;</code>
      */
-    public boolean hasEnable() {
+    public boolean hasSwitchOnSIMDetection() {
       return ((bitField0_ & 0x00004000) == 0x00004000);
     }
     /**
-     * <code>optional bool enable = 15;</code>
+     * <code>optional bool switchOnSIMDetection = 15;</code>
      */
-    public boolean getEnable() {
-      return enable_;
+    public boolean getSwitchOnSIMDetection() {
+      return switchOnSIMDetection_;
     }
 
     public static final int TIME_FIELD_NUMBER = 16;
@@ -41872,64 +46797,34 @@ public final class ATCommand {
       }
     }
 
-    public static final int INSERTLEVEL_FIELD_NUMBER = 18;
-    private int insertLevel_;
+    public static final int HIGHINSERTLEVEL_FIELD_NUMBER = 18;
+    private boolean highInsertLevel_;
     /**
-     * <code>optional int32 insertLevel = 18;</code>
+     * <code>optional bool highInsertLevel = 18;</code>
      */
-    public boolean hasInsertLevel() {
+    public boolean hasHighInsertLevel() {
       return ((bitField0_ & 0x00020000) == 0x00020000);
     }
     /**
-     * <code>optional int32 insertLevel = 18;</code>
+     * <code>optional bool highInsertLevel = 18;</code>
      */
-    public int getInsertLevel() {
-      return insertLevel_;
+    public boolean getHighInsertLevel() {
+      return highInsertLevel_;
     }
 
     public static final int PINCHOICE_FIELD_NUMBER = 19;
-    private int pinChoice_;
+    private com.rtrk.atcommands.ATCommand.SIMCardDetectionPIN pinChoice_;
     /**
-     * <code>optional int32 pinChoice = 19;</code>
+     * <code>optional .com.rtrk.protobuf.SIMCardDetectionPIN pinChoice = 19;</code>
      */
     public boolean hasPinChoice() {
       return ((bitField0_ & 0x00040000) == 0x00040000);
     }
     /**
-     * <code>optional int32 pinChoice = 19;</code>
+     * <code>optional .com.rtrk.protobuf.SIMCardDetectionPIN pinChoice = 19;</code>
      */
-    public int getPinChoice() {
+    public com.rtrk.atcommands.ATCommand.SIMCardDetectionPIN getPinChoice() {
       return pinChoice_;
-    }
-
-    public static final int INSERTSTATUS_FIELD_NUMBER = 20;
-    private int insertStatus_;
-    /**
-     * <code>optional int32 insertStatus = 20;</code>
-     */
-    public boolean hasInsertStatus() {
-      return ((bitField0_ & 0x00080000) == 0x00080000);
-    }
-    /**
-     * <code>optional int32 insertStatus = 20;</code>
-     */
-    public int getInsertStatus() {
-      return insertStatus_;
-    }
-
-    public static final int TYPE_FIELD_NUMBER = 21;
-    private int type_;
-    /**
-     * <code>optional int32 type = 21;</code>
-     */
-    public boolean hasType() {
-      return ((bitField0_ & 0x00100000) == 0x00100000);
-    }
-    /**
-     * <code>optional int32 type = 21;</code>
-     */
-    public int getType() {
-      return type_;
     }
 
     public static final int ISRESPONSE_FIELD_NUMBER = 22;
@@ -41938,7 +46833,7 @@ public final class ATCommand {
      * <code>optional bool isResponse = 22;</code>
      */
     public boolean hasIsResponse() {
-      return ((bitField0_ & 0x00200000) == 0x00200000);
+      return ((bitField0_ & 0x00080000) == 0x00080000);
     }
     /**
      * <code>optional bool isResponse = 22;</code>
@@ -41953,7 +46848,7 @@ public final class ATCommand {
      * <code>optional string description = 23;</code>
      */
     public boolean hasDescription() {
-      return ((bitField0_ & 0x00400000) == 0x00400000);
+      return ((bitField0_ & 0x00100000) == 0x00100000);
     }
     /**
      * <code>optional string description = 23;</code>
@@ -41989,6 +46884,156 @@ public final class ATCommand {
       }
     }
 
+    public static final int ENABLEURCPRESENTATION_FIELD_NUMBER = 24;
+    private boolean enableURCPresentation_;
+    /**
+     * <code>optional bool EnableURCPresentation = 24;</code>
+     */
+    public boolean hasEnableURCPresentation() {
+      return ((bitField0_ & 0x00200000) == 0x00200000);
+    }
+    /**
+     * <code>optional bool EnableURCPresentation = 24;</code>
+     */
+    public boolean getEnableURCPresentation() {
+      return enableURCPresentation_;
+    }
+
+    public static final int PUI_FIELD_NUMBER = 25;
+    private com.rtrk.atcommands.ATCommand.ProprietaryUnsolicitedIndications pui_;
+    /**
+     * <code>optional .com.rtrk.protobuf.ProprietaryUnsolicitedIndications pui = 25 [default = PUI_DISABLE];</code>
+     */
+    public boolean hasPui() {
+      return ((bitField0_ & 0x00400000) == 0x00400000);
+    }
+    /**
+     * <code>optional .com.rtrk.protobuf.ProprietaryUnsolicitedIndications pui = 25 [default = PUI_DISABLE];</code>
+     */
+    public com.rtrk.atcommands.ATCommand.ProprietaryUnsolicitedIndications getPui() {
+      return pui_;
+    }
+
+    public static final int SOF_FIELD_NUMBER = 26;
+    private com.rtrk.atcommands.ATCommand.StateOfInitialization sof_;
+    /**
+     * <code>optional .com.rtrk.protobuf.StateOfInitialization sof = 26;</code>
+     */
+    public boolean hasSof() {
+      return ((bitField0_ & 0x00800000) == 0x00800000);
+    }
+    /**
+     * <code>optional .com.rtrk.protobuf.StateOfInitialization sof = 26;</code>
+     */
+    public com.rtrk.atcommands.ATCommand.StateOfInitialization getSof() {
+      return sof_;
+    }
+
+    public static final int GSMNETWORKSTATUS_FIELD_NUMBER = 27;
+    private com.rtrk.atcommands.ATCommand.GSMNetworkStatus gsmNetworkStatus_;
+    /**
+     * <code>optional .com.rtrk.protobuf.GSMNetworkStatus gsmNetworkStatus = 27;</code>
+     */
+    public boolean hasGsmNetworkStatus() {
+      return ((bitField0_ & 0x01000000) == 0x01000000);
+    }
+    /**
+     * <code>optional .com.rtrk.protobuf.GSMNetworkStatus gsmNetworkStatus = 27;</code>
+     */
+    public com.rtrk.atcommands.ATCommand.GSMNetworkStatus getGsmNetworkStatus() {
+      return gsmNetworkStatus_;
+    }
+
+    public static final int RTCTIME_FIELD_NUMBER = 28;
+    private com.rtrk.atcommands.ATCommand.RTCTime rtcTime_;
+    /**
+     * <code>optional .com.rtrk.protobuf.RTCTime rtcTime = 28;</code>
+     */
+    public boolean hasRtcTime() {
+      return ((bitField0_ & 0x02000000) == 0x02000000);
+    }
+    /**
+     * <code>optional .com.rtrk.protobuf.RTCTime rtcTime = 28;</code>
+     */
+    public com.rtrk.atcommands.ATCommand.RTCTime getRtcTime() {
+      return rtcTime_;
+    }
+
+    public static final int TZCER_FIELD_NUMBER = 29;
+    private com.rtrk.atcommands.ATCommand.TimeZoneChangeEventReporting tzcer_;
+    /**
+     * <code>optional .com.rtrk.protobuf.TimeZoneChangeEventReporting tzcer = 29;</code>
+     */
+    public boolean hasTzcer() {
+      return ((bitField0_ & 0x04000000) == 0x04000000);
+    }
+    /**
+     * <code>optional .com.rtrk.protobuf.TimeZoneChangeEventReporting tzcer = 29;</code>
+     */
+    public com.rtrk.atcommands.ATCommand.TimeZoneChangeEventReporting getTzcer() {
+      return tzcer_;
+    }
+
+    public static final int SWITCHONDETECTINGSIMCARD_FIELD_NUMBER = 20;
+    private boolean switchONDetectingSIMCard_;
+    /**
+     * <code>optional bool switchONDetectingSIMCard = 20;</code>
+     */
+    public boolean hasSwitchONDetectingSIMCard() {
+      return ((bitField0_ & 0x08000000) == 0x08000000);
+    }
+    /**
+     * <code>optional bool switchONDetectingSIMCard = 20;</code>
+     */
+    public boolean getSwitchONDetectingSIMCard() {
+      return switchONDetectingSIMCard_;
+    }
+
+    public static final int SIMINSERTSTATUS_FIELD_NUMBER = 21;
+    private com.rtrk.atcommands.ATCommand.SIMCardInsertStatus simInsertStatus_;
+    /**
+     * <code>optional .com.rtrk.protobuf.SIMCardInsertStatus simInsertStatus = 21;</code>
+     */
+    public boolean hasSimInsertStatus() {
+      return ((bitField0_ & 0x10000000) == 0x10000000);
+    }
+    /**
+     * <code>optional .com.rtrk.protobuf.SIMCardInsertStatus simInsertStatus = 21;</code>
+     */
+    public com.rtrk.atcommands.ATCommand.SIMCardInsertStatus getSimInsertStatus() {
+      return simInsertStatus_;
+    }
+
+    public static final int ENABLECIRCUITSWITCHEDVOICECALL_FIELD_NUMBER = 30;
+    private boolean enableCircuitSwitchedVoiceCall_;
+    /**
+     * <code>optional bool enableCircuitSwitchedVoiceCall = 30;</code>
+     */
+    public boolean hasEnableCircuitSwitchedVoiceCall() {
+      return ((bitField0_ & 0x20000000) == 0x20000000);
+    }
+    /**
+     * <code>optional bool enableCircuitSwitchedVoiceCall = 30;</code>
+     */
+    public boolean getEnableCircuitSwitchedVoiceCall() {
+      return enableCircuitSwitchedVoiceCall_;
+    }
+
+    public static final int CONNECTIONTYPE_FIELD_NUMBER = 31;
+    private com.rtrk.atcommands.ATCommand.ConnectionType connectionType_;
+    /**
+     * <code>optional .com.rtrk.protobuf.ConnectionType connectionType = 31;</code>
+     */
+    public boolean hasConnectionType() {
+      return ((bitField0_ & 0x40000000) == 0x40000000);
+    }
+    /**
+     * <code>optional .com.rtrk.protobuf.ConnectionType connectionType = 31;</code>
+     */
+    public com.rtrk.atcommands.ATCommand.ConnectionType getConnectionType() {
+      return connectionType_;
+    }
+
     private void initFields() {
       messageType_ = com.rtrk.atcommands.ATCommand.StatusControlMessageType.EXTENDED_ERROR_REPORT;
       test_ = false;
@@ -41997,22 +47042,30 @@ public final class ATCommand {
       execution_ = false;
       locationID_ = 0;
       cause_ = "";
-      pas_ = 0;
-      status_ = 0;
+      pas_ = com.rtrk.atcommands.ATCommand.Pas.PAS_READY;
+      status_ = com.rtrk.atcommands.ATCommand.Status.STATUS_ON;
       refuseSMS_ = false;
       refuseCall_ = false;
-      mode_ = 0;
+      showCallState_ = false;
       extunsol_ = "";
       state_ = 0;
-      enable_ = false;
+      switchOnSIMDetection_ = false;
       time_ = "";
       datlightSavingTime_ = "";
-      insertLevel_ = 0;
-      pinChoice_ = 0;
-      insertStatus_ = 0;
-      type_ = 0;
+      highInsertLevel_ = false;
+      pinChoice_ = com.rtrk.atcommands.ATCommand.SIMCardDetectionPIN.CONFIGURE_SIM_PRESENCE_AS_SIM_CARD_DETECTION_PIN;
       isResponse_ = false;
       description_ = "";
+      enableURCPresentation_ = false;
+      pui_ = com.rtrk.atcommands.ATCommand.ProprietaryUnsolicitedIndications.PUI_DISABLE;
+      sof_ = com.rtrk.atcommands.ATCommand.StateOfInitialization.NO_INITIALIZATION;
+      gsmNetworkStatus_ = com.rtrk.atcommands.ATCommand.GSMNetworkStatus.WORK_IN_NORMAL_STATE;
+      rtcTime_ = com.rtrk.atcommands.ATCommand.RTCTime.DISABLE_AUTOMATIC_UPDATE_RTC_TIME_VIA_NITZ;
+      tzcer_ = com.rtrk.atcommands.ATCommand.TimeZoneChangeEventReporting.DISABLE_TIME_ZONE_CHANGE_EVENT_REPORTING;
+      switchONDetectingSIMCard_ = false;
+      simInsertStatus_ = com.rtrk.atcommands.ATCommand.SIMCardInsertStatus.LOW_LEVEL_OF_PIN_INDICATES_SIM_CARD_IS_PRESENT;
+      enableCircuitSwitchedVoiceCall_ = false;
+      connectionType_ = com.rtrk.atcommands.ATCommand.ConnectionType.CIRCUIT_SWITCHED_VOICE_CALL;
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -42053,10 +47106,10 @@ public final class ATCommand {
         output.writeBytes(7, getCauseBytes());
       }
       if (((bitField0_ & 0x00000080) == 0x00000080)) {
-        output.writeInt32(8, pas_);
+        output.writeEnum(8, pas_.getNumber());
       }
       if (((bitField0_ & 0x00000100) == 0x00000100)) {
-        output.writeInt32(9, status_);
+        output.writeEnum(9, status_.getNumber());
       }
       if (((bitField0_ & 0x00000200) == 0x00000200)) {
         output.writeBool(10, refuseSMS_);
@@ -42065,7 +47118,7 @@ public final class ATCommand {
         output.writeBool(11, refuseCall_);
       }
       if (((bitField0_ & 0x00000800) == 0x00000800)) {
-        output.writeInt32(12, mode_);
+        output.writeBool(12, showCallState_);
       }
       if (((bitField0_ & 0x00001000) == 0x00001000)) {
         output.writeBytes(13, getExtunsolBytes());
@@ -42074,7 +47127,7 @@ public final class ATCommand {
         output.writeInt32(14, state_);
       }
       if (((bitField0_ & 0x00004000) == 0x00004000)) {
-        output.writeBool(15, enable_);
+        output.writeBool(15, switchOnSIMDetection_);
       }
       if (((bitField0_ & 0x00008000) == 0x00008000)) {
         output.writeBytes(16, getTimeBytes());
@@ -42083,22 +47136,46 @@ public final class ATCommand {
         output.writeBytes(17, getDatlightSavingTimeBytes());
       }
       if (((bitField0_ & 0x00020000) == 0x00020000)) {
-        output.writeInt32(18, insertLevel_);
+        output.writeBool(18, highInsertLevel_);
       }
       if (((bitField0_ & 0x00040000) == 0x00040000)) {
-        output.writeInt32(19, pinChoice_);
+        output.writeEnum(19, pinChoice_.getNumber());
+      }
+      if (((bitField0_ & 0x08000000) == 0x08000000)) {
+        output.writeBool(20, switchONDetectingSIMCard_);
+      }
+      if (((bitField0_ & 0x10000000) == 0x10000000)) {
+        output.writeEnum(21, simInsertStatus_.getNumber());
       }
       if (((bitField0_ & 0x00080000) == 0x00080000)) {
-        output.writeInt32(20, insertStatus_);
-      }
-      if (((bitField0_ & 0x00100000) == 0x00100000)) {
-        output.writeInt32(21, type_);
-      }
-      if (((bitField0_ & 0x00200000) == 0x00200000)) {
         output.writeBool(22, isResponse_);
       }
-      if (((bitField0_ & 0x00400000) == 0x00400000)) {
+      if (((bitField0_ & 0x00100000) == 0x00100000)) {
         output.writeBytes(23, getDescriptionBytes());
+      }
+      if (((bitField0_ & 0x00200000) == 0x00200000)) {
+        output.writeBool(24, enableURCPresentation_);
+      }
+      if (((bitField0_ & 0x00400000) == 0x00400000)) {
+        output.writeEnum(25, pui_.getNumber());
+      }
+      if (((bitField0_ & 0x00800000) == 0x00800000)) {
+        output.writeEnum(26, sof_.getNumber());
+      }
+      if (((bitField0_ & 0x01000000) == 0x01000000)) {
+        output.writeEnum(27, gsmNetworkStatus_.getNumber());
+      }
+      if (((bitField0_ & 0x02000000) == 0x02000000)) {
+        output.writeEnum(28, rtcTime_.getNumber());
+      }
+      if (((bitField0_ & 0x04000000) == 0x04000000)) {
+        output.writeEnum(29, tzcer_.getNumber());
+      }
+      if (((bitField0_ & 0x20000000) == 0x20000000)) {
+        output.writeBool(30, enableCircuitSwitchedVoiceCall_);
+      }
+      if (((bitField0_ & 0x40000000) == 0x40000000)) {
+        output.writeEnum(31, connectionType_.getNumber());
       }
       getUnknownFields().writeTo(output);
     }
@@ -42139,11 +47216,11 @@ public final class ATCommand {
       }
       if (((bitField0_ & 0x00000080) == 0x00000080)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(8, pas_);
+          .computeEnumSize(8, pas_.getNumber());
       }
       if (((bitField0_ & 0x00000100) == 0x00000100)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(9, status_);
+          .computeEnumSize(9, status_.getNumber());
       }
       if (((bitField0_ & 0x00000200) == 0x00000200)) {
         size += com.google.protobuf.CodedOutputStream
@@ -42155,7 +47232,7 @@ public final class ATCommand {
       }
       if (((bitField0_ & 0x00000800) == 0x00000800)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(12, mode_);
+          .computeBoolSize(12, showCallState_);
       }
       if (((bitField0_ & 0x00001000) == 0x00001000)) {
         size += com.google.protobuf.CodedOutputStream
@@ -42167,7 +47244,7 @@ public final class ATCommand {
       }
       if (((bitField0_ & 0x00004000) == 0x00004000)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(15, enable_);
+          .computeBoolSize(15, switchOnSIMDetection_);
       }
       if (((bitField0_ & 0x00008000) == 0x00008000)) {
         size += com.google.protobuf.CodedOutputStream
@@ -42179,27 +47256,59 @@ public final class ATCommand {
       }
       if (((bitField0_ & 0x00020000) == 0x00020000)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(18, insertLevel_);
+          .computeBoolSize(18, highInsertLevel_);
       }
       if (((bitField0_ & 0x00040000) == 0x00040000)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(19, pinChoice_);
+          .computeEnumSize(19, pinChoice_.getNumber());
+      }
+      if (((bitField0_ & 0x08000000) == 0x08000000)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(20, switchONDetectingSIMCard_);
+      }
+      if (((bitField0_ & 0x10000000) == 0x10000000)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(21, simInsertStatus_.getNumber());
       }
       if (((bitField0_ & 0x00080000) == 0x00080000)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(20, insertStatus_);
+          .computeBoolSize(22, isResponse_);
       }
       if (((bitField0_ & 0x00100000) == 0x00100000)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(21, type_);
+          .computeBytesSize(23, getDescriptionBytes());
       }
       if (((bitField0_ & 0x00200000) == 0x00200000)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(22, isResponse_);
+          .computeBoolSize(24, enableURCPresentation_);
       }
       if (((bitField0_ & 0x00400000) == 0x00400000)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(23, getDescriptionBytes());
+          .computeEnumSize(25, pui_.getNumber());
+      }
+      if (((bitField0_ & 0x00800000) == 0x00800000)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(26, sof_.getNumber());
+      }
+      if (((bitField0_ & 0x01000000) == 0x01000000)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(27, gsmNetworkStatus_.getNumber());
+      }
+      if (((bitField0_ & 0x02000000) == 0x02000000)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(28, rtcTime_.getNumber());
+      }
+      if (((bitField0_ & 0x04000000) == 0x04000000)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(29, tzcer_.getNumber());
+      }
+      if (((bitField0_ & 0x20000000) == 0x20000000)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(30, enableCircuitSwitchedVoiceCall_);
+      }
+      if (((bitField0_ & 0x40000000) == 0x40000000)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(31, connectionType_.getNumber());
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -42332,38 +47441,54 @@ public final class ATCommand {
         bitField0_ = (bitField0_ & ~0x00000020);
         cause_ = "";
         bitField0_ = (bitField0_ & ~0x00000040);
-        pas_ = 0;
+        pas_ = com.rtrk.atcommands.ATCommand.Pas.PAS_READY;
         bitField0_ = (bitField0_ & ~0x00000080);
-        status_ = 0;
+        status_ = com.rtrk.atcommands.ATCommand.Status.STATUS_ON;
         bitField0_ = (bitField0_ & ~0x00000100);
         refuseSMS_ = false;
         bitField0_ = (bitField0_ & ~0x00000200);
         refuseCall_ = false;
         bitField0_ = (bitField0_ & ~0x00000400);
-        mode_ = 0;
+        showCallState_ = false;
         bitField0_ = (bitField0_ & ~0x00000800);
         extunsol_ = "";
         bitField0_ = (bitField0_ & ~0x00001000);
         state_ = 0;
         bitField0_ = (bitField0_ & ~0x00002000);
-        enable_ = false;
+        switchOnSIMDetection_ = false;
         bitField0_ = (bitField0_ & ~0x00004000);
         time_ = "";
         bitField0_ = (bitField0_ & ~0x00008000);
         datlightSavingTime_ = "";
         bitField0_ = (bitField0_ & ~0x00010000);
-        insertLevel_ = 0;
+        highInsertLevel_ = false;
         bitField0_ = (bitField0_ & ~0x00020000);
-        pinChoice_ = 0;
+        pinChoice_ = com.rtrk.atcommands.ATCommand.SIMCardDetectionPIN.CONFIGURE_SIM_PRESENCE_AS_SIM_CARD_DETECTION_PIN;
         bitField0_ = (bitField0_ & ~0x00040000);
-        insertStatus_ = 0;
-        bitField0_ = (bitField0_ & ~0x00080000);
-        type_ = 0;
-        bitField0_ = (bitField0_ & ~0x00100000);
         isResponse_ = false;
-        bitField0_ = (bitField0_ & ~0x00200000);
+        bitField0_ = (bitField0_ & ~0x00080000);
         description_ = "";
+        bitField0_ = (bitField0_ & ~0x00100000);
+        enableURCPresentation_ = false;
+        bitField0_ = (bitField0_ & ~0x00200000);
+        pui_ = com.rtrk.atcommands.ATCommand.ProprietaryUnsolicitedIndications.PUI_DISABLE;
         bitField0_ = (bitField0_ & ~0x00400000);
+        sof_ = com.rtrk.atcommands.ATCommand.StateOfInitialization.NO_INITIALIZATION;
+        bitField0_ = (bitField0_ & ~0x00800000);
+        gsmNetworkStatus_ = com.rtrk.atcommands.ATCommand.GSMNetworkStatus.WORK_IN_NORMAL_STATE;
+        bitField0_ = (bitField0_ & ~0x01000000);
+        rtcTime_ = com.rtrk.atcommands.ATCommand.RTCTime.DISABLE_AUTOMATIC_UPDATE_RTC_TIME_VIA_NITZ;
+        bitField0_ = (bitField0_ & ~0x02000000);
+        tzcer_ = com.rtrk.atcommands.ATCommand.TimeZoneChangeEventReporting.DISABLE_TIME_ZONE_CHANGE_EVENT_REPORTING;
+        bitField0_ = (bitField0_ & ~0x04000000);
+        switchONDetectingSIMCard_ = false;
+        bitField0_ = (bitField0_ & ~0x08000000);
+        simInsertStatus_ = com.rtrk.atcommands.ATCommand.SIMCardInsertStatus.LOW_LEVEL_OF_PIN_INDICATES_SIM_CARD_IS_PRESENT;
+        bitField0_ = (bitField0_ & ~0x10000000);
+        enableCircuitSwitchedVoiceCall_ = false;
+        bitField0_ = (bitField0_ & ~0x20000000);
+        connectionType_ = com.rtrk.atcommands.ATCommand.ConnectionType.CIRCUIT_SWITCHED_VOICE_CALL;
+        bitField0_ = (bitField0_ & ~0x40000000);
         return this;
       }
 
@@ -42439,7 +47564,7 @@ public final class ATCommand {
         if (((from_bitField0_ & 0x00000800) == 0x00000800)) {
           to_bitField0_ |= 0x00000800;
         }
-        result.mode_ = mode_;
+        result.showCallState_ = showCallState_;
         if (((from_bitField0_ & 0x00001000) == 0x00001000)) {
           to_bitField0_ |= 0x00001000;
         }
@@ -42451,7 +47576,7 @@ public final class ATCommand {
         if (((from_bitField0_ & 0x00004000) == 0x00004000)) {
           to_bitField0_ |= 0x00004000;
         }
-        result.enable_ = enable_;
+        result.switchOnSIMDetection_ = switchOnSIMDetection_;
         if (((from_bitField0_ & 0x00008000) == 0x00008000)) {
           to_bitField0_ |= 0x00008000;
         }
@@ -42463,7 +47588,7 @@ public final class ATCommand {
         if (((from_bitField0_ & 0x00020000) == 0x00020000)) {
           to_bitField0_ |= 0x00020000;
         }
-        result.insertLevel_ = insertLevel_;
+        result.highInsertLevel_ = highInsertLevel_;
         if (((from_bitField0_ & 0x00040000) == 0x00040000)) {
           to_bitField0_ |= 0x00040000;
         }
@@ -42471,19 +47596,51 @@ public final class ATCommand {
         if (((from_bitField0_ & 0x00080000) == 0x00080000)) {
           to_bitField0_ |= 0x00080000;
         }
-        result.insertStatus_ = insertStatus_;
+        result.isResponse_ = isResponse_;
         if (((from_bitField0_ & 0x00100000) == 0x00100000)) {
           to_bitField0_ |= 0x00100000;
         }
-        result.type_ = type_;
+        result.description_ = description_;
         if (((from_bitField0_ & 0x00200000) == 0x00200000)) {
           to_bitField0_ |= 0x00200000;
         }
-        result.isResponse_ = isResponse_;
+        result.enableURCPresentation_ = enableURCPresentation_;
         if (((from_bitField0_ & 0x00400000) == 0x00400000)) {
           to_bitField0_ |= 0x00400000;
         }
-        result.description_ = description_;
+        result.pui_ = pui_;
+        if (((from_bitField0_ & 0x00800000) == 0x00800000)) {
+          to_bitField0_ |= 0x00800000;
+        }
+        result.sof_ = sof_;
+        if (((from_bitField0_ & 0x01000000) == 0x01000000)) {
+          to_bitField0_ |= 0x01000000;
+        }
+        result.gsmNetworkStatus_ = gsmNetworkStatus_;
+        if (((from_bitField0_ & 0x02000000) == 0x02000000)) {
+          to_bitField0_ |= 0x02000000;
+        }
+        result.rtcTime_ = rtcTime_;
+        if (((from_bitField0_ & 0x04000000) == 0x04000000)) {
+          to_bitField0_ |= 0x04000000;
+        }
+        result.tzcer_ = tzcer_;
+        if (((from_bitField0_ & 0x08000000) == 0x08000000)) {
+          to_bitField0_ |= 0x08000000;
+        }
+        result.switchONDetectingSIMCard_ = switchONDetectingSIMCard_;
+        if (((from_bitField0_ & 0x10000000) == 0x10000000)) {
+          to_bitField0_ |= 0x10000000;
+        }
+        result.simInsertStatus_ = simInsertStatus_;
+        if (((from_bitField0_ & 0x20000000) == 0x20000000)) {
+          to_bitField0_ |= 0x20000000;
+        }
+        result.enableCircuitSwitchedVoiceCall_ = enableCircuitSwitchedVoiceCall_;
+        if (((from_bitField0_ & 0x40000000) == 0x40000000)) {
+          to_bitField0_ |= 0x40000000;
+        }
+        result.connectionType_ = connectionType_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -42535,8 +47692,8 @@ public final class ATCommand {
         if (other.hasRefuseCall()) {
           setRefuseCall(other.getRefuseCall());
         }
-        if (other.hasMode()) {
-          setMode(other.getMode());
+        if (other.hasShowCallState()) {
+          setShowCallState(other.getShowCallState());
         }
         if (other.hasExtunsol()) {
           bitField0_ |= 0x00001000;
@@ -42546,8 +47703,8 @@ public final class ATCommand {
         if (other.hasState()) {
           setState(other.getState());
         }
-        if (other.hasEnable()) {
-          setEnable(other.getEnable());
+        if (other.hasSwitchOnSIMDetection()) {
+          setSwitchOnSIMDetection(other.getSwitchOnSIMDetection());
         }
         if (other.hasTime()) {
           bitField0_ |= 0x00008000;
@@ -42559,25 +47716,49 @@ public final class ATCommand {
           datlightSavingTime_ = other.datlightSavingTime_;
           onChanged();
         }
-        if (other.hasInsertLevel()) {
-          setInsertLevel(other.getInsertLevel());
+        if (other.hasHighInsertLevel()) {
+          setHighInsertLevel(other.getHighInsertLevel());
         }
         if (other.hasPinChoice()) {
           setPinChoice(other.getPinChoice());
-        }
-        if (other.hasInsertStatus()) {
-          setInsertStatus(other.getInsertStatus());
-        }
-        if (other.hasType()) {
-          setType(other.getType());
         }
         if (other.hasIsResponse()) {
           setIsResponse(other.getIsResponse());
         }
         if (other.hasDescription()) {
-          bitField0_ |= 0x00400000;
+          bitField0_ |= 0x00100000;
           description_ = other.description_;
           onChanged();
+        }
+        if (other.hasEnableURCPresentation()) {
+          setEnableURCPresentation(other.getEnableURCPresentation());
+        }
+        if (other.hasPui()) {
+          setPui(other.getPui());
+        }
+        if (other.hasSof()) {
+          setSof(other.getSof());
+        }
+        if (other.hasGsmNetworkStatus()) {
+          setGsmNetworkStatus(other.getGsmNetworkStatus());
+        }
+        if (other.hasRtcTime()) {
+          setRtcTime(other.getRtcTime());
+        }
+        if (other.hasTzcer()) {
+          setTzcer(other.getTzcer());
+        }
+        if (other.hasSwitchONDetectingSIMCard()) {
+          setSwitchONDetectingSIMCard(other.getSwitchONDetectingSIMCard());
+        }
+        if (other.hasSimInsertStatus()) {
+          setSimInsertStatus(other.getSimInsertStatus());
+        }
+        if (other.hasEnableCircuitSwitchedVoiceCall()) {
+          setEnableCircuitSwitchedVoiceCall(other.getEnableCircuitSwitchedVoiceCall());
+        }
+        if (other.hasConnectionType()) {
+          setConnectionType(other.getConnectionType());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
@@ -42881,66 +48062,72 @@ public final class ATCommand {
         return this;
       }
 
-      private int pas_ ;
+      private com.rtrk.atcommands.ATCommand.Pas pas_ = com.rtrk.atcommands.ATCommand.Pas.PAS_READY;
       /**
-       * <code>optional int32 pas = 8;</code>
+       * <code>optional .com.rtrk.protobuf.Pas pas = 8;</code>
        */
       public boolean hasPas() {
         return ((bitField0_ & 0x00000080) == 0x00000080);
       }
       /**
-       * <code>optional int32 pas = 8;</code>
+       * <code>optional .com.rtrk.protobuf.Pas pas = 8;</code>
        */
-      public int getPas() {
+      public com.rtrk.atcommands.ATCommand.Pas getPas() {
         return pas_;
       }
       /**
-       * <code>optional int32 pas = 8;</code>
+       * <code>optional .com.rtrk.protobuf.Pas pas = 8;</code>
        */
-      public Builder setPas(int value) {
+      public Builder setPas(com.rtrk.atcommands.ATCommand.Pas value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
         bitField0_ |= 0x00000080;
         pas_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>optional int32 pas = 8;</code>
+       * <code>optional .com.rtrk.protobuf.Pas pas = 8;</code>
        */
       public Builder clearPas() {
         bitField0_ = (bitField0_ & ~0x00000080);
-        pas_ = 0;
+        pas_ = com.rtrk.atcommands.ATCommand.Pas.PAS_READY;
         onChanged();
         return this;
       }
 
-      private int status_ ;
+      private com.rtrk.atcommands.ATCommand.Status status_ = com.rtrk.atcommands.ATCommand.Status.STATUS_ON;
       /**
-       * <code>optional int32 status = 9;</code>
+       * <code>optional .com.rtrk.protobuf.Status status = 9 [default = STATUS_ON];</code>
        */
       public boolean hasStatus() {
         return ((bitField0_ & 0x00000100) == 0x00000100);
       }
       /**
-       * <code>optional int32 status = 9;</code>
+       * <code>optional .com.rtrk.protobuf.Status status = 9 [default = STATUS_ON];</code>
        */
-      public int getStatus() {
+      public com.rtrk.atcommands.ATCommand.Status getStatus() {
         return status_;
       }
       /**
-       * <code>optional int32 status = 9;</code>
+       * <code>optional .com.rtrk.protobuf.Status status = 9 [default = STATUS_ON];</code>
        */
-      public Builder setStatus(int value) {
+      public Builder setStatus(com.rtrk.atcommands.ATCommand.Status value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
         bitField0_ |= 0x00000100;
         status_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>optional int32 status = 9;</code>
+       * <code>optional .com.rtrk.protobuf.Status status = 9 [default = STATUS_ON];</code>
        */
       public Builder clearStatus() {
         bitField0_ = (bitField0_ & ~0x00000100);
-        status_ = 0;
+        status_ = com.rtrk.atcommands.ATCommand.Status.STATUS_ON;
         onChanged();
         return this;
       }
@@ -43009,34 +48196,34 @@ public final class ATCommand {
         return this;
       }
 
-      private int mode_ ;
+      private boolean showCallState_ ;
       /**
-       * <code>optional int32 mode = 12;</code>
+       * <code>optional bool showCallState = 12;</code>
        */
-      public boolean hasMode() {
+      public boolean hasShowCallState() {
         return ((bitField0_ & 0x00000800) == 0x00000800);
       }
       /**
-       * <code>optional int32 mode = 12;</code>
+       * <code>optional bool showCallState = 12;</code>
        */
-      public int getMode() {
-        return mode_;
+      public boolean getShowCallState() {
+        return showCallState_;
       }
       /**
-       * <code>optional int32 mode = 12;</code>
+       * <code>optional bool showCallState = 12;</code>
        */
-      public Builder setMode(int value) {
+      public Builder setShowCallState(boolean value) {
         bitField0_ |= 0x00000800;
-        mode_ = value;
+        showCallState_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>optional int32 mode = 12;</code>
+       * <code>optional bool showCallState = 12;</code>
        */
-      public Builder clearMode() {
+      public Builder clearShowCallState() {
         bitField0_ = (bitField0_ & ~0x00000800);
-        mode_ = 0;
+        showCallState_ = false;
         onChanged();
         return this;
       }
@@ -43149,34 +48336,34 @@ public final class ATCommand {
         return this;
       }
 
-      private boolean enable_ ;
+      private boolean switchOnSIMDetection_ ;
       /**
-       * <code>optional bool enable = 15;</code>
+       * <code>optional bool switchOnSIMDetection = 15;</code>
        */
-      public boolean hasEnable() {
+      public boolean hasSwitchOnSIMDetection() {
         return ((bitField0_ & 0x00004000) == 0x00004000);
       }
       /**
-       * <code>optional bool enable = 15;</code>
+       * <code>optional bool switchOnSIMDetection = 15;</code>
        */
-      public boolean getEnable() {
-        return enable_;
+      public boolean getSwitchOnSIMDetection() {
+        return switchOnSIMDetection_;
       }
       /**
-       * <code>optional bool enable = 15;</code>
+       * <code>optional bool switchOnSIMDetection = 15;</code>
        */
-      public Builder setEnable(boolean value) {
+      public Builder setSwitchOnSIMDetection(boolean value) {
         bitField0_ |= 0x00004000;
-        enable_ = value;
+        switchOnSIMDetection_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>optional bool enable = 15;</code>
+       * <code>optional bool switchOnSIMDetection = 15;</code>
        */
-      public Builder clearEnable() {
+      public Builder clearSwitchOnSIMDetection() {
         bitField0_ = (bitField0_ & ~0x00004000);
-        enable_ = false;
+        switchOnSIMDetection_ = false;
         onChanged();
         return this;
       }
@@ -43357,130 +48544,69 @@ public final class ATCommand {
         return this;
       }
 
-      private int insertLevel_ ;
+      private boolean highInsertLevel_ ;
       /**
-       * <code>optional int32 insertLevel = 18;</code>
+       * <code>optional bool highInsertLevel = 18;</code>
        */
-      public boolean hasInsertLevel() {
+      public boolean hasHighInsertLevel() {
         return ((bitField0_ & 0x00020000) == 0x00020000);
       }
       /**
-       * <code>optional int32 insertLevel = 18;</code>
+       * <code>optional bool highInsertLevel = 18;</code>
        */
-      public int getInsertLevel() {
-        return insertLevel_;
+      public boolean getHighInsertLevel() {
+        return highInsertLevel_;
       }
       /**
-       * <code>optional int32 insertLevel = 18;</code>
+       * <code>optional bool highInsertLevel = 18;</code>
        */
-      public Builder setInsertLevel(int value) {
+      public Builder setHighInsertLevel(boolean value) {
         bitField0_ |= 0x00020000;
-        insertLevel_ = value;
+        highInsertLevel_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>optional int32 insertLevel = 18;</code>
+       * <code>optional bool highInsertLevel = 18;</code>
        */
-      public Builder clearInsertLevel() {
+      public Builder clearHighInsertLevel() {
         bitField0_ = (bitField0_ & ~0x00020000);
-        insertLevel_ = 0;
+        highInsertLevel_ = false;
         onChanged();
         return this;
       }
 
-      private int pinChoice_ ;
+      private com.rtrk.atcommands.ATCommand.SIMCardDetectionPIN pinChoice_ = com.rtrk.atcommands.ATCommand.SIMCardDetectionPIN.CONFIGURE_SIM_PRESENCE_AS_SIM_CARD_DETECTION_PIN;
       /**
-       * <code>optional int32 pinChoice = 19;</code>
+       * <code>optional .com.rtrk.protobuf.SIMCardDetectionPIN pinChoice = 19;</code>
        */
       public boolean hasPinChoice() {
         return ((bitField0_ & 0x00040000) == 0x00040000);
       }
       /**
-       * <code>optional int32 pinChoice = 19;</code>
+       * <code>optional .com.rtrk.protobuf.SIMCardDetectionPIN pinChoice = 19;</code>
        */
-      public int getPinChoice() {
+      public com.rtrk.atcommands.ATCommand.SIMCardDetectionPIN getPinChoice() {
         return pinChoice_;
       }
       /**
-       * <code>optional int32 pinChoice = 19;</code>
+       * <code>optional .com.rtrk.protobuf.SIMCardDetectionPIN pinChoice = 19;</code>
        */
-      public Builder setPinChoice(int value) {
+      public Builder setPinChoice(com.rtrk.atcommands.ATCommand.SIMCardDetectionPIN value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
         bitField0_ |= 0x00040000;
         pinChoice_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>optional int32 pinChoice = 19;</code>
+       * <code>optional .com.rtrk.protobuf.SIMCardDetectionPIN pinChoice = 19;</code>
        */
       public Builder clearPinChoice() {
         bitField0_ = (bitField0_ & ~0x00040000);
-        pinChoice_ = 0;
-        onChanged();
-        return this;
-      }
-
-      private int insertStatus_ ;
-      /**
-       * <code>optional int32 insertStatus = 20;</code>
-       */
-      public boolean hasInsertStatus() {
-        return ((bitField0_ & 0x00080000) == 0x00080000);
-      }
-      /**
-       * <code>optional int32 insertStatus = 20;</code>
-       */
-      public int getInsertStatus() {
-        return insertStatus_;
-      }
-      /**
-       * <code>optional int32 insertStatus = 20;</code>
-       */
-      public Builder setInsertStatus(int value) {
-        bitField0_ |= 0x00080000;
-        insertStatus_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional int32 insertStatus = 20;</code>
-       */
-      public Builder clearInsertStatus() {
-        bitField0_ = (bitField0_ & ~0x00080000);
-        insertStatus_ = 0;
-        onChanged();
-        return this;
-      }
-
-      private int type_ ;
-      /**
-       * <code>optional int32 type = 21;</code>
-       */
-      public boolean hasType() {
-        return ((bitField0_ & 0x00100000) == 0x00100000);
-      }
-      /**
-       * <code>optional int32 type = 21;</code>
-       */
-      public int getType() {
-        return type_;
-      }
-      /**
-       * <code>optional int32 type = 21;</code>
-       */
-      public Builder setType(int value) {
-        bitField0_ |= 0x00100000;
-        type_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional int32 type = 21;</code>
-       */
-      public Builder clearType() {
-        bitField0_ = (bitField0_ & ~0x00100000);
-        type_ = 0;
+        pinChoice_ = com.rtrk.atcommands.ATCommand.SIMCardDetectionPIN.CONFIGURE_SIM_PRESENCE_AS_SIM_CARD_DETECTION_PIN;
         onChanged();
         return this;
       }
@@ -43490,7 +48616,7 @@ public final class ATCommand {
        * <code>optional bool isResponse = 22;</code>
        */
       public boolean hasIsResponse() {
-        return ((bitField0_ & 0x00200000) == 0x00200000);
+        return ((bitField0_ & 0x00080000) == 0x00080000);
       }
       /**
        * <code>optional bool isResponse = 22;</code>
@@ -43502,7 +48628,7 @@ public final class ATCommand {
        * <code>optional bool isResponse = 22;</code>
        */
       public Builder setIsResponse(boolean value) {
-        bitField0_ |= 0x00200000;
+        bitField0_ |= 0x00080000;
         isResponse_ = value;
         onChanged();
         return this;
@@ -43511,7 +48637,7 @@ public final class ATCommand {
        * <code>optional bool isResponse = 22;</code>
        */
       public Builder clearIsResponse() {
-        bitField0_ = (bitField0_ & ~0x00200000);
+        bitField0_ = (bitField0_ & ~0x00080000);
         isResponse_ = false;
         onChanged();
         return this;
@@ -43522,7 +48648,7 @@ public final class ATCommand {
        * <code>optional string description = 23;</code>
        */
       public boolean hasDescription() {
-        return ((bitField0_ & 0x00400000) == 0x00400000);
+        return ((bitField0_ & 0x00100000) == 0x00100000);
       }
       /**
        * <code>optional string description = 23;</code>
@@ -43565,7 +48691,7 @@ public final class ATCommand {
         if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00400000;
+  bitField0_ |= 0x00100000;
         description_ = value;
         onChanged();
         return this;
@@ -43574,7 +48700,7 @@ public final class ATCommand {
        * <code>optional string description = 23;</code>
        */
       public Builder clearDescription() {
-        bitField0_ = (bitField0_ & ~0x00400000);
+        bitField0_ = (bitField0_ & ~0x00100000);
         description_ = getDefaultInstance().getDescription();
         onChanged();
         return this;
@@ -43587,8 +48713,349 @@ public final class ATCommand {
         if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00400000;
+  bitField0_ |= 0x00100000;
         description_ = value;
+        onChanged();
+        return this;
+      }
+
+      private boolean enableURCPresentation_ ;
+      /**
+       * <code>optional bool EnableURCPresentation = 24;</code>
+       */
+      public boolean hasEnableURCPresentation() {
+        return ((bitField0_ & 0x00200000) == 0x00200000);
+      }
+      /**
+       * <code>optional bool EnableURCPresentation = 24;</code>
+       */
+      public boolean getEnableURCPresentation() {
+        return enableURCPresentation_;
+      }
+      /**
+       * <code>optional bool EnableURCPresentation = 24;</code>
+       */
+      public Builder setEnableURCPresentation(boolean value) {
+        bitField0_ |= 0x00200000;
+        enableURCPresentation_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool EnableURCPresentation = 24;</code>
+       */
+      public Builder clearEnableURCPresentation() {
+        bitField0_ = (bitField0_ & ~0x00200000);
+        enableURCPresentation_ = false;
+        onChanged();
+        return this;
+      }
+
+      private com.rtrk.atcommands.ATCommand.ProprietaryUnsolicitedIndications pui_ = com.rtrk.atcommands.ATCommand.ProprietaryUnsolicitedIndications.PUI_DISABLE;
+      /**
+       * <code>optional .com.rtrk.protobuf.ProprietaryUnsolicitedIndications pui = 25 [default = PUI_DISABLE];</code>
+       */
+      public boolean hasPui() {
+        return ((bitField0_ & 0x00400000) == 0x00400000);
+      }
+      /**
+       * <code>optional .com.rtrk.protobuf.ProprietaryUnsolicitedIndications pui = 25 [default = PUI_DISABLE];</code>
+       */
+      public com.rtrk.atcommands.ATCommand.ProprietaryUnsolicitedIndications getPui() {
+        return pui_;
+      }
+      /**
+       * <code>optional .com.rtrk.protobuf.ProprietaryUnsolicitedIndications pui = 25 [default = PUI_DISABLE];</code>
+       */
+      public Builder setPui(com.rtrk.atcommands.ATCommand.ProprietaryUnsolicitedIndications value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00400000;
+        pui_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .com.rtrk.protobuf.ProprietaryUnsolicitedIndications pui = 25 [default = PUI_DISABLE];</code>
+       */
+      public Builder clearPui() {
+        bitField0_ = (bitField0_ & ~0x00400000);
+        pui_ = com.rtrk.atcommands.ATCommand.ProprietaryUnsolicitedIndications.PUI_DISABLE;
+        onChanged();
+        return this;
+      }
+
+      private com.rtrk.atcommands.ATCommand.StateOfInitialization sof_ = com.rtrk.atcommands.ATCommand.StateOfInitialization.NO_INITIALIZATION;
+      /**
+       * <code>optional .com.rtrk.protobuf.StateOfInitialization sof = 26;</code>
+       */
+      public boolean hasSof() {
+        return ((bitField0_ & 0x00800000) == 0x00800000);
+      }
+      /**
+       * <code>optional .com.rtrk.protobuf.StateOfInitialization sof = 26;</code>
+       */
+      public com.rtrk.atcommands.ATCommand.StateOfInitialization getSof() {
+        return sof_;
+      }
+      /**
+       * <code>optional .com.rtrk.protobuf.StateOfInitialization sof = 26;</code>
+       */
+      public Builder setSof(com.rtrk.atcommands.ATCommand.StateOfInitialization value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00800000;
+        sof_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .com.rtrk.protobuf.StateOfInitialization sof = 26;</code>
+       */
+      public Builder clearSof() {
+        bitField0_ = (bitField0_ & ~0x00800000);
+        sof_ = com.rtrk.atcommands.ATCommand.StateOfInitialization.NO_INITIALIZATION;
+        onChanged();
+        return this;
+      }
+
+      private com.rtrk.atcommands.ATCommand.GSMNetworkStatus gsmNetworkStatus_ = com.rtrk.atcommands.ATCommand.GSMNetworkStatus.WORK_IN_NORMAL_STATE;
+      /**
+       * <code>optional .com.rtrk.protobuf.GSMNetworkStatus gsmNetworkStatus = 27;</code>
+       */
+      public boolean hasGsmNetworkStatus() {
+        return ((bitField0_ & 0x01000000) == 0x01000000);
+      }
+      /**
+       * <code>optional .com.rtrk.protobuf.GSMNetworkStatus gsmNetworkStatus = 27;</code>
+       */
+      public com.rtrk.atcommands.ATCommand.GSMNetworkStatus getGsmNetworkStatus() {
+        return gsmNetworkStatus_;
+      }
+      /**
+       * <code>optional .com.rtrk.protobuf.GSMNetworkStatus gsmNetworkStatus = 27;</code>
+       */
+      public Builder setGsmNetworkStatus(com.rtrk.atcommands.ATCommand.GSMNetworkStatus value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x01000000;
+        gsmNetworkStatus_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .com.rtrk.protobuf.GSMNetworkStatus gsmNetworkStatus = 27;</code>
+       */
+      public Builder clearGsmNetworkStatus() {
+        bitField0_ = (bitField0_ & ~0x01000000);
+        gsmNetworkStatus_ = com.rtrk.atcommands.ATCommand.GSMNetworkStatus.WORK_IN_NORMAL_STATE;
+        onChanged();
+        return this;
+      }
+
+      private com.rtrk.atcommands.ATCommand.RTCTime rtcTime_ = com.rtrk.atcommands.ATCommand.RTCTime.DISABLE_AUTOMATIC_UPDATE_RTC_TIME_VIA_NITZ;
+      /**
+       * <code>optional .com.rtrk.protobuf.RTCTime rtcTime = 28;</code>
+       */
+      public boolean hasRtcTime() {
+        return ((bitField0_ & 0x02000000) == 0x02000000);
+      }
+      /**
+       * <code>optional .com.rtrk.protobuf.RTCTime rtcTime = 28;</code>
+       */
+      public com.rtrk.atcommands.ATCommand.RTCTime getRtcTime() {
+        return rtcTime_;
+      }
+      /**
+       * <code>optional .com.rtrk.protobuf.RTCTime rtcTime = 28;</code>
+       */
+      public Builder setRtcTime(com.rtrk.atcommands.ATCommand.RTCTime value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x02000000;
+        rtcTime_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .com.rtrk.protobuf.RTCTime rtcTime = 28;</code>
+       */
+      public Builder clearRtcTime() {
+        bitField0_ = (bitField0_ & ~0x02000000);
+        rtcTime_ = com.rtrk.atcommands.ATCommand.RTCTime.DISABLE_AUTOMATIC_UPDATE_RTC_TIME_VIA_NITZ;
+        onChanged();
+        return this;
+      }
+
+      private com.rtrk.atcommands.ATCommand.TimeZoneChangeEventReporting tzcer_ = com.rtrk.atcommands.ATCommand.TimeZoneChangeEventReporting.DISABLE_TIME_ZONE_CHANGE_EVENT_REPORTING;
+      /**
+       * <code>optional .com.rtrk.protobuf.TimeZoneChangeEventReporting tzcer = 29;</code>
+       */
+      public boolean hasTzcer() {
+        return ((bitField0_ & 0x04000000) == 0x04000000);
+      }
+      /**
+       * <code>optional .com.rtrk.protobuf.TimeZoneChangeEventReporting tzcer = 29;</code>
+       */
+      public com.rtrk.atcommands.ATCommand.TimeZoneChangeEventReporting getTzcer() {
+        return tzcer_;
+      }
+      /**
+       * <code>optional .com.rtrk.protobuf.TimeZoneChangeEventReporting tzcer = 29;</code>
+       */
+      public Builder setTzcer(com.rtrk.atcommands.ATCommand.TimeZoneChangeEventReporting value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x04000000;
+        tzcer_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .com.rtrk.protobuf.TimeZoneChangeEventReporting tzcer = 29;</code>
+       */
+      public Builder clearTzcer() {
+        bitField0_ = (bitField0_ & ~0x04000000);
+        tzcer_ = com.rtrk.atcommands.ATCommand.TimeZoneChangeEventReporting.DISABLE_TIME_ZONE_CHANGE_EVENT_REPORTING;
+        onChanged();
+        return this;
+      }
+
+      private boolean switchONDetectingSIMCard_ ;
+      /**
+       * <code>optional bool switchONDetectingSIMCard = 20;</code>
+       */
+      public boolean hasSwitchONDetectingSIMCard() {
+        return ((bitField0_ & 0x08000000) == 0x08000000);
+      }
+      /**
+       * <code>optional bool switchONDetectingSIMCard = 20;</code>
+       */
+      public boolean getSwitchONDetectingSIMCard() {
+        return switchONDetectingSIMCard_;
+      }
+      /**
+       * <code>optional bool switchONDetectingSIMCard = 20;</code>
+       */
+      public Builder setSwitchONDetectingSIMCard(boolean value) {
+        bitField0_ |= 0x08000000;
+        switchONDetectingSIMCard_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool switchONDetectingSIMCard = 20;</code>
+       */
+      public Builder clearSwitchONDetectingSIMCard() {
+        bitField0_ = (bitField0_ & ~0x08000000);
+        switchONDetectingSIMCard_ = false;
+        onChanged();
+        return this;
+      }
+
+      private com.rtrk.atcommands.ATCommand.SIMCardInsertStatus simInsertStatus_ = com.rtrk.atcommands.ATCommand.SIMCardInsertStatus.LOW_LEVEL_OF_PIN_INDICATES_SIM_CARD_IS_PRESENT;
+      /**
+       * <code>optional .com.rtrk.protobuf.SIMCardInsertStatus simInsertStatus = 21;</code>
+       */
+      public boolean hasSimInsertStatus() {
+        return ((bitField0_ & 0x10000000) == 0x10000000);
+      }
+      /**
+       * <code>optional .com.rtrk.protobuf.SIMCardInsertStatus simInsertStatus = 21;</code>
+       */
+      public com.rtrk.atcommands.ATCommand.SIMCardInsertStatus getSimInsertStatus() {
+        return simInsertStatus_;
+      }
+      /**
+       * <code>optional .com.rtrk.protobuf.SIMCardInsertStatus simInsertStatus = 21;</code>
+       */
+      public Builder setSimInsertStatus(com.rtrk.atcommands.ATCommand.SIMCardInsertStatus value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x10000000;
+        simInsertStatus_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .com.rtrk.protobuf.SIMCardInsertStatus simInsertStatus = 21;</code>
+       */
+      public Builder clearSimInsertStatus() {
+        bitField0_ = (bitField0_ & ~0x10000000);
+        simInsertStatus_ = com.rtrk.atcommands.ATCommand.SIMCardInsertStatus.LOW_LEVEL_OF_PIN_INDICATES_SIM_CARD_IS_PRESENT;
+        onChanged();
+        return this;
+      }
+
+      private boolean enableCircuitSwitchedVoiceCall_ ;
+      /**
+       * <code>optional bool enableCircuitSwitchedVoiceCall = 30;</code>
+       */
+      public boolean hasEnableCircuitSwitchedVoiceCall() {
+        return ((bitField0_ & 0x20000000) == 0x20000000);
+      }
+      /**
+       * <code>optional bool enableCircuitSwitchedVoiceCall = 30;</code>
+       */
+      public boolean getEnableCircuitSwitchedVoiceCall() {
+        return enableCircuitSwitchedVoiceCall_;
+      }
+      /**
+       * <code>optional bool enableCircuitSwitchedVoiceCall = 30;</code>
+       */
+      public Builder setEnableCircuitSwitchedVoiceCall(boolean value) {
+        bitField0_ |= 0x20000000;
+        enableCircuitSwitchedVoiceCall_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool enableCircuitSwitchedVoiceCall = 30;</code>
+       */
+      public Builder clearEnableCircuitSwitchedVoiceCall() {
+        bitField0_ = (bitField0_ & ~0x20000000);
+        enableCircuitSwitchedVoiceCall_ = false;
+        onChanged();
+        return this;
+      }
+
+      private com.rtrk.atcommands.ATCommand.ConnectionType connectionType_ = com.rtrk.atcommands.ATCommand.ConnectionType.CIRCUIT_SWITCHED_VOICE_CALL;
+      /**
+       * <code>optional .com.rtrk.protobuf.ConnectionType connectionType = 31;</code>
+       */
+      public boolean hasConnectionType() {
+        return ((bitField0_ & 0x40000000) == 0x40000000);
+      }
+      /**
+       * <code>optional .com.rtrk.protobuf.ConnectionType connectionType = 31;</code>
+       */
+      public com.rtrk.atcommands.ATCommand.ConnectionType getConnectionType() {
+        return connectionType_;
+      }
+      /**
+       * <code>optional .com.rtrk.protobuf.ConnectionType connectionType = 31;</code>
+       */
+      public Builder setConnectionType(com.rtrk.atcommands.ATCommand.ConnectionType value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x40000000;
+        connectionType_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .com.rtrk.protobuf.ConnectionType connectionType = 31;</code>
+       */
+      public Builder clearConnectionType() {
+        bitField0_ = (bitField0_ & ~0x40000000);
+        connectionType_ = com.rtrk.atcommands.ATCommand.ConnectionType.CIRCUIT_SWITCHED_VOICE_CALL;
         onChanged();
         return this;
       }
@@ -80611,7 +86078,7 @@ public final class ATCommand {
       "\023\n\013outputStyle\030# \001(\010\022\020\n\010fileType\030$ \001(\005\022\022" +
       "\n\nisResponse\030\' \001(\010\022\023\n\013description\030( \001(\t\022" +
       "9\n\016operateSendMMS\030. \001(\0162!.com.rtrk.proto" +
-      "buf.OperateSendMMS\"\223\n\n\017QuecCellCommand\022;" +
+      "buf.OperateSendMMS\"\267\n\n\017QuecCellCommand\022;" +
       "\n\013messageType\030\001 \002(\0162&.com.rtrk.protobuf." +
       "QuecCellMessageType\022\014\n\004test\030\002 \001(\010\022\014\n\004rea" +
       "d\030\003 \001(\010\022\r\n\005write\030\004 \001(\010\022\021\n\texecution\030\005 \001(" +
@@ -80622,723 +86089,891 @@ public final class ATCommand {
       "ionAreaCode\030\013 \001(\005\022\016\n\006cellID\030\014 \001(\005\022\037\n\027bas" +
       "eStationIdentityCode\030\r \001(\005\022\024\n\014receiveLev" +
       "el\030\016 \001(\005\022+\n#absoluteRadioFrequencyChanne" +
-      "lNumber\030\017 \001(\005\022\027\n\017engineeringMode\030, \001(\005\022%" +
-      "\n\004dump\030\020 \001(\0162\027.com.rtrk.protobuf.Dump\022\031\n" +
-      "\021mobileCountryCode\030\021 \001(\005\022\031\n\021mobileNetwor" +
-      "kCode\030\022 \001(\005\022\037\n\027broadcastControlChannel\030\023",
-      " \001(\005\022\031\n\021receiveSignalLeve\030\024 \001(\001\022\n\n\002c1\030\025 " +
-      "\001(\005\022\n\n\002c2\030\026 \001(\005\022\034\n\024transmitPowerMaximum\030" +
-      "\027 \001(\001\022\032\n\022receiveLevelAccess\030\030 \001(\005\022\021\n\ttim" +
-      "eslots\030\031 \001(\005\022\021\n\tMAIOValue\030\032 \001(\005\022\020\n\010HSNVa" +
-      "lue\030\033 \001(\005\022\013\n\003TCH\030\034 \001(\005\022\025\n\rtimingAdvance\030" +
-      "\035 \001(\005\022\024\n\014RXQualitySub\030\036 \001(\005\022\025\n\rRXQuality" +
-      "Full\030\037 \001(\005\022\"\n\032numberOfNeighboringSixCell" +
-      "\030  \001(\005\022\020\n\010band1900\030! \001(\010\022+\n\007rrState\030\" \001(" +
-      "\0162\032.com.rtrk.protobuf.RRState\022\023\n\013channel" +
-      "Type\030# \001(\t\022\027\n\017automaticReport\030$ \001(\010\022\014\n\004l",
-      "ine\030% \001(\005\022\025\n\rforbiddenData\030& \001(\t\022%\n\004band" +
-      "\030\' \001(\0162\027.com.rtrk.protobuf.Band\022\r\n\005value" +
-      "\030( \001(\005\022\016\n\006arcfn1\030) \001(\005\022\016\n\006arcfn2\030* \001(\005\022\016" +
-      "\n\006arcfn3\030+ \001(\005\022\022\n\nisResponse\030- \001(\010\022\023\n\013de" +
-      "scription\030. \001(\t\022\025\n\rlockFrequency\030/ \001(\010\022\023" +
-      "\n\013MEHasLocked\0300 \001(\010\022A\n\022forbidOperatorMod" +
-      "e\0301 \001(\0162%.com.rtrk.protobuf.ForbidOperat" +
-      "orMode\022 \n\030MEHaveLockedCertainARCFN\0302 \001(\010" +
-      "\"\252\002\n\020RecordingCommand\022<\n\013messageType\030\001 \002" +
-      "(\0162\'.com.rtrk.protobuf.RecordingMessageT",
-      "ype\022\014\n\004test\030\002 \001(\010\022\014\n\004read\030\003 \001(\010\022\r\n\005write" +
-      "\030\r \001(\010\022\021\n\texecution\030\004 \001(\010\022\r\n\005state\030\005 \001(\005" +
-      "\022\020\n\010fileName\030\006 \001(\t\022\016\n\006format\030\007 \001(\005\022\016\n\006re" +
-      "peat\030\010 \001(\010\022\016\n\006volume\030\t \001(\005\022\017\n\007channel\030\n " +
-      "\001(\005\022\017\n\007control\030\013 \001(\005\022\022\n\nisResponse\030\016 \001(\010" +
-      "\022\023\n\013description\030\017 \001(\t\"\271\003\n\013SMTPCommand\0227\n" +
-      "\013messageType\030\001 \002(\0162\".com.rtrk.protobuf.S" +
-      "MTPMessageType\022\014\n\004test\030\002 \001(\010\022\014\n\004read\030\003 \001" +
-      "(\010\022\r\n\005write\030\004 \001(\010\022\021\n\texecution\030\005 \001(\010\022\014\n\004" +
-      "user\030\006 \001(\t\022\020\n\010password\030\007 \001(\t\022\024\n\014emailAdd",
-      "ress\030\010 \001(\t\022\014\n\004name\030\t \001(\t\022\025\n\rserverAddres" +
-      "s\030\n \001(\t\022\014\n\004port\030\013 \001(\005\022\014\n\004mode\030\014 \001(\005\022\014\n\004t" +
-      "ype\030\r \001(\005\022\016\n\006result\030\017 \001(\005\022\017\n\007charset\030\026 \001" +
-      "(\005\022\r\n\005title\030\020 \001(\t\022\017\n\007timeout\030\021 \001(\005\022\021\n\tfi" +
-      "leIndex\030\022 \001(\005\022\020\n\010fileName\030\023 \001(\t\022\020\n\010fileS" +
-      "ize\030\024 \001(\005\022\r\n\005value\030\025 \001(\005\022\022\n\nisResponse\030\027" +
-      " \001(\010\022\023\n\013description\030\016 \001(\t\"\365\001\n\nSTKCommand" +
-      "\0226\n\013messageType\030\001 \002(\0162!.com.rtrk.protobu" +
-      "f.STKMessageType\022\014\n\004test\030\002 \001(\010\022\014\n\004read\030\003" +
-      " \001(\010\022\r\n\005write\030\004 \001(\010\022\021\n\texecution\030\005 \001(\010\022\t",
-      "\n\001n\030\006 \001(\005\022\017\n\007profile\030\007 \001(\t\022\022\n\nsatCommand" +
-      "\030\010 \001(\t\022\030\n\020terminalResponse\030\t \001(\t\022\022\n\nisRe" +
-      "sponse\030\n \001(\010\022\023\n\013description\030\013 \001(\t\"\212\002\n\016Ge" +
-      "neralCommand\022;\n\013messageType\030\001 \002(\0162&.com." +
-      "rtrk.protobuf.GeneralMesssageType\022\014\n\004tes" +
-      "t\030\002 \001(\010\022\014\n\004read\030\003 \001(\010\022\r\n\005write\030\n \001(\010\022\021\n\t" +
-      "execution\030\004 \001(\010\022\r\n\005value\030\005 \001(\005\022\t\n\001n\030\006 \001(" +
-      "\005\022\025\n\rfunctionality\030\007 \001(\005\022\r\n\005reset\030\010 \001(\005\022" +
-      "\024\n\014characterSet\030\t \001(\t\022\022\n\nisResponse\030\013 \001(" +
-      "\010\022\023\n\013description\030\014 \001(\t\"\331\004\n\035SerialInterfa",
-      "ceControlCommand\022I\n\013messageType\030\001 \002(\01624." +
-      "com.rtrk.protobuf.SerialInterfaceControl" +
-      "MessageType\022\014\n\004test\030\002 \001(\010\022\014\n\004read\030\003 \001(\010\022" +
-      "\r\n\005write\030\004 \001(\010\022\021\n\texecution\030\005 \001(\010\022\r\n\005val" +
-      "ue\030\006 \001(\005\022\016\n\006format\030\007 \001(\005\022\017\n\007partity\030\010 \001(" +
-      "\005\022\020\n\010DCEByDTE\030\t \001(\005\022\020\n\010DTEByDCE\030\n \001(\005\022\014\n" +
-      "\004rate\030\013 \001(\005\022\026\n\016enableDualUART\030\014 \001(\010\022\016\n\006s" +
-      "ubset\030\r \001(\005\022\021\n\tportSpeed\030\016 \001(\005\022\030\n\020maximu" +
-      "mFrameSize\030\017 \001(\005\022\032\n\022acknowledmentTimer\030\020" +
-      " \001(\005\022&\n\036maximumNumberOfRetransmissions\030\021",
-      " \001(\005\022\025\n\rresponseTimer\030\022 \001(\005\022\033\n\023wakeUpRes" +
-      "ponseTimer\030\023 \001(\005\022\023\n\013windowsSize\030\024 \001(\005\022\020\n" +
-      "\010baudRate\030\025 \001(\005\022\020\n\010dataBits\030\026 \001(\005\022\020\n\010sto" +
-      "pBits\030\027 \001(\005\022\014\n\004mode\030\030 \001(\005\022\022\n\nisResponse\030" +
-      "\031 \001(\010\022\023\n\013description\030\032 \001(\t\"\333\003\n\024StatusCon" +
-      "trolCommand\022@\n\013messageType\030\001 \002(\0162+.com.r" +
-      "trk.protobuf.StatusControlMessageType\022\014\n" +
+      "lNumber\030\017 \001(\005\022;\n\017engineeringMode\0303 \001(\0162\"" +
+      ".com.rtrk.protobuf.EngineeringMode\022%\n\004du" +
+      "mp\030\020 \001(\0162\027.com.rtrk.protobuf.Dump\022\031\n\021mob" +
+      "ileCountryCode\030\021 \001(\005\022\031\n\021mobileNetworkCod",
+      "e\030\022 \001(\005\022\037\n\027broadcastControlChannel\030\023 \001(\005" +
+      "\022\031\n\021receiveSignalLeve\030\024 \001(\001\022\n\n\002c1\030\025 \001(\005\022" +
+      "\n\n\002c2\030\026 \001(\005\022\034\n\024transmitPowerMaximum\030\027 \001(" +
+      "\001\022\032\n\022receiveLevelAccess\030\030 \001(\005\022\021\n\ttimeslo" +
+      "ts\030\031 \001(\005\022\021\n\tMAIOValue\030\032 \001(\005\022\020\n\010HSNValue\030" +
+      "\033 \001(\005\022\013\n\003TCH\030\034 \001(\005\022\025\n\rtimingAdvance\030\035 \001(" +
+      "\005\022\024\n\014RXQualitySub\030\036 \001(\005\022\025\n\rRXQualityFull" +
+      "\030\037 \001(\005\022\"\n\032numberOfNeighboringSixCell\030  \001" +
+      "(\005\022\020\n\010band1900\030! \001(\010\022+\n\007rrState\030\" \001(\0162\032." +
+      "com.rtrk.protobuf.RRState\022\023\n\013channelType",
+      "\030# \001(\t\022\027\n\017automaticReport\030$ \001(\010\022\014\n\004line\030" +
+      "% \001(\005\022\025\n\rforbiddenData\030& \001(\t\022%\n\004band\030\' \001" +
+      "(\0162\027.com.rtrk.protobuf.Band\022\r\n\005value\030( \001" +
+      "(\005\022\016\n\006arcfn1\030) \001(\005\022\016\n\006arcfn2\030* \001(\005\022\016\n\006ar" +
+      "cfn3\030+ \001(\005\022\022\n\nisResponse\030- \001(\010\022\023\n\013descri" +
+      "ption\030. \001(\t\022\025\n\rlockFrequency\030/ \001(\010\022\023\n\013ME" +
+      "HasLocked\0300 \001(\010\022A\n\022forbidOperatorMode\0301 " +
+      "\001(\0162%.com.rtrk.protobuf.ForbidOperatorMo" +
+      "de\022 \n\030MEHaveLockedCertainARCFN\0302 \001(\010\"\225\003\n" +
+      "\020RecordingCommand\022<\n\013messageType\030\001 \002(\0162\'",
+      ".com.rtrk.protobuf.RecordingMessageType\022" +
+      "\014\n\004test\030\002 \001(\010\022\014\n\004read\030\003 \001(\010\022\r\n\005write\030\r \001" +
+      "(\010\022\021\n\texecution\030\004 \001(\010\0229\n\016recordingState\030" +
+      "\005 \001(\0162!.com.rtrk.protobuf.RecordingState" +
+      "\022\020\n\010fileName\030\006 \001(\t\022-\n\006format\030\007 \001(\0162\035.com" +
+      ".rtrk.protobuf.FileFormat\022\016\n\006repeat\030\010 \001(" +
+      "\010\022\016\n\006volume\030\t \001(\005\022/\n\007channel\030\n \001(\0162\036.com" +
+      ".rtrk.protobuf.PlayChannel\022\017\n\007control\030\013 " +
+      "\001(\005\022\022\n\nisResponse\030\016 \001(\010\022\023\n\013description\030\017" +
+      " \001(\t\"\335\004\n\013SMTPCommand\0227\n\013messageType\030\001 \002(",
+      "\0162\".com.rtrk.protobuf.SMTPMessageType\022\014\n" +
       "\004test\030\002 \001(\010\022\014\n\004read\030\003 \001(\010\022\r\n\005write\030\004 \001(\010" +
-      "\022\021\n\texecution\030\005 \001(\010\022\022\n\nlocationID\030\006 \001(\005\022" +
-      "\r\n\005cause\030\007 \001(\t\022\013\n\003pas\030\010 \001(\005\022\016\n\006status\030\t ",
-      "\001(\005\022\021\n\trefuseSMS\030\n \001(\010\022\022\n\nrefuseCall\030\013 \001" +
-      "(\010\022\014\n\004mode\030\014 \001(\005\022\020\n\010extunsol\030\r \001(\t\022\r\n\005st" +
-      "ate\030\016 \001(\005\022\016\n\006enable\030\017 \001(\010\022\014\n\004time\030\020 \001(\t\022" +
-      "\032\n\022datlightSavingTime\030\021 \001(\t\022\023\n\013insertLev" +
-      "el\030\022 \001(\005\022\021\n\tpinChoice\030\023 \001(\005\022\024\n\014insertSta" +
-      "tus\030\024 \001(\005\022\014\n\004type\030\025 \001(\005\022\022\n\nisResponse\030\026 " +
-      "\001(\010\022\023\n\013description\030\027 \001(\t\"\373\004\n\021SIMRelatedC" +
-      "ommand\022=\n\013messageType\030\001 \002(\0162(.com.rtrk.p" +
-      "rotobuf.SIMRelatedMessageType\022\014\n\004test\030\002 " +
-      "\001(\010\022\014\n\004read\030\003 \001(\010\022\r\n\005write\030\004 \001(\010\022\021\n\texec",
-      "ution\030\005 \001(\010\022\013\n\003fac\030\037 \001(\t\022\014\n\004mode\030  \001(\005\022\020" +
-      "\n\010password\030! \001(\t\022\r\n\005class\030\" \001(\005\022\016\n\006statu" +
-      "s\030\006 \001(\005\022\013\n\003pin\030\007 \001(\t\022\016\n\006newPin\030\010 \001(\t\022\021\n\t" +
-      "pwdLength\030\t \001(\005\022\016\n\006oldPwd\030\n \001(\t\022\016\n\006newPw" +
-      "d\030\013 \001(\t\022\017\n\007command\030\014 \001(\t\022\016\n\006fileID\030\r \001(\005" +
-      "\022\n\n\002P1\030\016 \001(\005\022\n\n\002P2\030\017 \001(\005\022\n\n\002P3\030\020 \001(\005\022\013\n\003" +
-      "SW1\030\021 \001(\005\022\013\n\003SW2\030\022 \001(\005\022\014\n\004data\030\023 \001(\t\022\020\n\010" +
-      "response\030\024 \001(\t\022\016\n\006length\030\025 \001(\005\022\020\n\010CCIDDa" +
-      "ta\030\026 \001(\t\022\014\n\004GID1\030\027 \001(\005\022\014\n\004GID2\030\030 \001(\005\022\032\n\022" +
-      "serviceProvideName\030\031 \001(\t\022\023\n\013displayMode\030",
-      "\032 \001(\005\022\014\n\004chv1\030\033 \001(\005\022\014\n\004chv2\030\034 \001(\005\022\014\n\004puk" +
-      "1\030\035 \001(\005\022\014\n\004puk2\030\036 \001(\005\022\022\n\nisResponse\030# \001(" +
-      "\010\022\023\n\013description\030$ \001(\t\"\233\004\n\025NetworkServic" +
-      "eCommand\022A\n\013messageType\030\001 \002(\0162,.com.rtrk" +
-      ".protobuf.NetworkServiceMessageType\022\014\n\004t" +
-      "est\030\002 \001(\010\022\014\n\004read\030\003 \001(\010\022\r\n\005writw\030\004 \001(\010\022\021" +
-      "\n\texecution\030\005 \001(\010\022\016\n\006status\030\006 \001(\005\022\020\n\010ope" +
-      "rator\030\007 \001(\005\022\014\n\004mode\030\010 \001(\005\022\016\n\006format\030\t \001(" +
-      "\005\022\t\n\001n\030\n \001(\005\022\030\n\020locationAreaCode\030\013 \001(\t\022\016" +
-      "\n\006cellID\030\014 \001(\t\022\014\n\004rssi\030\r \001(\005\022\013\n\003ber\030\016 \001(",
-      "\005\022\r\n\005index\030\017 \001(\005\022\020\n\010numericn\030\020 \001(\t\022\016\n\006al" +
-      "phan\030\021 \001(\t\022\016\n\006opBand\030\022 \001(\t\022\014\n\004dump\030\023 \001(\005" +
-      "\022\014\n\004band\030\024 \001(\005\022\021\n\tfrequency\030\025 \001(\005\022\026\n\016sig" +
-      "nalStrength\030\026 \001(\005\022\020\n\010band1900\030\027 \001(\005\022\016\n\006a" +
-      "rfcn1\030\030 \001(\005\022\016\n\006arfcn2\030\031 \001(\005\022\016\n\006arfcn3\030\032 " +
-      "\001(\005\022\022\n\nisResponse\030\033 \001(\010\022\023\n\013description\030\034" +
-      " \001(\t\"\257\004\n\022CallRelatedCommand\022>\n\013messageTy" +
-      "pe\030\001 \002(\0162).com.rtrk.protobuf.CallRelated" +
-      "MessageType\022\014\n\004test\030\002 \001(\010\022\014\n\004read\030\003 \001(\010\022" +
-      "\r\n\005write\030\004 \001(\010\022\021\n\texecution\030\005 \001(\010\022\016\n\006num",
-      "ber\030\027 \001(\t\022\023\n\013GSMModifier\030\006 \001(\t\022\036\n\026interw" +
-      "orkinWindowsSize\030\007 \001(\005\022\030\n\020mobileWindowSi" +
-      "ze\030\010 \001(\005\022\032\n\022acknowledmentTimer\030\t \001(\005\022\037\n\027" +
-      "retransimissionAttempts\030\n \001(\005\022\022\n\nRPLVers" +
-      "ion\030\013 \001(\005\022\032\n\022resequencingPeriod\030\014 \001(\005\022\t\n" +
-      "\001n\030\r \001(\005\022\014\n\004type\030\016 \001(\005\022\r\n\005index\030\017 \001(\005\022\013\n" +
-      "\003dir\030\020 \001(\005\022\014\n\004stat\030\021 \001(\005\022\014\n\004mode\030\022 \001(\005\022\022" +
-      "\n\nmultiparty\030\023 \001(\005\022\025\n\rspeechChannel\030\024 \001(" +
-      "\005\022\022\n\ndisableATH\030\025 \001(\010\022\026\n\016setUpVoiceCall\030" +
-      "\026 \001(\010\022\022\n\nisResponse\030\030 \001(\010\022\023\n\013description",
-      "\030\031 \001(\t\"\330\007\n\nSMSCommand\0227\n\014messsageType\030\001 " +
-      "\002(\0162!.com.rtrk.protobuf.SMSMessageType\022\014" +
-      "\n\004test\030\002 \001(\010\022\014\n\004read\030\003 \001(\010\022\r\n\005write\030\004 \001(" +
-      "\010\022\021\n\texecution\030\005 \001(\010\022\017\n\007service\030- \001(\005\022\037\n" +
-      "\027mobileTerminatedMessage\030\006 \001(\005\022\035\n\025mobile" +
-      "OrientedMessage\030\007 \001(\005\022\034\n\024broadcastTypeMe" +
-      "ssage\030\010 \001(\005\022\014\n\004mode\030\t \001(\005\022\021\n\tSCAddress\030\n" +
-      " \001(\t\022\023\n\013toSCAddress\030\013 \001(\005\022\014\n\004mem1\030\014 \001(\t\022" +
-      "\014\n\004mem2\030\r \001(\t\022\014\n\004mem3\030\016 \001(\t\022\r\n\005index\030\017 \001" +
-      "(\005\022\017\n\007delflag\030\020 \001(\005\022\r\n\005alpha\030\021 \001(\t\022\032\n\022de",
-      "stinationAddress\030\022 \001(\t\022\014\n\004data\030\023 \001(\014\022\016\n\006" +
-      "length\030\024 \001(\005\022\032\n\022originatingAddress\030\025 \001(\t" +
-      "\022\013\n\003pdu\030\026 \001(\005\022\036\n\026serviceCenterTimeStamp\030" +
-      "\027 \001(\t\022\034\n\024TPDestinationAddress\030\030 \001(\005\022\034\n\024T" +
-      "POriginatingAddress\030\031 \001(\005\022\n\n\002fo\030\032 \001(\005\022\031\n" +
-      "\021messageIdentifier\030\033 \001(\005\022\032\n\022protocolIden" +
-      "tifier\030\034 \001(\005\022\014\n\004stat\030\035 \001(\t\022\026\n\016validityPe" +
-      "riod\030\036 \001(\005\022\030\n\020messageReference\030\037 \001(\005\022\016\n\006" +
-      "ackpdu\030  \001(\005\022\023\n\013commandType\030! \001(\005\022\025\n\rmes" +
-      "sageNumber\030\" \001(\005\022\n\n\002ds\030# \001(\005\022\016\n\006buffer\030$",
-      " \001(\005\022\017\n\007profile\030% \001(\005\022\032\n\022messageIdentifi" +
-      "ers\030& \001(\t\022\014\n\004dcss\030\' \001(\t\022\014\n\004show\030( \001(\005\022\027\n" +
-      "\017dataCodinScheme\030) \001(\005\022\014\n\004type\030* \001(\t\022\016\n\006" +
-      "status\030+ \001(\005\022\022\n\nfirstOctet\030, \001(\005\022\022\n\nisRe" +
-      "sponse\030. \001(\010\022\023\n\013description\030/ \001(\t\"\207\003\n\020Ph" +
-      "onebookCommand\022<\n\013messageType\030\001 \002(\0162\'.co" +
-      "m.rtrk.protobuf.PhonebookMessageType\022\014\n\004" +
-      "test\030\002 \001(\010\022\014\n\004read\030\003 \001(\010\022\r\n\005write\030\004 \001(\010\022" +
-      "\021\n\texecution\030\005 \001(\010\022\017\n\007storage\030\022 \001(\t\022\017\n\007n" +
-      "length\030\006 \001(\005\022\017\n\007tlength\030\007 \001(\005\022\r\n\005index\030\010",
-      " \001(\005\022\016\n\006number\030\t \001(\t\022\014\n\004type\030\n \001(\005\022\014\n\004te" +
-      "xt\030\013 \001(\t\022\016\n\006index1\030\014 \001(\005\022\016\n\006index2\030\r \001(\005" +
-      "\022\020\n\010findText\030\016 \001(\t\022\016\n\006alphax\030\017 \001(\t\022\017\n\007nu" +
-      "mberx\030\020 \001(\t\022\r\n\005typex\030\021 \001(\005\022\022\n\nisResponse" +
-      "\030\023 \001(\010\022\023\n\013description\030\024 \001(\t\"\362\003\n\013GPRSComm" +
-      "and\0227\n\013messageType\030\001 \002(\0162\".com.rtrk.prot" +
-      "obuf.GPRSMessageType\022\014\n\004test\030\002 \001(\010\022\014\n\004re" +
-      "ad\030\003 \001(\010\022\r\n\005write\030\004 \001(\010\022\021\n\texecution\030\005 \001" +
-      "(\010\022\r\n\005state\030\032 \001(\005\022\013\n\003cid\030\006 \001(\005\022\017\n\007PDPTyp" +
-      "e\030\007 \001(\t\022\013\n\003APN\030\010 \001(\t\022\022\n\nPDPAddress\030\t \001(\t",
-      "\022\r\n\005dComp\030\n \001(\005\022\r\n\005hComp\030\013 \001(\005\022\022\n\npreced" +
-      "ence\030\014 \001(\005\022\r\n\005delay\030\r \001(\005\022\023\n\013reliability" +
-      "\030\016 \001(\005\022\014\n\004peek\030\017 \001(\005\022\014\n\004mean\030\020 \001(\005\022\013\n\003L2" +
-      "P\030\021 \001(\t\022\r\n\005class\030\022 \001(\t\022\014\n\004mode\030\023 \001(\005\022\t\n\001" +
-      "n\030\024 \001(\005\022\014\n\004stat\030\025 \001(\005\022\013\n\003lac\030\026 \001(\t\022\n\n\002ci" +
-      "\030\027 \001(\t\022\017\n\007service\030\030 \001(\005\022\026\n\016multislotClas" +
-      "s\030\031 \001(\005\022\022\n\nisResponse\030\033 \001(\010\022\023\n\013descripti" +
-      "on\030\034 \001(\t\"\303\007\n\014TCPIPCommand\0228\n\013messageType" +
-      "\030\001 \002(\0162#.com.rtrk.protobuf.TCPIPMessageT" +
-      "ype\022\014\n\004test\030\002 \001(\010\022\014\n\004read\030\003 \001(\010\022\r\n\005write",
-      "\030\004 \001(\010\022\021\n\texecution\030\005 \001(\010\022\r\n\005index\0306 \001(\005" +
-      "\022\014\n\004mode\030\006 \001(\t\022\017\n\007modeInt\030\007 \001(\005\022\014\n\004port\030" +
-      "\010 \001(\005\022\022\n\ndomainName\030\t \001(\t\022\016\n\006length\030\n \001(" +
-      "\005\022\013\n\003APN\030\013 \001(\t\022\020\n\010username\030\014 \001(\t\022\020\n\010pass" +
-      "word\030\r \001(\t\022\014\n\004rate\030\016 \001(\005\022\r\n\005state\030\017 \001(\t\022" +
-      "\023\n\013socketState\030\020 \001(\t\022\023\n\013serverState\030\021 \001(" +
-      "\t\022\022\n\nprimaryDNS\030\022 \001(\t\022\023\n\013seondaryDNS\030\023 \001" +
-      "(\t\022\r\n\005error\030\024 \001(\005\022\014\n\004time\030\025 \001(\003\022\022\n\nsendP" +
-      "rompt\030\026 \001(\005\022\013\n\003num\030\027 \001(\005\022\014\n\004type\030\030 \001(\005\022\013" +
-      "\n\003max\030\031 \001(\003\022\022\n\ndialNumber\030\032 \001(\t\022\022\n\nconne",
-      "ction\030\033 \001(\005\022\025\n\rnumberOfRetry\030\034 \001(\005\022\020\n\010wa" +
-      "itTime\030\035 \001(\005\022\020\n\010sendSize\030\036 \001(\005\022\016\n\006escape" +
-      "\030\037 \001(\010\022\017\n\007channel\030  \001(\005\022\t\n\001n\030! \001(\005\022\014\n\004se" +
-      "nt\030\" \001(\005\022\r\n\005acked\030# \001(\005\022\016\n\006nAcked\030$ \001(\005\022" +
-      "\t\n\001m\030% \001(\005\022\n\n\002id\030& \001(\005\022\n\n\002sc\030\' \001(\005\022\013\n\003si" +
-      "d\030( \001(\005\022\016\n\006number\030) \001(\005\022\014\n\004host\030* \001(\t\022\017\n" +
-      "\007timeout\030+ \001(\005\022\022\n\npingNumber\030, \001(\005\022\016\n\006re" +
-      "sult\030- \001(\005\022\r\n\005bytes\030. \001(\005\022\013\n\003ttl\030/ \001(\005\022\023" +
-      "\n\013finalResult\0300 \001(\005\022\020\n\010received\0301 \001(\005\022\014\n" +
-      "\004lost\0302 \001(\005\022\013\n\003min\0303 \001(\003\022\013\n\003avg\0304 \001(\003\022\016\n",
-      "\006server\0305 \001(\t\022\022\n\nisResponse\0307 \001(\010\022\023\n\013des" +
-      "cription\0308 \001(\t\"\330\003\n\033SupplementaryServiceC" +
-      "ommand\022G\n\013messageType\030\001 \002(\01622.com.rtrk.p" +
-      "rotobuf.SupplementaryServiceMessageType\022" +
-      "\014\n\004test\030\002 \001(\010\022\014\n\004read\030\003 \001(\010\022\r\n\005write\030\004 \001" +
-      "(\010\022\021\n\texecution\030\005 \001(\010\022\r\n\005reads\030\026 \001(\005\022\014\n\004" +
-      "mode\030\006 \001(\005\022\016\n\006number\030\007 \001(\t\022\014\n\004type\030\010 \001(\005" +
-      "\022\022\n\nsubaddress\030\t \001(\t\022\016\n\006satype\030\n \001(\005\022\r\n\005" +
-      "class\030\013 \001(\005\022\014\n\004time\030\014 \001(\005\022\016\n\006status\030\r \001(" +
-      "\005\022\t\n\001n\030\016 \001(\005\022\r\n\005index\030\017 \001(\005\022\014\n\004info\030\020 \001(",
-      "\005\022\t\n\001m\030\021 \001(\005\022\022\n\nUSSDString\030\022 \001(\t\022\030\n\020data" +
-      "CodingScheme\030\023 \001(\005\022\r\n\005code1\030\024 \001(\005\022\r\n\005cod" +
-      "e2\030\025 \001(\005\022\022\n\nisResponse\030\027 \001(\010\022\023\n\013descript" +
-      "ion\030\030 \001(\t\"\324\005\n\014AudioCommand\0228\n\013messageTyp" +
-      "e\030\001 \002(\0162#.com.rtrk.protobuf.AudioMessage" +
+      "\022\021\n\texecution\030\005 \001(\010\022\014\n\004user\030\006 \001(\t\022\020\n\010pas" +
+      "sword\030\007 \001(\t\022\024\n\014emailAddress\030\010 \001(\t\022\014\n\004nam" +
+      "e\030\t \001(\t\022\025\n\rserverAddress\030\n \001(\t\022\014\n\004port\030\013" +
+      " \001(\005\0227\n\rrecipientMode\030\014 \001(\0162 .com.rtrk.p" +
+      "rotobuf.RecipientMode\0227\n\rrecipinetType\030\r" +
+      " \001(\0162 .com.rtrk.protobuf.RecipientType\022\016" +
+      "\n\006result\030\017 \001(\005\022+\n\007charset\030\026 \001(\0162\032.com.rt" +
+      "rk.protobuf.Charset\022\r\n\005title\030\020 \001(\t\022\017\n\007ti",
+      "meout\030\021 \001(\005\022\021\n\tfileIndex\030\022 \001(\005\022\020\n\010fileNa" +
+      "me\030\023 \001(\t\022\020\n\010fileSize\030\024 \001(\005\022\032\n\022needAuthen" +
+      "tication\030\025 \001(\010\022\022\n\nisResponse\030\027 \001(\010\022\023\n\013de" +
+      "scription\030\016 \001(\t\022#\n\033configureNeedAuthenti" +
+      "cation\030\030 \001(\010\"\242\002\n\nSTKCommand\0226\n\013messageTy" +
+      "pe\030\001 \002(\0162!.com.rtrk.protobuf.STKMessageT" +
+      "ype\022\014\n\004test\030\002 \001(\010\022\014\n\004read\030\003 \001(\010\022\r\n\005write" +
+      "\030\004 \001(\010\022\021\n\texecution\030\005 \001(\010\022\021\n\tturnOnSTK\030\006" +
+      " \001(\010\022\017\n\007profile\030\007 \001(\t\022\022\n\nsatCommand\030\010 \001(" +
+      "\t\022\030\n\020terminalResponse\030\t \001(\t\022\022\n\nisRespons",
+      "e\030\n \001(\010\022\023\n\013description\030\013 \001(\t\022#\n\003stk\030\014 \001(" +
+      "\0162\026.com.rtrk.protobuf.STK\"\365\007\n\016GeneralCom" +
+      "mand\022;\n\013messageType\030\001 \002(\0162&.com.rtrk.pro" +
+      "tobuf.GeneralMesssageType\022\014\n\004test\030\002 \001(\010\022" +
+      "\014\n\004read\030\003 \001(\010\022\r\n\005write\030\n \001(\010\022\021\n\texecutio" +
+      "n\030\004 \001(\010\022F\n\007default\030\005 \001(\0162\036.com.rtrk.prot" +
+      "obuf.TAToDefault:\025SET_ALL_TA_TO_DEFAULT\022" +
+      "G\n\rprofileNumber\030\006 \001(\0162 .com.rtrk.protob" +
+      "uf.ProfileNumber:\016PROFILE_NUMBER\022K\n\rfunc" +
+      "tionality\030\007 \001(\0162 .com.rtrk.protobuf.Func",
+      "tionality:\022FULL_FUNCTIONALITY\0228\n\005reset\030\010" +
+      " \001(\0162\030.com.rtrk.protobuf.Reset:\017DO_NOT_R" +
+      "ESET_ME\022\024\n\014characterSet\030\t \001(\t\022\022\n\nisRespo" +
+      "nse\030\013 \001(\010\022\023\n\013description\030\014 \001(\t\022L\n\nresult" +
+      "Code\030\r \001(\0162\035.com.rtrk.protobuf.ResultCod" +
+      "e:\031TA_TRANSMINTS_RESULT_CODE\022\\\n\023informat" +
+      "ionResponse\030\016 \001(\0162&.com.rtrk.protobuf.In" +
+      "formationResponse:\027LONG_RESULT_CODE_FORM" +
+      "AT\022b\n\021connectResultCode\030\017 \001(\0162$.com.rtrk" +
+      ".protobuf.ConnectResultCode:!CONNECT_RES",
+      "ULT_CODE_ONLY_RETURNED\022^\n\024resetToProfile" +
+      "Number\030\020 \001(\0162\'.com.rtrk.protobuf.ResetTo" +
+      "ProfileNumber:\027RESET_TO_PROFILE_NUMBER\0225" +
+      "\n\014powerOffMode\030\021 \001(\0162\037.com.rtrk.protobuf" +
+      ".PowerOffMode\022j\n\021disableResultCode\030\022 \001(\016" +
+      "2$.com.rtrk.protobuf.DisableResultCode:)" +
+      "ENABLE_RESULT_CODE_AND_USE_NUMERIC_VALUE" +
+      "S\"\257\t\n\035SerialInterfaceControlCommand\022I\n\013m" +
+      "essageType\030\001 \002(\01624.com.rtrk.protobuf.Ser" +
+      "ialInterfaceControlMessageType\022\014\n\004test\030\002",
+      " \001(\010\022\014\n\004read\030\003 \001(\010\022\r\n\005write\030\004 \001(\010\022\021\n\texe" +
+      "cution\030\005 \001(\010\0227\n\rdcdLineStatus\030\006 \001(\0162 .co" +
+      "m.rtrk.protobuf.DCDLineStatus\0227\n\rframing" +
+      "Format\030\007 \001(\0162 .com.rtrk.protobuf.Framing" +
+      "Format\0220\n\006parity\030\010 \001(\0162\031.com.rtrk.protob" +
+      "uf.Parity:\005SPACE\022-\n\010dceByDte\030\t \001(\0162\033.com" +
+      ".rtrk.protobuf.DCEByDTE\022-\n\010dteByDce\030\n \001(" +
+      "\0162\033.com.rtrk.protobuf.DTEByDCE\022%\n\004rate\030\013" +
+      " \001(\0162\027.com.rtrk.protobuf.Rate\022\026\n\016enableD" +
+      "ualUART\030\014 \001(\010\022=\n\020transmissionRate\030\016 \001(\0162",
+      "#.com.rtrk.protobuf.TransmissionRate\022\030\n\020" +
+      "maximumFrameSize\030\017 \001(\005\022\032\n\022acknowledmentT" +
+      "imer\030\020 \001(\005\022&\n\036maximumNumberOfRetransmiss" +
+      "ions\030\021 \001(\005\022\025\n\rresponseTimer\030\022 \001(\005\022\033\n\023wak" +
+      "eUpResponseTimer\030\023 \001(\005\022\023\n\013windowsSize\030\024 " +
+      "\001(\005\022:\n\010dataBits\030\026 \001(\0162\033.com.rtrk.protobu" +
+      "f.DataBits:\013DATA_BITS_8\0229\n\010stopBits\030\027 \001(" +
+      "\0162\033.com.rtrk.protobuf.StopBits:\nSTOP_BIT" +
+      "_1\022@\n\003mtm\030\030 \001(\01623.com.rtrk.protobuf.Mult" +
+      "iplexerTransparencyMechanism\022\022\n\nisRespon",
+      "se\030\031 \001(\010\022\023\n\013description\030\032 \001(\t\022$\n\034enableR" +
+      "eportingLocalPortRate\030\033 \001(\010\0229\n\003mcc\030\034 \001(\016" +
+      "2,.com.rtrk.protobuf.MultiplexerControlC" +
+      "hannel\022P\n\016dualUARTParity\030\r \001(\0162!.com.rtr" +
+      "k.protobuf.DualUARTParity:\025DUAL_UART_PAR" +
+      "ITY_NONE\022I\n\tdtrStatus\030\035 \001(\0162\034.com.rtrk.p" +
+      "rotobuf.DTRStatus:\030TA_IGNORES_STATUS_ON_" +
+      "DTR\"\320\010\n\024StatusControlCommand\022@\n\013messageT" +
+      "ype\030\001 \002(\0162+.com.rtrk.protobuf.StatusCont" +
+      "rolMessageType\022\014\n\004test\030\002 \001(\010\022\014\n\004read\030\003 \001",
+      "(\010\022\r\n\005write\030\004 \001(\010\022\021\n\texecution\030\005 \001(\010\022\022\n\n" +
+      "locationID\030\006 \001(\005\022\r\n\005cause\030\007 \001(\t\022#\n\003pas\030\010" +
+      " \001(\0162\026.com.rtrk.protobuf.Pas\0224\n\006status\030\t" +
+      " \001(\0162\031.com.rtrk.protobuf.Status:\tSTATUS_" +
+      "ON\022\021\n\trefuseSMS\030\n \001(\010\022\022\n\nrefuseCall\030\013 \001(" +
+      "\010\022\025\n\rshowCallState\030\014 \001(\010\022\020\n\010extunsol\030\r \001" +
+      "(\t\022\r\n\005state\030\016 \001(\005\022\034\n\024switchOnSIMDetectio" +
+      "n\030\017 \001(\010\022\014\n\004time\030\020 \001(\t\022\032\n\022datlightSavingT" +
+      "ime\030\021 \001(\t\022\027\n\017highInsertLevel\030\022 \001(\010\0229\n\tpi" +
+      "nChoice\030\023 \001(\0162&.com.rtrk.protobuf.SIMCar",
+      "dDetectionPIN\022\022\n\nisResponse\030\026 \001(\010\022\023\n\013des" +
+      "cription\030\027 \001(\t\022\035\n\025EnableURCPresentation\030" +
+      "\030 \001(\010\022N\n\003pui\030\031 \001(\01624.com.rtrk.protobuf.P" +
+      "roprietaryUnsolicitedIndications:\013PUI_DI" +
+      "SABLE\0225\n\003sof\030\032 \001(\0162(.com.rtrk.protobuf.S" +
+      "tateOfInitialization\022=\n\020gsmNetworkStatus" +
+      "\030\033 \001(\0162#.com.rtrk.protobuf.GSMNetworkSta" +
+      "tus\022+\n\007rtcTime\030\034 \001(\0162\032.com.rtrk.protobuf" +
+      ".RTCTime\022>\n\005tzcer\030\035 \001(\0162/.com.rtrk.proto" +
+      "buf.TimeZoneChangeEventReporting\022 \n\030swit",
+      "chONDetectingSIMCard\030\024 \001(\010\022?\n\017simInsertS" +
+      "tatus\030\025 \001(\0162&.com.rtrk.protobuf.SIMCardI" +
+      "nsertStatus\022&\n\036enableCircuitSwitchedVoic" +
+      "eCall\030\036 \001(\010\0229\n\016connectionType\030\037 \001(\0162!.co" +
+      "m.rtrk.protobuf.ConnectionType\"\373\004\n\021SIMRe" +
+      "latedCommand\022=\n\013messageType\030\001 \002(\0162(.com." +
+      "rtrk.protobuf.SIMRelatedMessageType\022\014\n\004t" +
+      "est\030\002 \001(\010\022\014\n\004read\030\003 \001(\010\022\r\n\005write\030\004 \001(\010\022\021" +
+      "\n\texecution\030\005 \001(\010\022\013\n\003fac\030\037 \001(\t\022\014\n\004mode\030 " +
+      " \001(\005\022\020\n\010password\030! \001(\t\022\r\n\005class\030\" \001(\005\022\016\n",
+      "\006status\030\006 \001(\005\022\013\n\003pin\030\007 \001(\t\022\016\n\006newPin\030\010 \001" +
+      "(\t\022\021\n\tpwdLength\030\t \001(\005\022\016\n\006oldPwd\030\n \001(\t\022\016\n" +
+      "\006newPwd\030\013 \001(\t\022\017\n\007command\030\014 \001(\t\022\016\n\006fileID" +
+      "\030\r \001(\005\022\n\n\002P1\030\016 \001(\005\022\n\n\002P2\030\017 \001(\005\022\n\n\002P3\030\020 \001" +
+      "(\005\022\013\n\003SW1\030\021 \001(\005\022\013\n\003SW2\030\022 \001(\005\022\014\n\004data\030\023 \001" +
+      "(\t\022\020\n\010response\030\024 \001(\t\022\016\n\006length\030\025 \001(\005\022\020\n\010" +
+      "CCIDData\030\026 \001(\t\022\014\n\004GID1\030\027 \001(\005\022\014\n\004GID2\030\030 \001" +
+      "(\005\022\032\n\022serviceProvideName\030\031 \001(\t\022\023\n\013displa" +
+      "yMode\030\032 \001(\005\022\014\n\004chv1\030\033 \001(\005\022\014\n\004chv2\030\034 \001(\005\022" +
+      "\014\n\004puk1\030\035 \001(\005\022\014\n\004puk2\030\036 \001(\005\022\022\n\nisRespons",
+      "e\030# \001(\010\022\023\n\013description\030$ \001(\t\"\233\004\n\025Network" +
+      "ServiceCommand\022A\n\013messageType\030\001 \002(\0162,.co" +
+      "m.rtrk.protobuf.NetworkServiceMessageTyp" +
+      "e\022\014\n\004test\030\002 \001(\010\022\014\n\004read\030\003 \001(\010\022\r\n\005writw\030\004" +
+      " \001(\010\022\021\n\texecution\030\005 \001(\010\022\016\n\006status\030\006 \001(\005\022" +
+      "\020\n\010operator\030\007 \001(\005\022\014\n\004mode\030\010 \001(\005\022\016\n\006forma" +
+      "t\030\t \001(\005\022\t\n\001n\030\n \001(\005\022\030\n\020locationAreaCode\030\013" +
+      " \001(\t\022\016\n\006cellID\030\014 \001(\t\022\014\n\004rssi\030\r \001(\005\022\013\n\003be" +
+      "r\030\016 \001(\005\022\r\n\005index\030\017 \001(\005\022\020\n\010numericn\030\020 \001(\t" +
+      "\022\016\n\006alphan\030\021 \001(\t\022\016\n\006opBand\030\022 \001(\t\022\014\n\004dump",
+      "\030\023 \001(\005\022\014\n\004band\030\024 \001(\005\022\021\n\tfrequency\030\025 \001(\005\022" +
+      "\026\n\016signalStrength\030\026 \001(\005\022\020\n\010band1900\030\027 \001(" +
+      "\005\022\016\n\006arfcn1\030\030 \001(\005\022\016\n\006arfcn2\030\031 \001(\005\022\016\n\006arf" +
+      "cn3\030\032 \001(\005\022\022\n\nisResponse\030\033 \001(\010\022\023\n\013descrip" +
+      "tion\030\034 \001(\t\"\257\004\n\022CallRelatedCommand\022>\n\013mes" +
+      "sageType\030\001 \002(\0162).com.rtrk.protobuf.CallR" +
+      "elatedMessageType\022\014\n\004test\030\002 \001(\010\022\014\n\004read\030" +
+      "\003 \001(\010\022\r\n\005write\030\004 \001(\010\022\021\n\texecution\030\005 \001(\010\022" +
+      "\016\n\006number\030\027 \001(\t\022\023\n\013GSMModifier\030\006 \001(\t\022\036\n\026" +
+      "interworkinWindowsSize\030\007 \001(\005\022\030\n\020mobileWi",
+      "ndowSize\030\010 \001(\005\022\032\n\022acknowledmentTimer\030\t \001" +
+      "(\005\022\037\n\027retransimissionAttempts\030\n \001(\005\022\022\n\nR" +
+      "PLVersion\030\013 \001(\005\022\032\n\022resequencingPeriod\030\014 " +
+      "\001(\005\022\t\n\001n\030\r \001(\005\022\014\n\004type\030\016 \001(\005\022\r\n\005index\030\017 " +
+      "\001(\005\022\013\n\003dir\030\020 \001(\005\022\014\n\004stat\030\021 \001(\005\022\014\n\004mode\030\022" +
+      " \001(\005\022\022\n\nmultiparty\030\023 \001(\005\022\025\n\rspeechChanne" +
+      "l\030\024 \001(\005\022\022\n\ndisableATH\030\025 \001(\010\022\026\n\016setUpVoic" +
+      "eCall\030\026 \001(\010\022\022\n\nisResponse\030\030 \001(\010\022\023\n\013descr" +
+      "iption\030\031 \001(\t\"\330\007\n\nSMSCommand\0227\n\014messsageT" +
+      "ype\030\001 \002(\0162!.com.rtrk.protobuf.SMSMessage",
       "Type\022\014\n\004test\030\002 \001(\010\022\014\n\004read\030\003 \001(\010\022\r\n\005writ" +
-      "e\030\004 \001(\010\022\021\n\texecution\030\005 \001(\010\022\r\n\005value\030! \001(" +
-      "\005\022\030\n\020internalDuration\030\006 \001(\005\022\020\n\010duration\030" +
-      "\007 \001(\003\022\022\n\nDTMFString\030\010 \001(\t\022\014\n\004mode\030\t \001(\005\022" +
-      "\r\n\005level\030\n \001(\005\022\014\n\004mute\030\013 \001(\010\022\021\n\tgainLeve",
-      "l\030\014 \001(\005\022\017\n\007channel\030\r \001(\005\022\r\n\005state\030\016 \001(\005\022" +
-      "\014\n\004type\030\017 \001(\005\022\021\n\tfrequency\030\020 \001(\005\022\020\n\010peri" +
-      "odON\030\021 \001(\005\022\021\n\tperiodOFF\030\022 \001(\005\022\022\n\noutputP" +
-      "ath\030\023 \001(\005\022\027\n\017operateFunction\030\024 \001(\005\022\026\n\016fu" +
-      "nctionStatus\030\025 \001(\005\022\017\n\007operate\030\026 \001(\005\022\023\n\013p" +
-      "refixPause\030\027 \001(\005\022\024\n\014lowThreshold\030\030 \001(\005\022\025" +
-      "\n\rhighThreshold\030\031 \001(\005\022\020\n\010dtmfCode\030\032 \001(\t\022" +
-      "\027\n\017persistenceTime\030\033 \001(\005\022\024\n\014uplinkVolume" +
-      "\030\034 \001(\005\022\026\n\016downlinkVolume\030\035 \001(\005\022\027\n\017contin" +
-      "uanceTime\030\036 \001(\003\022\020\n\010muteTime\030\037 \001(\003\022\024\n\014aud",
-      "ioChannel\030  \001(\005\022\022\n\nisResponse\030\" \001(\010\022\023\n\013d" +
-      "escription\030# \001(\t\"\217\003\n\026HardwareRelatedComm" +
-      "and\022B\n\013messageType\030\001 \002(\0162-.com.rtrk.prot" +
-      "obuf.HardwareRelatedMessageType\022\014\n\004test\030" +
-      "\002 \001(\010\022\014\n\004read\030\003 \001(\010\022\r\n\005write\030\004 \001(\010\022\021\n\tex" +
-      "ecution\030\005 \001(\010\022\014\n\004time\030\022 \001(\t\022\r\n\005state\030\006 \001" +
-      "(\005\022\016\n\006repeat\030\007 \001(\005\022\r\n\005power\030\010 \001(\005\022\013\n\003bcs" +
-      "\030\t \001(\005\022\013\n\003bcl\030\n \001(\005\022\017\n\007voltage\030\013 \001(\005\022\016\n\006" +
-      "status\030\014 \001(\005\022\r\n\005value\030\r \001(\005\022\t\n\001n\030\016 \001(\005\022\017" +
-      "\n\007ledMode\030\017 \001(\005\022\025\n\rthresholdType\030\020 \001(\005\022\021",
-      "\n\tthreshold\030\021 \001(\005\022\022\n\nisResponse\030\023 \001(\010\022\023\n" +
-      "\013description\030\024 \001(\t\"\356\001\n\rOthersCommand\0229\n\013" +
-      "messageType\030\001 \002(\0162$.com.rtrk.protobuf.Ot" +
-      "hersMessageType\022\014\n\004test\030\002 \001(\010\022\014\n\004read\030\003 " +
-      "\001(\010\022\r\n\005write\030\004 \001(\010\022\021\n\texecution\030\005 \001(\010\022\r\n" +
-      "\005value\030\006 \001(\005\022\t\n\001n\030\007 \001(\005\022\020\n\010timeMode\030\010 \001(" +
-      "\005\022\017\n\007indMode\030\t \001(\005\022\022\n\nisResponse\030\n \001(\010\022\023" +
-      "\n\013description\030\013 \001(\t\"f\n\014ErrorCommand\022\'\n\005e" +
-      "rror\030\001 \001(\0162\030.com.rtrk.protobuf.Error\022-\n\010" +
-      "FTPError\030\002 \001(\0162\033.com.rtrk.protobuf.FTPEr",
-      "ror*\370\003\n\013CommandType\022\020\n\014HTTP_COMMAND\020\000\022\020\n" +
-      "\014FILE_COMMAND\020\001\022\017\n\013FTP_COMMAND\020\002\022\017\n\013MMS_" +
-      "COMMAND\020\003\022\025\n\021QUEC_CELL_COMMAND\020\004\022\025\n\021RECO" +
-      "RDING_COMMAND\020\005\022\020\n\014SMTP_COMMAND\020\006\022\017\n\013STK" +
-      "_COMMAND\020\007\022\023\n\017GENERAL_COMMAND\020\010\022\034\n\030SERIA" +
-      "L_INTERFACE_COMMAND\020\t\022\032\n\026STATUS_CONTROL_" +
-      "COMMAND\020\n\022\027\n\023SIM_RELATED_COMMAND\020\013\022\033\n\027NE" +
-      "TWORK_SERVICE_COMMAND\020\014\022\030\n\024CALL_RELATED_" +
-      "COMMAND\020\r\022\017\n\013SMS_COMMAND\020\016\022\025\n\021PHONEBOOK_" +
-      "COMMAND\020\017\022\020\n\014GPRS_COMMAND\020\020\022\021\n\rTCPIP_COM",
-      "MAND\020\021\022!\n\035SUPPLEMENTARY_SERVICE_COMMAND\020" +
-      "\022\022\021\n\rAUDIO_COMMAND\020\023\022\034\n\030HARDWARE_RELATED" +
-      "_COMMAND\020\024\022\022\n\016OTHERS_COMMAND\020\025*|\n\014FileOp" +
-      "enMode\022\'\n#IF_NOT_EXISTS_CREATE_IF_EXISTS" +
-      "_OPEN\020\000\022\"\n\036IF_EXISTS_CREATE_AND_CLEAR_OL" +
-      "D\020\001\022\037\n\033IF_EXISTS_OPEN_IN_READ_MODE\020\002*T\n\023" +
-      "PointerMovementMode\022\016\n\nFILE_BEGIN\020\000\022\037\n\033C" +
-      "URRENT_POSITION_OF_POINTER\020\001\022\014\n\010FILE_END" +
-      "\020\002*\237\001\n\034TypeOfConfigurableParameters\022\033\n\027M" +
-      "ODE_OF_DATA_CONNECTION\020\000\022\021\n\rTRANSFER_TYP",
-      "E\020\001\022*\n&RESUMING_POINT_TO_RESUME_FILE_TRA" +
-      "NSFER\020\002\022#\n\037LOCAL_POSITION_OF_FILE_TRANSF" +
-      "ER\020\003*@\n\016ParameterValue\022\026\n\022ACTIVE_MODE_BI" +
-      "NARY\020\000\022\026\n\022PASSIVE_MODE_ASCII\020\001*G\n\006Return" +
-      "\022.\n*RETURN_NO_INFORMATIONS_TRANSFERED_FR" +
-      "OM_FTP\020\000\022\r\n\tRETURN_OK\020\001*\313\001\n\010FileType\022\017\n\013" +
-      "UNKNOW_TYPE\020\000\022\010\n\004TEXT\020\001\022\r\n\tTEXT_HTML\020\002\022\016" +
-      "\n\nTEXT_PLAIN\020\003\022\014\n\010TEXT_XML\020\004\022\t\n\005IMAGE\020\005\022" +
-      "\r\n\tIMAGE_GIF\020\006\022\016\n\nIMAGE_JPEG\020\007\022\016\n\nIMAGE_" +
-      "TIFF\020\010\022\r\n\tIMAGE_PNP\020\t\022\016\n\nIMAGE_WBMP\020\n\022\t\n",
-      "\005AUDIO\020\013\022\t\n\005VIDEO\020\014\022\010\n\004SMIL\020\r*D\n\016Operate" +
-      "SendMMS\022\033\n\027UNKNOW_OPERATE_SEND_MMS\020\000\022\025\n\021" +
-      "START_TO_SEND_MMS\020\001*U\n\021OperateReceiveMMS" +
-      "\022\036\n\032UNKNOW_OPERATE_RECEIVE_MMS\020\000\022 \n\034STAR" +
-      "T_TO_RECEIVE_MMS_MESSAGE\020\001*\311\001\n\016OperateRe" +
-      "adMMS\022\033\n\027UNKNOW_OPERATE_READ_MMS\020\000\022\034\n\030VI" +
-      "EW_ORIGINATION_ADDRESS\020\001\022\023\n\017VIEW_TO_ADDR" +
-      "ESS\020\002\022\023\n\017VIEW_CC_ADDRESS\020\003\022\022\n\016VIEW_MMS_T" +
-      "ITLE\020\004\022\024\n\020LIST_APPEND_FILE\020\005\022(\n$READ_APP" +
-      "END_FILE_DATA_OF_MMS_MESSAGE\020\006*@\n\020Operat",
-      "eManageMMS\022\026\n\022DELETE_MMS_MESSAGE\020\000\022\024\n\020LI" +
-      "ST_MMS_MESSAGE\020\001*7\n\017OperateWriteMMS\022\021\n\rC" +
-      "LEAN_OPERATE\020\000\022\021\n\rWRITE_OPERATE\020\001*\256\001\n\017Op" +
-      "erateFunction\022$\n CLEAR_ALL_CONTENT_OF_MM" +
-      "S_MESSAGE\020\000\022\026\n\022OPERATE_TO_ADDRESS\020\001\022\026\n\022O" +
-      "PERATE_CC_ADDRESS\020\002\022\027\n\023OPERATE_BCC_ADDRE" +
-      "SS\020\003\022\021\n\rOPERATE_TITLE\020\004\022\031\n\025OPERATE_FILE_" +
-      "APPENDED\020\005*-\n\014ProtocolType\022\n\n\006UNKNOW\020\000\022\021" +
-      "\n\rHHTP_PROTOCOL\020\001*\237\001\n\016ValidityPeriod\022\017\n\013" +
-      "TIME_1_HOUR\020\000\022\021\n\rTIME_12_HOURS\020\001\022\021\n\rTIME",
-      "_24_HOURS\020\002\022\017\n\013TIME_2_DAYS\020\003\022\017\n\013TIME_1_W" +
-      "EEK\020\004\022\020\n\014MAXIMUM_TIME\020\005\022\"\n\036USE_NETWORK_C" +
-      "ONFIGURATION_TIME\020\006*l\n\010Priority\022\020\n\014LOW_P" +
-      "RIORITY\020\000\022\023\n\017NORMAL_PRIORITY\020\001\022\021\n\rHIGH_P" +
-      "RIORITY\020\002\022&\n\"USE_NETWORK_CONFIGURATION_P" +
-      "RIORITY\020\003*s\n\016AddressVisible\022\024\n\020HIDE_ANY_" +
-      "ADDRESS\020\000\022\034\n\030SHOW_EVEN_SECRET_ADDRESS\020\001\022" +
-      "-\n)USE_NETWORK_CONFIGURATION_ADDRESS_VIS" +
-      "IBLE\020\002*\214\001\n\017MMSMessageClass\022\022\n\016PERSONAL_C" +
-      "LASS\020\000\022\027\n\023ADVERTISEMENT_CLASS\020\001\022\027\n\023INFOR",
-      "MATIONAL_CLASS\020\002\022\016\n\nAUTO_CLASS\020\003\022#\n\037USE_" +
-      "NETWORK_CONFIGURATION_CLASS\020\004*5\n\016TitleIn" +
-      "putMode\022\020\n\014PDU_HEX_MODE\020\000\022\021\n\rTEXT_BIN_MO" +
-      "DE\020\001*P\n\004Band\022\020\n\014GSM_900_BAND\020\000\022\021\n\rDCS_18" +
-      "00_BAND\020\001\022\021\n\rPCS_1900_BAND\020\002\022\020\n\014GSM_850_" +
-      "BAND\020\003*\312\001\n\022ForbidOperatorMode\022\037\n\033READ_LI" +
-      "NE_OF_FORBIDDEN_DATA\020\000\022 \n\034WRITE_LINE_OF_" +
-      "FORBIDDEN_DATA\020\001\022 \n\034CLEAN_LINE_OF_FORBID" +
-      "DEN_DATA\020\002\022\034\n\030CLEAR_ALL_FORBIDDEN_DATA\020\003" +
-      "\022\027\n\023READ_FORBIDDEN_DATA\020\004\022\030\n\024WRITE_FORBI",
-      "DDEN_DATA\020\005*\257\001\n\007RRState\022\016\n\nNULL_STATE\020\000\022" +
-      "\022\n\016INACTIVE_STATE\020\001\022\025\n\021CELL_SELECT_STATE" +
-      "\020\002\022\016\n\nIDLE_STATE\020\003\022\020\n\014ACCESS_STATE\020\004\022\031\n\025" +
-      "PACKET_TRANSFER_STATE\020\005\022\023\n\017DEDICATED_STA" +
-      "TE\020\006\022\027\n\023CELL_RESELECT_STATE\020\007*\262\001\n\004Dump\022," +
-      "\n(ONLY_DISPLAY_INFORMATION_OF_SERVING_CA" +
-      "LL\020\000\022A\n=DISPLAY_INFORMATION_OF_SERVING_C" +
-      "ELL_AND_1_6_NEIGHBORING_CELLS\020\001\0229\n5LIST_" +
-      "OF_ARCFN_AND_CALL_FREQUENCY_LIST_OF_SERV" +
-      "ING_CELL\020\002*\203\001\n\017EngineeringMode\022\037\n\033SWITCH",
-      "_OFF_ENGINEERING_MODE\020\000\022\036\n\032SWITCH_ON_ENG" +
-      "INEERING_MODE\020\001\022/\n+SWITCH_ON_ENGINEERING" +
-      "_MODE_AND_ACTIVATE_URC\020\002*k\n\016OperatorStat" +
-      "us\022\023\n\017UNKNOW_OPERATOR\020\000\022\026\n\022OPERATOR_AVAI" +
-      "LABLE\020\001\022\024\n\020CURRENT_OPERATOR\020\002\022\026\n\022FORBIDD" +
-      "EN_OPERATOR\020\003*\207\002\n\021OthersMessageType\022#\n\037R" +
-      "EISSUES_THE_LAST_COMMAND_GIVEN\020\000\022\031\n\025SET_" +
-      "COMMAND_ECHO_MODE\020\001\022*\n&SET_COMMAND_LINE_" +
-      "TERMINATION_CHARACTER\020\002\022%\n!SET_RESPONSE_" +
-      "FORMATTING_CHARACTER\020\003\022&\n\"SET_COMMAND_LI",
-      "NE_EDITING_CHARACTER\020\004\022\017\n\013SET_RI_TIME\020\005\022" +
-      "&\n\"BURST_TRANSITION_SIGNAL_INDICATION\020\006*" +
-      "\302\001\n\032HardwareRelatedMessageType\022\t\n\005CLOCK\020" +
-      "\000\022\r\n\tSET_ALARM\020\001\022\022\n\016BATTERY_CHARGE\020\002\022\014\n\010" +
-      "READ_ADC\020\003\022\030\n\024CONFIGURE_SHOW_CLOCK\020\004\022&\n\"" +
-      "CONFIGURE_THE_NETWORK_LED_PATTERNS\020\005\022&\n\"" +
-      "CONFIGURE_THE_THRESHOLD_OF_VOLTAGE\020\006*\231\004\n" +
-      "\020AudioMessageType\022 \n\034SET_MONITOR_SPEAKER" +
-      "_LOUDNESS\020\000\022\034\n\030SET_MONITOR_SPEAKER_MODE\020" +
-      "\001\022\021\n\rTONE_DURATION\020\002\022\034\n\030DTMF_AND_TONE_GE",
-      "NERATION\020\003\022\024\n\020ALERT_SOUND_MODE\020\004\022\026\n\022RING" +
-      "ER_SOUND_LEVEL\020\005\022\035\n\031LOUD_SPEAKER_VOLUME_" +
-      "LEVEL\020\006\022\020\n\014MUTE_CONTROL\020\007\022#\n\037CHANGE_THE_" +
-      "SIDE_TONE_GAIN_LEVEL\020\010\022$\n CHANGE_THE_MIC" +
-      "ROPHONE_GAIN_LEVEL\020\t\022\035\n\031GENERATE_LOCAL_D" +
-      "TMF_TONES\020\n\022\033\n\027SWAP_THE_AUDIO_CHANNELS\020\013" +
-      "\022 \n\034AUDIO_CHANNEL_LOOP_BACK_TEST\020\014\022 \n\034GE" +
-      "NERATE_LOCAL_SPECIFIC_TONE\020\r\022\030\n\024SET_DTMF" +
-      "_OUTPUT_PATH\020\016\022\033\n\027SET_TONE_DETECTION_MOD" +
-      "E\020\017\022\017\n\013DETECT_DTMF\020\020\022\"\n\036PLAY_DTMF_TONE_D",
-      "URING_THE_CALL\020\021*\366\003\n\037SupplementaryServic" +
-      "eMessageType\0221\n-CALL_FORWARDING_NUMBER_A" +
-      "ND_CONDITIONS_CONTROL\020\000\022\035\n\031CLOSED_USER_G" +
-      "ROUP_CONTROL\020\001\022\030\n\024CALL_WAITING_CONTROL\020\002" +
-      "\022\034\n\030CALL_HOLD_AND_MULTIPARTY\020\003\022,\n(CALLIN" +
-      "G_LINE_IDENTIFICATION_PRESENTATION\020\004\022C\n?" +
-      "CONTROL_WHETHER_OR_NOT_TO_SHOW_THE_NAME_" +
-      "OF_INCOMING_CALL_NUMBER\020\005\022.\n*CONNECTED_L" +
-      "INE_IDENTIFICATION_PRESENTATION\020\006\022#\n\037SHO" +
-      "W_ALPHA_FIELD_IN_COLP_STRING\020\007\022+\n\'UNSTRU",
-      "CTURED_SUPPLEMENTARY_SERVICE_DATA\020\010\022\'\n#S" +
-      "UPPLEMENTARY_SERVICES_NOTIFICATION\020\t\022+\n\'" +
-      "CALLING_LINE_IDENTIFICATION_RESTRICTION\020" +
-      "\n*\323\n\n\020TCPIPMessageType\022 \n\034SET_UP_TCP_OR_" +
-      "UDP_CONNECTION\020\000\022+\n\'SEND_DATA_THROUGH_TC" +
-      "P_OR_UDP_CONNECTION\020\001\022\037\n\033CLOSE_TCP_OR_UD" +
-      "P_CONNECTION\020\002\022#\n\037DEACTIVATE_GPRS_CSD_PD" +
-      "P_CONTEXT\020\003\022\022\n\016SET_LOCAL_PORT\020\004\022.\n*START" +
-      "_TCPIP_TASK_APN_USERNAME_AND_PASSWORD\020\005\022" +
-      "\033\n\027ACTIVE_GPRS_CSD_CONTEXT\020\006\022\030\n\024GET_LOCA",
-      "L_IP_ADDRESS\020\007\022#\n\037QUERY_CURRENT_CONNECTI" +
-      "ON_STATUS\020\010\022-\n)QUERY_CONNECTION_STATUS_O" +
-      "F_CURRENT_ACCESS\020\t\022\037\n\033QUERY_CURRENT_SERV" +
-      "ER_STATUS\020\n\022 \n\034CONFIGURE_DOMAIN_NAME_SER" +
-      "VER\020\013\022-\n)QUERY_THE_IP_ADDRESS_OF_GIVEN_D" +
-      "OMAIN_NAME\020\014\0221\n-CONNECT_WITH_IP_ADDRESS_" +
-      "OR_DOMAIN_NAME_SERVER\020\r\022(\n$ADD_AN_IP_HEA" +
-      "DER_WHEN_RECEIVING_DATE\020\016\022\033\n\027SET_AUDIO_S" +
-      "ENDING_TIMER\020\017\022\037\n\033SET_PROMT_WHEN_SENDING" +
-      "_DATA\020\020\022\027\n\023CONFIGURE_AS_SERVER\020\021\022$\n SELE",
-      "CT_CSD_OR_GPRS_AS_THE_BEARER\020\022\022\025\n\021CHOOSE" +
-      "_CONNECTION\020\023\0227\n3SET_WHETHER_OR_NOT_TO_D" +
-      "ISPLAY_THE_ADDRESS_OF_SENDER\020\024\022\"\n\036SAVE_T" +
-      "CPIP_APPLICATION_CONTEXT\020\025\022\036\n\032SELECT_TCP" +
-      "IP_TRANSFER_MODE\020\026\022\'\n#CONFIGURE_TRANSPAR" +
-      "ENT_TRANSFER_MODE\020\027\0224\n0CONTROL_WHETHER_O" +
-      "R_NOT_TO_SHOW_THE_PROTOCOL_TYPE\020\030\022;\n7CON" +
-      "TROL_WHETHER_OR_NOT_TO_ENABLE_MULTIPLE_T" +
-      "CPIP_SESSION\020\031\0226\n2CONTROL_WHETHER_OR_NOT" +
-      "_TO_DISPLAY_LOCAL_IP_ADDRESS\020\032\022*\n&SELECT",
-      "_A_CONTEXT_AS_FOREGROUND_CONTEXT\020\033\022*\n&QU" +
-      "ERY_THE_DATA_INFORMATION_FOR_SENDING\020\034\0220" +
-      "\n,SET_THE_METHOD_TO_HANDLE_RECEIVED_TCPI" +
-      "P_DATA\020\035\022$\n RETRIEVE_THE_RECEIVED_TCPIP_" +
-      "DATA\020\036\0225\n1CONTRO_WHETHER_OR_NOT_TO_ECHO_" +
-      "THE_DATA_FOR_QISEND\020\037\022\030\n\024PING_A_REMOTE_S" +
-      "ERVER\020 \022&\n\"SYNCHRONIZE_THE_LOCAL_TIME_VI" +
-      "A_NTP\020!*\224\003\n\017GPRSMessageType\022 \n\034ATTACH_DE" +
-      "ATTACH_GPRS_SERVICE\020\000\022\026\n\022DEFINE_PDP_CONT" +
-      "EXT\020\001\022\031\n\025QOS_PROFILE_REQUESTED\020\002\022\"\n\036QOS_",
-      "PROFILE_MINIMUM_ACCEPTABLE\020\003\022&\n\"PDP_CONT" +
-      "EXT_ACTIVATE_OR_DEACTIVATE\020\004\022\024\n\020ENTER_DA" +
-      "TA_STATE\020\005\022\024\n\020SHOW_PDP_ADDRESS\020\006\022\035\n\031GPRS" +
-      "_MOBILE_STATION_CLASS\020\007\022,\n(CONTROL_UNSOL" +
-      "ICITED_GPRS_EVENT_REPORTING\020\010\022\037\n\033NETWORK" +
-      "_REGISTRATION_STATUS\020\t\022%\n!SELECT_SERVICE" +
-      "_FOR_MO_SMS_MESSAGE\020\n\022\037\n\033CHANGE_GPRS_MUL" +
-      "TISLOT_CLASS\020\013*\255\001\n\024PhonebookMessageType\022" +
-      "#\n\037SELECT_PHONEBOOK_MEMORY_STORAGE\020\000\022\031\n\025" +
-      "WRITE_PHONEBOOK_ENTRY\020\001\022\"\n\036READ_CURRENT_",
-      "PHONEBOOK_ENTRIES\020\002\022\032\n\026FIND_PHONEBOOK_EN" +
-      "TRIES\020\003\022\025\n\021SUBSCRIBER_NUMBER\020\004*\377\004\n\016SMSMe" +
-      "ssageType\022\032\n\026SELECT_MESSAGE_SERVICE\020\000\022\035\n" +
-      "\031SELECT_SMS_MESSAGE_FORMAT\020\001\022\036\n\032SMS_SERV" +
-      "ICE_CENTER_ADDRESS\020\002\022!\n\035PREFERRED_SMS_ME" +
-      "SSAGE_STORAGE\020\003\022\026\n\022DELETE_SMS_MESSAGE\020\004\022" +
-      "+\n\'LIST_SMS_MESSAGE_FROM_PREFERRED_STORA" +
-      "GE\020\005\022\024\n\020READ_SMS_MESSAGE\020\006\022\024\n\020SEND_SMS_M" +
-      "ESSAGE\020\007\022\037\n\033WRITE_SMS_MESSAGE_TO_MEMORY\020" +
-      "\010\022!\n\035SEND_SMS_MESSAGE_FROM_STORAGE\020\t\022\024\n\020",
-      "SEND_SMS_COMMAND\020\n\022\036\n\032NEW_SMS_MESSAGE_IN" +
-      "DICATION\020\013\022\030\n\024RESTORE_SMS_SETTINGS\020\014\022\025\n\021" +
-      "SAVE_SMS_SETTINGS\020\r\022%\n!SELECT_CELL_BROAD" +
-      "CAST_SMS_MESSAGE\020\016\022!\n\035SHOW_SMS_TEXT_MODE" +
-      "_PARAMETERS\020\017\022 \n\034SET_SMS_TEXT_MODE_PARAM" +
-      "ETERS\020\020\0226\n2STRORE_CLASS0_SMS_TO_SIM_WHEN" +
-      "_RECEIVING_CLASS0_SMS\020\021\022\022\n\016DELETE_ALL_SM" +
-      "S\020\022\022\033\n\027CONFIGURE_SMS_CODE_MODE\020\023*\367\006\n\026Cal" +
-      "lRelatedMessageType\022\033\n\027ANSWER_AN_INCOMIN" +
-      "G_CALL\020\000\022)\n%MOBILE_ORIENTED_CALL_TO_DIAL",
-      "_A_NUMBER\020\001\022\"\n\036DISCONNECT_EXISTING_CONNE" +
-      "CTION\020\002\022)\n%SWITCH_FROM_DATA_MODE_TO_COMM" +
-      "AND_MODE\020\003\022)\n%SWITCH_FROM_COMMAND_MODE_T" +
-      "O_DATA_MODE\020\004\022\030\n\024SELECT_PULSE_DIALING\020\005\022" +
-      "9\n5SET_NUMBER_OF_RINGS_BEFORE_AUTOMATICL" +
-      "Y_ANSWERING_CALL\020\006\022\"\n\036SET_PAUSE_BEFORE_B" +
-      "LIND_DIALING\020\007\022;\n7SET_NUMBER_OF_SECONDS_" +
-      "TO_WAIT_FOR_CONNECTION_COMPLETION\020\010\0229\n5S" +
-      "ET_NUMBER_OF_SECONDS_TO_WAIT_FOR_COMMA_D" +
-      "IAL_MODIFIER\020\t\022A\n=SET_DISCONNECT_DELAY_A",
-      "FTER_INDICATING_ABSENCE_OF_DATA_CARRIER\020" +
-      "\n\022\027\n\023SELECT_TONE_DIALING\020\013\022\032\n\026SELECT_TYP" +
-      "E_OF_ADDRESS\020\014\022\034\n\030LIST_CURRENT_CALLS_OF_" +
-      "ME\020\r\022\035\n\031SERVICE_REPORTING_CONTROL\020\016\0229\n5S" +
-      "ET_CELLULAR_RESULT_CODE_FOR_INCOMING_CAL" +
-      "L_INDICATION\020\017\022(\n$SELECT_RADIO_LINK_PROT" +
-      "OCOL_PARAMETER\020\020\022\033\n\027SINGLE_NUMBERING_SCH" +
-      "EME\020\021\022$\n CONFIGURE_ALTERNATING_MODE_CALL" +
-      "S\020\022\022\034\n\030PREFERENCE_SPEACH_CODING\020\023\022\036\n\032SPE" +
-      "ECH_CHANNEL_TYPE_REPORT\020\024\022\017\n\013DISABLE_ATH",
-      "\020\025*\265\002\n\031NetworkServiceMessageType\022\026\n\022OPER" +
-      "ATOR_SELECTION\020\000\022\030\n\024NETWORK_REGISTRATION" +
-      "\020\001\022\031\n\025SIGNAL_QUALITY_REPORT\020\002\022\033\n\027PREFERR" +
-      "ED_OPERATOR_LIST\020\003\022\027\n\023READ_OPEARATR_NAME" +
-      "S\020\004\022%\n!GET_AND_SET_MOBILE_OPERATION_BAND" +
-      "\020\005\0225\n1NETWORK_SERVICE_SWITCH_ON_OR_OFF_E" +
-      "NGINEERING_MODE\020\006\022\037\n\033SCAN_POWER_OF_GSM_F" +
-      "REQUENCY\020\007\022\026\n\022LOCK_GSM_FREQUENCY\020\010*\347\002\n\025S" +
-      "IMRelatedMessageType\022\020\n\014REQUEST_IMSI\020\000\022\021" +
-      "\n\rFACILITY_LOCK\020\001\022\r\n\tENTER_PIN\020\002\022\023\n\017CHAN",
-      "GE_PASSWORD\020\003\022\031\n\025RESTRICTED_SIM_ACCESS\020\004" +
-      "\022\026\n\022GENERIC_SIM_ACCESS\020\005\022\034\n\030CHANGE_PS_SU" +
-      "PER_PASSWORD\020\006\022\r\n\tSHOW_CCID\020\007\022\023\n\017SHOW_CC" +
-      "ID_QCCID\020\010\022!\n\035GET_SIM_CARD_GROUP_IDENTIF" +
-      "IER\020\t\022%\n!SELECT_SIM_CARD_OPERATING_VOLTA" +
-      "GE\020\n\022\035\n\031GET_SERVICE_PROVIDER_NAME\020\013\022\'\n#T" +
-      "IME_REMAINING_TO_INPUT_SIM_PIN_PUK\020\014*\265\005\n" +
-      "\030StatusControlMessageType\022\031\n\025EXTENDED_ER" +
-      "ROR_REPORT\020\000\022$\n MOBILE_EQUIPMENT_ACTIVIT" +
-      "Y_STATUS\020\001\022\036\n\032INDICATE_RI_WHEN_USING_URC",
-      "\020\002\022(\n$SHOW_STATE_OF_MOBILE_ORIGINATED_CE" +
-      "LL\020\003\022.\n*REFUSE_TO_RECEIVE_SMS_INCOMING_C" +
-      "ALL_OR_NOT\020\004\022.\n*ENABLE_OR_DISABLE_INITIA" +
-      "L_URC_PRESENTATION\020\005\0229\n5ENABLE_OR_DISABL" +
-      "E_PROPRIETARY_UNSOLICITED_INDICATIONS\020\006\022" +
-      "!\n\035QUERY_STATE_OF_INITIALIZATION\020\007\022\034\n\030QU" +
-      "ERY_GSM_NETWORK_STATUS\020\010\022 \n\034NETWORK_TIME" +
-      "_SYNCHRONIZATION\020\t\022+\n\'OBTAIN_LATEST_NETW" +
-      "ORK_TIME_SYNCHRONIZED\020\n\0228\n4NETWORK_TIME_" +
-      "SYNCHRONIZATION_AND_UPDATE_THE_RTC_TIME\020",
-      "\013\022\'\n#NETWORK_TIME_SYNCHRONIZATION_REPORT" +
-      "\020\014\022\'\n#SWITCH_ON_OR_OFF_DETECTING_SIM_CAR" +
-      "D\020\r\022!\n\035SIM_INSERTED_STATUS_REPORTING\020\016\0224" +
-      "\n0CSC_CALL_OR_GPRS_PDP_CONTEXT_TERMINAL_" +
-      "INDICATION\020\017*\335\002\n!SerialInterfaceControlM" +
-      "essageType\022\031\n\025SET_DCD_FUNCTION_MODE\020\000\022\031\n" +
-      "\025SET_DTR_FUNCTION_MODE\020\001\022\'\n#SET_TE_TA_CO" +
-      "NTROL_CHARACTER_FRAMING\020\002\022%\n!SET_TE_TA_L" +
-      "OCAL_DATA_FLOW_CONTROL\020\003\022,\n(SET_TE_TA_LO" +
-      "CAL_DATA_RATE_REPORTING_MODE\020\004\022\036\n\032SET_TE",
-      "_TA_FIXED_LOCAL_RATE\020\005\022\027\n\023MULTIPLEXER_CO" +
-      "NTROL\020\006\022 \n\034CONFIGURE_DUAL_UART_FUNCTION\020" +
-      "\007\022)\n%CONFIGURE_PARAMETERS_OF_THE_DUAL_UA" +
-      "RT\020\010*\376\006\n\023GeneralMesssageType\022.\n*DISPLAY_" +
-      "PRODUCT_IDENTIFICATION_INFORMATION\020\000\022\'\n#" +
-      "REQUEST_MANUFACTURER_IDENTIFICATION\020\001\022#\n" +
-      "\037REQUEST_TA_MODEL_IDENTIFICATION\020\002\022&\n\"RE" +
-      "QUEST_TA_REVISION_IDENTIFICATION\020\003\022(\n$RE" +
-      "QUEST_GLOBAL_OBJECT_IDENTIFICATION\020\004\022,\n(" +
-      "REQUEST_MANUFACTURER_IDENTIFICATION_CGMI",
-      "\020\005\022 \n\034REQUEST_MODEL_IDENTIFICATION\020\006\022+\n\'" +
-      "REQUEST_TA_REVISION_IDENTIFICATION_CGMR\020" +
-      "\007\022\020\n\014REQUEST_IMEI\020\010\0220\n,REQUEST_PRODUCT_S" +
-      "ERIAL_NUMBER_IDENTIFICATION\020\t\022\025\n\021REQUEST" +
-      "_IMEI_QGSN\020\n\0227\n3SET_ALL_CURRENT_PARAMETE" +
-      "RS_TO_MANUFACTURER_DEFAULTS\020\013\022!\n\035DISPLAY" +
-      "_CURRENT_CONFIGURATION\020\014\0224\n0STORE_CURREN" +
-      "T_PARAMETERS_TO_USER_DEFINED_PROFILE\020\r\022%" +
-      "\n!SET_RESULT_CODE_PRESENTATION_CODE\020\016\022\026\n" +
-      "\022TA_RESPONSE_FORMAT\020\017\022\"\n\036SET_CONNECT_RES",
-      "ULT_CODE_FORMAT\020\020\0226\n2SET_ALL_CURRENT_PAR" +
-      "AMETERS_TO_USER_DEFINED_PROFILE\020\021\022\033\n\027SET" +
-      "_PHONE_FUNCTIONALITY\020\022\022\r\n\tPOWER_OFF\020\023\022!\n" +
-      "\035REPORT_MOBILE_EQUIPMENT_ERROR\020\024\022\030\n\024SET_" +
-      "TE_CHARACTER_SET\020\025\022)\n%REQUEST_COMPLETE_T" +
-      "A_CAPABILITIES_LIST\020\026*\312\003\n\017SMTPMessageTyp" +
-      "e\022(\n$SET_THE_USER_NAME_FOR_AUTHENTICATIO" +
-      "N\020\000\022\'\n#SET_THE_PASSWORD_FOR_AUTHENTICATI" +
-      "ON\020\001\022\'\n#SET_THE_EMAIL_ADDRESS_OF_THE_SEN" +
-      "DER\020\002\022\030\n\024SET_THE_SENDERS_NAME\020\003\022+\n\'SET_T",
-      "HE_ADDRESS_AND_PORT_OD_SMTP_SERVER\020\004\022\034\n\030" +
-      "ADD_OR_DELETE_RECIPIENTS\020\005\022!\n\035EDIT_THE_S" +
-      "UBJECT_OF_THE_EMAIL\020\006\022!\n\035EDIT_THE_CONTEN" +
-      "T_OF_THE_EMAIL\020\007\022#\n\037ADD_AN_ATTACHMENT_FO" +
-      "R_THE_EMAIL\020\010\022\030\n\024DELETE_AN_ATTACHMENT\020\t\022" +
-      ")\n%CLEAR_ALL_CONFIGURATIONS_AND_CONTENTS" +
-      "\020\n\022\026\n\022SMTP_CONFIGURATION\020\013\022\016\n\nSEND_EMAIL" +
-      "\020\014*_\n\024RecordingMessageType\022\025\n\021RECORD_MED" +
-      "IA_FILE\020\000\022\023\n\017PLAY_MEDIA_FILE\020\001\022\033\n\027STOP_P" +
-      "LAYING_MEDIA_FILE\020\002*\352\001\n\023QuecCellMessageT",
-      "ype\022\"\n\036SCAN_BASIC_STATION_INFORMATION\020\000\022" +
-      "%\n!SWITCH_ON_OR_OFF_ENGINEERING_MODE\020\001\022\031" +
-      "\n\025LOCK_THE_BASE_STATION\020\002\022\036\n\032SCAN_ARFCN_" +
-      "RECEIVING_LEVEL\020\003\022\033\n\027GET_CHANNEL_INFORMA" +
-      "TION\020\004\022\033\n\027GET_LAST_VALID_TA_VALUE\020\005\022\023\n\017F" +
-      "ORBID_OPERATOR\020\006*\337\003\n\016MMSMessageType\022\033\n\027S" +
-      "ET_THE_URL_OF_THE_MMSC\020\000\022\025\n\021SET_THE_MMS_" +
-      "PROXY\020\001\022-\n)SET_THE_PARAMETER_FOR_SENDING" +
-      "_MMS_MESSAGE\020\002\022%\n!SET_CHARACTER_SETS_AND" +
-      "_INPUT_MODE\020\003\022\025\n\021WRITE_MMS_MESSAGE\020\004\022\024\n\020",
-      "SEND_MMS_MESSAGE\020\005\022#\n\037MENAGE_THE_RECEIVE" +
-      "D_MMS_MESSAGE\020\006\022\035\n\031READ_RECEIVED_MMS_MES" +
-      "SAGE\020\007\022%\n!RECEIVE_MMS_MESSAGE_FROM_THE_M" +
-      "MSC\020\010\022(\n$SET_PRIORITY_OF_MMS_MESSAGE_AND" +
-      "_CALL\020\t\022.\n*SET_DUR_ATTRIBUTE_VALUE_IN_TH" +
-      "E_SMIL_SCRIPT\020\n\022\032\n\026SET_MMS_SMS_TRANSACTO" +
-      "R\020\013\022\036\n\032ENABLE_OUTPUT_TEXT_IN_USC2\020\014\022\025\n\021O" +
-      "UTPUT_FILE_STYLE\020\r*\350\001\n\016STKMessageType\022\034\n" +
-      "\030TURN_ON_OFF_STK_FUNCTION\020\000\022\030\n\024STK_PROFI" +
-      "LE_DOWNLOAD\020\001\022\030\n\024STK_ENVELOPE_COMMAND\020\002\022",
-      "\031\n\025STK_TERMINAL_RESPONSE\020\003\022\024\n\020TRIGGER_ST" +
-      "K_CALL\020\004\022\023\n\017TRIGGER_STK_SMS\020\005\022\022\n\016TRIGGER" +
-      "_STK_SS\020\006\022\024\n\020TRIGGER_STK_USSD\020\007\022\024\n\020TRIGG" +
-      "ER_STK_DTMF\020\010*\356\006\n\016FTPMessageType\022/\n+OPEN" +
-      "_AN_FTP_SERVICE_TO_THE_GIVEN_FTP_SERVER\020" +
-      "\000\022\031\n\025CLOSE_THE_FTP_SERVICE\020\001\022#\n\037UPLOAD_A" +
-      "_FILE_TO_THE_FTP_SERVER\020\002\022\'\n#DOWNLOAD_A_" +
-      "FILE_FROM_THE_FTP_SERVER\020\003\022=\n9SET_THE_PA" +
-      "TH_IN_THE_FTP_SERVER_TO_UPLOAD_OR_DOWNLO" +
-      "AD_FILE\020\004\0228\n4SET_THE_USER_NAME_OF_THE_AC",
-      "COUNT_TO_OPEN_FTP_SERVICE\020\005\0227\n3SET_THE_P" +
-      "ASSWORD_OF_THE_ACCOUNT_TO_OPEN_FTP_SERVI" +
-      "CE\020\006\0228\n4SET_SOME_CONFIGURABLE_PARAMETERS" +
-      "_FOR_THE_FTP_SERVICE\020\007\022\037\n\033QUERY_STATUS_O" +
-      "F_FTP_SERVICE\020\010\0229\n5QUERY_THE_REAL_SIZE_T" +
-      "RANSFERED_IN_THE_LATEST_TRANSFER\020\t\0220\n,RE" +
-      "NAME_FILE_OR_FOLDER_NAME_ON_THE_FTP_SERV" +
-      "ER\020\n\0226\n2QUERY_THE_SIZE_OF_APPOINTED_FILE" +
-      "_ON_THE_FTP_SERVER\020\013\022/\n+DELETE_THE_APPOI" +
-      "NTED_FILE_ON_THE_FTP_SERVER\020\014\0220\n,ESTABLI",
-      "SH_A_NEW_FILEFOLDER_ON_THE_FTP_SERVER\020\r\022" +
-      ")\n%REMOVE_A_FILEFOLDER_ON_THE_FTP_SERVER" +
-      "\020\016\022D\n@LIST_CONTENTS_OF_DIRECTORY_OR_FILE" +
-      "_INFORMATION_ON_THE_FTP_SERVER\020\017\022<\n8LIST" +
-      "_FILE_NAMES_IN_THE_GIVEN_DIRECTORY_ON_TH" +
-      "E_FTP_SERVER\020\020*\375\002\n\017FileMessageType\022\031\n\025GE" +
-      "T_STORAGE_DATE_SIZE\020\000\022\016\n\nLIST_FILES\020\001\022\032\n" +
-      "\026UPLOAD_FILE_TO_STORAGE\020\002\022\036\n\032DOWNLOAD_FI" +
-      "LE_FROM_STORAGE\020\003\022\032\n\026DELETE_FILE_IN_STOR" +
-      "AGE\020\004\022\r\n\tMOVE_FILE\020\005\022\r\n\tOPEN_FILE\020\006\022\r\n\tR",
-      "EAD_FILE\020\007\022\016\n\nWRITE_FILE\020\010\022\r\n\tSEEK_FILE\020" +
-      "\t\022\016\n\nCLOSE_FILE\020\n\022\"\n\036GET_OFFSET_OF_THE_F" +
-      "ILE_POINTER\020\013\0224\n0FORCE_TO_WRITE_DATA_REM" +
-      "AINING_IN_THE_FILE_BUFFER\020\014\0221\n-TRUNCATE_" +
-      "THE_SPECIFIED_FILE_FROM_FILE_POINTER\020\r*\244" +
-      "\001\n\017HTTPMessageType\022\027\n\023SET_HTTP_SERVER_UR" +
-      "L\020\000\022\031\n\025SEND_HTTP_GET_REQUEST\020\001\022\035\n\031READ_H" +
-      "TTP_SERVER_RESPONSE\020\002\022\032\n\026SEND_HTTP_POST_" +
-      "REQUEST\020\003\022\"\n\036DOWNLODA_FILE_FROM_HTTP_SER" +
-      "VER\020\004*\376\036\n\005Error\022\006\n\002OK\020\000\022\020\n\014UNKNOW_ERROR\020",
-      "\001\022\020\n\014SERVICE_BUSY\020\003\022\034\n\030FAILED_TO_GET_IP_" +
-      "ADDRESS\020\004\022\021\n\rNETWORK_ERROR\020\005\022#\n\037UNSUPPOR" +
-      "TED_AUTHENTICATION_TYPE\020\006\022\022\n\016SERVICE_CLO" +
-      "SED\020\007\022#\n\037GPRS_CSD_CONTEXT_IS_DEACTIVATED" +
-      "\020\010\022\013\n\007TIMEOUT\020\t\022!\n\035NO_RECIPIENT_FOR_SMTP" +
-      "_SERVICE\020\n\022\030\n\024FAILED_TO_SEND_EMAIL\020\013\022&\n\"" +
-      "FAILED_TO_OPEN_FILE_FOR_ATTACHMENT\020\014\022#\n\037" +
-      "NO_ENOUGH_MEMORY_FOR_ATTACHMENT\020\r\022!\n\035FAI" +
-      "LED_TO_SAVE_THE_ATTACHMENT\020\016\022 \n\034THE_INPU" +
-      "T_PARAMETER_IS_WRONG\020\017\022\032\n\025SERVICE_NOT_AV",
-      "AILABLE\020\245\003\022$\n\037REQUESTED_MAIL_ACTION_NOT_" +
-      "TAKEN\020\302\003\022\035\n\030REQUESTED_ACTION_ABORTED\020\303\003\022" +
-      ";\n6REQUESTED_ACTION_NOT_TAKEN_INSUFFICIE" +
-      "NT_SYSTEM_STORAGE\020\304\003\022&\n!SYNTAX_ERROR_COM" +
-      "MAND_UNRECOGNIZED\020\364\003\022,\n\'SYNTAX_ERROR_IN_" +
-      "PARAMETERS_OR_ARGUMENTS\020\365\003\022\034\n\027COMMAND_NO" +
-      "T_IMPLEMENTED\020\366\003\022\035\n\030BAD_SEQUENCE_OF_COMM" +
-      "ANDS\020\367\003\022&\n!COMMAND_PARAMETER_NOT_IMPLEME" +
-      "NTED\020\370\003\022!\n\034DOMAIN_DOES_NOT_ACCEPT_EMAIL\020" +
-      "\211\004\022#\n\036ACCESS_DENIED_FOR_SMTP_SERVICE\020\222\004\022",
-      "\032\n\025AUTHENTICATION_FAILED\020\227\004\022\037\n\032REQUESTED" +
-      "_ACTION_NOT_TAKEN\020\246\004\022\023\n\016USER_NOT_LOCAL\020\247" +
-      "\004\022?\n:REQUESTED_MAIL_ACTION_ABORTED_EXCEE" +
-      "DED_STORAGE_NOT_ALLOWED\020\250\004\0228\n3REQUESTED_" +
-      "ACTION_NOT_TAKEN_MAILBOX_NAME_NOT_ALLOWE" +
-      "D\020\251\004\022\027\n\022TRANSACTION_FAILED\020\252\004\022\022\n\rHTTP_TI" +
-      "ME_OUT\020\331\035\022\016\n\tHTTP_BUSY\020\332\035\022\023\n\016HTTP_UART_B" +
-      "USY\020\333\035\022\030\n\023HTTP_GET_NO_REQUEST\020\334\035\022\026\n\021HTTP" +
-      "_NETWORK_BUSY\020\335\035\022\035\n\030HTTP_NETWORK_OPEN_FA" +
-      "ILED\020\336\035\022\033\n\026HTTP_NETWORK_NO_CONFIG\020\337\035\022\032\n\025",
-      "HTTP_NETWORK_DEACTIVE\020\340\035\022\027\n\022HTTP_NETWORK" +
-      "_ERROR\020\341\035\022\023\n\016HTTP_URL_ERROR\020\342\035\022\023\n\016HTTP_E" +
-      "MPTY_URL\020\343\035\022\027\n\022HTTP_IP_ADDR_ERROR\020\344\035\022\023\n\016" +
-      "HTTP_DNS_ERROR\020\345\035\022\035\n\030HTTP_SOCKET_CREATE_" +
-      "ERROR\020\346\035\022\036\n\031HTTP_SOCKET_CONNECT_ERROR\020\347\035" +
-      "\022\033\n\026HTTP_SOCKET_READ_ERROR\020\350\035\022\034\n\027HTTP_SO" +
-      "CKET_WRITE_ERROR\020\351\035\022\026\n\021HTTP_SOCKET_CLOSE" +
-      "\020\352\035\022\033\n\026HTTP_DATA_ENCODE_ERROR\020\353\035\022\033\n\026HTTP" +
-      "_DATA_DECODE_ERROR\020\354\035\022\031\n\024HTTP_TO_READ_TI" +
-      "MEOUT\020\355\035\022\031\n\024HTTP_RESPONSE_FAILED\020\356\035\022\027\n\022I",
-      "NCOMING_CALL_BUSY\020\357\035\022\024\n\017VOICE_CALL_BUSY\020" +
-      "\360\035\022\022\n\rINPUT_TIMEOUT\020\361\035\022\026\n\021WAIT_DATA_TIME" +
-      "OUT\020\362\035\022\037\n\032WAIT_HTTP_RESPONSE_TIMEOUT\020\363\035\022" +
-      "\026\n\021ALLOC_MEMORY_FAIL\020\364\035\022\031\n\024HTTP_NEED_REL" +
-      "OCATION\020\365\035\022\030\n\023INVALID_INPUT_VALUE\020\231\036\022\021\n\014" +
-      "MMS_TIME_OUT\020\275\036\022\021\n\014URL_TOO_LONG\020\276\036\022\020\n\013IN" +
-      "VALID_URL\020\277\036\022\026\n\021UNSUPPORTED_PROXY\020\300\036\022\032\n\025" +
-      "INVALID_PROXY_ADDRESS\020\301\036\022\025\n\020IP_ADDRESS_E" +
-      "RROR\020\302\036\022\016\n\tDNS_ERROR\020\303\036\022\024\n\017PARAMETER_ERR" +
-      "OR\020\304\036\022\030\n\023TO_ADDRESS_EXCEEDED\020\305\036\022\030\n\023CC_AD",
-      "DRESS_EXCEEDED\020\306\036\022\031\n\024BCC_ADDRESS_EXCEEDE" +
-      "D\020\307\036\022$\n\037APPENDED_FILE_CAPACITY_EXCEEDED\020" +
-      "\310\036\022\027\n\022FILE_NAME_TOO_LONG\020\311\036\022 \n\033THE_NUMBE" +
-      "R_OF_FILE_EXCEEDED\020\312\036\022\031\n\024NON_EXISTENT_AD" +
-      "DRESS\020\313\036\022\025\n\020UFS_STORAGE_FULL\020\314\036\022\017\n\nDRIVE" +
-      "_FULL\020\315\036\022\020\n\013DRIVE_ERROR\020\316\036\022\016\n\tNOT_FOUND\020" +
-      "\317\036\022\026\n\021INVALID_FILE_NAME\020\320\036\022\031\n\024FILE_ALREA" +
-      "DY_EXISTED\020\321\036\022\032\n\025FAILED_TO_CREATE_FILE\020\322" +
-      "\036\022\031\n\024FAILED_TO_WRITE_FILE\020\323\036\022\"\n\035FAILED_T" +
-      "O_OPEN_REQUESTED_FILE\020\324\036\022\030\n\023FAILED_TO_RE",
-      "AD_FILE\020\325\036\022\r\n\010MMS_BUSY\020\326\036\022\025\n\020SENDING_MMS" +
-      "_BUSY\020\327\036\022\030\n\023SENDING_MMS_STOPPED\020\330\036\022\034\n\027AL" +
-      "READY_STOPPED_TO_SEND\020\331\036\022\027\n\022RECEIVING_MM" +
-      "S_BUSY\020\332\036\022\032\n\025RECEIVING_MMS_STOPPED\020\333\036\022\034\n" +
-      "\027ALREADY_STOPPED_RECEIVE\020\334\036\022\032\n\025HTTP_RESP" +
-      "ONSE_FALIURE\020\335\036\022\031\n\024INVALID_MMS_RESPONSE\020" +
-      "\336\036\022\027\n\022MMS_RESPONSE_ERROR\020\337\036\022\031\n\024INVALID_P" +
-      "USH_MESSAGE\020\340\036\022\027\n\022ALREADY_DONWLOADED\020\341\036\022" +
-      "\021\n\014NETWORK_BUSY\020\342\036\022\033\n\026FAILED_TO_OPEN_NET" +
-      "WORK\020\343\036\022\032\n\025NETWORK_NO_CONFIGURED\020\344\036\022\030\n\023N",
-      "ETWORK_DEACTIVATED\020\345\036\022\026\n\021MMS_NETWORK_ERR" +
-      "OR\020\346\036\022\025\n\020NETWORK_SHUTDOWN\020\347\036\022\016\n\tUART_BUS" +
-      "Y\020\350\036\022\021\n\014UART_ESCAPED\020\351\036\022\034\n\027FAILED_TO_CRE" +
-      "ATE_SOCKET\020\352\036\022\035\n\030FAILED_TO_CONNECT_SOCKE" +
-      "T\020\353\036\022\032\n\025FAILED_TO_READ_SOCKET\020\354\036\022\033\n\026FAIL" +
-      "ED_TO_WRITE_SOCKET\020\355\036\022\022\n\rSOCKET_CLOSED\020\356" +
-      "\036\022\025\n\020MMS_LENGTH_ERROR\020\357\036\022\031\n\024FAILED_TO_EN" +
-      "CODE_MMS\020\360\036\022\031\n\024FAILED_TO_DECODE_MMS\020\361\036\022\032" +
-      "\n\025FAILED_TO_DECODE_HTTP\020\362\036\022\"\n\035FAILED_TO_" +
-      "DECODE_PUSH_MESSAGE\020\363\036\022\024\n\017PDU_ALIGN_ERRO",
-      "R\020\364\036\022\030\n\023PDU_CHARACTER_ERROR\020\365\036\022\024\n\017STRING" +
-      "_TOO_LONG\020\366\036\022\r\n\010MMS_FULL\020\367\036\022\025\n\020NON_EXIST" +
-      "ENT_MMS\020\370\036\022\024\n\017INVALID_ADDRESS\020\371\036\022\030\n\023MMS_" +
-      "VOICE_CALL_BUSY\020\372\036\022\030\n\023ALLOC_MEMORY_FAILE" +
-      "D\020\373\036\022\026\n\021EXCEED_MAX_LENGTH\020\240\037\022\023\n\016OPEN_FIL" +
-      "E_FAIL\020\241\037\022\024\n\017WRITE_FILE_FAIL\020\242\037\022\022\n\rGET_S" +
-      "IZE_FAIL\020\243\037\022\016\n\tREAD_FAIL\020\244\037\022\023\n\016LIST_FILE" +
-      "_FAIL\020\245\037\022\025\n\020DELETE_FILE_FAIL\020\246\037\022\027\n\022GET_D" +
-      "ISC_INFO_FAIL\020\247\037\022\r\n\010NO_SPACE\020\250\037\022\r\n\010TIME_" +
-      "OUT\020\251\037\022\030\n\023HTTP_FILE_NOT_FOUND\020\252\037\022\023\n\016FILE",
-      "_TOO_LARGE\020\253\037\022\027\n\022FILE_ALREADY_EXIST\020\254\037\022\026" +
-      "\n\021INVALID_PARAMETER\020\255\037\022\021\n\014DRIVER_ERROR\020\256" +
-      "\037\022\020\n\013CREATE_FAIL\020\257\037\022\022\n\rACCESS_DENIED\020\260\037\022" +
-      "\026\n\021FILE_IS_TOO_LARGE\020\261\037\022\021\n\014WRONG_FORMAT\020" +
-      "\314!\022\024\n\017AUDIO_TASK_BUSY\020\316!\022\027\n\022CREATE_FILE_" +
-      "FAILED\020\317!\022/\n*ADDITIONAL_RECORDING_IN_A_D" +
-      "IFFERENT_FORMAT\020\320!\022\016\n\tDISC_FULL\020\321!\022\035\n\030WR" +
-      "ITE_PROTECTION_ON_FILE\020\322!\022\033\n\026RECORDING_U" +
-      "NKNOW_ERROR\020\223#*\245\007\n\010FTPError\022\n\n\006FTP_OK\020\000\022" +
-      "\024\n\020FTP_UNKNOW_ERROR\020\001\022\024\n\020FTP_SERVICE_BUS",
-      "Y\020\003\0225\n1FAILED_TO_GET_IP_ADDRESS_ACCORDIN" +
-      "G_TO_DOMAIN_NAME\020\004\022\025\n\021FTP_NETWORK_ERROR\020" +
-      "\005\022$\n FTP_SESSION_CLOSED_BY_FTP_SERVER\020\006\022" +
-      ",\n(DATA_CONNECTION_OF_FTP_SERVICE_IS_CLO" +
-      "SED\020\007\022\'\n#FTP_GPRS_CSD_CONTEXT_IS_DEACTIV" +
-      "ATED\020\010\022\017\n\013FTP_TIMEOUT\020\t\022\036\n\032INPUT_PARAMET" +
-      "AR_IS_ILLEGAL\020\n\022$\n FILE_NOT_FOUND_IN_LOC" +
-      "AL_POSITION\020\013\022(\n$FAILED_TO_GET_FILE_IN_L" +
-      "OCAL_POSITION\020\014\022\'\n#FTP_NO_ENOUGH_MEMORY_" +
-      "FOR_ATTACHMENT\020\r\022$\n\037FTP_SERVER_CANT_SUPP",
-      "ORT_SERVICE\020\245\003\022#\n\036FAILED_TO_OPEN_DATA_CO" +
-      "NNECTION\020\251\003\022,\n\'CONNECTION_CLOSED_AND_STO" +
-      "P_TRANSFERRING\020\252\003\022#\n\036REQUEST_FOR_FILE_IS" +
-      "NT_OPERATED\020\302\003\022%\n FTP_SERVER_HAS_NOT_ENO" +
-      "UGH_MEMORY\020\304\003\022#\n\036FORMAT_OF_FTP_COMMAND_I" +
-      "S_WRONG\020\364\003\022&\n!PARAMETER_OF_FTP_COMMAND_I" +
-      "S_WRONG\020\365\003\022,\n\'FTP_COMMAND_ISNT_OPERATED_" +
-      "BY_FTP_SERVER\020\366\003\022\031\n\024NOT_LOGIN_FTP_SERVER" +
-      "\020\222\004\022 \n\033NEED_INFORMATION_OF_ACCOUNT\020\224\004\022\032\n" +
-      "\025REQUEST_ISNT_OPERATED\020\246\004\022\027\n\022REQUEST_IS_",
-      "STOPPED\020\247\004\022\037\n\032REQUEST_OF_FILE_IS_STOPPED" +
-      "\020\250\004\022\031\n\024FILE_NAME_IS_ILLEGAL\020\251\004B \n\023com.rt" +
-      "rk.atcommandsB\tATCommand"
+      "e\030\004 \001(\010\022\021\n\texecution\030\005 \001(\010\022\017\n\007service\030- " +
+      "\001(\005\022\037\n\027mobileTerminatedMessage\030\006 \001(\005\022\035\n\025" +
+      "mobileOrientedMessage\030\007 \001(\005\022\034\n\024broadcast" +
+      "TypeMessage\030\010 \001(\005\022\014\n\004mode\030\t \001(\005\022\021\n\tSCAdd" +
+      "ress\030\n \001(\t\022\023\n\013toSCAddress\030\013 \001(\005\022\014\n\004mem1\030" +
+      "\014 \001(\t\022\014\n\004mem2\030\r \001(\t\022\014\n\004mem3\030\016 \001(\t\022\r\n\005ind" +
+      "ex\030\017 \001(\005\022\017\n\007delflag\030\020 \001(\005\022\r\n\005alpha\030\021 \001(\t" +
+      "\022\032\n\022destinationAddress\030\022 \001(\t\022\014\n\004data\030\023 \001" +
+      "(\014\022\016\n\006length\030\024 \001(\005\022\032\n\022originatingAddress",
+      "\030\025 \001(\t\022\013\n\003pdu\030\026 \001(\005\022\036\n\026serviceCenterTime" +
+      "Stamp\030\027 \001(\t\022\034\n\024TPDestinationAddress\030\030 \001(" +
+      "\005\022\034\n\024TPOriginatingAddress\030\031 \001(\005\022\n\n\002fo\030\032 " +
+      "\001(\005\022\031\n\021messageIdentifier\030\033 \001(\005\022\032\n\022protoc" +
+      "olIdentifier\030\034 \001(\005\022\014\n\004stat\030\035 \001(\t\022\026\n\016vali" +
+      "dityPeriod\030\036 \001(\005\022\030\n\020messageReference\030\037 \001" +
+      "(\005\022\016\n\006ackpdu\030  \001(\005\022\023\n\013commandType\030! \001(\005\022" +
+      "\025\n\rmessageNumber\030\" \001(\005\022\n\n\002ds\030# \001(\005\022\016\n\006bu" +
+      "ffer\030$ \001(\005\022\017\n\007profile\030% \001(\005\022\032\n\022messageId" +
+      "entifiers\030& \001(\t\022\014\n\004dcss\030\' \001(\t\022\014\n\004show\030( ",
+      "\001(\005\022\027\n\017dataCodinScheme\030) \001(\005\022\014\n\004type\030* \001" +
+      "(\t\022\016\n\006status\030+ \001(\005\022\022\n\nfirstOctet\030, \001(\005\022\022" +
+      "\n\nisResponse\030. \001(\010\022\023\n\013description\030/ \001(\t\"" +
+      "\207\003\n\020PhonebookCommand\022<\n\013messageType\030\001 \002(" +
+      "\0162\'.com.rtrk.protobuf.PhonebookMessageTy" +
+      "pe\022\014\n\004test\030\002 \001(\010\022\014\n\004read\030\003 \001(\010\022\r\n\005write\030" +
+      "\004 \001(\010\022\021\n\texecution\030\005 \001(\010\022\017\n\007storage\030\022 \001(" +
+      "\t\022\017\n\007nlength\030\006 \001(\005\022\017\n\007tlength\030\007 \001(\005\022\r\n\005i" +
+      "ndex\030\010 \001(\005\022\016\n\006number\030\t \001(\t\022\014\n\004type\030\n \001(\005" +
+      "\022\014\n\004text\030\013 \001(\t\022\016\n\006index1\030\014 \001(\005\022\016\n\006index2",
+      "\030\r \001(\005\022\020\n\010findText\030\016 \001(\t\022\016\n\006alphax\030\017 \001(\t" +
+      "\022\017\n\007numberx\030\020 \001(\t\022\r\n\005typex\030\021 \001(\005\022\022\n\nisRe" +
+      "sponse\030\023 \001(\010\022\023\n\013description\030\024 \001(\t\"\362\003\n\013GP" +
+      "RSCommand\0227\n\013messageType\030\001 \002(\0162\".com.rtr" +
+      "k.protobuf.GPRSMessageType\022\014\n\004test\030\002 \001(\010" +
+      "\022\014\n\004read\030\003 \001(\010\022\r\n\005write\030\004 \001(\010\022\021\n\texecuti" +
+      "on\030\005 \001(\010\022\r\n\005state\030\032 \001(\005\022\013\n\003cid\030\006 \001(\005\022\017\n\007" +
+      "PDPType\030\007 \001(\t\022\013\n\003APN\030\010 \001(\t\022\022\n\nPDPAddress" +
+      "\030\t \001(\t\022\r\n\005dComp\030\n \001(\005\022\r\n\005hComp\030\013 \001(\005\022\022\n\n" +
+      "precedence\030\014 \001(\005\022\r\n\005delay\030\r \001(\005\022\023\n\013relia",
+      "bility\030\016 \001(\005\022\014\n\004peek\030\017 \001(\005\022\014\n\004mean\030\020 \001(\005" +
+      "\022\013\n\003L2P\030\021 \001(\t\022\r\n\005class\030\022 \001(\t\022\014\n\004mode\030\023 \001" +
+      "(\005\022\t\n\001n\030\024 \001(\005\022\014\n\004stat\030\025 \001(\005\022\013\n\003lac\030\026 \001(\t" +
+      "\022\n\n\002ci\030\027 \001(\t\022\017\n\007service\030\030 \001(\005\022\026\n\016multisl" +
+      "otClass\030\031 \001(\005\022\022\n\nisResponse\030\033 \001(\010\022\023\n\013des" +
+      "cription\030\034 \001(\t\"\303\007\n\014TCPIPCommand\0228\n\013messa" +
+      "geType\030\001 \002(\0162#.com.rtrk.protobuf.TCPIPMe" +
+      "ssageType\022\014\n\004test\030\002 \001(\010\022\014\n\004read\030\003 \001(\010\022\r\n" +
+      "\005write\030\004 \001(\010\022\021\n\texecution\030\005 \001(\010\022\r\n\005index" +
+      "\0306 \001(\005\022\014\n\004mode\030\006 \001(\t\022\017\n\007modeInt\030\007 \001(\005\022\014\n",
+      "\004port\030\010 \001(\005\022\022\n\ndomainName\030\t \001(\t\022\016\n\006lengt" +
+      "h\030\n \001(\005\022\013\n\003APN\030\013 \001(\t\022\020\n\010username\030\014 \001(\t\022\020" +
+      "\n\010password\030\r \001(\t\022\014\n\004rate\030\016 \001(\005\022\r\n\005state\030" +
+      "\017 \001(\t\022\023\n\013socketState\030\020 \001(\t\022\023\n\013serverStat" +
+      "e\030\021 \001(\t\022\022\n\nprimaryDNS\030\022 \001(\t\022\023\n\013seondaryD" +
+      "NS\030\023 \001(\t\022\r\n\005error\030\024 \001(\005\022\014\n\004time\030\025 \001(\003\022\022\n" +
+      "\nsendPrompt\030\026 \001(\005\022\013\n\003num\030\027 \001(\005\022\014\n\004type\030\030" +
+      " \001(\005\022\013\n\003max\030\031 \001(\003\022\022\n\ndialNumber\030\032 \001(\t\022\022\n" +
+      "\nconnection\030\033 \001(\005\022\025\n\rnumberOfRetry\030\034 \001(\005" +
+      "\022\020\n\010waitTime\030\035 \001(\005\022\020\n\010sendSize\030\036 \001(\005\022\016\n\006",
+      "escape\030\037 \001(\010\022\017\n\007channel\030  \001(\005\022\t\n\001n\030! \001(\005" +
+      "\022\014\n\004sent\030\" \001(\005\022\r\n\005acked\030# \001(\005\022\016\n\006nAcked\030" +
+      "$ \001(\005\022\t\n\001m\030% \001(\005\022\n\n\002id\030& \001(\005\022\n\n\002sc\030\' \001(\005" +
+      "\022\013\n\003sid\030( \001(\005\022\016\n\006number\030) \001(\005\022\014\n\004host\030* " +
+      "\001(\t\022\017\n\007timeout\030+ \001(\005\022\022\n\npingNumber\030, \001(\005" +
+      "\022\016\n\006result\030- \001(\005\022\r\n\005bytes\030. \001(\005\022\013\n\003ttl\030/" +
+      " \001(\005\022\023\n\013finalResult\0300 \001(\005\022\020\n\010received\0301 " +
+      "\001(\005\022\014\n\004lost\0302 \001(\005\022\013\n\003min\0303 \001(\003\022\013\n\003avg\0304 " +
+      "\001(\003\022\016\n\006server\0305 \001(\t\022\022\n\nisResponse\0307 \001(\010\022" +
+      "\023\n\013description\0308 \001(\t\"\330\003\n\033SupplementarySe",
+      "rviceCommand\022G\n\013messageType\030\001 \002(\01622.com." +
+      "rtrk.protobuf.SupplementaryServiceMessag" +
+      "eType\022\014\n\004test\030\002 \001(\010\022\014\n\004read\030\003 \001(\010\022\r\n\005wri" +
+      "te\030\004 \001(\010\022\021\n\texecution\030\005 \001(\010\022\r\n\005reads\030\026 \001" +
+      "(\005\022\014\n\004mode\030\006 \001(\005\022\016\n\006number\030\007 \001(\t\022\014\n\004type" +
+      "\030\010 \001(\005\022\022\n\nsubaddress\030\t \001(\t\022\016\n\006satype\030\n \001" +
+      "(\005\022\r\n\005class\030\013 \001(\005\022\014\n\004time\030\014 \001(\005\022\016\n\006statu" +
+      "s\030\r \001(\005\022\t\n\001n\030\016 \001(\005\022\r\n\005index\030\017 \001(\005\022\014\n\004inf" +
+      "o\030\020 \001(\005\022\t\n\001m\030\021 \001(\005\022\022\n\nUSSDString\030\022 \001(\t\022\030" +
+      "\n\020dataCodingScheme\030\023 \001(\005\022\r\n\005code1\030\024 \001(\005\022",
+      "\r\n\005code2\030\025 \001(\005\022\022\n\nisResponse\030\027 \001(\010\022\023\n\013de" +
+      "scription\030\030 \001(\t\"\324\005\n\014AudioCommand\0228\n\013mess" +
+      "ageType\030\001 \002(\0162#.com.rtrk.protobuf.AudioM" +
+      "essageType\022\014\n\004test\030\002 \001(\010\022\014\n\004read\030\003 \001(\010\022\r" +
+      "\n\005write\030\004 \001(\010\022\021\n\texecution\030\005 \001(\010\022\r\n\005valu" +
+      "e\030! \001(\005\022\030\n\020internalDuration\030\006 \001(\005\022\020\n\010dur" +
+      "ation\030\007 \001(\003\022\022\n\nDTMFString\030\010 \001(\t\022\014\n\004mode\030" +
+      "\t \001(\005\022\r\n\005level\030\n \001(\005\022\014\n\004mute\030\013 \001(\010\022\021\n\tga" +
+      "inLevel\030\014 \001(\005\022\017\n\007channel\030\r \001(\005\022\r\n\005state\030" +
+      "\016 \001(\005\022\014\n\004type\030\017 \001(\005\022\021\n\tfrequency\030\020 \001(\005\022\020",
+      "\n\010periodON\030\021 \001(\005\022\021\n\tperiodOFF\030\022 \001(\005\022\022\n\no" +
+      "utputPath\030\023 \001(\005\022\027\n\017operateFunction\030\024 \001(\005" +
+      "\022\026\n\016functionStatus\030\025 \001(\005\022\017\n\007operate\030\026 \001(" +
+      "\005\022\023\n\013prefixPause\030\027 \001(\005\022\024\n\014lowThreshold\030\030" +
+      " \001(\005\022\025\n\rhighThreshold\030\031 \001(\005\022\020\n\010dtmfCode\030" +
+      "\032 \001(\t\022\027\n\017persistenceTime\030\033 \001(\005\022\024\n\014uplink" +
+      "Volume\030\034 \001(\005\022\026\n\016downlinkVolume\030\035 \001(\005\022\027\n\017" +
+      "continuanceTime\030\036 \001(\003\022\020\n\010muteTime\030\037 \001(\003\022" +
+      "\024\n\014audioChannel\030  \001(\005\022\022\n\nisResponse\030\" \001(" +
+      "\010\022\023\n\013description\030# \001(\t\"\217\003\n\026HardwareRelat",
+      "edCommand\022B\n\013messageType\030\001 \002(\0162-.com.rtr" +
+      "k.protobuf.HardwareRelatedMessageType\022\014\n" +
+      "\004test\030\002 \001(\010\022\014\n\004read\030\003 \001(\010\022\r\n\005write\030\004 \001(\010" +
+      "\022\021\n\texecution\030\005 \001(\010\022\014\n\004time\030\022 \001(\t\022\r\n\005sta" +
+      "te\030\006 \001(\005\022\016\n\006repeat\030\007 \001(\005\022\r\n\005power\030\010 \001(\005\022" +
+      "\013\n\003bcs\030\t \001(\005\022\013\n\003bcl\030\n \001(\005\022\017\n\007voltage\030\013 \001" +
+      "(\005\022\016\n\006status\030\014 \001(\005\022\r\n\005value\030\r \001(\005\022\t\n\001n\030\016" +
+      " \001(\005\022\017\n\007ledMode\030\017 \001(\005\022\025\n\rthresholdType\030\020" +
+      " \001(\005\022\021\n\tthreshold\030\021 \001(\005\022\022\n\nisResponse\030\023 " +
+      "\001(\010\022\023\n\013description\030\024 \001(\t\"\356\001\n\rOthersComma",
+      "nd\0229\n\013messageType\030\001 \002(\0162$.com.rtrk.proto" +
+      "buf.OthersMessageType\022\014\n\004test\030\002 \001(\010\022\014\n\004r" +
+      "ead\030\003 \001(\010\022\r\n\005write\030\004 \001(\010\022\021\n\texecution\030\005 " +
+      "\001(\010\022\r\n\005value\030\006 \001(\005\022\t\n\001n\030\007 \001(\005\022\020\n\010timeMod" +
+      "e\030\010 \001(\005\022\017\n\007indMode\030\t \001(\005\022\022\n\nisResponse\030\n" +
+      " \001(\010\022\023\n\013description\030\013 \001(\t\"f\n\014ErrorComman" +
+      "d\022\'\n\005error\030\001 \001(\0162\030.com.rtrk.protobuf.Err" +
+      "or\022-\n\010FTPError\030\002 \001(\0162\033.com.rtrk.protobuf" +
+      ".FTPError*\370\003\n\013CommandType\022\020\n\014HTTP_COMMAN" +
+      "D\020\000\022\020\n\014FILE_COMMAND\020\001\022\017\n\013FTP_COMMAND\020\002\022\017",
+      "\n\013MMS_COMMAND\020\003\022\025\n\021QUEC_CELL_COMMAND\020\004\022\025" +
+      "\n\021RECORDING_COMMAND\020\005\022\020\n\014SMTP_COMMAND\020\006\022" +
+      "\017\n\013STK_COMMAND\020\007\022\023\n\017GENERAL_COMMAND\020\010\022\034\n" +
+      "\030SERIAL_INTERFACE_COMMAND\020\t\022\032\n\026STATUS_CO" +
+      "NTROL_COMMAND\020\n\022\027\n\023SIM_RELATED_COMMAND\020\013" +
+      "\022\033\n\027NETWORK_SERVICE_COMMAND\020\014\022\030\n\024CALL_RE" +
+      "LATED_COMMAND\020\r\022\017\n\013SMS_COMMAND\020\016\022\025\n\021PHON" +
+      "EBOOK_COMMAND\020\017\022\020\n\014GPRS_COMMAND\020\020\022\021\n\rTCP" +
+      "IP_COMMAND\020\021\022!\n\035SUPPLEMENTARY_SERVICE_CO" +
+      "MMAND\020\022\022\021\n\rAUDIO_COMMAND\020\023\022\034\n\030HARDWARE_R",
+      "ELATED_COMMAND\020\024\022\022\n\016OTHERS_COMMAND\020\025*|\n\014" +
+      "FileOpenMode\022\'\n#IF_NOT_EXISTS_CREATE_IF_" +
+      "EXISTS_OPEN\020\000\022\"\n\036IF_EXISTS_CREATE_AND_CL" +
+      "EAR_OLD\020\001\022\037\n\033IF_EXISTS_OPEN_IN_READ_MODE" +
+      "\020\002*T\n\023PointerMovementMode\022\016\n\nFILE_BEGIN\020" +
+      "\000\022\037\n\033CURRENT_POSITION_OF_POINTER\020\001\022\014\n\010FI" +
+      "LE_END\020\002*\237\001\n\034TypeOfConfigurableParameter" +
+      "s\022\033\n\027MODE_OF_DATA_CONNECTION\020\000\022\021\n\rTRANSF" +
+      "ER_TYPE\020\001\022*\n&RESUMING_POINT_TO_RESUME_FI" +
+      "LE_TRANSFER\020\002\022#\n\037LOCAL_POSITION_OF_FILE_",
+      "TRANSFER\020\003*@\n\016ParameterValue\022\026\n\022ACTIVE_M" +
+      "ODE_BINARY\020\000\022\026\n\022PASSIVE_MODE_ASCII\020\001*G\n\006" +
+      "Return\022.\n*RETURN_NO_INFORMATIONS_TRANSFE" +
+      "RED_FROM_FTP\020\000\022\r\n\tRETURN_OK\020\001*\272\001\n\010FileTy" +
+      "pe\022\010\n\004TEXT\020\001\022\r\n\tTEXT_HTML\020\002\022\016\n\nTEXT_PLAI" +
+      "N\020\003\022\014\n\010TEXT_XML\020\004\022\t\n\005IMAGE\020\005\022\r\n\tIMAGE_GI" +
+      "F\020\006\022\016\n\nIMAGE_JPEG\020\007\022\016\n\nIMAGE_TIFF\020\010\022\r\n\tI" +
+      "MAGE_PNP\020\t\022\016\n\nIMAGE_WBMP\020\n\022\t\n\005AUDIO\020\013\022\t\n" +
+      "\005VIDEO\020\014\022\010\n\004SMIL\020\r*\'\n\016OperateSendMMS\022\025\n\021" +
+      "START_TO_SEND_MMS\020\001*5\n\021OperateReceiveMMS",
+      "\022 \n\034START_TO_RECEIVE_MMS_MESSAGE\020\001*\254\001\n\016O" +
+      "perateReadMMS\022\034\n\030VIEW_ORIGINATION_ADDRES" +
+      "S\020\001\022\023\n\017VIEW_TO_ADDRESS\020\002\022\023\n\017VIEW_CC_ADDR" +
+      "ESS\020\003\022\022\n\016VIEW_MMS_TITLE\020\004\022\024\n\020LIST_APPEND" +
+      "_FILE\020\005\022(\n$READ_APPEND_FILE_DATA_OF_MMS_" +
+      "MESSAGE\020\006*@\n\020OperateManageMMS\022\026\n\022DELETE_" +
+      "MMS_MESSAGE\020\000\022\024\n\020LIST_MMS_MESSAGE\020\001*7\n\017O" +
+      "perateWriteMMS\022\021\n\rCLEAN_OPERATE\020\000\022\021\n\rWRI" +
+      "TE_OPERATE\020\001*\256\001\n\017OperateFunction\022$\n CLEA" +
+      "R_ALL_CONTENT_OF_MMS_MESSAGE\020\000\022\026\n\022OPERAT",
+      "E_TO_ADDRESS\020\001\022\026\n\022OPERATE_CC_ADDRESS\020\002\022\027" +
+      "\n\023OPERATE_BCC_ADDRESS\020\003\022\021\n\rOPERATE_TITLE" +
+      "\020\004\022\031\n\025OPERATE_FILE_APPENDED\020\005*!\n\014Protoco" +
+      "lType\022\021\n\rHHTP_PROTOCOL\020\001*\237\001\n\016ValidityPer" +
+      "iod\022\017\n\013TIME_1_HOUR\020\000\022\021\n\rTIME_12_HOURS\020\001\022" +
+      "\021\n\rTIME_24_HOURS\020\002\022\017\n\013TIME_2_DAYS\020\003\022\017\n\013T" +
+      "IME_1_WEEK\020\004\022\020\n\014MAXIMUM_TIME\020\005\022\"\n\036USE_NE" +
+      "TWORK_CONFIGURATION_TIME\020\006*l\n\010Priority\022\020" +
+      "\n\014LOW_PRIORITY\020\000\022\023\n\017NORMAL_PRIORITY\020\001\022\021\n" +
+      "\rHIGH_PRIORITY\020\002\022&\n\"USE_NETWORK_CONFIGUR",
+      "ATION_PRIORITY\020\003*s\n\016AddressVisible\022\024\n\020HI" +
+      "DE_ANY_ADDRESS\020\000\022\034\n\030SHOW_EVEN_SECRET_ADD" +
+      "RESS\020\001\022-\n)USE_NETWORK_CONFIGURATION_ADDR" +
+      "ESS_VISIBLE\020\002*\214\001\n\017MMSMessageClass\022\022\n\016PER" +
+      "SONAL_CLASS\020\000\022\027\n\023ADVERTISEMENT_CLASS\020\001\022\027" +
+      "\n\023INFORMATIONAL_CLASS\020\002\022\016\n\nAUTO_CLASS\020\003\022" +
+      "#\n\037USE_NETWORK_CONFIGURATION_CLASS\020\004*5\n\016" +
+      "TitleInputMode\022\020\n\014PDU_HEX_MODE\020\000\022\021\n\rTEXT" +
+      "_BIN_MODE\020\001*P\n\004Band\022\020\n\014GSM_900_BAND\020\000\022\021\n" +
+      "\rDCS_1800_BAND\020\001\022\021\n\rPCS_1900_BAND\020\002\022\020\n\014G",
+      "SM_850_BAND\020\003*\312\001\n\022ForbidOperatorMode\022\037\n\033" +
+      "READ_LINE_OF_FORBIDDEN_DATA\020\000\022 \n\034WRITE_L" +
+      "INE_OF_FORBIDDEN_DATA\020\001\022 \n\034CLEAN_LINE_OF" +
+      "_FORBIDDEN_DATA\020\002\022\034\n\030CLEAR_ALL_FORBIDDEN" +
+      "_DATA\020\003\022\027\n\023READ_FORBIDDEN_DATA\020\004\022\030\n\024WRIT" +
+      "E_FORBIDDEN_DATA\020\005*\257\001\n\007RRState\022\016\n\nNULL_S" +
+      "TATE\020\000\022\022\n\016INACTIVE_STATE\020\001\022\025\n\021CELL_SELEC" +
+      "T_STATE\020\002\022\016\n\nIDLE_STATE\020\003\022\020\n\014ACCESS_STAT" +
+      "E\020\004\022\031\n\025PACKET_TRANSFER_STATE\020\005\022\023\n\017DEDICA" +
+      "TED_STATE\020\006\022\027\n\023CELL_RESELECT_STATE\020\007*\262\001\n",
+      "\004Dump\022,\n(ONLY_DISPLAY_INFORMATION_OF_SER" +
+      "VING_CALL\020\000\022A\n=DISPLAY_INFORMATION_OF_SE" +
+      "RVING_CELL_AND_1_6_NEIGHBORING_CELLS\020\001\0229" +
+      "\n5LIST_OF_ARCFN_AND_CALL_FREQUENCY_LIST_" +
+      "OF_SERVING_CELL\020\002*\203\001\n\017EngineeringMode\022\037\n" +
+      "\033SWITCH_OFF_ENGINEERING_MODE\020\000\022\036\n\032SWITCH" +
+      "_ON_ENGINEERING_MODE\020\001\022/\n+SWITCH_ON_ENGI" +
+      "NEERING_MODE_AND_ACTIVATE_URC\020\002*V\n\016Opera" +
+      "torStatus\022\026\n\022OPERATOR_AVAILABLE\020\001\022\024\n\020CUR" +
+      "RENT_OPERATOR\020\002\022\026\n\022FORBIDDEN_OPERATOR\020\003*",
+      ":\n\013PlayChannel\022\014\n\010RECEIVER\020\000\022\013\n\007HEADSET\020" +
+      "\001\022\020\n\014LOUD_SPEAKER\020\002*O\n\nFileFormat\022\007\n\003AMR" +
+      "\020\003\022\r\n\tWAV_PCM16\020\r\022\014\n\010WAV_ALAW\020\016\022\014\n\010WAV_U" +
+      "LAW\020\017\022\r\n\tWAV_ADPCM\020\020*L\n\016RecordingState\022\036" +
+      "\n\032MODULE_IS_NOT_IN_RECORDING\020\000\022\032\n\026MOUDLE" +
+      "_IS_IN_RECORDING\020\001*6\n\007Charset\022\t\n\005ASCII\020\000" +
+      "\022\t\n\005UTF_8\020\001\022\013\n\007GB_2312\020\002\022\010\n\004BIG5\020\003*O\n\rRe" +
+      "cipientType\022\026\n\022RECEIVER_RECIPIENT\020\001\022\021\n\rC" +
+      "OPY_RECEIVER\020\002\022\023\n\017SECRET_RECEIVER\020\003*8\n\rR" +
+      "ecipientMode\022\024\n\020DELETE_RECIPIENT\020\000\022\021\n\rAD",
+      "D_RECIPIENT\020\001*\224\002\n\003STK\022\034\n\030TRIGER_MODEM_TO" +
+      "_SEND_STK\020\000\0225\n1TRIGER_MODEM_TO_SEND_STK_" +
+      "BUT_ICON_CANT_BE_DISPLAY\020\004\022(\n$PROACTIVE_" +
+      "SESSION_TERMINATED_BY_USER\020\020\022\031\n\025NO_RESPO" +
+      "NSE_FROM_USER\020\022\022/\n+ME_CURRENTLY_UNABLE_T" +
+      "O_PROCESS_THIS_COMMAND\020 \022\032\n\026USER_REJECT_" +
+      "SETUP_CALL\020\"\022&\n\"COMMAND_DATA_DONT_UNDERS" +
+      "TOOD_BY_ME\0202*\212\001\n\021DisableResultCode\022\027\n\023DI" +
+      "SABLE_RESULT_CODE\020\000\022-\n)ENABLE_RESULT_COD" +
+      "E_AND_USE_NUMERIC_VALUES\020\001\022-\n)ENABLE_RES",
+      "ULT_CODE_AND_USE_VERBOSE_VALUES\020\002*:\n\014Pow" +
+      "erOffMode\022\024\n\020URGENT_POWER_OFF\020\000\022\024\n\020NORMA" +
+      "L_POWER_OFF\020\001**\n\005Reset\022\023\n\017DO_NOT_RESET_M" +
+      "E\020\000\022\014\n\010RESET_ME\020\001*\205\001\n\rFunctionality\022\031\n\025M" +
+      "INIMUM_FUNCTIONALITY\020\000\022\026\n\022FULL_FUNCTIONA" +
+      "LITY\020\001\022A\n=DISABLE_PHONE_FROM_BOTH_TRANSM" +
+      "ITTING_AND_RECEIVING_RF_SIGNALS\020\002*\313\002\n\021Co" +
+      "nnectResultCode\022%\n!CONNECT_RESULT_CODE_O" +
+      "NLY_RETURNED\020\000\022*\n&CONNECT_TEXT_RESULT_CO" +
+      "DE_ONLY_RETURNED\020\001\022L\nHCONNECT_TEXT_RESUL",
+      "T_CODE_RETURNED_DIAL_TONE_ENABLED_BUSY_S" +
+      "IGNAL_DISABLED\020\002\022L\nHCONNECT_TEXT_RESULT_" +
+      "CODE_RETURNED_DIAL_TONE_DISABLED_BUSY_SI" +
+      "GNAL_ENABLED\020\003\022G\nCCONNECT_TEXT_RESULT_CO" +
+      "DE_RETURNED_DIAL_TONE_AND_BUSY_SIGNAL_EN" +
+      "ABLED\020\004*P\n\023InformationResponse\022\034\n\030SHORT_" +
+      "RESULT_CODE_FORMAT\020\000\022\033\n\027LONG_RESULT_CODE" +
+      "_FORMAT\020\001*_\n\nResultCode\022\035\n\031TA_TRANSMINTS" +
+      "_RESULT_CODE\020\000\0222\n.RESULT_CODE_ARE_SUPPRE" +
+      "SSED_AND_NOT_TRANSMITTED\020\001*(\n\013TAToDefaul",
+      "t\022\031\n\025SET_ALL_TA_TO_DEFAULT\020\000*#\n\rProfileN" +
+      "umber\022\022\n\016PROFILE_NUMBER\020\000*3\n\024ResetToProf" +
+      "ileNumber\022\033\n\027RESET_TO_PROFILE_NUMBER\020\000*N" +
+      "\n\010DCEByDTE\022\023\n\017DCE_BY_DTE_NONE\020\000\022\027\n\023DCE_B" +
+      "Y_DTE_XON_XOFF\020\001\022\024\n\020RTS_FLOW_CONTROL\020\002*N" +
+      "\n\010DTEByDCE\022\023\n\017DTE_BY_DCE_NONE\020\000\022\027\n\023DTE_B" +
+      "Y_DCE_XON_XOFF\020\001\022\024\n\020CTS_FLOW_CONTROL\020\002*{" +
+      "\n\016DualUARTParity\022\031\n\025DUAL_UART_PARITY_NON" +
+      "E\020\000\022\030\n\024DUAL_UART_PARITY_ODD\020\001\022\031\n\025DUAL_UA" +
+      "RT_PARITY_EVEN\020\002\022\031\n\025DUAL_UART_PARITY_MAR",
+      "K\020\003*:\n\010StopBits\022\016\n\nSTOP_BIT_1\020\001\022\016\n\nSTOP_" +
+      "BIT_2\020\002\022\016\n\nSTOP_BIT_3\020\003*N\n\010DataBits\022\017\n\013D" +
+      "ATA_BITS_5\020\001\022\017\n\013DATA_BITS_6\020\002\022\017\n\013DATA_BI" +
+      "TS_7\020\003\022\017\n\013DATA_BITS_8\020\004*E\n\020TransmissionR" +
+      "ate\022\034\n\030UNKNOW_TRANSMISSION_RATE\020\000\022\023\n\017RAT" +
+      "E_115200_BPS\020\005*4\n MultiplexerTransparenc" +
+      "yMechanism\022\020\n\014BASIC_OPTION\020\000*5\n\031Multiple" +
+      "xerControlChannel\022\030\n\024UIH_FRAMES_USED_ONL" +
+      "Y\020\000*\371\001\n\004Rate\022\n\n\006RATE_0\020\000\022\013\n\007RATE_75\020K\022\r\n" +
+      "\010RATE_150\020\226\001\022\r\n\010RATE_300\020\254\002\022\r\n\010RATE_600\020",
+      "\330\004\022\016\n\tRATE_1200\020\260\t\022\017\n\nREATE_2400\020\340\022\022\016\n\tR" +
+      "ATE_4800\020\300%\022\016\n\tRATE_9600\020\200K\022\017\n\nRATE_1440" +
+      "0\020\240\013\022\020\n\nRATE_19200\020\200\226\001\022\020\n\nRATE_28800\020\200\341\001" +
+      "\022\020\n\nRATE_38400\020\200\254\002\022\020\n\nRATE_57600\020\200\302\003\022\021\n\013" +
+      "RATE_115200\020\200\204\007*0\n\006Parity\022\007\n\003ODD\020\000\022\010\n\004EV" +
+      "EN\020\001\022\010\n\004MARK\020\002\022\t\n\005SPACE\020\003*\322\001\n\rFramingFor" +
+      "mat\022\031\n\025UNKNOW_FRAMING_FORMAT\020\000\022\032\n\026DATA_8" +
+      "_PARITY_0_STOP_2\020\001\022\032\n\026DATA_8_PARITY_1_ST" +
+      "OP_1\020\002\022\032\n\026DATA_8_PARITY_0_STOP_1\020\003\022\032\n\026DA" +
+      "TA_7_PARITY_0_STOP_2\020\004\022\032\n\026DATA_7_PARITY_",
+      "1_STOP_1\020\005\022\032\n\026DATA_7_PARITY_0_STOP_1\020\006*\237" +
+      "\001\n\tDTRStatus\022\034\n\030TA_IGNORES_STATUS_ON_DTR" +
+      "\020\000\022:\n6CHANGE_TO_CAOMMAND_MODE_WHILE_REMA" +
+      "INING_CONNECTED_CALL\020\001\0228\n4DISCONNECT_DAT" +
+      "A_CALL_AND_THEN_CHANGE_TO_COMMAND_MODE\020\002" +
+      "*_\n\rDCDLineStatus\022\031\n\025DCD_LINE_IS_ALWAYS_" +
+      "ON\020\000\0223\n/DCD_LINE_IS_ON_ONLY_IN_PRESENCE_" +
+      "OF_DATA_CARRIER\020\001*e\n\016ConnectionType\022\037\n\033C" +
+      "IRCUIT_SWITCHED_VOICE_CALL\020\000\022\036\n\032CIRCUIT_" +
+      "SWITCHED_DATA_CALL\020\001\022\022\n\016PPP_CONNECTION\020\002",
+      "*~\n\023SIMCardInsertStatus\0222\n.LOW_LEVEL_OF_" +
+      "PIN_INDICATES_SIM_CARD_IS_PRESENT\020\000\0223\n/H" +
+      "IGH_LEVEL_OF_PIN_INDICATES_SIM_CARD_IS_P" +
+      "RESENT\020\001*x\n\023SIMCardDetectionPIN\0224\n0CONFI" +
+      "GURE_SIM_PRESENCE_AS_SIM_CARD_DETECTION_" +
+      "PIN\020\000\022+\n\'CONFIGURE_DTR_AS_SIM_CARD_DETEC" +
+      "TION_PIN\020\001*\330\001\n\034TimeZoneChangeEventReport" +
+      "ing\022,\n(DISABLE_TIME_ZONE_CHANGE_EVENT_RE" +
+      "PORTING\020\000\022F\nBENABLE_TIME_ZONE_CHANGE_EVE" +
+      "NT_REPORTING_BY_UNSOLICITED_RESULT_CODE\020",
+      "\001\022B\n>ENABLE_EXTENDED_TIME_ZONE_REPORTING" +
+      "_BY_UNSOLICITED_RESULT_CODE\020\002*\305\002\n\007RTCTim" +
+      "e\022.\n*DISABLE_AUTOMATIC_UPDATE_RTC_TIME_V" +
+      "IA_NITZ\020\000\022I\nEUPDATE_NETWORK_SYNCHRONIZED" +
+      "_TIME_TO_RTC_AND_SAVE_TIME_ZONE_INOT_NVR" +
+      "AM\020\001\022]\nYUPDATE_GTM_TIME_WITH_TIME_ZONE_T" +
+      "O_RTC_SAVE_TIME_ZONE_TO_NVRAM_IGNORE_DAY" +
+      "LIGHT_SAVING_TIME\020\002\022J\nFUPDATE_LOCALIZED_" +
+      "TIME_AND_TIME_ZONE_TO_RTC_AND_SAVE_TIME_" +
+      "ZONE_TO_NVRAM\020\003\022\024\n\020SAVE_WITH_MODE_2\020\004*\221\001",
+      "\n\020GSMNetworkStatus\022\030\n\024WORK_IN_NORMAL_STA" +
+      "TE\020\000\022\025\n\021NO_AVAILABLE_CELL\020\001\022\"\n\036ONLY_LIMI" +
+      "TED_SERVICE_AVAILABLE\020\002\022(\n$NOT_READY_TO_" +
+      "RETRIEVE_NETWORK_STATUS\020\003*\237\001\n\025StateOfIni" +
+      "tialization\022\025\n\021NO_INITIALIZATION\020\000\022\037\n\033RE" +
+      "ADY_TO_EXECUTE_AT_COMMAND\020\001\022)\n%PHONEBOOK" +
+      "_HAS_FINISHED_INITIALIZATION\020\002\022#\n\037SMS_HA" +
+      "S_FINISHED_INITIALIZATION\020\003*S\n!Proprieta" +
+      "ryUnsolicitedIndications\022\017\n\013PUI_DISABLE\020" +
+      "\000\022\016\n\nPUI_ENABLE\020\001\022\r\n\tPUI_QUERY\020\002*\'\n\006Stat",
+      "us\022\016\n\nSTATUS_OFF\020\000\022\r\n\tSTATUS_ON\020\001*\\\n\003Pas" +
+      "\022\r\n\tPAS_READY\020\000\022\016\n\nPAS_UNKNOW\020\001\022\017\n\013PAS_R" +
+      "INGING\020\002\022%\n!PAS_CALL_IN_PROGRESS_OR_CALL" +
+      "_HOLD\020\003*\207\002\n\021OthersMessageType\022#\n\037REISSUE" +
+      "S_THE_LAST_COMMAND_GIVEN\020\000\022\031\n\025SET_COMMAN" +
+      "D_ECHO_MODE\020\001\022*\n&SET_COMMAND_LINE_TERMIN" +
+      "ATION_CHARACTER\020\002\022%\n!SET_RESPONSE_FORMAT" +
+      "TING_CHARACTER\020\003\022&\n\"SET_COMMAND_LINE_EDI" +
+      "TING_CHARACTER\020\004\022\017\n\013SET_RI_TIME\020\005\022&\n\"BUR" +
+      "ST_TRANSITION_SIGNAL_INDICATION\020\006*\302\001\n\032Ha",
+      "rdwareRelatedMessageType\022\t\n\005CLOCK\020\000\022\r\n\tS" +
+      "ET_ALARM\020\001\022\022\n\016BATTERY_CHARGE\020\002\022\014\n\010READ_A" +
+      "DC\020\003\022\030\n\024CONFIGURE_SHOW_CLOCK\020\004\022&\n\"CONFIG" +
+      "URE_THE_NETWORK_LED_PATTERNS\020\005\022&\n\"CONFIG" +
+      "URE_THE_THRESHOLD_OF_VOLTAGE\020\006*\231\004\n\020Audio" +
+      "MessageType\022 \n\034SET_MONITOR_SPEAKER_LOUDN" +
+      "ESS\020\000\022\034\n\030SET_MONITOR_SPEAKER_MODE\020\001\022\021\n\rT" +
+      "ONE_DURATION\020\002\022\034\n\030DTMF_AND_TONE_GENERATI" +
+      "ON\020\003\022\024\n\020ALERT_SOUND_MODE\020\004\022\026\n\022RINGER_SOU" +
+      "ND_LEVEL\020\005\022\035\n\031LOUD_SPEAKER_VOLUME_LEVEL\020",
+      "\006\022\020\n\014MUTE_CONTROL\020\007\022#\n\037CHANGE_THE_SIDE_T" +
+      "ONE_GAIN_LEVEL\020\010\022$\n CHANGE_THE_MICROPHON" +
+      "E_GAIN_LEVEL\020\t\022\035\n\031GENERATE_LOCAL_DTMF_TO" +
+      "NES\020\n\022\033\n\027SWAP_THE_AUDIO_CHANNELS\020\013\022 \n\034AU" +
+      "DIO_CHANNEL_LOOP_BACK_TEST\020\014\022 \n\034GENERATE" +
+      "_LOCAL_SPECIFIC_TONE\020\r\022\030\n\024SET_DTMF_OUTPU" +
+      "T_PATH\020\016\022\033\n\027SET_TONE_DETECTION_MODE\020\017\022\017\n" +
+      "\013DETECT_DTMF\020\020\022\"\n\036PLAY_DTMF_TONE_DURING_" +
+      "THE_CALL\020\021*\366\003\n\037SupplementaryServiceMessa" +
+      "geType\0221\n-CALL_FORWARDING_NUMBER_AND_CON",
+      "DITIONS_CONTROL\020\000\022\035\n\031CLOSED_USER_GROUP_C" +
+      "ONTROL\020\001\022\030\n\024CALL_WAITING_CONTROL\020\002\022\034\n\030CA" +
+      "LL_HOLD_AND_MULTIPARTY\020\003\022,\n(CALLING_LINE" +
+      "_IDENTIFICATION_PRESENTATION\020\004\022C\n?CONTRO" +
+      "L_WHETHER_OR_NOT_TO_SHOW_THE_NAME_OF_INC" +
+      "OMING_CALL_NUMBER\020\005\022.\n*CONNECTED_LINE_ID" +
+      "ENTIFICATION_PRESENTATION\020\006\022#\n\037SHOW_ALPH" +
+      "A_FIELD_IN_COLP_STRING\020\007\022+\n\'UNSTRUCTURED" +
+      "_SUPPLEMENTARY_SERVICE_DATA\020\010\022\'\n#SUPPLEM" +
+      "ENTARY_SERVICES_NOTIFICATION\020\t\022+\n\'CALLIN",
+      "G_LINE_IDENTIFICATION_RESTRICTION\020\n*\323\n\n\020" +
+      "TCPIPMessageType\022 \n\034SET_UP_TCP_OR_UDP_CO" +
+      "NNECTION\020\000\022+\n\'SEND_DATA_THROUGH_TCP_OR_U" +
+      "DP_CONNECTION\020\001\022\037\n\033CLOSE_TCP_OR_UDP_CONN" +
+      "ECTION\020\002\022#\n\037DEACTIVATE_GPRS_CSD_PDP_CONT" +
+      "EXT\020\003\022\022\n\016SET_LOCAL_PORT\020\004\022.\n*START_TCPIP" +
+      "_TASK_APN_USERNAME_AND_PASSWORD\020\005\022\033\n\027ACT" +
+      "IVE_GPRS_CSD_CONTEXT\020\006\022\030\n\024GET_LOCAL_IP_A" +
+      "DDRESS\020\007\022#\n\037QUERY_CURRENT_CONNECTION_STA" +
+      "TUS\020\010\022-\n)QUERY_CONNECTION_STATUS_OF_CURR",
+      "ENT_ACCESS\020\t\022\037\n\033QUERY_CURRENT_SERVER_STA" +
+      "TUS\020\n\022 \n\034CONFIGURE_DOMAIN_NAME_SERVER\020\013\022" +
+      "-\n)QUERY_THE_IP_ADDRESS_OF_GIVEN_DOMAIN_" +
+      "NAME\020\014\0221\n-CONNECT_WITH_IP_ADDRESS_OR_DOM" +
+      "AIN_NAME_SERVER\020\r\022(\n$ADD_AN_IP_HEADER_WH" +
+      "EN_RECEIVING_DATE\020\016\022\033\n\027SET_AUDIO_SENDING" +
+      "_TIMER\020\017\022\037\n\033SET_PROMT_WHEN_SENDING_DATA\020" +
+      "\020\022\027\n\023CONFIGURE_AS_SERVER\020\021\022$\n SELECT_CSD" +
+      "_OR_GPRS_AS_THE_BEARER\020\022\022\025\n\021CHOOSE_CONNE" +
+      "CTION\020\023\0227\n3SET_WHETHER_OR_NOT_TO_DISPLAY",
+      "_THE_ADDRESS_OF_SENDER\020\024\022\"\n\036SAVE_TCPIP_A" +
+      "PPLICATION_CONTEXT\020\025\022\036\n\032SELECT_TCPIP_TRA" +
+      "NSFER_MODE\020\026\022\'\n#CONFIGURE_TRANSPARENT_TR" +
+      "ANSFER_MODE\020\027\0224\n0CONTROL_WHETHER_OR_NOT_" +
+      "TO_SHOW_THE_PROTOCOL_TYPE\020\030\022;\n7CONTROL_W" +
+      "HETHER_OR_NOT_TO_ENABLE_MULTIPLE_TCPIP_S" +
+      "ESSION\020\031\0226\n2CONTROL_WHETHER_OR_NOT_TO_DI" +
+      "SPLAY_LOCAL_IP_ADDRESS\020\032\022*\n&SELECT_A_CON" +
+      "TEXT_AS_FOREGROUND_CONTEXT\020\033\022*\n&QUERY_TH" +
+      "E_DATA_INFORMATION_FOR_SENDING\020\034\0220\n,SET_",
+      "THE_METHOD_TO_HANDLE_RECEIVED_TCPIP_DATA" +
+      "\020\035\022$\n RETRIEVE_THE_RECEIVED_TCPIP_DATA\020\036" +
+      "\0225\n1CONTRO_WHETHER_OR_NOT_TO_ECHO_THE_DA" +
+      "TA_FOR_QISEND\020\037\022\030\n\024PING_A_REMOTE_SERVER\020" +
+      " \022&\n\"SYNCHRONIZE_THE_LOCAL_TIME_VIA_NTP\020" +
+      "!*\224\003\n\017GPRSMessageType\022 \n\034ATTACH_DEATTACH" +
+      "_GPRS_SERVICE\020\000\022\026\n\022DEFINE_PDP_CONTEXT\020\001\022" +
+      "\031\n\025QOS_PROFILE_REQUESTED\020\002\022\"\n\036QOS_PROFIL" +
+      "E_MINIMUM_ACCEPTABLE\020\003\022&\n\"PDP_CONTEXT_AC" +
+      "TIVATE_OR_DEACTIVATE\020\004\022\024\n\020ENTER_DATA_STA",
+      "TE\020\005\022\024\n\020SHOW_PDP_ADDRESS\020\006\022\035\n\031GPRS_MOBIL" +
+      "E_STATION_CLASS\020\007\022,\n(CONTROL_UNSOLICITED" +
+      "_GPRS_EVENT_REPORTING\020\010\022\037\n\033NETWORK_REGIS" +
+      "TRATION_STATUS\020\t\022%\n!SELECT_SERVICE_FOR_M" +
+      "O_SMS_MESSAGE\020\n\022\037\n\033CHANGE_GPRS_MULTISLOT" +
+      "_CLASS\020\013*\255\001\n\024PhonebookMessageType\022#\n\037SEL" +
+      "ECT_PHONEBOOK_MEMORY_STORAGE\020\000\022\031\n\025WRITE_" +
+      "PHONEBOOK_ENTRY\020\001\022\"\n\036READ_CURRENT_PHONEB" +
+      "OOK_ENTRIES\020\002\022\032\n\026FIND_PHONEBOOK_ENTRIES\020" +
+      "\003\022\025\n\021SUBSCRIBER_NUMBER\020\004*\377\004\n\016SMSMessageT",
+      "ype\022\032\n\026SELECT_MESSAGE_SERVICE\020\000\022\035\n\031SELEC" +
+      "T_SMS_MESSAGE_FORMAT\020\001\022\036\n\032SMS_SERVICE_CE" +
+      "NTER_ADDRESS\020\002\022!\n\035PREFERRED_SMS_MESSAGE_" +
+      "STORAGE\020\003\022\026\n\022DELETE_SMS_MESSAGE\020\004\022+\n\'LIS" +
+      "T_SMS_MESSAGE_FROM_PREFERRED_STORAGE\020\005\022\024" +
+      "\n\020READ_SMS_MESSAGE\020\006\022\024\n\020SEND_SMS_MESSAGE" +
+      "\020\007\022\037\n\033WRITE_SMS_MESSAGE_TO_MEMORY\020\010\022!\n\035S" +
+      "END_SMS_MESSAGE_FROM_STORAGE\020\t\022\024\n\020SEND_S" +
+      "MS_COMMAND\020\n\022\036\n\032NEW_SMS_MESSAGE_INDICATI" +
+      "ON\020\013\022\030\n\024RESTORE_SMS_SETTINGS\020\014\022\025\n\021SAVE_S",
+      "MS_SETTINGS\020\r\022%\n!SELECT_CELL_BROADCAST_S" +
+      "MS_MESSAGE\020\016\022!\n\035SHOW_SMS_TEXT_MODE_PARAM" +
+      "ETERS\020\017\022 \n\034SET_SMS_TEXT_MODE_PARAMETERS\020" +
+      "\020\0226\n2STRORE_CLASS0_SMS_TO_SIM_WHEN_RECEI" +
+      "VING_CLASS0_SMS\020\021\022\022\n\016DELETE_ALL_SMS\020\022\022\033\n" +
+      "\027CONFIGURE_SMS_CODE_MODE\020\023*\367\006\n\026CallRelat" +
+      "edMessageType\022\033\n\027ANSWER_AN_INCOMING_CALL" +
+      "\020\000\022)\n%MOBILE_ORIENTED_CALL_TO_DIAL_A_NUM" +
+      "BER\020\001\022\"\n\036DISCONNECT_EXISTING_CONNECTION\020" +
+      "\002\022)\n%SWITCH_FROM_DATA_MODE_TO_COMMAND_MO",
+      "DE\020\003\022)\n%SWITCH_FROM_COMMAND_MODE_TO_DATA" +
+      "_MODE\020\004\022\030\n\024SELECT_PULSE_DIALING\020\005\0229\n5SET" +
+      "_NUMBER_OF_RINGS_BEFORE_AUTOMATICLY_ANSW" +
+      "ERING_CALL\020\006\022\"\n\036SET_PAUSE_BEFORE_BLIND_D" +
+      "IALING\020\007\022;\n7SET_NUMBER_OF_SECONDS_TO_WAI" +
+      "T_FOR_CONNECTION_COMPLETION\020\010\0229\n5SET_NUM" +
+      "BER_OF_SECONDS_TO_WAIT_FOR_COMMA_DIAL_MO" +
+      "DIFIER\020\t\022A\n=SET_DISCONNECT_DELAY_AFTER_I" +
+      "NDICATING_ABSENCE_OF_DATA_CARRIER\020\n\022\027\n\023S" +
+      "ELECT_TONE_DIALING\020\013\022\032\n\026SELECT_TYPE_OF_A",
+      "DDRESS\020\014\022\034\n\030LIST_CURRENT_CALLS_OF_ME\020\r\022\035" +
+      "\n\031SERVICE_REPORTING_CONTROL\020\016\0229\n5SET_CEL" +
+      "LULAR_RESULT_CODE_FOR_INCOMING_CALL_INDI" +
+      "CATION\020\017\022(\n$SELECT_RADIO_LINK_PROTOCOL_P" +
+      "ARAMETER\020\020\022\033\n\027SINGLE_NUMBERING_SCHEME\020\021\022" +
+      "$\n CONFIGURE_ALTERNATING_MODE_CALLS\020\022\022\034\n" +
+      "\030PREFERENCE_SPEACH_CODING\020\023\022\036\n\032SPEECH_CH" +
+      "ANNEL_TYPE_REPORT\020\024\022\017\n\013DISABLE_ATH\020\025*\265\002\n" +
+      "\031NetworkServiceMessageType\022\026\n\022OPERATOR_S" +
+      "ELECTION\020\000\022\030\n\024NETWORK_REGISTRATION\020\001\022\031\n\025",
+      "SIGNAL_QUALITY_REPORT\020\002\022\033\n\027PREFERRED_OPE" +
+      "RATOR_LIST\020\003\022\027\n\023READ_OPEARATR_NAMES\020\004\022%\n" +
+      "!GET_AND_SET_MOBILE_OPERATION_BAND\020\005\0225\n1" +
+      "NETWORK_SERVICE_SWITCH_ON_OR_OFF_ENGINEE" +
+      "RING_MODE\020\006\022\037\n\033SCAN_POWER_OF_GSM_FREQUEN" +
+      "CY\020\007\022\026\n\022LOCK_GSM_FREQUENCY\020\010*\347\002\n\025SIMRela" +
+      "tedMessageType\022\020\n\014REQUEST_IMSI\020\000\022\021\n\rFACI" +
+      "LITY_LOCK\020\001\022\r\n\tENTER_PIN\020\002\022\023\n\017CHANGE_PAS" +
+      "SWORD\020\003\022\031\n\025RESTRICTED_SIM_ACCESS\020\004\022\026\n\022GE" +
+      "NERIC_SIM_ACCESS\020\005\022\034\n\030CHANGE_PS_SUPER_PA",
+      "SSWORD\020\006\022\r\n\tSHOW_CCID\020\007\022\023\n\017SHOW_CCID_QCC" +
+      "ID\020\010\022!\n\035GET_SIM_CARD_GROUP_IDENTIFIER\020\t\022" +
+      "%\n!SELECT_SIM_CARD_OPERATING_VOLTAGE\020\n\022\035" +
+      "\n\031GET_SERVICE_PROVIDER_NAME\020\013\022\'\n#TIME_RE" +
+      "MAINING_TO_INPUT_SIM_PIN_PUK\020\014*\265\005\n\030Statu" +
+      "sControlMessageType\022\031\n\025EXTENDED_ERROR_RE" +
+      "PORT\020\000\022$\n MOBILE_EQUIPMENT_ACTIVITY_STAT" +
+      "US\020\001\022\036\n\032INDICATE_RI_WHEN_USING_URC\020\002\022(\n$" +
+      "SHOW_STATE_OF_MOBILE_ORIGINATED_CELL\020\003\022." +
+      "\n*REFUSE_TO_RECEIVE_SMS_INCOMING_CALL_OR",
+      "_NOT\020\004\022.\n*ENABLE_OR_DISABLE_INITIAL_URC_" +
+      "PRESENTATION\020\005\0229\n5ENABLE_OR_DISABLE_PROP" +
+      "RIETARY_UNSOLICITED_INDICATIONS\020\006\022!\n\035QUE" +
+      "RY_STATE_OF_INITIALIZATION\020\007\022\034\n\030QUERY_GS" +
+      "M_NETWORK_STATUS\020\010\022 \n\034NETWORK_TIME_SYNCH" +
+      "RONIZATION\020\t\022+\n\'OBTAIN_LATEST_NETWORK_TI" +
+      "ME_SYNCHRONIZED\020\n\0228\n4NETWORK_TIME_SYNCHR" +
+      "ONIZATION_AND_UPDATE_THE_RTC_TIME\020\013\022\'\n#N" +
+      "ETWORK_TIME_SYNCHRONIZATION_REPORT\020\014\022\'\n#" +
+      "SWITCH_ON_OR_OFF_DETECTING_SIM_CARD\020\r\022!\n",
+      "\035SIM_INSERTED_STATUS_REPORTING\020\016\0224\n0CSC_" +
+      "CALL_OR_GPRS_PDP_CONTEXT_TERMINAL_INDICA" +
+      "TION\020\017*\335\002\n!SerialInterfaceControlMessage" +
+      "Type\022\031\n\025SET_DCD_FUNCTION_MODE\020\000\022\031\n\025SET_D" +
+      "TR_FUNCTION_MODE\020\001\022\'\n#SET_TE_TA_CONTROL_" +
+      "CHARACTER_FRAMING\020\002\022%\n!SET_TE_TA_LOCAL_D" +
+      "ATA_FLOW_CONTROL\020\003\022,\n(SET_TE_TA_LOCAL_DA" +
+      "TA_RATE_REPORTING_MODE\020\004\022\036\n\032SET_TE_TA_FI" +
+      "XED_LOCAL_RATE\020\005\022\027\n\023MULTIPLEXER_CONTROL\020" +
+      "\006\022 \n\034CONFIGURE_DUAL_UART_FUNCTION\020\007\022)\n%C",
+      "ONFIGURE_PARAMETERS_OF_THE_DUAL_UART\020\010*\376" +
+      "\006\n\023GeneralMesssageType\022.\n*DISPLAY_PRODUC" +
+      "T_IDENTIFICATION_INFORMATION\020\000\022\'\n#REQUES" +
+      "T_MANUFACTURER_IDENTIFICATION\020\001\022#\n\037REQUE" +
+      "ST_TA_MODEL_IDENTIFICATION\020\002\022&\n\"REQUEST_" +
+      "TA_REVISION_IDENTIFICATION\020\003\022(\n$REQUEST_" +
+      "GLOBAL_OBJECT_IDENTIFICATION\020\004\022,\n(REQUES" +
+      "T_MANUFACTURER_IDENTIFICATION_CGMI\020\005\022 \n\034" +
+      "REQUEST_MODEL_IDENTIFICATION\020\006\022+\n\'REQUES" +
+      "T_TA_REVISION_IDENTIFICATION_CGMR\020\007\022\020\n\014R",
+      "EQUEST_IMEI\020\010\0220\n,REQUEST_PRODUCT_SERIAL_" +
+      "NUMBER_IDENTIFICATION\020\t\022\025\n\021REQUEST_IMEI_" +
+      "QGSN\020\n\0227\n3SET_ALL_CURRENT_PARAMETERS_TO_" +
+      "MANUFACTURER_DEFAULTS\020\013\022!\n\035DISPLAY_CURRE" +
+      "NT_CONFIGURATION\020\014\0224\n0STORE_CURRENT_PARA" +
+      "METERS_TO_USER_DEFINED_PROFILE\020\r\022%\n!SET_" +
+      "RESULT_CODE_PRESENTATION_CODE\020\016\022\026\n\022TA_RE" +
+      "SPONSE_FORMAT\020\017\022\"\n\036SET_CONNECT_RESULT_CO" +
+      "DE_FORMAT\020\020\0226\n2SET_ALL_CURRENT_PARAMETER" +
+      "S_TO_USER_DEFINED_PROFILE\020\021\022\033\n\027SET_PHONE",
+      "_FUNCTIONALITY\020\022\022\r\n\tPOWER_OFF\020\023\022!\n\035REPOR" +
+      "T_MOBILE_EQUIPMENT_ERROR\020\024\022\030\n\024SET_TE_CHA" +
+      "RACTER_SET\020\025\022)\n%REQUEST_COMPLETE_TA_CAPA" +
+      "BILITIES_LIST\020\026*\312\003\n\017SMTPMessageType\022(\n$S" +
+      "ET_THE_USER_NAME_FOR_AUTHENTICATION\020\000\022\'\n" +
+      "#SET_THE_PASSWORD_FOR_AUTHENTICATION\020\001\022\'" +
+      "\n#SET_THE_EMAIL_ADDRESS_OF_THE_SENDER\020\002\022" +
+      "\030\n\024SET_THE_SENDERS_NAME\020\003\022+\n\'SET_THE_ADD" +
+      "RESS_AND_PORT_OD_SMTP_SERVER\020\004\022\034\n\030ADD_OR" +
+      "_DELETE_RECIPIENTS\020\005\022!\n\035EDIT_THE_SUBJECT",
+      "_OF_THE_EMAIL\020\006\022!\n\035EDIT_THE_CONTENT_OF_T" +
+      "HE_EMAIL\020\007\022#\n\037ADD_AN_ATTACHMENT_FOR_THE_" +
+      "EMAIL\020\010\022\030\n\024DELETE_AN_ATTACHMENT\020\t\022)\n%CLE" +
+      "AR_ALL_CONFIGURATIONS_AND_CONTENTS\020\n\022\026\n\022" +
+      "SMTP_CONFIGURATION\020\013\022\016\n\nSEND_EMAIL\020\014*_\n\024" +
+      "RecordingMessageType\022\025\n\021RECORD_MEDIA_FIL" +
+      "E\020\000\022\023\n\017PLAY_MEDIA_FILE\020\001\022\033\n\027STOP_PLAYING" +
+      "_MEDIA_FILE\020\002*\352\001\n\023QuecCellMessageType\022\"\n" +
+      "\036SCAN_BASIC_STATION_INFORMATION\020\000\022%\n!SWI" +
+      "TCH_ON_OR_OFF_ENGINEERING_MODE\020\001\022\031\n\025LOCK",
+      "_THE_BASE_STATION\020\002\022\036\n\032SCAN_ARFCN_RECEIV" +
+      "ING_LEVEL\020\003\022\033\n\027GET_CHANNEL_INFORMATION\020\004" +
+      "\022\033\n\027GET_LAST_VALID_TA_VALUE\020\005\022\023\n\017FORBID_" +
+      "OPERATOR\020\006*\337\003\n\016MMSMessageType\022\033\n\027SET_THE" +
+      "_URL_OF_THE_MMSC\020\000\022\025\n\021SET_THE_MMS_PROXY\020" +
+      "\001\022-\n)SET_THE_PARAMETER_FOR_SENDING_MMS_M" +
+      "ESSAGE\020\002\022%\n!SET_CHARACTER_SETS_AND_INPUT" +
+      "_MODE\020\003\022\025\n\021WRITE_MMS_MESSAGE\020\004\022\024\n\020SEND_M" +
+      "MS_MESSAGE\020\005\022#\n\037MENAGE_THE_RECEIVED_MMS_" +
+      "MESSAGE\020\006\022\035\n\031READ_RECEIVED_MMS_MESSAGE\020\007",
+      "\022%\n!RECEIVE_MMS_MESSAGE_FROM_THE_MMSC\020\010\022" +
+      "(\n$SET_PRIORITY_OF_MMS_MESSAGE_AND_CALL\020" +
+      "\t\022.\n*SET_DUR_ATTRIBUTE_VALUE_IN_THE_SMIL" +
+      "_SCRIPT\020\n\022\032\n\026SET_MMS_SMS_TRANSACTOR\020\013\022\036\n" +
+      "\032ENABLE_OUTPUT_TEXT_IN_USC2\020\014\022\025\n\021OUTPUT_" +
+      "FILE_STYLE\020\r*\350\001\n\016STKMessageType\022\034\n\030TURN_" +
+      "ON_OFF_STK_FUNCTION\020\000\022\030\n\024STK_PROFILE_DOW" +
+      "NLOAD\020\001\022\030\n\024STK_ENVELOPE_COMMAND\020\002\022\031\n\025STK" +
+      "_TERMINAL_RESPONSE\020\003\022\024\n\020TRIGGER_STK_CALL" +
+      "\020\004\022\023\n\017TRIGGER_STK_SMS\020\005\022\022\n\016TRIGGER_STK_S",
+      "S\020\006\022\024\n\020TRIGGER_STK_USSD\020\007\022\024\n\020TRIGGER_STK" +
+      "_DTMF\020\010*\356\006\n\016FTPMessageType\022/\n+OPEN_AN_FT" +
+      "P_SERVICE_TO_THE_GIVEN_FTP_SERVER\020\000\022\031\n\025C" +
+      "LOSE_THE_FTP_SERVICE\020\001\022#\n\037UPLOAD_A_FILE_" +
+      "TO_THE_FTP_SERVER\020\002\022\'\n#DOWNLOAD_A_FILE_F" +
+      "ROM_THE_FTP_SERVER\020\003\022=\n9SET_THE_PATH_IN_" +
+      "THE_FTP_SERVER_TO_UPLOAD_OR_DOWNLOAD_FIL" +
+      "E\020\004\0228\n4SET_THE_USER_NAME_OF_THE_ACCOUNT_" +
+      "TO_OPEN_FTP_SERVICE\020\005\0227\n3SET_THE_PASSWOR" +
+      "D_OF_THE_ACCOUNT_TO_OPEN_FTP_SERVICE\020\006\0228",
+      "\n4SET_SOME_CONFIGURABLE_PARAMETERS_FOR_T" +
+      "HE_FTP_SERVICE\020\007\022\037\n\033QUERY_STATUS_OF_FTP_" +
+      "SERVICE\020\010\0229\n5QUERY_THE_REAL_SIZE_TRANSFE" +
+      "RED_IN_THE_LATEST_TRANSFER\020\t\0220\n,RENAME_F" +
+      "ILE_OR_FOLDER_NAME_ON_THE_FTP_SERVER\020\n\0226" +
+      "\n2QUERY_THE_SIZE_OF_APPOINTED_FILE_ON_TH" +
+      "E_FTP_SERVER\020\013\022/\n+DELETE_THE_APPOINTED_F" +
+      "ILE_ON_THE_FTP_SERVER\020\014\0220\n,ESTABLISH_A_N" +
+      "EW_FILEFOLDER_ON_THE_FTP_SERVER\020\r\022)\n%REM" +
+      "OVE_A_FILEFOLDER_ON_THE_FTP_SERVER\020\016\022D\n@",
+      "LIST_CONTENTS_OF_DIRECTORY_OR_FILE_INFOR" +
+      "MATION_ON_THE_FTP_SERVER\020\017\022<\n8LIST_FILE_" +
+      "NAMES_IN_THE_GIVEN_DIRECTORY_ON_THE_FTP_" +
+      "SERVER\020\020*\375\002\n\017FileMessageType\022\031\n\025GET_STOR" +
+      "AGE_DATE_SIZE\020\000\022\016\n\nLIST_FILES\020\001\022\032\n\026UPLOA" +
+      "D_FILE_TO_STORAGE\020\002\022\036\n\032DOWNLOAD_FILE_FRO" +
+      "M_STORAGE\020\003\022\032\n\026DELETE_FILE_IN_STORAGE\020\004\022" +
+      "\r\n\tMOVE_FILE\020\005\022\r\n\tOPEN_FILE\020\006\022\r\n\tREAD_FI" +
+      "LE\020\007\022\016\n\nWRITE_FILE\020\010\022\r\n\tSEEK_FILE\020\t\022\016\n\nC" +
+      "LOSE_FILE\020\n\022\"\n\036GET_OFFSET_OF_THE_FILE_PO",
+      "INTER\020\013\0224\n0FORCE_TO_WRITE_DATA_REMAINING" +
+      "_IN_THE_FILE_BUFFER\020\014\0221\n-TRUNCATE_THE_SP" +
+      "ECIFIED_FILE_FROM_FILE_POINTER\020\r*\244\001\n\017HTT" +
+      "PMessageType\022\027\n\023SET_HTTP_SERVER_URL\020\000\022\031\n" +
+      "\025SEND_HTTP_GET_REQUEST\020\001\022\035\n\031READ_HTTP_SE" +
+      "RVER_RESPONSE\020\002\022\032\n\026SEND_HTTP_POST_REQUES" +
+      "T\020\003\022\"\n\036DOWNLODA_FILE_FROM_HTTP_SERVER\020\004*" +
+      "\376\036\n\005Error\022\006\n\002OK\020\000\022\020\n\014UNKNOW_ERROR\020\001\022\020\n\014S" +
+      "ERVICE_BUSY\020\003\022\034\n\030FAILED_TO_GET_IP_ADDRES" +
+      "S\020\004\022\021\n\rNETWORK_ERROR\020\005\022#\n\037UNSUPPORTED_AU",
+      "THENTICATION_TYPE\020\006\022\022\n\016SERVICE_CLOSED\020\007\022" +
+      "#\n\037GPRS_CSD_CONTEXT_IS_DEACTIVATED\020\010\022\013\n\007" +
+      "TIMEOUT\020\t\022!\n\035NO_RECIPIENT_FOR_SMTP_SERVI" +
+      "CE\020\n\022\030\n\024FAILED_TO_SEND_EMAIL\020\013\022&\n\"FAILED" +
+      "_TO_OPEN_FILE_FOR_ATTACHMENT\020\014\022#\n\037NO_ENO" +
+      "UGH_MEMORY_FOR_ATTACHMENT\020\r\022!\n\035FAILED_TO" +
+      "_SAVE_THE_ATTACHMENT\020\016\022 \n\034THE_INPUT_PARA" +
+      "METER_IS_WRONG\020\017\022\032\n\025SERVICE_NOT_AVAILABL" +
+      "E\020\245\003\022$\n\037REQUESTED_MAIL_ACTION_NOT_TAKEN\020" +
+      "\302\003\022\035\n\030REQUESTED_ACTION_ABORTED\020\303\003\022;\n6REQ",
+      "UESTED_ACTION_NOT_TAKEN_INSUFFICIENT_SYS" +
+      "TEM_STORAGE\020\304\003\022&\n!SYNTAX_ERROR_COMMAND_U" +
+      "NRECOGNIZED\020\364\003\022,\n\'SYNTAX_ERROR_IN_PARAME" +
+      "TERS_OR_ARGUMENTS\020\365\003\022\034\n\027COMMAND_NOT_IMPL" +
+      "EMENTED\020\366\003\022\035\n\030BAD_SEQUENCE_OF_COMMANDS\020\367" +
+      "\003\022&\n!COMMAND_PARAMETER_NOT_IMPLEMENTED\020\370" +
+      "\003\022!\n\034DOMAIN_DOES_NOT_ACCEPT_EMAIL\020\211\004\022#\n\036" +
+      "ACCESS_DENIED_FOR_SMTP_SERVICE\020\222\004\022\032\n\025AUT" +
+      "HENTICATION_FAILED\020\227\004\022\037\n\032REQUESTED_ACTIO" +
+      "N_NOT_TAKEN\020\246\004\022\023\n\016USER_NOT_LOCAL\020\247\004\022?\n:R",
+      "EQUESTED_MAIL_ACTION_ABORTED_EXCEEDED_ST" +
+      "ORAGE_NOT_ALLOWED\020\250\004\0228\n3REQUESTED_ACTION" +
+      "_NOT_TAKEN_MAILBOX_NAME_NOT_ALLOWED\020\251\004\022\027" +
+      "\n\022TRANSACTION_FAILED\020\252\004\022\022\n\rHTTP_TIME_OUT" +
+      "\020\331\035\022\016\n\tHTTP_BUSY\020\332\035\022\023\n\016HTTP_UART_BUSY\020\333\035" +
+      "\022\030\n\023HTTP_GET_NO_REQUEST\020\334\035\022\026\n\021HTTP_NETWO" +
+      "RK_BUSY\020\335\035\022\035\n\030HTTP_NETWORK_OPEN_FAILED\020\336" +
+      "\035\022\033\n\026HTTP_NETWORK_NO_CONFIG\020\337\035\022\032\n\025HTTP_N" +
+      "ETWORK_DEACTIVE\020\340\035\022\027\n\022HTTP_NETWORK_ERROR" +
+      "\020\341\035\022\023\n\016HTTP_URL_ERROR\020\342\035\022\023\n\016HTTP_EMPTY_U",
+      "RL\020\343\035\022\027\n\022HTTP_IP_ADDR_ERROR\020\344\035\022\023\n\016HTTP_D" +
+      "NS_ERROR\020\345\035\022\035\n\030HTTP_SOCKET_CREATE_ERROR\020" +
+      "\346\035\022\036\n\031HTTP_SOCKET_CONNECT_ERROR\020\347\035\022\033\n\026HT" +
+      "TP_SOCKET_READ_ERROR\020\350\035\022\034\n\027HTTP_SOCKET_W" +
+      "RITE_ERROR\020\351\035\022\026\n\021HTTP_SOCKET_CLOSE\020\352\035\022\033\n" +
+      "\026HTTP_DATA_ENCODE_ERROR\020\353\035\022\033\n\026HTTP_DATA_" +
+      "DECODE_ERROR\020\354\035\022\031\n\024HTTP_TO_READ_TIMEOUT\020" +
+      "\355\035\022\031\n\024HTTP_RESPONSE_FAILED\020\356\035\022\027\n\022INCOMIN" +
+      "G_CALL_BUSY\020\357\035\022\024\n\017VOICE_CALL_BUSY\020\360\035\022\022\n\r" +
+      "INPUT_TIMEOUT\020\361\035\022\026\n\021WAIT_DATA_TIMEOUT\020\362\035",
+      "\022\037\n\032WAIT_HTTP_RESPONSE_TIMEOUT\020\363\035\022\026\n\021ALL" +
+      "OC_MEMORY_FAIL\020\364\035\022\031\n\024HTTP_NEED_RELOCATIO" +
+      "N\020\365\035\022\030\n\023INVALID_INPUT_VALUE\020\231\036\022\021\n\014MMS_TI" +
+      "ME_OUT\020\275\036\022\021\n\014URL_TOO_LONG\020\276\036\022\020\n\013INVALID_" +
+      "URL\020\277\036\022\026\n\021UNSUPPORTED_PROXY\020\300\036\022\032\n\025INVALI" +
+      "D_PROXY_ADDRESS\020\301\036\022\025\n\020IP_ADDRESS_ERROR\020\302" +
+      "\036\022\016\n\tDNS_ERROR\020\303\036\022\024\n\017PARAMETER_ERROR\020\304\036\022" +
+      "\030\n\023TO_ADDRESS_EXCEEDED\020\305\036\022\030\n\023CC_ADDRESS_" +
+      "EXCEEDED\020\306\036\022\031\n\024BCC_ADDRESS_EXCEEDED\020\307\036\022$" +
+      "\n\037APPENDED_FILE_CAPACITY_EXCEEDED\020\310\036\022\027\n\022",
+      "FILE_NAME_TOO_LONG\020\311\036\022 \n\033THE_NUMBER_OF_F" +
+      "ILE_EXCEEDED\020\312\036\022\031\n\024NON_EXISTENT_ADDRESS\020" +
+      "\313\036\022\025\n\020UFS_STORAGE_FULL\020\314\036\022\017\n\nDRIVE_FULL\020" +
+      "\315\036\022\020\n\013DRIVE_ERROR\020\316\036\022\016\n\tNOT_FOUND\020\317\036\022\026\n\021" +
+      "INVALID_FILE_NAME\020\320\036\022\031\n\024FILE_ALREADY_EXI" +
+      "STED\020\321\036\022\032\n\025FAILED_TO_CREATE_FILE\020\322\036\022\031\n\024F" +
+      "AILED_TO_WRITE_FILE\020\323\036\022\"\n\035FAILED_TO_OPEN" +
+      "_REQUESTED_FILE\020\324\036\022\030\n\023FAILED_TO_READ_FIL" +
+      "E\020\325\036\022\r\n\010MMS_BUSY\020\326\036\022\025\n\020SENDING_MMS_BUSY\020" +
+      "\327\036\022\030\n\023SENDING_MMS_STOPPED\020\330\036\022\034\n\027ALREADY_",
+      "STOPPED_TO_SEND\020\331\036\022\027\n\022RECEIVING_MMS_BUSY" +
+      "\020\332\036\022\032\n\025RECEIVING_MMS_STOPPED\020\333\036\022\034\n\027ALREA" +
+      "DY_STOPPED_RECEIVE\020\334\036\022\032\n\025HTTP_RESPONSE_F" +
+      "ALIURE\020\335\036\022\031\n\024INVALID_MMS_RESPONSE\020\336\036\022\027\n\022" +
+      "MMS_RESPONSE_ERROR\020\337\036\022\031\n\024INVALID_PUSH_ME" +
+      "SSAGE\020\340\036\022\027\n\022ALREADY_DONWLOADED\020\341\036\022\021\n\014NET" +
+      "WORK_BUSY\020\342\036\022\033\n\026FAILED_TO_OPEN_NETWORK\020\343" +
+      "\036\022\032\n\025NETWORK_NO_CONFIGURED\020\344\036\022\030\n\023NETWORK" +
+      "_DEACTIVATED\020\345\036\022\026\n\021MMS_NETWORK_ERROR\020\346\036\022" +
+      "\025\n\020NETWORK_SHUTDOWN\020\347\036\022\016\n\tUART_BUSY\020\350\036\022\021",
+      "\n\014UART_ESCAPED\020\351\036\022\034\n\027FAILED_TO_CREATE_SO" +
+      "CKET\020\352\036\022\035\n\030FAILED_TO_CONNECT_SOCKET\020\353\036\022\032" +
+      "\n\025FAILED_TO_READ_SOCKET\020\354\036\022\033\n\026FAILED_TO_" +
+      "WRITE_SOCKET\020\355\036\022\022\n\rSOCKET_CLOSED\020\356\036\022\025\n\020M" +
+      "MS_LENGTH_ERROR\020\357\036\022\031\n\024FAILED_TO_ENCODE_M" +
+      "MS\020\360\036\022\031\n\024FAILED_TO_DECODE_MMS\020\361\036\022\032\n\025FAIL" +
+      "ED_TO_DECODE_HTTP\020\362\036\022\"\n\035FAILED_TO_DECODE" +
+      "_PUSH_MESSAGE\020\363\036\022\024\n\017PDU_ALIGN_ERROR\020\364\036\022\030" +
+      "\n\023PDU_CHARACTER_ERROR\020\365\036\022\024\n\017STRING_TOO_L" +
+      "ONG\020\366\036\022\r\n\010MMS_FULL\020\367\036\022\025\n\020NON_EXISTENT_MM",
+      "S\020\370\036\022\024\n\017INVALID_ADDRESS\020\371\036\022\030\n\023MMS_VOICE_" +
+      "CALL_BUSY\020\372\036\022\030\n\023ALLOC_MEMORY_FAILED\020\373\036\022\026" +
+      "\n\021EXCEED_MAX_LENGTH\020\240\037\022\023\n\016OPEN_FILE_FAIL" +
+      "\020\241\037\022\024\n\017WRITE_FILE_FAIL\020\242\037\022\022\n\rGET_SIZE_FA" +
+      "IL\020\243\037\022\016\n\tREAD_FAIL\020\244\037\022\023\n\016LIST_FILE_FAIL\020" +
+      "\245\037\022\025\n\020DELETE_FILE_FAIL\020\246\037\022\027\n\022GET_DISC_IN" +
+      "FO_FAIL\020\247\037\022\r\n\010NO_SPACE\020\250\037\022\r\n\010TIME_OUT\020\251\037" +
+      "\022\030\n\023HTTP_FILE_NOT_FOUND\020\252\037\022\023\n\016FILE_TOO_L" +
+      "ARGE\020\253\037\022\027\n\022FILE_ALREADY_EXIST\020\254\037\022\026\n\021INVA" +
+      "LID_PARAMETER\020\255\037\022\021\n\014DRIVER_ERROR\020\256\037\022\020\n\013C",
+      "REATE_FAIL\020\257\037\022\022\n\rACCESS_DENIED\020\260\037\022\026\n\021FIL" +
+      "E_IS_TOO_LARGE\020\261\037\022\021\n\014WRONG_FORMAT\020\314!\022\024\n\017" +
+      "AUDIO_TASK_BUSY\020\316!\022\027\n\022CREATE_FILE_FAILED" +
+      "\020\317!\022/\n*ADDITIONAL_RECORDING_IN_A_DIFFERE" +
+      "NT_FORMAT\020\320!\022\016\n\tDISC_FULL\020\321!\022\035\n\030WRITE_PR" +
+      "OTECTION_ON_FILE\020\322!\022\033\n\026RECORDING_UNKNOW_" +
+      "ERROR\020\223#*\245\007\n\010FTPError\022\n\n\006FTP_OK\020\000\022\024\n\020FTP" +
+      "_UNKNOW_ERROR\020\001\022\024\n\020FTP_SERVICE_BUSY\020\003\0225\n" +
+      "1FAILED_TO_GET_IP_ADDRESS_ACCORDING_TO_D" +
+      "OMAIN_NAME\020\004\022\025\n\021FTP_NETWORK_ERROR\020\005\022$\n F",
+      "TP_SESSION_CLOSED_BY_FTP_SERVER\020\006\022,\n(DAT" +
+      "A_CONNECTION_OF_FTP_SERVICE_IS_CLOSED\020\007\022" +
+      "\'\n#FTP_GPRS_CSD_CONTEXT_IS_DEACTIVATED\020\010" +
+      "\022\017\n\013FTP_TIMEOUT\020\t\022\036\n\032INPUT_PARAMETAR_IS_" +
+      "ILLEGAL\020\n\022$\n FILE_NOT_FOUND_IN_LOCAL_POS" +
+      "ITION\020\013\022(\n$FAILED_TO_GET_FILE_IN_LOCAL_P" +
+      "OSITION\020\014\022\'\n#FTP_NO_ENOUGH_MEMORY_FOR_AT" +
+      "TACHMENT\020\r\022$\n\037FTP_SERVER_CANT_SUPPORT_SE" +
+      "RVICE\020\245\003\022#\n\036FAILED_TO_OPEN_DATA_CONNECTI" +
+      "ON\020\251\003\022,\n\'CONNECTION_CLOSED_AND_STOP_TRAN",
+      "SFERRING\020\252\003\022#\n\036REQUEST_FOR_FILE_ISNT_OPE" +
+      "RATED\020\302\003\022%\n FTP_SERVER_HAS_NOT_ENOUGH_ME" +
+      "MORY\020\304\003\022#\n\036FORMAT_OF_FTP_COMMAND_IS_WRON" +
+      "G\020\364\003\022&\n!PARAMETER_OF_FTP_COMMAND_IS_WRON" +
+      "G\020\365\003\022,\n\'FTP_COMMAND_ISNT_OPERATED_BY_FTP" +
+      "_SERVER\020\366\003\022\031\n\024NOT_LOGIN_FTP_SERVER\020\222\004\022 \n" +
+      "\033NEED_INFORMATION_OF_ACCOUNT\020\224\004\022\032\n\025REQUE" +
+      "ST_ISNT_OPERATED\020\246\004\022\027\n\022REQUEST_IS_STOPPE" +
+      "D\020\247\004\022\037\n\032REQUEST_OF_FILE_IS_STOPPED\020\250\004\022\031\n" +
+      "\024FILE_NAME_IS_ILLEGAL\020\251\004B \n\023com.rtrk.atc",
+      "ommandsB\tATCommand"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -81393,37 +87028,37 @@ public final class ATCommand {
     internal_static_com_rtrk_protobuf_RecordingCommand_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_com_rtrk_protobuf_RecordingCommand_descriptor,
-        new java.lang.String[] { "MessageType", "Test", "Read", "Write", "Execution", "State", "FileName", "Format", "Repeat", "Volume", "Channel", "Control", "IsResponse", "Description", });
+        new java.lang.String[] { "MessageType", "Test", "Read", "Write", "Execution", "RecordingState", "FileName", "Format", "Repeat", "Volume", "Channel", "Control", "IsResponse", "Description", });
     internal_static_com_rtrk_protobuf_SMTPCommand_descriptor =
       getDescriptor().getMessageTypes().get(7);
     internal_static_com_rtrk_protobuf_SMTPCommand_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_com_rtrk_protobuf_SMTPCommand_descriptor,
-        new java.lang.String[] { "MessageType", "Test", "Read", "Write", "Execution", "User", "Password", "EmailAddress", "Name", "ServerAddress", "Port", "Mode", "Type", "Result", "Charset", "Title", "Timeout", "FileIndex", "FileName", "FileSize", "Value", "IsResponse", "Description", });
+        new java.lang.String[] { "MessageType", "Test", "Read", "Write", "Execution", "User", "Password", "EmailAddress", "Name", "ServerAddress", "Port", "RecipientMode", "RecipinetType", "Result", "Charset", "Title", "Timeout", "FileIndex", "FileName", "FileSize", "NeedAuthentication", "IsResponse", "Description", "ConfigureNeedAuthentication", });
     internal_static_com_rtrk_protobuf_STKCommand_descriptor =
       getDescriptor().getMessageTypes().get(8);
     internal_static_com_rtrk_protobuf_STKCommand_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_com_rtrk_protobuf_STKCommand_descriptor,
-        new java.lang.String[] { "MessageType", "Test", "Read", "Write", "Execution", "N", "Profile", "SatCommand", "TerminalResponse", "IsResponse", "Description", });
+        new java.lang.String[] { "MessageType", "Test", "Read", "Write", "Execution", "TurnOnSTK", "Profile", "SatCommand", "TerminalResponse", "IsResponse", "Description", "Stk", });
     internal_static_com_rtrk_protobuf_GeneralCommand_descriptor =
       getDescriptor().getMessageTypes().get(9);
     internal_static_com_rtrk_protobuf_GeneralCommand_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_com_rtrk_protobuf_GeneralCommand_descriptor,
-        new java.lang.String[] { "MessageType", "Test", "Read", "Write", "Execution", "Value", "N", "Functionality", "Reset", "CharacterSet", "IsResponse", "Description", });
+        new java.lang.String[] { "MessageType", "Test", "Read", "Write", "Execution", "Default", "ProfileNumber", "Functionality", "Reset", "CharacterSet", "IsResponse", "Description", "ResultCode", "InformationResponse", "ConnectResultCode", "ResetToProfileNumber", "PowerOffMode", "DisableResultCode", });
     internal_static_com_rtrk_protobuf_SerialInterfaceControlCommand_descriptor =
       getDescriptor().getMessageTypes().get(10);
     internal_static_com_rtrk_protobuf_SerialInterfaceControlCommand_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_com_rtrk_protobuf_SerialInterfaceControlCommand_descriptor,
-        new java.lang.String[] { "MessageType", "Test", "Read", "Write", "Execution", "Value", "Format", "Partity", "DCEByDTE", "DTEByDCE", "Rate", "EnableDualUART", "Subset", "PortSpeed", "MaximumFrameSize", "AcknowledmentTimer", "MaximumNumberOfRetransmissions", "ResponseTimer", "WakeUpResponseTimer", "WindowsSize", "BaudRate", "DataBits", "StopBits", "Mode", "IsResponse", "Description", });
+        new java.lang.String[] { "MessageType", "Test", "Read", "Write", "Execution", "DcdLineStatus", "FramingFormat", "Parity", "DceByDte", "DteByDce", "Rate", "EnableDualUART", "TransmissionRate", "MaximumFrameSize", "AcknowledmentTimer", "MaximumNumberOfRetransmissions", "ResponseTimer", "WakeUpResponseTimer", "WindowsSize", "DataBits", "StopBits", "Mtm", "IsResponse", "Description", "EnableReportingLocalPortRate", "Mcc", "DualUARTParity", "DtrStatus", });
     internal_static_com_rtrk_protobuf_StatusControlCommand_descriptor =
       getDescriptor().getMessageTypes().get(11);
     internal_static_com_rtrk_protobuf_StatusControlCommand_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_com_rtrk_protobuf_StatusControlCommand_descriptor,
-        new java.lang.String[] { "MessageType", "Test", "Read", "Write", "Execution", "LocationID", "Cause", "Pas", "Status", "RefuseSMS", "RefuseCall", "Mode", "Extunsol", "State", "Enable", "Time", "DatlightSavingTime", "InsertLevel", "PinChoice", "InsertStatus", "Type", "IsResponse", "Description", });
+        new java.lang.String[] { "MessageType", "Test", "Read", "Write", "Execution", "LocationID", "Cause", "Pas", "Status", "RefuseSMS", "RefuseCall", "ShowCallState", "Extunsol", "State", "SwitchOnSIMDetection", "Time", "DatlightSavingTime", "HighInsertLevel", "PinChoice", "IsResponse", "Description", "EnableURCPresentation", "Pui", "Sof", "GsmNetworkStatus", "RtcTime", "Tzcer", "SwitchONDetectingSIMCard", "SimInsertStatus", "EnableCircuitSwitchedVoiceCall", "ConnectionType", });
     internal_static_com_rtrk_protobuf_SIMRelatedCommand_descriptor =
       getDescriptor().getMessageTypes().get(12);
     internal_static_com_rtrk_protobuf_SIMRelatedCommand_fieldAccessorTable = new
