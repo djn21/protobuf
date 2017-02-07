@@ -401,6 +401,7 @@ enum EngineeringMode {
 }
 
 enum OperatorStatus {
+	UNKNOW_OPERATOR = 0;
 	OPERATOR_AVAILABLE = 1;
 	CURRENT_OPERATOR = 2;
 	FORBIDDEN_OPERATOR = 3;
@@ -731,7 +732,8 @@ message StatusControlCommand {
 	optional string time = 16;
 	optional string datlightSavingTime = 17; //ds
 	optional bool highInsertLevel = 18;
-	optional SIMCardDetectionPIN pinChoice = 19;
+	optional SIMCardDetectionPIN pinChoice = 19
+	[default = CONFIGURE_SIM_PRESENCE_AS_SIM_CARD_DETECTION_PIN];
 	optional bool isResponse = 22;
 	optional string description = 23;
 	optional bool EnableURCPresentation = 24;
@@ -741,18 +743,21 @@ message StatusControlCommand {
 	optional RTCTime rtcTime = 28;
 	optional TimeZoneChangeEventReporting tzcer = 29;
 	optional bool switchONDetectingSIMCard = 20;
-	optional SIMCardInsertStatus simInsertStatus = 21;
+	optional SIMCardInsertStatus simInsertStatus = 21
+	[default = LOW_LEVEL_OF_PIN_INDICATES_SIM_CARD_IS_PRESENT];
 	optional bool enableCircuitSwitchedVoiceCall = 30;
 	optional ConnectionType connectionType = 31;
+	optional bool enableToSynchronizeTime = 32;
+	optional bool openSIMDetectionFunction = 33;
 }
 
-enum ConnectionType{
+enum ConnectionType {
 	CIRCUIT_SWITCHED_VOICE_CALL = 0;
 	CIRCUIT_SWITCHED_DATA_CALL = 1;
 	PPP_CONNECTION = 2;
 }
 
-enum SIMCardInsertStatus{
+enum SIMCardInsertStatus {
 	LOW_LEVEL_OF_PIN_INDICATES_SIM_CARD_IS_PRESENT = 0;
 	HIGH_LEVEL_OF_PIN_INDICATES_SIM_CARD_IS_PRESENT = 1;
 }
@@ -815,16 +820,16 @@ message SIMRelatedCommand {
 	optional bool write = 4;
 	optional bool execution = 5;
 	optional string fac = 31;
-	optional int32 mode = 32;
+	optional LockMode lockMode = 32 [default = QUERY_STATUS];
 	optional string password = 33;
-	optional int32 class = 34;
-	optional int32 status = 6;
+	optional Class class = 34 [default = ALL_TELEPHONY_EXCEPT_SMS];
+	optional Status status = 6;
 	optional string pin = 7;
 	optional string newPin = 8;
 	optional int32 pwdLength = 9;
 	optional string oldPwd = 10;
 	optional string newPwd = 11;
-	optional string command = 12;
+	optional CommandSIM commandSIM = 12;
 	optional int32 fileID = 13;
 	optional int32 P1 = 14;
 	optional int32 P2 = 15;
@@ -838,13 +843,47 @@ message SIMRelatedCommand {
 	optional int32 GID1 = 23;
 	optional int32 GID2 = 24;
 	optional string serviceProvideName = 25; //spn
-	optional int32 displayMode = 26;
+	optional bool displayPLMN = 26;
 	optional int32 chv1 = 27;
 	optional int32 chv2 = 28;
 	optional int32 puk1 = 29;
 	optional int32 puk2 = 30;
 	optional bool isResponse = 35;
 	optional string description = 36;
+	optional VoltageMode voltageMode = 37
+	[default = RECOGNIZE_1_8_V_AND_3_0_V_SIM_CARD];
+	optional string command = 38;
+}
+
+enum VoltageMode {
+	RECOGNIZE_1_8_V_AND_3_0_V_SIM_CARD = 0;
+	RECOGNIZE_1_8_V_SIM_CARD_ONLY = 1;
+	RECOGNIZE_3_0_V_SIM_CARD_ONLY = 2;
+}
+
+enum CommandSIM {
+	READ_BINATY = 176;
+	READ_RECORD = 178;
+	GET_RESPONSE = 192;
+	UPDATE_BINATY = 214;
+	UPDATE_RECORD = 220;
+	STATUS = 242;
+}
+
+enum Class {
+	VOICE = 1;
+	DATA = 2;
+	FAX = 4;
+	ALL_TELEPHONY_EXCEPT_SMS = 7;
+	SHORT_MESSAGE_SERVICE = 8;
+	DATA_CIRCUIT_SYNC = 16;
+	DATA_CIRCUIT_ASYNC = 32;
+}
+
+enum LockMode {
+	UNLOCK = 0;
+	LOCK = 1;
+	QUERY_STATUS = 2;
 }
 
 message NetworkServiceCommand {
@@ -853,11 +892,13 @@ message NetworkServiceCommand {
 	optional bool read = 3;
 	optional bool writw = 4;
 	optional bool execution = 5;
-	optional int32 status = 6;
-	optional int32 operator = 7;
-	optional int32 mode = 8;
-	optional int32 format = 9;
-	optional int32 n = 10;
+	optional OperatorStatus operatorStatus = 6;
+	optional string operator = 33;
+	optional int32 operatorNumber = 7;
+	optional OperatorMode operatorMode = 8 [default = AUTOMATIC_MODE];
+	optional OperatorFormat operatorFormat = 9
+	[default = LONG_FORMAT_ALPHANUMERIC];
+	optional NetworkRegistrationMode networkRegistrationMode = 10;
 	optional string locationAreaCode = 11;
 	optional string cellID = 12;
 	optional int32 rssi = 13;
@@ -866,16 +907,70 @@ message NetworkServiceCommand {
 	optional string numericn = 16;
 	optional string alphan = 17;
 	optional string opBand = 18;
-	optional int32 dump = 19;
-	optional int32 band = 20;
+	optional EngineeringModeDump engModeDump = 19;
+	optional Band band = 20;
 	optional int32 frequency = 21;
 	optional int32 signalStrength = 22; //dbm
-	optional int32 band1900 = 23;
+	optional Band1900 band1900 = 23;
 	optional int32 arfcn1 = 24;
 	optional int32 arfcn2 = 25;
 	optional int32 arfcn3 = 26;
 	optional bool isResponse = 27;
 	optional string description = 28;
+	optional NetworkRegistrationStatus networkRegistrationStatus = 29;
+	optional EngineeringMode engineeringMode = 30
+	[default = SWITCH_OFF_ENGINEERING_MODE];
+	optional LockFrequencyMode lockFreqMode = 31
+	[default = DISABLE_LOCK_FREQUENCY];
+	optional bool lockedARCFN = 32;
+}
+
+enum Band1900 {
+	NOT_CELL_ID_OF_1900_BAND = 0;
+	CELL_ID_OF_1900_BAND = 1;
+	AUTO_DISTINGUISH_WHETHER_IS_CELL_ID_OF_1900_BAND = 2;
+}
+
+enum LockFrequencyMode {
+	DISABLE_LOCK_FREQUENCY = 0;
+	ENABLE_LOCK_FREQUENCY = 1;
+	ENABLE_LOCK_FREQUENCY_AND_AUTO_SWITCH_TO_SAVED_FREQUENCY_AFTER_POWERED_ON = 2;
+}
+
+enum EngineeringModeDump {
+	ONLY_DISPLAY_SERVING_CELL_INFORMATION = 0;
+	DISPLAY_SERVING_CELL_INFORMATION_1_6_NEIGHBORING_CELLS_INFORMATION = 1;
+	DISPLAY_SERVING_CELL_INFORMATION_AND_LIST_OF_SERVING_CELL_CARRIER_LIST = 2;
+	DISPLAY_SERVING_CELL_INFORMATION_1_6_NEIGHBORING_CELLS_INFORMATION_AND_LIST_OF_SERVING_CELL_CARRIER_LIST = 3;
+	DISPLAY_SERVING_CELL_INFORMATION_1_6_NEIGHBORING_CELLS_INFORMATION_LIST_OF_SERVING_CELL_CARRIER_LIST_AND_BA_MEASURED_RESULT_LIST = 4;
+}
+
+enum NetworkRegistrationStatus {
+	NOT_REGISTRED_ME_IS_NOT_CURRENTLY_SEARCHING_NEW_OPERATOR_TO_REGISTER_TO = 0;
+	REGISTRED_HOME_NETWORK = 1;
+	NOT_REGISTRED_ME_IS_CURRENTLY_SEARCHING_NEW_OPERATOR_TO_REGISTER_TO = 2;
+	REGISTRATION_DENIED = 3;
+	UNKNOW_NETWORK_REGISTRATION_STATUS = 4;
+	REGISTERED_ROAMING = 5;
+}
+
+enum NetworkRegistrationMode {
+	DISABLE_NETWORK_REGISTRATION_UNSOLICITED_RESULT_CODE = 0;
+	ENABLE_NETWORK_REGISTRATION_UNSOLICITED_RESULT_CODE = 1;
+	ENABLE_NETWORK_REGISTRATION_UNSOLICITED_RESULT_CODE_WITH_LOCATION_INFORMATION = 2;
+}
+
+enum OperatorFormat {
+	LONG_FORMAT_ALPHANUMERIC = 0;
+	SHORT_FORMAT_ALPHANUMERIC = 1;
+	NUMERIC_GSM_LOCATION_AREA_IDENTIFICATION_NUMBER = 2;
+}
+
+enum OperatorMode {
+	AUTOMATIC_MODE = 0;
+	MANUAL_OPERATOR_SELECTION = 1;
+	MANUAL_DEREGISTER_FROM_NETWORK = 2;
+	SET_ONLY_FORMAT_NOT_SHOWN_IN_READ_COMMAND_RESPONSE = 3;
 }
 
 message CallRelatedCommand {
@@ -892,18 +987,88 @@ message CallRelatedCommand {
 	optional int32 retransimissionAttempts = 10; //N2
 	optional int32 RPLVersion = 11; //verx
 	optional int32 resequencingPeriod = 12; //T4
-	optional int32 n = 13;
-	optional int32 type = 14;
+	optional AddressType addresType = 14 [default = UNKNOW_TYPE];
 	optional int32 index = 15;
-	optional int32 dir = 16;
-	optional int32 stat = 17;
-	optional int32 mode = 18;
-	optional int32 multiparty = 19;
+	optional CallDir callDir = 16;
+	optional CallState callState = 17;
+	optional CallMode callMode = 18;
+	optional bool callIsOneOfMultiparty = 19;
 	optional int32 speechChannel = 20;
 	optional bool disableATH = 21;
 	optional bool setUpVoiceCall = 22; //;
 	optional bool isResponse = 24;
 	optional string description = 25;
+	optional int32 n = 26;
+	optional bool serviceReportingControlEnabled = 27;
+	optional bool enableExtendedFormat = 28;
+	optional SchemeMode schemeMode = 29;
+	optional AlternatingMode alternatingMode = 30;
+	optional SpeechMode speechMode = 31;
+	optional bool enableReportSpeechChannelType = 32;
+}
+
+enum SpeechMode {
+	SPEECH_AUTOMATIC_MODE = 0;
+	FR = 1;
+	HR = 2;
+	EFR = 3;
+	AMR_FR = 4;
+	AMR_HR = 5;
+	FR_AND_EFR_FR_PRIORITY = 6;
+	EFR_AND_FR_EFR_PRIORITY = 7;
+	EFR_AND_HR_EFR_PRIORITY = 8;
+	EFR_AND_AMR_FR_EFR_PRIORITY = 9;
+	AMR_FR_AND_FR_AMR_FR_PRIORITY = 10;
+	AMR_FR_AND_HR_AMR_FR_PRIORITY = 11;
+	AMR_FR_AND_EFR_AMR_FR_PRIORITY = 12;
+	AMR_HR_AND_FR_AMR_HR_PRIORITY = 13;
+	AMR_HR_AND_HR_AMR_HR_PRIORITY = 14;
+	AMR_HR_AND_EFR_AMR_HR_PRIORITY = 15;
+}
+
+enum AlternatingMode {
+	SINGLE_MODE = 0;
+	ALTERNATING_VOICE_FAX = 1;
+	ALTERNATING_VOICE_DATA = 2;
+	VOICE_FOLLOWED_BY_DATA = 3;
+}
+
+enum SchemeMode {
+	SCHEME_VOICE = 0;
+	SCHEME_ALTERNATING_VOICE_FAX_VOICE_FIRST = 1;
+	SCHEME_FAX = 2;
+	SCHEME_ALTERNATING_VOICE_DATA_VOICE_FIRST = 3;
+	SCHEME_DATA = 4;
+	SCHEME_ALTERNATING_VOICE_FAX_FAX_FIRST = 5;
+	SCHEME_ALTERNATING_VOICE_DATA_DATA_FIRST = 6;
+	SCHEME_VOICE_FOLLOWED_BY_DATA = 7;
+}
+
+enum CallMode {
+	VOICE_CALL = 0;
+	DATA_CALL = 1;
+	FAX_CALL = 2;
+	UNKNOW_CALL = 9;
+}
+
+enum CallDir {
+	MOBILE_ORIGINATED_CALL = 0;
+	MOBILE_TERMINATED_CALL = 1;
+}
+
+enum CallState {
+	ACTIVE_CALL = 0;
+	HELD_CALL = 1;
+	DIALING_CALL = 2;
+	ALERTING_CALL = 3;
+	INCOMING_CALL = 4;
+	WAITING_CALL = 5;
+}
+
+enum AddressType {
+	UNKNOW_TYPE = 129;
+	INTERNATIONAL_NUMBER_TYPE = 145;
+	NATIONAL_NUMBER_TYPE = 161;
 }
 
 message SMSCommand {
