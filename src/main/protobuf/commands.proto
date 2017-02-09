@@ -1238,7 +1238,7 @@ message GPRSCommand {
 	optional int32 precedence = 12;
 	optional int32 delay = 13;
 	optional int32 reliability = 14;
-	optional int32 peek = 15;
+	optional int32 peak = 15;
 	optional int32 mean = 16;
 	optional string L2P = 17;
 	optional string class = 18;
@@ -1254,14 +1254,14 @@ message GPRSCommand {
 	optional bool activatePDP = 29;
 }
 
-enum ServiceType{
+enum ServiceType {
 	GPRS = 0;
 	CIRCUIT_SWITCH = 1;
 	GPRS_PREFERRD = 2;
 	CIRCUIT_SWITCH_PREFERRED = 3;
 }
 
-enum EventReportingMode{
+enum EventReportingMode {
 	BUFFER_UNSOLICITED_RESULT_CODES_IN_MT = 0;
 	DISCART_UNSOLICITED_RESULT_CODES_WHEN_MT_TE_LINK_IS_RESERVED = 1;
 }
@@ -1274,48 +1274,48 @@ message TCPIPCommand {
 	optional bool execution = 5;
 	optional int32 index = 54;
 	optional string mode = 6;
-	optional int32 modeInt = 7;
+	optional ServerFormat serverFormat = 7;
 	optional int32 port = 8;
 	optional string domainName = 9;
 	optional int32 length = 10;
 	optional string APN = 11;
 	optional string username = 12;
 	optional string password = 13;
-	optional int32 rate = 14;
+	optional Rate rate = 14 [default = RATE_9600];
 	optional string state = 15;
 	optional string socketState = 16;
 	optional string serverState = 17;
 	optional string primaryDNS = 18;
 	optional string seondaryDNS = 19;
-	optional int32 error = 20;
 	optional int64 time = 21;
-	optional int32 sendPrompt = 22;
+	optional SendPrompt sendPrompt = 22 [default = ECHO_PROMPT_AND_SHOW_SEND_OK];
 	optional int32 num = 23;
-	optional int32 type = 24;
+	optional ServerType type = 24;
 	optional int64 max = 25;
 	optional string dialNumber = 26;
-	optional int32 connection = 27;
+	optional Connection connection = 27;
 	optional int32 numberOfRetry = 28;
 	optional int32 waitTime = 29;
 	optional int32 sendSize = 30;
 	optional bool escape = 31;
-	optional int32 channel = 32;
+	optional Channel channel = 32;
 	optional int32 n = 33;
 	optional int32 sent = 34;
 	optional int32 acked = 35;
 	optional int32 nAcked = 36;
-	optional int32 m = 37;
+	optional ReceivedDataMode receivedDataMode = 37
+	[default = OUTPUT_RECEIVED_DATA_THROUGH_UART_DIRECTLY];
 	optional int32 id = 38;
-	optional int32 sc = 39;
+	optional ServerClient serverClinet = 39;
 	optional int32 sid = 40;
 	optional int32 number = 41;
 	optional string host = 42;
 	optional int32 timeout = 43;
 	optional int32 pingNumber = 44;
-	optional int32 result = 45;
+	optional PingResult pingResult = 45;
 	optional int32 bytes = 46;
 	optional int32 ttl = 47;
-	optional int32 finalResult = 48;
+	optional FinalResult finalResult = 48;
 	optional int32 received = 49;
 	optional int32 lost = 50;
 	optional int64 min = 51;
@@ -1323,6 +1323,99 @@ message TCPIPCommand {
 	optional string server = 53;
 	optional bool isResponse = 55;
 	optional string description = 56;
+	optional IPHeader ipHeader = 20;
+	optional Timer timer = 57;
+	optional bool configureAsServer = 58;
+	optional BearerType bearerType = 59;
+	optional bool showAddress = 60;
+	optional TransferMode transferMode = 61;
+	optional bool showTransportProtocolType = 62;
+	optional bool enableMultipleTCPIPSession = 63;
+	optional bool echoData = 64;
+	optional SynchronizationResult synchronizationResult = 65;
+	optional int32 CSDDataSpeed = 66;
+}
+
+enum SynchronizationResult {
+	SUCCESS_SYNCHRONIZE_LOCAL_TIME = 0;
+	FAILED_TO_SYNCHRONIZE_LOCAL_TIME_BECAUSE_OF_UNKNOW_RESON = 1;
+	FAILED_TO_RECEIVE_RESPONSE_FROM_TIME_SERVER = 2;
+	TCPIP_STACK_IS_BUSY_NOW = 3;
+	DO_NOT_FIND_TIME_SERVER = 4;
+	FAILED_TO_ACTIVATE_PDP_CONTEXT_SYNCHRONIZATION = 5;
+}
+
+enum FinalResult {
+	IT_IS_FINISHED_NORMALY = 2;
+	TCP_IP_STACK_IS_BUSY_NOW = 3;
+	DO_NOT_FIND_HOST = 4;
+	FAILED_TO_ACTIVATE_PDP_CONTEXT = 5;
+}
+
+enum PingResult {
+	RECEIVED_PING_RESPONSE_FROM_SERVER = 0;
+	TIMEOUT_FOR_PING_REQUEST = 1;
+}
+
+enum ServerClient {
+	MODULE_SERVERS_AS_CLINET_OF_CONNECTION = 1;
+	MODULE_SERVERS_AS_CLIENT_OF_CONNECTION = 2;
+}
+
+enum ReceivedDataMode {
+	OUTPUT_RECEIVED_DATA_THROUGH_UART_DIRECTLY = 0;
+	OUTPUT_NOTIFICATION_STATEMENT_SHORT = 1;
+	OUTPUT_NOTIFICATION_STATEMENT_LONG = 2;
+}
+
+enum Channel {
+	VIRTUAL_UART_1 = 0;
+	VIRTUAL_UART_2 = 1;
+	VIRTUAL_UART_3 = 2;
+	VIRTUAL_UART_4 = 3;
+	CONTEXT_IS_NOT_CONTROLLED_BY_ANY_CHANNEL = 4;
+}
+
+enum TransferMode {
+	NORMAL_MODE = 0;
+	TRANSPARENT_MODE = 1;
+}
+
+enum Connection {
+	MS_USED_AS_CLIENT = 0;
+	MS_USED_AS_SERVER = 1;
+}
+
+enum BearerType {
+	SET_CSD_AS_BEARER_FOR_TCPIP_CONNECTION = 0;
+	SET_GPRS_AS_BEARER_FOR_TCPIP_CONNECTION = 1;
+}
+
+enum ServerType {
+	TCP_SERVER = 0;
+	UDP_SERVER = 1;
+}
+
+enum SendPrompt {
+	NO_PROMPT_AND_SHOW_SEND_OK = 0;
+	ECHO_PROMPT_AND_SHOW_SEND_OK = 1;
+	NO_PROMPT_AND_NOT_SHOW_SEND_OK = 2;
+	ECHO_PROMPT_AND_SHOW_SOCKET_ID_AND_SEND_OK = 3;
+}
+
+enum Timer {
+	DO_NOT_SET_TIMER_FOR_DATA_SENDING = 0;
+	SET_TIMER_FOR_DATA_SENDING = 1;
+}
+
+enum IPHeader {
+	DO_NOT_ADD_IP_HEADER = 0;
+	ADD_A_HEADER_BEFORE_RECEIVED_DATA = 1;
+}
+
+enum ServerFormat {
+	DOTTED_DECIMAL_IP_ADDRESS_OF_SERVER = 0;
+	DOMAIN_NAME_ADDRESS_OF_SERVER = 1;
 }
 
 message SupplementaryServiceCommand {
@@ -1331,25 +1424,101 @@ message SupplementaryServiceCommand {
 	optional bool read = 3;
 	optional bool write = 4;
 	optional bool execution = 5;
-	optional int32 reads = 22;
-	optional int32 mode = 6;
+	optional Reads reads = 22;
+	optional ForwardingMode forwardingMode = 6;
 	optional string number = 7;
 	optional int32 type = 8;
 	optional string subaddress = 9;
 	optional int32 satype = 10;
-	optional int32 class = 11;
+	optional Class class = 11;
 	optional int32 time = 12;
-	optional int32 status = 13;
-	optional int32 n = 14;
-	optional int32 index = 15;
-	optional int32 info = 16;
-	optional int32 m = 17;
+	optional bool active = 13;
+	optional bool enableCUG = 14;
+	optional int32 CUGIndex = 15;
+	optional Info info = 16;
+	optional CLIP clip = 17;
 	optional string USSDString = 18;
 	optional int32 dataCodingScheme = 19;
-	optional int32 code1 = 20;
-	optional int32 code2 = 21;
+	optional Code1 code1 = 20;
+	optional Code2 code2 = 21;
 	optional bool isResponse = 23;
 	optional string description = 24;
+	optional bool enablePresentation = 25;
+	optional bool enableCallWaitingControl = 26;
+	optional int32 callHold = 27;
+	optional bool displayUnsolicitedResultCode = 28;
+	optional bool showCallNumber = 29;
+	optional AdjustmentOutgoingCalls aoc = 30 [default = PRESENTATION_INDICATOR];
+	optional CLIRServiceStatus css = 31;
+	optional bool enableResultCodePresentationOriginated = 32;
+	optional bool enableResultCodePresentationTerminated = 35;
+	optional bool showAlphaField = 33;
+	optional SSDControl ssdControl = 34
+	[default = DISABLE_RESULT_CODE_PRESENTATION_IN_TA];
+}
+
+enum Code1 {
+	UNCONDITIONAL_CALL_FORWARDING_IS_ACTIVE = 0;
+	SOME_OF_CONDITIONAL_CALL_FORWARDING_ARE_ACTIVE = 1;
+	CALL_HAS_BEEN_FORWARDED = 2;
+	CALL_IS_WAITING = 3;
+	THIS_IS_CUG_CALL = 4;
+	OUTGOING_CALLS_ARE_BARRED = 5;
+	INCOMING_CALLS_ARE_BARRED = 6;
+	CLIR_SUPPRESSION_REJECTED = 7;
+}
+
+enum Code2 {
+	THIS_IS_FORWARDED_CALL = 0;
+}
+
+enum SSDControl {
+	DISABLE_RESULT_CODE_PRESENTATION_IN_TA = 0;
+	ENABLE_RESULT_CODE_PRESENTATION_IN_TA = 1;
+	CANCEL_SESSION = 2;
+}
+
+enum CLIRServiceStatus {
+	CLIR_NOT_PROVISIONED = 0;
+	CLIR_PROVISIONED_IN_PERMANENT_MODE = 1;
+	UNKNOW_CLIR = 2;
+	CLIR_TEMORARY_MODE_PRESENTATION_RESTRICTED = 3;
+}
+
+enum AdjustmentOutgoingCalls {
+	PRESENTATION_INDICATOR = 0;
+	CLIR_INVOCATION = 1;
+	CLIR_SUPPRESSION = 2;
+}
+
+enum CLIP {
+	CLIP_NOT_PROVISIONED = 0;
+	CLIP_PROVISIONED = 1;
+	UNKNOW_CLIP = 2;
+}
+
+enum Info {
+	BO_INFORMATION = 0;
+	SUPPRESS_OA = 1;
+	SUPPRESS_PREFERANTIAL_CUG = 2;
+	SUPPRESS_OA_AND_PREFERENTIAL_CUG = 3;
+}
+
+enum Reads {
+	UNCONDITIONAL = 0;
+	MOBILE_BUSY = 1;
+	NO_REPLY = 2;
+	NO_REACHABLE = 3;
+	ALL_CALL_FORWARDING = 4;
+	ALL_CONDITIONAL_CALL_FORWARDING = 5;
+}
+
+enum ForwardingMode {
+	DISABLE_FORWARDING_MODE = 0;
+	ENABLE_FORWARDINF_MODE = 1;
+	QUERY_STATUS_OF_FORWARDING_MODE = 2;
+	REGISTRATION_FORWARDING_MODE = 3;
+	ERASURE_FORWARDING_MODE = 4;
 }
 
 message AudioCommand {
@@ -1358,23 +1527,23 @@ message AudioCommand {
 	optional bool read = 3;
 	optional bool write = 4;
 	optional bool execution = 5;
-	optional int32 value = 33;
+	optional SpeakerLoudness speakerLoudness = 33;
 	optional int32 internalDuration = 6;
 	optional int64 duration = 7;
 	optional string DTMFString = 8;
-	optional int32 mode = 9;
+	optional SoundMode soundMode = 9;
 	optional int32 level = 10;
 	optional bool mute = 11;
 	optional int32 gainLevel = 12;
-	optional int32 channel = 13;
-	optional int32 state = 14;
+	optional MicrophoneChannel microphoneChannel = 13;
+	optional bool testIsOn = 14;
 	optional int32 type = 15;
 	optional int32 frequency = 16;
 	optional int32 periodON = 17;
 	optional int32 periodOFF = 18;
-	optional int32 outputPath = 19;
-	optional int32 operateFunction = 20;
-	optional int32 functionStatus = 21;
+	optional OutputPath outputPath = 19 [default = AUTO_OUTPUT_PATH];
+	optional OperateFunction operateFunction = 20;
+	optional FunctionStatus functionStatus = 21;
 	optional int32 operate = 22;
 	optional int32 prefixPause = 23;
 	optional int32 lowThreshold = 24;
@@ -1388,6 +1557,55 @@ message AudioCommand {
 	optional int32 audioChannel = 32;
 	optional bool isResponse = 34;
 	optional string description = 35;
+	optional SpeakerMode speakerMode = 36;
+	optional AudioChannel audioChannel = 37;
+	optional bool startPlayingTone = 38;
+}
+
+enum FunctionStatus{
+
+}
+
+enum OperateFunction{
+	SET_DETECTION_RANGE = 0;
+	SET_DETECTION_MODE = 1;
+}
+
+enum OutputPath {
+	OUTPUT_DTMF_NORMAL_SPEAKER = 0;
+	OUTPUT_DTMF_HEADSET_SPEAKER = 1;
+	OUTPUT_DTMF_LOUD_SPEAKER = 2;
+	AUTO_OUTPUT_PATH = 3;
+}
+
+enum AudioChannel {
+	NORMLA_AUDIO_CHANNEL = 0;
+	HEADSET_AUDIO_CHANNEL = 1;
+	LOUDSPEAKER_AUDIO_CHANNEL = 2;
+}
+
+enum MicrophoneChannel {
+	NORMAL_MICROPHONE = 0;
+	HEADSET_MICROPHONE = 1;
+	LOUDSPEAKER_MICROPHONE = 2;
+}
+
+enum SoundMode {
+	NORMAL_SOUND_MODE = 0;
+	SILENT_SOUND_MODE = 1;
+}
+
+enum SpeakerMode {
+	SPEAKER_IS_ALWAYS_OFF = 0;
+	SPEAKER_IS_ON_UTIL_TA_INFORM_TE_THAT_CARRIER_HAS_BEEN_DETECTED = 1;
+	SPEAKER_IS_ALWAYS_ON_WHEN_TA_IS_OFF_HOOK = 2;
+}
+
+enum SpeakerLoudness {
+	NO_SPEAKER_VOLUME = 0;
+	LOW_SPEAKER_VOLUME = 1;
+	MEDIUM_SPEAKER_VOLUME = 2;
+	HIGH_SPEAKER_VOLUME = 3;
 }
 
 message HardwareRelatedCommand {
@@ -1503,8 +1721,8 @@ enum TCPIPMessageType {
 	QUERY_THE_IP_ADDRESS_OF_GIVEN_DOMAIN_NAME = 12;
 	CONNECT_WITH_IP_ADDRESS_OR_DOMAIN_NAME_SERVER = 13;
 	ADD_AN_IP_HEADER_WHEN_RECEIVING_DATE = 14;
-	SET_AUDIO_SENDING_TIMER = 15;
-	SET_PROMT_WHEN_SENDING_DATA = 16;
+	SET_AUTO_SENDING_TIMER = 15;
+	SET_PROMPT_WHEN_SENDING_DATA = 16;
 	CONFIGURE_AS_SERVER = 17;
 	SELECT_CSD_OR_GPRS_AS_THE_BEARER = 18;
 	CHOOSE_CONNECTION = 19;
