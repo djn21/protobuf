@@ -1537,36 +1537,83 @@ message AudioCommand {
 	optional int32 gainLevel = 12;
 	optional MicrophoneChannel microphoneChannel = 13;
 	optional bool testIsOn = 14;
-	optional int32 type = 15;
 	optional int32 frequency = 16;
 	optional int32 periodON = 17;
 	optional int32 periodOFF = 18;
 	optional OutputPath outputPath = 19 [default = AUTO_OUTPUT_PATH];
-	optional OperateFunction operateFunction = 20;
+	optional AudioOperateFunction operateFunction = 20;
 	optional FunctionStatus functionStatus = 21;
-	optional int32 operate = 22;
 	optional int32 prefixPause = 23;
 	optional int32 lowThreshold = 24;
 	optional int32 highThreshold = 25;
-	optional string dtmfCode = 26;
-	optional int32 persistenceTime = 27;
+	optional PersistenceTime persistenceTime = 27;
 	optional int32 uplinkVolume = 28;
 	optional int32 downlinkVolume = 29;
 	optional int64 continuanceTime = 30;
 	optional int64 muteTime = 31;
-	optional int32 audioChannel = 32;
 	optional bool isResponse = 34;
 	optional string description = 35;
 	optional SpeakerMode speakerMode = 36;
 	optional AudioChannel audioChannel = 37;
 	optional bool startPlayingTone = 38;
+	optional ToneDetection toneDetection = 22 [default = CLOSE_TONE_DETECTION];
+	optional DTMFOperate dtmfOperate = 39;
+	optional DTMFCode dtmfCode = 26;
+	optional Algorithm algorithm = 15 [default = ALGORITHM_1];
 }
 
-enum FunctionStatus{
-
+enum Algorithm {
+	ALGORITHM_1 = 0;
+	ALGORITHM_2 = 1;
 }
 
-enum OperateFunction{
+enum PersistenceTime {
+	MS_100 = 100;
+	MS_400 = 400;
+}
+
+enum DTMFCode {
+	DTMF_0 = 48;
+	DTMF_1 = 49;
+	DTMF_2 = 50;
+	DTMF_3 = 51;
+	DTMF_4 = 52;
+	DTMF_5 = 53;
+	DTMF_6 = 54;
+	DTMF_7 = 55;
+	DTMF_8 = 56;
+	DTMF_9 = 57;
+	DTMF_A = 65;
+	DTMF_B = 66;
+	DTMF_C = 67;
+	DTMF_D = 68;
+	DTMF_STAR = 42;
+	DTMF_POUND = 35;
+	FREQUENCY_1400_HZ = 69;
+	FREQUENCY_2300_HZ = 70;
+}
+
+enum DTMFOperate {
+	QUERY_THRESHOLD_VALUES = 0;
+	SET_THRESHOLD_VALUES = 1;
+}
+
+enum ToneDetection {
+	CLOSE_TONE_DETECTION = 0;
+	OPEN_TONE_DETECTION = 1;
+	CONFIGURE_1400HZ_OR_2300HZ_DETECTION_THRESHOLD_100_MS = 2;
+	CONFIGURE_1400HZ_AND_2300HZ_DETECTION_THRESHOLD_400_MS = 3;
+	CONFIGURE_DTMF_DETECTION_THRESHOLD = 4;
+	OPEN_DEBUG = 5;
+}
+
+enum FunctionStatus {
+	DETECT_ALL_DTMF = 0;
+	ONLY_DETECT_1400HZ_AND_2300HZ_HANSHAKE_SIGNAL = 1;
+	NOT_DETECT_1400HZ_AND_2300HZ_HANDSAKE_SIGNAL = 2;
+}
+
+enum AudioOperateFunction {
 	SET_DETECTION_RANGE = 0;
 	SET_DETECTION_MODE = 1;
 }
@@ -1615,20 +1662,63 @@ message HardwareRelatedCommand {
 	optional bool write = 4;
 	optional bool execution = 5;
 	optional string time = 18;
-	optional int32 state = 6;
-	optional int32 repeat = 7;
-	optional int32 power = 8;
-	optional int32 bcs = 9;
-	optional int32 bcl = 10;
-	optional int32 voltage = 11;
-	optional int32 status = 12;
-	optional int32 value = 13;
-	optional int32 n = 14;
-	optional int32 ledMode = 15;
-	optional int32 thresholdType = 16;
+	optional bool setAlarm = 6;
+	optional Repeat repeat = 7;
+	optional AlarmPower power = 8;
+	optional BatteryCharge batteryCharge = 9;
+	optional int32 batteryConnectionLevel = 10;
+	optional int32 batteryVoltage = 11;
+	optional ReadStatus readStatus = 12;
+	optional SlowClock slowClock = 14;
+	optional LedMode ledMode = 15;
+	optional ThresholdType thresholdType = 16;
 	optional int32 threshold = 17;
 	optional bool isResponse = 19;
 	optional string description = 20;
+	optional bool thresholdFunctionTurnedON = 21;
+}
+
+enum ThresholdType {
+	THRESHOLD_OF_LOW_VOLTAGE_WARNING = 0;
+	THRESHOLD_OF_LOW_VOLTAGE_POWER_DOWN = 1;
+	THRESHOLD_OF_HIGH_VOLTAGE_WARNING = 2;
+	THRESHOLD_OF_HIGH_VOLTAGE_POWER_DOWN = 3;
+}
+
+enum LedMode {
+	NETWORK_LED_FLASHES_RAPIDLY_WHEN_CALL_IS_RINGING = 0;
+	NO_EFFECT_ON_NETWORK_LED_WHEN_CALL_IS_RINGING = 1;
+	RI_WILL_NOT_CHANGE_WHEN_URC_REPORTED_UNTIL_RINGING_ENDS = 2;
+}
+
+enum SlowClock {
+	DISABLE_SLOW_CLOCK = 0;
+	ENABLE_SLOW_CLOCK = 1;
+	ENTER_SLEEP_AFTER_5_SECONDS = 2;
+}
+
+enum ReadStatus {
+	STATUS_FAIL = 0;
+	STATUS_SUCCESS = 2;
+}
+
+enum BatteryCharge {
+	ME_IS_NOT_CHARGING = 0;
+	ME_IS_CHARGING = 1;
+	CHARGING_HAS_FINISHED = 2;
+}
+
+enum AlarmPower {
+	NONE_ALARM_POWER = 0;
+	ALARM_POWER_OFF = 1;
+	ALARM_POWER_ON = 2;
+}
+
+enum Repeat {
+	NONE_REPEAT = 0;
+	DAILY_REPEAT = 1;
+	WEEKLY_REPEAT = 2;
+	MONTLY_REPEAT = 3;
 }
 
 message OthersCommand {
@@ -1637,12 +1727,26 @@ message OthersCommand {
 	optional bool read = 3;
 	optional bool write = 4;
 	optional bool execution = 5;
-	optional int32 value = 6;
-	optional int32 n = 7;
-	optional int32 timeMode = 8;
-	optional int32 indMode = 9;
+	optional bool echoModeOn = 6;
+	optional int32 commandLineTerminationCharacter = 7;
+	optional int32 responseFormattingCharacter = 12;
+	optional int32 responseEditingCharacter = 13;
+	optional TimeMode timeMode = 8;
+	optional IndMode indMode = 9;
 	optional bool isResponse = 10;
 	optional string description = 11;
+}
+
+enum IndMode {
+	DISABLE_TX_BURST_INDICATION_PIN_OUTPUT_LOW_LEVEL_AS_GPIO_FUNCTION = 0;
+	ENABLE_TX_BURST_INDICATION__OUTPUT_WAVE_AS_NOTE = 1;
+	ENABLE_TX_BURST_INDICATION_PIN_WILL_BE_HIGH_DURING_CALL_AND_LOW_AFTER_CALL = 2;
+}
+
+enum TimeMode {
+	RI_120_MS_LOW_PULSE_OTHER_URC_RI_120_MS_LOW_PULSE = 0;
+	RI_120_MS_LOW_PULSE_OTHER_URC_RI_50_MS_LOW_PULSE = 1;
+	RI_120_MS_LOW_PULSE_OTHER_URC_RI_TAKE_NO_EFFECT = 2;
 }
 
 message ErrorCommand {
