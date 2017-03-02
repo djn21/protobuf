@@ -1,9 +1,9 @@
 syntax = "proto2";
 
-package com.rtrk.protobuf;
+package com.rtrk.atcommand;
 
-option java_package = "com.rtrk.atcommands";
-option java_outer_classname = "ATCommand";
+option java_package = "com.rtrk.atcommand.protobuf";
+option java_outer_classname = "ProtobufATCommand";
 message Command {
 	optional HTTPCommand httpCommand = 1;
 	optional FileCommand fileCommand = 2;
@@ -55,10 +55,16 @@ enum CommandType {
 	OTHERS_COMMAND = 21;
 }
 
+enum Action {
+	TEST = 0;
+	READ = 1;
+	WRITE = 2;
+	EXECUTION = 3;
+}
+
 message HTTPCommand {
 	required HTTPMessageType messageType = 1;
-	optional bool test = 2;
-	optional bool write = 3;
+	required Action action = 2;
 	optional int32 URLLength = 4;
 	optional int32 inputTime = 5;
 	optional int32 toReadTime = 6;
@@ -76,10 +82,7 @@ message HTTPCommand {
 
 message FileCommand {
 	required FileMessageType messageType = 1;
-	optional bool test = 2;
-	optional bool read = 3;
-	optional bool write = 4;
-	optional bool execution = 5;
+	required Action action = 2;
 	optional string namePattern = 6;
 	optional int32 freeSize = 7;
 	optional int32 totalSize = 8;
@@ -122,9 +125,7 @@ enum PointerMovementMode {
 
 message FTPCommand {
 	required FTPMessageType messageType = 1;
-	optional bool test = 2;
-	optional bool read = 3;
-	optional bool write = 4;
+	required Action action = 2;
 	optional bool execution = 5;
 	optional string hostName = 6;
 	optional int32 port = 7;
@@ -137,7 +138,9 @@ message FTPCommand {
 	optional string username = 14;
 	optional string password = 15;
 	optional TypeOfConfigurableParameters type = 16;
-	optional ParameterValue value = 17;
+	optional DataConnectionMode dataConnectionMode = 29;
+	optional int32 resumingPoint = 30;
+	optional TransferType transferType = 17;
 	optional string valueString = 28;
 	optional string status = 18;
 	optional int32 length = 19;
@@ -151,6 +154,11 @@ message FTPCommand {
 	optional FTPError error = 27;
 }
 
+enum DataConnectionMode {
+	ACTIVE_MODE = 0;
+	PASSIVE_MODE = 1;
+}
+
 enum TypeOfConfigurableParameters {
 	MODE_OF_DATA_CONNECTION = 0;
 	TRANSFER_TYPE = 1;
@@ -158,9 +166,9 @@ enum TypeOfConfigurableParameters {
 	LOCAL_POSITION_OF_FILE_TRANSFER = 3;
 }
 
-enum ParameterValue {
-	ACTIVE_MODE_BINARY = 0;
-	PASSIVE_MODE_ASCII = 1;
+enum TransferType {
+	BINARY_TRANSFER_TYPE = 0;
+	ASCII_TRANSFER_TYPE = 1;
 }
 
 enum Return {
@@ -170,9 +178,7 @@ enum Return {
 
 message MMSCommand {
 	required MMSMessageType messageType = 1;
-	optional bool test = 2;
-	optional bool read = 3;
-	optional bool write = 4;
+	required Action action = 2;
 	optional string MMSCURL = 5;
 	optional ProtocolType protocolType = 6;
 	optional string gateway = 7;
@@ -204,7 +210,7 @@ message MMSCommand {
 	optional int32 downloadSize = 29;
 	optional OperateReceiveMMS operateReceiveMMS = 44;
 	optional int32 checksum = 30;
-	optional bool callHasHigherPriorityThanMMS = 45;
+	optional bool callPriorityHigher = 45;
 	optional int64 DURAttribute = 31;
 	optional bool SMSMessageHandling = 32;
 	optional bool enableUSC2 = 33;
@@ -310,10 +316,7 @@ enum TitleInputMode {
 
 message QuecCellCommand {
 	required QuecCellMessageType messageType = 1;
-	optional bool test = 2;
-	optional bool read = 3;
-	optional bool write = 4;
-	optional bool execution = 5;
+	required Action action = 2;
 	optional OperatorStatus status = 6;
 	optional string operatorInString = 7;
 	optional string operatorInShortString = 8;
@@ -409,10 +412,7 @@ enum OperatorStatus {
 
 message RecordingCommand {
 	required RecordingMessageType messageType = 1;
-	optional bool test = 2;
-	optional bool read = 3;
-	optional bool write = 13;
-	optional bool execution = 4;
+	required Action action = 2;
 	optional RecordingState recordingState = 5;
 	optional string fileName = 6;
 	optional FileFormat format = 7;
@@ -445,10 +445,7 @@ enum RecordingState {
 
 message SMTPCommand {
 	required SMTPMessageType messageType = 1;
-	optional bool test = 2;
-	optional bool read = 3;
-	optional bool write = 4;
-	optional bool execution = 5;
+	required Action action = 2;
 	optional string user = 6;
 	optional string password = 7;
 	optional string emailAddress = 8;
@@ -456,7 +453,7 @@ message SMTPCommand {
 	optional string serverAddress = 10;
 	optional int32 port = 11;
 	optional RecipientMode recipientMode = 12;
-	optional RecipientType recipinetType = 13;
+	optional RecipientType recipientType = 13;
 	optional int32 result = 15;
 	optional Charset charset = 22;
 	optional string title = 16;
@@ -490,10 +487,7 @@ enum RecipientMode {
 
 message STKCommand {
 	required STKMessageType messageType = 1;
-	optional bool test = 2;
-	optional bool read = 3;
-	optional bool write = 4;
-	optional bool execution = 5;
+	required Action action = 2;
 	optional bool turnOnSTK = 6;
 	optional string profile = 7;
 	optional string satCommand = 8;
@@ -508,17 +502,14 @@ enum STK {
 	TRIGER_MODEM_TO_SEND_STK_BUT_ICON_CANT_BE_DISPLAY = 4;
 	PROACTIVE_SESSION_TERMINATED_BY_USER = 16;
 	NO_RESPONSE_FROM_USER = 18;
-	ME_CURRENTLY_UNABLE_TO_PROCESS_THIS_COMMAND = 32;
+	UNABLE_TO_PROCESS_COMMAND = 32;
 	USER_REJECT_SETUP_CALL = 34;
 	COMMAND_DATA_DONT_UNDERSTOOD_BY_ME = 50;
 }
 
 message GeneralCommand {
 	required GeneralMesssageType messageType = 1;
-	optional bool test = 2;
-	optional bool read = 3;
-	optional bool write = 10;
-	optional bool execution = 4;
+	required Action action = 2;
 	optional TAToDefault default = 5 [default = SET_ALL_TA_TO_DEFAULT];
 	optional ProfileNumber profileNumber = 6 [default = PROFILE_NUMBER];
 	optional Functionality functionality = 7 [default = FULL_FUNCTIONALITY];
@@ -563,9 +554,9 @@ enum Functionality {
 enum ConnectResultCode {
 	CONNECT_RESULT_CODE_ONLY_RETURNED = 0;
 	CONNECT_TEXT_RESULT_CODE_ONLY_RETURNED = 1;
-	CONNECT_TEXT_RESULT_CODE_RETURNED_DIAL_TONE_ENABLED_BUSY_SIGNAL_DISABLED = 2;
-	CONNECT_TEXT_RESULT_CODE_RETURNED_DIAL_TONE_DISABLED_BUSY_SIGNAL_ENABLED = 3;
-	CONNECT_TEXT_RESULT_CODE_RETURNED_DIAL_TONE_AND_BUSY_SIGNAL_ENABLED = 4;
+	TONE_ENABLED_BUSY_SIGNAL_DISABLED = 2;
+	TONE_DISABLED_BUSY_SIGNAL_ENABLED = 3;
+	TONE_AND_BUSY_SIGNAL_ENABLED = 4;
 }
 
 enum InformationResponse {
@@ -592,10 +583,7 @@ enum ResetToProfileNumber {
 
 message SerialInterfaceControlCommand {
 	required SerialInterfaceControlMessageType messageType = 1;
-	optional bool test = 2;
-	optional bool read = 3;
-	optional bool write = 4;
-	optional bool execution = 5;
+	required Action action = 2;
 	optional DCDLineStatus dcdLineStatus = 6;
 	optional FramingFormat framingFormat = 7;
 	optional Parity parity = 8 [default = SPACE];
@@ -715,10 +703,7 @@ enum DCDLineStatus {
 
 message StatusControlCommand {
 	required StatusControlMessageType messageType = 1;
-	optional bool test = 2;
-	optional bool read = 3;
-	optional bool write = 4;
-	optional bool execution = 5;
+	required Action action = 2;
 	optional int32 locationID = 6;
 	optional string cause = 7;
 	optional Pas pas = 8;
@@ -775,7 +760,7 @@ enum TimeZoneChangeEventReporting {
 
 enum RTCTime {
 	DISABLE_AUTOMATIC_UPDATE_RTC_TIME_VIA_NITZ = 0;
-	UPDATE_NETWORK_SYNCHRONIZED_TIME_TO_RTC_AND_SAVE_TIME_ZONE_INOT_NVRAM = 1;
+	UPDATE_NETWORK_SYNCHRONIZED_TIME_TO_RTC_AND_SAVE_TIME_ZONE_INTO_NVRAM = 1;
 	UPDATE_GTM_TIME_WITH_TIME_ZONE_TO_RTC_SAVE_TIME_ZONE_TO_NVRAM_IGNORE_DAYLIGHT_SAVING_TIME = 2;
 	UPDATE_LOCALIZED_TIME_AND_TIME_ZONE_TO_RTC_AND_SAVE_TIME_ZONE_TO_NVRAM = 3;
 	SAVE_WITH_MODE_2 = 4;
@@ -815,10 +800,7 @@ enum Pas {
 
 message SIMRelatedCommand {
 	required SIMRelatedMessageType messageType = 1;
-	optional bool test = 2;
-	optional bool read = 3;
-	optional bool write = 4;
-	optional bool execution = 5;
+	required Action action = 2;
 	optional string fac = 31;
 	optional LockMode lockMode = 32 [default = QUERY_STATUS];
 	optional string password = 33;
@@ -888,10 +870,7 @@ enum LockMode {
 
 message NetworkServiceCommand {
 	required NetworkServiceMessageType messageType = 1;
-	optional bool test = 2;
-	optional bool read = 3;
-	optional bool writw = 4;
-	optional bool execution = 5;
+	required Action action = 2;
 	optional OperatorStatus operatorStatus = 6;
 	optional string operator = 33;
 	optional int32 operatorNumber = 7;
@@ -941,8 +920,8 @@ enum EngineeringModeDump {
 	ONLY_DISPLAY_SERVING_CELL_INFORMATION = 0;
 	DISPLAY_SERVING_CELL_INFORMATION_1_6_NEIGHBORING_CELLS_INFORMATION = 1;
 	DISPLAY_SERVING_CELL_INFORMATION_AND_LIST_OF_SERVING_CELL_CARRIER_LIST = 2;
-	DISPLAY_SERVING_CELL_INFORMATION_1_6_NEIGHBORING_CELLS_INFORMATION_AND_LIST_OF_SERVING_CELL_CARRIER_LIST = 3;
-	DISPLAY_SERVING_CELL_INFORMATION_1_6_NEIGHBORING_CELLS_INFORMATION_LIST_OF_SERVING_CELL_CARRIER_LIST_AND_BA_MEASURED_RESULT_LIST = 4;
+	LIST_OF_SERVING_CELL_CARRIER_LIST = 3;
+	LIST_OF_SERVING_CELL_CARRIER_LIST_AND_BA_MEASURED_RESULT_LIST = 4;
 }
 
 enum NetworkRegistrationStatus {
@@ -975,10 +954,7 @@ enum OperatorMode {
 
 message CallRelatedCommand {
 	required CallRelatedMessageType messageType = 1;
-	optional bool test = 2;
-	optional bool read = 3;
-	optional bool write = 4;
-	optional bool execution = 5;
+	required Action action = 2;
 	optional string number = 23;
 	optional string GSMModifier = 6; //mgsm
 	optional int32 interworkinWindowsSize = 7; //iws
@@ -1072,11 +1048,8 @@ enum AddressType {
 }
 
 message SMSCommand {
-	required SMSMessageType messsageType = 1;
-	optional bool test = 2;
-	optional bool read = 3;
-	optional bool write = 4;
-	optional bool execution = 5;
+	required SMSMessageType messageType = 1;
+	required Action action = 2;
 	optional MessageService messageService = 45 [default = GSM_03_40_AND_03_41];
 	optional bool mobileTerminatedMessageSupported = 6; //mt
 	optional bool mobileOrientedMessageSupported = 7; //mo
@@ -1196,10 +1169,7 @@ enum MessageService {
 
 message PhonebookCommand {
 	required PhonebookMessageType messageType = 1;
-	optional bool test = 2;
-	optional bool read = 3;
-	optional bool write = 4;
-	optional bool execution = 5;
+	required Action action = 2;
 	optional string storage = 18;
 	optional int32 nlength = 6;
 	optional int32 tlength = 7;
@@ -1224,10 +1194,7 @@ enum NumberType {
 
 message GPRSCommand {
 	required GPRSMessageType messageType = 1;
-	optional bool test = 2;
-	optional bool read = 3;
-	optional bool write = 4;
-	optional bool execution = 5;
+	required Action action = 2;
 	optional bool attached = 26;
 	optional int32 cid = 6;
 	optional string PDPType = 7;
@@ -1268,10 +1235,7 @@ enum EventReportingMode {
 
 message TCPIPCommand {
 	required TCPIPMessageType messageType = 1;
-	optional bool test = 2;
-	optional bool read = 3;
-	optional bool write = 4;
-	optional bool execution = 5;
+	required Action action = 2;
 	optional int32 index = 54;
 	optional string mode = 6;
 	optional ServerFormat serverFormat = 7;
@@ -1420,10 +1384,7 @@ enum ServerFormat {
 
 message SupplementaryServiceCommand {
 	required SupplementaryServiceMessageType messageType = 1;
-	optional bool test = 2;
-	optional bool read = 3;
-	optional bool write = 4;
-	optional bool execution = 5;
+	required Action action = 2;
 	optional Reads reads = 22;
 	optional ForwardingMode forwardingMode = 6;
 	optional string number = 7;
@@ -1523,10 +1484,7 @@ enum ForwardingMode {
 
 message AudioCommand {
 	required AudioMessageType messageType = 1;
-	optional bool test = 2;
-	optional bool read = 3;
-	optional bool write = 4;
-	optional bool execution = 5;
+	required Action action = 2;
 	optional SpeakerLoudness speakerLoudness = 33;
 	optional int32 internalDuration = 6;
 	optional int64 duration = 7;
@@ -1657,10 +1615,7 @@ enum SpeakerLoudness {
 
 message HardwareRelatedCommand {
 	required HardwareRelatedMessageType messageType = 1;
-	optional bool test = 2;
-	optional bool read = 3;
-	optional bool write = 4;
-	optional bool execution = 5;
+	required Action action = 2;
 	optional string time = 18;
 	optional bool setAlarm = 6;
 	optional Repeat repeat = 7;
@@ -1723,10 +1678,7 @@ enum Repeat {
 
 message OthersCommand {
 	required OthersMessageType messageType = 1;
-	optional bool test = 2;
-	optional bool read = 3;
-	optional bool write = 4;
-	optional bool execution = 5;
+	required Action action = 2;
 	optional bool echoModeOn = 6;
 	optional int32 commandLineTerminationCharacter = 7;
 	optional int32 responseFormattingCharacter = 12;
@@ -2105,7 +2057,7 @@ enum HTTPMessageType {
 	SEND_HTTP_GET_REQUEST = 1;
 	READ_HTTP_SERVER_RESPONSE = 2;
 	SEND_HTTP_POST_REQUEST = 3;
-	DOWNLODA_FILE_FROM_HTTP_SERVER = 4;
+	DOWNLOAD_FILE_FROM_HTTP_SERVER = 4;
 }
 
 enum Error {
