@@ -640,49 +640,49 @@ public final class ProtobufATCommand {
   public enum TypeOfConfigurableParameters
       implements com.google.protobuf.ProtocolMessageEnum {
     /**
-     * <code>MODE_OF_DATA_CONNECTION = 0;</code>
+     * <code>MODE_OF_DATA_CONNECTION = 1;</code>
      */
-    MODE_OF_DATA_CONNECTION(0, 0),
+    MODE_OF_DATA_CONNECTION(0, 1),
     /**
-     * <code>TRANSFER_TYPE = 1;</code>
+     * <code>TRANSFER_TYPE = 2;</code>
      */
-    TRANSFER_TYPE(1, 1),
+    TRANSFER_TYPE(1, 2),
     /**
-     * <code>RESUMING_POINT_TO_RESUME_FILE_TRANSFER = 2;</code>
+     * <code>RESUMING_POINT_TO_RESUME_FILE_TRANSFER = 3;</code>
      */
-    RESUMING_POINT_TO_RESUME_FILE_TRANSFER(2, 2),
+    RESUMING_POINT_TO_RESUME_FILE_TRANSFER(2, 3),
     /**
-     * <code>LOCAL_POSITION_OF_FILE_TRANSFER = 3;</code>
+     * <code>LOCAL_POSITION_OF_FILE_TRANSFER = 4;</code>
      */
-    LOCAL_POSITION_OF_FILE_TRANSFER(3, 3),
+    LOCAL_POSITION_OF_FILE_TRANSFER(3, 4),
     ;
 
     /**
-     * <code>MODE_OF_DATA_CONNECTION = 0;</code>
+     * <code>MODE_OF_DATA_CONNECTION = 1;</code>
      */
-    public static final int MODE_OF_DATA_CONNECTION_VALUE = 0;
+    public static final int MODE_OF_DATA_CONNECTION_VALUE = 1;
     /**
-     * <code>TRANSFER_TYPE = 1;</code>
+     * <code>TRANSFER_TYPE = 2;</code>
      */
-    public static final int TRANSFER_TYPE_VALUE = 1;
+    public static final int TRANSFER_TYPE_VALUE = 2;
     /**
-     * <code>RESUMING_POINT_TO_RESUME_FILE_TRANSFER = 2;</code>
+     * <code>RESUMING_POINT_TO_RESUME_FILE_TRANSFER = 3;</code>
      */
-    public static final int RESUMING_POINT_TO_RESUME_FILE_TRANSFER_VALUE = 2;
+    public static final int RESUMING_POINT_TO_RESUME_FILE_TRANSFER_VALUE = 3;
     /**
-     * <code>LOCAL_POSITION_OF_FILE_TRANSFER = 3;</code>
+     * <code>LOCAL_POSITION_OF_FILE_TRANSFER = 4;</code>
      */
-    public static final int LOCAL_POSITION_OF_FILE_TRANSFER_VALUE = 3;
+    public static final int LOCAL_POSITION_OF_FILE_TRANSFER_VALUE = 4;
 
 
     public final int getNumber() { return value; }
 
     public static TypeOfConfigurableParameters valueOf(int value) {
       switch (value) {
-        case 0: return MODE_OF_DATA_CONNECTION;
-        case 1: return TRANSFER_TYPE;
-        case 2: return RESUMING_POINT_TO_RESUME_FILE_TRANSFER;
-        case 3: return LOCAL_POSITION_OF_FILE_TRANSFER;
+        case 1: return MODE_OF_DATA_CONNECTION;
+        case 2: return TRANSFER_TYPE;
+        case 3: return RESUMING_POINT_TO_RESUME_FILE_TRANSFER;
+        case 4: return LOCAL_POSITION_OF_FILE_TRANSFER;
         default: return null;
       }
     }
@@ -29264,15 +29264,6 @@ public final class ProtobufATCommand {
     com.rtrk.atcommand.protobuf.ProtobufATCommand.Action getAction();
 
     /**
-     * <code>optional bool execution = 5;</code>
-     */
-    boolean hasExecution();
-    /**
-     * <code>optional bool execution = 5;</code>
-     */
-    boolean getExecution();
-
-    /**
      * <code>optional string hostName = 6;</code>
      */
     boolean hasHostName();
@@ -29406,15 +29397,6 @@ public final class ProtobufATCommand {
     com.rtrk.atcommand.protobuf.ProtobufATCommand.DataConnectionMode getDataConnectionMode();
 
     /**
-     * <code>optional int32 resumingPoint = 30;</code>
-     */
-    boolean hasResumingPoint();
-    /**
-     * <code>optional int32 resumingPoint = 30;</code>
-     */
-    int getResumingPoint();
-
-    /**
      * <code>optional .com.rtrk.atcommand.TransferType transferType = 17;</code>
      */
     boolean hasTransferType();
@@ -29424,18 +29406,27 @@ public final class ProtobufATCommand {
     com.rtrk.atcommand.protobuf.ProtobufATCommand.TransferType getTransferType();
 
     /**
-     * <code>optional string valueString = 28;</code>
+     * <code>optional int32 resumingPoint = 30;</code>
      */
-    boolean hasValueString();
+    boolean hasResumingPoint();
     /**
-     * <code>optional string valueString = 28;</code>
+     * <code>optional int32 resumingPoint = 30;</code>
      */
-    java.lang.String getValueString();
+    int getResumingPoint();
+
     /**
-     * <code>optional string valueString = 28;</code>
+     * <code>optional string localPosition = 28;</code>
+     */
+    boolean hasLocalPosition();
+    /**
+     * <code>optional string localPosition = 28;</code>
+     */
+    java.lang.String getLocalPosition();
+    /**
+     * <code>optional string localPosition = 28;</code>
      */
     com.google.protobuf.ByteString
-        getValueStringBytes();
+        getLocalPositionBytes();
 
     /**
      * <code>optional string status = 18;</code>
@@ -29631,63 +29622,58 @@ public final class ProtobufATCommand {
               }
               break;
             }
-            case 40: {
-              bitField0_ |= 0x00000004;
-              execution_ = input.readBool();
-              break;
-            }
             case 50: {
               com.google.protobuf.ByteString bs = input.readBytes();
-              bitField0_ |= 0x00000008;
+              bitField0_ |= 0x00000004;
               hostName_ = bs;
               break;
             }
             case 56: {
-              bitField0_ |= 0x00000010;
+              bitField0_ |= 0x00000008;
               port_ = input.readInt32();
               break;
             }
             case 66: {
               com.google.protobuf.ByteString bs = input.readBytes();
-              bitField0_ |= 0x00000020;
+              bitField0_ |= 0x00000010;
               fileName_ = bs;
               break;
             }
             case 72: {
-              bitField0_ |= 0x00000040;
+              bitField0_ |= 0x00000020;
               fileSize_ = input.readInt32();
               break;
             }
             case 80: {
-              bitField0_ |= 0x00000080;
+              bitField0_ |= 0x00000040;
               time_ = input.readInt32();
               break;
             }
             case 88: {
-              bitField0_ |= 0x00000100;
+              bitField0_ |= 0x00000080;
               uploadSize_ = input.readInt32();
               break;
             }
             case 96: {
-              bitField0_ |= 0x00000200;
+              bitField0_ |= 0x00000100;
               downloadSize_ = input.readInt32();
               break;
             }
             case 106: {
               com.google.protobuf.ByteString bs = input.readBytes();
-              bitField0_ |= 0x00000400;
+              bitField0_ |= 0x00000200;
               pathName_ = bs;
               break;
             }
             case 114: {
               com.google.protobuf.ByteString bs = input.readBytes();
-              bitField0_ |= 0x00000800;
+              bitField0_ |= 0x00000400;
               username_ = bs;
               break;
             }
             case 122: {
               com.google.protobuf.ByteString bs = input.readBytes();
-              bitField0_ |= 0x00001000;
+              bitField0_ |= 0x00000800;
               password_ = bs;
               break;
             }
@@ -29697,7 +29683,7 @@ public final class ProtobufATCommand {
               if (value == null) {
                 unknownFields.mergeVarintField(16, rawValue);
               } else {
-                bitField0_ |= 0x00002000;
+                bitField0_ |= 0x00001000;
                 type_ = value;
               }
               break;
@@ -29708,37 +29694,37 @@ public final class ProtobufATCommand {
               if (value == null) {
                 unknownFields.mergeVarintField(17, rawValue);
               } else {
-                bitField0_ |= 0x00010000;
+                bitField0_ |= 0x00004000;
                 transferType_ = value;
               }
               break;
             }
             case 146: {
               com.google.protobuf.ByteString bs = input.readBytes();
-              bitField0_ |= 0x00040000;
+              bitField0_ |= 0x00020000;
               status_ = bs;
               break;
             }
             case 152: {
-              bitField0_ |= 0x00080000;
+              bitField0_ |= 0x00040000;
               length_ = input.readInt32();
               break;
             }
             case 162: {
               com.google.protobuf.ByteString bs = input.readBytes();
-              bitField0_ |= 0x00100000;
+              bitField0_ |= 0x00080000;
               sourceName_ = bs;
               break;
             }
             case 170: {
               com.google.protobuf.ByteString bs = input.readBytes();
-              bitField0_ |= 0x00200000;
+              bitField0_ |= 0x00100000;
               targetName_ = bs;
               break;
             }
             case 178: {
               com.google.protobuf.ByteString bs = input.readBytes();
-              bitField0_ |= 0x00400000;
+              bitField0_ |= 0x00200000;
               name_ = bs;
               break;
             }
@@ -29748,25 +29734,25 @@ public final class ProtobufATCommand {
               if (value == null) {
                 unknownFields.mergeVarintField(23, rawValue);
               } else {
-                bitField0_ |= 0x00800000;
+                bitField0_ |= 0x00400000;
                 return_ = value;
               }
               break;
             }
             case 194: {
               com.google.protobuf.ByteString bs = input.readBytes();
-              bitField0_ |= 0x01000000;
+              bitField0_ |= 0x00800000;
               directoryName_ = bs;
               break;
             }
             case 200: {
-              bitField0_ |= 0x02000000;
+              bitField0_ |= 0x01000000;
               isResponse_ = input.readBool();
               break;
             }
             case 210: {
               com.google.protobuf.ByteString bs = input.readBytes();
-              bitField0_ |= 0x04000000;
+              bitField0_ |= 0x02000000;
               description_ = bs;
               break;
             }
@@ -29776,15 +29762,15 @@ public final class ProtobufATCommand {
               if (value == null) {
                 unknownFields.mergeVarintField(27, rawValue);
               } else {
-                bitField0_ |= 0x08000000;
+                bitField0_ |= 0x04000000;
                 error_ = value;
               }
               break;
             }
             case 226: {
               com.google.protobuf.ByteString bs = input.readBytes();
-              bitField0_ |= 0x00020000;
-              valueString_ = bs;
+              bitField0_ |= 0x00010000;
+              localPosition_ = bs;
               break;
             }
             case 232: {
@@ -29793,7 +29779,7 @@ public final class ProtobufATCommand {
               if (value == null) {
                 unknownFields.mergeVarintField(29, rawValue);
               } else {
-                bitField0_ |= 0x00004000;
+                bitField0_ |= 0x00002000;
                 dataConnectionMode_ = value;
               }
               break;
@@ -29873,28 +29859,13 @@ public final class ProtobufATCommand {
       return action_;
     }
 
-    public static final int EXECUTION_FIELD_NUMBER = 5;
-    private boolean execution_;
-    /**
-     * <code>optional bool execution = 5;</code>
-     */
-    public boolean hasExecution() {
-      return ((bitField0_ & 0x00000004) == 0x00000004);
-    }
-    /**
-     * <code>optional bool execution = 5;</code>
-     */
-    public boolean getExecution() {
-      return execution_;
-    }
-
     public static final int HOSTNAME_FIELD_NUMBER = 6;
     private java.lang.Object hostName_;
     /**
      * <code>optional string hostName = 6;</code>
      */
     public boolean hasHostName() {
-      return ((bitField0_ & 0x00000008) == 0x00000008);
+      return ((bitField0_ & 0x00000004) == 0x00000004);
     }
     /**
      * <code>optional string hostName = 6;</code>
@@ -29936,7 +29907,7 @@ public final class ProtobufATCommand {
      * <code>optional int32 port = 7;</code>
      */
     public boolean hasPort() {
-      return ((bitField0_ & 0x00000010) == 0x00000010);
+      return ((bitField0_ & 0x00000008) == 0x00000008);
     }
     /**
      * <code>optional int32 port = 7;</code>
@@ -29951,7 +29922,7 @@ public final class ProtobufATCommand {
      * <code>optional string fileName = 8;</code>
      */
     public boolean hasFileName() {
-      return ((bitField0_ & 0x00000020) == 0x00000020);
+      return ((bitField0_ & 0x00000010) == 0x00000010);
     }
     /**
      * <code>optional string fileName = 8;</code>
@@ -29993,7 +29964,7 @@ public final class ProtobufATCommand {
      * <code>optional int32 fileSize = 9;</code>
      */
     public boolean hasFileSize() {
-      return ((bitField0_ & 0x00000040) == 0x00000040);
+      return ((bitField0_ & 0x00000020) == 0x00000020);
     }
     /**
      * <code>optional int32 fileSize = 9;</code>
@@ -30008,7 +29979,7 @@ public final class ProtobufATCommand {
      * <code>optional int32 time = 10;</code>
      */
     public boolean hasTime() {
-      return ((bitField0_ & 0x00000080) == 0x00000080);
+      return ((bitField0_ & 0x00000040) == 0x00000040);
     }
     /**
      * <code>optional int32 time = 10;</code>
@@ -30023,7 +29994,7 @@ public final class ProtobufATCommand {
      * <code>optional int32 uploadSize = 11;</code>
      */
     public boolean hasUploadSize() {
-      return ((bitField0_ & 0x00000100) == 0x00000100);
+      return ((bitField0_ & 0x00000080) == 0x00000080);
     }
     /**
      * <code>optional int32 uploadSize = 11;</code>
@@ -30038,7 +30009,7 @@ public final class ProtobufATCommand {
      * <code>optional int32 downloadSize = 12;</code>
      */
     public boolean hasDownloadSize() {
-      return ((bitField0_ & 0x00000200) == 0x00000200);
+      return ((bitField0_ & 0x00000100) == 0x00000100);
     }
     /**
      * <code>optional int32 downloadSize = 12;</code>
@@ -30053,7 +30024,7 @@ public final class ProtobufATCommand {
      * <code>optional string pathName = 13;</code>
      */
     public boolean hasPathName() {
-      return ((bitField0_ & 0x00000400) == 0x00000400);
+      return ((bitField0_ & 0x00000200) == 0x00000200);
     }
     /**
      * <code>optional string pathName = 13;</code>
@@ -30095,7 +30066,7 @@ public final class ProtobufATCommand {
      * <code>optional string username = 14;</code>
      */
     public boolean hasUsername() {
-      return ((bitField0_ & 0x00000800) == 0x00000800);
+      return ((bitField0_ & 0x00000400) == 0x00000400);
     }
     /**
      * <code>optional string username = 14;</code>
@@ -30137,7 +30108,7 @@ public final class ProtobufATCommand {
      * <code>optional string password = 15;</code>
      */
     public boolean hasPassword() {
-      return ((bitField0_ & 0x00001000) == 0x00001000);
+      return ((bitField0_ & 0x00000800) == 0x00000800);
     }
     /**
      * <code>optional string password = 15;</code>
@@ -30179,7 +30150,7 @@ public final class ProtobufATCommand {
      * <code>optional .com.rtrk.atcommand.TypeOfConfigurableParameters type = 16;</code>
      */
     public boolean hasType() {
-      return ((bitField0_ & 0x00002000) == 0x00002000);
+      return ((bitField0_ & 0x00001000) == 0x00001000);
     }
     /**
      * <code>optional .com.rtrk.atcommand.TypeOfConfigurableParameters type = 16;</code>
@@ -30194,13 +30165,28 @@ public final class ProtobufATCommand {
      * <code>optional .com.rtrk.atcommand.DataConnectionMode dataConnectionMode = 29;</code>
      */
     public boolean hasDataConnectionMode() {
-      return ((bitField0_ & 0x00004000) == 0x00004000);
+      return ((bitField0_ & 0x00002000) == 0x00002000);
     }
     /**
      * <code>optional .com.rtrk.atcommand.DataConnectionMode dataConnectionMode = 29;</code>
      */
     public com.rtrk.atcommand.protobuf.ProtobufATCommand.DataConnectionMode getDataConnectionMode() {
       return dataConnectionMode_;
+    }
+
+    public static final int TRANSFERTYPE_FIELD_NUMBER = 17;
+    private com.rtrk.atcommand.protobuf.ProtobufATCommand.TransferType transferType_;
+    /**
+     * <code>optional .com.rtrk.atcommand.TransferType transferType = 17;</code>
+     */
+    public boolean hasTransferType() {
+      return ((bitField0_ & 0x00004000) == 0x00004000);
+    }
+    /**
+     * <code>optional .com.rtrk.atcommand.TransferType transferType = 17;</code>
+     */
+    public com.rtrk.atcommand.protobuf.ProtobufATCommand.TransferType getTransferType() {
+      return transferType_;
     }
 
     public static final int RESUMINGPOINT_FIELD_NUMBER = 30;
@@ -30218,34 +30204,19 @@ public final class ProtobufATCommand {
       return resumingPoint_;
     }
 
-    public static final int TRANSFERTYPE_FIELD_NUMBER = 17;
-    private com.rtrk.atcommand.protobuf.ProtobufATCommand.TransferType transferType_;
+    public static final int LOCALPOSITION_FIELD_NUMBER = 28;
+    private java.lang.Object localPosition_;
     /**
-     * <code>optional .com.rtrk.atcommand.TransferType transferType = 17;</code>
+     * <code>optional string localPosition = 28;</code>
      */
-    public boolean hasTransferType() {
+    public boolean hasLocalPosition() {
       return ((bitField0_ & 0x00010000) == 0x00010000);
     }
     /**
-     * <code>optional .com.rtrk.atcommand.TransferType transferType = 17;</code>
+     * <code>optional string localPosition = 28;</code>
      */
-    public com.rtrk.atcommand.protobuf.ProtobufATCommand.TransferType getTransferType() {
-      return transferType_;
-    }
-
-    public static final int VALUESTRING_FIELD_NUMBER = 28;
-    private java.lang.Object valueString_;
-    /**
-     * <code>optional string valueString = 28;</code>
-     */
-    public boolean hasValueString() {
-      return ((bitField0_ & 0x00020000) == 0x00020000);
-    }
-    /**
-     * <code>optional string valueString = 28;</code>
-     */
-    public java.lang.String getValueString() {
-      java.lang.Object ref = valueString_;
+    public java.lang.String getLocalPosition() {
+      java.lang.Object ref = localPosition_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
@@ -30253,22 +30224,22 @@ public final class ProtobufATCommand {
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         if (bs.isValidUtf8()) {
-          valueString_ = s;
+          localPosition_ = s;
         }
         return s;
       }
     }
     /**
-     * <code>optional string valueString = 28;</code>
+     * <code>optional string localPosition = 28;</code>
      */
     public com.google.protobuf.ByteString
-        getValueStringBytes() {
-      java.lang.Object ref = valueString_;
+        getLocalPositionBytes() {
+      java.lang.Object ref = localPosition_;
       if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        valueString_ = b;
+        localPosition_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -30281,7 +30252,7 @@ public final class ProtobufATCommand {
      * <code>optional string status = 18;</code>
      */
     public boolean hasStatus() {
-      return ((bitField0_ & 0x00040000) == 0x00040000);
+      return ((bitField0_ & 0x00020000) == 0x00020000);
     }
     /**
      * <code>optional string status = 18;</code>
@@ -30323,7 +30294,7 @@ public final class ProtobufATCommand {
      * <code>optional int32 length = 19;</code>
      */
     public boolean hasLength() {
-      return ((bitField0_ & 0x00080000) == 0x00080000);
+      return ((bitField0_ & 0x00040000) == 0x00040000);
     }
     /**
      * <code>optional int32 length = 19;</code>
@@ -30338,7 +30309,7 @@ public final class ProtobufATCommand {
      * <code>optional string sourceName = 20;</code>
      */
     public boolean hasSourceName() {
-      return ((bitField0_ & 0x00100000) == 0x00100000);
+      return ((bitField0_ & 0x00080000) == 0x00080000);
     }
     /**
      * <code>optional string sourceName = 20;</code>
@@ -30380,7 +30351,7 @@ public final class ProtobufATCommand {
      * <code>optional string targetName = 21;</code>
      */
     public boolean hasTargetName() {
-      return ((bitField0_ & 0x00200000) == 0x00200000);
+      return ((bitField0_ & 0x00100000) == 0x00100000);
     }
     /**
      * <code>optional string targetName = 21;</code>
@@ -30422,7 +30393,7 @@ public final class ProtobufATCommand {
      * <code>optional string name = 22;</code>
      */
     public boolean hasName() {
-      return ((bitField0_ & 0x00400000) == 0x00400000);
+      return ((bitField0_ & 0x00200000) == 0x00200000);
     }
     /**
      * <code>optional string name = 22;</code>
@@ -30464,7 +30435,7 @@ public final class ProtobufATCommand {
      * <code>optional .com.rtrk.atcommand.Return return = 23;</code>
      */
     public boolean hasReturn() {
-      return ((bitField0_ & 0x00800000) == 0x00800000);
+      return ((bitField0_ & 0x00400000) == 0x00400000);
     }
     /**
      * <code>optional .com.rtrk.atcommand.Return return = 23;</code>
@@ -30479,7 +30450,7 @@ public final class ProtobufATCommand {
      * <code>optional string directoryName = 24;</code>
      */
     public boolean hasDirectoryName() {
-      return ((bitField0_ & 0x01000000) == 0x01000000);
+      return ((bitField0_ & 0x00800000) == 0x00800000);
     }
     /**
      * <code>optional string directoryName = 24;</code>
@@ -30521,7 +30492,7 @@ public final class ProtobufATCommand {
      * <code>optional bool isResponse = 25;</code>
      */
     public boolean hasIsResponse() {
-      return ((bitField0_ & 0x02000000) == 0x02000000);
+      return ((bitField0_ & 0x01000000) == 0x01000000);
     }
     /**
      * <code>optional bool isResponse = 25;</code>
@@ -30536,7 +30507,7 @@ public final class ProtobufATCommand {
      * <code>optional string description = 26;</code>
      */
     public boolean hasDescription() {
-      return ((bitField0_ & 0x04000000) == 0x04000000);
+      return ((bitField0_ & 0x02000000) == 0x02000000);
     }
     /**
      * <code>optional string description = 26;</code>
@@ -30578,7 +30549,7 @@ public final class ProtobufATCommand {
      * <code>optional .com.rtrk.atcommand.FTPError error = 27;</code>
      */
     public boolean hasError() {
-      return ((bitField0_ & 0x08000000) == 0x08000000);
+      return ((bitField0_ & 0x04000000) == 0x04000000);
     }
     /**
      * <code>optional .com.rtrk.atcommand.FTPError error = 27;</code>
@@ -30590,7 +30561,6 @@ public final class ProtobufATCommand {
     private void initFields() {
       messageType_ = com.rtrk.atcommand.protobuf.ProtobufATCommand.FTPMessageType.OPEN_AN_FTP_SERVICE_TO_THE_GIVEN_FTP_SERVER;
       action_ = com.rtrk.atcommand.protobuf.ProtobufATCommand.Action.TEST;
-      execution_ = false;
       hostName_ = "";
       port_ = 0;
       fileName_ = "";
@@ -30603,9 +30573,9 @@ public final class ProtobufATCommand {
       password_ = "";
       type_ = com.rtrk.atcommand.protobuf.ProtobufATCommand.TypeOfConfigurableParameters.MODE_OF_DATA_CONNECTION;
       dataConnectionMode_ = com.rtrk.atcommand.protobuf.ProtobufATCommand.DataConnectionMode.ACTIVE_MODE;
-      resumingPoint_ = 0;
       transferType_ = com.rtrk.atcommand.protobuf.ProtobufATCommand.TransferType.BINARY_TRANSFER_TYPE;
-      valueString_ = "";
+      resumingPoint_ = 0;
+      localPosition_ = "";
       status_ = "";
       length_ = 0;
       sourceName_ = "";
@@ -30645,78 +30615,75 @@ public final class ProtobufATCommand {
         output.writeEnum(2, action_.getNumber());
       }
       if (((bitField0_ & 0x00000004) == 0x00000004)) {
-        output.writeBool(5, execution_);
-      }
-      if (((bitField0_ & 0x00000008) == 0x00000008)) {
         output.writeBytes(6, getHostNameBytes());
       }
-      if (((bitField0_ & 0x00000010) == 0x00000010)) {
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
         output.writeInt32(7, port_);
       }
-      if (((bitField0_ & 0x00000020) == 0x00000020)) {
+      if (((bitField0_ & 0x00000010) == 0x00000010)) {
         output.writeBytes(8, getFileNameBytes());
       }
-      if (((bitField0_ & 0x00000040) == 0x00000040)) {
+      if (((bitField0_ & 0x00000020) == 0x00000020)) {
         output.writeInt32(9, fileSize_);
       }
-      if (((bitField0_ & 0x00000080) == 0x00000080)) {
+      if (((bitField0_ & 0x00000040) == 0x00000040)) {
         output.writeInt32(10, time_);
       }
-      if (((bitField0_ & 0x00000100) == 0x00000100)) {
+      if (((bitField0_ & 0x00000080) == 0x00000080)) {
         output.writeInt32(11, uploadSize_);
       }
-      if (((bitField0_ & 0x00000200) == 0x00000200)) {
+      if (((bitField0_ & 0x00000100) == 0x00000100)) {
         output.writeInt32(12, downloadSize_);
       }
-      if (((bitField0_ & 0x00000400) == 0x00000400)) {
+      if (((bitField0_ & 0x00000200) == 0x00000200)) {
         output.writeBytes(13, getPathNameBytes());
       }
-      if (((bitField0_ & 0x00000800) == 0x00000800)) {
+      if (((bitField0_ & 0x00000400) == 0x00000400)) {
         output.writeBytes(14, getUsernameBytes());
       }
-      if (((bitField0_ & 0x00001000) == 0x00001000)) {
+      if (((bitField0_ & 0x00000800) == 0x00000800)) {
         output.writeBytes(15, getPasswordBytes());
       }
-      if (((bitField0_ & 0x00002000) == 0x00002000)) {
+      if (((bitField0_ & 0x00001000) == 0x00001000)) {
         output.writeEnum(16, type_.getNumber());
       }
-      if (((bitField0_ & 0x00010000) == 0x00010000)) {
+      if (((bitField0_ & 0x00004000) == 0x00004000)) {
         output.writeEnum(17, transferType_.getNumber());
       }
-      if (((bitField0_ & 0x00040000) == 0x00040000)) {
+      if (((bitField0_ & 0x00020000) == 0x00020000)) {
         output.writeBytes(18, getStatusBytes());
       }
-      if (((bitField0_ & 0x00080000) == 0x00080000)) {
+      if (((bitField0_ & 0x00040000) == 0x00040000)) {
         output.writeInt32(19, length_);
       }
-      if (((bitField0_ & 0x00100000) == 0x00100000)) {
+      if (((bitField0_ & 0x00080000) == 0x00080000)) {
         output.writeBytes(20, getSourceNameBytes());
       }
-      if (((bitField0_ & 0x00200000) == 0x00200000)) {
+      if (((bitField0_ & 0x00100000) == 0x00100000)) {
         output.writeBytes(21, getTargetNameBytes());
       }
-      if (((bitField0_ & 0x00400000) == 0x00400000)) {
+      if (((bitField0_ & 0x00200000) == 0x00200000)) {
         output.writeBytes(22, getNameBytes());
       }
-      if (((bitField0_ & 0x00800000) == 0x00800000)) {
+      if (((bitField0_ & 0x00400000) == 0x00400000)) {
         output.writeEnum(23, return_.getNumber());
       }
-      if (((bitField0_ & 0x01000000) == 0x01000000)) {
+      if (((bitField0_ & 0x00800000) == 0x00800000)) {
         output.writeBytes(24, getDirectoryNameBytes());
       }
-      if (((bitField0_ & 0x02000000) == 0x02000000)) {
+      if (((bitField0_ & 0x01000000) == 0x01000000)) {
         output.writeBool(25, isResponse_);
       }
-      if (((bitField0_ & 0x04000000) == 0x04000000)) {
+      if (((bitField0_ & 0x02000000) == 0x02000000)) {
         output.writeBytes(26, getDescriptionBytes());
       }
-      if (((bitField0_ & 0x08000000) == 0x08000000)) {
+      if (((bitField0_ & 0x04000000) == 0x04000000)) {
         output.writeEnum(27, error_.getNumber());
       }
-      if (((bitField0_ & 0x00020000) == 0x00020000)) {
-        output.writeBytes(28, getValueStringBytes());
+      if (((bitField0_ & 0x00010000) == 0x00010000)) {
+        output.writeBytes(28, getLocalPositionBytes());
       }
-      if (((bitField0_ & 0x00004000) == 0x00004000)) {
+      if (((bitField0_ & 0x00002000) == 0x00002000)) {
         output.writeEnum(29, dataConnectionMode_.getNumber());
       }
       if (((bitField0_ & 0x00008000) == 0x00008000)) {
@@ -30741,101 +30708,97 @@ public final class ProtobufATCommand {
       }
       if (((bitField0_ & 0x00000004) == 0x00000004)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(5, execution_);
+          .computeBytesSize(6, getHostNameBytes());
       }
       if (((bitField0_ & 0x00000008) == 0x00000008)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(6, getHostNameBytes());
+          .computeInt32Size(7, port_);
       }
       if (((bitField0_ & 0x00000010) == 0x00000010)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(7, port_);
+          .computeBytesSize(8, getFileNameBytes());
       }
       if (((bitField0_ & 0x00000020) == 0x00000020)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(8, getFileNameBytes());
+          .computeInt32Size(9, fileSize_);
       }
       if (((bitField0_ & 0x00000040) == 0x00000040)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(9, fileSize_);
+          .computeInt32Size(10, time_);
       }
       if (((bitField0_ & 0x00000080) == 0x00000080)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(10, time_);
+          .computeInt32Size(11, uploadSize_);
       }
       if (((bitField0_ & 0x00000100) == 0x00000100)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(11, uploadSize_);
+          .computeInt32Size(12, downloadSize_);
       }
       if (((bitField0_ & 0x00000200) == 0x00000200)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(12, downloadSize_);
+          .computeBytesSize(13, getPathNameBytes());
       }
       if (((bitField0_ & 0x00000400) == 0x00000400)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(13, getPathNameBytes());
+          .computeBytesSize(14, getUsernameBytes());
       }
       if (((bitField0_ & 0x00000800) == 0x00000800)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(14, getUsernameBytes());
+          .computeBytesSize(15, getPasswordBytes());
       }
       if (((bitField0_ & 0x00001000) == 0x00001000)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(15, getPasswordBytes());
-      }
-      if (((bitField0_ & 0x00002000) == 0x00002000)) {
-        size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(16, type_.getNumber());
       }
-      if (((bitField0_ & 0x00010000) == 0x00010000)) {
+      if (((bitField0_ & 0x00004000) == 0x00004000)) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(17, transferType_.getNumber());
       }
-      if (((bitField0_ & 0x00040000) == 0x00040000)) {
+      if (((bitField0_ & 0x00020000) == 0x00020000)) {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(18, getStatusBytes());
       }
-      if (((bitField0_ & 0x00080000) == 0x00080000)) {
+      if (((bitField0_ & 0x00040000) == 0x00040000)) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(19, length_);
       }
-      if (((bitField0_ & 0x00100000) == 0x00100000)) {
+      if (((bitField0_ & 0x00080000) == 0x00080000)) {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(20, getSourceNameBytes());
       }
-      if (((bitField0_ & 0x00200000) == 0x00200000)) {
+      if (((bitField0_ & 0x00100000) == 0x00100000)) {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(21, getTargetNameBytes());
       }
-      if (((bitField0_ & 0x00400000) == 0x00400000)) {
+      if (((bitField0_ & 0x00200000) == 0x00200000)) {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(22, getNameBytes());
       }
-      if (((bitField0_ & 0x00800000) == 0x00800000)) {
+      if (((bitField0_ & 0x00400000) == 0x00400000)) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(23, return_.getNumber());
       }
-      if (((bitField0_ & 0x01000000) == 0x01000000)) {
+      if (((bitField0_ & 0x00800000) == 0x00800000)) {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(24, getDirectoryNameBytes());
       }
-      if (((bitField0_ & 0x02000000) == 0x02000000)) {
+      if (((bitField0_ & 0x01000000) == 0x01000000)) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(25, isResponse_);
       }
-      if (((bitField0_ & 0x04000000) == 0x04000000)) {
+      if (((bitField0_ & 0x02000000) == 0x02000000)) {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(26, getDescriptionBytes());
       }
-      if (((bitField0_ & 0x08000000) == 0x08000000)) {
+      if (((bitField0_ & 0x04000000) == 0x04000000)) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(27, error_.getNumber());
       }
-      if (((bitField0_ & 0x00020000) == 0x00020000)) {
+      if (((bitField0_ & 0x00010000) == 0x00010000)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(28, getValueStringBytes());
+          .computeBytesSize(28, getLocalPositionBytes());
       }
-      if (((bitField0_ & 0x00004000) == 0x00004000)) {
+      if (((bitField0_ & 0x00002000) == 0x00002000)) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(29, dataConnectionMode_.getNumber());
       }
@@ -30964,58 +30927,56 @@ public final class ProtobufATCommand {
         bitField0_ = (bitField0_ & ~0x00000001);
         action_ = com.rtrk.atcommand.protobuf.ProtobufATCommand.Action.TEST;
         bitField0_ = (bitField0_ & ~0x00000002);
-        execution_ = false;
-        bitField0_ = (bitField0_ & ~0x00000004);
         hostName_ = "";
-        bitField0_ = (bitField0_ & ~0x00000008);
+        bitField0_ = (bitField0_ & ~0x00000004);
         port_ = 0;
-        bitField0_ = (bitField0_ & ~0x00000010);
+        bitField0_ = (bitField0_ & ~0x00000008);
         fileName_ = "";
-        bitField0_ = (bitField0_ & ~0x00000020);
+        bitField0_ = (bitField0_ & ~0x00000010);
         fileSize_ = 0;
-        bitField0_ = (bitField0_ & ~0x00000040);
+        bitField0_ = (bitField0_ & ~0x00000020);
         time_ = 0;
-        bitField0_ = (bitField0_ & ~0x00000080);
+        bitField0_ = (bitField0_ & ~0x00000040);
         uploadSize_ = 0;
-        bitField0_ = (bitField0_ & ~0x00000100);
+        bitField0_ = (bitField0_ & ~0x00000080);
         downloadSize_ = 0;
-        bitField0_ = (bitField0_ & ~0x00000200);
+        bitField0_ = (bitField0_ & ~0x00000100);
         pathName_ = "";
-        bitField0_ = (bitField0_ & ~0x00000400);
+        bitField0_ = (bitField0_ & ~0x00000200);
         username_ = "";
-        bitField0_ = (bitField0_ & ~0x00000800);
+        bitField0_ = (bitField0_ & ~0x00000400);
         password_ = "";
-        bitField0_ = (bitField0_ & ~0x00001000);
+        bitField0_ = (bitField0_ & ~0x00000800);
         type_ = com.rtrk.atcommand.protobuf.ProtobufATCommand.TypeOfConfigurableParameters.MODE_OF_DATA_CONNECTION;
-        bitField0_ = (bitField0_ & ~0x00002000);
+        bitField0_ = (bitField0_ & ~0x00001000);
         dataConnectionMode_ = com.rtrk.atcommand.protobuf.ProtobufATCommand.DataConnectionMode.ACTIVE_MODE;
+        bitField0_ = (bitField0_ & ~0x00002000);
+        transferType_ = com.rtrk.atcommand.protobuf.ProtobufATCommand.TransferType.BINARY_TRANSFER_TYPE;
         bitField0_ = (bitField0_ & ~0x00004000);
         resumingPoint_ = 0;
         bitField0_ = (bitField0_ & ~0x00008000);
-        transferType_ = com.rtrk.atcommand.protobuf.ProtobufATCommand.TransferType.BINARY_TRANSFER_TYPE;
+        localPosition_ = "";
         bitField0_ = (bitField0_ & ~0x00010000);
-        valueString_ = "";
-        bitField0_ = (bitField0_ & ~0x00020000);
         status_ = "";
-        bitField0_ = (bitField0_ & ~0x00040000);
+        bitField0_ = (bitField0_ & ~0x00020000);
         length_ = 0;
-        bitField0_ = (bitField0_ & ~0x00080000);
+        bitField0_ = (bitField0_ & ~0x00040000);
         sourceName_ = "";
-        bitField0_ = (bitField0_ & ~0x00100000);
+        bitField0_ = (bitField0_ & ~0x00080000);
         targetName_ = "";
-        bitField0_ = (bitField0_ & ~0x00200000);
+        bitField0_ = (bitField0_ & ~0x00100000);
         name_ = "";
-        bitField0_ = (bitField0_ & ~0x00400000);
+        bitField0_ = (bitField0_ & ~0x00200000);
         return_ = com.rtrk.atcommand.protobuf.ProtobufATCommand.Return.RETURN_NO_INFORMATIONS_TRANSFERED_FROM_FTP;
-        bitField0_ = (bitField0_ & ~0x00800000);
+        bitField0_ = (bitField0_ & ~0x00400000);
         directoryName_ = "";
-        bitField0_ = (bitField0_ & ~0x01000000);
+        bitField0_ = (bitField0_ & ~0x00800000);
         isResponse_ = false;
-        bitField0_ = (bitField0_ & ~0x02000000);
+        bitField0_ = (bitField0_ & ~0x01000000);
         description_ = "";
-        bitField0_ = (bitField0_ & ~0x04000000);
+        bitField0_ = (bitField0_ & ~0x02000000);
         error_ = com.rtrk.atcommand.protobuf.ProtobufATCommand.FTPError.FTP_OK;
-        bitField0_ = (bitField0_ & ~0x08000000);
+        bitField0_ = (bitField0_ & ~0x04000000);
         return this;
       }
 
@@ -31055,55 +31016,55 @@ public final class ProtobufATCommand {
         if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
           to_bitField0_ |= 0x00000004;
         }
-        result.execution_ = execution_;
+        result.hostName_ = hostName_;
         if (((from_bitField0_ & 0x00000008) == 0x00000008)) {
           to_bitField0_ |= 0x00000008;
         }
-        result.hostName_ = hostName_;
+        result.port_ = port_;
         if (((from_bitField0_ & 0x00000010) == 0x00000010)) {
           to_bitField0_ |= 0x00000010;
         }
-        result.port_ = port_;
+        result.fileName_ = fileName_;
         if (((from_bitField0_ & 0x00000020) == 0x00000020)) {
           to_bitField0_ |= 0x00000020;
         }
-        result.fileName_ = fileName_;
+        result.fileSize_ = fileSize_;
         if (((from_bitField0_ & 0x00000040) == 0x00000040)) {
           to_bitField0_ |= 0x00000040;
         }
-        result.fileSize_ = fileSize_;
+        result.time_ = time_;
         if (((from_bitField0_ & 0x00000080) == 0x00000080)) {
           to_bitField0_ |= 0x00000080;
         }
-        result.time_ = time_;
+        result.uploadSize_ = uploadSize_;
         if (((from_bitField0_ & 0x00000100) == 0x00000100)) {
           to_bitField0_ |= 0x00000100;
         }
-        result.uploadSize_ = uploadSize_;
+        result.downloadSize_ = downloadSize_;
         if (((from_bitField0_ & 0x00000200) == 0x00000200)) {
           to_bitField0_ |= 0x00000200;
         }
-        result.downloadSize_ = downloadSize_;
+        result.pathName_ = pathName_;
         if (((from_bitField0_ & 0x00000400) == 0x00000400)) {
           to_bitField0_ |= 0x00000400;
         }
-        result.pathName_ = pathName_;
+        result.username_ = username_;
         if (((from_bitField0_ & 0x00000800) == 0x00000800)) {
           to_bitField0_ |= 0x00000800;
         }
-        result.username_ = username_;
+        result.password_ = password_;
         if (((from_bitField0_ & 0x00001000) == 0x00001000)) {
           to_bitField0_ |= 0x00001000;
         }
-        result.password_ = password_;
+        result.type_ = type_;
         if (((from_bitField0_ & 0x00002000) == 0x00002000)) {
           to_bitField0_ |= 0x00002000;
         }
-        result.type_ = type_;
+        result.dataConnectionMode_ = dataConnectionMode_;
         if (((from_bitField0_ & 0x00004000) == 0x00004000)) {
           to_bitField0_ |= 0x00004000;
         }
-        result.dataConnectionMode_ = dataConnectionMode_;
+        result.transferType_ = transferType_;
         if (((from_bitField0_ & 0x00008000) == 0x00008000)) {
           to_bitField0_ |= 0x00008000;
         }
@@ -31111,49 +31072,45 @@ public final class ProtobufATCommand {
         if (((from_bitField0_ & 0x00010000) == 0x00010000)) {
           to_bitField0_ |= 0x00010000;
         }
-        result.transferType_ = transferType_;
+        result.localPosition_ = localPosition_;
         if (((from_bitField0_ & 0x00020000) == 0x00020000)) {
           to_bitField0_ |= 0x00020000;
         }
-        result.valueString_ = valueString_;
+        result.status_ = status_;
         if (((from_bitField0_ & 0x00040000) == 0x00040000)) {
           to_bitField0_ |= 0x00040000;
         }
-        result.status_ = status_;
+        result.length_ = length_;
         if (((from_bitField0_ & 0x00080000) == 0x00080000)) {
           to_bitField0_ |= 0x00080000;
         }
-        result.length_ = length_;
+        result.sourceName_ = sourceName_;
         if (((from_bitField0_ & 0x00100000) == 0x00100000)) {
           to_bitField0_ |= 0x00100000;
         }
-        result.sourceName_ = sourceName_;
+        result.targetName_ = targetName_;
         if (((from_bitField0_ & 0x00200000) == 0x00200000)) {
           to_bitField0_ |= 0x00200000;
         }
-        result.targetName_ = targetName_;
+        result.name_ = name_;
         if (((from_bitField0_ & 0x00400000) == 0x00400000)) {
           to_bitField0_ |= 0x00400000;
         }
-        result.name_ = name_;
+        result.return_ = return_;
         if (((from_bitField0_ & 0x00800000) == 0x00800000)) {
           to_bitField0_ |= 0x00800000;
         }
-        result.return_ = return_;
+        result.directoryName_ = directoryName_;
         if (((from_bitField0_ & 0x01000000) == 0x01000000)) {
           to_bitField0_ |= 0x01000000;
         }
-        result.directoryName_ = directoryName_;
+        result.isResponse_ = isResponse_;
         if (((from_bitField0_ & 0x02000000) == 0x02000000)) {
           to_bitField0_ |= 0x02000000;
         }
-        result.isResponse_ = isResponse_;
+        result.description_ = description_;
         if (((from_bitField0_ & 0x04000000) == 0x04000000)) {
           to_bitField0_ |= 0x04000000;
-        }
-        result.description_ = description_;
-        if (((from_bitField0_ & 0x08000000) == 0x08000000)) {
-          to_bitField0_ |= 0x08000000;
         }
         result.error_ = error_;
         result.bitField0_ = to_bitField0_;
@@ -31178,11 +31135,8 @@ public final class ProtobufATCommand {
         if (other.hasAction()) {
           setAction(other.getAction());
         }
-        if (other.hasExecution()) {
-          setExecution(other.getExecution());
-        }
         if (other.hasHostName()) {
-          bitField0_ |= 0x00000008;
+          bitField0_ |= 0x00000004;
           hostName_ = other.hostName_;
           onChanged();
         }
@@ -31190,7 +31144,7 @@ public final class ProtobufATCommand {
           setPort(other.getPort());
         }
         if (other.hasFileName()) {
-          bitField0_ |= 0x00000020;
+          bitField0_ |= 0x00000010;
           fileName_ = other.fileName_;
           onChanged();
         }
@@ -31207,17 +31161,17 @@ public final class ProtobufATCommand {
           setDownloadSize(other.getDownloadSize());
         }
         if (other.hasPathName()) {
-          bitField0_ |= 0x00000400;
+          bitField0_ |= 0x00000200;
           pathName_ = other.pathName_;
           onChanged();
         }
         if (other.hasUsername()) {
-          bitField0_ |= 0x00000800;
+          bitField0_ |= 0x00000400;
           username_ = other.username_;
           onChanged();
         }
         if (other.hasPassword()) {
-          bitField0_ |= 0x00001000;
+          bitField0_ |= 0x00000800;
           password_ = other.password_;
           onChanged();
         }
@@ -31227,19 +31181,19 @@ public final class ProtobufATCommand {
         if (other.hasDataConnectionMode()) {
           setDataConnectionMode(other.getDataConnectionMode());
         }
-        if (other.hasResumingPoint()) {
-          setResumingPoint(other.getResumingPoint());
-        }
         if (other.hasTransferType()) {
           setTransferType(other.getTransferType());
         }
-        if (other.hasValueString()) {
-          bitField0_ |= 0x00020000;
-          valueString_ = other.valueString_;
+        if (other.hasResumingPoint()) {
+          setResumingPoint(other.getResumingPoint());
+        }
+        if (other.hasLocalPosition()) {
+          bitField0_ |= 0x00010000;
+          localPosition_ = other.localPosition_;
           onChanged();
         }
         if (other.hasStatus()) {
-          bitField0_ |= 0x00040000;
+          bitField0_ |= 0x00020000;
           status_ = other.status_;
           onChanged();
         }
@@ -31247,17 +31201,17 @@ public final class ProtobufATCommand {
           setLength(other.getLength());
         }
         if (other.hasSourceName()) {
-          bitField0_ |= 0x00100000;
+          bitField0_ |= 0x00080000;
           sourceName_ = other.sourceName_;
           onChanged();
         }
         if (other.hasTargetName()) {
-          bitField0_ |= 0x00200000;
+          bitField0_ |= 0x00100000;
           targetName_ = other.targetName_;
           onChanged();
         }
         if (other.hasName()) {
-          bitField0_ |= 0x00400000;
+          bitField0_ |= 0x00200000;
           name_ = other.name_;
           onChanged();
         }
@@ -31265,7 +31219,7 @@ public final class ProtobufATCommand {
           setReturn(other.getReturn());
         }
         if (other.hasDirectoryName()) {
-          bitField0_ |= 0x01000000;
+          bitField0_ |= 0x00800000;
           directoryName_ = other.directoryName_;
           onChanged();
         }
@@ -31273,7 +31227,7 @@ public final class ProtobufATCommand {
           setIsResponse(other.getIsResponse());
         }
         if (other.hasDescription()) {
-          bitField0_ |= 0x04000000;
+          bitField0_ |= 0x02000000;
           description_ = other.description_;
           onChanged();
         }
@@ -31385,44 +31339,12 @@ public final class ProtobufATCommand {
         return this;
       }
 
-      private boolean execution_ ;
-      /**
-       * <code>optional bool execution = 5;</code>
-       */
-      public boolean hasExecution() {
-        return ((bitField0_ & 0x00000004) == 0x00000004);
-      }
-      /**
-       * <code>optional bool execution = 5;</code>
-       */
-      public boolean getExecution() {
-        return execution_;
-      }
-      /**
-       * <code>optional bool execution = 5;</code>
-       */
-      public Builder setExecution(boolean value) {
-        bitField0_ |= 0x00000004;
-        execution_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional bool execution = 5;</code>
-       */
-      public Builder clearExecution() {
-        bitField0_ = (bitField0_ & ~0x00000004);
-        execution_ = false;
-        onChanged();
-        return this;
-      }
-
       private java.lang.Object hostName_ = "";
       /**
        * <code>optional string hostName = 6;</code>
        */
       public boolean hasHostName() {
-        return ((bitField0_ & 0x00000008) == 0x00000008);
+        return ((bitField0_ & 0x00000004) == 0x00000004);
       }
       /**
        * <code>optional string hostName = 6;</code>
@@ -31465,7 +31387,7 @@ public final class ProtobufATCommand {
         if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00000008;
+  bitField0_ |= 0x00000004;
         hostName_ = value;
         onChanged();
         return this;
@@ -31474,7 +31396,7 @@ public final class ProtobufATCommand {
        * <code>optional string hostName = 6;</code>
        */
       public Builder clearHostName() {
-        bitField0_ = (bitField0_ & ~0x00000008);
+        bitField0_ = (bitField0_ & ~0x00000004);
         hostName_ = getDefaultInstance().getHostName();
         onChanged();
         return this;
@@ -31487,7 +31409,7 @@ public final class ProtobufATCommand {
         if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00000008;
+  bitField0_ |= 0x00000004;
         hostName_ = value;
         onChanged();
         return this;
@@ -31498,7 +31420,7 @@ public final class ProtobufATCommand {
        * <code>optional int32 port = 7;</code>
        */
       public boolean hasPort() {
-        return ((bitField0_ & 0x00000010) == 0x00000010);
+        return ((bitField0_ & 0x00000008) == 0x00000008);
       }
       /**
        * <code>optional int32 port = 7;</code>
@@ -31510,7 +31432,7 @@ public final class ProtobufATCommand {
        * <code>optional int32 port = 7;</code>
        */
       public Builder setPort(int value) {
-        bitField0_ |= 0x00000010;
+        bitField0_ |= 0x00000008;
         port_ = value;
         onChanged();
         return this;
@@ -31519,7 +31441,7 @@ public final class ProtobufATCommand {
        * <code>optional int32 port = 7;</code>
        */
       public Builder clearPort() {
-        bitField0_ = (bitField0_ & ~0x00000010);
+        bitField0_ = (bitField0_ & ~0x00000008);
         port_ = 0;
         onChanged();
         return this;
@@ -31530,7 +31452,7 @@ public final class ProtobufATCommand {
        * <code>optional string fileName = 8;</code>
        */
       public boolean hasFileName() {
-        return ((bitField0_ & 0x00000020) == 0x00000020);
+        return ((bitField0_ & 0x00000010) == 0x00000010);
       }
       /**
        * <code>optional string fileName = 8;</code>
@@ -31573,7 +31495,7 @@ public final class ProtobufATCommand {
         if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00000020;
+  bitField0_ |= 0x00000010;
         fileName_ = value;
         onChanged();
         return this;
@@ -31582,7 +31504,7 @@ public final class ProtobufATCommand {
        * <code>optional string fileName = 8;</code>
        */
       public Builder clearFileName() {
-        bitField0_ = (bitField0_ & ~0x00000020);
+        bitField0_ = (bitField0_ & ~0x00000010);
         fileName_ = getDefaultInstance().getFileName();
         onChanged();
         return this;
@@ -31595,7 +31517,7 @@ public final class ProtobufATCommand {
         if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00000020;
+  bitField0_ |= 0x00000010;
         fileName_ = value;
         onChanged();
         return this;
@@ -31606,7 +31528,7 @@ public final class ProtobufATCommand {
        * <code>optional int32 fileSize = 9;</code>
        */
       public boolean hasFileSize() {
-        return ((bitField0_ & 0x00000040) == 0x00000040);
+        return ((bitField0_ & 0x00000020) == 0x00000020);
       }
       /**
        * <code>optional int32 fileSize = 9;</code>
@@ -31618,7 +31540,7 @@ public final class ProtobufATCommand {
        * <code>optional int32 fileSize = 9;</code>
        */
       public Builder setFileSize(int value) {
-        bitField0_ |= 0x00000040;
+        bitField0_ |= 0x00000020;
         fileSize_ = value;
         onChanged();
         return this;
@@ -31627,7 +31549,7 @@ public final class ProtobufATCommand {
        * <code>optional int32 fileSize = 9;</code>
        */
       public Builder clearFileSize() {
-        bitField0_ = (bitField0_ & ~0x00000040);
+        bitField0_ = (bitField0_ & ~0x00000020);
         fileSize_ = 0;
         onChanged();
         return this;
@@ -31638,7 +31560,7 @@ public final class ProtobufATCommand {
        * <code>optional int32 time = 10;</code>
        */
       public boolean hasTime() {
-        return ((bitField0_ & 0x00000080) == 0x00000080);
+        return ((bitField0_ & 0x00000040) == 0x00000040);
       }
       /**
        * <code>optional int32 time = 10;</code>
@@ -31650,7 +31572,7 @@ public final class ProtobufATCommand {
        * <code>optional int32 time = 10;</code>
        */
       public Builder setTime(int value) {
-        bitField0_ |= 0x00000080;
+        bitField0_ |= 0x00000040;
         time_ = value;
         onChanged();
         return this;
@@ -31659,7 +31581,7 @@ public final class ProtobufATCommand {
        * <code>optional int32 time = 10;</code>
        */
       public Builder clearTime() {
-        bitField0_ = (bitField0_ & ~0x00000080);
+        bitField0_ = (bitField0_ & ~0x00000040);
         time_ = 0;
         onChanged();
         return this;
@@ -31670,7 +31592,7 @@ public final class ProtobufATCommand {
        * <code>optional int32 uploadSize = 11;</code>
        */
       public boolean hasUploadSize() {
-        return ((bitField0_ & 0x00000100) == 0x00000100);
+        return ((bitField0_ & 0x00000080) == 0x00000080);
       }
       /**
        * <code>optional int32 uploadSize = 11;</code>
@@ -31682,7 +31604,7 @@ public final class ProtobufATCommand {
        * <code>optional int32 uploadSize = 11;</code>
        */
       public Builder setUploadSize(int value) {
-        bitField0_ |= 0x00000100;
+        bitField0_ |= 0x00000080;
         uploadSize_ = value;
         onChanged();
         return this;
@@ -31691,7 +31613,7 @@ public final class ProtobufATCommand {
        * <code>optional int32 uploadSize = 11;</code>
        */
       public Builder clearUploadSize() {
-        bitField0_ = (bitField0_ & ~0x00000100);
+        bitField0_ = (bitField0_ & ~0x00000080);
         uploadSize_ = 0;
         onChanged();
         return this;
@@ -31702,7 +31624,7 @@ public final class ProtobufATCommand {
        * <code>optional int32 downloadSize = 12;</code>
        */
       public boolean hasDownloadSize() {
-        return ((bitField0_ & 0x00000200) == 0x00000200);
+        return ((bitField0_ & 0x00000100) == 0x00000100);
       }
       /**
        * <code>optional int32 downloadSize = 12;</code>
@@ -31714,7 +31636,7 @@ public final class ProtobufATCommand {
        * <code>optional int32 downloadSize = 12;</code>
        */
       public Builder setDownloadSize(int value) {
-        bitField0_ |= 0x00000200;
+        bitField0_ |= 0x00000100;
         downloadSize_ = value;
         onChanged();
         return this;
@@ -31723,7 +31645,7 @@ public final class ProtobufATCommand {
        * <code>optional int32 downloadSize = 12;</code>
        */
       public Builder clearDownloadSize() {
-        bitField0_ = (bitField0_ & ~0x00000200);
+        bitField0_ = (bitField0_ & ~0x00000100);
         downloadSize_ = 0;
         onChanged();
         return this;
@@ -31734,7 +31656,7 @@ public final class ProtobufATCommand {
        * <code>optional string pathName = 13;</code>
        */
       public boolean hasPathName() {
-        return ((bitField0_ & 0x00000400) == 0x00000400);
+        return ((bitField0_ & 0x00000200) == 0x00000200);
       }
       /**
        * <code>optional string pathName = 13;</code>
@@ -31777,7 +31699,7 @@ public final class ProtobufATCommand {
         if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00000400;
+  bitField0_ |= 0x00000200;
         pathName_ = value;
         onChanged();
         return this;
@@ -31786,7 +31708,7 @@ public final class ProtobufATCommand {
        * <code>optional string pathName = 13;</code>
        */
       public Builder clearPathName() {
-        bitField0_ = (bitField0_ & ~0x00000400);
+        bitField0_ = (bitField0_ & ~0x00000200);
         pathName_ = getDefaultInstance().getPathName();
         onChanged();
         return this;
@@ -31799,7 +31721,7 @@ public final class ProtobufATCommand {
         if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00000400;
+  bitField0_ |= 0x00000200;
         pathName_ = value;
         onChanged();
         return this;
@@ -31810,7 +31732,7 @@ public final class ProtobufATCommand {
        * <code>optional string username = 14;</code>
        */
       public boolean hasUsername() {
-        return ((bitField0_ & 0x00000800) == 0x00000800);
+        return ((bitField0_ & 0x00000400) == 0x00000400);
       }
       /**
        * <code>optional string username = 14;</code>
@@ -31853,7 +31775,7 @@ public final class ProtobufATCommand {
         if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00000800;
+  bitField0_ |= 0x00000400;
         username_ = value;
         onChanged();
         return this;
@@ -31862,7 +31784,7 @@ public final class ProtobufATCommand {
        * <code>optional string username = 14;</code>
        */
       public Builder clearUsername() {
-        bitField0_ = (bitField0_ & ~0x00000800);
+        bitField0_ = (bitField0_ & ~0x00000400);
         username_ = getDefaultInstance().getUsername();
         onChanged();
         return this;
@@ -31875,7 +31797,7 @@ public final class ProtobufATCommand {
         if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00000800;
+  bitField0_ |= 0x00000400;
         username_ = value;
         onChanged();
         return this;
@@ -31886,7 +31808,7 @@ public final class ProtobufATCommand {
        * <code>optional string password = 15;</code>
        */
       public boolean hasPassword() {
-        return ((bitField0_ & 0x00001000) == 0x00001000);
+        return ((bitField0_ & 0x00000800) == 0x00000800);
       }
       /**
        * <code>optional string password = 15;</code>
@@ -31929,7 +31851,7 @@ public final class ProtobufATCommand {
         if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00001000;
+  bitField0_ |= 0x00000800;
         password_ = value;
         onChanged();
         return this;
@@ -31938,7 +31860,7 @@ public final class ProtobufATCommand {
        * <code>optional string password = 15;</code>
        */
       public Builder clearPassword() {
-        bitField0_ = (bitField0_ & ~0x00001000);
+        bitField0_ = (bitField0_ & ~0x00000800);
         password_ = getDefaultInstance().getPassword();
         onChanged();
         return this;
@@ -31951,7 +31873,7 @@ public final class ProtobufATCommand {
         if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00001000;
+  bitField0_ |= 0x00000800;
         password_ = value;
         onChanged();
         return this;
@@ -31962,7 +31884,7 @@ public final class ProtobufATCommand {
        * <code>optional .com.rtrk.atcommand.TypeOfConfigurableParameters type = 16;</code>
        */
       public boolean hasType() {
-        return ((bitField0_ & 0x00002000) == 0x00002000);
+        return ((bitField0_ & 0x00001000) == 0x00001000);
       }
       /**
        * <code>optional .com.rtrk.atcommand.TypeOfConfigurableParameters type = 16;</code>
@@ -31977,7 +31899,7 @@ public final class ProtobufATCommand {
         if (value == null) {
           throw new NullPointerException();
         }
-        bitField0_ |= 0x00002000;
+        bitField0_ |= 0x00001000;
         type_ = value;
         onChanged();
         return this;
@@ -31986,7 +31908,7 @@ public final class ProtobufATCommand {
        * <code>optional .com.rtrk.atcommand.TypeOfConfigurableParameters type = 16;</code>
        */
       public Builder clearType() {
-        bitField0_ = (bitField0_ & ~0x00002000);
+        bitField0_ = (bitField0_ & ~0x00001000);
         type_ = com.rtrk.atcommand.protobuf.ProtobufATCommand.TypeOfConfigurableParameters.MODE_OF_DATA_CONNECTION;
         onChanged();
         return this;
@@ -31997,7 +31919,7 @@ public final class ProtobufATCommand {
        * <code>optional .com.rtrk.atcommand.DataConnectionMode dataConnectionMode = 29;</code>
        */
       public boolean hasDataConnectionMode() {
-        return ((bitField0_ & 0x00004000) == 0x00004000);
+        return ((bitField0_ & 0x00002000) == 0x00002000);
       }
       /**
        * <code>optional .com.rtrk.atcommand.DataConnectionMode dataConnectionMode = 29;</code>
@@ -32012,7 +31934,7 @@ public final class ProtobufATCommand {
         if (value == null) {
           throw new NullPointerException();
         }
-        bitField0_ |= 0x00004000;
+        bitField0_ |= 0x00002000;
         dataConnectionMode_ = value;
         onChanged();
         return this;
@@ -32021,8 +31943,43 @@ public final class ProtobufATCommand {
        * <code>optional .com.rtrk.atcommand.DataConnectionMode dataConnectionMode = 29;</code>
        */
       public Builder clearDataConnectionMode() {
-        bitField0_ = (bitField0_ & ~0x00004000);
+        bitField0_ = (bitField0_ & ~0x00002000);
         dataConnectionMode_ = com.rtrk.atcommand.protobuf.ProtobufATCommand.DataConnectionMode.ACTIVE_MODE;
+        onChanged();
+        return this;
+      }
+
+      private com.rtrk.atcommand.protobuf.ProtobufATCommand.TransferType transferType_ = com.rtrk.atcommand.protobuf.ProtobufATCommand.TransferType.BINARY_TRANSFER_TYPE;
+      /**
+       * <code>optional .com.rtrk.atcommand.TransferType transferType = 17;</code>
+       */
+      public boolean hasTransferType() {
+        return ((bitField0_ & 0x00004000) == 0x00004000);
+      }
+      /**
+       * <code>optional .com.rtrk.atcommand.TransferType transferType = 17;</code>
+       */
+      public com.rtrk.atcommand.protobuf.ProtobufATCommand.TransferType getTransferType() {
+        return transferType_;
+      }
+      /**
+       * <code>optional .com.rtrk.atcommand.TransferType transferType = 17;</code>
+       */
+      public Builder setTransferType(com.rtrk.atcommand.protobuf.ProtobufATCommand.TransferType value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00004000;
+        transferType_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .com.rtrk.atcommand.TransferType transferType = 17;</code>
+       */
+      public Builder clearTransferType() {
+        bitField0_ = (bitField0_ & ~0x00004000);
+        transferType_ = com.rtrk.atcommand.protobuf.ProtobufATCommand.TransferType.BINARY_TRANSFER_TYPE;
         onChanged();
         return this;
       }
@@ -32059,59 +32016,24 @@ public final class ProtobufATCommand {
         return this;
       }
 
-      private com.rtrk.atcommand.protobuf.ProtobufATCommand.TransferType transferType_ = com.rtrk.atcommand.protobuf.ProtobufATCommand.TransferType.BINARY_TRANSFER_TYPE;
+      private java.lang.Object localPosition_ = "";
       /**
-       * <code>optional .com.rtrk.atcommand.TransferType transferType = 17;</code>
+       * <code>optional string localPosition = 28;</code>
        */
-      public boolean hasTransferType() {
+      public boolean hasLocalPosition() {
         return ((bitField0_ & 0x00010000) == 0x00010000);
       }
       /**
-       * <code>optional .com.rtrk.atcommand.TransferType transferType = 17;</code>
+       * <code>optional string localPosition = 28;</code>
        */
-      public com.rtrk.atcommand.protobuf.ProtobufATCommand.TransferType getTransferType() {
-        return transferType_;
-      }
-      /**
-       * <code>optional .com.rtrk.atcommand.TransferType transferType = 17;</code>
-       */
-      public Builder setTransferType(com.rtrk.atcommand.protobuf.ProtobufATCommand.TransferType value) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        bitField0_ |= 0x00010000;
-        transferType_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional .com.rtrk.atcommand.TransferType transferType = 17;</code>
-       */
-      public Builder clearTransferType() {
-        bitField0_ = (bitField0_ & ~0x00010000);
-        transferType_ = com.rtrk.atcommand.protobuf.ProtobufATCommand.TransferType.BINARY_TRANSFER_TYPE;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object valueString_ = "";
-      /**
-       * <code>optional string valueString = 28;</code>
-       */
-      public boolean hasValueString() {
-        return ((bitField0_ & 0x00020000) == 0x00020000);
-      }
-      /**
-       * <code>optional string valueString = 28;</code>
-       */
-      public java.lang.String getValueString() {
-        java.lang.Object ref = valueString_;
+      public java.lang.String getLocalPosition() {
+        java.lang.Object ref = localPosition_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
           if (bs.isValidUtf8()) {
-            valueString_ = s;
+            localPosition_ = s;
           }
           return s;
         } else {
@@ -32119,53 +32041,53 @@ public final class ProtobufATCommand {
         }
       }
       /**
-       * <code>optional string valueString = 28;</code>
+       * <code>optional string localPosition = 28;</code>
        */
       public com.google.protobuf.ByteString
-          getValueStringBytes() {
-        java.lang.Object ref = valueString_;
+          getLocalPositionBytes() {
+        java.lang.Object ref = localPosition_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
-          valueString_ = b;
+          localPosition_ = b;
           return b;
         } else {
           return (com.google.protobuf.ByteString) ref;
         }
       }
       /**
-       * <code>optional string valueString = 28;</code>
+       * <code>optional string localPosition = 28;</code>
        */
-      public Builder setValueString(
+      public Builder setLocalPosition(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00020000;
-        valueString_ = value;
+  bitField0_ |= 0x00010000;
+        localPosition_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>optional string valueString = 28;</code>
+       * <code>optional string localPosition = 28;</code>
        */
-      public Builder clearValueString() {
-        bitField0_ = (bitField0_ & ~0x00020000);
-        valueString_ = getDefaultInstance().getValueString();
+      public Builder clearLocalPosition() {
+        bitField0_ = (bitField0_ & ~0x00010000);
+        localPosition_ = getDefaultInstance().getLocalPosition();
         onChanged();
         return this;
       }
       /**
-       * <code>optional string valueString = 28;</code>
+       * <code>optional string localPosition = 28;</code>
        */
-      public Builder setValueStringBytes(
+      public Builder setLocalPositionBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00020000;
-        valueString_ = value;
+  bitField0_ |= 0x00010000;
+        localPosition_ = value;
         onChanged();
         return this;
       }
@@ -32175,7 +32097,7 @@ public final class ProtobufATCommand {
        * <code>optional string status = 18;</code>
        */
       public boolean hasStatus() {
-        return ((bitField0_ & 0x00040000) == 0x00040000);
+        return ((bitField0_ & 0x00020000) == 0x00020000);
       }
       /**
        * <code>optional string status = 18;</code>
@@ -32218,7 +32140,7 @@ public final class ProtobufATCommand {
         if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00040000;
+  bitField0_ |= 0x00020000;
         status_ = value;
         onChanged();
         return this;
@@ -32227,7 +32149,7 @@ public final class ProtobufATCommand {
        * <code>optional string status = 18;</code>
        */
       public Builder clearStatus() {
-        bitField0_ = (bitField0_ & ~0x00040000);
+        bitField0_ = (bitField0_ & ~0x00020000);
         status_ = getDefaultInstance().getStatus();
         onChanged();
         return this;
@@ -32240,7 +32162,7 @@ public final class ProtobufATCommand {
         if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00040000;
+  bitField0_ |= 0x00020000;
         status_ = value;
         onChanged();
         return this;
@@ -32251,7 +32173,7 @@ public final class ProtobufATCommand {
        * <code>optional int32 length = 19;</code>
        */
       public boolean hasLength() {
-        return ((bitField0_ & 0x00080000) == 0x00080000);
+        return ((bitField0_ & 0x00040000) == 0x00040000);
       }
       /**
        * <code>optional int32 length = 19;</code>
@@ -32263,7 +32185,7 @@ public final class ProtobufATCommand {
        * <code>optional int32 length = 19;</code>
        */
       public Builder setLength(int value) {
-        bitField0_ |= 0x00080000;
+        bitField0_ |= 0x00040000;
         length_ = value;
         onChanged();
         return this;
@@ -32272,7 +32194,7 @@ public final class ProtobufATCommand {
        * <code>optional int32 length = 19;</code>
        */
       public Builder clearLength() {
-        bitField0_ = (bitField0_ & ~0x00080000);
+        bitField0_ = (bitField0_ & ~0x00040000);
         length_ = 0;
         onChanged();
         return this;
@@ -32283,7 +32205,7 @@ public final class ProtobufATCommand {
        * <code>optional string sourceName = 20;</code>
        */
       public boolean hasSourceName() {
-        return ((bitField0_ & 0x00100000) == 0x00100000);
+        return ((bitField0_ & 0x00080000) == 0x00080000);
       }
       /**
        * <code>optional string sourceName = 20;</code>
@@ -32326,7 +32248,7 @@ public final class ProtobufATCommand {
         if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00100000;
+  bitField0_ |= 0x00080000;
         sourceName_ = value;
         onChanged();
         return this;
@@ -32335,7 +32257,7 @@ public final class ProtobufATCommand {
        * <code>optional string sourceName = 20;</code>
        */
       public Builder clearSourceName() {
-        bitField0_ = (bitField0_ & ~0x00100000);
+        bitField0_ = (bitField0_ & ~0x00080000);
         sourceName_ = getDefaultInstance().getSourceName();
         onChanged();
         return this;
@@ -32348,7 +32270,7 @@ public final class ProtobufATCommand {
         if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00100000;
+  bitField0_ |= 0x00080000;
         sourceName_ = value;
         onChanged();
         return this;
@@ -32359,7 +32281,7 @@ public final class ProtobufATCommand {
        * <code>optional string targetName = 21;</code>
        */
       public boolean hasTargetName() {
-        return ((bitField0_ & 0x00200000) == 0x00200000);
+        return ((bitField0_ & 0x00100000) == 0x00100000);
       }
       /**
        * <code>optional string targetName = 21;</code>
@@ -32402,7 +32324,7 @@ public final class ProtobufATCommand {
         if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00200000;
+  bitField0_ |= 0x00100000;
         targetName_ = value;
         onChanged();
         return this;
@@ -32411,7 +32333,7 @@ public final class ProtobufATCommand {
        * <code>optional string targetName = 21;</code>
        */
       public Builder clearTargetName() {
-        bitField0_ = (bitField0_ & ~0x00200000);
+        bitField0_ = (bitField0_ & ~0x00100000);
         targetName_ = getDefaultInstance().getTargetName();
         onChanged();
         return this;
@@ -32424,7 +32346,7 @@ public final class ProtobufATCommand {
         if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00200000;
+  bitField0_ |= 0x00100000;
         targetName_ = value;
         onChanged();
         return this;
@@ -32435,7 +32357,7 @@ public final class ProtobufATCommand {
        * <code>optional string name = 22;</code>
        */
       public boolean hasName() {
-        return ((bitField0_ & 0x00400000) == 0x00400000);
+        return ((bitField0_ & 0x00200000) == 0x00200000);
       }
       /**
        * <code>optional string name = 22;</code>
@@ -32478,7 +32400,7 @@ public final class ProtobufATCommand {
         if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00400000;
+  bitField0_ |= 0x00200000;
         name_ = value;
         onChanged();
         return this;
@@ -32487,7 +32409,7 @@ public final class ProtobufATCommand {
        * <code>optional string name = 22;</code>
        */
       public Builder clearName() {
-        bitField0_ = (bitField0_ & ~0x00400000);
+        bitField0_ = (bitField0_ & ~0x00200000);
         name_ = getDefaultInstance().getName();
         onChanged();
         return this;
@@ -32500,7 +32422,7 @@ public final class ProtobufATCommand {
         if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00400000;
+  bitField0_ |= 0x00200000;
         name_ = value;
         onChanged();
         return this;
@@ -32511,7 +32433,7 @@ public final class ProtobufATCommand {
        * <code>optional .com.rtrk.atcommand.Return return = 23;</code>
        */
       public boolean hasReturn() {
-        return ((bitField0_ & 0x00800000) == 0x00800000);
+        return ((bitField0_ & 0x00400000) == 0x00400000);
       }
       /**
        * <code>optional .com.rtrk.atcommand.Return return = 23;</code>
@@ -32526,7 +32448,7 @@ public final class ProtobufATCommand {
         if (value == null) {
           throw new NullPointerException();
         }
-        bitField0_ |= 0x00800000;
+        bitField0_ |= 0x00400000;
         return_ = value;
         onChanged();
         return this;
@@ -32535,7 +32457,7 @@ public final class ProtobufATCommand {
        * <code>optional .com.rtrk.atcommand.Return return = 23;</code>
        */
       public Builder clearReturn() {
-        bitField0_ = (bitField0_ & ~0x00800000);
+        bitField0_ = (bitField0_ & ~0x00400000);
         return_ = com.rtrk.atcommand.protobuf.ProtobufATCommand.Return.RETURN_NO_INFORMATIONS_TRANSFERED_FROM_FTP;
         onChanged();
         return this;
@@ -32546,7 +32468,7 @@ public final class ProtobufATCommand {
        * <code>optional string directoryName = 24;</code>
        */
       public boolean hasDirectoryName() {
-        return ((bitField0_ & 0x01000000) == 0x01000000);
+        return ((bitField0_ & 0x00800000) == 0x00800000);
       }
       /**
        * <code>optional string directoryName = 24;</code>
@@ -32589,7 +32511,7 @@ public final class ProtobufATCommand {
         if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x01000000;
+  bitField0_ |= 0x00800000;
         directoryName_ = value;
         onChanged();
         return this;
@@ -32598,7 +32520,7 @@ public final class ProtobufATCommand {
        * <code>optional string directoryName = 24;</code>
        */
       public Builder clearDirectoryName() {
-        bitField0_ = (bitField0_ & ~0x01000000);
+        bitField0_ = (bitField0_ & ~0x00800000);
         directoryName_ = getDefaultInstance().getDirectoryName();
         onChanged();
         return this;
@@ -32611,7 +32533,7 @@ public final class ProtobufATCommand {
         if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x01000000;
+  bitField0_ |= 0x00800000;
         directoryName_ = value;
         onChanged();
         return this;
@@ -32622,7 +32544,7 @@ public final class ProtobufATCommand {
        * <code>optional bool isResponse = 25;</code>
        */
       public boolean hasIsResponse() {
-        return ((bitField0_ & 0x02000000) == 0x02000000);
+        return ((bitField0_ & 0x01000000) == 0x01000000);
       }
       /**
        * <code>optional bool isResponse = 25;</code>
@@ -32634,7 +32556,7 @@ public final class ProtobufATCommand {
        * <code>optional bool isResponse = 25;</code>
        */
       public Builder setIsResponse(boolean value) {
-        bitField0_ |= 0x02000000;
+        bitField0_ |= 0x01000000;
         isResponse_ = value;
         onChanged();
         return this;
@@ -32643,7 +32565,7 @@ public final class ProtobufATCommand {
        * <code>optional bool isResponse = 25;</code>
        */
       public Builder clearIsResponse() {
-        bitField0_ = (bitField0_ & ~0x02000000);
+        bitField0_ = (bitField0_ & ~0x01000000);
         isResponse_ = false;
         onChanged();
         return this;
@@ -32654,7 +32576,7 @@ public final class ProtobufATCommand {
        * <code>optional string description = 26;</code>
        */
       public boolean hasDescription() {
-        return ((bitField0_ & 0x04000000) == 0x04000000);
+        return ((bitField0_ & 0x02000000) == 0x02000000);
       }
       /**
        * <code>optional string description = 26;</code>
@@ -32697,7 +32619,7 @@ public final class ProtobufATCommand {
         if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x04000000;
+  bitField0_ |= 0x02000000;
         description_ = value;
         onChanged();
         return this;
@@ -32706,7 +32628,7 @@ public final class ProtobufATCommand {
        * <code>optional string description = 26;</code>
        */
       public Builder clearDescription() {
-        bitField0_ = (bitField0_ & ~0x04000000);
+        bitField0_ = (bitField0_ & ~0x02000000);
         description_ = getDefaultInstance().getDescription();
         onChanged();
         return this;
@@ -32719,7 +32641,7 @@ public final class ProtobufATCommand {
         if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x04000000;
+  bitField0_ |= 0x02000000;
         description_ = value;
         onChanged();
         return this;
@@ -32730,7 +32652,7 @@ public final class ProtobufATCommand {
        * <code>optional .com.rtrk.atcommand.FTPError error = 27;</code>
        */
       public boolean hasError() {
-        return ((bitField0_ & 0x08000000) == 0x08000000);
+        return ((bitField0_ & 0x04000000) == 0x04000000);
       }
       /**
        * <code>optional .com.rtrk.atcommand.FTPError error = 27;</code>
@@ -32745,7 +32667,7 @@ public final class ProtobufATCommand {
         if (value == null) {
           throw new NullPointerException();
         }
-        bitField0_ |= 0x08000000;
+        bitField0_ |= 0x04000000;
         error_ = value;
         onChanged();
         return this;
@@ -32754,7 +32676,7 @@ public final class ProtobufATCommand {
        * <code>optional .com.rtrk.atcommand.FTPError error = 27;</code>
        */
       public Builder clearError() {
-        bitField0_ = (bitField0_ & ~0x08000000);
+        bitField0_ = (bitField0_ & ~0x04000000);
         error_ = com.rtrk.atcommand.protobuf.ProtobufATCommand.FTPError.FTP_OK;
         onChanged();
         return this;
@@ -94073,1341 +93995,1341 @@ public final class ProtobufATCommand {
       "gth\030\032 \001(\005\022\023\n\013totalLength\030\033 \001(\005\022\016\n\006offset" +
       "\030\034 \001(\005\0229\n\010position\030\035 \001(\0162\'.com.rtrk.atco" +
       "mmand.PointerMovementMode\022\022\n\nisResponse\030" +
-      "  \001(\010\022\023\n\013description\030! \001(\t\"\215\006\n\nFTPComman" +
+      "  \001(\010\022\023\n\013description\030! \001(\t\"\374\005\n\nFTPComman" +
       "d\0227\n\013messageType\030\001 \002(\0162\".com.rtrk.atcomm" +
       "and.FTPMessageType\022*\n\006action\030\002 \002(\0162\032.com" +
-      ".rtrk.atcommand.Action\022\021\n\texecution\030\005 \001(" +
-      "\010\022\020\n\010hostName\030\006 \001(\t\022\014\n\004port\030\007 \001(\005\022\020\n\010fil" +
-      "eName\030\010 \001(\t\022\020\n\010fileSize\030\t \001(\005\022\014\n\004time\030\n " +
-      "\001(\005\022\022\n\nuploadSize\030\013 \001(\005\022\024\n\014downloadSize\030",
-      "\014 \001(\005\022\020\n\010pathName\030\r \001(\t\022\020\n\010username\030\016 \001(" +
-      "\t\022\020\n\010password\030\017 \001(\t\022>\n\004type\030\020 \001(\01620.com." +
-      "rtrk.atcommand.TypeOfConfigurableParamet" +
-      "ers\022B\n\022dataConnectionMode\030\035 \001(\0162&.com.rt" +
-      "rk.atcommand.DataConnectionMode\022\025\n\rresum" +
-      "ingPoint\030\036 \001(\005\0226\n\014transferType\030\021 \001(\0162 .c" +
-      "om.rtrk.atcommand.TransferType\022\023\n\013valueS" +
-      "tring\030\034 \001(\t\022\016\n\006status\030\022 \001(\t\022\016\n\006length\030\023 " +
-      "\001(\005\022\022\n\nsourceName\030\024 \001(\t\022\022\n\ntargetName\030\025 " +
-      "\001(\t\022\014\n\004name\030\026 \001(\t\022*\n\006return\030\027 \001(\0162\032.com.",
-      "rtrk.atcommand.Return\022\025\n\rdirectoryName\030\030" +
-      " \001(\t\022\022\n\nisResponse\030\031 \001(\010\022\023\n\013description\030" +
-      "\032 \001(\t\022+\n\005error\030\033 \001(\0162\034.com.rtrk.atcomman" +
-      "d.FTPError\"\211\013\n\nMMSCommand\0227\n\013messageType" +
-      "\030\001 \002(\0162\".com.rtrk.atcommand.MMSMessageTy" +
-      "pe\022*\n\006action\030\002 \002(\0162\032.com.rtrk.atcommand." +
-      "Action\022\017\n\007MMSCURL\030\005 \001(\t\0226\n\014protocolType\030" +
-      "\006 \001(\0162 .com.rtrk.atcommand.ProtocolType\022" +
-      "\017\n\007gateway\030\007 \001(\t\022\014\n\004port\030\010 \001(\005\022:\n\016validi" +
-      "tyPeriod\030\t \001(\0162\".com.rtrk.atcommand.Vali",
-      "dityPeriod\022.\n\010priority\030\n \001(\0162\034.com.rtrk." +
-      "atcommand.Priority\022\022\n\nsendReport\030\013 \001(\010\022\022" +
-      "\n\nreadReport\030\014 \001(\010\022:\n\016addressVisible\030\r \001" +
-      "(\0162\".com.rtrk.atcommand.AddressVisible\0225" +
-      "\n\010mmsClass\030\016 \001(\0162#.com.rtrk.atcommand.MM" +
-      "SMessageClass\022\017\n\007charset\030\017 \001(\t\022:\n\016titleI" +
-      "nputMode\030& \001(\0162\".com.rtrk.atcommand.Titl" +
-      "eInputMode\022<\n\017operateFunction\030\020 \001(\0162#.co" +
-      "m.rtrk.atcommand.OperateFunction\022<\n\017oper" +
-      "ateWriteMMS\030\021 \001(\0162#.com.rtrk.atcommand.O",
-      "perateWriteMMS\022\020\n\010opstring\030\022 \001(\t\022\014\n\004from" +
-      "\030\023 \001(\005\022\n\n\002to\030\024 \001(\005\022>\n\020operateManageMMS\030)" +
-      " \001(\0162$.com.rtrk.atcommand.OperateManageM" +
-      "MS\022\020\n\010MMSIndex\030\025 \001(\005\022\023\n\013fromAddress\030\026 \001(" +
-      "\t\022\027\n\017isNotDownloaded\030\027 \001(\010\022\014\n\004date\030\030 \001(\t" +
-      "\022\014\n\004time\030\031 \001(\t\022\023\n\013messageSize\030\032 \001(\005\022\014\n\004p" +
-      "ara\030\033 \001(\005\022:\n\016paraOutputMode\030+ \001(\0162\".com." +
-      "rtrk.atcommand.TitleInputMode\022:\n\016operate" +
-      "ReadMMS\030* \001(\0162\".com.rtrk.atcommand.Opera" +
-      "teReadMMS\022\020\n\010fileName\030\034 \001(\t\022\024\n\014downloadS",
-      "ize\030\035 \001(\005\022@\n\021operateReceiveMMS\030, \001(\0162%.c" +
-      "om.rtrk.atcommand.OperateReceiveMMS\022\020\n\010c" +
-      "hecksum\030\036 \001(\005\022\032\n\022callPriorityHigher\030- \001(" +
-      "\010\022\024\n\014DURAttribute\030\037 \001(\003\022\032\n\022SMSMessageHan" +
-      "dling\030  \001(\010\022\022\n\nenableUSC2\030! \001(\010\022\021\n\tbigEn" +
-      "dian\030\" \001(\010\022\023\n\013outputStyle\030# \001(\010\022\020\n\010fileT" +
-      "ype\030$ \001(\005\022\022\n\nisResponse\030\' \001(\010\022\023\n\013descrip" +
-      "tion\030( \001(\t\022:\n\016operateSendMMS\030. \001(\0162\".com" +
-      ".rtrk.atcommand.OperateSendMMS\"\254\n\n\017QuecC" +
-      "ellCommand\022<\n\013messageType\030\001 \002(\0162\'.com.rt",
-      "rk.atcommand.QuecCellMessageType\022*\n\006acti" +
-      "on\030\002 \002(\0162\032.com.rtrk.atcommand.Action\0222\n\006" +
-      "status\030\006 \001(\0162\".com.rtrk.atcommand.Operat" +
-      "orStatus\022\030\n\020operatorInString\030\007 \001(\t\022\035\n\025op" +
-      "eratorInShortString\030\010 \001(\t\022\030\n\020operatorInN" +
-      "umber\030\t \001(\005\022\016\n\006indexN\030\n \001(\005\022\030\n\020locationA" +
-      "reaCode\030\013 \001(\005\022\016\n\006cellID\030\014 \001(\005\022\037\n\027baseSta" +
-      "tionIdentityCode\030\r \001(\005\022\024\n\014receiveLevel\030\016" +
-      " \001(\005\022+\n#absoluteRadioFrequencyChannelNum" +
-      "ber\030\017 \001(\005\022<\n\017engineeringMode\0303 \001(\0162#.com",
-      ".rtrk.atcommand.EngineeringMode\022&\n\004dump\030" +
-      "\020 \001(\0162\030.com.rtrk.atcommand.Dump\022\031\n\021mobil" +
-      "eCountryCode\030\021 \001(\005\022\031\n\021mobileNetworkCode\030" +
-      "\022 \001(\005\022\037\n\027broadcastControlChannel\030\023 \001(\005\022\031" +
-      "\n\021receiveSignalLeve\030\024 \001(\001\022\n\n\002c1\030\025 \001(\005\022\n\n" +
-      "\002c2\030\026 \001(\005\022\034\n\024transmitPowerMaximum\030\027 \001(\001\022" +
-      "\032\n\022receiveLevelAccess\030\030 \001(\005\022\021\n\ttimeslots" +
-      "\030\031 \001(\005\022\021\n\tMAIOValue\030\032 \001(\005\022\020\n\010HSNValue\030\033 " +
-      "\001(\005\022\013\n\003TCH\030\034 \001(\005\022\025\n\rtimingAdvance\030\035 \001(\005\022" +
-      "\024\n\014RXQualitySub\030\036 \001(\005\022\025\n\rRXQualityFull\030\037",
-      " \001(\005\022\"\n\032numberOfNeighboringSixCell\030  \001(\005" +
-      "\022\020\n\010band1900\030! \001(\010\022,\n\007rrState\030\" \001(\0162\033.co" +
-      "m.rtrk.atcommand.RRState\022\023\n\013channelType\030" +
-      "# \001(\t\022\027\n\017automaticReport\030$ \001(\010\022\014\n\004line\030%" +
-      " \001(\005\022\025\n\rforbiddenData\030& \001(\t\022&\n\004band\030\' \001(" +
-      "\0162\030.com.rtrk.atcommand.Band\022\r\n\005value\030( \001" +
-      "(\005\022\016\n\006arcfn1\030) \001(\005\022\016\n\006arcfn2\030* \001(\005\022\016\n\006ar" +
-      "cfn3\030+ \001(\005\022\022\n\nisResponse\030- \001(\010\022\023\n\013descri" +
-      "ption\030. \001(\t\022\025\n\rlockFrequency\030/ \001(\010\022\023\n\013ME" +
-      "HasLocked\0300 \001(\010\022B\n\022forbidOperatorMode\0301 ",
-      "\001(\0162&.com.rtrk.atcommand.ForbidOperatorM" +
-      "ode\022 \n\030MEHaveLockedCertainARCFN\0302 \001(\010\"\207\003" +
-      "\n\020RecordingCommand\022=\n\013messageType\030\001 \002(\0162" +
-      "(.com.rtrk.atcommand.RecordingMessageTyp" +
-      "e\022*\n\006action\030\002 \002(\0162\032.com.rtrk.atcommand.A" +
-      "ction\022:\n\016recordingState\030\005 \001(\0162\".com.rtrk" +
-      ".atcommand.RecordingState\022\020\n\010fileName\030\006 " +
-      "\001(\t\022.\n\006format\030\007 \001(\0162\036.com.rtrk.atcommand" +
-      ".FileFormat\022\016\n\006repeat\030\010 \001(\010\022\016\n\006volume\030\t " +
-      "\001(\005\0220\n\007channel\030\n \001(\0162\037.com.rtrk.atcomman",
-      "d.PlayChannel\022\017\n\007control\030\013 \001(\005\022\022\n\nisResp" +
-      "onse\030\016 \001(\010\022\023\n\013description\030\017 \001(\t\"\317\004\n\013SMTP" +
-      "Command\0228\n\013messageType\030\001 \002(\0162#.com.rtrk." +
-      "atcommand.SMTPMessageType\022*\n\006action\030\002 \002(" +
-      "\0162\032.com.rtrk.atcommand.Action\022\014\n\004user\030\006 " +
-      "\001(\t\022\020\n\010password\030\007 \001(\t\022\024\n\014emailAddress\030\010 " +
-      "\001(\t\022\014\n\004name\030\t \001(\t\022\025\n\rserverAddress\030\n \001(\t" +
-      "\022\014\n\004port\030\013 \001(\005\0228\n\rrecipientMode\030\014 \001(\0162!." +
-      "com.rtrk.atcommand.RecipientMode\0228\n\rreci" +
-      "pientType\030\r \001(\0162!.com.rtrk.atcommand.Rec",
-      "ipientType\022\016\n\006result\030\017 \001(\005\022,\n\007charset\030\026 " +
-      "\001(\0162\033.com.rtrk.atcommand.Charset\022\r\n\005titl" +
-      "e\030\020 \001(\t\022\017\n\007timeout\030\021 \001(\005\022\021\n\tfileIndex\030\022 " +
-      "\001(\005\022\020\n\010fileName\030\023 \001(\t\022\020\n\010fileSize\030\024 \001(\005\022" +
-      "\032\n\022needAuthentication\030\025 \001(\010\022\022\n\nisRespons" +
-      "e\030\027 \001(\010\022\023\n\013description\030\016 \001(\t\022#\n\033configur" +
-      "eNeedAuthentication\030\030 \001(\010\"\222\002\n\nSTKCommand" +
-      "\0227\n\013messageType\030\001 \002(\0162\".com.rtrk.atcomma" +
-      "nd.STKMessageType\022*\n\006action\030\002 \002(\0162\032.com." +
-      "rtrk.atcommand.Action\022\021\n\tturnOnSTK\030\006 \001(\010",
-      "\022\017\n\007profile\030\007 \001(\t\022\022\n\nsatCommand\030\010 \001(\t\022\030\n" +
-      "\020terminalResponse\030\t \001(\t\022\022\n\nisResponse\030\n " +
-      "\001(\010\022\023\n\013description\030\013 \001(\t\022$\n\003stk\030\014 \001(\0162\027." +
-      "com.rtrk.atcommand.STK\"\356\007\n\016GeneralComman" +
-      "d\022<\n\013messageType\030\001 \002(\0162\'.com.rtrk.atcomm" +
-      "and.GeneralMesssageType\022*\n\006action\030\002 \002(\0162" +
-      "\032.com.rtrk.atcommand.Action\022G\n\007default\030\005" +
-      " \001(\0162\037.com.rtrk.atcommand.TAToDefault:\025S" +
-      "ET_ALL_TA_TO_DEFAULT\022H\n\rprofileNumber\030\006 " +
-      "\001(\0162!.com.rtrk.atcommand.ProfileNumber:\016",
-      "PROFILE_NUMBER\022L\n\rfunctionality\030\007 \001(\0162!." +
-      "com.rtrk.atcommand.Functionality:\022FULL_F" +
-      "UNCTIONALITY\0229\n\005reset\030\010 \001(\0162\031.com.rtrk.a" +
-      "tcommand.Reset:\017DO_NOT_RESET_ME\022\024\n\014chara" +
-      "cterSet\030\t \001(\t\022\022\n\nisResponse\030\013 \001(\010\022\023\n\013des" +
-      "cription\030\014 \001(\t\022M\n\nresultCode\030\r \001(\0162\036.com" +
-      ".rtrk.atcommand.ResultCode:\031TA_TRANSMINT" +
-      "S_RESULT_CODE\022]\n\023informationResponse\030\016 \001" +
-      "(\0162\'.com.rtrk.atcommand.InformationRespo" +
-      "nse:\027LONG_RESULT_CODE_FORMAT\022c\n\021connectR",
-      "esultCode\030\017 \001(\0162%.com.rtrk.atcommand.Con" +
-      "nectResultCode:!CONNECT_RESULT_CODE_ONLY" +
-      "_RETURNED\022_\n\024resetToProfileNumber\030\020 \001(\0162" +
-      "(.com.rtrk.atcommand.ResetToProfileNumbe" +
-      "r:\027RESET_TO_PROFILE_NUMBER\0226\n\014powerOffMo" +
-      "de\030\021 \001(\0162 .com.rtrk.atcommand.PowerOffMo" +
-      "de\022k\n\021disableResultCode\030\022 \001(\0162%.com.rtrk" +
-      ".atcommand.DisableResultCode:)ENABLE_RES" +
-      "ULT_CODE_AND_USE_NUMERIC_VALUES\"\253\t\n\035Seri" +
-      "alInterfaceControlCommand\022J\n\013messageType",
-      "\030\001 \002(\01625.com.rtrk.atcommand.SerialInterf" +
-      "aceControlMessageType\022*\n\006action\030\002 \002(\0162\032." +
-      "com.rtrk.atcommand.Action\0228\n\rdcdLineStat" +
-      "us\030\006 \001(\0162!.com.rtrk.atcommand.DCDLineSta" +
-      "tus\0228\n\rframingFormat\030\007 \001(\0162!.com.rtrk.at" +
-      "command.FramingFormat\0221\n\006parity\030\010 \001(\0162\032." +
-      "com.rtrk.atcommand.Parity:\005SPACE\022.\n\010dceB" +
-      "yDte\030\t \001(\0162\034.com.rtrk.atcommand.DCEByDTE" +
-      "\022.\n\010dteByDce\030\n \001(\0162\034.com.rtrk.atcommand." +
-      "DTEByDCE\022&\n\004rate\030\013 \001(\0162\030.com.rtrk.atcomm",
-      "and.Rate\022\026\n\016enableDualUART\030\014 \001(\010\022>\n\020tran" +
-      "smissionRate\030\016 \001(\0162$.com.rtrk.atcommand." +
-      "TransmissionRate\022\030\n\020maximumFrameSize\030\017 \001" +
-      "(\005\022\032\n\022acknowledmentTimer\030\020 \001(\005\022&\n\036maximu" +
-      "mNumberOfRetransmissions\030\021 \001(\005\022\025\n\rrespon" +
-      "seTimer\030\022 \001(\005\022\033\n\023wakeUpResponseTimer\030\023 \001" +
-      "(\005\022\023\n\013windowsSize\030\024 \001(\005\022;\n\010dataBits\030\026 \001(" +
-      "\0162\034.com.rtrk.atcommand.DataBits:\013DATA_BI" +
-      "TS_8\022:\n\010stopBits\030\027 \001(\0162\034.com.rtrk.atcomm" +
-      "and.StopBits:\nSTOP_BIT_1\022A\n\003mtm\030\030 \001(\01624.",
-      "com.rtrk.atcommand.MultiplexerTransparen" +
-      "cyMechanism\022\022\n\nisResponse\030\031 \001(\010\022\023\n\013descr" +
-      "iption\030\032 \001(\t\022$\n\034enableReportingLocalPort" +
-      "Rate\030\033 \001(\010\022:\n\003mcc\030\034 \001(\0162-.com.rtrk.atcom" +
-      "mand.MultiplexerControlChannel\022Q\n\016dualUA" +
-      "RTParity\030\r \001(\0162\".com.rtrk.atcommand.Dual" +
-      "UARTParity:\025DUAL_UART_PARITY_NONE\022J\n\tdtr" +
-      "Status\030\035 \001(\0162\035.com.rtrk.atcommand.DTRSta" +
-      "tus:\030TA_IGNORES_STATUS_ON_DTR\"\356\t\n\024Status" +
-      "ControlCommand\022A\n\013messageType\030\001 \002(\0162,.co",
-      "m.rtrk.atcommand.StatusControlMessageTyp" +
-      "e\022*\n\006action\030\002 \002(\0162\032.com.rtrk.atcommand.A" +
-      "ction\022\022\n\nlocationID\030\006 \001(\005\022\r\n\005cause\030\007 \001(\t" +
-      "\022$\n\003pas\030\010 \001(\0162\027.com.rtrk.atcommand.Pas\0225" +
-      "\n\006status\030\t \001(\0162\032.com.rtrk.atcommand.Stat" +
-      "us:\tSTATUS_ON\022\021\n\trefuseSMS\030\n \001(\010\022\022\n\nrefu" +
-      "seCall\030\013 \001(\010\022\025\n\rshowCallState\030\014 \001(\010\022\020\n\010e" +
-      "xtunsol\030\r \001(\t\022\r\n\005state\030\016 \001(\005\022\034\n\024switchOn" +
-      "SIMDetection\030\017 \001(\010\022\014\n\004time\030\020 \001(\t\022\032\n\022datl" +
-      "ightSavingTime\030\021 \001(\t\022\027\n\017highInsertLevel\030",
-      "\022 \001(\010\022l\n\tpinChoice\030\023 \001(\0162\'.com.rtrk.atco" +
-      "mmand.SIMCardDetectionPIN:0CONFIGURE_SIM" +
-      "_PRESENCE_AS_SIM_CARD_DETECTION_PIN\022\022\n\ni" +
-      "sResponse\030\026 \001(\010\022\023\n\013description\030\027 \001(\t\022\035\n\025" +
-      "EnableURCPresentation\030\030 \001(\010\022O\n\003pui\030\031 \001(\016" +
-      "25.com.rtrk.atcommand.ProprietaryUnsolic" +
-      "itedIndications:\013PUI_DISABLE\0226\n\003sof\030\032 \001(" +
-      "\0162).com.rtrk.atcommand.StateOfInitializa" +
-      "tion\022>\n\020gsmNetworkStatus\030\033 \001(\0162$.com.rtr" +
-      "k.atcommand.GSMNetworkStatus\022,\n\007rtcTime\030",
-      "\034 \001(\0162\033.com.rtrk.atcommand.RTCTime\022?\n\005tz" +
-      "cer\030\035 \001(\01620.com.rtrk.atcommand.TimeZoneC" +
-      "hangeEventReporting\022 \n\030switchONDetecting" +
-      "SIMCard\030\024 \001(\010\022p\n\017simInsertStatus\030\025 \001(\0162\'" +
-      ".com.rtrk.atcommand.SIMCardInsertStatus:" +
-      ".LOW_LEVEL_OF_PIN_INDICATES_SIM_CARD_IS_" +
-      "PRESENT\022&\n\036enableCircuitSwitchedVoiceCal" +
-      "l\030\036 \001(\010\022:\n\016connectionType\030\037 \001(\0162\".com.rt" +
-      "rk.atcommand.ConnectionType\022\037\n\027enableToS" +
-      "ynchronizeTime\030  \001(\010\022 \n\030openSIMDetection",
-      "Function\030! \001(\010\"\371\006\n\021SIMRelatedCommand\022>\n\013" +
-      "messageType\030\001 \002(\0162).com.rtrk.atcommand.S" +
-      "IMRelatedMessageType\022*\n\006action\030\002 \002(\0162\032.c" +
-      "om.rtrk.atcommand.Action\022\013\n\003fac\030\037 \001(\t\022<\n" +
-      "\010lockMode\030  \001(\0162\034.com.rtrk.atcommand.Loc" +
-      "kMode:\014QUERY_STATUS\022\020\n\010password\030! \001(\t\022B\n" +
-      "\005class\030\" \001(\0162\031.com.rtrk.atcommand.Class:" +
-      "\030ALL_TELEPHONY_EXCEPT_SMS\022*\n\006status\030\006 \001(" +
-      "\0162\032.com.rtrk.atcommand.Status\022\013\n\003pin\030\007 \001" +
-      "(\t\022\016\n\006newPin\030\010 \001(\t\022\021\n\tpwdLength\030\t \001(\005\022\016\n",
-      "\006oldPwd\030\n \001(\t\022\016\n\006newPwd\030\013 \001(\t\0222\n\ncommand" +
-      "SIM\030\014 \001(\0162\036.com.rtrk.atcommand.CommandSI" +
-      "M\022\016\n\006fileID\030\r \001(\005\022\n\n\002P1\030\016 \001(\005\022\n\n\002P2\030\017 \001(" +
-      "\005\022\n\n\002P3\030\020 \001(\005\022\013\n\003SW1\030\021 \001(\005\022\013\n\003SW2\030\022 \001(\005\022" +
-      "\014\n\004data\030\023 \001(\t\022\020\n\010response\030\024 \001(\t\022\016\n\006lengt" +
-      "h\030\025 \001(\005\022\020\n\010CCIDData\030\026 \001(\t\022\014\n\004GID1\030\027 \001(\005\022" +
-      "\014\n\004GID2\030\030 \001(\005\022\032\n\022serviceProvideName\030\031 \001(" +
-      "\t\022\023\n\013displayPLMN\030\032 \001(\010\022\014\n\004chv1\030\033 \001(\005\022\014\n\004" +
-      "chv2\030\034 \001(\005\022\014\n\004puk1\030\035 \001(\005\022\014\n\004puk2\030\036 \001(\005\022\022" +
-      "\n\nisResponse\030# \001(\010\022\023\n\013description\030$ \001(\t\022",
-      "X\n\013voltageMode\030% \001(\0162\037.com.rtrk.atcomman" +
-      "d.VoltageMode:\"RECOGNIZE_1_8_V_AND_3_0_V" +
-      "_SIM_CARD\022\017\n\007command\030& \001(\t\"\220\t\n\025NetworkSe" +
-      "rviceCommand\022B\n\013messageType\030\001 \002(\0162-.com." +
-      "rtrk.atcommand.NetworkServiceMessageType" +
+      ".rtrk.atcommand.Action\022\020\n\010hostName\030\006 \001(\t" +
+      "\022\014\n\004port\030\007 \001(\005\022\020\n\010fileName\030\010 \001(\t\022\020\n\010file" +
+      "Size\030\t \001(\005\022\014\n\004time\030\n \001(\005\022\022\n\nuploadSize\030\013" +
+      " \001(\005\022\024\n\014downloadSize\030\014 \001(\005\022\020\n\010pathName\030\r",
+      " \001(\t\022\020\n\010username\030\016 \001(\t\022\020\n\010password\030\017 \001(\t" +
+      "\022>\n\004type\030\020 \001(\01620.com.rtrk.atcommand.Type" +
+      "OfConfigurableParameters\022B\n\022dataConnecti" +
+      "onMode\030\035 \001(\0162&.com.rtrk.atcommand.DataCo" +
+      "nnectionMode\0226\n\014transferType\030\021 \001(\0162 .com" +
+      ".rtrk.atcommand.TransferType\022\025\n\rresuming" +
+      "Point\030\036 \001(\005\022\025\n\rlocalPosition\030\034 \001(\t\022\016\n\006st" +
+      "atus\030\022 \001(\t\022\016\n\006length\030\023 \001(\005\022\022\n\nsourceName" +
+      "\030\024 \001(\t\022\022\n\ntargetName\030\025 \001(\t\022\014\n\004name\030\026 \001(\t" +
+      "\022*\n\006return\030\027 \001(\0162\032.com.rtrk.atcommand.Re",
+      "turn\022\025\n\rdirectoryName\030\030 \001(\t\022\022\n\nisRespons" +
+      "e\030\031 \001(\010\022\023\n\013description\030\032 \001(\t\022+\n\005error\030\033 " +
+      "\001(\0162\034.com.rtrk.atcommand.FTPError\"\211\013\n\nMM" +
+      "SCommand\0227\n\013messageType\030\001 \002(\0162\".com.rtrk" +
+      ".atcommand.MMSMessageType\022*\n\006action\030\002 \002(" +
+      "\0162\032.com.rtrk.atcommand.Action\022\017\n\007MMSCURL" +
+      "\030\005 \001(\t\0226\n\014protocolType\030\006 \001(\0162 .com.rtrk." +
+      "atcommand.ProtocolType\022\017\n\007gateway\030\007 \001(\t\022" +
+      "\014\n\004port\030\010 \001(\005\022:\n\016validityPeriod\030\t \001(\0162\"." +
+      "com.rtrk.atcommand.ValidityPeriod\022.\n\010pri",
+      "ority\030\n \001(\0162\034.com.rtrk.atcommand.Priorit" +
+      "y\022\022\n\nsendReport\030\013 \001(\010\022\022\n\nreadReport\030\014 \001(" +
+      "\010\022:\n\016addressVisible\030\r \001(\0162\".com.rtrk.atc" +
+      "ommand.AddressVisible\0225\n\010mmsClass\030\016 \001(\0162" +
+      "#.com.rtrk.atcommand.MMSMessageClass\022\017\n\007" +
+      "charset\030\017 \001(\t\022:\n\016titleInputMode\030& \001(\0162\"." +
+      "com.rtrk.atcommand.TitleInputMode\022<\n\017ope" +
+      "rateFunction\030\020 \001(\0162#.com.rtrk.atcommand." +
+      "OperateFunction\022<\n\017operateWriteMMS\030\021 \001(\016" +
+      "2#.com.rtrk.atcommand.OperateWriteMMS\022\020\n",
+      "\010opstring\030\022 \001(\t\022\014\n\004from\030\023 \001(\005\022\n\n\002to\030\024 \001(" +
+      "\005\022>\n\020operateManageMMS\030) \001(\0162$.com.rtrk.a" +
+      "tcommand.OperateManageMMS\022\020\n\010MMSIndex\030\025 " +
+      "\001(\005\022\023\n\013fromAddress\030\026 \001(\t\022\027\n\017isNotDownloa" +
+      "ded\030\027 \001(\010\022\014\n\004date\030\030 \001(\t\022\014\n\004time\030\031 \001(\t\022\023\n" +
+      "\013messageSize\030\032 \001(\005\022\014\n\004para\030\033 \001(\005\022:\n\016para" +
+      "OutputMode\030+ \001(\0162\".com.rtrk.atcommand.Ti" +
+      "tleInputMode\022:\n\016operateReadMMS\030* \001(\0162\".c" +
+      "om.rtrk.atcommand.OperateReadMMS\022\020\n\010file" +
+      "Name\030\034 \001(\t\022\024\n\014downloadSize\030\035 \001(\005\022@\n\021oper",
+      "ateReceiveMMS\030, \001(\0162%.com.rtrk.atcommand" +
+      ".OperateReceiveMMS\022\020\n\010checksum\030\036 \001(\005\022\032\n\022" +
+      "callPriorityHigher\030- \001(\010\022\024\n\014DURAttribute" +
+      "\030\037 \001(\003\022\032\n\022SMSMessageHandling\030  \001(\010\022\022\n\nen" +
+      "ableUSC2\030! \001(\010\022\021\n\tbigEndian\030\" \001(\010\022\023\n\013out" +
+      "putStyle\030# \001(\010\022\020\n\010fileType\030$ \001(\005\022\022\n\nisRe" +
+      "sponse\030\' \001(\010\022\023\n\013description\030( \001(\t\022:\n\016ope" +
+      "rateSendMMS\030. \001(\0162\".com.rtrk.atcommand.O" +
+      "perateSendMMS\"\254\n\n\017QuecCellCommand\022<\n\013mes" +
+      "sageType\030\001 \002(\0162\'.com.rtrk.atcommand.Quec",
+      "CellMessageType\022*\n\006action\030\002 \002(\0162\032.com.rt" +
+      "rk.atcommand.Action\0222\n\006status\030\006 \001(\0162\".co" +
+      "m.rtrk.atcommand.OperatorStatus\022\030\n\020opera" +
+      "torInString\030\007 \001(\t\022\035\n\025operatorInShortStri" +
+      "ng\030\010 \001(\t\022\030\n\020operatorInNumber\030\t \001(\005\022\016\n\006in" +
+      "dexN\030\n \001(\005\022\030\n\020locationAreaCode\030\013 \001(\005\022\016\n\006" +
+      "cellID\030\014 \001(\005\022\037\n\027baseStationIdentityCode\030" +
+      "\r \001(\005\022\024\n\014receiveLevel\030\016 \001(\005\022+\n#absoluteR" +
+      "adioFrequencyChannelNumber\030\017 \001(\005\022<\n\017engi" +
+      "neeringMode\0303 \001(\0162#.com.rtrk.atcommand.E",
+      "ngineeringMode\022&\n\004dump\030\020 \001(\0162\030.com.rtrk." +
+      "atcommand.Dump\022\031\n\021mobileCountryCode\030\021 \001(" +
+      "\005\022\031\n\021mobileNetworkCode\030\022 \001(\005\022\037\n\027broadcas" +
+      "tControlChannel\030\023 \001(\005\022\031\n\021receiveSignalLe" +
+      "ve\030\024 \001(\001\022\n\n\002c1\030\025 \001(\005\022\n\n\002c2\030\026 \001(\005\022\034\n\024tran" +
+      "smitPowerMaximum\030\027 \001(\001\022\032\n\022receiveLevelAc" +
+      "cess\030\030 \001(\005\022\021\n\ttimeslots\030\031 \001(\005\022\021\n\tMAIOVal" +
+      "ue\030\032 \001(\005\022\020\n\010HSNValue\030\033 \001(\005\022\013\n\003TCH\030\034 \001(\005\022" +
+      "\025\n\rtimingAdvance\030\035 \001(\005\022\024\n\014RXQualitySub\030\036" +
+      " \001(\005\022\025\n\rRXQualityFull\030\037 \001(\005\022\"\n\032numberOfN",
+      "eighboringSixCell\030  \001(\005\022\020\n\010band1900\030! \001(" +
+      "\010\022,\n\007rrState\030\" \001(\0162\033.com.rtrk.atcommand." +
+      "RRState\022\023\n\013channelType\030# \001(\t\022\027\n\017automati" +
+      "cReport\030$ \001(\010\022\014\n\004line\030% \001(\005\022\025\n\rforbidden" +
+      "Data\030& \001(\t\022&\n\004band\030\' \001(\0162\030.com.rtrk.atco" +
+      "mmand.Band\022\r\n\005value\030( \001(\005\022\016\n\006arcfn1\030) \001(" +
+      "\005\022\016\n\006arcfn2\030* \001(\005\022\016\n\006arcfn3\030+ \001(\005\022\022\n\nisR" +
+      "esponse\030- \001(\010\022\023\n\013description\030. \001(\t\022\025\n\rlo" +
+      "ckFrequency\030/ \001(\010\022\023\n\013MEHasLocked\0300 \001(\010\022B" +
+      "\n\022forbidOperatorMode\0301 \001(\0162&.com.rtrk.at",
+      "command.ForbidOperatorMode\022 \n\030MEHaveLock" +
+      "edCertainARCFN\0302 \001(\010\"\207\003\n\020RecordingComman" +
+      "d\022=\n\013messageType\030\001 \002(\0162(.com.rtrk.atcomm" +
+      "and.RecordingMessageType\022*\n\006action\030\002 \002(\016" +
+      "2\032.com.rtrk.atcommand.Action\022:\n\016recordin" +
+      "gState\030\005 \001(\0162\".com.rtrk.atcommand.Record" +
+      "ingState\022\020\n\010fileName\030\006 \001(\t\022.\n\006format\030\007 \001" +
+      "(\0162\036.com.rtrk.atcommand.FileFormat\022\016\n\006re" +
+      "peat\030\010 \001(\010\022\016\n\006volume\030\t \001(\005\0220\n\007channel\030\n " +
+      "\001(\0162\037.com.rtrk.atcommand.PlayChannel\022\017\n\007",
+      "control\030\013 \001(\005\022\022\n\nisResponse\030\016 \001(\010\022\023\n\013des" +
+      "cription\030\017 \001(\t\"\317\004\n\013SMTPCommand\0228\n\013messag" +
+      "eType\030\001 \002(\0162#.com.rtrk.atcommand.SMTPMes" +
+      "sageType\022*\n\006action\030\002 \002(\0162\032.com.rtrk.atco" +
+      "mmand.Action\022\014\n\004user\030\006 \001(\t\022\020\n\010password\030\007" +
+      " \001(\t\022\024\n\014emailAddress\030\010 \001(\t\022\014\n\004name\030\t \001(\t" +
+      "\022\025\n\rserverAddress\030\n \001(\t\022\014\n\004port\030\013 \001(\005\0228\n" +
+      "\rrecipientMode\030\014 \001(\0162!.com.rtrk.atcomman" +
+      "d.RecipientMode\0228\n\rrecipientType\030\r \001(\0162!" +
+      ".com.rtrk.atcommand.RecipientType\022\016\n\006res",
+      "ult\030\017 \001(\005\022,\n\007charset\030\026 \001(\0162\033.com.rtrk.at" +
+      "command.Charset\022\r\n\005title\030\020 \001(\t\022\017\n\007timeou" +
+      "t\030\021 \001(\005\022\021\n\tfileIndex\030\022 \001(\005\022\020\n\010fileName\030\023" +
+      " \001(\t\022\020\n\010fileSize\030\024 \001(\005\022\032\n\022needAuthentica" +
+      "tion\030\025 \001(\010\022\022\n\nisResponse\030\027 \001(\010\022\023\n\013descri" +
+      "ption\030\016 \001(\t\022#\n\033configureNeedAuthenticati" +
+      "on\030\030 \001(\010\"\222\002\n\nSTKCommand\0227\n\013messageType\030\001" +
+      " \002(\0162\".com.rtrk.atcommand.STKMessageType" +
       "\022*\n\006action\030\002 \002(\0162\032.com.rtrk.atcommand.Ac" +
-      "tion\022:\n\016operatorStatus\030\006 \001(\0162\".com.rtrk." +
-      "atcommand.OperatorStatus\022\020\n\010operator\030! \001" +
-      "(\t\022\026\n\016operatorNumber\030\007 \001(\005\022F\n\014operatorMo" +
-      "de\030\010 \001(\0162 .com.rtrk.atcommand.OperatorMo",
-      "de:\016AUTOMATIC_MODE\022T\n\016operatorFormat\030\t \001" +
-      "(\0162\".com.rtrk.atcommand.OperatorFormat:\030" +
-      "LONG_FORMAT_ALPHANUMERIC\022L\n\027networkRegis" +
-      "trationMode\030\n \001(\0162+.com.rtrk.atcommand.N" +
-      "etworkRegistrationMode\022\030\n\020locationAreaCo" +
-      "de\030\013 \001(\t\022\016\n\006cellID\030\014 \001(\t\022\014\n\004rssi\030\r \001(\005\022\013" +
-      "\n\003ber\030\016 \001(\005\022\r\n\005index\030\017 \001(\005\022\020\n\010numericn\030\020" +
-      " \001(\t\022\016\n\006alphan\030\021 \001(\t\022\016\n\006opBand\030\022 \001(\t\022<\n\013" +
-      "engModeDump\030\023 \001(\0162\'.com.rtrk.atcommand.E" +
-      "ngineeringModeDump\022&\n\004band\030\024 \001(\0162\030.com.r",
-      "trk.atcommand.Band\022\021\n\tfrequency\030\025 \001(\005\022\026\n" +
-      "\016signalStrength\030\026 \001(\005\022.\n\010band1900\030\027 \001(\0162" +
-      "\034.com.rtrk.atcommand.Band1900\022\016\n\006arfcn1\030" +
-      "\030 \001(\005\022\016\n\006arfcn2\030\031 \001(\005\022\016\n\006arfcn3\030\032 \001(\005\022\022\n" +
-      "\nisResponse\030\033 \001(\010\022\023\n\013description\030\034 \001(\t\022P" +
-      "\n\031networkRegistrationStatus\030\035 \001(\0162-.com." +
-      "rtrk.atcommand.NetworkRegistrationStatus" +
-      "\022Y\n\017engineeringMode\030\036 \001(\0162#.com.rtrk.atc" +
-      "ommand.EngineeringMode:\033SWITCH_OFF_ENGIN" +
-      "EERING_MODE\022S\n\014lockFreqMode\030\037 \001(\0162%.com.",
-      "rtrk.atcommand.LockFrequencyMode:\026DISABL" +
-      "E_LOCK_FREQUENCY\022\023\n\013lockedARCFN\030  \001(\010\"\327\007" +
-      "\n\022CallRelatedCommand\022?\n\013messageType\030\001 \002(" +
-      "\0162*.com.rtrk.atcommand.CallRelatedMessag" +
-      "eType\022*\n\006action\030\002 \002(\0162\032.com.rtrk.atcomma" +
-      "nd.Action\022\016\n\006number\030\027 \001(\t\022\023\n\013GSMModifier" +
-      "\030\006 \001(\t\022\036\n\026interworkinWindowsSize\030\007 \001(\005\022\030" +
-      "\n\020mobileWindowSize\030\010 \001(\005\022\032\n\022acknowledmen" +
-      "tTimer\030\t \001(\005\022\037\n\027retransimissionAttempts\030" +
-      "\n \001(\005\022\022\n\nRPLVersion\030\013 \001(\005\022\032\n\022resequencin",
-      "gPeriod\030\014 \001(\005\022@\n\naddresType\030\016 \001(\0162\037.com." +
-      "rtrk.atcommand.AddressType:\013UNKNOW_TYPE\022" +
-      "\r\n\005index\030\017 \001(\005\022,\n\007callDir\030\020 \001(\0162\033.com.rt" +
-      "rk.atcommand.CallDir\0220\n\tcallState\030\021 \001(\0162" +
-      "\035.com.rtrk.atcommand.CallState\022.\n\010callMo" +
-      "de\030\022 \001(\0162\034.com.rtrk.atcommand.CallMode\022\035" +
-      "\n\025callIsOneOfMultiparty\030\023 \001(\010\022\025\n\rspeechC" +
-      "hannel\030\024 \001(\005\022\022\n\ndisableATH\030\025 \001(\010\022\026\n\016setU" +
-      "pVoiceCall\030\026 \001(\010\022\022\n\nisResponse\030\030 \001(\010\022\023\n\013" +
-      "description\030\031 \001(\t\022\t\n\001n\030\032 \001(\005\022&\n\036serviceR",
-      "eportingControlEnabled\030\033 \001(\010\022\034\n\024enableEx" +
-      "tendedFormat\030\034 \001(\010\0222\n\nschemeMode\030\035 \001(\0162\036" +
-      ".com.rtrk.atcommand.SchemeMode\022<\n\017altern" +
-      "atingMode\030\036 \001(\0162#.com.rtrk.atcommand.Alt" +
-      "ernatingMode\0222\n\nspeechMode\030\037 \001(\0162\036.com.r" +
-      "trk.atcommand.SpeechMode\022%\n\035enableReport" +
-      "SpeechChannelType\030  \001(\010\"\350\016\n\nSMSCommand\0227" +
-      "\n\013messageType\030\001 \002(\0162\".com.rtrk.atcommand" +
-      ".SMSMessageType\022*\n\006action\030\002 \002(\0162\032.com.rt" +
-      "rk.atcommand.Action\022O\n\016messageService\030- ",
-      "\001(\0162\".com.rtrk.atcommand.MessageService:" +
-      "\023GSM_03_40_AND_03_41\022(\n mobileTerminated" +
-      "MessageSupported\030\006 \001(\010\022&\n\036mobileOriented" +
-      "MessageSupported\030\007 \001(\010\022%\n\035broadcastTypeM" +
-      "essageSupported\030\010 \001(\010\022B\n\rmessageFormat\030\t" +
-      " \001(\0162!.com.rtrk.atcommand.MessageFormat:" +
-      "\010PDU_MODE\022\021\n\tSCAddress\030\n \001(\t\022\023\n\013toSCAddr" +
-      "ess\030\013 \001(\005\022\014\n\004mem1\030\014 \001(\t\022\014\n\004mem2\030\r \001(\t\022\014\n" +
-      "\004mem3\030\016 \001(\t\022\r\n\005index\030\017 \001(\005\022O\n\007delFlag\030\020 " +
-      "\001(\0162\033.com.rtrk.atcommand.DelFlag:!DELETE",
-      "_MESSAGE_SPECIFIED_IN_INDEX\022\r\n\005alpha\030\021 \001" +
-      "(\t\022\032\n\022destinationAddress\030\022 \001(\t\022\014\n\004data\030\023" +
-      " \001(\014\022\016\n\006length\030\024 \001(\005\022\032\n\022originatingAddre" +
-      "ss\030\025 \001(\t\022\013\n\003pdu\030\026 \001(\005\022\036\n\026serviceCenterTi" +
-      "meStamp\030\027 \001(\t\022\034\n\024TPDestinationAddress\030\030 " +
-      "\001(\005\022\034\n\024TPOriginatingAddress\030\031 \001(\005\022\n\n\002fo\030" +
-      "\032 \001(\005\022\031\n\021messageIdentifier\030\033 \001(\005\022\032\n\022prot" +
-      "ocolIdentifier\030\034 \001(\005\0228\n\rmessageStatus\030\035 " +
-      "\001(\0162!.com.rtrk.atcommand.MessageStatus\022\026" +
-      "\n\016validityPeriod\030\036 \001(\005\022\030\n\020messageReferen",
-      "ce\030\037 \001(\005\022\016\n\006ackpdu\030  \001(\005\022\023\n\013commandType\030" +
-      "! \001(\005\022\025\n\rmessageNumber\030\" \001(\005\022F\n\nbufferMo" +
-      "de\030$ \001(\0162\036.com.rtrk.atcommand.BufferMode" +
-      ":\022COMMAND_IS_FLUSHED\022\017\n\007profile\030% \001(\005\022\032\n" +
-      "\022messageIdentifiers\030& \001(\t\022\014\n\004dcss\030\' \001(\t\022" +
-      "\034\n\024showValuesResultCode\030( \001(\010\022\027\n\017dataCod" +
-      "inScheme\030) \001(\005\022\014\n\004type\030* \001(\t\022\022\n\nfirstOct" +
-      "et\030, \001(\005\022\022\n\nisResponse\030. \001(\010\022\023\n\013descript" +
-      "ion\030/ \001(\t\022<\n\013messageMode\0300 \001(\0162\037.com.rtr" +
-      "k.atcommand.MessageMode:\006NORMAL\022;\n\020messa",
-      "geStatusPDU\0301 \001(\0162!.com.rtrk.atcommand.M" +
-      "essageStatus\022\031\n\021messageStatusText\0302 \001(\t\022" +
-      "c\n\014storeSMSRule\0303 \001(\0162 .com.rtrk.atcomma" +
-      "nd.StoreSMSRule:+NO_SMS_DELIVER_INDICATI" +
-      "ONS_ARE_ROUTED_TO_TE\022[\n\014storeCMBRule\030# \001" +
-      "(\0162 .com.rtrk.atcommand.StoreCBMRule:#NO" +
-      "_CMB_INCICATIONS_ARE_ROUTED_TO_TE\022\n\n\002ds\030" +
-      "4 \001(\010\022\033\n\023enableToStoreClass0\0305 \001(\010\022\203\001\n\021m" +
-      "essageIndication\0306 \001(\0162%.com.rtrk.atcomm" +
-      "and.MessageIndication:ABUFFER_UNSOLICITE",
-      "D_RESULT_CODES_IN_TA_WHEN_TA_TE_LINK_IS_" +
-      "RESERVED\022\036\n\026messageTypeNotAccepted\0307 \001(\010" +
-      "\022P\n\010codeMode\0308 \001(\0162\034.com.rtrk.atcommand." +
-      "CodeMode: CODE_MODE_ACCORDING_WITH_SIEME" +
-      "NS\"\234\003\n\020PhonebookCommand\022=\n\013messageType\030\001" +
-      " \002(\0162(.com.rtrk.atcommand.PhonebookMessa" +
+      "tion\022\021\n\tturnOnSTK\030\006 \001(\010\022\017\n\007profile\030\007 \001(\t",
+      "\022\022\n\nsatCommand\030\010 \001(\t\022\030\n\020terminalResponse" +
+      "\030\t \001(\t\022\022\n\nisResponse\030\n \001(\010\022\023\n\013descriptio" +
+      "n\030\013 \001(\t\022$\n\003stk\030\014 \001(\0162\027.com.rtrk.atcomman" +
+      "d.STK\"\356\007\n\016GeneralCommand\022<\n\013messageType\030" +
+      "\001 \002(\0162\'.com.rtrk.atcommand.GeneralMesssa" +
       "geType\022*\n\006action\030\002 \002(\0162\032.com.rtrk.atcomm" +
-      "and.Action\022\017\n\007storage\030\022 \001(\t\022\017\n\007nlength\030\006" +
-      " \001(\005\022\017\n\007tlength\030\007 \001(\005\022\r\n\005index\030\010 \001(\005\022\016\n\006" +
-      "number\030\t \001(\t\0222\n\nnumberType\030\n \001(\0162\036.com.r",
-      "trk.atcommand.NumberType\022\014\n\004text\030\013 \001(\t\022\016" +
-      "\n\006index1\030\014 \001(\005\022\016\n\006index2\030\r \001(\005\022\020\n\010findTe" +
-      "xt\030\016 \001(\t\022\016\n\006alphax\030\017 \001(\t\022\017\n\007numberx\030\020 \001(" +
-      "\t\022\r\n\005typex\030\021 \001(\005\022\022\n\nisResponse\030\023 \001(\010\022\023\n\013" +
-      "description\030\024 \001(\t\"\333\005\n\013GPRSCommand\0228\n\013mes" +
-      "sageType\030\001 \002(\0162#.com.rtrk.atcommand.GPRS" +
-      "MessageType\022*\n\006action\030\002 \002(\0162\032.com.rtrk.a" +
-      "tcommand.Action\022\020\n\010attached\030\032 \001(\010\022\013\n\003cid" +
-      "\030\006 \001(\005\022\017\n\007PDPType\030\007 \001(\t\022\013\n\003APN\030\010 \001(\t\022\022\n\n" +
-      "PDPAddress\030\t \001(\t\022\r\n\005dComp\030\n \001(\005\022\r\n\005hComp",
-      "\030\013 \001(\005\022\022\n\nprecedence\030\014 \001(\005\022\r\n\005delay\030\r \001(" +
-      "\005\022\023\n\013reliability\030\016 \001(\005\022\014\n\004peak\030\017 \001(\005\022\014\n\004" +
-      "mean\030\020 \001(\005\022\013\n\003L2P\030\021 \001(\t\022\r\n\005class\030\022 \001(\t\022B" +
-      "\n\022eventReportingMode\030\023 \001(\0162&.com.rtrk.at" +
-      "command.EventReportingMode\022L\n\027networkReg" +
-      "istrationMode\030\024 \001(\0162+.com.rtrk.atcommand" +
-      ".NetworkRegistrationMode\022P\n\031networkRegis" +
-      "trationStatus\030\025 \001(\0162-.com.rtrk.atcommand" +
-      ".NetworkRegistrationStatus\022\013\n\003lac\030\026 \001(\t\022" +
-      "\n\n\002ci\030\027 \001(\t\0224\n\013serviceType\030\030 \001(\0162\037.com.r",
-      "trk.atcommand.ServiceType\022\026\n\016multislotCl" +
-      "ass\030\031 \001(\005\022\022\n\nisResponse\030\033 \001(\010\022\023\n\013descrip" +
-      "tion\030\034 \001(\t\022\023\n\013activatePDP\030\035 \001(\010\"\213\016\n\014TCPI" +
-      "PCommand\0229\n\013messageType\030\001 \002(\0162$.com.rtrk" +
-      ".atcommand.TCPIPMessageType\022*\n\006action\030\002 " +
-      "\002(\0162\032.com.rtrk.atcommand.Action\022\r\n\005index" +
-      "\0306 \001(\005\022\014\n\004mode\030\006 \001(\t\0226\n\014serverFormat\030\007 \001" +
-      "(\0162 .com.rtrk.atcommand.ServerFormat\022\014\n\004" +
-      "port\030\010 \001(\005\022\022\n\ndomainName\030\t \001(\t\022\016\n\006length" +
-      "\030\n \001(\005\022\013\n\003APN\030\013 \001(\t\022\020\n\010username\030\014 \001(\t\022\020\n",
-      "\010password\030\r \001(\t\0221\n\004rate\030\016 \001(\0162\030.com.rtrk" +
-      ".atcommand.Rate:\tRATE_9600\022\r\n\005state\030\017 \001(" +
-      "\t\022\023\n\013socketState\030\020 \001(\t\022\023\n\013serverState\030\021 " +
-      "\001(\t\022\022\n\nprimaryDNS\030\022 \001(\t\022\023\n\013seondaryDNS\030\023" +
-      " \001(\t\022\014\n\004time\030\025 \001(\003\022P\n\nsendPrompt\030\026 \001(\0162\036" +
-      ".com.rtrk.atcommand.SendPrompt:\034ECHO_PRO" +
-      "MPT_AND_SHOW_SEND_OK\022\013\n\003num\030\027 \001(\005\022,\n\004typ" +
-      "e\030\030 \001(\0162\036.com.rtrk.atcommand.ServerType\022" +
-      "\013\n\003max\030\031 \001(\003\022\022\n\ndialNumber\030\032 \001(\t\0222\n\nconn" +
-      "ection\030\033 \001(\0162\036.com.rtrk.atcommand.Connec",
-      "tion\022\025\n\rnumberOfRetry\030\034 \001(\005\022\020\n\010waitTime\030" +
-      "\035 \001(\005\022\020\n\010sendSize\030\036 \001(\005\022\016\n\006escape\030\037 \001(\010\022" +
-      ",\n\007channel\030  \001(\0162\033.com.rtrk.atcommand.Ch" +
-      "annel\022\t\n\001n\030! \001(\005\022\014\n\004sent\030\" \001(\005\022\r\n\005acked\030" +
-      "# \001(\005\022\016\n\006nAcked\030$ \001(\005\022j\n\020receivedDataMod" +
-      "e\030% \001(\0162$.com.rtrk.atcommand.ReceivedDat" +
-      "aMode:*OUTPUT_RECEIVED_DATA_THROUGH_UART" +
-      "_DIRECTLY\022\n\n\002id\030& \001(\005\0226\n\014serverClinet\030\' " +
-      "\001(\0162 .com.rtrk.atcommand.ServerClient\022\013\n" +
-      "\003sid\030( \001(\005\022\016\n\006number\030) \001(\005\022\014\n\004host\030* \001(\t",
-      "\022\017\n\007timeout\030+ \001(\005\022\022\n\npingNumber\030, \001(\005\0222\n" +
-      "\npingResult\030- \001(\0162\036.com.rtrk.atcommand.P" +
-      "ingResult\022\r\n\005bytes\030. \001(\005\022\013\n\003ttl\030/ \001(\005\0224\n" +
-      "\013finalResult\0300 \001(\0162\037.com.rtrk.atcommand." +
-      "FinalResult\022\020\n\010received\0301 \001(\005\022\014\n\004lost\0302 " +
-      "\001(\005\022\013\n\003min\0303 \001(\003\022\013\n\003avg\0304 \001(\003\022\016\n\006server\030" +
-      "5 \001(\t\022\022\n\nisResponse\0307 \001(\010\022\023\n\013description" +
-      "\0308 \001(\t\022.\n\010ipHeader\030\024 \001(\0162\034.com.rtrk.atco" +
-      "mmand.IPHeader\022(\n\005timer\0309 \001(\0162\031.com.rtrk" +
-      ".atcommand.Timer\022\031\n\021configureAsServer\030: ",
-      "\001(\010\0222\n\nbearerType\030; \001(\0162\036.com.rtrk.atcom" +
-      "mand.BearerType\022\023\n\013showAddress\030< \001(\010\0226\n\014" +
-      "transferMode\030= \001(\0162 .com.rtrk.atcommand." +
-      "TransferMode\022!\n\031showTransportProtocolTyp" +
-      "e\030> \001(\010\022\"\n\032enableMultipleTCPIPSession\030? " +
-      "\001(\010\022\020\n\010echoData\030@ \001(\010\022H\n\025synchronization" +
-      "Result\030A \001(\0162).com.rtrk.atcommand.Synchr" +
-      "onizationResult\022\024\n\014CSDDataSpeed\030B \001(\005\"\213\t" +
-      "\n\033SupplementaryServiceCommand\022H\n\013message" +
-      "Type\030\001 \002(\01623.com.rtrk.atcommand.Suppleme",
-      "ntaryServiceMessageType\022*\n\006action\030\002 \002(\0162" +
-      "\032.com.rtrk.atcommand.Action\022(\n\005reads\030\026 \001" +
-      "(\0162\031.com.rtrk.atcommand.Reads\022:\n\016forward" +
-      "ingMode\030\006 \001(\0162\".com.rtrk.atcommand.Forwa" +
-      "rdingMode\022\016\n\006number\030\007 \001(\t\022\014\n\004type\030\010 \001(\005\022" +
-      "\022\n\nsubaddress\030\t \001(\t\022\016\n\006satype\030\n \001(\005\022(\n\005c" +
-      "lass\030\013 \001(\0162\031.com.rtrk.atcommand.Class\022\014\n" +
-      "\004time\030\014 \001(\005\022\016\n\006active\030\r \001(\010\022\021\n\tenableCUG" +
-      "\030\016 \001(\010\022\020\n\010CUGIndex\030\017 \001(\005\022&\n\004info\030\020 \001(\0162\030" +
-      ".com.rtrk.atcommand.Info\022&\n\004clip\030\021 \001(\0162\030",
-      ".com.rtrk.atcommand.CLIP\022\022\n\nUSSDString\030\022" +
-      " \001(\t\022\030\n\020dataCodingScheme\030\023 \001(\005\022(\n\005code1\030" +
-      "\024 \001(\0162\031.com.rtrk.atcommand.Code1\022(\n\005code" +
-      "2\030\025 \001(\0162\031.com.rtrk.atcommand.Code2\022\022\n\nis" +
-      "Response\030\027 \001(\010\022\023\n\013description\030\030 \001(\t\022\032\n\022e" +
-      "nablePresentation\030\031 \001(\010\022 \n\030enableCallWai" +
-      "tingControl\030\032 \001(\010\022\020\n\010callHold\030\033 \001(\005\022$\n\034d" +
-      "isplayUnsolicitedResultCode\030\034 \001(\010\022\026\n\016sho" +
-      "wCallNumber\030\035 \001(\010\022P\n\003aoc\030\036 \001(\0162+.com.rtr" +
-      "k.atcommand.AdjustmentOutgoingCalls:\026PRE",
-      "SENTATION_INDICATOR\0222\n\003css\030\037 \001(\0162%.com.r" +
-      "trk.atcommand.CLIRServiceStatus\022.\n&enabl" +
-      "eResultCodePresentationOriginated\030  \001(\010\022" +
-      ".\n&enableResultCodePresentationTerminate" +
-      "d\030# \001(\010\022\026\n\016showAlphaField\030! \001(\010\022Z\n\nssdCo" +
-      "ntrol\030\" \001(\0162\036.com.rtrk.atcommand.SSDCont" +
-      "rol:&DISABLE_RESULT_CODE_PRESENTATION_IN" +
-      "_TA\"\245\n\n\014AudioCommand\0229\n\013messageType\030\001 \002(" +
-      "\0162$.com.rtrk.atcommand.AudioMessageType\022" +
-      "*\n\006action\030\002 \002(\0162\032.com.rtrk.atcommand.Act",
-      "ion\022<\n\017speakerLoudness\030! \001(\0162#.com.rtrk." +
-      "atcommand.SpeakerLoudness\022\030\n\020internalDur" +
-      "ation\030\006 \001(\005\022\020\n\010duration\030\007 \001(\003\022\022\n\nDTMFStr" +
-      "ing\030\010 \001(\t\0220\n\tsoundMode\030\t \001(\0162\035.com.rtrk." +
-      "atcommand.SoundMode\022\r\n\005level\030\n \001(\005\022\014\n\004mu" +
-      "te\030\013 \001(\010\022\021\n\tgainLevel\030\014 \001(\005\022@\n\021microphon" +
-      "eChannel\030\r \001(\0162%.com.rtrk.atcommand.Micr" +
-      "ophoneChannel\022\020\n\010testIsOn\030\016 \001(\010\022\021\n\tfrequ" +
-      "ency\030\020 \001(\005\022\020\n\010periodON\030\021 \001(\005\022\021\n\tperiodOF" +
-      "F\030\022 \001(\005\022D\n\noutputPath\030\023 \001(\0162\036.com.rtrk.a",
-      "tcommand.OutputPath:\020AUTO_OUTPUT_PATH\022A\n" +
-      "\017operateFunction\030\024 \001(\0162(.com.rtrk.atcomm" +
-      "and.AudioOperateFunction\022:\n\016functionStat" +
-      "us\030\025 \001(\0162\".com.rtrk.atcommand.FunctionSt" +
-      "atus\022\023\n\013prefixPause\030\027 \001(\005\022\024\n\014lowThreshol" +
-      "d\030\030 \001(\005\022\025\n\rhighThreshold\030\031 \001(\005\022<\n\017persis" +
-      "tenceTime\030\033 \001(\0162#.com.rtrk.atcommand.Per" +
-      "sistenceTime\022\024\n\014uplinkVolume\030\034 \001(\005\022\026\n\016do" +
-      "wnlinkVolume\030\035 \001(\005\022\027\n\017continuanceTime\030\036 " +
-      "\001(\003\022\020\n\010muteTime\030\037 \001(\003\022\022\n\nisResponse\030\" \001(",
-      "\010\022\023\n\013description\030# \001(\t\0224\n\013speakerMode\030$ " +
-      "\001(\0162\037.com.rtrk.atcommand.SpeakerMode\0226\n\014" +
-      "audioChannel\030% \001(\0162 .com.rtrk.atcommand." +
-      "AudioChannel\022\030\n\020startPlayingTone\030& \001(\010\022N" +
-      "\n\rtoneDetection\030\026 \001(\0162!.com.rtrk.atcomma" +
-      "nd.ToneDetection:\024CLOSE_TONE_DETECTION\0224" +
-      "\n\013dtmfOperate\030\' \001(\0162\037.com.rtrk.atcommand" +
-      ".DTMFOperate\022.\n\010dtmfCode\030\032 \001(\0162\034.com.rtr" +
-      "k.atcommand.DTMFCode\022=\n\talgorithm\030\017 \001(\0162" +
-      "\035.com.rtrk.atcommand.Algorithm:\013ALGORITH",
-      "M_1\"\243\005\n\026HardwareRelatedCommand\022C\n\013messag" +
-      "eType\030\001 \002(\0162..com.rtrk.atcommand.Hardwar" +
-      "eRelatedMessageType\022*\n\006action\030\002 \002(\0162\032.co" +
-      "m.rtrk.atcommand.Action\022\014\n\004time\030\022 \001(\t\022\020\n" +
-      "\010setAlarm\030\006 \001(\010\022*\n\006repeat\030\007 \001(\0162\032.com.rt" +
-      "rk.atcommand.Repeat\022-\n\005power\030\010 \001(\0162\036.com" +
-      ".rtrk.atcommand.AlarmPower\0228\n\rbatteryCha" +
-      "rge\030\t \001(\0162!.com.rtrk.atcommand.BatteryCh" +
-      "arge\022\036\n\026batteryConnectionLevel\030\n \001(\005\022\026\n\016" +
-      "batteryVoltage\030\013 \001(\005\0222\n\nreadStatus\030\014 \001(\016",
-      "2\036.com.rtrk.atcommand.ReadStatus\0220\n\tslow" +
-      "Clock\030\016 \001(\0162\035.com.rtrk.atcommand.SlowClo" +
-      "ck\022,\n\007ledMode\030\017 \001(\0162\033.com.rtrk.atcommand" +
-      ".LedMode\0228\n\rthresholdType\030\020 \001(\0162!.com.rt" +
-      "rk.atcommand.ThresholdType\022\021\n\tthreshold\030" +
-      "\021 \001(\005\022\022\n\nisResponse\030\023 \001(\010\022\023\n\013description" +
-      "\030\024 \001(\t\022!\n\031thresholdFunctionTurnedON\030\025 \001(" +
-      "\010\"\202\003\n\rOthersCommand\022:\n\013messageType\030\001 \002(\016" +
-      "2%.com.rtrk.atcommand.OthersMessageType\022" +
-      "*\n\006action\030\002 \002(\0162\032.com.rtrk.atcommand.Act",
-      "ion\022\022\n\nechoModeOn\030\006 \001(\010\022\'\n\037commandLineTe" +
-      "rminationCharacter\030\007 \001(\005\022#\n\033responseForm" +
-      "attingCharacter\030\014 \001(\005\022 \n\030responseEditing" +
-      "Character\030\r \001(\005\022.\n\010timeMode\030\010 \001(\0162\034.com." +
-      "rtrk.atcommand.TimeMode\022,\n\007indMode\030\t \001(\016" +
-      "2\033.com.rtrk.atcommand.IndMode\022\022\n\nisRespo" +
-      "nse\030\n \001(\010\022\023\n\013description\030\013 \001(\t\"h\n\014ErrorC" +
-      "ommand\022(\n\005error\030\001 \001(\0162\031.com.rtrk.atcomma" +
-      "nd.Error\022.\n\010FTPError\030\002 \001(\0162\034.com.rtrk.at" +
-      "command.FTPError*\370\003\n\013CommandType\022\020\n\014HTTP",
-      "_COMMAND\020\000\022\020\n\014FILE_COMMAND\020\001\022\017\n\013FTP_COMM" +
-      "AND\020\002\022\017\n\013MMS_COMMAND\020\003\022\025\n\021QUEC_CELL_COMM" +
-      "AND\020\004\022\025\n\021RECORDING_COMMAND\020\005\022\020\n\014SMTP_COM" +
-      "MAND\020\006\022\017\n\013STK_COMMAND\020\007\022\023\n\017GENERAL_COMMA" +
-      "ND\020\010\022\034\n\030SERIAL_INTERFACE_COMMAND\020\t\022\032\n\026ST" +
-      "ATUS_CONTROL_COMMAND\020\n\022\027\n\023SIM_RELATED_CO" +
-      "MMAND\020\013\022\033\n\027NETWORK_SERVICE_COMMAND\020\014\022\030\n\024" +
-      "CALL_RELATED_COMMAND\020\r\022\017\n\013SMS_COMMAND\020\016\022" +
-      "\025\n\021PHONEBOOK_COMMAND\020\017\022\020\n\014GPRS_COMMAND\020\020" +
-      "\022\021\n\rTCPIP_COMMAND\020\021\022!\n\035SUPPLEMENTARY_SER",
-      "VICE_COMMAND\020\022\022\021\n\rAUDIO_COMMAND\020\023\022\034\n\030HAR" +
-      "DWARE_RELATED_COMMAND\020\024\022\022\n\016OTHERS_COMMAN" +
-      "D\020\025*6\n\006Action\022\010\n\004TEST\020\000\022\010\n\004READ\020\001\022\t\n\005WRI" +
-      "TE\020\002\022\r\n\tEXECUTION\020\003*|\n\014FileOpenMode\022\'\n#I" +
-      "F_NOT_EXISTS_CREATE_IF_EXISTS_OPEN\020\000\022\"\n\036" +
-      "IF_EXISTS_CREATE_AND_CLEAR_OLD\020\001\022\037\n\033IF_E" +
-      "XISTS_OPEN_IN_READ_MODE\020\002*T\n\023PointerMove" +
-      "mentMode\022\016\n\nFILE_BEGIN\020\000\022\037\n\033CURRENT_POSI" +
-      "TION_OF_POINTER\020\001\022\014\n\010FILE_END\020\002*7\n\022DataC" +
-      "onnectionMode\022\017\n\013ACTIVE_MODE\020\000\022\020\n\014PASSIV",
-      "E_MODE\020\001*\237\001\n\034TypeOfConfigurableParameter" +
-      "s\022\033\n\027MODE_OF_DATA_CONNECTION\020\000\022\021\n\rTRANSF" +
-      "ER_TYPE\020\001\022*\n&RESUMING_POINT_TO_RESUME_FI" +
-      "LE_TRANSFER\020\002\022#\n\037LOCAL_POSITION_OF_FILE_" +
-      "TRANSFER\020\003*A\n\014TransferType\022\030\n\024BINARY_TRA" +
-      "NSFER_TYPE\020\000\022\027\n\023ASCII_TRANSFER_TYPE\020\001*G\n" +
-      "\006Return\022.\n*RETURN_NO_INFORMATIONS_TRANSF" +
-      "ERED_FROM_FTP\020\000\022\r\n\tRETURN_OK\020\001*\272\001\n\010FileT" +
-      "ype\022\010\n\004TEXT\020\001\022\r\n\tTEXT_HTML\020\002\022\016\n\nTEXT_PLA" +
-      "IN\020\003\022\014\n\010TEXT_XML\020\004\022\t\n\005IMAGE\020\005\022\r\n\tIMAGE_G",
-      "IF\020\006\022\016\n\nIMAGE_JPEG\020\007\022\016\n\nIMAGE_TIFF\020\010\022\r\n\t" +
-      "IMAGE_PNP\020\t\022\016\n\nIMAGE_WBMP\020\n\022\t\n\005AUDIO\020\013\022\t" +
-      "\n\005VIDEO\020\014\022\010\n\004SMIL\020\r*\'\n\016OperateSendMMS\022\025\n" +
-      "\021START_TO_SEND_MMS\020\001*5\n\021OperateReceiveMM" +
-      "S\022 \n\034START_TO_RECEIVE_MMS_MESSAGE\020\001*\254\001\n\016" +
-      "OperateReadMMS\022\034\n\030VIEW_ORIGINATION_ADDRE" +
-      "SS\020\001\022\023\n\017VIEW_TO_ADDRESS\020\002\022\023\n\017VIEW_CC_ADD" +
-      "RESS\020\003\022\022\n\016VIEW_MMS_TITLE\020\004\022\024\n\020LIST_APPEN" +
-      "D_FILE\020\005\022(\n$READ_APPEND_FILE_DATA_OF_MMS" +
-      "_MESSAGE\020\006*@\n\020OperateManageMMS\022\026\n\022DELETE",
-      "_MMS_MESSAGE\020\000\022\024\n\020LIST_MMS_MESSAGE\020\001*7\n\017" +
-      "OperateWriteMMS\022\021\n\rCLEAN_OPERATE\020\000\022\021\n\rWR" +
-      "ITE_OPERATE\020\001*\256\001\n\017OperateFunction\022$\n CLE" +
-      "AR_ALL_CONTENT_OF_MMS_MESSAGE\020\000\022\026\n\022OPERA" +
-      "TE_TO_ADDRESS\020\001\022\026\n\022OPERATE_CC_ADDRESS\020\002\022" +
-      "\027\n\023OPERATE_BCC_ADDRESS\020\003\022\021\n\rOPERATE_TITL" +
-      "E\020\004\022\031\n\025OPERATE_FILE_APPENDED\020\005*!\n\014Protoc" +
-      "olType\022\021\n\rHHTP_PROTOCOL\020\001*\237\001\n\016ValidityPe" +
-      "riod\022\017\n\013TIME_1_HOUR\020\000\022\021\n\rTIME_12_HOURS\020\001" +
-      "\022\021\n\rTIME_24_HOURS\020\002\022\017\n\013TIME_2_DAYS\020\003\022\017\n\013",
-      "TIME_1_WEEK\020\004\022\020\n\014MAXIMUM_TIME\020\005\022\"\n\036USE_N" +
-      "ETWORK_CONFIGURATION_TIME\020\006*l\n\010Priority\022" +
-      "\020\n\014LOW_PRIORITY\020\000\022\023\n\017NORMAL_PRIORITY\020\001\022\021" +
-      "\n\rHIGH_PRIORITY\020\002\022&\n\"USE_NETWORK_CONFIGU" +
-      "RATION_PRIORITY\020\003*s\n\016AddressVisible\022\024\n\020H" +
-      "IDE_ANY_ADDRESS\020\000\022\034\n\030SHOW_EVEN_SECRET_AD" +
-      "DRESS\020\001\022-\n)USE_NETWORK_CONFIGURATION_ADD" +
-      "RESS_VISIBLE\020\002*\214\001\n\017MMSMessageClass\022\022\n\016PE" +
-      "RSONAL_CLASS\020\000\022\027\n\023ADVERTISEMENT_CLASS\020\001\022" +
-      "\027\n\023INFORMATIONAL_CLASS\020\002\022\016\n\nAUTO_CLASS\020\003",
-      "\022#\n\037USE_NETWORK_CONFIGURATION_CLASS\020\004*5\n" +
-      "\016TitleInputMode\022\020\n\014PDU_HEX_MODE\020\000\022\021\n\rTEX" +
-      "T_BIN_MODE\020\001*P\n\004Band\022\020\n\014GSM_900_BAND\020\000\022\021" +
-      "\n\rDCS_1800_BAND\020\001\022\021\n\rPCS_1900_BAND\020\002\022\020\n\014" +
-      "GSM_850_BAND\020\003*\312\001\n\022ForbidOperatorMode\022\037\n" +
-      "\033READ_LINE_OF_FORBIDDEN_DATA\020\000\022 \n\034WRITE_" +
-      "LINE_OF_FORBIDDEN_DATA\020\001\022 \n\034CLEAN_LINE_O" +
-      "F_FORBIDDEN_DATA\020\002\022\034\n\030CLEAR_ALL_FORBIDDE" +
-      "N_DATA\020\003\022\027\n\023READ_FORBIDDEN_DATA\020\004\022\030\n\024WRI" +
-      "TE_FORBIDDEN_DATA\020\005*\257\001\n\007RRState\022\016\n\nNULL_",
-      "STATE\020\000\022\022\n\016INACTIVE_STATE\020\001\022\025\n\021CELL_SELE" +
-      "CT_STATE\020\002\022\016\n\nIDLE_STATE\020\003\022\020\n\014ACCESS_STA" +
-      "TE\020\004\022\031\n\025PACKET_TRANSFER_STATE\020\005\022\023\n\017DEDIC" +
-      "ATED_STATE\020\006\022\027\n\023CELL_RESELECT_STATE\020\007*\262\001" +
-      "\n\004Dump\022,\n(ONLY_DISPLAY_INFORMATION_OF_SE" +
-      "RVING_CALL\020\000\022A\n=DISPLAY_INFORMATION_OF_S" +
-      "ERVING_CELL_AND_1_6_NEIGHBORING_CELLS\020\001\022" +
-      "9\n5LIST_OF_ARCFN_AND_CALL_FREQUENCY_LIST" +
-      "_OF_SERVING_CELL\020\002*\203\001\n\017EngineeringMode\022\037" +
-      "\n\033SWITCH_OFF_ENGINEERING_MODE\020\000\022\036\n\032SWITC",
-      "H_ON_ENGINEERING_MODE\020\001\022/\n+SWITCH_ON_ENG" +
-      "INEERING_MODE_AND_ACTIVATE_URC\020\002*k\n\016Oper" +
-      "atorStatus\022\023\n\017UNKNOW_OPERATOR\020\000\022\026\n\022OPERA" +
-      "TOR_AVAILABLE\020\001\022\024\n\020CURRENT_OPERATOR\020\002\022\026\n" +
-      "\022FORBIDDEN_OPERATOR\020\003*:\n\013PlayChannel\022\014\n\010" +
-      "RECEIVER\020\000\022\013\n\007HEADSET\020\001\022\020\n\014LOUD_SPEAKER\020" +
-      "\002*O\n\nFileFormat\022\007\n\003AMR\020\003\022\r\n\tWAV_PCM16\020\r\022" +
-      "\014\n\010WAV_ALAW\020\016\022\014\n\010WAV_ULAW\020\017\022\r\n\tWAV_ADPCM" +
-      "\020\020*L\n\016RecordingState\022\036\n\032MODULE_IS_NOT_IN" +
-      "_RECORDING\020\000\022\032\n\026MOUDLE_IS_IN_RECORDING\020\001",
-      "*6\n\007Charset\022\t\n\005ASCII\020\000\022\t\n\005UTF_8\020\001\022\013\n\007GB_" +
-      "2312\020\002\022\010\n\004BIG5\020\003*O\n\rRecipientType\022\026\n\022REC" +
-      "EIVER_RECIPIENT\020\001\022\021\n\rCOPY_RECEIVER\020\002\022\023\n\017" +
-      "SECRET_RECEIVER\020\003*8\n\rRecipientMode\022\024\n\020DE" +
-      "LETE_RECIPIENT\020\000\022\021\n\rADD_RECIPIENT\020\001*\202\002\n\003" +
-      "STK\022\034\n\030TRIGER_MODEM_TO_SEND_STK\020\000\0225\n1TRI" +
-      "GER_MODEM_TO_SEND_STK_BUT_ICON_CANT_BE_D" +
-      "ISPLAY\020\004\022(\n$PROACTIVE_SESSION_TERMINATED" +
-      "_BY_USER\020\020\022\031\n\025NO_RESPONSE_FROM_USER\020\022\022\035\n" +
-      "\031UNABLE_TO_PROCESS_COMMAND\020 \022\032\n\026USER_REJ",
-      "ECT_SETUP_CALL\020\"\022&\n\"COMMAND_DATA_DONT_UN" +
-      "DERSTOOD_BY_ME\0202*\212\001\n\021DisableResultCode\022\027" +
-      "\n\023DISABLE_RESULT_CODE\020\000\022-\n)ENABLE_RESULT" +
-      "_CODE_AND_USE_NUMERIC_VALUES\020\001\022-\n)ENABLE" +
-      "_RESULT_CODE_AND_USE_VERBOSE_VALUES\020\002*:\n" +
-      "\014PowerOffMode\022\024\n\020URGENT_POWER_OFF\020\000\022\024\n\020N" +
-      "ORMAL_POWER_OFF\020\001**\n\005Reset\022\023\n\017DO_NOT_RES" +
-      "ET_ME\020\000\022\014\n\010RESET_ME\020\001*\205\001\n\rFunctionality\022" +
-      "\031\n\025MINIMUM_FUNCTIONALITY\020\000\022\026\n\022FULL_FUNCT" +
-      "IONALITY\020\001\022A\n=DISABLE_PHONE_FROM_BOTH_TR",
-      "ANSMITTING_AND_RECEIVING_RF_SIGNALS\020\002*\326\001" +
-      "\n\021ConnectResultCode\022%\n!CONNECT_RESULT_CO" +
-      "DE_ONLY_RETURNED\020\000\022*\n&CONNECT_TEXT_RESUL" +
-      "T_CODE_ONLY_RETURNED\020\001\022%\n!TONE_ENABLED_B" +
-      "USY_SIGNAL_DISABLED\020\002\022%\n!TONE_DISABLED_B" +
-      "USY_SIGNAL_ENABLED\020\003\022 \n\034TONE_AND_BUSY_SI" +
-      "GNAL_ENABLED\020\004*P\n\023InformationResponse\022\034\n" +
-      "\030SHORT_RESULT_CODE_FORMAT\020\000\022\033\n\027LONG_RESU" +
-      "LT_CODE_FORMAT\020\001*_\n\nResultCode\022\035\n\031TA_TRA" +
-      "NSMINTS_RESULT_CODE\020\000\0222\n.RESULT_CODE_ARE",
-      "_SUPPRESSED_AND_NOT_TRANSMITTED\020\001*(\n\013TAT" +
-      "oDefault\022\031\n\025SET_ALL_TA_TO_DEFAULT\020\000*#\n\rP" +
-      "rofileNumber\022\022\n\016PROFILE_NUMBER\020\000*3\n\024Rese" +
-      "tToProfileNumber\022\033\n\027RESET_TO_PROFILE_NUM" +
-      "BER\020\000*N\n\010DCEByDTE\022\023\n\017DCE_BY_DTE_NONE\020\000\022\027" +
-      "\n\023DCE_BY_DTE_XON_XOFF\020\001\022\024\n\020RTS_FLOW_CONT" +
-      "ROL\020\002*N\n\010DTEByDCE\022\023\n\017DTE_BY_DCE_NONE\020\000\022\027" +
-      "\n\023DTE_BY_DCE_XON_XOFF\020\001\022\024\n\020CTS_FLOW_CONT" +
-      "ROL\020\002*{\n\016DualUARTParity\022\031\n\025DUAL_UART_PAR" +
-      "ITY_NONE\020\000\022\030\n\024DUAL_UART_PARITY_ODD\020\001\022\031\n\025",
-      "DUAL_UART_PARITY_EVEN\020\002\022\031\n\025DUAL_UART_PAR" +
-      "ITY_MARK\020\003*:\n\010StopBits\022\016\n\nSTOP_BIT_1\020\001\022\016" +
-      "\n\nSTOP_BIT_2\020\002\022\016\n\nSTOP_BIT_3\020\003*N\n\010DataBi" +
-      "ts\022\017\n\013DATA_BITS_5\020\001\022\017\n\013DATA_BITS_6\020\002\022\017\n\013" +
-      "DATA_BITS_7\020\003\022\017\n\013DATA_BITS_8\020\004*E\n\020Transm" +
-      "issionRate\022\034\n\030UNKNOW_TRANSMISSION_RATE\020\000" +
-      "\022\023\n\017RATE_115200_BPS\020\005*4\n MultiplexerTran" +
-      "sparencyMechanism\022\020\n\014BASIC_OPTION\020\000*5\n\031M" +
-      "ultiplexerControlChannel\022\030\n\024UIH_FRAMES_U" +
-      "SED_ONLY\020\000*\371\001\n\004Rate\022\n\n\006RATE_0\020\000\022\013\n\007RATE_",
-      "75\020K\022\r\n\010RATE_150\020\226\001\022\r\n\010RATE_300\020\254\002\022\r\n\010RA" +
-      "TE_600\020\330\004\022\016\n\tRATE_1200\020\260\t\022\017\n\nREATE_2400\020" +
-      "\340\022\022\016\n\tRATE_4800\020\300%\022\016\n\tRATE_9600\020\200K\022\017\n\nRA" +
-      "TE_14400\020\240\013\022\020\n\nRATE_19200\020\200\226\001\022\020\n\nRATE_28" +
-      "800\020\200\341\001\022\020\n\nRATE_38400\020\200\254\002\022\020\n\nRATE_57600\020" +
-      "\200\302\003\022\021\n\013RATE_115200\020\200\204\007*0\n\006Parity\022\007\n\003ODD\020" +
-      "\000\022\010\n\004EVEN\020\001\022\010\n\004MARK\020\002\022\t\n\005SPACE\020\003*\322\001\n\rFra" +
-      "mingFormat\022\031\n\025UNKNOW_FRAMING_FORMAT\020\000\022\032\n" +
-      "\026DATA_8_PARITY_0_STOP_2\020\001\022\032\n\026DATA_8_PARI" +
-      "TY_1_STOP_1\020\002\022\032\n\026DATA_8_PARITY_0_STOP_1\020",
-      "\003\022\032\n\026DATA_7_PARITY_0_STOP_2\020\004\022\032\n\026DATA_7_" +
-      "PARITY_1_STOP_1\020\005\022\032\n\026DATA_7_PARITY_0_STO" +
-      "P_1\020\006*\237\001\n\tDTRStatus\022\034\n\030TA_IGNORES_STATUS" +
-      "_ON_DTR\020\000\022:\n6CHANGE_TO_CAOMMAND_MODE_WHI" +
-      "LE_REMAINING_CONNECTED_CALL\020\001\0228\n4DISCONN" +
-      "ECT_DATA_CALL_AND_THEN_CHANGE_TO_COMMAND" +
-      "_MODE\020\002*_\n\rDCDLineStatus\022\031\n\025DCD_LINE_IS_" +
-      "ALWAYS_ON\020\000\0223\n/DCD_LINE_IS_ON_ONLY_IN_PR" +
-      "ESENCE_OF_DATA_CARRIER\020\001*e\n\016ConnectionTy" +
-      "pe\022\037\n\033CIRCUIT_SWITCHED_VOICE_CALL\020\000\022\036\n\032C",
-      "IRCUIT_SWITCHED_DATA_CALL\020\001\022\022\n\016PPP_CONNE" +
-      "CTION\020\002*~\n\023SIMCardInsertStatus\0222\n.LOW_LE" +
-      "VEL_OF_PIN_INDICATES_SIM_CARD_IS_PRESENT" +
-      "\020\000\0223\n/HIGH_LEVEL_OF_PIN_INDICATES_SIM_CA" +
-      "RD_IS_PRESENT\020\001*x\n\023SIMCardDetectionPIN\0224" +
-      "\n0CONFIGURE_SIM_PRESENCE_AS_SIM_CARD_DET" +
-      "ECTION_PIN\020\000\022+\n\'CONFIGURE_DTR_AS_SIM_CAR" +
-      "D_DETECTION_PIN\020\001*\330\001\n\034TimeZoneChangeEven" +
-      "tReporting\022,\n(DISABLE_TIME_ZONE_CHANGE_E" +
-      "VENT_REPORTING\020\000\022F\nBENABLE_TIME_ZONE_CHA",
-      "NGE_EVENT_REPORTING_BY_UNSOLICITED_RESUL" +
-      "T_CODE\020\001\022B\n>ENABLE_EXTENDED_TIME_ZONE_RE" +
-      "PORTING_BY_UNSOLICITED_RESULT_CODE\020\002*\305\002\n" +
-      "\007RTCTime\022.\n*DISABLE_AUTOMATIC_UPDATE_RTC" +
-      "_TIME_VIA_NITZ\020\000\022I\nEUPDATE_NETWORK_SYNCH" +
-      "RONIZED_TIME_TO_RTC_AND_SAVE_TIME_ZONE_I" +
-      "NTO_NVRAM\020\001\022]\nYUPDATE_GTM_TIME_WITH_TIME" +
-      "_ZONE_TO_RTC_SAVE_TIME_ZONE_TO_NVRAM_IGN" +
-      "ORE_DAYLIGHT_SAVING_TIME\020\002\022J\nFUPDATE_LOC" +
-      "ALIZED_TIME_AND_TIME_ZONE_TO_RTC_AND_SAV",
-      "E_TIME_ZONE_TO_NVRAM\020\003\022\024\n\020SAVE_WITH_MODE" +
-      "_2\020\004*\221\001\n\020GSMNetworkStatus\022\030\n\024WORK_IN_NOR" +
-      "MAL_STATE\020\000\022\025\n\021NO_AVAILABLE_CELL\020\001\022\"\n\036ON" +
-      "LY_LIMITED_SERVICE_AVAILABLE\020\002\022(\n$NOT_RE" +
-      "ADY_TO_RETRIEVE_NETWORK_STATUS\020\003*\237\001\n\025Sta" +
-      "teOfInitialization\022\025\n\021NO_INITIALIZATION\020" +
-      "\000\022\037\n\033READY_TO_EXECUTE_AT_COMMAND\020\001\022)\n%PH" +
-      "ONEBOOK_HAS_FINISHED_INITIALIZATION\020\002\022#\n" +
-      "\037SMS_HAS_FINISHED_INITIALIZATION\020\003*S\n!Pr" +
-      "oprietaryUnsolicitedIndications\022\017\n\013PUI_D",
-      "ISABLE\020\000\022\016\n\nPUI_ENABLE\020\001\022\r\n\tPUI_QUERY\020\002*" +
-      "\'\n\006Status\022\016\n\nSTATUS_OFF\020\000\022\r\n\tSTATUS_ON\020\001" +
-      "*\\\n\003Pas\022\r\n\tPAS_READY\020\000\022\016\n\nPAS_UNKNOW\020\001\022\017" +
-      "\n\013PAS_RINGING\020\002\022%\n!PAS_CALL_IN_PROGRESS_" +
-      "OR_CALL_HOLD\020\003*{\n\013VoltageMode\022&\n\"RECOGNI" +
-      "ZE_1_8_V_AND_3_0_V_SIM_CARD\020\000\022!\n\035RECOGNI" +
-      "ZE_1_8_V_SIM_CARD_ONLY\020\001\022!\n\035RECOGNIZE_3_" +
-      "0_V_SIM_CARD_ONLY\020\002*x\n\nCommandSIM\022\020\n\013REA" +
-      "D_BINATY\020\260\001\022\020\n\013READ_RECORD\020\262\001\022\021\n\014GET_RES" +
-      "PONSE\020\300\001\022\022\n\rUPDATE_BINATY\020\326\001\022\022\n\rUPDATE_R",
-      "ECORD\020\334\001\022\013\n\006STATUS\020\362\001*\215\001\n\005Class\022\t\n\005VOICE" +
-      "\020\001\022\010\n\004DATA\020\002\022\007\n\003FAX\020\004\022\034\n\030ALL_TELEPHONY_E" +
-      "XCEPT_SMS\020\007\022\031\n\025SHORT_MESSAGE_SERVICE\020\010\022\025" +
-      "\n\021DATA_CIRCUIT_SYNC\020\020\022\026\n\022DATA_CIRCUIT_AS" +
-      "YNC\020 *2\n\010LockMode\022\n\n\006UNLOCK\020\000\022\010\n\004LOCK\020\001\022" +
-      "\020\n\014QUERY_STATUS\020\002*x\n\010Band1900\022\034\n\030NOT_CEL" +
-      "L_ID_OF_1900_BAND\020\000\022\030\n\024CELL_ID_OF_1900_B" +
-      "AND\020\001\0224\n0AUTO_DISTINGUISH_WHETHER_IS_CEL" +
-      "L_ID_OF_1900_BAND\020\002*\231\001\n\021LockFrequencyMod" +
-      "e\022\032\n\026DISABLE_LOCK_FREQUENCY\020\000\022\031\n\025ENABLE_",
-      "LOCK_FREQUENCY\020\001\022M\nIENABLE_LOCK_FREQUENC" +
-      "Y_AND_AUTO_SWITCH_TO_SAVED_FREQUENCY_AFT" +
-      "ER_POWERED_ON\020\002*\276\002\n\023EngineeringModeDump\022" +
-      ")\n%ONLY_DISPLAY_SERVING_CELL_INFORMATION" +
-      "\020\000\022F\nBDISPLAY_SERVING_CELL_INFORMATION_1" +
-      "_6_NEIGHBORING_CELLS_INFORMATION\020\001\022J\nFDI" +
-      "SPLAY_SERVING_CELL_INFORMATION_AND_LIST_" +
-      "OF_SERVING_CELL_CARRIER_LIST\020\002\022%\n!LIST_O" +
-      "F_SERVING_CELL_CARRIER_LIST\020\003\022A\n=LIST_OF" +
-      "_SERVING_CELL_CARRIER_LIST_AND_BA_MEASUR",
-      "ED_RESULT_LIST\020\004*\246\002\n\031NetworkRegistration" +
-      "Status\022K\nGNOT_REGISTRED_ME_IS_NOT_CURREN" +
-      "TLY_SEARCHING_NEW_OPERATOR_TO_REGISTER_T" +
-      "O\020\000\022\032\n\026REGISTRED_HOME_NETWORK\020\001\022G\nCNOT_R" +
-      "EGISTRED_ME_IS_CURRENTLY_SEARCHING_NEW_O" +
-      "PERATOR_TO_REGISTER_TO\020\002\022\027\n\023REGISTRATION" +
-      "_DENIED\020\003\022&\n\"UNKNOW_NETWORK_REGISTRATION" +
-      "_STATUS\020\004\022\026\n\022REGISTERED_ROAMING\020\005*\337\001\n\027Ne" +
-      "tworkRegistrationMode\0228\n4DISABLE_NETWORK" +
-      "_REGISTRATION_UNSOLICITED_RESULT_CODE\020\000\022",
-      "7\n3ENABLE_NETWORK_REGISTRATION_UNSOLICIT" +
-      "ED_RESULT_CODE\020\001\022Q\nMENABLE_NETWORK_REGIS" +
-      "TRATION_UNSOLICITED_RESULT_CODE_WITH_LOC" +
-      "ATION_INFORMATION\020\002*\202\001\n\016OperatorFormat\022\034" +
-      "\n\030LONG_FORMAT_ALPHANUMERIC\020\000\022\035\n\031SHORT_FO" +
-      "RMAT_ALPHANUMERIC\020\001\0223\n/NUMERIC_GSM_LOCAT" +
-      "ION_AREA_IDENTIFICATION_NUMBER\020\002*\235\001\n\014Ope" +
-      "ratorMode\022\022\n\016AUTOMATIC_MODE\020\000\022\035\n\031MANUAL_" +
-      "OPERATOR_SELECTION\020\001\022\"\n\036MANUAL_DEREGISTE" +
-      "R_FROM_NETWORK\020\002\0226\n2SET_ONLY_FORMAT_NOT_",
-      "SHOWN_IN_READ_COMMAND_RESPONSE\020\003*\243\003\n\nSpe" +
-      "echMode\022\031\n\025SPEECH_AUTOMATIC_MODE\020\000\022\006\n\002FR" +
-      "\020\001\022\006\n\002HR\020\002\022\007\n\003EFR\020\003\022\n\n\006AMR_FR\020\004\022\n\n\006AMR_H" +
-      "R\020\005\022\032\n\026FR_AND_EFR_FR_PRIORITY\020\006\022\033\n\027EFR_A" +
-      "ND_FR_EFR_PRIORITY\020\007\022\033\n\027EFR_AND_HR_EFR_P" +
-      "RIORITY\020\010\022\037\n\033EFR_AND_AMR_FR_EFR_PRIORITY" +
-      "\020\t\022!\n\035AMR_FR_AND_FR_AMR_FR_PRIORITY\020\n\022!\n" +
-      "\035AMR_FR_AND_HR_AMR_FR_PRIORITY\020\013\022\"\n\036AMR_" +
-      "FR_AND_EFR_AMR_FR_PRIORITY\020\014\022!\n\035AMR_HR_A" +
-      "ND_FR_AMR_HR_PRIORITY\020\r\022!\n\035AMR_HR_AND_HR",
-      "_AMR_HR_PRIORITY\020\016\022\"\n\036AMR_HR_AND_EFR_AMR" +
-      "_HR_PRIORITY\020\017*u\n\017AlternatingMode\022\017\n\013SIN" +
-      "GLE_MODE\020\000\022\031\n\025ALTERNATING_VOICE_FAX\020\001\022\032\n" +
-      "\026ALTERNATING_VOICE_DATA\020\002\022\032\n\026VOICE_FOLLO" +
-      "WED_BY_DATA\020\003*\231\002\n\nSchemeMode\022\020\n\014SCHEME_V" +
-      "OICE\020\000\022,\n(SCHEME_ALTERNATING_VOICE_FAX_V" +
-      "OICE_FIRST\020\001\022\016\n\nSCHEME_FAX\020\002\022-\n)SCHEME_A" +
-      "LTERNATING_VOICE_DATA_VOICE_FIRST\020\003\022\017\n\013S" +
-      "CHEME_DATA\020\004\022*\n&SCHEME_ALTERNATING_VOICE" +
-      "_FAX_FAX_FIRST\020\005\022,\n(SCHEME_ALTERNATING_V",
-      "OICE_DATA_DATA_FIRST\020\006\022!\n\035SCHEME_VOICE_F" +
-      "OLLOWED_BY_DATA\020\007*H\n\010CallMode\022\016\n\nVOICE_C" +
-      "ALL\020\000\022\r\n\tDATA_CALL\020\001\022\014\n\010FAX_CALL\020\002\022\017\n\013UN" +
-      "KNOW_CALL\020\t*A\n\007CallDir\022\032\n\026MOBILE_ORIGINA" +
-      "TED_CALL\020\000\022\032\n\026MOBILE_TERMINATED_CALL\020\001*u" +
-      "\n\tCallState\022\017\n\013ACTIVE_CALL\020\000\022\r\n\tHELD_CAL" +
-      "L\020\001\022\020\n\014DIALING_CALL\020\002\022\021\n\rALERTING_CALL\020\003" +
-      "\022\021\n\rINCOMING_CALL\020\004\022\020\n\014WAITING_CALL\020\005*L\n" +
-      "\013AddressType\022\020\n\013UNKNOW_TYPE\020\201\001\022\027\n\022INTERN" +
-      "ATIONAL_TYPE\020\221\001\022\022\n\rNATIONAL_TYPE\020\241\001*\311\001\n\010",
-      "CodeMode\022\"\n\036CODE_MODE_ACCORDING_WITH_NOK" +
-      "IA\020\000\022$\n CODE_MODE_ACCORDING_WITH_SIEMENS" +
-      "\020\001\022s\noCODE_MODE_ACCORDING_WITH_NOKIA_AND" +
-      "_HEXADECIMAL_0x11_TREATED_AS_UNDERSCORE_" +
-      "AND_HEXADECIMAL_0x02_TREATED_AS_DOLAR\020\002*" +
-      "<\n\nBufferMode\022\026\n\022COMMAND_IS_FLUSHED\020\000\022\026\n" +
-      "\022COMMAND_IS_CLEANED\020\001*\245\001\n\014StoreSMSRule\022/" +
-      "\n+NO_SMS_DELIVER_INDICATIONS_ARE_ROUTED_" +
-      "TO_TE\020\000\022!\n\035SMS_DELIVER_STORED_INTO_ME_TA" +
-      "\020\001\022(\n$SMS_DELIVER_IS_ROUTED_DIRECTLY_TO_",
-      "TE\020\002\022\027\n\023CLASS_3_SMS_DELIVER\020\003*q\n\014StoreCB" +
-      "MRule\022\'\n#NO_CMB_INCICATIONS_ARE_ROUTED_T" +
-      "O_TE\020\000\022&\n\"NEW_CMBS_ARE_ROUTED_DIRECTLY_T" +
-      "O_TE\020\001\022\020\n\014CLASS_3_CBMS\020\002*\213\002\n\021MessageIndi" +
-      "cation\022)\n%BUFFER_UNSOLICITED_RESULT_CODE" +
-      "S_IN_TA\020\000\022O\nKDISCART_INDICATIONS_AND_REJ" +
-      "ECT_NEW_RECEIVED_MESSAGE_UNSOLICITED_RES" +
-      "ULT_CODE\020\001\022E\nABUFFER_UNSOLICITED_RESULT_" +
-      "CODES_IN_TA_WHEN_TA_TE_LINK_IS_RESERVED\020" +
-      "\002\0223\n/FORWARD_UNSOLICITED_RESULT_CODES_DI",
-      "RECTLY_TO_TE\020\003*\221\001\n\rMessageStatus\022\034\n\030RECE" +
-      "IVED_UNREAD_MESSAGES\020\000\022\032\n\026RECEIVED_READ_" +
-      "MESSAGES\020\001\022\032\n\026STORED_UNSENT_MESSAGES\020\002\022\030" +
-      "\n\024STORED_SENT_MESSAGES\020\003\022\020\n\014ALL_MESSAGES" +
-      "\020\004*G\n\013MessageMode\022\n\n\006NORMAL\020\000\022,\n(NO_CHAN" +
-      "GE_STATUS_OF_SPECIFIED_SMS_RECORD\020\001*\276\002\n\007" +
-      "DelFlag\022%\n!DELETE_MESSAGE_SPECIFIED_IN_I" +
-      "NDEX\020\000\022/\n+DELETE_ALL_READ_MESSAGES_FROM_" +
-      "MEM_1_STORAGE\020\001\022S\nODELETE_ALL_READ_MESSA" +
-      "GES_FROM_MEM_1_STORAGE_AND_SENT_MOBILE_O",
-      "RIGINATED_MESSAGES\020\002\022Z\nVDELETE_ALL_READ_" +
-      "MESSAGES_FROM_MEM_1_STORAGE_SENT_AND_UNS" +
-      "ENT_MOBILE_ORIGINATED_MESSAGES\020\003\022*\n&DELE" +
-      "TE_ALL_MESSAGES_FROM_MEM_1_STORAGE\020\004*,\n\r" +
-      "MessageFormat\022\014\n\010PDU_MODE\020\000\022\r\n\tTEXT_MODE" +
-      "\020\001*<\n\016MessageService\022\027\n\023GSM_03_40_AND_03" +
-      "_41\020\000\022\021\n\014SMS_PDU_MODE\020\200\001*E\n\nNumberType\022\027" +
-      "\n\022UNKNOW_NUMBER_TYPE\020\201\001\022\036\n\031INTERNATIONAL" +
-      "_NUMBER_TYPE\020\221\001*\\\n\013ServiceType\022\010\n\004GPRS\020\000" +
-      "\022\022\n\016CIRCUIT_SWITCH\020\001\022\021\n\rGPRS_PREFERRD\020\002\022",
-      "\034\n\030CIRCUIT_SWITCH_PREFERRED\020\003*\201\001\n\022EventR" +
-      "eportingMode\022)\n%BUFFER_UNSOLICITED_RESUL" +
-      "T_CODES_IN_MT\020\000\022@\n<DISCART_UNSOLICITED_R" +
-      "ESULT_CODES_WHEN_MT_TE_LINK_IS_RESERVED\020" +
-      "\001*\230\002\n\025SynchronizationResult\022\"\n\036SUCCESS_S" +
-      "YNCHRONIZE_LOCAL_TIME\020\000\022<\n8FAILED_TO_SYN" +
-      "CHRONIZE_LOCAL_TIME_BECAUSE_OF_UNKNOW_RE" +
-      "SON\020\001\022/\n+FAILED_TO_RECEIVE_RESPONSE_FROM" +
-      "_TIME_SERVER\020\002\022\033\n\027TCPIP_STACK_IS_BUSY_NO" +
-      "W\020\003\022\033\n\027DO_NOT_FIND_TIME_SERVER\020\004\0222\n.FAIL",
-      "ED_TO_ACTIVATE_PDP_CONTEXT_SYNCHRONIZATI" +
-      "ON\020\005*\201\001\n\013FinalResult\022\032\n\026IT_IS_FINISHED_N" +
-      "ORMALY\020\002\022\034\n\030TCP_IP_STACK_IS_BUSY_NOW\020\003\022\024" +
-      "\n\020DO_NOT_FIND_HOST\020\004\022\"\n\036FAILED_TO_ACTIVA" +
-      "TE_PDP_CONTEXT\020\005*R\n\nPingResult\022&\n\"RECEIV" +
-      "ED_PING_RESPONSE_FROM_SERVER\020\000\022\034\n\030TIMEOU" +
-      "T_FOR_PING_REQUEST\020\001*f\n\014ServerClient\022*\n&" +
-      "MODULE_SERVERS_AS_CLINET_OF_CONNECTION\020\001" +
-      "\022*\n&MODULE_SERVERS_AS_CLIENT_OF_CONNECTI" +
-      "ON\020\002*\223\001\n\020ReceivedDataMode\022.\n*OUTPUT_RECE",
-      "IVED_DATA_THROUGH_UART_DIRECTLY\020\000\022\'\n#OUT" +
-      "PUT_NOTIFICATION_STATEMENT_SHORT\020\001\022&\n\"OU" +
-      "TPUT_NOTIFICATION_STATEMENT_LONG\020\002*\207\001\n\007C" +
-      "hannel\022\022\n\016VIRTUAL_UART_1\020\000\022\022\n\016VIRTUAL_UA" +
-      "RT_2\020\001\022\022\n\016VIRTUAL_UART_3\020\002\022\022\n\016VIRTUAL_UA" +
-      "RT_4\020\003\022,\n(CONTEXT_IS_NOT_CONTROLLED_BY_A" +
-      "NY_CHANNEL\020\004*5\n\014TransferMode\022\017\n\013NORMAL_M" +
-      "ODE\020\000\022\024\n\020TRANSPARENT_MODE\020\001*:\n\nConnectio" +
-      "n\022\025\n\021MS_USED_AS_CLIENT\020\000\022\025\n\021MS_USED_AS_S" +
-      "ERVER\020\001*e\n\nBearerType\022*\n&SET_CSD_AS_BEAR",
-      "ER_FOR_TCPIP_CONNECTION\020\000\022+\n\'SET_GPRS_AS" +
-      "_BEARER_FOR_TCPIP_CONNECTION\020\001*,\n\nServer" +
-      "Type\022\016\n\nTCP_SERVER\020\000\022\016\n\nUDP_SERVER\020\001*\242\001\n" +
-      "\nSendPrompt\022\036\n\032NO_PROMPT_AND_SHOW_SEND_O" +
-      "K\020\000\022 \n\034ECHO_PROMPT_AND_SHOW_SEND_OK\020\001\022\"\n" +
-      "\036NO_PROMPT_AND_NOT_SHOW_SEND_OK\020\002\022.\n*ECH" +
-      "O_PROMPT_AND_SHOW_SOCKET_ID_AND_SEND_OK\020" +
-      "\003*N\n\005Timer\022%\n!DO_NOT_SET_TIMER_FOR_DATA_" +
-      "SENDING\020\000\022\036\n\032SET_TIMER_FOR_DATA_SENDING\020" +
-      "\001*K\n\010IPHeader\022\030\n\024DO_NOT_ADD_IP_HEADER\020\000\022",
-      "%\n!ADD_A_HEADER_BEFORE_RECEIVED_DATA\020\001*Z" +
-      "\n\014ServerFormat\022\'\n#DOTTED_DECIMAL_IP_ADDR" +
-      "ESS_OF_SERVER\020\000\022!\n\035DOMAIN_NAME_ADDRESS_O" +
-      "F_SERVER\020\001*\215\002\n\005Code1\022+\n\'UNCONDITIONAL_CA" +
-      "LL_FORWARDING_IS_ACTIVE\020\000\0222\n.SOME_OF_CON" +
-      "DITIONAL_CALL_FORWARDING_ARE_ACTIVE\020\001\022\033\n" +
-      "\027CALL_HAS_BEEN_FORWARDED\020\002\022\023\n\017CALL_IS_WA" +
-      "ITING\020\003\022\024\n\020THIS_IS_CUG_CALL\020\004\022\035\n\031OUTGOIN" +
-      "G_CALLS_ARE_BARRED\020\005\022\035\n\031INCOMING_CALLS_A" +
-      "RE_BARRED\020\006\022\035\n\031CLIR_SUPPRESSION_REJECTED",
-      "\020\007*#\n\005Code2\022\032\n\026THIS_IS_FORWARDED_CALL\020\000*" +
-      "w\n\nSSDControl\022*\n&DISABLE_RESULT_CODE_PRE" +
-      "SENTATION_IN_TA\020\000\022)\n%ENABLE_RESULT_CODE_" +
-      "PRESENTATION_IN_TA\020\001\022\022\n\016CANCEL_SESSION\020\002" +
-      "*\226\001\n\021CLIRServiceStatus\022\030\n\024CLIR_NOT_PROVI" +
-      "SIONED\020\000\022&\n\"CLIR_PROVISIONED_IN_PERMANEN" +
-      "T_MODE\020\001\022\017\n\013UNKNOW_CLIR\020\002\022.\n*CLIR_TEMORA" +
-      "RY_MODE_PRESENTATION_RESTRICTED\020\003*`\n\027Adj" +
-      "ustmentOutgoingCalls\022\032\n\026PRESENTATION_IND" +
-      "ICATOR\020\000\022\023\n\017CLIR_INVOCATION\020\001\022\024\n\020CLIR_SU",
-      "PPRESSION\020\002*G\n\004CLIP\022\030\n\024CLIP_NOT_PROVISIO" +
-      "NED\020\000\022\024\n\020CLIP_PROVISIONED\020\001\022\017\n\013UNKNOW_CL" +
-      "IP\020\002*p\n\004Info\022\022\n\016BO_INFORMATION\020\000\022\017\n\013SUPP" +
-      "RESS_OA\020\001\022\035\n\031SUPPRESS_PREFERANTIAL_CUG\020\002" +
-      "\022$\n SUPPRESS_OA_AND_PREFERENTIAL_CUG\020\003*\211" +
-      "\001\n\005Reads\022\021\n\rUNCONDITIONAL\020\000\022\017\n\013MOBILE_BU" +
-      "SY\020\001\022\014\n\010NO_REPLY\020\002\022\020\n\014NO_REACHABLE\020\003\022\027\n\023" +
-      "ALL_CALL_FORWARDING\020\004\022#\n\037ALL_CONDITIONAL" +
-      "_CALL_FORWARDING\020\005*\255\001\n\016ForwardingMode\022\033\n" +
-      "\027DISABLE_FORWARDING_MODE\020\000\022\032\n\026ENABLE_FOR",
-      "WARDINF_MODE\020\001\022#\n\037QUERY_STATUS_OF_FORWAR" +
-      "DING_MODE\020\002\022 \n\034REGISTRATION_FORWARDING_M" +
-      "ODE\020\003\022\033\n\027ERASURE_FORWARDING_MODE\020\004*-\n\tAl" +
-      "gorithm\022\017\n\013ALGORITHM_1\020\000\022\017\n\013ALGORITHM_2\020" +
-      "\001**\n\017PersistenceTime\022\n\n\006MS_100\020d\022\013\n\006MS_4" +
-      "00\020\220\003*\377\001\n\010DTMFCode\022\n\n\006DTMF_0\0200\022\n\n\006DTMF_1" +
-      "\0201\022\n\n\006DTMF_2\0202\022\n\n\006DTMF_3\0203\022\n\n\006DTMF_4\0204\022\n" +
-      "\n\006DTMF_5\0205\022\n\n\006DTMF_6\0206\022\n\n\006DTMF_7\0207\022\n\n\006DT" +
-      "MF_8\0208\022\n\n\006DTMF_9\0209\022\n\n\006DTMF_A\020A\022\n\n\006DTMF_B" +
-      "\020B\022\n\n\006DTMF_C\020C\022\n\n\006DTMF_D\020D\022\r\n\tDTMF_STAR\020",
-      "*\022\016\n\nDTMF_POUND\020#\022\025\n\021FREQUENCY_1400_HZ\020E" +
-      "\022\025\n\021FREQUENCY_2300_HZ\020F*C\n\013DTMFOperate\022\032" +
-      "\n\026QUERY_THRESHOLD_VALUES\020\000\022\030\n\024SET_THRESH" +
-      "OLD_VALUES\020\001*\361\001\n\rToneDetection\022\030\n\024CLOSE_" +
-      "TONE_DETECTION\020\000\022\027\n\023OPEN_TONE_DETECTION\020" +
-      "\001\0229\n5CONFIGURE_1400HZ_OR_2300HZ_DETECTIO" +
-      "N_THRESHOLD_100_MS\020\002\022:\n6CONFIGURE_1400HZ" +
-      "_AND_2300HZ_DETECTION_THRESHOLD_400_MS\020\003" +
-      "\022&\n\"CONFIGURE_DTMF_DETECTION_THRESHOLD\020\004" +
-      "\022\016\n\nOPEN_DEBUG\020\005*\212\001\n\016FunctionStatus\022\023\n\017D",
-      "ETECT_ALL_DTMF\020\000\0221\n-ONLY_DETECT_1400HZ_A" +
-      "ND_2300HZ_HANSHAKE_SIGNAL\020\001\0220\n,NOT_DETEC" +
-      "T_1400HZ_AND_2300HZ_HANDSAKE_SIGNAL\020\002*G\n" +
-      "\024AudioOperateFunction\022\027\n\023SET_DETECTION_R" +
-      "ANGE\020\000\022\026\n\022SET_DETECTION_MODE\020\001*\201\001\n\nOutpu" +
-      "tPath\022\036\n\032OUTPUT_DTMF_NORMAL_SPEAKER\020\000\022\037\n" +
-      "\033OUTPUT_DTMF_HEADSET_SPEAKER\020\001\022\034\n\030OUTPUT" +
-      "_DTMF_LOUD_SPEAKER\020\002\022\024\n\020AUTO_OUTPUT_PATH" +
-      "\020\003*b\n\014AudioChannel\022\030\n\024NORMLA_AUDIO_CHANN" +
-      "EL\020\000\022\031\n\025HEADSET_AUDIO_CHANNEL\020\001\022\035\n\031LOUDS",
-      "PEAKER_AUDIO_CHANNEL\020\002*^\n\021MicrophoneChan" +
-      "nel\022\025\n\021NORMAL_MICROPHONE\020\000\022\026\n\022HEADSET_MI" +
-      "CROPHONE\020\001\022\032\n\026LOUDSPEAKER_MICROPHONE\020\002*9" +
-      "\n\tSoundMode\022\025\n\021NORMAL_SOUND_MODE\020\000\022\025\n\021SI" +
-      "LENT_SOUND_MODE\020\001*\232\001\n\013SpeakerMode\022\031\n\025SPE" +
-      "AKER_IS_ALWAYS_OFF\020\000\022B\n>SPEAKER_IS_ON_UT" +
-      "IL_TA_INFORM_TE_THAT_CARRIER_HAS_BEEN_DE" +
-      "TECTED\020\001\022,\n(SPEAKER_IS_ALWAYS_ON_WHEN_TA" +
-      "_IS_OFF_HOOK\020\002*t\n\017SpeakerLoudness\022\025\n\021NO_" +
-      "SPEAKER_VOLUME\020\000\022\026\n\022LOW_SPEAKER_VOLUME\020\001",
-      "\022\031\n\025MEDIUM_SPEAKER_VOLUME\020\002\022\027\n\023HIGH_SPEA" +
-      "KER_VOLUME\020\003*\257\001\n\rThresholdType\022$\n THRESH" +
-      "OLD_OF_LOW_VOLTAGE_WARNING\020\000\022\'\n#THRESHOL" +
-      "D_OF_LOW_VOLTAGE_POWER_DOWN\020\001\022%\n!THRESHO" +
-      "LD_OF_HIGH_VOLTAGE_WARNING\020\002\022(\n$THRESHOL" +
-      "D_OF_HIGH_VOLTAGE_POWER_DOWN\020\003*\257\001\n\007LedMo" +
-      "de\0224\n0NETWORK_LED_FLASHES_RAPIDLY_WHEN_C" +
-      "ALL_IS_RINGING\020\000\0221\n-NO_EFFECT_ON_NETWORK" +
-      "_LED_WHEN_CALL_IS_RINGING\020\001\022;\n7RI_WILL_N" +
-      "OT_CHANGE_WHEN_URC_REPORTED_UNTIL_RINGIN",
-      "G_ENDS\020\002*[\n\tSlowClock\022\026\n\022DISABLE_SLOW_CL" +
-      "OCK\020\000\022\025\n\021ENABLE_SLOW_CLOCK\020\001\022\037\n\033ENTER_SL" +
-      "EEP_AFTER_5_SECONDS\020\002*1\n\nReadStatus\022\017\n\013S" +
-      "TATUS_FAIL\020\000\022\022\n\016STATUS_SUCCESS\020\002*V\n\rBatt" +
-      "eryCharge\022\026\n\022ME_IS_NOT_CHARGING\020\000\022\022\n\016ME_" +
-      "IS_CHARGING\020\001\022\031\n\025CHARGING_HAS_FINISHED\020\002" +
-      "*K\n\nAlarmPower\022\024\n\020NONE_ALARM_POWER\020\000\022\023\n\017" +
-      "ALARM_POWER_OFF\020\001\022\022\n\016ALARM_POWER_ON\020\002*Q\n" +
-      "\006Repeat\022\017\n\013NONE_REPEAT\020\000\022\020\n\014DAILY_REPEAT" +
-      "\020\001\022\021\n\rWEEKLY_REPEAT\020\002\022\021\n\rMONTLY_REPEAT\020\003",
-      "*\325\001\n\007IndMode\022E\nADISABLE_TX_BURST_INDICAT" +
-      "ION_PIN_OUTPUT_LOW_LEVEL_AS_GPIO_FUNCTIO" +
-      "N\020\000\0223\n/ENABLE_TX_BURST_INDICATION__OUTPU" +
-      "T_WAVE_AS_NOTE\020\001\022N\nJENABLE_TX_BURST_INDI" +
-      "CATION_PIN_WILL_BE_HIGH_DURING_CALL_AND_" +
-      "LOW_AFTER_CALL\020\002*\254\001\n\010TimeMode\0225\n1RI_120_" +
-      "MS_LOW_PULSE_OTHER_URC_RI_120_MS_LOW_PUL" +
-      "SE\020\000\0224\n0RI_120_MS_LOW_PULSE_OTHER_URC_RI" +
-      "_50_MS_LOW_PULSE\020\001\0223\n/RI_120_MS_LOW_PULS" +
-      "E_OTHER_URC_RI_TAKE_NO_EFFECT\020\002*\207\002\n\021Othe",
-      "rsMessageType\022#\n\037REISSUES_THE_LAST_COMMA" +
-      "ND_GIVEN\020\000\022\031\n\025SET_COMMAND_ECHO_MODE\020\001\022*\n" +
-      "&SET_COMMAND_LINE_TERMINATION_CHARACTER\020" +
-      "\002\022%\n!SET_RESPONSE_FORMATTING_CHARACTER\020\003" +
-      "\022&\n\"SET_COMMAND_LINE_EDITING_CHARACTER\020\004" +
-      "\022\017\n\013SET_RI_TIME\020\005\022&\n\"BURST_TRANSITION_SI" +
-      "GNAL_INDICATION\020\006*\302\001\n\032HardwareRelatedMes" +
-      "sageType\022\t\n\005CLOCK\020\000\022\r\n\tSET_ALARM\020\001\022\022\n\016BA" +
-      "TTERY_CHARGE\020\002\022\014\n\010READ_ADC\020\003\022\030\n\024CONFIGUR" +
-      "E_SHOW_CLOCK\020\004\022&\n\"CONFIGURE_THE_NETWORK_",
-      "LED_PATTERNS\020\005\022&\n\"CONFIGURE_THE_THRESHOL" +
-      "D_OF_VOLTAGE\020\006*\231\004\n\020AudioMessageType\022 \n\034S" +
-      "ET_MONITOR_SPEAKER_LOUDNESS\020\000\022\034\n\030SET_MON" +
-      "ITOR_SPEAKER_MODE\020\001\022\021\n\rTONE_DURATION\020\002\022\034" +
-      "\n\030DTMF_AND_TONE_GENERATION\020\003\022\024\n\020ALERT_SO" +
-      "UND_MODE\020\004\022\026\n\022RINGER_SOUND_LEVEL\020\005\022\035\n\031LO" +
-      "UD_SPEAKER_VOLUME_LEVEL\020\006\022\020\n\014MUTE_CONTRO" +
-      "L\020\007\022#\n\037CHANGE_THE_SIDE_TONE_GAIN_LEVEL\020\010" +
-      "\022$\n CHANGE_THE_MICROPHONE_GAIN_LEVEL\020\t\022\035" +
-      "\n\031GENERATE_LOCAL_DTMF_TONES\020\n\022\033\n\027SWAP_TH",
-      "E_AUDIO_CHANNELS\020\013\022 \n\034AUDIO_CHANNEL_LOOP" +
-      "_BACK_TEST\020\014\022 \n\034GENERATE_LOCAL_SPECIFIC_" +
-      "TONE\020\r\022\030\n\024SET_DTMF_OUTPUT_PATH\020\016\022\033\n\027SET_" +
-      "TONE_DETECTION_MODE\020\017\022\017\n\013DETECT_DTMF\020\020\022\"" +
-      "\n\036PLAY_DTMF_TONE_DURING_THE_CALL\020\021*\366\003\n\037S" +
-      "upplementaryServiceMessageType\0221\n-CALL_F" +
-      "ORWARDING_NUMBER_AND_CONDITIONS_CONTROL\020" +
-      "\000\022\035\n\031CLOSED_USER_GROUP_CONTROL\020\001\022\030\n\024CALL" +
-      "_WAITING_CONTROL\020\002\022\034\n\030CALL_HOLD_AND_MULT" +
-      "IPARTY\020\003\022,\n(CALLING_LINE_IDENTIFICATION_",
-      "PRESENTATION\020\004\022C\n?CONTROL_WHETHER_OR_NOT" +
-      "_TO_SHOW_THE_NAME_OF_INCOMING_CALL_NUMBE" +
-      "R\020\005\022.\n*CONNECTED_LINE_IDENTIFICATION_PRE" +
-      "SENTATION\020\006\022#\n\037SHOW_ALPHA_FIELD_IN_COLP_" +
-      "STRING\020\007\022+\n\'UNSTRUCTURED_SUPPLEMENTARY_S" +
-      "ERVICE_DATA\020\010\022\'\n#SUPPLEMENTARY_SERVICES_" +
-      "NOTIFICATION\020\t\022+\n\'CALLING_LINE_IDENTIFIC" +
-      "ATION_RESTRICTION\020\n*\323\n\n\020TCPIPMessageType" +
-      "\022 \n\034SET_UP_TCP_OR_UDP_CONNECTION\020\000\022+\n\'SE" +
-      "ND_DATA_THROUGH_TCP_OR_UDP_CONNECTION\020\001\022",
-      "\037\n\033CLOSE_TCP_OR_UDP_CONNECTION\020\002\022#\n\037DEAC" +
-      "TIVATE_GPRS_CSD_PDP_CONTEXT\020\003\022\022\n\016SET_LOC" +
-      "AL_PORT\020\004\022.\n*START_TCPIP_TASK_APN_USERNA" +
-      "ME_AND_PASSWORD\020\005\022\033\n\027ACTIVE_GPRS_CSD_CON" +
-      "TEXT\020\006\022\030\n\024GET_LOCAL_IP_ADDRESS\020\007\022#\n\037QUER" +
-      "Y_CURRENT_CONNECTION_STATUS\020\010\022-\n)QUERY_C" +
-      "ONNECTION_STATUS_OF_CURRENT_ACCESS\020\t\022\037\n\033" +
-      "QUERY_CURRENT_SERVER_STATUS\020\n\022 \n\034CONFIGU" +
-      "RE_DOMAIN_NAME_SERVER\020\013\022-\n)QUERY_THE_IP_" +
-      "ADDRESS_OF_GIVEN_DOMAIN_NAME\020\014\0221\n-CONNEC",
-      "T_WITH_IP_ADDRESS_OR_DOMAIN_NAME_SERVER\020" +
-      "\r\022(\n$ADD_AN_IP_HEADER_WHEN_RECEIVING_DAT" +
-      "E\020\016\022\032\n\026SET_AUTO_SENDING_TIMER\020\017\022 \n\034SET_P" +
-      "ROMPT_WHEN_SENDING_DATA\020\020\022\027\n\023CONFIGURE_A" +
-      "S_SERVER\020\021\022$\n SELECT_CSD_OR_GPRS_AS_THE_" +
-      "BEARER\020\022\022\025\n\021CHOOSE_CONNECTION\020\023\0227\n3SET_W" +
-      "HETHER_OR_NOT_TO_DISPLAY_THE_ADDRESS_OF_" +
-      "SENDER\020\024\022\"\n\036SAVE_TCPIP_APPLICATION_CONTE" +
-      "XT\020\025\022\036\n\032SELECT_TCPIP_TRANSFER_MODE\020\026\022\'\n#" +
-      "CONFIGURE_TRANSPARENT_TRANSFER_MODE\020\027\0224\n",
-      "0CONTROL_WHETHER_OR_NOT_TO_SHOW_THE_PROT" +
-      "OCOL_TYPE\020\030\022;\n7CONTROL_WHETHER_OR_NOT_TO" +
-      "_ENABLE_MULTIPLE_TCPIP_SESSION\020\031\0226\n2CONT" +
-      "ROL_WHETHER_OR_NOT_TO_DISPLAY_LOCAL_IP_A" +
-      "DDRESS\020\032\022*\n&SELECT_A_CONTEXT_AS_FOREGROU" +
-      "ND_CONTEXT\020\033\022*\n&QUERY_THE_DATA_INFORMATI" +
-      "ON_FOR_SENDING\020\034\0220\n,SET_THE_METHOD_TO_HA" +
-      "NDLE_RECEIVED_TCPIP_DATA\020\035\022$\n RETRIEVE_T" +
-      "HE_RECEIVED_TCPIP_DATA\020\036\0225\n1CONTRO_WHETH" +
-      "ER_OR_NOT_TO_ECHO_THE_DATA_FOR_QISEND\020\037\022",
-      "\030\n\024PING_A_REMOTE_SERVER\020 \022&\n\"SYNCHRONIZE" +
-      "_THE_LOCAL_TIME_VIA_NTP\020!*\224\003\n\017GPRSMessag" +
-      "eType\022 \n\034ATTACH_DEATTACH_GPRS_SERVICE\020\000\022" +
-      "\026\n\022DEFINE_PDP_CONTEXT\020\001\022\031\n\025QOS_PROFILE_R" +
-      "EQUESTED\020\002\022\"\n\036QOS_PROFILE_MINIMUM_ACCEPT" +
-      "ABLE\020\003\022&\n\"PDP_CONTEXT_ACTIVATE_OR_DEACTI" +
-      "VATE\020\004\022\024\n\020ENTER_DATA_STATE\020\005\022\024\n\020SHOW_PDP" +
-      "_ADDRESS\020\006\022\035\n\031GPRS_MOBILE_STATION_CLASS\020" +
-      "\007\022,\n(CONTROL_UNSOLICITED_GPRS_EVENT_REPO" +
-      "RTING\020\010\022\037\n\033NETWORK_REGISTRATION_STATUS\020\t",
-      "\022%\n!SELECT_SERVICE_FOR_MO_SMS_MESSAGE\020\n\022" +
-      "\037\n\033CHANGE_GPRS_MULTISLOT_CLASS\020\013*\255\001\n\024Pho" +
-      "nebookMessageType\022#\n\037SELECT_PHONEBOOK_ME" +
-      "MORY_STORAGE\020\000\022\031\n\025WRITE_PHONEBOOK_ENTRY\020" +
-      "\001\022\"\n\036READ_CURRENT_PHONEBOOK_ENTRIES\020\002\022\032\n" +
-      "\026FIND_PHONEBOOK_ENTRIES\020\003\022\025\n\021SUBSCRIBER_" +
-      "NUMBER\020\004*\377\004\n\016SMSMessageType\022\032\n\026SELECT_ME" +
-      "SSAGE_SERVICE\020\000\022\035\n\031SELECT_SMS_MESSAGE_FO" +
-      "RMAT\020\001\022\036\n\032SMS_SERVICE_CENTER_ADDRESS\020\002\022!" +
-      "\n\035PREFERRED_SMS_MESSAGE_STORAGE\020\003\022\026\n\022DEL",
-      "ETE_SMS_MESSAGE\020\004\022+\n\'LIST_SMS_MESSAGE_FR" +
-      "OM_PREFERRED_STORAGE\020\005\022\024\n\020READ_SMS_MESSA" +
-      "GE\020\006\022\024\n\020SEND_SMS_MESSAGE\020\007\022\037\n\033WRITE_SMS_" +
-      "MESSAGE_TO_MEMORY\020\010\022!\n\035SEND_SMS_MESSAGE_" +
-      "FROM_STORAGE\020\t\022\024\n\020SEND_SMS_COMMAND\020\n\022\036\n\032" +
-      "NEW_SMS_MESSAGE_INDICATION\020\013\022\030\n\024RESTORE_" +
-      "SMS_SETTINGS\020\014\022\025\n\021SAVE_SMS_SETTINGS\020\r\022%\n" +
-      "!SELECT_CELL_BROADCAST_SMS_MESSAGE\020\016\022!\n\035" +
-      "SHOW_SMS_TEXT_MODE_PARAMETERS\020\017\022 \n\034SET_S" +
-      "MS_TEXT_MODE_PARAMETERS\020\020\0226\n2STRORE_CLAS",
-      "S0_SMS_TO_SIM_WHEN_RECEIVING_CLASS0_SMS\020" +
-      "\021\022\022\n\016DELETE_ALL_SMS\020\022\022\033\n\027CONFIGURE_SMS_C" +
-      "ODE_MODE\020\023*\367\006\n\026CallRelatedMessageType\022\033\n" +
-      "\027ANSWER_AN_INCOMING_CALL\020\000\022)\n%MOBILE_ORI" +
-      "ENTED_CALL_TO_DIAL_A_NUMBER\020\001\022\"\n\036DISCONN" +
-      "ECT_EXISTING_CONNECTION\020\002\022)\n%SWITCH_FROM" +
-      "_DATA_MODE_TO_COMMAND_MODE\020\003\022)\n%SWITCH_F" +
-      "ROM_COMMAND_MODE_TO_DATA_MODE\020\004\022\030\n\024SELEC" +
-      "T_PULSE_DIALING\020\005\0229\n5SET_NUMBER_OF_RINGS" +
-      "_BEFORE_AUTOMATICLY_ANSWERING_CALL\020\006\022\"\n\036",
-      "SET_PAUSE_BEFORE_BLIND_DIALING\020\007\022;\n7SET_" +
-      "NUMBER_OF_SECONDS_TO_WAIT_FOR_CONNECTION" +
-      "_COMPLETION\020\010\0229\n5SET_NUMBER_OF_SECONDS_T" +
-      "O_WAIT_FOR_COMMA_DIAL_MODIFIER\020\t\022A\n=SET_" +
-      "DISCONNECT_DELAY_AFTER_INDICATING_ABSENC" +
-      "E_OF_DATA_CARRIER\020\n\022\027\n\023SELECT_TONE_DIALI" +
-      "NG\020\013\022\032\n\026SELECT_TYPE_OF_ADDRESS\020\014\022\034\n\030LIST" +
-      "_CURRENT_CALLS_OF_ME\020\r\022\035\n\031SERVICE_REPORT" +
-      "ING_CONTROL\020\016\0229\n5SET_CELLULAR_RESULT_COD" +
-      "E_FOR_INCOMING_CALL_INDICATION\020\017\022(\n$SELE",
-      "CT_RADIO_LINK_PROTOCOL_PARAMETER\020\020\022\033\n\027SI" +
-      "NGLE_NUMBERING_SCHEME\020\021\022$\n CONFIGURE_ALT" +
-      "ERNATING_MODE_CALLS\020\022\022\034\n\030PREFERENCE_SPEA" +
-      "CH_CODING\020\023\022\036\n\032SPEECH_CHANNEL_TYPE_REPOR" +
-      "T\020\024\022\017\n\013DISABLE_ATH\020\025*\265\002\n\031NetworkServiceM" +
-      "essageType\022\026\n\022OPERATOR_SELECTION\020\000\022\030\n\024NE" +
-      "TWORK_REGISTRATION\020\001\022\031\n\025SIGNAL_QUALITY_R" +
-      "EPORT\020\002\022\033\n\027PREFERRED_OPERATOR_LIST\020\003\022\027\n\023" +
-      "READ_OPEARATR_NAMES\020\004\022%\n!GET_AND_SET_MOB" +
-      "ILE_OPERATION_BAND\020\005\0225\n1NETWORK_SERVICE_",
-      "SWITCH_ON_OR_OFF_ENGINEERING_MODE\020\006\022\037\n\033S" +
-      "CAN_POWER_OF_GSM_FREQUENCY\020\007\022\026\n\022LOCK_GSM" +
-      "_FREQUENCY\020\010*\347\002\n\025SIMRelatedMessageType\022\020" +
-      "\n\014REQUEST_IMSI\020\000\022\021\n\rFACILITY_LOCK\020\001\022\r\n\tE" +
-      "NTER_PIN\020\002\022\023\n\017CHANGE_PASSWORD\020\003\022\031\n\025RESTR" +
-      "ICTED_SIM_ACCESS\020\004\022\026\n\022GENERIC_SIM_ACCESS" +
-      "\020\005\022\034\n\030CHANGE_PS_SUPER_PASSWORD\020\006\022\r\n\tSHOW" +
-      "_CCID\020\007\022\023\n\017SHOW_CCID_QCCID\020\010\022!\n\035GET_SIM_" +
-      "CARD_GROUP_IDENTIFIER\020\t\022%\n!SELECT_SIM_CA" +
-      "RD_OPERATING_VOLTAGE\020\n\022\035\n\031GET_SERVICE_PR",
-      "OVIDER_NAME\020\013\022\'\n#TIME_REMAINING_TO_INPUT" +
-      "_SIM_PIN_PUK\020\014*\265\005\n\030StatusControlMessageT" +
-      "ype\022\031\n\025EXTENDED_ERROR_REPORT\020\000\022$\n MOBILE" +
-      "_EQUIPMENT_ACTIVITY_STATUS\020\001\022\036\n\032INDICATE" +
-      "_RI_WHEN_USING_URC\020\002\022(\n$SHOW_STATE_OF_MO" +
-      "BILE_ORIGINATED_CELL\020\003\022.\n*REFUSE_TO_RECE" +
-      "IVE_SMS_INCOMING_CALL_OR_NOT\020\004\022.\n*ENABLE" +
-      "_OR_DISABLE_INITIAL_URC_PRESENTATION\020\005\0229" +
-      "\n5ENABLE_OR_DISABLE_PROPRIETARY_UNSOLICI" +
-      "TED_INDICATIONS\020\006\022!\n\035QUERY_STATE_OF_INIT",
-      "IALIZATION\020\007\022\034\n\030QUERY_GSM_NETWORK_STATUS" +
-      "\020\010\022 \n\034NETWORK_TIME_SYNCHRONIZATION\020\t\022+\n\'" +
-      "OBTAIN_LATEST_NETWORK_TIME_SYNCHRONIZED\020" +
-      "\n\0228\n4NETWORK_TIME_SYNCHRONIZATION_AND_UP" +
-      "DATE_THE_RTC_TIME\020\013\022\'\n#NETWORK_TIME_SYNC" +
-      "HRONIZATION_REPORT\020\014\022\'\n#SWITCH_ON_OR_OFF" +
-      "_DETECTING_SIM_CARD\020\r\022!\n\035SIM_INSERTED_ST" +
-      "ATUS_REPORTING\020\016\0224\n0CSC_CALL_OR_GPRS_PDP" +
-      "_CONTEXT_TERMINAL_INDICATION\020\017*\335\002\n!Seria" +
-      "lInterfaceControlMessageType\022\031\n\025SET_DCD_",
-      "FUNCTION_MODE\020\000\022\031\n\025SET_DTR_FUNCTION_MODE" +
-      "\020\001\022\'\n#SET_TE_TA_CONTROL_CHARACTER_FRAMIN" +
-      "G\020\002\022%\n!SET_TE_TA_LOCAL_DATA_FLOW_CONTROL" +
-      "\020\003\022,\n(SET_TE_TA_LOCAL_DATA_RATE_REPORTIN" +
-      "G_MODE\020\004\022\036\n\032SET_TE_TA_FIXED_LOCAL_RATE\020\005" +
-      "\022\027\n\023MULTIPLEXER_CONTROL\020\006\022 \n\034CONFIGURE_D" +
-      "UAL_UART_FUNCTION\020\007\022)\n%CONFIGURE_PARAMET" +
-      "ERS_OF_THE_DUAL_UART\020\010*\376\006\n\023GeneralMesssa" +
-      "geType\022.\n*DISPLAY_PRODUCT_IDENTIFICATION" +
-      "_INFORMATION\020\000\022\'\n#REQUEST_MANUFACTURER_I",
-      "DENTIFICATION\020\001\022#\n\037REQUEST_TA_MODEL_IDEN" +
-      "TIFICATION\020\002\022&\n\"REQUEST_TA_REVISION_IDEN" +
-      "TIFICATION\020\003\022(\n$REQUEST_GLOBAL_OBJECT_ID" +
-      "ENTIFICATION\020\004\022,\n(REQUEST_MANUFACTURER_I" +
-      "DENTIFICATION_CGMI\020\005\022 \n\034REQUEST_MODEL_ID" +
-      "ENTIFICATION\020\006\022+\n\'REQUEST_TA_REVISION_ID" +
-      "ENTIFICATION_CGMR\020\007\022\020\n\014REQUEST_IMEI\020\010\0220\n" +
-      ",REQUEST_PRODUCT_SERIAL_NUMBER_IDENTIFIC" +
-      "ATION\020\t\022\025\n\021REQUEST_IMEI_QGSN\020\n\0227\n3SET_AL" +
-      "L_CURRENT_PARAMETERS_TO_MANUFACTURER_DEF",
-      "AULTS\020\013\022!\n\035DISPLAY_CURRENT_CONFIGURATION" +
-      "\020\014\0224\n0STORE_CURRENT_PARAMETERS_TO_USER_D" +
-      "EFINED_PROFILE\020\r\022%\n!SET_RESULT_CODE_PRES" +
-      "ENTATION_CODE\020\016\022\026\n\022TA_RESPONSE_FORMAT\020\017\022" +
-      "\"\n\036SET_CONNECT_RESULT_CODE_FORMAT\020\020\0226\n2S" +
-      "ET_ALL_CURRENT_PARAMETERS_TO_USER_DEFINE" +
-      "D_PROFILE\020\021\022\033\n\027SET_PHONE_FUNCTIONALITY\020\022" +
-      "\022\r\n\tPOWER_OFF\020\023\022!\n\035REPORT_MOBILE_EQUIPME" +
-      "NT_ERROR\020\024\022\030\n\024SET_TE_CHARACTER_SET\020\025\022)\n%" +
-      "REQUEST_COMPLETE_TA_CAPABILITIES_LIST\020\026*",
-      "\312\003\n\017SMTPMessageType\022(\n$SET_THE_USER_NAME" +
-      "_FOR_AUTHENTICATION\020\000\022\'\n#SET_THE_PASSWOR" +
-      "D_FOR_AUTHENTICATION\020\001\022\'\n#SET_THE_EMAIL_" +
-      "ADDRESS_OF_THE_SENDER\020\002\022\030\n\024SET_THE_SENDE" +
-      "RS_NAME\020\003\022+\n\'SET_THE_ADDRESS_AND_PORT_OD" +
-      "_SMTP_SERVER\020\004\022\034\n\030ADD_OR_DELETE_RECIPIEN" +
-      "TS\020\005\022!\n\035EDIT_THE_SUBJECT_OF_THE_EMAIL\020\006\022" +
-      "!\n\035EDIT_THE_CONTENT_OF_THE_EMAIL\020\007\022#\n\037AD" +
-      "D_AN_ATTACHMENT_FOR_THE_EMAIL\020\010\022\030\n\024DELET" +
-      "E_AN_ATTACHMENT\020\t\022)\n%CLEAR_ALL_CONFIGURA",
-      "TIONS_AND_CONTENTS\020\n\022\026\n\022SMTP_CONFIGURATI" +
-      "ON\020\013\022\016\n\nSEND_EMAIL\020\014*_\n\024RecordingMessage" +
-      "Type\022\025\n\021RECORD_MEDIA_FILE\020\000\022\023\n\017PLAY_MEDI" +
-      "A_FILE\020\001\022\033\n\027STOP_PLAYING_MEDIA_FILE\020\002*\352\001" +
-      "\n\023QuecCellMessageType\022\"\n\036SCAN_BASIC_STAT" +
-      "ION_INFORMATION\020\000\022%\n!SWITCH_ON_OR_OFF_EN" +
-      "GINEERING_MODE\020\001\022\031\n\025LOCK_THE_BASE_STATIO" +
-      "N\020\002\022\036\n\032SCAN_ARFCN_RECEIVING_LEVEL\020\003\022\033\n\027G" +
-      "ET_CHANNEL_INFORMATION\020\004\022\033\n\027GET_LAST_VAL" +
-      "ID_TA_VALUE\020\005\022\023\n\017FORBID_OPERATOR\020\006*\337\003\n\016M",
-      "MSMessageType\022\033\n\027SET_THE_URL_OF_THE_MMSC" +
-      "\020\000\022\025\n\021SET_THE_MMS_PROXY\020\001\022-\n)SET_THE_PAR" +
-      "AMETER_FOR_SENDING_MMS_MESSAGE\020\002\022%\n!SET_" +
-      "CHARACTER_SETS_AND_INPUT_MODE\020\003\022\025\n\021WRITE" +
-      "_MMS_MESSAGE\020\004\022\024\n\020SEND_MMS_MESSAGE\020\005\022#\n\037" +
-      "MENAGE_THE_RECEIVED_MMS_MESSAGE\020\006\022\035\n\031REA" +
-      "D_RECEIVED_MMS_MESSAGE\020\007\022%\n!RECEIVE_MMS_" +
-      "MESSAGE_FROM_THE_MMSC\020\010\022(\n$SET_PRIORITY_" +
-      "OF_MMS_MESSAGE_AND_CALL\020\t\022.\n*SET_DUR_ATT" +
-      "RIBUTE_VALUE_IN_THE_SMIL_SCRIPT\020\n\022\032\n\026SET",
-      "_MMS_SMS_TRANSACTOR\020\013\022\036\n\032ENABLE_OUTPUT_T" +
-      "EXT_IN_USC2\020\014\022\025\n\021OUTPUT_FILE_STYLE\020\r*\350\001\n" +
-      "\016STKMessageType\022\034\n\030TURN_ON_OFF_STK_FUNCT" +
-      "ION\020\000\022\030\n\024STK_PROFILE_DOWNLOAD\020\001\022\030\n\024STK_E" +
-      "NVELOPE_COMMAND\020\002\022\031\n\025STK_TERMINAL_RESPON" +
-      "SE\020\003\022\024\n\020TRIGGER_STK_CALL\020\004\022\023\n\017TRIGGER_ST" +
-      "K_SMS\020\005\022\022\n\016TRIGGER_STK_SS\020\006\022\024\n\020TRIGGER_S" +
-      "TK_USSD\020\007\022\024\n\020TRIGGER_STK_DTMF\020\010*\356\006\n\016FTPM" +
-      "essageType\022/\n+OPEN_AN_FTP_SERVICE_TO_THE" +
-      "_GIVEN_FTP_SERVER\020\000\022\031\n\025CLOSE_THE_FTP_SER",
-      "VICE\020\001\022#\n\037UPLOAD_A_FILE_TO_THE_FTP_SERVE" +
-      "R\020\002\022\'\n#DOWNLOAD_A_FILE_FROM_THE_FTP_SERV" +
-      "ER\020\003\022=\n9SET_THE_PATH_IN_THE_FTP_SERVER_T" +
-      "O_UPLOAD_OR_DOWNLOAD_FILE\020\004\0228\n4SET_THE_U" +
-      "SER_NAME_OF_THE_ACCOUNT_TO_OPEN_FTP_SERV" +
-      "ICE\020\005\0227\n3SET_THE_PASSWORD_OF_THE_ACCOUNT" +
-      "_TO_OPEN_FTP_SERVICE\020\006\0228\n4SET_SOME_CONFI" +
-      "GURABLE_PARAMETERS_FOR_THE_FTP_SERVICE\020\007" +
-      "\022\037\n\033QUERY_STATUS_OF_FTP_SERVICE\020\010\0229\n5QUE" +
-      "RY_THE_REAL_SIZE_TRANSFERED_IN_THE_LATES",
-      "T_TRANSFER\020\t\0220\n,RENAME_FILE_OR_FOLDER_NA" +
-      "ME_ON_THE_FTP_SERVER\020\n\0226\n2QUERY_THE_SIZE" +
-      "_OF_APPOINTED_FILE_ON_THE_FTP_SERVER\020\013\022/" +
-      "\n+DELETE_THE_APPOINTED_FILE_ON_THE_FTP_S" +
-      "ERVER\020\014\0220\n,ESTABLISH_A_NEW_FILEFOLDER_ON" +
-      "_THE_FTP_SERVER\020\r\022)\n%REMOVE_A_FILEFOLDER" +
-      "_ON_THE_FTP_SERVER\020\016\022D\n@LIST_CONTENTS_OF" +
-      "_DIRECTORY_OR_FILE_INFORMATION_ON_THE_FT" +
-      "P_SERVER\020\017\022<\n8LIST_FILE_NAMES_IN_THE_GIV" +
-      "EN_DIRECTORY_ON_THE_FTP_SERVER\020\020*\375\002\n\017Fil",
-      "eMessageType\022\031\n\025GET_STORAGE_DATE_SIZE\020\000\022" +
-      "\016\n\nLIST_FILES\020\001\022\032\n\026UPLOAD_FILE_TO_STORAG" +
-      "E\020\002\022\036\n\032DOWNLOAD_FILE_FROM_STORAGE\020\003\022\032\n\026D" +
-      "ELETE_FILE_IN_STORAGE\020\004\022\r\n\tMOVE_FILE\020\005\022\r" +
-      "\n\tOPEN_FILE\020\006\022\r\n\tREAD_FILE\020\007\022\016\n\nWRITE_FI" +
-      "LE\020\010\022\r\n\tSEEK_FILE\020\t\022\016\n\nCLOSE_FILE\020\n\022\"\n\036G" +
-      "ET_OFFSET_OF_THE_FILE_POINTER\020\013\0224\n0FORCE" +
-      "_TO_WRITE_DATA_REMAINING_IN_THE_FILE_BUF" +
-      "FER\020\014\0221\n-TRUNCATE_THE_SPECIFIED_FILE_FRO" +
-      "M_FILE_POINTER\020\r*\244\001\n\017HTTPMessageType\022\027\n\023",
-      "SET_HTTP_SERVER_URL\020\000\022\031\n\025SEND_HTTP_GET_R" +
-      "EQUEST\020\001\022\035\n\031READ_HTTP_SERVER_RESPONSE\020\002\022" +
-      "\032\n\026SEND_HTTP_POST_REQUEST\020\003\022\"\n\036DOWNLOAD_" +
-      "FILE_FROM_HTTP_SERVER\020\004*\376\036\n\005Error\022\006\n\002OK\020" +
-      "\000\022\020\n\014UNKNOW_ERROR\020\001\022\020\n\014SERVICE_BUSY\020\003\022\034\n" +
-      "\030FAILED_TO_GET_IP_ADDRESS\020\004\022\021\n\rNETWORK_E" +
-      "RROR\020\005\022#\n\037UNSUPPORTED_AUTHENTICATION_TYP" +
-      "E\020\006\022\022\n\016SERVICE_CLOSED\020\007\022#\n\037GPRS_CSD_CONT" +
-      "EXT_IS_DEACTIVATED\020\010\022\013\n\007TIMEOUT\020\t\022!\n\035NO_" +
-      "RECIPIENT_FOR_SMTP_SERVICE\020\n\022\030\n\024FAILED_T",
-      "O_SEND_EMAIL\020\013\022&\n\"FAILED_TO_OPEN_FILE_FO" +
-      "R_ATTACHMENT\020\014\022#\n\037NO_ENOUGH_MEMORY_FOR_A" +
-      "TTACHMENT\020\r\022!\n\035FAILED_TO_SAVE_THE_ATTACH" +
-      "MENT\020\016\022 \n\034THE_INPUT_PARAMETER_IS_WRONG\020\017" +
-      "\022\032\n\025SERVICE_NOT_AVAILABLE\020\245\003\022$\n\037REQUESTE" +
-      "D_MAIL_ACTION_NOT_TAKEN\020\302\003\022\035\n\030REQUESTED_" +
-      "ACTION_ABORTED\020\303\003\022;\n6REQUESTED_ACTION_NO" +
-      "T_TAKEN_INSUFFICIENT_SYSTEM_STORAGE\020\304\003\022&" +
-      "\n!SYNTAX_ERROR_COMMAND_UNRECOGNIZED\020\364\003\022," +
-      "\n\'SYNTAX_ERROR_IN_PARAMETERS_OR_ARGUMENT",
-      "S\020\365\003\022\034\n\027COMMAND_NOT_IMPLEMENTED\020\366\003\022\035\n\030BA" +
-      "D_SEQUENCE_OF_COMMANDS\020\367\003\022&\n!COMMAND_PAR" +
-      "AMETER_NOT_IMPLEMENTED\020\370\003\022!\n\034DOMAIN_DOES" +
-      "_NOT_ACCEPT_EMAIL\020\211\004\022#\n\036ACCESS_DENIED_FO" +
-      "R_SMTP_SERVICE\020\222\004\022\032\n\025AUTHENTICATION_FAIL" +
-      "ED\020\227\004\022\037\n\032REQUESTED_ACTION_NOT_TAKEN\020\246\004\022\023" +
-      "\n\016USER_NOT_LOCAL\020\247\004\022?\n:REQUESTED_MAIL_AC" +
-      "TION_ABORTED_EXCEEDED_STORAGE_NOT_ALLOWE" +
-      "D\020\250\004\0228\n3REQUESTED_ACTION_NOT_TAKEN_MAILB" +
-      "OX_NAME_NOT_ALLOWED\020\251\004\022\027\n\022TRANSACTION_FA",
-      "ILED\020\252\004\022\022\n\rHTTP_TIME_OUT\020\331\035\022\016\n\tHTTP_BUSY" +
-      "\020\332\035\022\023\n\016HTTP_UART_BUSY\020\333\035\022\030\n\023HTTP_GET_NO_" +
-      "REQUEST\020\334\035\022\026\n\021HTTP_NETWORK_BUSY\020\335\035\022\035\n\030HT" +
-      "TP_NETWORK_OPEN_FAILED\020\336\035\022\033\n\026HTTP_NETWOR" +
-      "K_NO_CONFIG\020\337\035\022\032\n\025HTTP_NETWORK_DEACTIVE\020" +
-      "\340\035\022\027\n\022HTTP_NETWORK_ERROR\020\341\035\022\023\n\016HTTP_URL_" +
-      "ERROR\020\342\035\022\023\n\016HTTP_EMPTY_URL\020\343\035\022\027\n\022HTTP_IP" +
-      "_ADDR_ERROR\020\344\035\022\023\n\016HTTP_DNS_ERROR\020\345\035\022\035\n\030H" +
-      "TTP_SOCKET_CREATE_ERROR\020\346\035\022\036\n\031HTTP_SOCKE" +
-      "T_CONNECT_ERROR\020\347\035\022\033\n\026HTTP_SOCKET_READ_E",
-      "RROR\020\350\035\022\034\n\027HTTP_SOCKET_WRITE_ERROR\020\351\035\022\026\n" +
-      "\021HTTP_SOCKET_CLOSE\020\352\035\022\033\n\026HTTP_DATA_ENCOD" +
-      "E_ERROR\020\353\035\022\033\n\026HTTP_DATA_DECODE_ERROR\020\354\035\022" +
-      "\031\n\024HTTP_TO_READ_TIMEOUT\020\355\035\022\031\n\024HTTP_RESPO" +
-      "NSE_FAILED\020\356\035\022\027\n\022INCOMING_CALL_BUSY\020\357\035\022\024" +
-      "\n\017VOICE_CALL_BUSY\020\360\035\022\022\n\rINPUT_TIMEOUT\020\361\035" +
-      "\022\026\n\021WAIT_DATA_TIMEOUT\020\362\035\022\037\n\032WAIT_HTTP_RE" +
-      "SPONSE_TIMEOUT\020\363\035\022\026\n\021ALLOC_MEMORY_FAIL\020\364" +
-      "\035\022\031\n\024HTTP_NEED_RELOCATION\020\365\035\022\030\n\023INVALID_" +
-      "INPUT_VALUE\020\231\036\022\021\n\014MMS_TIME_OUT\020\275\036\022\021\n\014URL",
-      "_TOO_LONG\020\276\036\022\020\n\013INVALID_URL\020\277\036\022\026\n\021UNSUPP" +
-      "ORTED_PROXY\020\300\036\022\032\n\025INVALID_PROXY_ADDRESS\020" +
-      "\301\036\022\025\n\020IP_ADDRESS_ERROR\020\302\036\022\016\n\tDNS_ERROR\020\303" +
-      "\036\022\024\n\017PARAMETER_ERROR\020\304\036\022\030\n\023TO_ADDRESS_EX" +
-      "CEEDED\020\305\036\022\030\n\023CC_ADDRESS_EXCEEDED\020\306\036\022\031\n\024B" +
-      "CC_ADDRESS_EXCEEDED\020\307\036\022$\n\037APPENDED_FILE_" +
-      "CAPACITY_EXCEEDED\020\310\036\022\027\n\022FILE_NAME_TOO_LO" +
-      "NG\020\311\036\022 \n\033THE_NUMBER_OF_FILE_EXCEEDED\020\312\036\022" +
-      "\031\n\024NON_EXISTENT_ADDRESS\020\313\036\022\025\n\020UFS_STORAG" +
-      "E_FULL\020\314\036\022\017\n\nDRIVE_FULL\020\315\036\022\020\n\013DRIVE_ERRO",
-      "R\020\316\036\022\016\n\tNOT_FOUND\020\317\036\022\026\n\021INVALID_FILE_NAM" +
-      "E\020\320\036\022\031\n\024FILE_ALREADY_EXISTED\020\321\036\022\032\n\025FAILE" +
-      "D_TO_CREATE_FILE\020\322\036\022\031\n\024FAILED_TO_WRITE_F" +
-      "ILE\020\323\036\022\"\n\035FAILED_TO_OPEN_REQUESTED_FILE\020" +
-      "\324\036\022\030\n\023FAILED_TO_READ_FILE\020\325\036\022\r\n\010MMS_BUSY" +
-      "\020\326\036\022\025\n\020SENDING_MMS_BUSY\020\327\036\022\030\n\023SENDING_MM" +
-      "S_STOPPED\020\330\036\022\034\n\027ALREADY_STOPPED_TO_SEND\020" +
-      "\331\036\022\027\n\022RECEIVING_MMS_BUSY\020\332\036\022\032\n\025RECEIVING" +
-      "_MMS_STOPPED\020\333\036\022\034\n\027ALREADY_STOPPED_RECEI" +
-      "VE\020\334\036\022\032\n\025HTTP_RESPONSE_FALIURE\020\335\036\022\031\n\024INV",
-      "ALID_MMS_RESPONSE\020\336\036\022\027\n\022MMS_RESPONSE_ERR" +
-      "OR\020\337\036\022\031\n\024INVALID_PUSH_MESSAGE\020\340\036\022\027\n\022ALRE" +
-      "ADY_DONWLOADED\020\341\036\022\021\n\014NETWORK_BUSY\020\342\036\022\033\n\026" +
-      "FAILED_TO_OPEN_NETWORK\020\343\036\022\032\n\025NETWORK_NO_" +
-      "CONFIGURED\020\344\036\022\030\n\023NETWORK_DEACTIVATED\020\345\036\022" +
-      "\026\n\021MMS_NETWORK_ERROR\020\346\036\022\025\n\020NETWORK_SHUTD" +
-      "OWN\020\347\036\022\016\n\tUART_BUSY\020\350\036\022\021\n\014UART_ESCAPED\020\351" +
-      "\036\022\034\n\027FAILED_TO_CREATE_SOCKET\020\352\036\022\035\n\030FAILE" +
-      "D_TO_CONNECT_SOCKET\020\353\036\022\032\n\025FAILED_TO_READ" +
-      "_SOCKET\020\354\036\022\033\n\026FAILED_TO_WRITE_SOCKET\020\355\036\022",
-      "\022\n\rSOCKET_CLOSED\020\356\036\022\025\n\020MMS_LENGTH_ERROR\020" +
-      "\357\036\022\031\n\024FAILED_TO_ENCODE_MMS\020\360\036\022\031\n\024FAILED_" +
-      "TO_DECODE_MMS\020\361\036\022\032\n\025FAILED_TO_DECODE_HTT" +
-      "P\020\362\036\022\"\n\035FAILED_TO_DECODE_PUSH_MESSAGE\020\363\036" +
-      "\022\024\n\017PDU_ALIGN_ERROR\020\364\036\022\030\n\023PDU_CHARACTER_" +
-      "ERROR\020\365\036\022\024\n\017STRING_TOO_LONG\020\366\036\022\r\n\010MMS_FU" +
-      "LL\020\367\036\022\025\n\020NON_EXISTENT_MMS\020\370\036\022\024\n\017INVALID_" +
-      "ADDRESS\020\371\036\022\030\n\023MMS_VOICE_CALL_BUSY\020\372\036\022\030\n\023" +
-      "ALLOC_MEMORY_FAILED\020\373\036\022\026\n\021EXCEED_MAX_LEN" +
-      "GTH\020\240\037\022\023\n\016OPEN_FILE_FAIL\020\241\037\022\024\n\017WRITE_FIL",
-      "E_FAIL\020\242\037\022\022\n\rGET_SIZE_FAIL\020\243\037\022\016\n\tREAD_FA" +
-      "IL\020\244\037\022\023\n\016LIST_FILE_FAIL\020\245\037\022\025\n\020DELETE_FIL" +
-      "E_FAIL\020\246\037\022\027\n\022GET_DISC_INFO_FAIL\020\247\037\022\r\n\010NO" +
-      "_SPACE\020\250\037\022\r\n\010TIME_OUT\020\251\037\022\030\n\023HTTP_FILE_NO" +
-      "T_FOUND\020\252\037\022\023\n\016FILE_TOO_LARGE\020\253\037\022\027\n\022FILE_" +
-      "ALREADY_EXIST\020\254\037\022\026\n\021INVALID_PARAMETER\020\255\037" +
-      "\022\021\n\014DRIVER_ERROR\020\256\037\022\020\n\013CREATE_FAIL\020\257\037\022\022\n" +
-      "\rACCESS_DENIED\020\260\037\022\026\n\021FILE_IS_TOO_LARGE\020\261" +
-      "\037\022\021\n\014WRONG_FORMAT\020\314!\022\024\n\017AUDIO_TASK_BUSY\020" +
-      "\316!\022\027\n\022CREATE_FILE_FAILED\020\317!\022/\n*ADDITIONA",
-      "L_RECORDING_IN_A_DIFFERENT_FORMAT\020\320!\022\016\n\t" +
-      "DISC_FULL\020\321!\022\035\n\030WRITE_PROTECTION_ON_FILE" +
-      "\020\322!\022\033\n\026RECORDING_UNKNOW_ERROR\020\223#*\245\007\n\010FTP" +
-      "Error\022\n\n\006FTP_OK\020\000\022\024\n\020FTP_UNKNOW_ERROR\020\001\022" +
-      "\024\n\020FTP_SERVICE_BUSY\020\003\0225\n1FAILED_TO_GET_I" +
-      "P_ADDRESS_ACCORDING_TO_DOMAIN_NAME\020\004\022\025\n\021" +
-      "FTP_NETWORK_ERROR\020\005\022$\n FTP_SESSION_CLOSE" +
-      "D_BY_FTP_SERVER\020\006\022,\n(DATA_CONNECTION_OF_" +
-      "FTP_SERVICE_IS_CLOSED\020\007\022\'\n#FTP_GPRS_CSD_" +
-      "CONTEXT_IS_DEACTIVATED\020\010\022\017\n\013FTP_TIMEOUT\020",
-      "\t\022\036\n\032INPUT_PARAMETAR_IS_ILLEGAL\020\n\022$\n FIL" +
-      "E_NOT_FOUND_IN_LOCAL_POSITION\020\013\022(\n$FAILE" +
-      "D_TO_GET_FILE_IN_LOCAL_POSITION\020\014\022\'\n#FTP" +
-      "_NO_ENOUGH_MEMORY_FOR_ATTACHMENT\020\r\022$\n\037FT" +
-      "P_SERVER_CANT_SUPPORT_SERVICE\020\245\003\022#\n\036FAIL" +
-      "ED_TO_OPEN_DATA_CONNECTION\020\251\003\022,\n\'CONNECT" +
-      "ION_CLOSED_AND_STOP_TRANSFERRING\020\252\003\022#\n\036R" +
-      "EQUEST_FOR_FILE_ISNT_OPERATED\020\302\003\022%\n FTP_" +
-      "SERVER_HAS_NOT_ENOUGH_MEMORY\020\304\003\022#\n\036FORMA" +
-      "T_OF_FTP_COMMAND_IS_WRONG\020\364\003\022&\n!PARAMETE",
-      "R_OF_FTP_COMMAND_IS_WRONG\020\365\003\022,\n\'FTP_COMM" +
-      "AND_ISNT_OPERATED_BY_FTP_SERVER\020\366\003\022\031\n\024NO" +
-      "T_LOGIN_FTP_SERVER\020\222\004\022 \n\033NEED_INFORMATIO" +
-      "N_OF_ACCOUNT\020\224\004\022\032\n\025REQUEST_ISNT_OPERATED" +
-      "\020\246\004\022\027\n\022REQUEST_IS_STOPPED\020\247\004\022\037\n\032REQUEST_" +
-      "OF_FILE_IS_STOPPED\020\250\004\022\031\n\024FILE_NAME_IS_IL" +
-      "LEGAL\020\251\004B0\n\033com.rtrk.atcommand.protobufB" +
-      "\021ProtobufATCommand"
+      "and.Action\022G\n\007default\030\005 \001(\0162\037.com.rtrk.a" +
+      "tcommand.TAToDefault:\025SET_ALL_TA_TO_DEFA" +
+      "ULT\022H\n\rprofileNumber\030\006 \001(\0162!.com.rtrk.at" +
+      "command.ProfileNumber:\016PROFILE_NUMBER\022L\n",
+      "\rfunctionality\030\007 \001(\0162!.com.rtrk.atcomman" +
+      "d.Functionality:\022FULL_FUNCTIONALITY\0229\n\005r" +
+      "eset\030\010 \001(\0162\031.com.rtrk.atcommand.Reset:\017D" +
+      "O_NOT_RESET_ME\022\024\n\014characterSet\030\t \001(\t\022\022\n\n" +
+      "isResponse\030\013 \001(\010\022\023\n\013description\030\014 \001(\t\022M\n" +
+      "\nresultCode\030\r \001(\0162\036.com.rtrk.atcommand.R" +
+      "esultCode:\031TA_TRANSMINTS_RESULT_CODE\022]\n\023" +
+      "informationResponse\030\016 \001(\0162\'.com.rtrk.atc" +
+      "ommand.InformationResponse:\027LONG_RESULT_" +
+      "CODE_FORMAT\022c\n\021connectResultCode\030\017 \001(\0162%",
+      ".com.rtrk.atcommand.ConnectResultCode:!C" +
+      "ONNECT_RESULT_CODE_ONLY_RETURNED\022_\n\024rese" +
+      "tToProfileNumber\030\020 \001(\0162(.com.rtrk.atcomm" +
+      "and.ResetToProfileNumber:\027RESET_TO_PROFI" +
+      "LE_NUMBER\0226\n\014powerOffMode\030\021 \001(\0162 .com.rt" +
+      "rk.atcommand.PowerOffMode\022k\n\021disableResu" +
+      "ltCode\030\022 \001(\0162%.com.rtrk.atcommand.Disabl" +
+      "eResultCode:)ENABLE_RESULT_CODE_AND_USE_" +
+      "NUMERIC_VALUES\"\253\t\n\035SerialInterfaceContro" +
+      "lCommand\022J\n\013messageType\030\001 \002(\01625.com.rtrk",
+      ".atcommand.SerialInterfaceControlMessage" +
+      "Type\022*\n\006action\030\002 \002(\0162\032.com.rtrk.atcomman" +
+      "d.Action\0228\n\rdcdLineStatus\030\006 \001(\0162!.com.rt" +
+      "rk.atcommand.DCDLineStatus\0228\n\rframingFor" +
+      "mat\030\007 \001(\0162!.com.rtrk.atcommand.FramingFo" +
+      "rmat\0221\n\006parity\030\010 \001(\0162\032.com.rtrk.atcomman" +
+      "d.Parity:\005SPACE\022.\n\010dceByDte\030\t \001(\0162\034.com." +
+      "rtrk.atcommand.DCEByDTE\022.\n\010dteByDce\030\n \001(" +
+      "\0162\034.com.rtrk.atcommand.DTEByDCE\022&\n\004rate\030" +
+      "\013 \001(\0162\030.com.rtrk.atcommand.Rate\022\026\n\016enabl",
+      "eDualUART\030\014 \001(\010\022>\n\020transmissionRate\030\016 \001(" +
+      "\0162$.com.rtrk.atcommand.TransmissionRate\022" +
+      "\030\n\020maximumFrameSize\030\017 \001(\005\022\032\n\022acknowledme" +
+      "ntTimer\030\020 \001(\005\022&\n\036maximumNumberOfRetransm" +
+      "issions\030\021 \001(\005\022\025\n\rresponseTimer\030\022 \001(\005\022\033\n\023" +
+      "wakeUpResponseTimer\030\023 \001(\005\022\023\n\013windowsSize" +
+      "\030\024 \001(\005\022;\n\010dataBits\030\026 \001(\0162\034.com.rtrk.atco" +
+      "mmand.DataBits:\013DATA_BITS_8\022:\n\010stopBits\030" +
+      "\027 \001(\0162\034.com.rtrk.atcommand.StopBits:\nSTO" +
+      "P_BIT_1\022A\n\003mtm\030\030 \001(\01624.com.rtrk.atcomman",
+      "d.MultiplexerTransparencyMechanism\022\022\n\nis" +
+      "Response\030\031 \001(\010\022\023\n\013description\030\032 \001(\t\022$\n\034e" +
+      "nableReportingLocalPortRate\030\033 \001(\010\022:\n\003mcc" +
+      "\030\034 \001(\0162-.com.rtrk.atcommand.MultiplexerC" +
+      "ontrolChannel\022Q\n\016dualUARTParity\030\r \001(\0162\"." +
+      "com.rtrk.atcommand.DualUARTParity:\025DUAL_" +
+      "UART_PARITY_NONE\022J\n\tdtrStatus\030\035 \001(\0162\035.co" +
+      "m.rtrk.atcommand.DTRStatus:\030TA_IGNORES_S" +
+      "TATUS_ON_DTR\"\356\t\n\024StatusControlCommand\022A\n" +
+      "\013messageType\030\001 \002(\0162,.com.rtrk.atcommand.",
+      "StatusControlMessageType\022*\n\006action\030\002 \002(\016" +
+      "2\032.com.rtrk.atcommand.Action\022\022\n\nlocation" +
+      "ID\030\006 \001(\005\022\r\n\005cause\030\007 \001(\t\022$\n\003pas\030\010 \001(\0162\027.c" +
+      "om.rtrk.atcommand.Pas\0225\n\006status\030\t \001(\0162\032." +
+      "com.rtrk.atcommand.Status:\tSTATUS_ON\022\021\n\t" +
+      "refuseSMS\030\n \001(\010\022\022\n\nrefuseCall\030\013 \001(\010\022\025\n\rs" +
+      "howCallState\030\014 \001(\010\022\020\n\010extunsol\030\r \001(\t\022\r\n\005" +
+      "state\030\016 \001(\005\022\034\n\024switchOnSIMDetection\030\017 \001(" +
+      "\010\022\014\n\004time\030\020 \001(\t\022\032\n\022datlightSavingTime\030\021 " +
+      "\001(\t\022\027\n\017highInsertLevel\030\022 \001(\010\022l\n\tpinChoic",
+      "e\030\023 \001(\0162\'.com.rtrk.atcommand.SIMCardDete" +
+      "ctionPIN:0CONFIGURE_SIM_PRESENCE_AS_SIM_" +
+      "CARD_DETECTION_PIN\022\022\n\nisResponse\030\026 \001(\010\022\023" +
+      "\n\013description\030\027 \001(\t\022\035\n\025EnableURCPresenta" +
+      "tion\030\030 \001(\010\022O\n\003pui\030\031 \001(\01625.com.rtrk.atcom" +
+      "mand.ProprietaryUnsolicitedIndications:\013" +
+      "PUI_DISABLE\0226\n\003sof\030\032 \001(\0162).com.rtrk.atco" +
+      "mmand.StateOfInitialization\022>\n\020gsmNetwor" +
+      "kStatus\030\033 \001(\0162$.com.rtrk.atcommand.GSMNe" +
+      "tworkStatus\022,\n\007rtcTime\030\034 \001(\0162\033.com.rtrk.",
+      "atcommand.RTCTime\022?\n\005tzcer\030\035 \001(\01620.com.r" +
+      "trk.atcommand.TimeZoneChangeEventReporti" +
+      "ng\022 \n\030switchONDetectingSIMCard\030\024 \001(\010\022p\n\017" +
+      "simInsertStatus\030\025 \001(\0162\'.com.rtrk.atcomma" +
+      "nd.SIMCardInsertStatus:.LOW_LEVEL_OF_PIN" +
+      "_INDICATES_SIM_CARD_IS_PRESENT\022&\n\036enable" +
+      "CircuitSwitchedVoiceCall\030\036 \001(\010\022:\n\016connec" +
+      "tionType\030\037 \001(\0162\".com.rtrk.atcommand.Conn" +
+      "ectionType\022\037\n\027enableToSynchronizeTime\030  " +
+      "\001(\010\022 \n\030openSIMDetectionFunction\030! \001(\010\"\371\006",
+      "\n\021SIMRelatedCommand\022>\n\013messageType\030\001 \002(\016" +
+      "2).com.rtrk.atcommand.SIMRelatedMessageT" +
+      "ype\022*\n\006action\030\002 \002(\0162\032.com.rtrk.atcommand" +
+      ".Action\022\013\n\003fac\030\037 \001(\t\022<\n\010lockMode\030  \001(\0162\034" +
+      ".com.rtrk.atcommand.LockMode:\014QUERY_STAT" +
+      "US\022\020\n\010password\030! \001(\t\022B\n\005class\030\" \001(\0162\031.co" +
+      "m.rtrk.atcommand.Class:\030ALL_TELEPHONY_EX" +
+      "CEPT_SMS\022*\n\006status\030\006 \001(\0162\032.com.rtrk.atco" +
+      "mmand.Status\022\013\n\003pin\030\007 \001(\t\022\016\n\006newPin\030\010 \001(" +
+      "\t\022\021\n\tpwdLength\030\t \001(\005\022\016\n\006oldPwd\030\n \001(\t\022\016\n\006",
+      "newPwd\030\013 \001(\t\0222\n\ncommandSIM\030\014 \001(\0162\036.com.r" +
+      "trk.atcommand.CommandSIM\022\016\n\006fileID\030\r \001(\005" +
+      "\022\n\n\002P1\030\016 \001(\005\022\n\n\002P2\030\017 \001(\005\022\n\n\002P3\030\020 \001(\005\022\013\n\003" +
+      "SW1\030\021 \001(\005\022\013\n\003SW2\030\022 \001(\005\022\014\n\004data\030\023 \001(\t\022\020\n\010" +
+      "response\030\024 \001(\t\022\016\n\006length\030\025 \001(\005\022\020\n\010CCIDDa" +
+      "ta\030\026 \001(\t\022\014\n\004GID1\030\027 \001(\005\022\014\n\004GID2\030\030 \001(\005\022\032\n\022" +
+      "serviceProvideName\030\031 \001(\t\022\023\n\013displayPLMN\030" +
+      "\032 \001(\010\022\014\n\004chv1\030\033 \001(\005\022\014\n\004chv2\030\034 \001(\005\022\014\n\004puk" +
+      "1\030\035 \001(\005\022\014\n\004puk2\030\036 \001(\005\022\022\n\nisResponse\030# \001(" +
+      "\010\022\023\n\013description\030$ \001(\t\022X\n\013voltageMode\030% ",
+      "\001(\0162\037.com.rtrk.atcommand.VoltageMode:\"RE" +
+      "COGNIZE_1_8_V_AND_3_0_V_SIM_CARD\022\017\n\007comm" +
+      "and\030& \001(\t\"\220\t\n\025NetworkServiceCommand\022B\n\013m" +
+      "essageType\030\001 \002(\0162-.com.rtrk.atcommand.Ne" +
+      "tworkServiceMessageType\022*\n\006action\030\002 \002(\0162" +
+      "\032.com.rtrk.atcommand.Action\022:\n\016operatorS" +
+      "tatus\030\006 \001(\0162\".com.rtrk.atcommand.Operato" +
+      "rStatus\022\020\n\010operator\030! \001(\t\022\026\n\016operatorNum" +
+      "ber\030\007 \001(\005\022F\n\014operatorMode\030\010 \001(\0162 .com.rt" +
+      "rk.atcommand.OperatorMode:\016AUTOMATIC_MOD",
+      "E\022T\n\016operatorFormat\030\t \001(\0162\".com.rtrk.atc" +
+      "ommand.OperatorFormat:\030LONG_FORMAT_ALPHA" +
+      "NUMERIC\022L\n\027networkRegistrationMode\030\n \001(\016" +
+      "2+.com.rtrk.atcommand.NetworkRegistratio" +
+      "nMode\022\030\n\020locationAreaCode\030\013 \001(\t\022\016\n\006cellI" +
+      "D\030\014 \001(\t\022\014\n\004rssi\030\r \001(\005\022\013\n\003ber\030\016 \001(\005\022\r\n\005in" +
+      "dex\030\017 \001(\005\022\020\n\010numericn\030\020 \001(\t\022\016\n\006alphan\030\021 " +
+      "\001(\t\022\016\n\006opBand\030\022 \001(\t\022<\n\013engModeDump\030\023 \001(\016" +
+      "2\'.com.rtrk.atcommand.EngineeringModeDum" +
+      "p\022&\n\004band\030\024 \001(\0162\030.com.rtrk.atcommand.Ban",
+      "d\022\021\n\tfrequency\030\025 \001(\005\022\026\n\016signalStrength\030\026" +
+      " \001(\005\022.\n\010band1900\030\027 \001(\0162\034.com.rtrk.atcomm" +
+      "and.Band1900\022\016\n\006arfcn1\030\030 \001(\005\022\016\n\006arfcn2\030\031" +
+      " \001(\005\022\016\n\006arfcn3\030\032 \001(\005\022\022\n\nisResponse\030\033 \001(\010" +
+      "\022\023\n\013description\030\034 \001(\t\022P\n\031networkRegistra" +
+      "tionStatus\030\035 \001(\0162-.com.rtrk.atcommand.Ne" +
+      "tworkRegistrationStatus\022Y\n\017engineeringMo" +
+      "de\030\036 \001(\0162#.com.rtrk.atcommand.Engineerin" +
+      "gMode:\033SWITCH_OFF_ENGINEERING_MODE\022S\n\014lo" +
+      "ckFreqMode\030\037 \001(\0162%.com.rtrk.atcommand.Lo",
+      "ckFrequencyMode:\026DISABLE_LOCK_FREQUENCY\022" +
+      "\023\n\013lockedARCFN\030  \001(\010\"\327\007\n\022CallRelatedComm" +
+      "and\022?\n\013messageType\030\001 \002(\0162*.com.rtrk.atco" +
+      "mmand.CallRelatedMessageType\022*\n\006action\030\002" +
+      " \002(\0162\032.com.rtrk.atcommand.Action\022\016\n\006numb" +
+      "er\030\027 \001(\t\022\023\n\013GSMModifier\030\006 \001(\t\022\036\n\026interwo" +
+      "rkinWindowsSize\030\007 \001(\005\022\030\n\020mobileWindowSiz" +
+      "e\030\010 \001(\005\022\032\n\022acknowledmentTimer\030\t \001(\005\022\037\n\027r" +
+      "etransimissionAttempts\030\n \001(\005\022\022\n\nRPLVersi" +
+      "on\030\013 \001(\005\022\032\n\022resequencingPeriod\030\014 \001(\005\022@\n\n",
+      "addresType\030\016 \001(\0162\037.com.rtrk.atcommand.Ad" +
+      "dressType:\013UNKNOW_TYPE\022\r\n\005index\030\017 \001(\005\022,\n" +
+      "\007callDir\030\020 \001(\0162\033.com.rtrk.atcommand.Call" +
+      "Dir\0220\n\tcallState\030\021 \001(\0162\035.com.rtrk.atcomm" +
+      "and.CallState\022.\n\010callMode\030\022 \001(\0162\034.com.rt" +
+      "rk.atcommand.CallMode\022\035\n\025callIsOneOfMult" +
+      "iparty\030\023 \001(\010\022\025\n\rspeechChannel\030\024 \001(\005\022\022\n\nd" +
+      "isableATH\030\025 \001(\010\022\026\n\016setUpVoiceCall\030\026 \001(\010\022" +
+      "\022\n\nisResponse\030\030 \001(\010\022\023\n\013description\030\031 \001(\t" +
+      "\022\t\n\001n\030\032 \001(\005\022&\n\036serviceReportingControlEn",
+      "abled\030\033 \001(\010\022\034\n\024enableExtendedFormat\030\034 \001(" +
+      "\010\0222\n\nschemeMode\030\035 \001(\0162\036.com.rtrk.atcomma" +
+      "nd.SchemeMode\022<\n\017alternatingMode\030\036 \001(\0162#" +
+      ".com.rtrk.atcommand.AlternatingMode\0222\n\ns" +
+      "peechMode\030\037 \001(\0162\036.com.rtrk.atcommand.Spe" +
+      "echMode\022%\n\035enableReportSpeechChannelType" +
+      "\030  \001(\010\"\350\016\n\nSMSCommand\0227\n\013messageType\030\001 \002" +
+      "(\0162\".com.rtrk.atcommand.SMSMessageType\022*" +
+      "\n\006action\030\002 \002(\0162\032.com.rtrk.atcommand.Acti" +
+      "on\022O\n\016messageService\030- \001(\0162\".com.rtrk.at",
+      "command.MessageService:\023GSM_03_40_AND_03" +
+      "_41\022(\n mobileTerminatedMessageSupported\030" +
+      "\006 \001(\010\022&\n\036mobileOrientedMessageSupported\030" +
+      "\007 \001(\010\022%\n\035broadcastTypeMessageSupported\030\010" +
+      " \001(\010\022B\n\rmessageFormat\030\t \001(\0162!.com.rtrk.a" +
+      "tcommand.MessageFormat:\010PDU_MODE\022\021\n\tSCAd" +
+      "dress\030\n \001(\t\022\023\n\013toSCAddress\030\013 \001(\005\022\014\n\004mem1" +
+      "\030\014 \001(\t\022\014\n\004mem2\030\r \001(\t\022\014\n\004mem3\030\016 \001(\t\022\r\n\005in" +
+      "dex\030\017 \001(\005\022O\n\007delFlag\030\020 \001(\0162\033.com.rtrk.at" +
+      "command.DelFlag:!DELETE_MESSAGE_SPECIFIE",
+      "D_IN_INDEX\022\r\n\005alpha\030\021 \001(\t\022\032\n\022destination" +
+      "Address\030\022 \001(\t\022\014\n\004data\030\023 \001(\014\022\016\n\006length\030\024 " +
+      "\001(\005\022\032\n\022originatingAddress\030\025 \001(\t\022\013\n\003pdu\030\026" +
+      " \001(\005\022\036\n\026serviceCenterTimeStamp\030\027 \001(\t\022\034\n\024" +
+      "TPDestinationAddress\030\030 \001(\005\022\034\n\024TPOriginat" +
+      "ingAddress\030\031 \001(\005\022\n\n\002fo\030\032 \001(\005\022\031\n\021messageI" +
+      "dentifier\030\033 \001(\005\022\032\n\022protocolIdentifier\030\034 " +
+      "\001(\005\0228\n\rmessageStatus\030\035 \001(\0162!.com.rtrk.at" +
+      "command.MessageStatus\022\026\n\016validityPeriod\030" +
+      "\036 \001(\005\022\030\n\020messageReference\030\037 \001(\005\022\016\n\006ackpd",
+      "u\030  \001(\005\022\023\n\013commandType\030! \001(\005\022\025\n\rmessageN" +
+      "umber\030\" \001(\005\022F\n\nbufferMode\030$ \001(\0162\036.com.rt" +
+      "rk.atcommand.BufferMode:\022COMMAND_IS_FLUS" +
+      "HED\022\017\n\007profile\030% \001(\005\022\032\n\022messageIdentifie" +
+      "rs\030& \001(\t\022\014\n\004dcss\030\' \001(\t\022\034\n\024showValuesResu" +
+      "ltCode\030( \001(\010\022\027\n\017dataCodinScheme\030) \001(\005\022\014\n" +
+      "\004type\030* \001(\t\022\022\n\nfirstOctet\030, \001(\005\022\022\n\nisRes" +
+      "ponse\030. \001(\010\022\023\n\013description\030/ \001(\t\022<\n\013mess" +
+      "ageMode\0300 \001(\0162\037.com.rtrk.atcommand.Messa" +
+      "geMode:\006NORMAL\022;\n\020messageStatusPDU\0301 \001(\016",
+      "2!.com.rtrk.atcommand.MessageStatus\022\031\n\021m" +
+      "essageStatusText\0302 \001(\t\022c\n\014storeSMSRule\0303" +
+      " \001(\0162 .com.rtrk.atcommand.StoreSMSRule:+" +
+      "NO_SMS_DELIVER_INDICATIONS_ARE_ROUTED_TO" +
+      "_TE\022[\n\014storeCMBRule\030# \001(\0162 .com.rtrk.atc" +
+      "ommand.StoreCBMRule:#NO_CMB_INCICATIONS_" +
+      "ARE_ROUTED_TO_TE\022\n\n\002ds\0304 \001(\010\022\033\n\023enableTo" +
+      "StoreClass0\0305 \001(\010\022\203\001\n\021messageIndication\030" +
+      "6 \001(\0162%.com.rtrk.atcommand.MessageIndica" +
+      "tion:ABUFFER_UNSOLICITED_RESULT_CODES_IN",
+      "_TA_WHEN_TA_TE_LINK_IS_RESERVED\022\036\n\026messa" +
+      "geTypeNotAccepted\0307 \001(\010\022P\n\010codeMode\0308 \001(" +
+      "\0162\034.com.rtrk.atcommand.CodeMode: CODE_MO" +
+      "DE_ACCORDING_WITH_SIEMENS\"\234\003\n\020PhonebookC" +
+      "ommand\022=\n\013messageType\030\001 \002(\0162(.com.rtrk.a" +
+      "tcommand.PhonebookMessageType\022*\n\006action\030" +
+      "\002 \002(\0162\032.com.rtrk.atcommand.Action\022\017\n\007sto" +
+      "rage\030\022 \001(\t\022\017\n\007nlength\030\006 \001(\005\022\017\n\007tlength\030\007" +
+      " \001(\005\022\r\n\005index\030\010 \001(\005\022\016\n\006number\030\t \001(\t\0222\n\nn" +
+      "umberType\030\n \001(\0162\036.com.rtrk.atcommand.Num",
+      "berType\022\014\n\004text\030\013 \001(\t\022\016\n\006index1\030\014 \001(\005\022\016\n" +
+      "\006index2\030\r \001(\005\022\020\n\010findText\030\016 \001(\t\022\016\n\006alpha" +
+      "x\030\017 \001(\t\022\017\n\007numberx\030\020 \001(\t\022\r\n\005typex\030\021 \001(\005\022" +
+      "\022\n\nisResponse\030\023 \001(\010\022\023\n\013description\030\024 \001(\t" +
+      "\"\333\005\n\013GPRSCommand\0228\n\013messageType\030\001 \002(\0162#." +
+      "com.rtrk.atcommand.GPRSMessageType\022*\n\006ac" +
+      "tion\030\002 \002(\0162\032.com.rtrk.atcommand.Action\022\020" +
+      "\n\010attached\030\032 \001(\010\022\013\n\003cid\030\006 \001(\005\022\017\n\007PDPType" +
+      "\030\007 \001(\t\022\013\n\003APN\030\010 \001(\t\022\022\n\nPDPAddress\030\t \001(\t\022" +
+      "\r\n\005dComp\030\n \001(\005\022\r\n\005hComp\030\013 \001(\005\022\022\n\nprecede",
+      "nce\030\014 \001(\005\022\r\n\005delay\030\r \001(\005\022\023\n\013reliability\030" +
+      "\016 \001(\005\022\014\n\004peak\030\017 \001(\005\022\014\n\004mean\030\020 \001(\005\022\013\n\003L2P" +
+      "\030\021 \001(\t\022\r\n\005class\030\022 \001(\t\022B\n\022eventReportingM" +
+      "ode\030\023 \001(\0162&.com.rtrk.atcommand.EventRepo" +
+      "rtingMode\022L\n\027networkRegistrationMode\030\024 \001" +
+      "(\0162+.com.rtrk.atcommand.NetworkRegistrat" +
+      "ionMode\022P\n\031networkRegistrationStatus\030\025 \001" +
+      "(\0162-.com.rtrk.atcommand.NetworkRegistrat" +
+      "ionStatus\022\013\n\003lac\030\026 \001(\t\022\n\n\002ci\030\027 \001(\t\0224\n\013se" +
+      "rviceType\030\030 \001(\0162\037.com.rtrk.atcommand.Ser",
+      "viceType\022\026\n\016multislotClass\030\031 \001(\005\022\022\n\nisRe" +
+      "sponse\030\033 \001(\010\022\023\n\013description\030\034 \001(\t\022\023\n\013act" +
+      "ivatePDP\030\035 \001(\010\"\213\016\n\014TCPIPCommand\0229\n\013messa" +
+      "geType\030\001 \002(\0162$.com.rtrk.atcommand.TCPIPM" +
+      "essageType\022*\n\006action\030\002 \002(\0162\032.com.rtrk.at" +
+      "command.Action\022\r\n\005index\0306 \001(\005\022\014\n\004mode\030\006 " +
+      "\001(\t\0226\n\014serverFormat\030\007 \001(\0162 .com.rtrk.atc" +
+      "ommand.ServerFormat\022\014\n\004port\030\010 \001(\005\022\022\n\ndom" +
+      "ainName\030\t \001(\t\022\016\n\006length\030\n \001(\005\022\013\n\003APN\030\013 \001" +
+      "(\t\022\020\n\010username\030\014 \001(\t\022\020\n\010password\030\r \001(\t\0221",
+      "\n\004rate\030\016 \001(\0162\030.com.rtrk.atcommand.Rate:\t" +
+      "RATE_9600\022\r\n\005state\030\017 \001(\t\022\023\n\013socketState\030" +
+      "\020 \001(\t\022\023\n\013serverState\030\021 \001(\t\022\022\n\nprimaryDNS" +
+      "\030\022 \001(\t\022\023\n\013seondaryDNS\030\023 \001(\t\022\014\n\004time\030\025 \001(" +
+      "\003\022P\n\nsendPrompt\030\026 \001(\0162\036.com.rtrk.atcomma" +
+      "nd.SendPrompt:\034ECHO_PROMPT_AND_SHOW_SEND" +
+      "_OK\022\013\n\003num\030\027 \001(\005\022,\n\004type\030\030 \001(\0162\036.com.rtr" +
+      "k.atcommand.ServerType\022\013\n\003max\030\031 \001(\003\022\022\n\nd" +
+      "ialNumber\030\032 \001(\t\0222\n\nconnection\030\033 \001(\0162\036.co" +
+      "m.rtrk.atcommand.Connection\022\025\n\rnumberOfR",
+      "etry\030\034 \001(\005\022\020\n\010waitTime\030\035 \001(\005\022\020\n\010sendSize" +
+      "\030\036 \001(\005\022\016\n\006escape\030\037 \001(\010\022,\n\007channel\030  \001(\0162" +
+      "\033.com.rtrk.atcommand.Channel\022\t\n\001n\030! \001(\005\022" +
+      "\014\n\004sent\030\" \001(\005\022\r\n\005acked\030# \001(\005\022\016\n\006nAcked\030$" +
+      " \001(\005\022j\n\020receivedDataMode\030% \001(\0162$.com.rtr" +
+      "k.atcommand.ReceivedDataMode:*OUTPUT_REC" +
+      "EIVED_DATA_THROUGH_UART_DIRECTLY\022\n\n\002id\030&" +
+      " \001(\005\0226\n\014serverClinet\030\' \001(\0162 .com.rtrk.at" +
+      "command.ServerClient\022\013\n\003sid\030( \001(\005\022\016\n\006num" +
+      "ber\030) \001(\005\022\014\n\004host\030* \001(\t\022\017\n\007timeout\030+ \001(\005",
+      "\022\022\n\npingNumber\030, \001(\005\0222\n\npingResult\030- \001(\016" +
+      "2\036.com.rtrk.atcommand.PingResult\022\r\n\005byte" +
+      "s\030. \001(\005\022\013\n\003ttl\030/ \001(\005\0224\n\013finalResult\0300 \001(" +
+      "\0162\037.com.rtrk.atcommand.FinalResult\022\020\n\010re" +
+      "ceived\0301 \001(\005\022\014\n\004lost\0302 \001(\005\022\013\n\003min\0303 \001(\003\022" +
+      "\013\n\003avg\0304 \001(\003\022\016\n\006server\0305 \001(\t\022\022\n\nisRespon" +
+      "se\0307 \001(\010\022\023\n\013description\0308 \001(\t\022.\n\010ipHeade" +
+      "r\030\024 \001(\0162\034.com.rtrk.atcommand.IPHeader\022(\n" +
+      "\005timer\0309 \001(\0162\031.com.rtrk.atcommand.Timer\022" +
+      "\031\n\021configureAsServer\030: \001(\010\0222\n\nbearerType",
+      "\030; \001(\0162\036.com.rtrk.atcommand.BearerType\022\023" +
+      "\n\013showAddress\030< \001(\010\0226\n\014transferMode\030= \001(" +
+      "\0162 .com.rtrk.atcommand.TransferMode\022!\n\031s" +
+      "howTransportProtocolType\030> \001(\010\022\"\n\032enable" +
+      "MultipleTCPIPSession\030? \001(\010\022\020\n\010echoData\030@" +
+      " \001(\010\022H\n\025synchronizationResult\030A \001(\0162).co" +
+      "m.rtrk.atcommand.SynchronizationResult\022\024" +
+      "\n\014CSDDataSpeed\030B \001(\005\"\213\t\n\033SupplementarySe" +
+      "rviceCommand\022H\n\013messageType\030\001 \002(\01623.com." +
+      "rtrk.atcommand.SupplementaryServiceMessa",
+      "geType\022*\n\006action\030\002 \002(\0162\032.com.rtrk.atcomm" +
+      "and.Action\022(\n\005reads\030\026 \001(\0162\031.com.rtrk.atc" +
+      "ommand.Reads\022:\n\016forwardingMode\030\006 \001(\0162\".c" +
+      "om.rtrk.atcommand.ForwardingMode\022\016\n\006numb" +
+      "er\030\007 \001(\t\022\014\n\004type\030\010 \001(\005\022\022\n\nsubaddress\030\t \001" +
+      "(\t\022\016\n\006satype\030\n \001(\005\022(\n\005class\030\013 \001(\0162\031.com." +
+      "rtrk.atcommand.Class\022\014\n\004time\030\014 \001(\005\022\016\n\006ac" +
+      "tive\030\r \001(\010\022\021\n\tenableCUG\030\016 \001(\010\022\020\n\010CUGInde" +
+      "x\030\017 \001(\005\022&\n\004info\030\020 \001(\0162\030.com.rtrk.atcomma" +
+      "nd.Info\022&\n\004clip\030\021 \001(\0162\030.com.rtrk.atcomma",
+      "nd.CLIP\022\022\n\nUSSDString\030\022 \001(\t\022\030\n\020dataCodin" +
+      "gScheme\030\023 \001(\005\022(\n\005code1\030\024 \001(\0162\031.com.rtrk." +
+      "atcommand.Code1\022(\n\005code2\030\025 \001(\0162\031.com.rtr" +
+      "k.atcommand.Code2\022\022\n\nisResponse\030\027 \001(\010\022\023\n" +
+      "\013description\030\030 \001(\t\022\032\n\022enablePresentation" +
+      "\030\031 \001(\010\022 \n\030enableCallWaitingControl\030\032 \001(\010" +
+      "\022\020\n\010callHold\030\033 \001(\005\022$\n\034displayUnsolicited" +
+      "ResultCode\030\034 \001(\010\022\026\n\016showCallNumber\030\035 \001(\010" +
+      "\022P\n\003aoc\030\036 \001(\0162+.com.rtrk.atcommand.Adjus" +
+      "tmentOutgoingCalls:\026PRESENTATION_INDICAT",
+      "OR\0222\n\003css\030\037 \001(\0162%.com.rtrk.atcommand.CLI" +
+      "RServiceStatus\022.\n&enableResultCodePresen" +
+      "tationOriginated\030  \001(\010\022.\n&enableResultCo" +
+      "dePresentationTerminated\030# \001(\010\022\026\n\016showAl" +
+      "phaField\030! \001(\010\022Z\n\nssdControl\030\" \001(\0162\036.com" +
+      ".rtrk.atcommand.SSDControl:&DISABLE_RESU" +
+      "LT_CODE_PRESENTATION_IN_TA\"\245\n\n\014AudioComm" +
+      "and\0229\n\013messageType\030\001 \002(\0162$.com.rtrk.atco" +
+      "mmand.AudioMessageType\022*\n\006action\030\002 \002(\0162\032" +
+      ".com.rtrk.atcommand.Action\022<\n\017speakerLou",
+      "dness\030! \001(\0162#.com.rtrk.atcommand.Speaker" +
+      "Loudness\022\030\n\020internalDuration\030\006 \001(\005\022\020\n\010du" +
+      "ration\030\007 \001(\003\022\022\n\nDTMFString\030\010 \001(\t\0220\n\tsoun" +
+      "dMode\030\t \001(\0162\035.com.rtrk.atcommand.SoundMo" +
+      "de\022\r\n\005level\030\n \001(\005\022\014\n\004mute\030\013 \001(\010\022\021\n\tgainL" +
+      "evel\030\014 \001(\005\022@\n\021microphoneChannel\030\r \001(\0162%." +
+      "com.rtrk.atcommand.MicrophoneChannel\022\020\n\010" +
+      "testIsOn\030\016 \001(\010\022\021\n\tfrequency\030\020 \001(\005\022\020\n\010per" +
+      "iodON\030\021 \001(\005\022\021\n\tperiodOFF\030\022 \001(\005\022D\n\noutput" +
+      "Path\030\023 \001(\0162\036.com.rtrk.atcommand.OutputPa",
+      "th:\020AUTO_OUTPUT_PATH\022A\n\017operateFunction\030" +
+      "\024 \001(\0162(.com.rtrk.atcommand.AudioOperateF" +
+      "unction\022:\n\016functionStatus\030\025 \001(\0162\".com.rt" +
+      "rk.atcommand.FunctionStatus\022\023\n\013prefixPau" +
+      "se\030\027 \001(\005\022\024\n\014lowThreshold\030\030 \001(\005\022\025\n\rhighTh" +
+      "reshold\030\031 \001(\005\022<\n\017persistenceTime\030\033 \001(\0162#" +
+      ".com.rtrk.atcommand.PersistenceTime\022\024\n\014u" +
+      "plinkVolume\030\034 \001(\005\022\026\n\016downlinkVolume\030\035 \001(" +
+      "\005\022\027\n\017continuanceTime\030\036 \001(\003\022\020\n\010muteTime\030\037" +
+      " \001(\003\022\022\n\nisResponse\030\" \001(\010\022\023\n\013description\030",
+      "# \001(\t\0224\n\013speakerMode\030$ \001(\0162\037.com.rtrk.at" +
+      "command.SpeakerMode\0226\n\014audioChannel\030% \001(" +
+      "\0162 .com.rtrk.atcommand.AudioChannel\022\030\n\020s" +
+      "tartPlayingTone\030& \001(\010\022N\n\rtoneDetection\030\026" +
+      " \001(\0162!.com.rtrk.atcommand.ToneDetection:" +
+      "\024CLOSE_TONE_DETECTION\0224\n\013dtmfOperate\030\' \001" +
+      "(\0162\037.com.rtrk.atcommand.DTMFOperate\022.\n\010d" +
+      "tmfCode\030\032 \001(\0162\034.com.rtrk.atcommand.DTMFC" +
+      "ode\022=\n\talgorithm\030\017 \001(\0162\035.com.rtrk.atcomm" +
+      "and.Algorithm:\013ALGORITHM_1\"\243\005\n\026HardwareR",
+      "elatedCommand\022C\n\013messageType\030\001 \002(\0162..com" +
+      ".rtrk.atcommand.HardwareRelatedMessageTy" +
+      "pe\022*\n\006action\030\002 \002(\0162\032.com.rtrk.atcommand." +
+      "Action\022\014\n\004time\030\022 \001(\t\022\020\n\010setAlarm\030\006 \001(\010\022*" +
+      "\n\006repeat\030\007 \001(\0162\032.com.rtrk.atcommand.Repe" +
+      "at\022-\n\005power\030\010 \001(\0162\036.com.rtrk.atcommand.A" +
+      "larmPower\0228\n\rbatteryCharge\030\t \001(\0162!.com.r" +
+      "trk.atcommand.BatteryCharge\022\036\n\026batteryCo" +
+      "nnectionLevel\030\n \001(\005\022\026\n\016batteryVoltage\030\013 " +
+      "\001(\005\0222\n\nreadStatus\030\014 \001(\0162\036.com.rtrk.atcom",
+      "mand.ReadStatus\0220\n\tslowClock\030\016 \001(\0162\035.com" +
+      ".rtrk.atcommand.SlowClock\022,\n\007ledMode\030\017 \001" +
+      "(\0162\033.com.rtrk.atcommand.LedMode\0228\n\rthres" +
+      "holdType\030\020 \001(\0162!.com.rtrk.atcommand.Thre" +
+      "sholdType\022\021\n\tthreshold\030\021 \001(\005\022\022\n\nisRespon" +
+      "se\030\023 \001(\010\022\023\n\013description\030\024 \001(\t\022!\n\031thresho" +
+      "ldFunctionTurnedON\030\025 \001(\010\"\202\003\n\rOthersComma" +
+      "nd\022:\n\013messageType\030\001 \002(\0162%.com.rtrk.atcom" +
+      "mand.OthersMessageType\022*\n\006action\030\002 \002(\0162\032" +
+      ".com.rtrk.atcommand.Action\022\022\n\nechoModeOn",
+      "\030\006 \001(\010\022\'\n\037commandLineTerminationCharacte" +
+      "r\030\007 \001(\005\022#\n\033responseFormattingCharacter\030\014" +
+      " \001(\005\022 \n\030responseEditingCharacter\030\r \001(\005\022." +
+      "\n\010timeMode\030\010 \001(\0162\034.com.rtrk.atcommand.Ti" +
+      "meMode\022,\n\007indMode\030\t \001(\0162\033.com.rtrk.atcom" +
+      "mand.IndMode\022\022\n\nisResponse\030\n \001(\010\022\023\n\013desc" +
+      "ription\030\013 \001(\t\"h\n\014ErrorCommand\022(\n\005error\030\001" +
+      " \001(\0162\031.com.rtrk.atcommand.Error\022.\n\010FTPEr" +
+      "ror\030\002 \001(\0162\034.com.rtrk.atcommand.FTPError*" +
+      "\370\003\n\013CommandType\022\020\n\014HTTP_COMMAND\020\000\022\020\n\014FIL",
+      "E_COMMAND\020\001\022\017\n\013FTP_COMMAND\020\002\022\017\n\013MMS_COMM" +
+      "AND\020\003\022\025\n\021QUEC_CELL_COMMAND\020\004\022\025\n\021RECORDIN" +
+      "G_COMMAND\020\005\022\020\n\014SMTP_COMMAND\020\006\022\017\n\013STK_COM" +
+      "MAND\020\007\022\023\n\017GENERAL_COMMAND\020\010\022\034\n\030SERIAL_IN" +
+      "TERFACE_COMMAND\020\t\022\032\n\026STATUS_CONTROL_COMM" +
+      "AND\020\n\022\027\n\023SIM_RELATED_COMMAND\020\013\022\033\n\027NETWOR" +
+      "K_SERVICE_COMMAND\020\014\022\030\n\024CALL_RELATED_COMM" +
+      "AND\020\r\022\017\n\013SMS_COMMAND\020\016\022\025\n\021PHONEBOOK_COMM" +
+      "AND\020\017\022\020\n\014GPRS_COMMAND\020\020\022\021\n\rTCPIP_COMMAND" +
+      "\020\021\022!\n\035SUPPLEMENTARY_SERVICE_COMMAND\020\022\022\021\n",
+      "\rAUDIO_COMMAND\020\023\022\034\n\030HARDWARE_RELATED_COM" +
+      "MAND\020\024\022\022\n\016OTHERS_COMMAND\020\025*6\n\006Action\022\010\n\004" +
+      "TEST\020\000\022\010\n\004READ\020\001\022\t\n\005WRITE\020\002\022\r\n\tEXECUTION" +
+      "\020\003*|\n\014FileOpenMode\022\'\n#IF_NOT_EXISTS_CREA" +
+      "TE_IF_EXISTS_OPEN\020\000\022\"\n\036IF_EXISTS_CREATE_" +
+      "AND_CLEAR_OLD\020\001\022\037\n\033IF_EXISTS_OPEN_IN_REA" +
+      "D_MODE\020\002*T\n\023PointerMovementMode\022\016\n\nFILE_" +
+      "BEGIN\020\000\022\037\n\033CURRENT_POSITION_OF_POINTER\020\001" +
+      "\022\014\n\010FILE_END\020\002*7\n\022DataConnectionMode\022\017\n\013" +
+      "ACTIVE_MODE\020\000\022\020\n\014PASSIVE_MODE\020\001*\237\001\n\034Type",
+      "OfConfigurableParameters\022\033\n\027MODE_OF_DATA" +
+      "_CONNECTION\020\001\022\021\n\rTRANSFER_TYPE\020\002\022*\n&RESU" +
+      "MING_POINT_TO_RESUME_FILE_TRANSFER\020\003\022#\n\037" +
+      "LOCAL_POSITION_OF_FILE_TRANSFER\020\004*A\n\014Tra" +
+      "nsferType\022\030\n\024BINARY_TRANSFER_TYPE\020\000\022\027\n\023A" +
+      "SCII_TRANSFER_TYPE\020\001*G\n\006Return\022.\n*RETURN" +
+      "_NO_INFORMATIONS_TRANSFERED_FROM_FTP\020\000\022\r" +
+      "\n\tRETURN_OK\020\001*\272\001\n\010FileType\022\010\n\004TEXT\020\001\022\r\n\t" +
+      "TEXT_HTML\020\002\022\016\n\nTEXT_PLAIN\020\003\022\014\n\010TEXT_XML\020" +
+      "\004\022\t\n\005IMAGE\020\005\022\r\n\tIMAGE_GIF\020\006\022\016\n\nIMAGE_JPE",
+      "G\020\007\022\016\n\nIMAGE_TIFF\020\010\022\r\n\tIMAGE_PNP\020\t\022\016\n\nIM" +
+      "AGE_WBMP\020\n\022\t\n\005AUDIO\020\013\022\t\n\005VIDEO\020\014\022\010\n\004SMIL" +
+      "\020\r*\'\n\016OperateSendMMS\022\025\n\021START_TO_SEND_MM" +
+      "S\020\001*5\n\021OperateReceiveMMS\022 \n\034START_TO_REC" +
+      "EIVE_MMS_MESSAGE\020\001*\254\001\n\016OperateReadMMS\022\034\n" +
+      "\030VIEW_ORIGINATION_ADDRESS\020\001\022\023\n\017VIEW_TO_A" +
+      "DDRESS\020\002\022\023\n\017VIEW_CC_ADDRESS\020\003\022\022\n\016VIEW_MM" +
+      "S_TITLE\020\004\022\024\n\020LIST_APPEND_FILE\020\005\022(\n$READ_" +
+      "APPEND_FILE_DATA_OF_MMS_MESSAGE\020\006*@\n\020Ope" +
+      "rateManageMMS\022\026\n\022DELETE_MMS_MESSAGE\020\000\022\024\n",
+      "\020LIST_MMS_MESSAGE\020\001*7\n\017OperateWriteMMS\022\021" +
+      "\n\rCLEAN_OPERATE\020\000\022\021\n\rWRITE_OPERATE\020\001*\256\001\n" +
+      "\017OperateFunction\022$\n CLEAR_ALL_CONTENT_OF" +
+      "_MMS_MESSAGE\020\000\022\026\n\022OPERATE_TO_ADDRESS\020\001\022\026" +
+      "\n\022OPERATE_CC_ADDRESS\020\002\022\027\n\023OPERATE_BCC_AD" +
+      "DRESS\020\003\022\021\n\rOPERATE_TITLE\020\004\022\031\n\025OPERATE_FI" +
+      "LE_APPENDED\020\005*!\n\014ProtocolType\022\021\n\rHHTP_PR" +
+      "OTOCOL\020\001*\237\001\n\016ValidityPeriod\022\017\n\013TIME_1_HO" +
+      "UR\020\000\022\021\n\rTIME_12_HOURS\020\001\022\021\n\rTIME_24_HOURS" +
+      "\020\002\022\017\n\013TIME_2_DAYS\020\003\022\017\n\013TIME_1_WEEK\020\004\022\020\n\014",
+      "MAXIMUM_TIME\020\005\022\"\n\036USE_NETWORK_CONFIGURAT" +
+      "ION_TIME\020\006*l\n\010Priority\022\020\n\014LOW_PRIORITY\020\000" +
+      "\022\023\n\017NORMAL_PRIORITY\020\001\022\021\n\rHIGH_PRIORITY\020\002" +
+      "\022&\n\"USE_NETWORK_CONFIGURATION_PRIORITY\020\003" +
+      "*s\n\016AddressVisible\022\024\n\020HIDE_ANY_ADDRESS\020\000" +
+      "\022\034\n\030SHOW_EVEN_SECRET_ADDRESS\020\001\022-\n)USE_NE" +
+      "TWORK_CONFIGURATION_ADDRESS_VISIBLE\020\002*\214\001" +
+      "\n\017MMSMessageClass\022\022\n\016PERSONAL_CLASS\020\000\022\027\n" +
+      "\023ADVERTISEMENT_CLASS\020\001\022\027\n\023INFORMATIONAL_" +
+      "CLASS\020\002\022\016\n\nAUTO_CLASS\020\003\022#\n\037USE_NETWORK_C",
+      "ONFIGURATION_CLASS\020\004*5\n\016TitleInputMode\022\020" +
+      "\n\014PDU_HEX_MODE\020\000\022\021\n\rTEXT_BIN_MODE\020\001*P\n\004B" +
+      "and\022\020\n\014GSM_900_BAND\020\000\022\021\n\rDCS_1800_BAND\020\001" +
+      "\022\021\n\rPCS_1900_BAND\020\002\022\020\n\014GSM_850_BAND\020\003*\312\001" +
+      "\n\022ForbidOperatorMode\022\037\n\033READ_LINE_OF_FOR" +
+      "BIDDEN_DATA\020\000\022 \n\034WRITE_LINE_OF_FORBIDDEN" +
+      "_DATA\020\001\022 \n\034CLEAN_LINE_OF_FORBIDDEN_DATA\020" +
+      "\002\022\034\n\030CLEAR_ALL_FORBIDDEN_DATA\020\003\022\027\n\023READ_" +
+      "FORBIDDEN_DATA\020\004\022\030\n\024WRITE_FORBIDDEN_DATA" +
+      "\020\005*\257\001\n\007RRState\022\016\n\nNULL_STATE\020\000\022\022\n\016INACTI",
+      "VE_STATE\020\001\022\025\n\021CELL_SELECT_STATE\020\002\022\016\n\nIDL" +
+      "E_STATE\020\003\022\020\n\014ACCESS_STATE\020\004\022\031\n\025PACKET_TR" +
+      "ANSFER_STATE\020\005\022\023\n\017DEDICATED_STATE\020\006\022\027\n\023C" +
+      "ELL_RESELECT_STATE\020\007*\262\001\n\004Dump\022,\n(ONLY_DI" +
+      "SPLAY_INFORMATION_OF_SERVING_CALL\020\000\022A\n=D" +
+      "ISPLAY_INFORMATION_OF_SERVING_CELL_AND_1" +
+      "_6_NEIGHBORING_CELLS\020\001\0229\n5LIST_OF_ARCFN_" +
+      "AND_CALL_FREQUENCY_LIST_OF_SERVING_CELL\020" +
+      "\002*\203\001\n\017EngineeringMode\022\037\n\033SWITCH_OFF_ENGI" +
+      "NEERING_MODE\020\000\022\036\n\032SWITCH_ON_ENGINEERING_",
+      "MODE\020\001\022/\n+SWITCH_ON_ENGINEERING_MODE_AND" +
+      "_ACTIVATE_URC\020\002*k\n\016OperatorStatus\022\023\n\017UNK" +
+      "NOW_OPERATOR\020\000\022\026\n\022OPERATOR_AVAILABLE\020\001\022\024" +
+      "\n\020CURRENT_OPERATOR\020\002\022\026\n\022FORBIDDEN_OPERAT" +
+      "OR\020\003*:\n\013PlayChannel\022\014\n\010RECEIVER\020\000\022\013\n\007HEA" +
+      "DSET\020\001\022\020\n\014LOUD_SPEAKER\020\002*O\n\nFileFormat\022\007" +
+      "\n\003AMR\020\003\022\r\n\tWAV_PCM16\020\r\022\014\n\010WAV_ALAW\020\016\022\014\n\010" +
+      "WAV_ULAW\020\017\022\r\n\tWAV_ADPCM\020\020*L\n\016RecordingSt" +
+      "ate\022\036\n\032MODULE_IS_NOT_IN_RECORDING\020\000\022\032\n\026M" +
+      "OUDLE_IS_IN_RECORDING\020\001*6\n\007Charset\022\t\n\005AS",
+      "CII\020\000\022\t\n\005UTF_8\020\001\022\013\n\007GB_2312\020\002\022\010\n\004BIG5\020\003*" +
+      "O\n\rRecipientType\022\026\n\022RECEIVER_RECIPIENT\020\001" +
+      "\022\021\n\rCOPY_RECEIVER\020\002\022\023\n\017SECRET_RECEIVER\020\003" +
+      "*8\n\rRecipientMode\022\024\n\020DELETE_RECIPIENT\020\000\022" +
+      "\021\n\rADD_RECIPIENT\020\001*\202\002\n\003STK\022\034\n\030TRIGER_MOD" +
+      "EM_TO_SEND_STK\020\000\0225\n1TRIGER_MODEM_TO_SEND" +
+      "_STK_BUT_ICON_CANT_BE_DISPLAY\020\004\022(\n$PROAC" +
+      "TIVE_SESSION_TERMINATED_BY_USER\020\020\022\031\n\025NO_" +
+      "RESPONSE_FROM_USER\020\022\022\035\n\031UNABLE_TO_PROCES" +
+      "S_COMMAND\020 \022\032\n\026USER_REJECT_SETUP_CALL\020\"\022",
+      "&\n\"COMMAND_DATA_DONT_UNDERSTOOD_BY_ME\0202*" +
+      "\212\001\n\021DisableResultCode\022\027\n\023DISABLE_RESULT_" +
+      "CODE\020\000\022-\n)ENABLE_RESULT_CODE_AND_USE_NUM" +
+      "ERIC_VALUES\020\001\022-\n)ENABLE_RESULT_CODE_AND_" +
+      "USE_VERBOSE_VALUES\020\002*:\n\014PowerOffMode\022\024\n\020" +
+      "URGENT_POWER_OFF\020\000\022\024\n\020NORMAL_POWER_OFF\020\001" +
+      "**\n\005Reset\022\023\n\017DO_NOT_RESET_ME\020\000\022\014\n\010RESET_" +
+      "ME\020\001*\205\001\n\rFunctionality\022\031\n\025MINIMUM_FUNCTI" +
+      "ONALITY\020\000\022\026\n\022FULL_FUNCTIONALITY\020\001\022A\n=DIS" +
+      "ABLE_PHONE_FROM_BOTH_TRANSMITTING_AND_RE",
+      "CEIVING_RF_SIGNALS\020\002*\326\001\n\021ConnectResultCo" +
+      "de\022%\n!CONNECT_RESULT_CODE_ONLY_RETURNED\020" +
+      "\000\022*\n&CONNECT_TEXT_RESULT_CODE_ONLY_RETUR" +
+      "NED\020\001\022%\n!TONE_ENABLED_BUSY_SIGNAL_DISABL" +
+      "ED\020\002\022%\n!TONE_DISABLED_BUSY_SIGNAL_ENABLE" +
+      "D\020\003\022 \n\034TONE_AND_BUSY_SIGNAL_ENABLED\020\004*P\n" +
+      "\023InformationResponse\022\034\n\030SHORT_RESULT_COD" +
+      "E_FORMAT\020\000\022\033\n\027LONG_RESULT_CODE_FORMAT\020\001*" +
+      "_\n\nResultCode\022\035\n\031TA_TRANSMINTS_RESULT_CO" +
+      "DE\020\000\0222\n.RESULT_CODE_ARE_SUPPRESSED_AND_N",
+      "OT_TRANSMITTED\020\001*(\n\013TAToDefault\022\031\n\025SET_A" +
+      "LL_TA_TO_DEFAULT\020\000*#\n\rProfileNumber\022\022\n\016P" +
+      "ROFILE_NUMBER\020\000*3\n\024ResetToProfileNumber\022" +
+      "\033\n\027RESET_TO_PROFILE_NUMBER\020\000*N\n\010DCEByDTE" +
+      "\022\023\n\017DCE_BY_DTE_NONE\020\000\022\027\n\023DCE_BY_DTE_XON_" +
+      "XOFF\020\001\022\024\n\020RTS_FLOW_CONTROL\020\002*N\n\010DTEByDCE" +
+      "\022\023\n\017DTE_BY_DCE_NONE\020\000\022\027\n\023DTE_BY_DCE_XON_" +
+      "XOFF\020\001\022\024\n\020CTS_FLOW_CONTROL\020\002*{\n\016DualUART" +
+      "Parity\022\031\n\025DUAL_UART_PARITY_NONE\020\000\022\030\n\024DUA" +
+      "L_UART_PARITY_ODD\020\001\022\031\n\025DUAL_UART_PARITY_",
+      "EVEN\020\002\022\031\n\025DUAL_UART_PARITY_MARK\020\003*:\n\010Sto" +
+      "pBits\022\016\n\nSTOP_BIT_1\020\001\022\016\n\nSTOP_BIT_2\020\002\022\016\n" +
+      "\nSTOP_BIT_3\020\003*N\n\010DataBits\022\017\n\013DATA_BITS_5" +
+      "\020\001\022\017\n\013DATA_BITS_6\020\002\022\017\n\013DATA_BITS_7\020\003\022\017\n\013" +
+      "DATA_BITS_8\020\004*E\n\020TransmissionRate\022\034\n\030UNK" +
+      "NOW_TRANSMISSION_RATE\020\000\022\023\n\017RATE_115200_B" +
+      "PS\020\005*4\n MultiplexerTransparencyMechanism" +
+      "\022\020\n\014BASIC_OPTION\020\000*5\n\031MultiplexerControl" +
+      "Channel\022\030\n\024UIH_FRAMES_USED_ONLY\020\000*\371\001\n\004Ra" +
+      "te\022\n\n\006RATE_0\020\000\022\013\n\007RATE_75\020K\022\r\n\010RATE_150\020",
+      "\226\001\022\r\n\010RATE_300\020\254\002\022\r\n\010RATE_600\020\330\004\022\016\n\tRATE" +
+      "_1200\020\260\t\022\017\n\nREATE_2400\020\340\022\022\016\n\tRATE_4800\020\300" +
+      "%\022\016\n\tRATE_9600\020\200K\022\017\n\nRATE_14400\020\240\013\022\020\n\nRA" +
+      "TE_19200\020\200\226\001\022\020\n\nRATE_28800\020\200\341\001\022\020\n\nRATE_3" +
+      "8400\020\200\254\002\022\020\n\nRATE_57600\020\200\302\003\022\021\n\013RATE_11520" +
+      "0\020\200\204\007*0\n\006Parity\022\007\n\003ODD\020\000\022\010\n\004EVEN\020\001\022\010\n\004MA" +
+      "RK\020\002\022\t\n\005SPACE\020\003*\322\001\n\rFramingFormat\022\031\n\025UNK" +
+      "NOW_FRAMING_FORMAT\020\000\022\032\n\026DATA_8_PARITY_0_" +
+      "STOP_2\020\001\022\032\n\026DATA_8_PARITY_1_STOP_1\020\002\022\032\n\026" +
+      "DATA_8_PARITY_0_STOP_1\020\003\022\032\n\026DATA_7_PARIT",
+      "Y_0_STOP_2\020\004\022\032\n\026DATA_7_PARITY_1_STOP_1\020\005" +
+      "\022\032\n\026DATA_7_PARITY_0_STOP_1\020\006*\237\001\n\tDTRStat" +
+      "us\022\034\n\030TA_IGNORES_STATUS_ON_DTR\020\000\022:\n6CHAN" +
+      "GE_TO_CAOMMAND_MODE_WHILE_REMAINING_CONN" +
+      "ECTED_CALL\020\001\0228\n4DISCONNECT_DATA_CALL_AND" +
+      "_THEN_CHANGE_TO_COMMAND_MODE\020\002*_\n\rDCDLin" +
+      "eStatus\022\031\n\025DCD_LINE_IS_ALWAYS_ON\020\000\0223\n/DC" +
+      "D_LINE_IS_ON_ONLY_IN_PRESENCE_OF_DATA_CA" +
+      "RRIER\020\001*e\n\016ConnectionType\022\037\n\033CIRCUIT_SWI" +
+      "TCHED_VOICE_CALL\020\000\022\036\n\032CIRCUIT_SWITCHED_D",
+      "ATA_CALL\020\001\022\022\n\016PPP_CONNECTION\020\002*~\n\023SIMCar" +
+      "dInsertStatus\0222\n.LOW_LEVEL_OF_PIN_INDICA" +
+      "TES_SIM_CARD_IS_PRESENT\020\000\0223\n/HIGH_LEVEL_" +
+      "OF_PIN_INDICATES_SIM_CARD_IS_PRESENT\020\001*x" +
+      "\n\023SIMCardDetectionPIN\0224\n0CONFIGURE_SIM_P" +
+      "RESENCE_AS_SIM_CARD_DETECTION_PIN\020\000\022+\n\'C" +
+      "ONFIGURE_DTR_AS_SIM_CARD_DETECTION_PIN\020\001" +
+      "*\330\001\n\034TimeZoneChangeEventReporting\022,\n(DIS" +
+      "ABLE_TIME_ZONE_CHANGE_EVENT_REPORTING\020\000\022" +
+      "F\nBENABLE_TIME_ZONE_CHANGE_EVENT_REPORTI",
+      "NG_BY_UNSOLICITED_RESULT_CODE\020\001\022B\n>ENABL" +
+      "E_EXTENDED_TIME_ZONE_REPORTING_BY_UNSOLI" +
+      "CITED_RESULT_CODE\020\002*\305\002\n\007RTCTime\022.\n*DISAB" +
+      "LE_AUTOMATIC_UPDATE_RTC_TIME_VIA_NITZ\020\000\022" +
+      "I\nEUPDATE_NETWORK_SYNCHRONIZED_TIME_TO_R" +
+      "TC_AND_SAVE_TIME_ZONE_INTO_NVRAM\020\001\022]\nYUP" +
+      "DATE_GTM_TIME_WITH_TIME_ZONE_TO_RTC_SAVE" +
+      "_TIME_ZONE_TO_NVRAM_IGNORE_DAYLIGHT_SAVI" +
+      "NG_TIME\020\002\022J\nFUPDATE_LOCALIZED_TIME_AND_T" +
+      "IME_ZONE_TO_RTC_AND_SAVE_TIME_ZONE_TO_NV",
+      "RAM\020\003\022\024\n\020SAVE_WITH_MODE_2\020\004*\221\001\n\020GSMNetwo" +
+      "rkStatus\022\030\n\024WORK_IN_NORMAL_STATE\020\000\022\025\n\021NO" +
+      "_AVAILABLE_CELL\020\001\022\"\n\036ONLY_LIMITED_SERVIC" +
+      "E_AVAILABLE\020\002\022(\n$NOT_READY_TO_RETRIEVE_N" +
+      "ETWORK_STATUS\020\003*\237\001\n\025StateOfInitializatio" +
+      "n\022\025\n\021NO_INITIALIZATION\020\000\022\037\n\033READY_TO_EXE" +
+      "CUTE_AT_COMMAND\020\001\022)\n%PHONEBOOK_HAS_FINIS" +
+      "HED_INITIALIZATION\020\002\022#\n\037SMS_HAS_FINISHED" +
+      "_INITIALIZATION\020\003*S\n!ProprietaryUnsolici" +
+      "tedIndications\022\017\n\013PUI_DISABLE\020\000\022\016\n\nPUI_E",
+      "NABLE\020\001\022\r\n\tPUI_QUERY\020\002*\'\n\006Status\022\016\n\nSTAT" +
+      "US_OFF\020\000\022\r\n\tSTATUS_ON\020\001*\\\n\003Pas\022\r\n\tPAS_RE" +
+      "ADY\020\000\022\016\n\nPAS_UNKNOW\020\001\022\017\n\013PAS_RINGING\020\002\022%" +
+      "\n!PAS_CALL_IN_PROGRESS_OR_CALL_HOLD\020\003*{\n" +
+      "\013VoltageMode\022&\n\"RECOGNIZE_1_8_V_AND_3_0_" +
+      "V_SIM_CARD\020\000\022!\n\035RECOGNIZE_1_8_V_SIM_CARD" +
+      "_ONLY\020\001\022!\n\035RECOGNIZE_3_0_V_SIM_CARD_ONLY" +
+      "\020\002*x\n\nCommandSIM\022\020\n\013READ_BINATY\020\260\001\022\020\n\013RE" +
+      "AD_RECORD\020\262\001\022\021\n\014GET_RESPONSE\020\300\001\022\022\n\rUPDAT" +
+      "E_BINATY\020\326\001\022\022\n\rUPDATE_RECORD\020\334\001\022\013\n\006STATU",
+      "S\020\362\001*\215\001\n\005Class\022\t\n\005VOICE\020\001\022\010\n\004DATA\020\002\022\007\n\003F" +
+      "AX\020\004\022\034\n\030ALL_TELEPHONY_EXCEPT_SMS\020\007\022\031\n\025SH" +
+      "ORT_MESSAGE_SERVICE\020\010\022\025\n\021DATA_CIRCUIT_SY" +
+      "NC\020\020\022\026\n\022DATA_CIRCUIT_ASYNC\020 *2\n\010LockMode" +
+      "\022\n\n\006UNLOCK\020\000\022\010\n\004LOCK\020\001\022\020\n\014QUERY_STATUS\020\002" +
+      "*x\n\010Band1900\022\034\n\030NOT_CELL_ID_OF_1900_BAND" +
+      "\020\000\022\030\n\024CELL_ID_OF_1900_BAND\020\001\0224\n0AUTO_DIS" +
+      "TINGUISH_WHETHER_IS_CELL_ID_OF_1900_BAND" +
+      "\020\002*\231\001\n\021LockFrequencyMode\022\032\n\026DISABLE_LOCK" +
+      "_FREQUENCY\020\000\022\031\n\025ENABLE_LOCK_FREQUENCY\020\001\022",
+      "M\nIENABLE_LOCK_FREQUENCY_AND_AUTO_SWITCH" +
+      "_TO_SAVED_FREQUENCY_AFTER_POWERED_ON\020\002*\276" +
+      "\002\n\023EngineeringModeDump\022)\n%ONLY_DISPLAY_S" +
+      "ERVING_CELL_INFORMATION\020\000\022F\nBDISPLAY_SER" +
+      "VING_CELL_INFORMATION_1_6_NEIGHBORING_CE" +
+      "LLS_INFORMATION\020\001\022J\nFDISPLAY_SERVING_CEL" +
+      "L_INFORMATION_AND_LIST_OF_SERVING_CELL_C" +
+      "ARRIER_LIST\020\002\022%\n!LIST_OF_SERVING_CELL_CA" +
+      "RRIER_LIST\020\003\022A\n=LIST_OF_SERVING_CELL_CAR" +
+      "RIER_LIST_AND_BA_MEASURED_RESULT_LIST\020\004*",
+      "\246\002\n\031NetworkRegistrationStatus\022K\nGNOT_REG" +
+      "ISTRED_ME_IS_NOT_CURRENTLY_SEARCHING_NEW" +
+      "_OPERATOR_TO_REGISTER_TO\020\000\022\032\n\026REGISTRED_" +
+      "HOME_NETWORK\020\001\022G\nCNOT_REGISTRED_ME_IS_CU" +
+      "RRENTLY_SEARCHING_NEW_OPERATOR_TO_REGIST" +
+      "ER_TO\020\002\022\027\n\023REGISTRATION_DENIED\020\003\022&\n\"UNKN" +
+      "OW_NETWORK_REGISTRATION_STATUS\020\004\022\026\n\022REGI" +
+      "STERED_ROAMING\020\005*\337\001\n\027NetworkRegistration" +
+      "Mode\0228\n4DISABLE_NETWORK_REGISTRATION_UNS" +
+      "OLICITED_RESULT_CODE\020\000\0227\n3ENABLE_NETWORK",
+      "_REGISTRATION_UNSOLICITED_RESULT_CODE\020\001\022" +
+      "Q\nMENABLE_NETWORK_REGISTRATION_UNSOLICIT" +
+      "ED_RESULT_CODE_WITH_LOCATION_INFORMATION" +
+      "\020\002*\202\001\n\016OperatorFormat\022\034\n\030LONG_FORMAT_ALP" +
+      "HANUMERIC\020\000\022\035\n\031SHORT_FORMAT_ALPHANUMERIC" +
+      "\020\001\0223\n/NUMERIC_GSM_LOCATION_AREA_IDENTIFI" +
+      "CATION_NUMBER\020\002*\235\001\n\014OperatorMode\022\022\n\016AUTO" +
+      "MATIC_MODE\020\000\022\035\n\031MANUAL_OPERATOR_SELECTIO" +
+      "N\020\001\022\"\n\036MANUAL_DEREGISTER_FROM_NETWORK\020\002\022" +
+      "6\n2SET_ONLY_FORMAT_NOT_SHOWN_IN_READ_COM",
+      "MAND_RESPONSE\020\003*\243\003\n\nSpeechMode\022\031\n\025SPEECH" +
+      "_AUTOMATIC_MODE\020\000\022\006\n\002FR\020\001\022\006\n\002HR\020\002\022\007\n\003EFR" +
+      "\020\003\022\n\n\006AMR_FR\020\004\022\n\n\006AMR_HR\020\005\022\032\n\026FR_AND_EFR" +
+      "_FR_PRIORITY\020\006\022\033\n\027EFR_AND_FR_EFR_PRIORIT" +
+      "Y\020\007\022\033\n\027EFR_AND_HR_EFR_PRIORITY\020\010\022\037\n\033EFR_" +
+      "AND_AMR_FR_EFR_PRIORITY\020\t\022!\n\035AMR_FR_AND_" +
+      "FR_AMR_FR_PRIORITY\020\n\022!\n\035AMR_FR_AND_HR_AM" +
+      "R_FR_PRIORITY\020\013\022\"\n\036AMR_FR_AND_EFR_AMR_FR" +
+      "_PRIORITY\020\014\022!\n\035AMR_HR_AND_FR_AMR_HR_PRIO" +
+      "RITY\020\r\022!\n\035AMR_HR_AND_HR_AMR_HR_PRIORITY\020",
+      "\016\022\"\n\036AMR_HR_AND_EFR_AMR_HR_PRIORITY\020\017*u\n" +
+      "\017AlternatingMode\022\017\n\013SINGLE_MODE\020\000\022\031\n\025ALT" +
+      "ERNATING_VOICE_FAX\020\001\022\032\n\026ALTERNATING_VOIC" +
+      "E_DATA\020\002\022\032\n\026VOICE_FOLLOWED_BY_DATA\020\003*\231\002\n" +
+      "\nSchemeMode\022\020\n\014SCHEME_VOICE\020\000\022,\n(SCHEME_" +
+      "ALTERNATING_VOICE_FAX_VOICE_FIRST\020\001\022\016\n\nS" +
+      "CHEME_FAX\020\002\022-\n)SCHEME_ALTERNATING_VOICE_" +
+      "DATA_VOICE_FIRST\020\003\022\017\n\013SCHEME_DATA\020\004\022*\n&S" +
+      "CHEME_ALTERNATING_VOICE_FAX_FAX_FIRST\020\005\022" +
+      ",\n(SCHEME_ALTERNATING_VOICE_DATA_DATA_FI",
+      "RST\020\006\022!\n\035SCHEME_VOICE_FOLLOWED_BY_DATA\020\007" +
+      "*H\n\010CallMode\022\016\n\nVOICE_CALL\020\000\022\r\n\tDATA_CAL" +
+      "L\020\001\022\014\n\010FAX_CALL\020\002\022\017\n\013UNKNOW_CALL\020\t*A\n\007Ca" +
+      "llDir\022\032\n\026MOBILE_ORIGINATED_CALL\020\000\022\032\n\026MOB" +
+      "ILE_TERMINATED_CALL\020\001*u\n\tCallState\022\017\n\013AC" +
+      "TIVE_CALL\020\000\022\r\n\tHELD_CALL\020\001\022\020\n\014DIALING_CA" +
+      "LL\020\002\022\021\n\rALERTING_CALL\020\003\022\021\n\rINCOMING_CALL" +
+      "\020\004\022\020\n\014WAITING_CALL\020\005*L\n\013AddressType\022\020\n\013U" +
+      "NKNOW_TYPE\020\201\001\022\027\n\022INTERNATIONAL_TYPE\020\221\001\022\022" +
+      "\n\rNATIONAL_TYPE\020\241\001*\311\001\n\010CodeMode\022\"\n\036CODE_",
+      "MODE_ACCORDING_WITH_NOKIA\020\000\022$\n CODE_MODE" +
+      "_ACCORDING_WITH_SIEMENS\020\001\022s\noCODE_MODE_A" +
+      "CCORDING_WITH_NOKIA_AND_HEXADECIMAL_0x11" +
+      "_TREATED_AS_UNDERSCORE_AND_HEXADECIMAL_0" +
+      "x02_TREATED_AS_DOLAR\020\002*<\n\nBufferMode\022\026\n\022" +
+      "COMMAND_IS_FLUSHED\020\000\022\026\n\022COMMAND_IS_CLEAN" +
+      "ED\020\001*\245\001\n\014StoreSMSRule\022/\n+NO_SMS_DELIVER_" +
+      "INDICATIONS_ARE_ROUTED_TO_TE\020\000\022!\n\035SMS_DE" +
+      "LIVER_STORED_INTO_ME_TA\020\001\022(\n$SMS_DELIVER" +
+      "_IS_ROUTED_DIRECTLY_TO_TE\020\002\022\027\n\023CLASS_3_S",
+      "MS_DELIVER\020\003*q\n\014StoreCBMRule\022\'\n#NO_CMB_I" +
+      "NCICATIONS_ARE_ROUTED_TO_TE\020\000\022&\n\"NEW_CMB" +
+      "S_ARE_ROUTED_DIRECTLY_TO_TE\020\001\022\020\n\014CLASS_3" +
+      "_CBMS\020\002*\213\002\n\021MessageIndication\022)\n%BUFFER_" +
+      "UNSOLICITED_RESULT_CODES_IN_TA\020\000\022O\nKDISC" +
+      "ART_INDICATIONS_AND_REJECT_NEW_RECEIVED_" +
+      "MESSAGE_UNSOLICITED_RESULT_CODE\020\001\022E\nABUF" +
+      "FER_UNSOLICITED_RESULT_CODES_IN_TA_WHEN_" +
+      "TA_TE_LINK_IS_RESERVED\020\002\0223\n/FORWARD_UNSO" +
+      "LICITED_RESULT_CODES_DIRECTLY_TO_TE\020\003*\221\001",
+      "\n\rMessageStatus\022\034\n\030RECEIVED_UNREAD_MESSA" +
+      "GES\020\000\022\032\n\026RECEIVED_READ_MESSAGES\020\001\022\032\n\026STO" +
+      "RED_UNSENT_MESSAGES\020\002\022\030\n\024STORED_SENT_MES" +
+      "SAGES\020\003\022\020\n\014ALL_MESSAGES\020\004*G\n\013MessageMode" +
+      "\022\n\n\006NORMAL\020\000\022,\n(NO_CHANGE_STATUS_OF_SPEC" +
+      "IFIED_SMS_RECORD\020\001*\276\002\n\007DelFlag\022%\n!DELETE" +
+      "_MESSAGE_SPECIFIED_IN_INDEX\020\000\022/\n+DELETE_" +
+      "ALL_READ_MESSAGES_FROM_MEM_1_STORAGE\020\001\022S" +
+      "\nODELETE_ALL_READ_MESSAGES_FROM_MEM_1_ST" +
+      "ORAGE_AND_SENT_MOBILE_ORIGINATED_MESSAGE",
+      "S\020\002\022Z\nVDELETE_ALL_READ_MESSAGES_FROM_MEM" +
+      "_1_STORAGE_SENT_AND_UNSENT_MOBILE_ORIGIN" +
+      "ATED_MESSAGES\020\003\022*\n&DELETE_ALL_MESSAGES_F" +
+      "ROM_MEM_1_STORAGE\020\004*,\n\rMessageFormat\022\014\n\010" +
+      "PDU_MODE\020\000\022\r\n\tTEXT_MODE\020\001*<\n\016MessageServ" +
+      "ice\022\027\n\023GSM_03_40_AND_03_41\020\000\022\021\n\014SMS_PDU_" +
+      "MODE\020\200\001*E\n\nNumberType\022\027\n\022UNKNOW_NUMBER_T" +
+      "YPE\020\201\001\022\036\n\031INTERNATIONAL_NUMBER_TYPE\020\221\001*\\" +
+      "\n\013ServiceType\022\010\n\004GPRS\020\000\022\022\n\016CIRCUIT_SWITC" +
+      "H\020\001\022\021\n\rGPRS_PREFERRD\020\002\022\034\n\030CIRCUIT_SWITCH",
+      "_PREFERRED\020\003*\201\001\n\022EventReportingMode\022)\n%B" +
+      "UFFER_UNSOLICITED_RESULT_CODES_IN_MT\020\000\022@" +
+      "\n<DISCART_UNSOLICITED_RESULT_CODES_WHEN_" +
+      "MT_TE_LINK_IS_RESERVED\020\001*\230\002\n\025Synchroniza" +
+      "tionResult\022\"\n\036SUCCESS_SYNCHRONIZE_LOCAL_" +
+      "TIME\020\000\022<\n8FAILED_TO_SYNCHRONIZE_LOCAL_TI" +
+      "ME_BECAUSE_OF_UNKNOW_RESON\020\001\022/\n+FAILED_T" +
+      "O_RECEIVE_RESPONSE_FROM_TIME_SERVER\020\002\022\033\n" +
+      "\027TCPIP_STACK_IS_BUSY_NOW\020\003\022\033\n\027DO_NOT_FIN" +
+      "D_TIME_SERVER\020\004\0222\n.FAILED_TO_ACTIVATE_PD",
+      "P_CONTEXT_SYNCHRONIZATION\020\005*\201\001\n\013FinalRes" +
+      "ult\022\032\n\026IT_IS_FINISHED_NORMALY\020\002\022\034\n\030TCP_I" +
+      "P_STACK_IS_BUSY_NOW\020\003\022\024\n\020DO_NOT_FIND_HOS" +
+      "T\020\004\022\"\n\036FAILED_TO_ACTIVATE_PDP_CONTEXT\020\005*" +
+      "R\n\nPingResult\022&\n\"RECEIVED_PING_RESPONSE_" +
+      "FROM_SERVER\020\000\022\034\n\030TIMEOUT_FOR_PING_REQUES" +
+      "T\020\001*f\n\014ServerClient\022*\n&MODULE_SERVERS_AS" +
+      "_CLINET_OF_CONNECTION\020\001\022*\n&MODULE_SERVER" +
+      "S_AS_CLIENT_OF_CONNECTION\020\002*\223\001\n\020Received" +
+      "DataMode\022.\n*OUTPUT_RECEIVED_DATA_THROUGH",
+      "_UART_DIRECTLY\020\000\022\'\n#OUTPUT_NOTIFICATION_" +
+      "STATEMENT_SHORT\020\001\022&\n\"OUTPUT_NOTIFICATION" +
+      "_STATEMENT_LONG\020\002*\207\001\n\007Channel\022\022\n\016VIRTUAL" +
+      "_UART_1\020\000\022\022\n\016VIRTUAL_UART_2\020\001\022\022\n\016VIRTUAL" +
+      "_UART_3\020\002\022\022\n\016VIRTUAL_UART_4\020\003\022,\n(CONTEXT" +
+      "_IS_NOT_CONTROLLED_BY_ANY_CHANNEL\020\004*5\n\014T" +
+      "ransferMode\022\017\n\013NORMAL_MODE\020\000\022\024\n\020TRANSPAR" +
+      "ENT_MODE\020\001*:\n\nConnection\022\025\n\021MS_USED_AS_C" +
+      "LIENT\020\000\022\025\n\021MS_USED_AS_SERVER\020\001*e\n\nBearer" +
+      "Type\022*\n&SET_CSD_AS_BEARER_FOR_TCPIP_CONN",
+      "ECTION\020\000\022+\n\'SET_GPRS_AS_BEARER_FOR_TCPIP" +
+      "_CONNECTION\020\001*,\n\nServerType\022\016\n\nTCP_SERVE" +
+      "R\020\000\022\016\n\nUDP_SERVER\020\001*\242\001\n\nSendPrompt\022\036\n\032NO" +
+      "_PROMPT_AND_SHOW_SEND_OK\020\000\022 \n\034ECHO_PROMP" +
+      "T_AND_SHOW_SEND_OK\020\001\022\"\n\036NO_PROMPT_AND_NO" +
+      "T_SHOW_SEND_OK\020\002\022.\n*ECHO_PROMPT_AND_SHOW" +
+      "_SOCKET_ID_AND_SEND_OK\020\003*N\n\005Timer\022%\n!DO_" +
+      "NOT_SET_TIMER_FOR_DATA_SENDING\020\000\022\036\n\032SET_" +
+      "TIMER_FOR_DATA_SENDING\020\001*K\n\010IPHeader\022\030\n\024" +
+      "DO_NOT_ADD_IP_HEADER\020\000\022%\n!ADD_A_HEADER_B",
+      "EFORE_RECEIVED_DATA\020\001*Z\n\014ServerFormat\022\'\n" +
+      "#DOTTED_DECIMAL_IP_ADDRESS_OF_SERVER\020\000\022!" +
+      "\n\035DOMAIN_NAME_ADDRESS_OF_SERVER\020\001*\215\002\n\005Co" +
+      "de1\022+\n\'UNCONDITIONAL_CALL_FORWARDING_IS_" +
+      "ACTIVE\020\000\0222\n.SOME_OF_CONDITIONAL_CALL_FOR" +
+      "WARDING_ARE_ACTIVE\020\001\022\033\n\027CALL_HAS_BEEN_FO" +
+      "RWARDED\020\002\022\023\n\017CALL_IS_WAITING\020\003\022\024\n\020THIS_I" +
+      "S_CUG_CALL\020\004\022\035\n\031OUTGOING_CALLS_ARE_BARRE" +
+      "D\020\005\022\035\n\031INCOMING_CALLS_ARE_BARRED\020\006\022\035\n\031CL" +
+      "IR_SUPPRESSION_REJECTED\020\007*#\n\005Code2\022\032\n\026TH",
+      "IS_IS_FORWARDED_CALL\020\000*w\n\nSSDControl\022*\n&" +
+      "DISABLE_RESULT_CODE_PRESENTATION_IN_TA\020\000" +
+      "\022)\n%ENABLE_RESULT_CODE_PRESENTATION_IN_T" +
+      "A\020\001\022\022\n\016CANCEL_SESSION\020\002*\226\001\n\021CLIRServiceS" +
+      "tatus\022\030\n\024CLIR_NOT_PROVISIONED\020\000\022&\n\"CLIR_" +
+      "PROVISIONED_IN_PERMANENT_MODE\020\001\022\017\n\013UNKNO" +
+      "W_CLIR\020\002\022.\n*CLIR_TEMORARY_MODE_PRESENTAT" +
+      "ION_RESTRICTED\020\003*`\n\027AdjustmentOutgoingCa" +
+      "lls\022\032\n\026PRESENTATION_INDICATOR\020\000\022\023\n\017CLIR_" +
+      "INVOCATION\020\001\022\024\n\020CLIR_SUPPRESSION\020\002*G\n\004CL",
+      "IP\022\030\n\024CLIP_NOT_PROVISIONED\020\000\022\024\n\020CLIP_PRO" +
+      "VISIONED\020\001\022\017\n\013UNKNOW_CLIP\020\002*p\n\004Info\022\022\n\016B" +
+      "O_INFORMATION\020\000\022\017\n\013SUPPRESS_OA\020\001\022\035\n\031SUPP" +
+      "RESS_PREFERANTIAL_CUG\020\002\022$\n SUPPRESS_OA_A" +
+      "ND_PREFERENTIAL_CUG\020\003*\211\001\n\005Reads\022\021\n\rUNCON" +
+      "DITIONAL\020\000\022\017\n\013MOBILE_BUSY\020\001\022\014\n\010NO_REPLY\020" +
+      "\002\022\020\n\014NO_REACHABLE\020\003\022\027\n\023ALL_CALL_FORWARDI" +
+      "NG\020\004\022#\n\037ALL_CONDITIONAL_CALL_FORWARDING\020" +
+      "\005*\255\001\n\016ForwardingMode\022\033\n\027DISABLE_FORWARDI" +
+      "NG_MODE\020\000\022\032\n\026ENABLE_FORWARDINF_MODE\020\001\022#\n",
+      "\037QUERY_STATUS_OF_FORWARDING_MODE\020\002\022 \n\034RE" +
+      "GISTRATION_FORWARDING_MODE\020\003\022\033\n\027ERASURE_" +
+      "FORWARDING_MODE\020\004*-\n\tAlgorithm\022\017\n\013ALGORI" +
+      "THM_1\020\000\022\017\n\013ALGORITHM_2\020\001**\n\017PersistenceT" +
+      "ime\022\n\n\006MS_100\020d\022\013\n\006MS_400\020\220\003*\377\001\n\010DTMFCod" +
+      "e\022\n\n\006DTMF_0\0200\022\n\n\006DTMF_1\0201\022\n\n\006DTMF_2\0202\022\n\n" +
+      "\006DTMF_3\0203\022\n\n\006DTMF_4\0204\022\n\n\006DTMF_5\0205\022\n\n\006DTM" +
+      "F_6\0206\022\n\n\006DTMF_7\0207\022\n\n\006DTMF_8\0208\022\n\n\006DTMF_9\020" +
+      "9\022\n\n\006DTMF_A\020A\022\n\n\006DTMF_B\020B\022\n\n\006DTMF_C\020C\022\n\n" +
+      "\006DTMF_D\020D\022\r\n\tDTMF_STAR\020*\022\016\n\nDTMF_POUND\020#",
+      "\022\025\n\021FREQUENCY_1400_HZ\020E\022\025\n\021FREQUENCY_230" +
+      "0_HZ\020F*C\n\013DTMFOperate\022\032\n\026QUERY_THRESHOLD" +
+      "_VALUES\020\000\022\030\n\024SET_THRESHOLD_VALUES\020\001*\361\001\n\r" +
+      "ToneDetection\022\030\n\024CLOSE_TONE_DETECTION\020\000\022" +
+      "\027\n\023OPEN_TONE_DETECTION\020\001\0229\n5CONFIGURE_14" +
+      "00HZ_OR_2300HZ_DETECTION_THRESHOLD_100_M" +
+      "S\020\002\022:\n6CONFIGURE_1400HZ_AND_2300HZ_DETEC" +
+      "TION_THRESHOLD_400_MS\020\003\022&\n\"CONFIGURE_DTM" +
+      "F_DETECTION_THRESHOLD\020\004\022\016\n\nOPEN_DEBUG\020\005*" +
+      "\212\001\n\016FunctionStatus\022\023\n\017DETECT_ALL_DTMF\020\000\022",
+      "1\n-ONLY_DETECT_1400HZ_AND_2300HZ_HANSHAK" +
+      "E_SIGNAL\020\001\0220\n,NOT_DETECT_1400HZ_AND_2300" +
+      "HZ_HANDSAKE_SIGNAL\020\002*G\n\024AudioOperateFunc" +
+      "tion\022\027\n\023SET_DETECTION_RANGE\020\000\022\026\n\022SET_DET" +
+      "ECTION_MODE\020\001*\201\001\n\nOutputPath\022\036\n\032OUTPUT_D" +
+      "TMF_NORMAL_SPEAKER\020\000\022\037\n\033OUTPUT_DTMF_HEAD" +
+      "SET_SPEAKER\020\001\022\034\n\030OUTPUT_DTMF_LOUD_SPEAKE" +
+      "R\020\002\022\024\n\020AUTO_OUTPUT_PATH\020\003*b\n\014AudioChanne" +
+      "l\022\030\n\024NORMLA_AUDIO_CHANNEL\020\000\022\031\n\025HEADSET_A" +
+      "UDIO_CHANNEL\020\001\022\035\n\031LOUDSPEAKER_AUDIO_CHAN",
+      "NEL\020\002*^\n\021MicrophoneChannel\022\025\n\021NORMAL_MIC" +
+      "ROPHONE\020\000\022\026\n\022HEADSET_MICROPHONE\020\001\022\032\n\026LOU" +
+      "DSPEAKER_MICROPHONE\020\002*9\n\tSoundMode\022\025\n\021NO" +
+      "RMAL_SOUND_MODE\020\000\022\025\n\021SILENT_SOUND_MODE\020\001" +
+      "*\232\001\n\013SpeakerMode\022\031\n\025SPEAKER_IS_ALWAYS_OF" +
+      "F\020\000\022B\n>SPEAKER_IS_ON_UTIL_TA_INFORM_TE_T" +
+      "HAT_CARRIER_HAS_BEEN_DETECTED\020\001\022,\n(SPEAK" +
+      "ER_IS_ALWAYS_ON_WHEN_TA_IS_OFF_HOOK\020\002*t\n" +
+      "\017SpeakerLoudness\022\025\n\021NO_SPEAKER_VOLUME\020\000\022" +
+      "\026\n\022LOW_SPEAKER_VOLUME\020\001\022\031\n\025MEDIUM_SPEAKE",
+      "R_VOLUME\020\002\022\027\n\023HIGH_SPEAKER_VOLUME\020\003*\257\001\n\r" +
+      "ThresholdType\022$\n THRESHOLD_OF_LOW_VOLTAG" +
+      "E_WARNING\020\000\022\'\n#THRESHOLD_OF_LOW_VOLTAGE_" +
+      "POWER_DOWN\020\001\022%\n!THRESHOLD_OF_HIGH_VOLTAG" +
+      "E_WARNING\020\002\022(\n$THRESHOLD_OF_HIGH_VOLTAGE" +
+      "_POWER_DOWN\020\003*\257\001\n\007LedMode\0224\n0NETWORK_LED" +
+      "_FLASHES_RAPIDLY_WHEN_CALL_IS_RINGING\020\000\022" +
+      "1\n-NO_EFFECT_ON_NETWORK_LED_WHEN_CALL_IS" +
+      "_RINGING\020\001\022;\n7RI_WILL_NOT_CHANGE_WHEN_UR" +
+      "C_REPORTED_UNTIL_RINGING_ENDS\020\002*[\n\tSlowC",
+      "lock\022\026\n\022DISABLE_SLOW_CLOCK\020\000\022\025\n\021ENABLE_S" +
+      "LOW_CLOCK\020\001\022\037\n\033ENTER_SLEEP_AFTER_5_SECON" +
+      "DS\020\002*1\n\nReadStatus\022\017\n\013STATUS_FAIL\020\000\022\022\n\016S" +
+      "TATUS_SUCCESS\020\002*V\n\rBatteryCharge\022\026\n\022ME_I" +
+      "S_NOT_CHARGING\020\000\022\022\n\016ME_IS_CHARGING\020\001\022\031\n\025" +
+      "CHARGING_HAS_FINISHED\020\002*K\n\nAlarmPower\022\024\n" +
+      "\020NONE_ALARM_POWER\020\000\022\023\n\017ALARM_POWER_OFF\020\001" +
+      "\022\022\n\016ALARM_POWER_ON\020\002*Q\n\006Repeat\022\017\n\013NONE_R" +
+      "EPEAT\020\000\022\020\n\014DAILY_REPEAT\020\001\022\021\n\rWEEKLY_REPE" +
+      "AT\020\002\022\021\n\rMONTLY_REPEAT\020\003*\325\001\n\007IndMode\022E\nAD",
+      "ISABLE_TX_BURST_INDICATION_PIN_OUTPUT_LO" +
+      "W_LEVEL_AS_GPIO_FUNCTION\020\000\0223\n/ENABLE_TX_" +
+      "BURST_INDICATION__OUTPUT_WAVE_AS_NOTE\020\001\022" +
+      "N\nJENABLE_TX_BURST_INDICATION_PIN_WILL_B" +
+      "E_HIGH_DURING_CALL_AND_LOW_AFTER_CALL\020\002*" +
+      "\254\001\n\010TimeMode\0225\n1RI_120_MS_LOW_PULSE_OTHE" +
+      "R_URC_RI_120_MS_LOW_PULSE\020\000\0224\n0RI_120_MS" +
+      "_LOW_PULSE_OTHER_URC_RI_50_MS_LOW_PULSE\020" +
+      "\001\0223\n/RI_120_MS_LOW_PULSE_OTHER_URC_RI_TA" +
+      "KE_NO_EFFECT\020\002*\207\002\n\021OthersMessageType\022#\n\037",
+      "REISSUES_THE_LAST_COMMAND_GIVEN\020\000\022\031\n\025SET" +
+      "_COMMAND_ECHO_MODE\020\001\022*\n&SET_COMMAND_LINE" +
+      "_TERMINATION_CHARACTER\020\002\022%\n!SET_RESPONSE" +
+      "_FORMATTING_CHARACTER\020\003\022&\n\"SET_COMMAND_L" +
+      "INE_EDITING_CHARACTER\020\004\022\017\n\013SET_RI_TIME\020\005" +
+      "\022&\n\"BURST_TRANSITION_SIGNAL_INDICATION\020\006" +
+      "*\302\001\n\032HardwareRelatedMessageType\022\t\n\005CLOCK" +
+      "\020\000\022\r\n\tSET_ALARM\020\001\022\022\n\016BATTERY_CHARGE\020\002\022\014\n" +
+      "\010READ_ADC\020\003\022\030\n\024CONFIGURE_SHOW_CLOCK\020\004\022&\n" +
+      "\"CONFIGURE_THE_NETWORK_LED_PATTERNS\020\005\022&\n",
+      "\"CONFIGURE_THE_THRESHOLD_OF_VOLTAGE\020\006*\231\004" +
+      "\n\020AudioMessageType\022 \n\034SET_MONITOR_SPEAKE" +
+      "R_LOUDNESS\020\000\022\034\n\030SET_MONITOR_SPEAKER_MODE" +
+      "\020\001\022\021\n\rTONE_DURATION\020\002\022\034\n\030DTMF_AND_TONE_G" +
+      "ENERATION\020\003\022\024\n\020ALERT_SOUND_MODE\020\004\022\026\n\022RIN" +
+      "GER_SOUND_LEVEL\020\005\022\035\n\031LOUD_SPEAKER_VOLUME" +
+      "_LEVEL\020\006\022\020\n\014MUTE_CONTROL\020\007\022#\n\037CHANGE_THE" +
+      "_SIDE_TONE_GAIN_LEVEL\020\010\022$\n CHANGE_THE_MI" +
+      "CROPHONE_GAIN_LEVEL\020\t\022\035\n\031GENERATE_LOCAL_" +
+      "DTMF_TONES\020\n\022\033\n\027SWAP_THE_AUDIO_CHANNELS\020",
+      "\013\022 \n\034AUDIO_CHANNEL_LOOP_BACK_TEST\020\014\022 \n\034G" +
+      "ENERATE_LOCAL_SPECIFIC_TONE\020\r\022\030\n\024SET_DTM" +
+      "F_OUTPUT_PATH\020\016\022\033\n\027SET_TONE_DETECTION_MO" +
+      "DE\020\017\022\017\n\013DETECT_DTMF\020\020\022\"\n\036PLAY_DTMF_TONE_" +
+      "DURING_THE_CALL\020\021*\366\003\n\037SupplementaryServi" +
+      "ceMessageType\0221\n-CALL_FORWARDING_NUMBER_" +
+      "AND_CONDITIONS_CONTROL\020\000\022\035\n\031CLOSED_USER_" +
+      "GROUP_CONTROL\020\001\022\030\n\024CALL_WAITING_CONTROL\020" +
+      "\002\022\034\n\030CALL_HOLD_AND_MULTIPARTY\020\003\022,\n(CALLI" +
+      "NG_LINE_IDENTIFICATION_PRESENTATION\020\004\022C\n",
+      "?CONTROL_WHETHER_OR_NOT_TO_SHOW_THE_NAME" +
+      "_OF_INCOMING_CALL_NUMBER\020\005\022.\n*CONNECTED_" +
+      "LINE_IDENTIFICATION_PRESENTATION\020\006\022#\n\037SH" +
+      "OW_ALPHA_FIELD_IN_COLP_STRING\020\007\022+\n\'UNSTR" +
+      "UCTURED_SUPPLEMENTARY_SERVICE_DATA\020\010\022\'\n#" +
+      "SUPPLEMENTARY_SERVICES_NOTIFICATION\020\t\022+\n" +
+      "\'CALLING_LINE_IDENTIFICATION_RESTRICTION" +
+      "\020\n*\323\n\n\020TCPIPMessageType\022 \n\034SET_UP_TCP_OR" +
+      "_UDP_CONNECTION\020\000\022+\n\'SEND_DATA_THROUGH_T" +
+      "CP_OR_UDP_CONNECTION\020\001\022\037\n\033CLOSE_TCP_OR_U",
+      "DP_CONNECTION\020\002\022#\n\037DEACTIVATE_GPRS_CSD_P" +
+      "DP_CONTEXT\020\003\022\022\n\016SET_LOCAL_PORT\020\004\022.\n*STAR" +
+      "T_TCPIP_TASK_APN_USERNAME_AND_PASSWORD\020\005" +
+      "\022\033\n\027ACTIVE_GPRS_CSD_CONTEXT\020\006\022\030\n\024GET_LOC" +
+      "AL_IP_ADDRESS\020\007\022#\n\037QUERY_CURRENT_CONNECT" +
+      "ION_STATUS\020\010\022-\n)QUERY_CONNECTION_STATUS_" +
+      "OF_CURRENT_ACCESS\020\t\022\037\n\033QUERY_CURRENT_SER" +
+      "VER_STATUS\020\n\022 \n\034CONFIGURE_DOMAIN_NAME_SE" +
+      "RVER\020\013\022-\n)QUERY_THE_IP_ADDRESS_OF_GIVEN_" +
+      "DOMAIN_NAME\020\014\0221\n-CONNECT_WITH_IP_ADDRESS",
+      "_OR_DOMAIN_NAME_SERVER\020\r\022(\n$ADD_AN_IP_HE" +
+      "ADER_WHEN_RECEIVING_DATE\020\016\022\032\n\026SET_AUTO_S" +
+      "ENDING_TIMER\020\017\022 \n\034SET_PROMPT_WHEN_SENDIN" +
+      "G_DATA\020\020\022\027\n\023CONFIGURE_AS_SERVER\020\021\022$\n SEL" +
+      "ECT_CSD_OR_GPRS_AS_THE_BEARER\020\022\022\025\n\021CHOOS" +
+      "E_CONNECTION\020\023\0227\n3SET_WHETHER_OR_NOT_TO_" +
+      "DISPLAY_THE_ADDRESS_OF_SENDER\020\024\022\"\n\036SAVE_" +
+      "TCPIP_APPLICATION_CONTEXT\020\025\022\036\n\032SELECT_TC" +
+      "PIP_TRANSFER_MODE\020\026\022\'\n#CONFIGURE_TRANSPA" +
+      "RENT_TRANSFER_MODE\020\027\0224\n0CONTROL_WHETHER_",
+      "OR_NOT_TO_SHOW_THE_PROTOCOL_TYPE\020\030\022;\n7CO" +
+      "NTROL_WHETHER_OR_NOT_TO_ENABLE_MULTIPLE_" +
+      "TCPIP_SESSION\020\031\0226\n2CONTROL_WHETHER_OR_NO" +
+      "T_TO_DISPLAY_LOCAL_IP_ADDRESS\020\032\022*\n&SELEC" +
+      "T_A_CONTEXT_AS_FOREGROUND_CONTEXT\020\033\022*\n&Q" +
+      "UERY_THE_DATA_INFORMATION_FOR_SENDING\020\034\022" +
+      "0\n,SET_THE_METHOD_TO_HANDLE_RECEIVED_TCP" +
+      "IP_DATA\020\035\022$\n RETRIEVE_THE_RECEIVED_TCPIP" +
+      "_DATA\020\036\0225\n1CONTRO_WHETHER_OR_NOT_TO_ECHO" +
+      "_THE_DATA_FOR_QISEND\020\037\022\030\n\024PING_A_REMOTE_",
+      "SERVER\020 \022&\n\"SYNCHRONIZE_THE_LOCAL_TIME_V" +
+      "IA_NTP\020!*\224\003\n\017GPRSMessageType\022 \n\034ATTACH_D" +
+      "EATTACH_GPRS_SERVICE\020\000\022\026\n\022DEFINE_PDP_CON" +
+      "TEXT\020\001\022\031\n\025QOS_PROFILE_REQUESTED\020\002\022\"\n\036QOS" +
+      "_PROFILE_MINIMUM_ACCEPTABLE\020\003\022&\n\"PDP_CON" +
+      "TEXT_ACTIVATE_OR_DEACTIVATE\020\004\022\024\n\020ENTER_D" +
+      "ATA_STATE\020\005\022\024\n\020SHOW_PDP_ADDRESS\020\006\022\035\n\031GPR" +
+      "S_MOBILE_STATION_CLASS\020\007\022,\n(CONTROL_UNSO" +
+      "LICITED_GPRS_EVENT_REPORTING\020\010\022\037\n\033NETWOR" +
+      "K_REGISTRATION_STATUS\020\t\022%\n!SELECT_SERVIC",
+      "E_FOR_MO_SMS_MESSAGE\020\n\022\037\n\033CHANGE_GPRS_MU" +
+      "LTISLOT_CLASS\020\013*\255\001\n\024PhonebookMessageType" +
+      "\022#\n\037SELECT_PHONEBOOK_MEMORY_STORAGE\020\000\022\031\n" +
+      "\025WRITE_PHONEBOOK_ENTRY\020\001\022\"\n\036READ_CURRENT" +
+      "_PHONEBOOK_ENTRIES\020\002\022\032\n\026FIND_PHONEBOOK_E" +
+      "NTRIES\020\003\022\025\n\021SUBSCRIBER_NUMBER\020\004*\377\004\n\016SMSM" +
+      "essageType\022\032\n\026SELECT_MESSAGE_SERVICE\020\000\022\035" +
+      "\n\031SELECT_SMS_MESSAGE_FORMAT\020\001\022\036\n\032SMS_SER" +
+      "VICE_CENTER_ADDRESS\020\002\022!\n\035PREFERRED_SMS_M" +
+      "ESSAGE_STORAGE\020\003\022\026\n\022DELETE_SMS_MESSAGE\020\004",
+      "\022+\n\'LIST_SMS_MESSAGE_FROM_PREFERRED_STOR" +
+      "AGE\020\005\022\024\n\020READ_SMS_MESSAGE\020\006\022\024\n\020SEND_SMS_" +
+      "MESSAGE\020\007\022\037\n\033WRITE_SMS_MESSAGE_TO_MEMORY" +
+      "\020\010\022!\n\035SEND_SMS_MESSAGE_FROM_STORAGE\020\t\022\024\n" +
+      "\020SEND_SMS_COMMAND\020\n\022\036\n\032NEW_SMS_MESSAGE_I" +
+      "NDICATION\020\013\022\030\n\024RESTORE_SMS_SETTINGS\020\014\022\025\n" +
+      "\021SAVE_SMS_SETTINGS\020\r\022%\n!SELECT_CELL_BROA" +
+      "DCAST_SMS_MESSAGE\020\016\022!\n\035SHOW_SMS_TEXT_MOD" +
+      "E_PARAMETERS\020\017\022 \n\034SET_SMS_TEXT_MODE_PARA" +
+      "METERS\020\020\0226\n2STRORE_CLASS0_SMS_TO_SIM_WHE",
+      "N_RECEIVING_CLASS0_SMS\020\021\022\022\n\016DELETE_ALL_S" +
+      "MS\020\022\022\033\n\027CONFIGURE_SMS_CODE_MODE\020\023*\367\006\n\026Ca" +
+      "llRelatedMessageType\022\033\n\027ANSWER_AN_INCOMI" +
+      "NG_CALL\020\000\022)\n%MOBILE_ORIENTED_CALL_TO_DIA" +
+      "L_A_NUMBER\020\001\022\"\n\036DISCONNECT_EXISTING_CONN" +
+      "ECTION\020\002\022)\n%SWITCH_FROM_DATA_MODE_TO_COM" +
+      "MAND_MODE\020\003\022)\n%SWITCH_FROM_COMMAND_MODE_" +
+      "TO_DATA_MODE\020\004\022\030\n\024SELECT_PULSE_DIALING\020\005" +
+      "\0229\n5SET_NUMBER_OF_RINGS_BEFORE_AUTOMATIC" +
+      "LY_ANSWERING_CALL\020\006\022\"\n\036SET_PAUSE_BEFORE_",
+      "BLIND_DIALING\020\007\022;\n7SET_NUMBER_OF_SECONDS" +
+      "_TO_WAIT_FOR_CONNECTION_COMPLETION\020\010\0229\n5" +
+      "SET_NUMBER_OF_SECONDS_TO_WAIT_FOR_COMMA_" +
+      "DIAL_MODIFIER\020\t\022A\n=SET_DISCONNECT_DELAY_" +
+      "AFTER_INDICATING_ABSENCE_OF_DATA_CARRIER" +
+      "\020\n\022\027\n\023SELECT_TONE_DIALING\020\013\022\032\n\026SELECT_TY" +
+      "PE_OF_ADDRESS\020\014\022\034\n\030LIST_CURRENT_CALLS_OF" +
+      "_ME\020\r\022\035\n\031SERVICE_REPORTING_CONTROL\020\016\0229\n5" +
+      "SET_CELLULAR_RESULT_CODE_FOR_INCOMING_CA" +
+      "LL_INDICATION\020\017\022(\n$SELECT_RADIO_LINK_PRO",
+      "TOCOL_PARAMETER\020\020\022\033\n\027SINGLE_NUMBERING_SC" +
+      "HEME\020\021\022$\n CONFIGURE_ALTERNATING_MODE_CAL" +
+      "LS\020\022\022\034\n\030PREFERENCE_SPEACH_CODING\020\023\022\036\n\032SP" +
+      "EECH_CHANNEL_TYPE_REPORT\020\024\022\017\n\013DISABLE_AT" +
+      "H\020\025*\265\002\n\031NetworkServiceMessageType\022\026\n\022OPE" +
+      "RATOR_SELECTION\020\000\022\030\n\024NETWORK_REGISTRATIO" +
+      "N\020\001\022\031\n\025SIGNAL_QUALITY_REPORT\020\002\022\033\n\027PREFER" +
+      "RED_OPERATOR_LIST\020\003\022\027\n\023READ_OPEARATR_NAM" +
+      "ES\020\004\022%\n!GET_AND_SET_MOBILE_OPERATION_BAN" +
+      "D\020\005\0225\n1NETWORK_SERVICE_SWITCH_ON_OR_OFF_",
+      "ENGINEERING_MODE\020\006\022\037\n\033SCAN_POWER_OF_GSM_" +
+      "FREQUENCY\020\007\022\026\n\022LOCK_GSM_FREQUENCY\020\010*\347\002\n\025" +
+      "SIMRelatedMessageType\022\020\n\014REQUEST_IMSI\020\000\022" +
+      "\021\n\rFACILITY_LOCK\020\001\022\r\n\tENTER_PIN\020\002\022\023\n\017CHA" +
+      "NGE_PASSWORD\020\003\022\031\n\025RESTRICTED_SIM_ACCESS\020" +
+      "\004\022\026\n\022GENERIC_SIM_ACCESS\020\005\022\034\n\030CHANGE_PS_S" +
+      "UPER_PASSWORD\020\006\022\r\n\tSHOW_CCID\020\007\022\023\n\017SHOW_C" +
+      "CID_QCCID\020\010\022!\n\035GET_SIM_CARD_GROUP_IDENTI" +
+      "FIER\020\t\022%\n!SELECT_SIM_CARD_OPERATING_VOLT" +
+      "AGE\020\n\022\035\n\031GET_SERVICE_PROVIDER_NAME\020\013\022\'\n#",
+      "TIME_REMAINING_TO_INPUT_SIM_PIN_PUK\020\014*\265\005" +
+      "\n\030StatusControlMessageType\022\031\n\025EXTENDED_E" +
+      "RROR_REPORT\020\000\022$\n MOBILE_EQUIPMENT_ACTIVI" +
+      "TY_STATUS\020\001\022\036\n\032INDICATE_RI_WHEN_USING_UR" +
+      "C\020\002\022(\n$SHOW_STATE_OF_MOBILE_ORIGINATED_C" +
+      "ELL\020\003\022.\n*REFUSE_TO_RECEIVE_SMS_INCOMING_" +
+      "CALL_OR_NOT\020\004\022.\n*ENABLE_OR_DISABLE_INITI" +
+      "AL_URC_PRESENTATION\020\005\0229\n5ENABLE_OR_DISAB" +
+      "LE_PROPRIETARY_UNSOLICITED_INDICATIONS\020\006" +
+      "\022!\n\035QUERY_STATE_OF_INITIALIZATION\020\007\022\034\n\030Q",
+      "UERY_GSM_NETWORK_STATUS\020\010\022 \n\034NETWORK_TIM" +
+      "E_SYNCHRONIZATION\020\t\022+\n\'OBTAIN_LATEST_NET" +
+      "WORK_TIME_SYNCHRONIZED\020\n\0228\n4NETWORK_TIME" +
+      "_SYNCHRONIZATION_AND_UPDATE_THE_RTC_TIME" +
+      "\020\013\022\'\n#NETWORK_TIME_SYNCHRONIZATION_REPOR" +
+      "T\020\014\022\'\n#SWITCH_ON_OR_OFF_DETECTING_SIM_CA" +
+      "RD\020\r\022!\n\035SIM_INSERTED_STATUS_REPORTING\020\016\022" +
+      "4\n0CSC_CALL_OR_GPRS_PDP_CONTEXT_TERMINAL" +
+      "_INDICATION\020\017*\335\002\n!SerialInterfaceControl" +
+      "MessageType\022\031\n\025SET_DCD_FUNCTION_MODE\020\000\022\031",
+      "\n\025SET_DTR_FUNCTION_MODE\020\001\022\'\n#SET_TE_TA_C" +
+      "ONTROL_CHARACTER_FRAMING\020\002\022%\n!SET_TE_TA_" +
+      "LOCAL_DATA_FLOW_CONTROL\020\003\022,\n(SET_TE_TA_L" +
+      "OCAL_DATA_RATE_REPORTING_MODE\020\004\022\036\n\032SET_T" +
+      "E_TA_FIXED_LOCAL_RATE\020\005\022\027\n\023MULTIPLEXER_C" +
+      "ONTROL\020\006\022 \n\034CONFIGURE_DUAL_UART_FUNCTION" +
+      "\020\007\022)\n%CONFIGURE_PARAMETERS_OF_THE_DUAL_U" +
+      "ART\020\010*\376\006\n\023GeneralMesssageType\022.\n*DISPLAY" +
+      "_PRODUCT_IDENTIFICATION_INFORMATION\020\000\022\'\n" +
+      "#REQUEST_MANUFACTURER_IDENTIFICATION\020\001\022#",
+      "\n\037REQUEST_TA_MODEL_IDENTIFICATION\020\002\022&\n\"R" +
+      "EQUEST_TA_REVISION_IDENTIFICATION\020\003\022(\n$R" +
+      "EQUEST_GLOBAL_OBJECT_IDENTIFICATION\020\004\022,\n" +
+      "(REQUEST_MANUFACTURER_IDENTIFICATION_CGM" +
+      "I\020\005\022 \n\034REQUEST_MODEL_IDENTIFICATION\020\006\022+\n" +
+      "\'REQUEST_TA_REVISION_IDENTIFICATION_CGMR" +
+      "\020\007\022\020\n\014REQUEST_IMEI\020\010\0220\n,REQUEST_PRODUCT_" +
+      "SERIAL_NUMBER_IDENTIFICATION\020\t\022\025\n\021REQUES" +
+      "T_IMEI_QGSN\020\n\0227\n3SET_ALL_CURRENT_PARAMET" +
+      "ERS_TO_MANUFACTURER_DEFAULTS\020\013\022!\n\035DISPLA",
+      "Y_CURRENT_CONFIGURATION\020\014\0224\n0STORE_CURRE" +
+      "NT_PARAMETERS_TO_USER_DEFINED_PROFILE\020\r\022" +
+      "%\n!SET_RESULT_CODE_PRESENTATION_CODE\020\016\022\026" +
+      "\n\022TA_RESPONSE_FORMAT\020\017\022\"\n\036SET_CONNECT_RE" +
+      "SULT_CODE_FORMAT\020\020\0226\n2SET_ALL_CURRENT_PA" +
+      "RAMETERS_TO_USER_DEFINED_PROFILE\020\021\022\033\n\027SE" +
+      "T_PHONE_FUNCTIONALITY\020\022\022\r\n\tPOWER_OFF\020\023\022!" +
+      "\n\035REPORT_MOBILE_EQUIPMENT_ERROR\020\024\022\030\n\024SET" +
+      "_TE_CHARACTER_SET\020\025\022)\n%REQUEST_COMPLETE_" +
+      "TA_CAPABILITIES_LIST\020\026*\312\003\n\017SMTPMessageTy",
+      "pe\022(\n$SET_THE_USER_NAME_FOR_AUTHENTICATI" +
+      "ON\020\000\022\'\n#SET_THE_PASSWORD_FOR_AUTHENTICAT" +
+      "ION\020\001\022\'\n#SET_THE_EMAIL_ADDRESS_OF_THE_SE" +
+      "NDER\020\002\022\030\n\024SET_THE_SENDERS_NAME\020\003\022+\n\'SET_" +
+      "THE_ADDRESS_AND_PORT_OD_SMTP_SERVER\020\004\022\034\n" +
+      "\030ADD_OR_DELETE_RECIPIENTS\020\005\022!\n\035EDIT_THE_" +
+      "SUBJECT_OF_THE_EMAIL\020\006\022!\n\035EDIT_THE_CONTE" +
+      "NT_OF_THE_EMAIL\020\007\022#\n\037ADD_AN_ATTACHMENT_F" +
+      "OR_THE_EMAIL\020\010\022\030\n\024DELETE_AN_ATTACHMENT\020\t" +
+      "\022)\n%CLEAR_ALL_CONFIGURATIONS_AND_CONTENT",
+      "S\020\n\022\026\n\022SMTP_CONFIGURATION\020\013\022\016\n\nSEND_EMAI" +
+      "L\020\014*_\n\024RecordingMessageType\022\025\n\021RECORD_ME" +
+      "DIA_FILE\020\000\022\023\n\017PLAY_MEDIA_FILE\020\001\022\033\n\027STOP_" +
+      "PLAYING_MEDIA_FILE\020\002*\352\001\n\023QuecCellMessage" +
+      "Type\022\"\n\036SCAN_BASIC_STATION_INFORMATION\020\000" +
+      "\022%\n!SWITCH_ON_OR_OFF_ENGINEERING_MODE\020\001\022" +
+      "\031\n\025LOCK_THE_BASE_STATION\020\002\022\036\n\032SCAN_ARFCN" +
+      "_RECEIVING_LEVEL\020\003\022\033\n\027GET_CHANNEL_INFORM" +
+      "ATION\020\004\022\033\n\027GET_LAST_VALID_TA_VALUE\020\005\022\023\n\017" +
+      "FORBID_OPERATOR\020\006*\337\003\n\016MMSMessageType\022\033\n\027",
+      "SET_THE_URL_OF_THE_MMSC\020\000\022\025\n\021SET_THE_MMS" +
+      "_PROXY\020\001\022-\n)SET_THE_PARAMETER_FOR_SENDIN" +
+      "G_MMS_MESSAGE\020\002\022%\n!SET_CHARACTER_SETS_AN" +
+      "D_INPUT_MODE\020\003\022\025\n\021WRITE_MMS_MESSAGE\020\004\022\024\n" +
+      "\020SEND_MMS_MESSAGE\020\005\022#\n\037MENAGE_THE_RECEIV" +
+      "ED_MMS_MESSAGE\020\006\022\035\n\031READ_RECEIVED_MMS_ME" +
+      "SSAGE\020\007\022%\n!RECEIVE_MMS_MESSAGE_FROM_THE_" +
+      "MMSC\020\010\022(\n$SET_PRIORITY_OF_MMS_MESSAGE_AN" +
+      "D_CALL\020\t\022.\n*SET_DUR_ATTRIBUTE_VALUE_IN_T" +
+      "HE_SMIL_SCRIPT\020\n\022\032\n\026SET_MMS_SMS_TRANSACT",
+      "OR\020\013\022\036\n\032ENABLE_OUTPUT_TEXT_IN_USC2\020\014\022\025\n\021" +
+      "OUTPUT_FILE_STYLE\020\r*\350\001\n\016STKMessageType\022\034" +
+      "\n\030TURN_ON_OFF_STK_FUNCTION\020\000\022\030\n\024STK_PROF" +
+      "ILE_DOWNLOAD\020\001\022\030\n\024STK_ENVELOPE_COMMAND\020\002" +
+      "\022\031\n\025STK_TERMINAL_RESPONSE\020\003\022\024\n\020TRIGGER_S" +
+      "TK_CALL\020\004\022\023\n\017TRIGGER_STK_SMS\020\005\022\022\n\016TRIGGE" +
+      "R_STK_SS\020\006\022\024\n\020TRIGGER_STK_USSD\020\007\022\024\n\020TRIG" +
+      "GER_STK_DTMF\020\010*\356\006\n\016FTPMessageType\022/\n+OPE" +
+      "N_AN_FTP_SERVICE_TO_THE_GIVEN_FTP_SERVER" +
+      "\020\000\022\031\n\025CLOSE_THE_FTP_SERVICE\020\001\022#\n\037UPLOAD_",
+      "A_FILE_TO_THE_FTP_SERVER\020\002\022\'\n#DOWNLOAD_A" +
+      "_FILE_FROM_THE_FTP_SERVER\020\003\022=\n9SET_THE_P" +
+      "ATH_IN_THE_FTP_SERVER_TO_UPLOAD_OR_DOWNL" +
+      "OAD_FILE\020\004\0228\n4SET_THE_USER_NAME_OF_THE_A" +
+      "CCOUNT_TO_OPEN_FTP_SERVICE\020\005\0227\n3SET_THE_" +
+      "PASSWORD_OF_THE_ACCOUNT_TO_OPEN_FTP_SERV" +
+      "ICE\020\006\0228\n4SET_SOME_CONFIGURABLE_PARAMETER" +
+      "S_FOR_THE_FTP_SERVICE\020\007\022\037\n\033QUERY_STATUS_" +
+      "OF_FTP_SERVICE\020\010\0229\n5QUERY_THE_REAL_SIZE_" +
+      "TRANSFERED_IN_THE_LATEST_TRANSFER\020\t\0220\n,R",
+      "ENAME_FILE_OR_FOLDER_NAME_ON_THE_FTP_SER" +
+      "VER\020\n\0226\n2QUERY_THE_SIZE_OF_APPOINTED_FIL" +
+      "E_ON_THE_FTP_SERVER\020\013\022/\n+DELETE_THE_APPO" +
+      "INTED_FILE_ON_THE_FTP_SERVER\020\014\0220\n,ESTABL" +
+      "ISH_A_NEW_FILEFOLDER_ON_THE_FTP_SERVER\020\r" +
+      "\022)\n%REMOVE_A_FILEFOLDER_ON_THE_FTP_SERVE" +
+      "R\020\016\022D\n@LIST_CONTENTS_OF_DIRECTORY_OR_FIL" +
+      "E_INFORMATION_ON_THE_FTP_SERVER\020\017\022<\n8LIS" +
+      "T_FILE_NAMES_IN_THE_GIVEN_DIRECTORY_ON_T" +
+      "HE_FTP_SERVER\020\020*\375\002\n\017FileMessageType\022\031\n\025G",
+      "ET_STORAGE_DATE_SIZE\020\000\022\016\n\nLIST_FILES\020\001\022\032" +
+      "\n\026UPLOAD_FILE_TO_STORAGE\020\002\022\036\n\032DOWNLOAD_F" +
+      "ILE_FROM_STORAGE\020\003\022\032\n\026DELETE_FILE_IN_STO" +
+      "RAGE\020\004\022\r\n\tMOVE_FILE\020\005\022\r\n\tOPEN_FILE\020\006\022\r\n\t" +
+      "READ_FILE\020\007\022\016\n\nWRITE_FILE\020\010\022\r\n\tSEEK_FILE" +
+      "\020\t\022\016\n\nCLOSE_FILE\020\n\022\"\n\036GET_OFFSET_OF_THE_" +
+      "FILE_POINTER\020\013\0224\n0FORCE_TO_WRITE_DATA_RE" +
+      "MAINING_IN_THE_FILE_BUFFER\020\014\0221\n-TRUNCATE" +
+      "_THE_SPECIFIED_FILE_FROM_FILE_POINTER\020\r*" +
+      "\244\001\n\017HTTPMessageType\022\027\n\023SET_HTTP_SERVER_U",
+      "RL\020\000\022\031\n\025SEND_HTTP_GET_REQUEST\020\001\022\035\n\031READ_" +
+      "HTTP_SERVER_RESPONSE\020\002\022\032\n\026SEND_HTTP_POST" +
+      "_REQUEST\020\003\022\"\n\036DOWNLOAD_FILE_FROM_HTTP_SE" +
+      "RVER\020\004*\376\036\n\005Error\022\006\n\002OK\020\000\022\020\n\014UNKNOW_ERROR" +
+      "\020\001\022\020\n\014SERVICE_BUSY\020\003\022\034\n\030FAILED_TO_GET_IP" +
+      "_ADDRESS\020\004\022\021\n\rNETWORK_ERROR\020\005\022#\n\037UNSUPPO" +
+      "RTED_AUTHENTICATION_TYPE\020\006\022\022\n\016SERVICE_CL" +
+      "OSED\020\007\022#\n\037GPRS_CSD_CONTEXT_IS_DEACTIVATE" +
+      "D\020\010\022\013\n\007TIMEOUT\020\t\022!\n\035NO_RECIPIENT_FOR_SMT" +
+      "P_SERVICE\020\n\022\030\n\024FAILED_TO_SEND_EMAIL\020\013\022&\n",
+      "\"FAILED_TO_OPEN_FILE_FOR_ATTACHMENT\020\014\022#\n" +
+      "\037NO_ENOUGH_MEMORY_FOR_ATTACHMENT\020\r\022!\n\035FA" +
+      "ILED_TO_SAVE_THE_ATTACHMENT\020\016\022 \n\034THE_INP" +
+      "UT_PARAMETER_IS_WRONG\020\017\022\032\n\025SERVICE_NOT_A" +
+      "VAILABLE\020\245\003\022$\n\037REQUESTED_MAIL_ACTION_NOT" +
+      "_TAKEN\020\302\003\022\035\n\030REQUESTED_ACTION_ABORTED\020\303\003" +
+      "\022;\n6REQUESTED_ACTION_NOT_TAKEN_INSUFFICI" +
+      "ENT_SYSTEM_STORAGE\020\304\003\022&\n!SYNTAX_ERROR_CO" +
+      "MMAND_UNRECOGNIZED\020\364\003\022,\n\'SYNTAX_ERROR_IN" +
+      "_PARAMETERS_OR_ARGUMENTS\020\365\003\022\034\n\027COMMAND_N",
+      "OT_IMPLEMENTED\020\366\003\022\035\n\030BAD_SEQUENCE_OF_COM" +
+      "MANDS\020\367\003\022&\n!COMMAND_PARAMETER_NOT_IMPLEM" +
+      "ENTED\020\370\003\022!\n\034DOMAIN_DOES_NOT_ACCEPT_EMAIL" +
+      "\020\211\004\022#\n\036ACCESS_DENIED_FOR_SMTP_SERVICE\020\222\004" +
+      "\022\032\n\025AUTHENTICATION_FAILED\020\227\004\022\037\n\032REQUESTE" +
+      "D_ACTION_NOT_TAKEN\020\246\004\022\023\n\016USER_NOT_LOCAL\020" +
+      "\247\004\022?\n:REQUESTED_MAIL_ACTION_ABORTED_EXCE" +
+      "EDED_STORAGE_NOT_ALLOWED\020\250\004\0228\n3REQUESTED" +
+      "_ACTION_NOT_TAKEN_MAILBOX_NAME_NOT_ALLOW" +
+      "ED\020\251\004\022\027\n\022TRANSACTION_FAILED\020\252\004\022\022\n\rHTTP_T",
+      "IME_OUT\020\331\035\022\016\n\tHTTP_BUSY\020\332\035\022\023\n\016HTTP_UART_" +
+      "BUSY\020\333\035\022\030\n\023HTTP_GET_NO_REQUEST\020\334\035\022\026\n\021HTT" +
+      "P_NETWORK_BUSY\020\335\035\022\035\n\030HTTP_NETWORK_OPEN_F" +
+      "AILED\020\336\035\022\033\n\026HTTP_NETWORK_NO_CONFIG\020\337\035\022\032\n" +
+      "\025HTTP_NETWORK_DEACTIVE\020\340\035\022\027\n\022HTTP_NETWOR" +
+      "K_ERROR\020\341\035\022\023\n\016HTTP_URL_ERROR\020\342\035\022\023\n\016HTTP_" +
+      "EMPTY_URL\020\343\035\022\027\n\022HTTP_IP_ADDR_ERROR\020\344\035\022\023\n" +
+      "\016HTTP_DNS_ERROR\020\345\035\022\035\n\030HTTP_SOCKET_CREATE" +
+      "_ERROR\020\346\035\022\036\n\031HTTP_SOCKET_CONNECT_ERROR\020\347" +
+      "\035\022\033\n\026HTTP_SOCKET_READ_ERROR\020\350\035\022\034\n\027HTTP_S",
+      "OCKET_WRITE_ERROR\020\351\035\022\026\n\021HTTP_SOCKET_CLOS" +
+      "E\020\352\035\022\033\n\026HTTP_DATA_ENCODE_ERROR\020\353\035\022\033\n\026HTT" +
+      "P_DATA_DECODE_ERROR\020\354\035\022\031\n\024HTTP_TO_READ_T" +
+      "IMEOUT\020\355\035\022\031\n\024HTTP_RESPONSE_FAILED\020\356\035\022\027\n\022" +
+      "INCOMING_CALL_BUSY\020\357\035\022\024\n\017VOICE_CALL_BUSY" +
+      "\020\360\035\022\022\n\rINPUT_TIMEOUT\020\361\035\022\026\n\021WAIT_DATA_TIM" +
+      "EOUT\020\362\035\022\037\n\032WAIT_HTTP_RESPONSE_TIMEOUT\020\363\035" +
+      "\022\026\n\021ALLOC_MEMORY_FAIL\020\364\035\022\031\n\024HTTP_NEED_RE" +
+      "LOCATION\020\365\035\022\030\n\023INVALID_INPUT_VALUE\020\231\036\022\021\n" +
+      "\014MMS_TIME_OUT\020\275\036\022\021\n\014URL_TOO_LONG\020\276\036\022\020\n\013I",
+      "NVALID_URL\020\277\036\022\026\n\021UNSUPPORTED_PROXY\020\300\036\022\032\n" +
+      "\025INVALID_PROXY_ADDRESS\020\301\036\022\025\n\020IP_ADDRESS_" +
+      "ERROR\020\302\036\022\016\n\tDNS_ERROR\020\303\036\022\024\n\017PARAMETER_ER" +
+      "ROR\020\304\036\022\030\n\023TO_ADDRESS_EXCEEDED\020\305\036\022\030\n\023CC_A" +
+      "DDRESS_EXCEEDED\020\306\036\022\031\n\024BCC_ADDRESS_EXCEED" +
+      "ED\020\307\036\022$\n\037APPENDED_FILE_CAPACITY_EXCEEDED" +
+      "\020\310\036\022\027\n\022FILE_NAME_TOO_LONG\020\311\036\022 \n\033THE_NUMB" +
+      "ER_OF_FILE_EXCEEDED\020\312\036\022\031\n\024NON_EXISTENT_A" +
+      "DDRESS\020\313\036\022\025\n\020UFS_STORAGE_FULL\020\314\036\022\017\n\nDRIV" +
+      "E_FULL\020\315\036\022\020\n\013DRIVE_ERROR\020\316\036\022\016\n\tNOT_FOUND",
+      "\020\317\036\022\026\n\021INVALID_FILE_NAME\020\320\036\022\031\n\024FILE_ALRE" +
+      "ADY_EXISTED\020\321\036\022\032\n\025FAILED_TO_CREATE_FILE\020" +
+      "\322\036\022\031\n\024FAILED_TO_WRITE_FILE\020\323\036\022\"\n\035FAILED_" +
+      "TO_OPEN_REQUESTED_FILE\020\324\036\022\030\n\023FAILED_TO_R" +
+      "EAD_FILE\020\325\036\022\r\n\010MMS_BUSY\020\326\036\022\025\n\020SENDING_MM" +
+      "S_BUSY\020\327\036\022\030\n\023SENDING_MMS_STOPPED\020\330\036\022\034\n\027A" +
+      "LREADY_STOPPED_TO_SEND\020\331\036\022\027\n\022RECEIVING_M" +
+      "MS_BUSY\020\332\036\022\032\n\025RECEIVING_MMS_STOPPED\020\333\036\022\034" +
+      "\n\027ALREADY_STOPPED_RECEIVE\020\334\036\022\032\n\025HTTP_RES" +
+      "PONSE_FALIURE\020\335\036\022\031\n\024INVALID_MMS_RESPONSE",
+      "\020\336\036\022\027\n\022MMS_RESPONSE_ERROR\020\337\036\022\031\n\024INVALID_" +
+      "PUSH_MESSAGE\020\340\036\022\027\n\022ALREADY_DONWLOADED\020\341\036" +
+      "\022\021\n\014NETWORK_BUSY\020\342\036\022\033\n\026FAILED_TO_OPEN_NE" +
+      "TWORK\020\343\036\022\032\n\025NETWORK_NO_CONFIGURED\020\344\036\022\030\n\023" +
+      "NETWORK_DEACTIVATED\020\345\036\022\026\n\021MMS_NETWORK_ER" +
+      "ROR\020\346\036\022\025\n\020NETWORK_SHUTDOWN\020\347\036\022\016\n\tUART_BU" +
+      "SY\020\350\036\022\021\n\014UART_ESCAPED\020\351\036\022\034\n\027FAILED_TO_CR" +
+      "EATE_SOCKET\020\352\036\022\035\n\030FAILED_TO_CONNECT_SOCK" +
+      "ET\020\353\036\022\032\n\025FAILED_TO_READ_SOCKET\020\354\036\022\033\n\026FAI" +
+      "LED_TO_WRITE_SOCKET\020\355\036\022\022\n\rSOCKET_CLOSED\020",
+      "\356\036\022\025\n\020MMS_LENGTH_ERROR\020\357\036\022\031\n\024FAILED_TO_E" +
+      "NCODE_MMS\020\360\036\022\031\n\024FAILED_TO_DECODE_MMS\020\361\036\022" +
+      "\032\n\025FAILED_TO_DECODE_HTTP\020\362\036\022\"\n\035FAILED_TO" +
+      "_DECODE_PUSH_MESSAGE\020\363\036\022\024\n\017PDU_ALIGN_ERR" +
+      "OR\020\364\036\022\030\n\023PDU_CHARACTER_ERROR\020\365\036\022\024\n\017STRIN" +
+      "G_TOO_LONG\020\366\036\022\r\n\010MMS_FULL\020\367\036\022\025\n\020NON_EXIS" +
+      "TENT_MMS\020\370\036\022\024\n\017INVALID_ADDRESS\020\371\036\022\030\n\023MMS" +
+      "_VOICE_CALL_BUSY\020\372\036\022\030\n\023ALLOC_MEMORY_FAIL" +
+      "ED\020\373\036\022\026\n\021EXCEED_MAX_LENGTH\020\240\037\022\023\n\016OPEN_FI" +
+      "LE_FAIL\020\241\037\022\024\n\017WRITE_FILE_FAIL\020\242\037\022\022\n\rGET_",
+      "SIZE_FAIL\020\243\037\022\016\n\tREAD_FAIL\020\244\037\022\023\n\016LIST_FIL" +
+      "E_FAIL\020\245\037\022\025\n\020DELETE_FILE_FAIL\020\246\037\022\027\n\022GET_" +
+      "DISC_INFO_FAIL\020\247\037\022\r\n\010NO_SPACE\020\250\037\022\r\n\010TIME" +
+      "_OUT\020\251\037\022\030\n\023HTTP_FILE_NOT_FOUND\020\252\037\022\023\n\016FIL" +
+      "E_TOO_LARGE\020\253\037\022\027\n\022FILE_ALREADY_EXIST\020\254\037\022" +
+      "\026\n\021INVALID_PARAMETER\020\255\037\022\021\n\014DRIVER_ERROR\020" +
+      "\256\037\022\020\n\013CREATE_FAIL\020\257\037\022\022\n\rACCESS_DENIED\020\260\037" +
+      "\022\026\n\021FILE_IS_TOO_LARGE\020\261\037\022\021\n\014WRONG_FORMAT" +
+      "\020\314!\022\024\n\017AUDIO_TASK_BUSY\020\316!\022\027\n\022CREATE_FILE" +
+      "_FAILED\020\317!\022/\n*ADDITIONAL_RECORDING_IN_A_",
+      "DIFFERENT_FORMAT\020\320!\022\016\n\tDISC_FULL\020\321!\022\035\n\030W" +
+      "RITE_PROTECTION_ON_FILE\020\322!\022\033\n\026RECORDING_" +
+      "UNKNOW_ERROR\020\223#*\245\007\n\010FTPError\022\n\n\006FTP_OK\020\000" +
+      "\022\024\n\020FTP_UNKNOW_ERROR\020\001\022\024\n\020FTP_SERVICE_BU" +
+      "SY\020\003\0225\n1FAILED_TO_GET_IP_ADDRESS_ACCORDI" +
+      "NG_TO_DOMAIN_NAME\020\004\022\025\n\021FTP_NETWORK_ERROR" +
+      "\020\005\022$\n FTP_SESSION_CLOSED_BY_FTP_SERVER\020\006" +
+      "\022,\n(DATA_CONNECTION_OF_FTP_SERVICE_IS_CL" +
+      "OSED\020\007\022\'\n#FTP_GPRS_CSD_CONTEXT_IS_DEACTI" +
+      "VATED\020\010\022\017\n\013FTP_TIMEOUT\020\t\022\036\n\032INPUT_PARAME",
+      "TAR_IS_ILLEGAL\020\n\022$\n FILE_NOT_FOUND_IN_LO" +
+      "CAL_POSITION\020\013\022(\n$FAILED_TO_GET_FILE_IN_" +
+      "LOCAL_POSITION\020\014\022\'\n#FTP_NO_ENOUGH_MEMORY" +
+      "_FOR_ATTACHMENT\020\r\022$\n\037FTP_SERVER_CANT_SUP" +
+      "PORT_SERVICE\020\245\003\022#\n\036FAILED_TO_OPEN_DATA_C" +
+      "ONNECTION\020\251\003\022,\n\'CONNECTION_CLOSED_AND_ST" +
+      "OP_TRANSFERRING\020\252\003\022#\n\036REQUEST_FOR_FILE_I" +
+      "SNT_OPERATED\020\302\003\022%\n FTP_SERVER_HAS_NOT_EN" +
+      "OUGH_MEMORY\020\304\003\022#\n\036FORMAT_OF_FTP_COMMAND_" +
+      "IS_WRONG\020\364\003\022&\n!PARAMETER_OF_FTP_COMMAND_",
+      "IS_WRONG\020\365\003\022,\n\'FTP_COMMAND_ISNT_OPERATED" +
+      "_BY_FTP_SERVER\020\366\003\022\031\n\024NOT_LOGIN_FTP_SERVE" +
+      "R\020\222\004\022 \n\033NEED_INFORMATION_OF_ACCOUNT\020\224\004\022\032" +
+      "\n\025REQUEST_ISNT_OPERATED\020\246\004\022\027\n\022REQUEST_IS" +
+      "_STOPPED\020\247\004\022\037\n\032REQUEST_OF_FILE_IS_STOPPE" +
+      "D\020\250\004\022\031\n\024FILE_NAME_IS_ILLEGAL\020\251\004B0\n\033com.r" +
+      "trk.atcommand.protobufB\021ProtobufATComman" +
+      "d"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -95444,7 +95366,7 @@ public final class ProtobufATCommand {
     internal_static_com_rtrk_atcommand_FTPCommand_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_com_rtrk_atcommand_FTPCommand_descriptor,
-        new java.lang.String[] { "MessageType", "Action", "Execution", "HostName", "Port", "FileName", "FileSize", "Time", "UploadSize", "DownloadSize", "PathName", "Username", "Password", "Type", "DataConnectionMode", "ResumingPoint", "TransferType", "ValueString", "Status", "Length", "SourceName", "TargetName", "Name", "Return", "DirectoryName", "IsResponse", "Description", "Error", });
+        new java.lang.String[] { "MessageType", "Action", "HostName", "Port", "FileName", "FileSize", "Time", "UploadSize", "DownloadSize", "PathName", "Username", "Password", "Type", "DataConnectionMode", "TransferType", "ResumingPoint", "LocalPosition", "Status", "Length", "SourceName", "TargetName", "Name", "Return", "DirectoryName", "IsResponse", "Description", "Error", });
     internal_static_com_rtrk_atcommand_MMSCommand_descriptor =
       getDescriptor().getMessageTypes().get(4);
     internal_static_com_rtrk_atcommand_MMSCommand_fieldAccessorTable = new

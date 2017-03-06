@@ -126,7 +126,6 @@ enum PointerMovementMode {
 message FTPCommand {
 	required FTPMessageType messageType = 1;
 	required Action action = 2;
-	optional bool execution = 5;
 	optional string hostName = 6;
 	optional int32 port = 7;
 	optional string fileName = 8;
@@ -139,9 +138,9 @@ message FTPCommand {
 	optional string password = 15;
 	optional TypeOfConfigurableParameters type = 16;
 	optional DataConnectionMode dataConnectionMode = 29;
-	optional int32 resumingPoint = 30;
 	optional TransferType transferType = 17;
-	optional string valueString = 28;
+	optional int32 resumingPoint = 30;
+	optional string localPosition = 28;
 	optional string status = 18;
 	optional int32 length = 19;
 	optional string sourceName = 20;
@@ -160,10 +159,10 @@ enum DataConnectionMode {
 }
 
 enum TypeOfConfigurableParameters {
-	MODE_OF_DATA_CONNECTION = 0;
-	TRANSFER_TYPE = 1;
-	RESUMING_POINT_TO_RESUME_FILE_TRANSFER = 2;
-	LOCAL_POSITION_OF_FILE_TRANSFER = 3;
+	MODE_OF_DATA_CONNECTION = 1;
+	TRANSFER_TYPE = 2;
+	RESUMING_POINT_TO_RESUME_FILE_TRANSFER = 3;
+	LOCAL_POSITION_OF_FILE_TRANSFER = 4;
 }
 
 enum TransferType {
