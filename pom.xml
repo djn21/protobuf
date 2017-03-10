@@ -43,7 +43,7 @@
 				<artifactId>maven-antrun-plugin</artifactId>
 				<executions>
 					<execution>
-						<id>generate-sources</id>
+						<id>generate-protobuf</id>
 						<phase>generate-sources</phase>
 						<configuration>
 							<tasks>
@@ -53,7 +53,26 @@
 									<arg value="${project.basedir}/commands.proto" />
 								</exec>
 							</tasks>
-							<sourceRoot>target/generated-sources</sourceRoot>
+							<sourceRoot>target/generated-protobuf</sourceRoot>
+						</configuration>
+						<goals>
+							<goal>run</goal>
+						</goals>
+					</execution>
+					<execution>
+						<id>generate-xml</id>
+						<phase>generate-sources</phase>
+						<configuration>
+							<tasks>
+								<exec executable="java">
+									<arg value="-cp" />
+									<arg value="C:\Users\djekanovic\Documents\EclipseProjects\xmlgenerator\target\xmlgenerator-0.0.1-SNAPSHOT.jar" />
+									<arg value="com.rtrk.xmlgenerator.App" />
+									<arg value="${project.basedir}\commands.proto" />
+									<arg value="${project.basedir}\commands.xml" />
+								</exec>
+							</tasks>
+							<sourceRoot>target/generated-xml</sourceRoot>
 						</configuration>
 						<goals>
 							<goal>run</goal>

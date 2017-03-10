@@ -58,32 +58,33 @@ enum CommandType {
 message FileCommand {
 	required FileMessageType messageType = 1;
 	required Action action = 2;
-	optional string namePattern = 6;
-	optional int32 freeSize = 7;
-	optional int32 totalSize = 8;
-	optional int32 maxAllocationSize = 9;
-	optional int32 UFSFileSize = 10;
-	optional int32 UFSFileNumber = 11;
-	optional string fileName = 12;
-	optional int32 fileSize = 13;
-	optional int32 ramSize = 14;
-	optional int32 uploadSize = 15;
-	optional int32 timeout = 16;
-	optional bool turnOnACTMode = 17;
-	optional string sourceFileName = 18;
-	optional string destinationFileName = 19;
-	optional bool copy = 20;
-	optional bool owerwrite = 21;
-	optional FileOpenMode fileOpenMode = 22;
-	optional int32 length = 23;
-	optional int32 fileHandle = 24;
-	optional int32 readLength = 25;
-	optional int32 writtenLength = 26;
-	optional int32 totalLength = 27;
-	optional int32 offset = 28;
-	optional PointerMovementMode pointerMovementMode = 29;
-	optional bool isResponse = 32;
-	optional string description = 33;
+	optional string namePattern = 3;
+	optional int32 freeSize = 4;
+	optional int32 totalSize = 5;
+	optional int32 maxAllocationSize = 6;
+	optional int32 UFSFileSize = 7;
+	optional int32 UFSFileNumber = 8;
+	optional string fileName = 9;
+	optional int32 fileSize = 10;
+	optional int32 ramSize = 11;
+	optional int32 uploadSize = 12;
+	optional int32 timeout = 13;
+	optional bool turnOnACTMode = 14;
+	optional int32 checksum = 15;
+	optional string sourceFileName = 16;
+	optional string destinationFileName = 17;
+	optional bool copy = 18;
+	optional bool owerwrite = 19;
+	optional FileOpenMode fileOpenMode = 20;
+	optional int32 length = 21;
+	optional int32 fileHandle = 22;
+	optional int32 readLength = 23;
+	optional int32 writtenLength = 24;
+	optional int32 totalLength = 25;
+	optional int32 offset = 26;
+	optional PointerMovementMode pointerMovementMode = 27;
+	optional bool isResponse = 28;
+	optional string description = 29;
 }
 
 enum FileMessageType {
@@ -98,9 +99,9 @@ enum FileMessageType {
 	WRITE_FILE = 8;
 	SEEK_FILE = 9;
 	CLOSE_FILE = 10;
-	GET_OFFSET_OF_THE_FILE_POINTER = 11;
-	FORCE_TO_WRITE_DATA_REMAINING_IN_THE_FILE_BUFFER = 12;
-	TRUNCATE_THE_SPECIFIED_FILE_FROM_FILE_POINTER = 13;
+	GET_FILE_POINTER_OFFSET = 11;
+	FORCE_TO_WRITE_DATA_IN_BUFFER = 12;
+	TRUNCATE_FILE_FROM_FILE_POINTER = 13;
 }
 
 enum FileOpenMode {
@@ -118,22 +119,22 @@ enum PointerMovementMode {
 message FTPCommand {
 	required FTPMessageType messageType = 1;
 	required Action action = 2;
-	optional string hostName = 6;
-	optional int32 port = 7;
-	optional string fileName = 8;
-	optional int32 fileSize = 9;
-	optional int32 time = 10;
-	optional int32 uploadSize = 11;
-	optional int32 downloadSize = 12;
-	optional string pathName = 13;
-	optional string username = 14;
-	optional string password = 15;
-	optional TypeOfConfigurableParameters type = 16;
-	optional DataConnectionMode dataConnectionMode = 29;
-	optional TransferType transferType = 17;
-	optional int32 resumingPoint = 30;
-	optional string localPosition = 28;
-	optional string status = 18;
+	optional string hostName = 3;
+	optional int32 port = 4;
+	optional string fileName = 5;
+	optional int32 fileSize = 6;
+	optional int32 time = 7;
+	optional int32 uploadSize = 8;
+	optional int32 downloadSize = 9;
+	optional string pathName = 10;
+	optional string username = 11;
+	optional string password = 12;
+	optional TypeOfConfigurableParameters type = 13;
+	optional DataConnectionMode dataConnectionMode = 14;
+	optional TransferType transferType = 15;
+	optional int32 resumingPoint = 16;
+	optional string localPosition = 17;
+	optional string state = 18;
 	optional int32 length = 19;
 	optional string sourceName = 20;
 	optional string targetName = 21;
@@ -146,23 +147,23 @@ message FTPCommand {
 }
 
 enum FTPMessageType {
-	OPEN_AN_FTP_SERVICE_TO_THE_GIVEN_FTP_SERVER = 0;
-	CLOSE_THE_FTP_SERVICE = 1;
-	UPLOAD_A_FILE_TO_THE_FTP_SERVER = 2;
-	DOWNLOAD_A_FILE_FROM_THE_FTP_SERVER = 3;
-	SET_THE_PATH_IN_THE_FTP_SERVER_TO_UPLOAD_OR_DOWNLOAD_FILE = 4;
-	SET_THE_USER_NAME_OF_THE_ACCOUNT_TO_OPEN_FTP_SERVICE = 5;
-	SET_THE_PASSWORD_OF_THE_ACCOUNT_TO_OPEN_FTP_SERVICE = 6;
-	SET_SOME_CONFIGURABLE_PARAMETERS_FOR_THE_FTP_SERVICE = 7;
+	OPEN_FTP_SERVICE = 0;
+	CLOSE_FTP_SERVICE = 1;
+	UPLOAD_FILE_TO_FTP_SERVER = 2;
+	DOWNLOAD_FILE_FROM_FTP_SERVER = 3;
+	SET_UPLOAD_DOWNLOAD_PATH = 4;
+	SET_USER_NAME = 5;
+	SET_PASSWORD = 6;
+	SET_PARAMETERS = 7;
 	QUERY_STATUS_OF_FTP_SERVICE = 8;
-	QUERY_THE_REAL_SIZE_TRANSFERED_IN_THE_LATEST_TRANSFER = 9;
-	RENAME_FILE_OR_FOLDER_NAME_ON_THE_FTP_SERVER = 10;
-	QUERY_THE_SIZE_OF_APPOINTED_FILE_ON_THE_FTP_SERVER = 11;
-	DELETE_THE_APPOINTED_FILE_ON_THE_FTP_SERVER = 12;
-	ESTABLISH_A_NEW_FILEFOLDER_ON_THE_FTP_SERVER = 13;
-	REMOVE_A_FILEFOLDER_ON_THE_FTP_SERVER = 14;
-	LIST_CONTENTS_OF_DIRECTORY_OR_FILE_INFORMATION_ON_THE_FTP_SERVER = 15;
-	LIST_FILE_NAMES_IN_THE_GIVEN_DIRECTORY_ON_THE_FTP_SERVER = 16;
+	LATEST_TRANSFER_REAL_SIZE = 9;
+	RENAME_FILE_OR_FOLDER_NAME = 10;
+	QUERY_SIZE_OF_APPOINTED_FILE = 11;
+	DELETE_FILE = 12;
+	ESTABLISH_NEW_FILEFOLDER = 13;
+	REMOVE_FILE_FOLDER = 14;
+	LIST_CONTENTS_OF_DIRECTORY_OR_FILE = 15;
+	LIST_FILE_NAMES= 16;
 }
 
 enum DataConnectionMode {
@@ -246,61 +247,61 @@ enum HTTPMessageType {
 message MMSCommand {
 	required MMSMessageType messageType = 1;
 	required Action action = 2;
-	optional string MMSCURL = 5;
-	optional ProtocolType protocolType = 6;
-	optional string gateway = 7;
-	optional int32 port = 8;
-	optional ValidityPeriod validityPeriod = 9;
-	optional Priority priority = 10;
-	optional bool sendReport = 11;
-	optional bool readReport = 12;
-	optional AddressVisible addressVisible = 13;
-	optional MMSMessageClass mmsClass = 14;
-	optional string charset = 15;
-	optional TitleInputMode titleInputMode = 38;
-	optional OperateFunction operateFunction = 16;
-	optional OperateWriteMMS operateWriteMMS = 17;
-	optional string opstring = 18;
-	optional int32 from = 19;
-	optional int32 to = 20;
-	optional OperateManageMMS operateManageMMS = 41;
+	optional string MMSCURL = 3;
+	optional ProtocolType protocolType = 4;
+	optional string gateway = 5;
+	optional int32 port = 6;
+	optional ValidityPeriod validityPeriod = 7;
+	optional Priority priority = 8;
+	optional bool sendReport = 9;
+	optional bool readReport = 10;
+	optional AddressVisible addressVisible = 11;
+	optional MMSMessageClass mmsClass = 12;
+	optional string charset = 13;
+	optional TitleInputMode titleInputMode = 14;
+	optional OperateFunction operateFunction = 15;
+	optional OperateWriteMMS operateWriteMMS = 16;
+	optional string opstring = 17;
+	optional int32 from = 18;
+	optional int32 to = 19;
+	optional OperateManageMMS operateManageMMS = 20;
 	optional int32 MMSIndex = 21;
 	optional string fromAddress = 22;
-	optional bool isNotDownloaded = 23;
+	optional bool MMSisNotDownloaded = 23;
 	optional string date = 24;
 	optional string time = 25;
 	optional int32 messageSize = 26;
 	optional int32 para = 27;
-	optional TitleInputMode paraOutputMode = 43;
-	optional OperateReadMMS operateReadMMS = 42;
-	optional string fileName = 28;
-	optional int32 downloadSize = 29;
-	optional OperateReceiveMMS operateReceiveMMS = 44;
-	optional int32 checksum = 30;
-	optional bool callPriorityHigher = 45;
-	optional int64 DURAttribute = 31;
-	optional bool SMSMessageHandling = 32;
-	optional bool enableUSC2 = 33;
-	optional bool bigEndian = 34;
-	optional bool outputStyle = 35;
-	optional int32 fileType = 36;
-	optional bool isResponse = 39;
-	optional string description = 40;
-	optional OperateSendMMS operateSendMMS = 46;
+	optional TitleInputMode paraOutputMode = 28;
+	optional OperateReadMMS operateReadMMS = 29;
+	optional string fileName = 30;
+	optional int32 downloadSize = 31;
+	optional OperateSendMMS operateSendMMS = 32;
+	optional OperateReceiveMMS operateReceiveMMS = 33;
+	optional int32 checksum = 34;
+	optional bool callPriorityHigher = 35;
+	optional int64 DURAttribute = 36;
+	optional bool SMSMessageHandling = 37;
+	optional bool enableUSC2 = 38;
+	optional bool bigEndian = 39;
+	optional bool output = 40;
+	optional FileType fileType = 41;
+	optional bool isResponse = 42;
+	optional string description = 43;
 }
 
 enum MMSMessageType {
-	SET_THE_URL_OF_THE_MMSC = 0;
-	SET_THE_MMS_PROXY = 1;
-	SET_THE_PARAMETER_FOR_SENDING_MMS_MESSAGE = 2;
+	SET_URL_OF_MMSC = 0;
+	SET_MMS_PROXY = 1;
+	SET_PARAMETER_FOR_SENDING_MMS_MESSAGE = 2;
 	SET_CHARACTER_SETS_AND_INPUT_MODE = 3;
 	WRITE_MMS_MESSAGE = 4;
 	SEND_MMS_MESSAGE = 5;
-	MENAGE_THE_RECEIVED_MMS_MESSAGE = 6;
+	MENAGE_RECEIVED_MMS_MESSAGE = 6;
 	READ_RECEIVED_MMS_MESSAGE = 7;
-	RECEIVE_MMS_MESSAGE_FROM_THE_MMSC = 8;
+	RECEIVE_MMS_MESSAGE_FROM_MMSC = 8;
 	SET_PRIORITY_OF_MMS_MESSAGE_AND_CALL = 9;
-	SET_DUR_ATTRIBUTE_VALUE_IN_THE_SMIL_SCRIPT = 10;
+	SET_DUR_ATTRIBUTE_VALUE_IN_SMIL_SCRIPT = 10;
 	SET_MMS_SMS_TRANSACTOR = 11;
 	ENABLE_OUTPUT_TEXT_IN_USC2 = 12;
 	OUTPUT_FILE_STYLE = 13;
@@ -401,57 +402,57 @@ enum TitleInputMode {
 message QuecCellCommand {
 	required QuecCellMessageType messageType = 1;
 	required Action action = 2;
-	optional OperatorStatus status = 6;
-	optional string operatorInString = 7;
-	optional string operatorInShortString = 8;
-	optional int32 operatorInNumber = 9;
-	optional int32 indexN = 10;
-	optional int32 locationAreaCode = 11;
-	optional int32 cellID = 12;
-	optional int32 baseStationIdentityCode = 13;
-	optional int32 receiveLevel = 14; //rxlev
-	optional int32 absoluteRadioFrequencyChannelNumber = 15;
-	optional EngineeringMode engineeringMode = 51;
-	optional Dump dump = 16;
-	optional int32 mobileCountryCode = 17;
-	optional int32 mobileNetworkCode = 18;
-	optional int32 broadcastControlChannel = 19;
-	optional double receiveSignalLeve = 20; //dbm
-	optional int32 c1 = 21;
-	optional int32 c2 = 22;
-	optional double transmitPowerMaximum = 23;
-	optional int32 receiveLevelAccess = 24;
-	optional int32 timeslots = 25;
-	optional int32 MAIOValue = 26;
-	optional int32 HSNValue = 27;
-	optional int32 TCH = 28;
-	optional int32 timingAdvance = 29;
-	optional int32 RXQualitySub = 30;
-	optional int32 RXQualityFull = 31;
-	optional int32 numberOfNeighboringSixCell = 32;
-	optional bool band1900 = 33;
-	optional RRState rrState = 34;
-	optional string channelType = 35;
-	optional bool automaticReport = 36;
-	optional int32 line = 37;
-	optional string forbiddenData = 38;
-	optional Band band = 39;
-	optional int32 value = 40;
-	optional int32 arcfn1 = 41;
-	optional int32 arcfn2 = 42;
-	optional int32 arcfn3 = 43;
-	optional bool isResponse = 45;
-	optional string description = 46;
-	optional bool lockFrequency = 47;
-	optional bool MEHasLocked = 48;
-	optional ForbidOperatorMode forbidOperatorMode = 49;
-	optional bool MEHaveLockedCertainARCFN = 50;
+	optional OperatorStatus status = 3;
+	optional string operatorInString = 4;
+	optional string operatorInShortString = 5;
+	optional int32 operatorInNumber = 6;
+	optional int32 indexN = 7;
+	optional int32 locationAreaCode = 8;
+	optional int32 cellID = 9;
+	optional int32 baseStationIdentityCode = 10;
+	optional int32 receiveLevel = 11; //rxlev
+	optional int32 absoluteRadioFrequencyChannelNumber = 12;
+	optional EngineeringMode engineeringMode = 13;
+	optional Dump dump = 14;
+	optional int32 mobileCountryCode = 15;
+	optional int32 mobileNetworkCode = 16;
+	optional int32 broadcastControlChannel = 17;
+	optional double receiveSignalLeve = 18; //dbm
+	optional int32 c1 = 19;
+	optional int32 c2 = 20;
+	optional double transmitPowerMaximum = 21;
+	optional int32 receiveLevelAccess = 22;
+	optional int32 timeslots = 23;
+	optional int32 MAIOValue = 24;
+	optional int32 HSNValue = 25;
+	optional int32 TCH = 26;
+	optional int32 timingAdvance = 27;
+	optional int32 RXQualitySub = 28;
+	optional int32 RXQualityFull = 29;
+	optional int32 numberOfNeighboringSixCell = 30;
+	optional bool band1900 = 31;
+	optional RRState rrState = 32;
+	optional string channelType = 33;
+	optional bool automaticReport = 34;
+	optional int32 line = 35;
+	optional string forbiddenData = 36;
+	optional Band band = 37;
+	optional int32 value = 38;
+	optional int32 arcfn1 = 39;
+	optional int32 arcfn2 = 40;
+	optional int32 arcfn3 = 41;
+	optional bool isResponse = 42;
+	optional string description = 43;
+	optional bool lockFrequency = 44;
+	optional bool MEHasLocked = 45;
+	optional ForbidOperatorMode forbidOperatorMode = 46;
+	optional bool MEHaveLockedCertainARCFN = 47;
 }
 
 enum QuecCellMessageType {
 	SCAN_BASIC_STATION_INFORMATION = 0;
 	SWITCH_ON_OR_OFF_ENGINEERING_MODE = 1;
-	LOCK_THE_BASE_STATION = 2;
+	LOCK_BASE_STATION = 2;
 	SCAN_ARFCN_RECEIVING_LEVEL = 3;
 	GET_CHANNEL_INFORMATION = 4;
 	GET_LAST_VALID_TA_VALUE = 5;
@@ -568,16 +569,16 @@ message SMTPCommand {
 }
 
 enum SMTPMessageType {
-	SET_THE_USER_NAME_FOR_AUTHENTICATION = 0;
-	SET_THE_PASSWORD_FOR_AUTHENTICATION = 1;
-	SET_THE_EMAIL_ADDRESS_OF_THE_SENDER = 2;
-	SET_THE_SENDERS_NAME = 3;
-	SET_THE_ADDRESS_AND_PORT_OD_SMTP_SERVER = 4;
+	SET_USER_NAME_FOR_AUTHENTICATION = 0;
+	SET_PASSWORD_FOR_AUTHENTICATION = 1;
+	SET_SENDER_EMAIL_ADDRESS = 2;
+	SET_SENDERS_NAME = 3;
+	SET_SMTP_SERVER_ADDRESS_AND_PORT = 4;
 	ADD_OR_DELETE_RECIPIENTS = 5;
-	EDIT_THE_SUBJECT_OF_THE_EMAIL = 6;
-	EDIT_THE_CONTENT_OF_THE_EMAIL = 7;
-	ADD_AN_ATTACHMENT_FOR_THE_EMAIL = 8;
-	DELETE_AN_ATTACHMENT = 9;
+	EDIT_EMAIL_SUBJECT = 6;
+	EDIT_EMAIL_CONTENT = 7;
+	ADD_EMAIL_ATTACHMENT = 8;
+	DELETE_ATTACHMENT = 9;
 	CLEAR_ALL_CONFIGURATIONS_AND_CONTENTS = 10;
 	SMTP_CONFIGURATION = 11;
 	SEND_EMAIL = 12;
@@ -669,7 +670,7 @@ enum GeneralMessageType {
 	REQUEST_IMEI = 8;
 	REQUEST_PRODUCT_SERIAL_NUMBER_IDENTIFICATION = 9;
 	REQUEST_IMEI_QGSN = 10;
-	SET_ALL_CURRENT_PARAMETERS_TO_MANUFACTURER_DEFAULTS = 11;
+	SET_ALL_PARAMETERS_TO_MANUFACTURER_DEFAULTS = 11;
 	DISPLAY_CURRENT_CONFIGURATION = 12;
 	STORE_CURRENT_PARAMETERS_TO_USER_DEFINED_PROFILE = 13;
 	SET_RESULT_CODE_PRESENTATION_CODE = 14;
@@ -914,7 +915,7 @@ enum StatusControlMessageType {
 	QUERY_GSM_NETWORK_STATUS = 8;
 	NETWORK_TIME_SYNCHRONIZATION = 9;
 	OBTAIN_LATEST_NETWORK_TIME_SYNCHRONIZED = 10;
-	NETWORK_TIME_SYNCHRONIZATION_AND_UPDATE_THE_RTC_TIME = 11;
+	NETWORK_TIME_SYNCHRONIZATION_AND_UPDATE_RTC_TIME = 11;
 	NETWORK_TIME_SYNCHRONIZATION_REPORT = 12;
 	SWITCH_ON_OR_OFF_DETECTING_SIM_CARD = 13;
 	SIM_INSERTED_STATUS_REPORTING = 14;
@@ -1598,7 +1599,7 @@ enum TCPIPMessageType {
 	QUERY_CONNECTION_STATUS_OF_CURRENT_ACCESS = 9;
 	QUERY_CURRENT_SERVER_STATUS = 10;
 	CONFIGURE_DOMAIN_NAME_SERVER = 11;
-	QUERY_THE_IP_ADDRESS_OF_GIVEN_DOMAIN_NAME = 12;
+	QUERY_IP_ADDRESS_OF_GIVEN_DOMAIN_NAME = 12;
 	CONNECT_WITH_IP_ADDRESS_OR_DOMAIN_NAME_SERVER = 13;
 	ADD_AN_IP_HEADER_WHEN_RECEIVING_DATE = 14;
 	SET_AUTO_SENDING_TIMER = 15;
@@ -1606,20 +1607,20 @@ enum TCPIPMessageType {
 	CONFIGURE_AS_SERVER = 17;
 	SELECT_CSD_OR_GPRS_AS_THE_BEARER = 18;
 	CHOOSE_CONNECTION = 19;
-	SET_WHETHER_OR_NOT_TO_DISPLAY_THE_ADDRESS_OF_SENDER = 20;
+	SET_WHETHER_OR_NOT_TO_DISPLAY_ADDRESS_OF_SENDER = 20;
 	SAVE_TCPIP_APPLICATION_CONTEXT = 21;
 	SELECT_TCPIP_TRANSFER_MODE = 22;
 	CONFIGURE_TRANSPARENT_TRANSFER_MODE = 23;
-	CONTROL_WHETHER_OR_NOT_TO_SHOW_THE_PROTOCOL_TYPE = 24;
+	CONTROL_WHETHER_OR_NOT_TO_SHOW_PROTOCOL_TYPE = 24;
 	ENABLE_MULTIPLE_TCPIP_SESSION = 25;
 	CONTROL_WHETHER_OR_NOT_TO_DISPLAY_LOCAL_IP_ADDRESS = 26;
 	SELECT_A_CONTEXT_AS_FOREGROUND_CONTEXT = 27;
 	QUERY_THE_DATA_INFORMATION_FOR_SENDING = 28;
-	SET_THE_METHOD_TO_HANDLE_RECEIVED_TCPIP_DATA = 29;
+	SET_METHOD_TO_HANDLE_RECEIVED_TCPIP_DATA = 29;
 	RETRIEVE_THE_RECEIVED_TCPIP_DATA = 30;
-	CONTRO_WHETHER_OR_NOT_TO_ECHO_THE_DATA_FOR_QISEND = 31;
+	CONTRO_WHETHER_OR_NOT_TO_ECHO_DATA_FOR_QISEND = 31;
 	PING_A_REMOTE_SERVER = 32;
-	SYNCHRONIZE_THE_LOCAL_TIME_VIA_NTP = 33;
+	SYNCHRONIZE_LOCAL_TIME_VIA_NTP = 33;
 }
 
 enum SynchronizationResult {
@@ -1746,7 +1747,7 @@ enum SupplementaryServiceMessageType {
 	CALL_WAITING_CONTROL = 2;
 	CALL_HOLD_AND_MULTIPARTY = 3;
 	CALLING_LINE_IDENTIFICATION_PRESENTATION = 4;
-	CONTROL_WHETHER_OR_NOT_TO_SHOW_THE_NAME_OF_INCOMING_CALL_NUMBER = 5;
+	CONTROL_WHETHER_OR_NOT_TO_SHOW_NAME_OF_INCOMING_CALL_NUMBER = 5;
 	CONNECTED_LINE_IDENTIFICATION_PRESENTATION = 6;
 	SHOW_ALPHA_FIELD_IN_COLP_STRING = 7;
 	UNSTRUCTURED_SUPPLEMENTARY_SERVICE_DATA = 8;
@@ -1874,7 +1875,7 @@ enum AudioMessageType {
 	SET_DTMF_OUTPUT_PATH = 14;
 	SET_TONE_DETECTION_MODE = 15;
 	DETECT_DTMF = 16;
-	PLAY_DTMF_TONE_DURING_THE_CALL = 17;
+	PLAY_DTMF_TONE_DURING_CALL = 17;
 }
 
 enum Algorithm {
@@ -1996,8 +1997,8 @@ enum HardwareRelatedMessageType {
 	BATTERY_CHARGE = 2;
 	READ_ADC = 3;
 	CONFIGURE_SHOW_CLOCK = 4;
-	CONFIGURE_THE_NETWORK_LED_PATTERNS = 5;
-	CONFIGURE_THE_THRESHOLD_OF_VOLTAGE = 6;
+	CONFIGURE_NETWORK_LED_PATTERNS = 5;
+	CONFIGURE_THRESHOLD_OF_VOLTAGE = 6;
 }
 
 enum ThresholdType {
@@ -2057,7 +2058,7 @@ message OthersCommand {
 }
 
 enum OthersMessageType {
-	REISSUES_THE_LAST_COMMAND_GIVEN = 0;
+	REISSUES_LAST_COMMAND_GIVEN = 0;
 	SET_COMMAND_ECHO_MODE = 1;
 	SET_COMMAND_LINE_TERMINATION_CHARACTER = 2;
 	SET_RESPONSE_FORMATTING_CHARACTER = 3;
