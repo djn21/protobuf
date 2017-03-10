@@ -1,14 +1,14 @@
 syntax = "proto2";
 
-package com.rtrk.atcommand;
+package com.rtrk.protobufatcommand;
 
 option java_package = "com.rtrk.atcommand.protobuf";
 option java_outer_classname = "ProtobufATCommand";
 message Command {
 	required CommandType commandType = 23;
-	optional HTTPCommand httpCommand = 1;
-	optional FileCommand fileCommand = 2;
-	optional FTPCommand ftpCommand = 3;
+	optional FileCommand fileCommand = 1;
+	optional FTPCommand ftpCommand = 2;
+	optional HTTPCommand httpCommand = 3;
 	optional MMSCommand mmsCommand = 4;
 	optional QuecCellCommand quecCellCommand = 5;
 	optional RecordingCommand recordingCommand = 6;
@@ -636,7 +636,7 @@ enum STK {
 }
 
 message GeneralCommand {
-	required GeneralMesssageType messageType = 1;
+	required GeneralMessageType messageType = 1;
 	required Action action = 2;
 	optional TAToDefault default = 5 [default = SET_ALL_TA_TO_DEFAULT];
 	optional ProfileNumber profileNumber = 6 [default = PROFILE_NUMBER];
@@ -657,7 +657,7 @@ message GeneralCommand {
 	[default = ENABLE_RESULT_CODE_AND_USE_NUMERIC_VALUES];
 }
 
-enum GeneralMesssageType {
+enum GeneralMessageType {
 	DISPLAY_PRODUCT_IDENTIFICATION_INFORMATION = 0;
 	REQUEST_MANUFACTURER_IDENTIFICATION = 1;
 	REQUEST_TA_MODEL_IDENTIFICATION = 2;
