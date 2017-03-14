@@ -49,8 +49,8 @@
 							<tasks>
 								<exec executable="protoc">
 									<arg value="--java_out=${project.basedir}/src/main/java/" />
-									<arg value="--proto_path=${project.basedir}" />
-									<arg value="${project.basedir}/commands.proto" />
+									<arg value="--proto_path=${project.basedir}/resources" />
+									<arg value="${project.basedir}/resources/commands.proto" />
 								</exec>
 							</tasks>
 							<sourceRoot>target/generated-protobuf</sourceRoot>
@@ -66,10 +66,10 @@
 							<tasks>
 								<exec executable="java">
 									<arg value="-cp" />
-									<arg value="C:\Users\djekanovic\Documents\EclipseProjects\xmlgenerator\target\xmlgenerator-0.0.1-SNAPSHOT.jar" />
+									<arg value="C:/Users/djekanovic/Documents/EclipseProjects/xmlgenerator/target/xmlgenerator-0.0.1-SNAPSHOT.jar" />
 									<arg value="com.rtrk.xmlgenerator.App" />
-									<arg value="${project.basedir}\commands.proto" />
-									<arg value="${project.basedir}\commands.xml" />
+									<arg value="${project.basedir}/resources/commands.proto" />
+									<arg value="${project.basedir}/resources/commands.xml" />
 								</exec>
 							</tasks>
 							<sourceRoot>target/generated-xml</sourceRoot>
