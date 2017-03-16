@@ -163,7 +163,7 @@ enum FTPMessageType {
 	ESTABLISH_NEW_FILEFOLDER = 13;
 	REMOVE_FILE_FOLDER = 14;
 	LIST_CONTENTS_OF_DIRECTORY_OR_FILE = 15;
-	LIST_FILE_NAMES= 16;
+	LIST_FILE_NAMES = 16;
 }
 
 enum DataConnectionMode {
@@ -280,7 +280,7 @@ message MMSCommand {
 	optional OperateReceiveMMS operateReceiveMMS = 33;
 	optional int32 checksum = 34;
 	optional bool callPriorityHigher = 35;
-	optional int64 DURAttribute = 36;
+	optional uint64 DURAttribute = 36;
 	optional bool SMSMessageHandling = 37;
 	optional bool enableUSC2 = 38;
 	optional bool bigEndian = 39;
@@ -489,7 +489,7 @@ enum RRState {
 enum Dump {
 	ONLY_DISPLAY_INFORMATION_OF_SERVING_CALL = 0;
 	DISPLAY_INFORMATION_OF_SERVING_CELL_AND_1_6_NEIGHBORING_CELLS = 1;
-	LIST_OF_ARCFN_AND_CALL_FREQUENCY_LIST_OF_SERVING_CELL = 2;
+	LIST_OF_ARCFN_AND_CALL_FREQUENCY_LIST_OF_SERVING_CELL = 3;
 }
 
 enum EngineeringMode {

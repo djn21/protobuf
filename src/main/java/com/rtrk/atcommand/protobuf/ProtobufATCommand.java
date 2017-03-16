@@ -3615,9 +3615,9 @@ public final class ProtobufATCommand {
      */
     DISPLAY_INFORMATION_OF_SERVING_CELL_AND_1_6_NEIGHBORING_CELLS(1, 1),
     /**
-     * <code>LIST_OF_ARCFN_AND_CALL_FREQUENCY_LIST_OF_SERVING_CELL = 2;</code>
+     * <code>LIST_OF_ARCFN_AND_CALL_FREQUENCY_LIST_OF_SERVING_CELL = 3;</code>
      */
-    LIST_OF_ARCFN_AND_CALL_FREQUENCY_LIST_OF_SERVING_CELL(2, 2),
+    LIST_OF_ARCFN_AND_CALL_FREQUENCY_LIST_OF_SERVING_CELL(2, 3),
     ;
 
     /**
@@ -3629,9 +3629,9 @@ public final class ProtobufATCommand {
      */
     public static final int DISPLAY_INFORMATION_OF_SERVING_CELL_AND_1_6_NEIGHBORING_CELLS_VALUE = 1;
     /**
-     * <code>LIST_OF_ARCFN_AND_CALL_FREQUENCY_LIST_OF_SERVING_CELL = 2;</code>
+     * <code>LIST_OF_ARCFN_AND_CALL_FREQUENCY_LIST_OF_SERVING_CELL = 3;</code>
      */
-    public static final int LIST_OF_ARCFN_AND_CALL_FREQUENCY_LIST_OF_SERVING_CELL_VALUE = 2;
+    public static final int LIST_OF_ARCFN_AND_CALL_FREQUENCY_LIST_OF_SERVING_CELL_VALUE = 3;
 
 
     public final int getNumber() { return value; }
@@ -3640,7 +3640,7 @@ public final class ProtobufATCommand {
       switch (value) {
         case 0: return ONLY_DISPLAY_INFORMATION_OF_SERVING_CALL;
         case 1: return DISPLAY_INFORMATION_OF_SERVING_CELL_AND_1_6_NEIGHBORING_CELLS;
-        case 2: return LIST_OF_ARCFN_AND_CALL_FREQUENCY_LIST_OF_SERVING_CELL;
+        case 3: return LIST_OF_ARCFN_AND_CALL_FREQUENCY_LIST_OF_SERVING_CELL;
         default: return null;
       }
     }
@@ -33131,11 +33131,11 @@ public final class ProtobufATCommand {
     boolean getCallPriorityHigher();
 
     /**
-     * <code>optional int64 DURAttribute = 36;</code>
+     * <code>optional uint64 DURAttribute = 36;</code>
      */
     boolean hasDURAttribute();
     /**
-     * <code>optional int64 DURAttribute = 36;</code>
+     * <code>optional uint64 DURAttribute = 36;</code>
      */
     long getDURAttribute();
 
@@ -33535,7 +33535,7 @@ public final class ProtobufATCommand {
             }
             case 288: {
               bitField1_ |= 0x00000008;
-              dURAttribute_ = input.readInt64();
+              dURAttribute_ = input.readUInt64();
               break;
             }
             case 296: {
@@ -34365,13 +34365,13 @@ public final class ProtobufATCommand {
     public static final int DURATTRIBUTE_FIELD_NUMBER = 36;
     private long dURAttribute_;
     /**
-     * <code>optional int64 DURAttribute = 36;</code>
+     * <code>optional uint64 DURAttribute = 36;</code>
      */
     public boolean hasDURAttribute() {
       return ((bitField1_ & 0x00000008) == 0x00000008);
     }
     /**
-     * <code>optional int64 DURAttribute = 36;</code>
+     * <code>optional uint64 DURAttribute = 36;</code>
      */
     public long getDURAttribute() {
       return dURAttribute_;
@@ -34681,7 +34681,7 @@ public final class ProtobufATCommand {
         output.writeBool(35, callPriorityHigher_);
       }
       if (((bitField1_ & 0x00000008) == 0x00000008)) {
-        output.writeInt64(36, dURAttribute_);
+        output.writeUInt64(36, dURAttribute_);
       }
       if (((bitField1_ & 0x00000010) == 0x00000010)) {
         output.writeBool(37, sMSMessageHandling_);
@@ -34855,7 +34855,7 @@ public final class ProtobufATCommand {
       }
       if (((bitField1_ & 0x00000008) == 0x00000008)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt64Size(36, dURAttribute_);
+          .computeUInt64Size(36, dURAttribute_);
       }
       if (((bitField1_ & 0x00000010) == 0x00000010)) {
         size += com.google.protobuf.CodedOutputStream
@@ -37009,19 +37009,19 @@ public final class ProtobufATCommand {
 
       private long dURAttribute_ ;
       /**
-       * <code>optional int64 DURAttribute = 36;</code>
+       * <code>optional uint64 DURAttribute = 36;</code>
        */
       public boolean hasDURAttribute() {
         return ((bitField1_ & 0x00000008) == 0x00000008);
       }
       /**
-       * <code>optional int64 DURAttribute = 36;</code>
+       * <code>optional uint64 DURAttribute = 36;</code>
        */
       public long getDURAttribute() {
         return dURAttribute_;
       }
       /**
-       * <code>optional int64 DURAttribute = 36;</code>
+       * <code>optional uint64 DURAttribute = 36;</code>
        */
       public Builder setDURAttribute(long value) {
         bitField1_ |= 0x00000008;
@@ -37030,7 +37030,7 @@ public final class ProtobufATCommand {
         return this;
       }
       /**
-       * <code>optional int64 DURAttribute = 36;</code>
+       * <code>optional uint64 DURAttribute = 36;</code>
        */
       public Builder clearDURAttribute() {
         bitField1_ = (bitField1_ & ~0x00000008);
@@ -94223,7 +94223,7 @@ public final class ProtobufATCommand {
       "veMMS\030! \001(\0162-.com.rtrk.protobufatcommand" +
       ".OperateReceiveMMS\022\020\n\010checksum\030\" \001(\005\022\032\n\022" +
       "callPriorityHigher\030# \001(\010\022\024\n\014DURAttribute" +
-      "\030$ \001(\003\022\032\n\022SMSMessageHandling\030% \001(\010\022\022\n\nen" +
+      "\030$ \001(\004\022\032\n\022SMSMessageHandling\030% \001(\010\022\022\n\nen" +
       "ableUSC2\030& \001(\010\022\021\n\tbigEndian\030\' \001(\010\022\016\n\006out" +
       "put\030( \001(\010\0226\n\010fileType\030) \001(\0162$.com.rtrk.p" +
       "rotobufatcommand.FileType\022\022\n\nisResponse\030",
@@ -94845,7 +94845,7 @@ public final class ProtobufATCommand {
       "ATION_OF_SERVING_CALL\020\000\022A\n=DISPLAY_INFOR" +
       "MATION_OF_SERVING_CELL_AND_1_6_NEIGHBORI" +
       "NG_CELLS\020\001\0229\n5LIST_OF_ARCFN_AND_CALL_FRE" +
-      "QUENCY_LIST_OF_SERVING_CELL\020\002*\203\001\n\017Engine" +
+      "QUENCY_LIST_OF_SERVING_CELL\020\003*\203\001\n\017Engine" +
       "eringMode\022\037\n\033SWITCH_OFF_ENGINEERING_MODE",
       "\020\000\022\036\n\032SWITCH_ON_ENGINEERING_MODE\020\001\022/\n+SW" +
       "ITCH_ON_ENGINEERING_MODE_AND_ACTIVATE_UR" +
