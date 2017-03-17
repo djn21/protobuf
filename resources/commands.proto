@@ -1,0 +1,2245 @@
+syntax = "proto2";
+
+package com.rtrk.protobufatcommand;
+
+option java_package = "com.rtrk.atcommand.protobuf";
+option java_outer_classname = "ProtobufATCommand";
+message Command {
+	required CommandType commandType = 23;
+	optional FileCommand fileCommand = 1;
+	optional FTPCommand ftpCommand = 2;
+	optional HTTPCommand httpCommand = 3;
+	optional MMSCommand mmsCommand = 4;
+	optional QuecCellCommand quecCellCommand = 5;
+	optional RecordingCommand recordingCommand = 6;
+	optional SMTPCommand smtpCommand = 7;
+	optional STKCommand stkCommand = 8;
+	optional GeneralCommand generalCommand = 9;
+	optional SerialInterfaceControlCommand serialInterfaceControlCommand = 10;
+	optional StatusControlCommand statusControlCommand = 11;
+	optional SIMRelatedCommand simRelatedCommand = 12;
+	optional NetworkServiceCommand networkServiceCommand = 13;
+	optional CallRelatedCommand callRelatedCommand = 14;
+	optional SMSCommand smsCommand = 15;
+	optional PhonebookCommand phonebookCommand = 16;
+	optional GPRSCommand gprsCommand = 17;
+	optional TCPIPCommand tcpipCommand = 18;
+	optional SupplementaryServiceCommand supplementaryServiceCommand = 19;
+	optional AudioCommand audioCommand = 20;
+	optional HardwareRelatedCommand hardwareRelatedCommand = 21;
+	optional OthersCommand othersCommand = 22;
+}
+
+enum CommandType {
+	HTTP_COMMAND = 0;
+	FILE_COMMAND = 1;
+	FTP_COMMAND = 2;
+	MMS_COMMAND = 3;
+	QUEC_CELL_COMMAND = 4;
+	RECORDING_COMMAND = 5;
+	SMTP_COMMAND = 6;
+	STK_COMMAND = 7;
+	GENERAL_COMMAND = 8;
+	SERIAL_INTERFACE_COMMAND = 9;
+	STATUS_CONTROL_COMMAND = 10;
+	SIM_RELATED_COMMAND = 11;
+	NETWORK_SERVICE_COMMAND = 12;
+	CALL_RELATED_COMMAND = 13;
+	SMS_COMMAND = 14;
+	PHONEBOOK_COMMAND = 15;
+	GPRS_COMMAND = 16;
+	TCPIP_COMMAND = 17;
+	SUPPLEMENTARY_SERVICE_COMMAND = 18;
+	AUDIO_COMMAND = 19;
+	HARDWARE_RELATED_COMMAND = 20;
+	OTHERS_COMMAND = 21;
+}
+
+message FileCommand {
+	required FileMessageType messageType = 1;
+	required Action action = 2;
+	optional string namePattern = 3;
+	optional int32 freeSize = 4;
+	optional int32 totalSize = 5;
+	optional int32 maxAllocationSize = 6;
+	optional int32 UFSFileSize = 7;
+	optional int32 UFSFileNumber = 8;
+	optional string fileName = 9;
+	optional int32 fileSize = 10;
+	optional int32 ramSize = 11;
+	optional int32 uploadSize = 12;
+	optional int32 timeout = 13;
+	optional bool turnOnACTMode = 14;
+	optional int32 checksum = 15;
+	optional string sourceFileName = 16;
+	optional string destinationFileName = 17;
+	optional bool copy = 18;
+	optional bool owerwrite = 19;
+	optional FileOpenMode fileOpenMode = 20;
+	optional int32 length = 21;
+	optional int32 fileHandle = 22;
+	optional int32 readLength = 23;
+	optional int32 writtenLength = 24;
+	optional int32 totalLength = 25;
+	optional int32 offset = 26;
+	optional PointerMovementMode pointerMovementMode = 27;
+	optional bool isResponse = 28;
+	optional string description = 29;
+}
+
+enum FileMessageType {
+	GET_STORAGE_DATE_SIZE = 0;
+	LIST_FILES = 1;
+	UPLOAD_FILE_TO_STORAGE = 2;
+	DOWNLOAD_FILE_FROM_STORAGE = 3;
+	DELETE_FILE_IN_STORAGE = 4;
+	MOVE_FILE = 5;
+	OPEN_FILE = 6;
+	READ_FILE = 7;
+	WRITE_FILE = 8;
+	SEEK_FILE = 9;
+	CLOSE_FILE = 10;
+	GET_FILE_POINTER_OFFSET = 11;
+	FORCE_TO_WRITE_DATA_IN_BUFFER = 12;
+	TRUNCATE_FILE_FROM_FILE_POINTER = 13;
+}
+
+enum FileOpenMode {
+	IF_NOT_EXISTS_CREATE_IF_EXISTS_OPEN = 0;
+	IF_EXISTS_CREATE_AND_CLEAR_OLD = 1;
+	IF_EXISTS_OPEN_IN_READ_MODE = 2;
+}
+
+enum PointerMovementMode {
+	FILE_BEGIN = 0;
+	CURRENT_POSITION_OF_POINTER = 1;
+	FILE_END = 2;
+}
+
+message FTPCommand {
+	required FTPMessageType messageType = 1;
+	required Action action = 2;
+	optional string hostName = 3;
+	optional int32 port = 4;
+	optional string fileName = 5;
+	optional int32 fileSize = 6;
+	optional int32 time = 7;
+	optional int32 uploadSize = 8;
+	optional int32 downloadSize = 9;
+	optional string pathName = 10;
+	optional string username = 11;
+	optional string password = 12;
+	optional TypeOfConfigurableParameters type = 13;
+	optional DataConnectionMode dataConnectionMode = 14;
+	optional TransferType transferType = 15;
+	optional int32 resumingPoint = 16;
+	optional string localPosition = 17;
+	optional string state = 18;
+	optional int32 length = 19;
+	optional string sourceName = 20;
+	optional string targetName = 21;
+	optional string name = 22;
+	optional Return return = 23;
+	optional string directoryName = 24;
+	optional bool isResponse = 25;
+	optional string description = 26;
+	optional FTPError error = 27;
+}
+
+enum FTPMessageType {
+	OPEN_FTP_SERVICE = 0;
+	CLOSE_FTP_SERVICE = 1;
+	UPLOAD_FILE_TO_FTP_SERVER = 2;
+	DOWNLOAD_FILE_FROM_FTP_SERVER = 3;
+	SET_UPLOAD_DOWNLOAD_PATH = 4;
+	SET_USER_NAME = 5;
+	SET_PASSWORD = 6;
+	SET_PARAMETERS = 7;
+	QUERY_STATUS_OF_FTP_SERVICE = 8;
+	LATEST_TRANSFER_REAL_SIZE = 9;
+	RENAME_FILE_OR_FOLDER_NAME = 10;
+	QUERY_SIZE_OF_APPOINTED_FILE = 11;
+	DELETE_FILE = 12;
+	ESTABLISH_NEW_FILEFOLDER = 13;
+	REMOVE_FILE_FOLDER = 14;
+	LIST_CONTENTS_OF_DIRECTORY_OR_FILE = 15;
+	LIST_FILE_NAMES = 16;
+}
+
+enum DataConnectionMode {
+	ACTIVE_MODE = 0;
+	PASSIVE_MODE = 1;
+}
+
+enum TypeOfConfigurableParameters {
+	MODE_OF_DATA_CONNECTION = 1;
+	TRANSFER_TYPE = 2;
+	RESUMING_POINT_TO_RESUME_FILE_TRANSFER = 3;
+	LOCAL_POSITION_OF_FILE_TRANSFER = 4;
+}
+
+enum TransferType {
+	BINARY_TRANSFER_TYPE = 0;
+	ASCII_TRANSFER_TYPE = 1;
+}
+
+enum Return {
+	RETURN_NO_INFORMATIONS_TRANSFERED_FROM_FTP = 0;
+	RETURN_OK = 1;
+}
+
+enum FTPError {
+	FTP_OK = 0;
+	FTP_UNKNOW_ERROR = 1;
+	FTP_SERVICE_BUSY = 3;
+	FAILED_TO_GET_IP_ADDRESS_ACCORDING_TO_DOMAIN_NAME = 4;
+	FTP_NETWORK_ERROR = 5;
+	FTP_SESSION_CLOSED_BY_FTP_SERVER = 6;
+	DATA_CONNECTION_OF_FTP_SERVICE_IS_CLOSED = 7;
+	FTP_GPRS_CSD_CONTEXT_IS_DEACTIVATED = 8;
+	FTP_TIMEOUT = 9;
+	INPUT_PARAMETAR_IS_ILLEGAL = 10;
+	FILE_NOT_FOUND_IN_LOCAL_POSITION = 11;
+	FAILED_TO_GET_FILE_IN_LOCAL_POSITION = 12;
+	FTP_NO_ENOUGH_MEMORY_FOR_ATTACHMENT = 13;
+	FTP_SERVER_CANT_SUPPORT_SERVICE = 421;
+	FAILED_TO_OPEN_DATA_CONNECTION = 425;
+	CONNECTION_CLOSED_AND_STOP_TRANSFERRING = 426;
+	REQUEST_FOR_FILE_ISNT_OPERATED = 450;
+	FTP_SERVER_HAS_NOT_ENOUGH_MEMORY = 452;
+	FORMAT_OF_FTP_COMMAND_IS_WRONG = 500;
+	PARAMETER_OF_FTP_COMMAND_IS_WRONG = 501;
+	FTP_COMMAND_ISNT_OPERATED_BY_FTP_SERVER = 502;
+	NOT_LOGIN_FTP_SERVER = 530;
+	NEED_INFORMATION_OF_ACCOUNT = 532;
+	REQUEST_ISNT_OPERATED = 550;
+	REQUEST_IS_STOPPED = 551;
+	REQUEST_OF_FILE_IS_STOPPED = 552;
+	FILE_NAME_IS_ILLEGAL = 553;
+}
+
+message HTTPCommand {
+	required HTTPMessageType messageType = 1;
+	required Action action = 2;
+	optional int32 URLLength = 4;
+	optional int32 inputTime = 5;
+	optional int32 toReadTime = 6;
+	optional int32 waitTime = 7;
+	optional int32 bodySize = 8;
+	optional string fileName = 9;
+	optional int32 length = 10;
+	optional int32 downloadSize = 11;
+	optional int32 contentLength = 12;
+	optional bytes data = 15;
+	optional bytes bodyData = 16;
+	optional string description = 17;
+	optional bool isRespone = 18;
+}
+
+enum HTTPMessageType {
+	SET_HTTP_SERVER_URL = 0;
+	SEND_HTTP_GET_REQUEST = 1;
+	READ_HTTP_SERVER_RESPONSE = 2;
+	SEND_HTTP_POST_REQUEST = 3;
+	DOWNLOAD_FILE_FROM_HTTP_SERVER = 4;
+}
+
+message MMSCommand {
+	required MMSMessageType messageType = 1;
+	required Action action = 2;
+	optional string MMSCURL = 3;
+	optional ProtocolType protocolType = 4;
+	optional string gateway = 5;
+	optional int32 port = 6;
+	optional ValidityPeriod validityPeriod = 7;
+	optional Priority priority = 8;
+	optional bool sendReport = 9;
+	optional bool readReport = 10;
+	optional AddressVisible addressVisible = 11;
+	optional MMSMessageClass mmsClass = 12;
+	optional string charset = 13;
+	optional TitleInputMode titleInputMode = 14;
+	optional OperateFunction operateFunction = 15;
+	optional OperateWriteMMS operateWriteMMS = 16;
+	optional string opstring = 17;
+	optional int32 from = 18;
+	optional int32 to = 19;
+	optional OperateManageMMS operateManageMMS = 20;
+	optional int32 MMSIndex = 21;
+	optional string fromAddress = 22;
+	optional bool MMSisNotDownloaded = 23;
+	optional string date = 24;
+	optional string time = 25;
+	optional int32 messageSize = 26;
+	optional int32 para = 27;
+	optional TitleInputMode paraOutputMode = 28;
+	optional OperateReadMMS operateReadMMS = 29;
+	optional string fileName = 30;
+	optional int32 downloadSize = 31;
+	optional OperateSendMMS operateSendMMS = 32;
+	optional OperateReceiveMMS operateReceiveMMS = 33;
+	optional int32 checksum = 34;
+	optional bool callPriorityHigher = 35;
+	optional uint64 DURAttribute = 36;
+	optional bool SMSMessageHandling = 37;
+	optional bool enableUSC2 = 38;
+	optional bool bigEndian = 39;
+	optional bool output = 40;
+	optional FileType fileType = 41;
+	optional bool isResponse = 42;
+	optional string description = 43;
+}
+
+enum MMSMessageType {
+	SET_URL_OF_MMSC = 0;
+	SET_MMS_PROXY = 1;
+	SET_PARAMETER_FOR_SENDING_MMS_MESSAGE = 2;
+	SET_CHARACTER_SETS_AND_INPUT_MODE = 3;
+	WRITE_MMS_MESSAGE = 4;
+	SEND_MMS_MESSAGE = 5;
+	MENAGE_RECEIVED_MMS_MESSAGE = 6;
+	READ_RECEIVED_MMS_MESSAGE = 7;
+	RECEIVE_MMS_MESSAGE_FROM_MMSC = 8;
+	SET_PRIORITY_OF_MMS_MESSAGE_AND_CALL = 9;
+	SET_DUR_ATTRIBUTE_VALUE_IN_SMIL_SCRIPT = 10;
+	SET_MMS_SMS_TRANSACTOR = 11;
+	ENABLE_OUTPUT_TEXT_IN_USC2 = 12;
+	OUTPUT_FILE_STYLE = 13;
+}
+
+enum FileType {
+	TEXT = 1;
+	TEXT_HTML = 2;
+	TEXT_PLAIN = 3;
+	TEXT_XML = 4;
+	IMAGE = 5;
+	IMAGE_GIF = 6;
+	IMAGE_JPEG = 7;
+	IMAGE_TIFF = 8;
+	IMAGE_PNP = 9;
+	IMAGE_WBMP = 10;
+	AUDIO = 11;
+	VIDEO = 12;
+	SMIL = 13;
+}
+
+enum OperateSendMMS {
+	START_TO_SEND_MMS = 1;
+}
+
+enum OperateReceiveMMS {
+	START_TO_RECEIVE_MMS_MESSAGE = 1;
+}
+
+enum OperateReadMMS {
+	VIEW_ORIGINATION_ADDRESS = 1;
+	VIEW_TO_ADDRESS = 2;
+	VIEW_CC_ADDRESS = 3;
+	VIEW_MMS_TITLE = 4;
+	LIST_APPEND_FILE = 5;
+	READ_APPEND_FILE_DATA_OF_MMS_MESSAGE = 6;
+}
+
+enum OperateManageMMS {
+	DELETE_MMS_MESSAGE = 0;
+	LIST_MMS_MESSAGE = 1;
+}
+
+enum OperateWriteMMS {
+	CLEAN_OPERATE = 0;
+	WRITE_OPERATE = 1;
+}
+
+enum OperateFunction {
+	CLEAR_ALL_CONTENT_OF_MMS_MESSAGE = 0;
+	OPERATE_TO_ADDRESS = 1;
+	OPERATE_CC_ADDRESS = 2;
+	OPERATE_BCC_ADDRESS = 3;
+	OPERATE_TITLE = 4;
+	OPERATE_FILE_APPENDED = 5;
+}
+
+enum ProtocolType {
+	HHTP_PROTOCOL = 1;
+}
+
+enum ValidityPeriod {
+	TIME_1_HOUR = 0;
+	TIME_12_HOURS = 1;
+	TIME_24_HOURS = 2;
+	TIME_2_DAYS = 3;
+	TIME_1_WEEK = 4;
+	MAXIMUM_TIME = 5;
+	USE_NETWORK_CONFIGURATION_TIME = 6;
+}
+
+enum Priority {
+	LOW_PRIORITY = 0;
+	NORMAL_PRIORITY = 1;
+	HIGH_PRIORITY = 2;
+	USE_NETWORK_CONFIGURATION_PRIORITY = 3;
+}
+
+enum AddressVisible {
+	HIDE_ANY_ADDRESS = 0;
+	SHOW_EVEN_SECRET_ADDRESS = 1;
+	USE_NETWORK_CONFIGURATION_ADDRESS_VISIBLE = 2;
+}
+
+enum MMSMessageClass {
+	PERSONAL_CLASS = 0;
+	ADVERTISEMENT_CLASS = 1;
+	INFORMATIONAL_CLASS = 2;
+	AUTO_CLASS = 3;
+	USE_NETWORK_CONFIGURATION_CLASS = 4;
+}
+
+enum TitleInputMode {
+	PDU_HEX_MODE = 0;
+	TEXT_BIN_MODE = 1;
+}
+
+message QuecCellCommand {
+	required QuecCellMessageType messageType = 1;
+	required Action action = 2;
+	optional OperatorStatus status = 3;
+	optional string operatorInString = 4;
+	optional string operatorInShortString = 5;
+	optional int32 operatorInNumber = 6;
+	optional int32 indexN = 7;
+	optional int32 locationAreaCode = 8;
+	optional int32 cellID = 9;
+	optional int32 baseStationIdentityCode = 10;
+	optional int32 receiveLevel = 11; //rxlev
+	optional int32 absoluteRadioFrequencyChannelNumber = 12;
+	optional EngineeringMode engineeringMode = 13;
+	optional Dump dump = 14;
+	optional int32 mobileCountryCode = 15;
+	optional int32 mobileNetworkCode = 16;
+	optional int32 broadcastControlChannel = 17;
+	optional double receiveSignalLeve = 18; //dbm
+	optional int32 c1 = 19;
+	optional int32 c2 = 20;
+	optional double transmitPowerMaximum = 21;
+	optional int32 receiveLevelAccess = 22;
+	optional int32 timeslots = 23;
+	optional int32 MAIOValue = 24;
+	optional int32 HSNValue = 25;
+	optional int32 TCH = 26;
+	optional int32 timingAdvance = 27;
+	optional int32 RXQualitySub = 28;
+	optional int32 RXQualityFull = 29;
+	optional int32 numberOfNeighboringSixCell = 30;
+	optional bool band1900 = 31;
+	optional RRState rrState = 32;
+	optional string channelType = 33;
+	optional bool automaticReport = 34;
+	optional int32 line = 35;
+	optional string forbiddenData = 36;
+	optional Band band = 37;
+	optional int32 value = 38;
+	optional int32 arcfn1 = 39;
+	optional int32 arcfn2 = 40;
+	optional int32 arcfn3 = 41;
+	optional bool isResponse = 42;
+	optional string description = 43;
+	optional bool lockFrequency = 44;
+	optional bool MEHasLocked = 45;
+	optional ForbidOperatorMode forbidOperatorMode = 46;
+	optional bool MEHaveLockedCertainARCFN = 47;
+}
+
+enum QuecCellMessageType {
+	SCAN_BASIC_STATION_INFORMATION = 0;
+	SWITCH_ON_OR_OFF_ENGINEERING_MODE = 1;
+	LOCK_BASE_STATION = 2;
+	SCAN_ARFCN_RECEIVING_LEVEL = 3;
+	GET_CHANNEL_INFORMATION = 4;
+	GET_LAST_VALID_TA_VALUE = 5;
+	FORBID_OPERATOR = 6;
+}
+
+enum Band {
+	GSM_900_BAND = 0;
+	DCS_1800_BAND = 1;
+	PCS_1900_BAND = 2;
+	GSM_850_BAND = 3;
+}
+
+enum ForbidOperatorMode {
+	READ_LINE_OF_FORBIDDEN_DATA = 0;
+	WRITE_LINE_OF_FORBIDDEN_DATA = 1;
+	CLEAN_LINE_OF_FORBIDDEN_DATA = 2;
+	CLEAR_ALL_FORBIDDEN_DATA = 3;
+	READ_FORBIDDEN_DATA = 4;
+	WRITE_FORBIDDEN_DATA = 5;
+}
+
+enum RRState {
+	NULL_STATE = 0;
+	INACTIVE_STATE = 1;
+	CELL_SELECT_STATE = 2;
+	IDLE_STATE = 3;
+	ACCESS_STATE = 4;
+	PACKET_TRANSFER_STATE = 5;
+	DEDICATED_STATE = 6;
+	CELL_RESELECT_STATE = 7;
+}
+
+enum Dump {
+	ONLY_DISPLAY_INFORMATION_OF_SERVING_CALL = 0;
+	DISPLAY_INFORMATION_OF_SERVING_CELL_AND_1_6_NEIGHBORING_CELLS = 1;
+	LIST_OF_ARCFN_AND_CALL_FREQUENCY_LIST_OF_SERVING_CELL = 3;
+}
+
+enum EngineeringMode {
+	SWITCH_OFF_ENGINEERING_MODE = 0;
+	SWITCH_ON_ENGINEERING_MODE = 1;
+	SWITCH_ON_ENGINEERING_MODE_AND_ACTIVATE_URC = 2;
+}
+
+enum OperatorStatus {
+	UNKNOW_OPERATOR = 0;
+	OPERATOR_AVAILABLE = 1;
+	CURRENT_OPERATOR = 2;
+	FORBIDDEN_OPERATOR = 3;
+}
+
+message RecordingCommand {
+	required RecordingMessageType messageType = 1;
+	required Action action = 2;
+	optional RecordingState recordingState = 5;
+	optional string fileName = 6;
+	optional FileFormat format = 7;
+	optional bool repeat = 8;
+	optional int32 volume = 9;
+	optional PlayChannel channel = 10;
+	optional int32 control = 11;
+	optional bool isResponse = 14;
+	optional string description = 15;
+}
+
+enum RecordingMessageType {
+	RECORD_MEDIA_FILE = 0;
+	PLAY_MEDIA_FILE = 1;
+	STOP_PLAYING_MEDIA_FILE = 2;
+}
+
+enum PlayChannel {
+	RECEIVER = 0;
+	HEADSET = 1;
+	LOUD_SPEAKER = 2;
+}
+
+enum FileFormat {
+	AMR = 3;
+	WAV_PCM16 = 13;
+	WAV_ALAW = 14;
+	WAV_ULAW = 15;
+	WAV_ADPCM = 16;
+}
+
+enum RecordingState {
+	MODULE_IS_NOT_IN_RECORDING = 0;
+	MOUDLE_IS_IN_RECORDING = 1;
+}
+
+message SMTPCommand {
+	required SMTPMessageType messageType = 1;
+	required Action action = 2;
+	optional string user = 6;
+	optional string password = 7;
+	optional string emailAddress = 8;
+	optional string name = 9;
+	optional string serverAddress = 10;
+	optional int32 port = 11;
+	optional RecipientMode recipientMode = 12;
+	optional RecipientType recipientType = 13;
+	optional int32 result = 15;
+	optional Charset charset = 22;
+	optional string title = 16;
+	optional int32 timeout = 17;
+	optional int32 fileIndex = 18;
+	optional string fileName = 19;
+	optional int32 fileSize = 20;
+	optional bool needAuthentication = 21;
+	optional bool isResponse = 23;
+	optional string description = 14;
+	optional bool configureNeedAuthentication = 24;
+}
+
+enum SMTPMessageType {
+	SET_USER_NAME_FOR_AUTHENTICATION = 0;
+	SET_PASSWORD_FOR_AUTHENTICATION = 1;
+	SET_SENDER_EMAIL_ADDRESS = 2;
+	SET_SENDERS_NAME = 3;
+	SET_SMTP_SERVER_ADDRESS_AND_PORT = 4;
+	ADD_OR_DELETE_RECIPIENTS = 5;
+	EDIT_EMAIL_SUBJECT = 6;
+	EDIT_EMAIL_CONTENT = 7;
+	ADD_EMAIL_ATTACHMENT = 8;
+	DELETE_ATTACHMENT = 9;
+	CLEAR_ALL_CONFIGURATIONS_AND_CONTENTS = 10;
+	SMTP_CONFIGURATION = 11;
+	SEND_EMAIL = 12;
+}
+
+enum Charset {
+	ASCII = 0;
+	UTF_8 = 1;
+	GB_2312 = 2;
+	BIG5 = 3;
+}
+
+enum RecipientType {
+	RECEIVER_RECIPIENT = 1;
+	COPY_RECEIVER = 2;
+	SECRET_RECEIVER = 3;
+}
+
+enum RecipientMode {
+	DELETE_RECIPIENT = 0;
+	ADD_RECIPIENT = 1;
+}
+
+message STKCommand {
+	required STKMessageType messageType = 1;
+	required Action action = 2;
+	optional bool turnOnSTK = 6;
+	optional string profile = 7;
+	optional string satCommand = 8;
+	optional string terminalResponse = 9;
+	optional bool isResponse = 10;
+	optional string description = 11;
+	optional STK stk = 12;
+}
+
+enum STKMessageType {
+	TURN_ON_OFF_STK_FUNCTION = 0;
+	STK_PROFILE_DOWNLOAD = 1;
+	STK_ENVELOPE_COMMAND = 2;
+	STK_TERMINAL_RESPONSE = 3;
+	TRIGGER_STK_CALL = 4;
+	TRIGGER_STK_SMS = 5;
+	TRIGGER_STK_SS = 6;
+	TRIGGER_STK_USSD = 7;
+	TRIGGER_STK_DTMF = 8;
+}
+
+enum STK {
+	TRIGER_MODEM_TO_SEND_STK = 0;
+	TRIGER_MODEM_TO_SEND_STK_BUT_ICON_CANT_BE_DISPLAY = 4;
+	PROACTIVE_SESSION_TERMINATED_BY_USER = 16;
+	NO_RESPONSE_FROM_USER = 18;
+	UNABLE_TO_PROCESS_COMMAND = 32;
+	USER_REJECT_SETUP_CALL = 34;
+	COMMAND_DATA_DONT_UNDERSTOOD_BY_ME = 50;
+}
+
+message GeneralCommand {
+	required GeneralMessageType messageType = 1;
+	required Action action = 2;
+	optional TAToDefault default = 5 [default = SET_ALL_TA_TO_DEFAULT];
+	optional ProfileNumber profileNumber = 6 [default = PROFILE_NUMBER];
+	optional Functionality functionality = 7 [default = FULL_FUNCTIONALITY];
+	optional Reset reset = 8 [default = DO_NOT_RESET_ME];
+	optional string characterSet = 9;
+	optional bool isResponse = 11;
+	optional string description = 12;
+	optional ResultCode resultCode = 13 [default = TA_TRANSMINTS_RESULT_CODE];
+	optional InformationResponse informationResponse = 14
+	[default = LONG_RESULT_CODE_FORMAT];
+	optional ConnectResultCode connectResultCode = 15
+	[default = CONNECT_RESULT_CODE_ONLY_RETURNED];
+	optional ResetToProfileNumber resetToProfileNumber = 16
+	[default = RESET_TO_PROFILE_NUMBER];
+	optional PowerOffMode powerOffMode = 17;
+	optional DisableResultCode disableResultCode = 18
+	[default = ENABLE_RESULT_CODE_AND_USE_NUMERIC_VALUES];
+}
+
+enum GeneralMessageType {
+	DISPLAY_PRODUCT_IDENTIFICATION_INFORMATION = 0;
+	REQUEST_MANUFACTURER_IDENTIFICATION = 1;
+	REQUEST_TA_MODEL_IDENTIFICATION = 2;
+	REQUEST_TA_REVISION_IDENTIFICATION = 3;
+	REQUEST_GLOBAL_OBJECT_IDENTIFICATION = 4;
+	REQUEST_MANUFACTURER_IDENTIFICATION_CGMI = 5;
+	REQUEST_MODEL_IDENTIFICATION = 6;
+	REQUEST_TA_REVISION_IDENTIFICATION_CGMR = 7;
+	REQUEST_IMEI = 8;
+	REQUEST_PRODUCT_SERIAL_NUMBER_IDENTIFICATION = 9;
+	REQUEST_IMEI_QGSN = 10;
+	SET_ALL_PARAMETERS_TO_MANUFACTURER_DEFAULTS = 11;
+	DISPLAY_CURRENT_CONFIGURATION = 12;
+	STORE_CURRENT_PARAMETERS_TO_USER_DEFINED_PROFILE = 13;
+	SET_RESULT_CODE_PRESENTATION_CODE = 14;
+	TA_RESPONSE_FORMAT = 15;
+	SET_CONNECT_RESULT_CODE_FORMAT = 16;
+	SET_ALL_CURRENT_PARAMETERS_TO_USER_DEFINED_PROFILE = 17;
+	SET_PHONE_FUNCTIONALITY = 18;
+	POWER_OFF = 19;
+	REPORT_MOBILE_EQUIPMENT_ERROR = 20;
+	SET_TE_CHARACTER_SET = 21;
+	REQUEST_COMPLETE_TA_CAPABILITIES_LIST = 22;
+}
+
+enum DisableResultCode {
+	DISABLE_RESULT_CODE = 0;
+	ENABLE_RESULT_CODE_AND_USE_NUMERIC_VALUES = 1;
+	ENABLE_RESULT_CODE_AND_USE_VERBOSE_VALUES = 2;
+}
+
+enum PowerOffMode {
+	URGENT_POWER_OFF = 0;
+	NORMAL_POWER_OFF = 1;
+}
+
+enum Reset {
+	DO_NOT_RESET_ME = 0;
+	RESET_ME = 1;
+}
+
+enum Functionality {
+	MINIMUM_FUNCTIONALITY = 0;
+	FULL_FUNCTIONALITY = 1;
+	DISABLE_PHONE_FROM_BOTH_TRANSMITTING_AND_RECEIVING_RF_SIGNALS = 2;
+}
+
+enum ConnectResultCode {
+	CONNECT_RESULT_CODE_ONLY_RETURNED = 0;
+	CONNECT_TEXT_RESULT_CODE_ONLY_RETURNED = 1;
+	TONE_ENABLED_BUSY_SIGNAL_DISABLED = 2;
+	TONE_DISABLED_BUSY_SIGNAL_ENABLED = 3;
+	TONE_AND_BUSY_SIGNAL_ENABLED = 4;
+}
+
+enum InformationResponse {
+	SHORT_RESULT_CODE_FORMAT = 0;
+	LONG_RESULT_CODE_FORMAT = 1;
+}
+
+enum ResultCode {
+	TA_TRANSMINTS_RESULT_CODE = 0;
+	RESULT_CODE_ARE_SUPPRESSED_AND_NOT_TRANSMITTED = 1;
+}
+
+enum TAToDefault {
+	SET_ALL_TA_TO_DEFAULT = 0;
+}
+
+enum ProfileNumber {
+	PROFILE_NUMBER = 0;
+}
+
+enum ResetToProfileNumber {
+	RESET_TO_PROFILE_NUMBER = 0;
+}
+
+message SerialInterfaceControlCommand {
+	required SerialInterfaceControlMessageType messageType = 1;
+	required Action action = 2;
+	optional DCDLineStatus dcdLineStatus = 6;
+	optional FramingFormat framingFormat = 7;
+	optional Parity parity = 8 [default = SPACE];
+	optional DCEByDTE dceByDte = 9;
+	optional DTEByDCE dteByDce = 10;
+	optional Rate rate = 11;
+	optional bool enableDualUART = 12;
+	optional TransmissionRate transmissionRate = 14;
+	optional int32 maximumFrameSize = 15; //N1
+	optional int32 acknowledmentTimer = 16; //T1
+	optional int32 maximumNumberOfRetransmissions = 17; //N2
+	optional int32 responseTimer = 18; //T2
+	optional int32 wakeUpResponseTimer = 19; //T3
+	optional int32 windowsSize = 20; //k
+	optional DataBits dataBits = 22 [default = DATA_BITS_8];
+	optional StopBits stopBits = 23 [default = STOP_BIT_1];
+	optional MultiplexerTransparencyMechanism mtm = 24;
+	optional bool isResponse = 25;
+	optional string description = 26;
+	optional bool enableReportingLocalPortRate = 27;
+	optional MultiplexerControlChannel mcc = 28;
+	optional DualUARTParity dualUARTParity = 13
+	[default = DUAL_UART_PARITY_NONE];
+	optional DTRStatus dtrStatus = 29 [default = TA_IGNORES_STATUS_ON_DTR];
+}
+
+enum SerialInterfaceControlMessageType {
+	SET_DCD_FUNCTION_MODE = 0;
+	SET_DTR_FUNCTION_MODE = 1;
+	SET_TE_TA_CONTROL_CHARACTER_FRAMING = 2;
+	SET_TE_TA_LOCAL_DATA_FLOW_CONTROL = 3;
+	SET_TE_TA_LOCAL_DATA_RATE_REPORTING_MODE = 4;
+	SET_TE_TA_FIXED_LOCAL_RATE = 5;
+	MULTIPLEXER_CONTROL = 6;
+	CONFIGURE_DUAL_UART_FUNCTION = 7;
+	CONFIGURE_PARAMETERS_OF_THE_DUAL_UART = 8;
+}
+
+enum DCEByDTE {
+	DCE_BY_DTE_NONE = 0;
+	DCE_BY_DTE_XON_XOFF = 1;
+	RTS_FLOW_CONTROL = 2;
+}
+
+enum DTEByDCE {
+	DTE_BY_DCE_NONE = 0;
+	DTE_BY_DCE_XON_XOFF = 1;
+	CTS_FLOW_CONTROL = 2;
+}
+
+enum DualUARTParity {
+	DUAL_UART_PARITY_NONE = 0;
+	DUAL_UART_PARITY_ODD = 1;
+	DUAL_UART_PARITY_EVEN = 2;
+	DUAL_UART_PARITY_MARK = 3;
+}
+
+enum StopBits {
+	STOP_BIT_1 = 1;
+	STOP_BIT_2 = 2;
+	STOP_BIT_3 = 3;
+}
+
+enum DataBits {
+	DATA_BITS_5 = 1;
+	DATA_BITS_6 = 2;
+	DATA_BITS_7 = 3;
+	DATA_BITS_8 = 4;
+}
+
+enum TransmissionRate {
+	UNKNOW_TRANSMISSION_RATE = 0;
+	RATE_115200_BPS = 5;
+}
+
+enum MultiplexerTransparencyMechanism {
+	BASIC_OPTION = 0;
+}
+
+enum MultiplexerControlChannel {
+	UIH_FRAMES_USED_ONLY = 0;
+}
+
+enum Rate {
+	RATE_0 = 0;
+	RATE_75 = 75;
+	RATE_150 = 150;
+	RATE_300 = 300;
+	RATE_600 = 600;
+	RATE_1200 = 1200;
+	REATE_2400 = 2400;
+	RATE_4800 = 4800;
+	RATE_9600 = 9600;
+	RATE_14400 = 1440;
+	RATE_19200 = 19200;
+	RATE_28800 = 28800;
+	RATE_38400 = 38400;
+	RATE_57600 = 57600;
+	RATE_115200 = 115200;
+}
+
+enum Parity {
+	ODD = 0;
+	EVEN = 1;
+	MARK = 2;
+	SPACE = 3;
+}
+
+enum FramingFormat {
+	UNKNOW_FRAMING_FORMAT = 0;
+	DATA_8_PARITY_0_STOP_2 = 1;
+	DATA_8_PARITY_1_STOP_1 = 2;
+	DATA_8_PARITY_0_STOP_1 = 3;
+	DATA_7_PARITY_0_STOP_2 = 4;
+	DATA_7_PARITY_1_STOP_1 = 5;
+	DATA_7_PARITY_0_STOP_1 = 6;
+}
+
+enum DTRStatus {
+	TA_IGNORES_STATUS_ON_DTR = 0;
+	CHANGE_TO_CAOMMAND_MODE_WHILE_REMAINING_CONNECTED_CALL = 1;
+	DISCONNECT_DATA_CALL_AND_THEN_CHANGE_TO_COMMAND_MODE = 2;
+}
+
+enum DCDLineStatus {
+	DCD_LINE_IS_ALWAYS_ON = 0;
+	DCD_LINE_IS_ON_ONLY_IN_PRESENCE_OF_DATA_CARRIER = 1;
+}
+
+message StatusControlCommand {
+	required StatusControlMessageType messageType = 1;
+	required Action action = 2;
+	optional int32 locationID = 6;
+	optional string cause = 7;
+	optional Pas pas = 8;
+	optional Status status = 9 [default = STATUS_ON];
+	optional bool refuseSMS = 10;
+	optional bool refuseCall = 11;
+	optional bool showCallState = 12;
+	optional string extunsol = 13;
+	optional int32 state = 14;
+	optional bool switchOnSIMDetection = 15;
+	optional string time = 16;
+	optional string datlightSavingTime = 17; //ds
+	optional bool highInsertLevel = 18;
+	optional SIMCardDetectionPIN pinChoice = 19
+	[default = CONFIGURE_SIM_PRESENCE_AS_SIM_CARD_DETECTION_PIN];
+	optional bool isResponse = 22;
+	optional string description = 23;
+	optional bool EnableURCPresentation = 24;
+	optional ProprietaryUnsolicitedIndications pui = 25 [default = PUI_DISABLE];
+	optional StateOfInitialization sof = 26;
+	optional GSMNetworkStatus gsmNetworkStatus = 27;
+	optional RTCTime rtcTime = 28;
+	optional TimeZoneChangeEventReporting tzcer = 29;
+	optional bool switchONDetectingSIMCard = 20;
+	optional SIMCardInsertStatus simInsertStatus = 21
+	[default = LOW_LEVEL_OF_PIN_INDICATES_SIM_CARD_IS_PRESENT];
+	optional bool enableCircuitSwitchedVoiceCall = 30;
+	optional ConnectionType connectionType = 31;
+	optional bool enableToSynchronizeTime = 32;
+	optional bool openSIMDetectionFunction = 33;
+}
+
+enum StatusControlMessageType {
+	EXTENDED_ERROR_REPORT = 0;
+	MOBILE_EQUIPMENT_ACTIVITY_STATUS = 1;
+	INDICATE_RI_WHEN_USING_URC = 2;
+	SHOW_STATE_OF_MOBILE_ORIGINATED_CELL = 3;
+	REFUSE_TO_RECEIVE_SMS_INCOMING_CALL_OR_NOT = 4;
+	ENABLE_OR_DISABLE_INITIAL_URC_PRESENTATION = 5;
+	ENABLE_OR_DISABLE_PROPRIETARY_UNSOLICITED_INDICATIONS = 6;
+	QUERY_STATE_OF_INITIALIZATION = 7;
+	QUERY_GSM_NETWORK_STATUS = 8;
+	NETWORK_TIME_SYNCHRONIZATION = 9;
+	OBTAIN_LATEST_NETWORK_TIME_SYNCHRONIZED = 10;
+	NETWORK_TIME_SYNCHRONIZATION_AND_UPDATE_RTC_TIME = 11;
+	NETWORK_TIME_SYNCHRONIZATION_REPORT = 12;
+	SWITCH_ON_OR_OFF_DETECTING_SIM_CARD = 13;
+	SIM_INSERTED_STATUS_REPORTING = 14;
+	CSC_CALL_OR_GPRS_PDP_CONTEXT_TERMINAL_INDICATION = 15;
+}
+
+enum ConnectionType {
+	CIRCUIT_SWITCHED_VOICE_CALL = 0;
+	CIRCUIT_SWITCHED_DATA_CALL = 1;
+	PPP_CONNECTION = 2;
+}
+
+enum SIMCardInsertStatus {
+	LOW_LEVEL_OF_PIN_INDICATES_SIM_CARD_IS_PRESENT = 0;
+	HIGH_LEVEL_OF_PIN_INDICATES_SIM_CARD_IS_PRESENT = 1;
+}
+
+enum SIMCardDetectionPIN {
+	CONFIGURE_SIM_PRESENCE_AS_SIM_CARD_DETECTION_PIN = 0;
+	CONFIGURE_DTR_AS_SIM_CARD_DETECTION_PIN = 1;
+}
+
+enum TimeZoneChangeEventReporting {
+	DISABLE_TIME_ZONE_CHANGE_EVENT_REPORTING = 0;
+	ENABLE_TIME_ZONE_CHANGE_EVENT_REPORTING_BY_UNSOLICITED_RESULT_CODE = 1;
+	ENABLE_EXTENDED_TIME_ZONE_REPORTING_BY_UNSOLICITED_RESULT_CODE = 2;
+}
+
+enum RTCTime {
+	DISABLE_AUTOMATIC_UPDATE_RTC_TIME_VIA_NITZ = 0;
+	UPDATE_NETWORK_SYNCHRONIZED_TIME_TO_RTC_AND_SAVE_TIME_ZONE_INTO_NVRAM = 1;
+	UPDATE_GTM_TIME_WITH_TIME_ZONE_TO_RTC_SAVE_TIME_ZONE_TO_NVRAM_IGNORE_DAYLIGHT_SAVING_TIME = 2;
+	UPDATE_LOCALIZED_TIME_AND_TIME_ZONE_TO_RTC_AND_SAVE_TIME_ZONE_TO_NVRAM = 3;
+	SAVE_WITH_MODE_2 = 4;
+}
+
+enum GSMNetworkStatus {
+	WORK_IN_NORMAL_STATE = 0;
+	NO_AVAILABLE_CELL = 1;
+	ONLY_LIMITED_SERVICE_AVAILABLE = 2;
+	NOT_READY_TO_RETRIEVE_NETWORK_STATUS = 3;
+}
+
+enum StateOfInitialization {
+	NO_INITIALIZATION = 0;
+	READY_TO_EXECUTE_AT_COMMAND = 1;
+	PHONEBOOK_HAS_FINISHED_INITIALIZATION = 2;
+	SMS_HAS_FINISHED_INITIALIZATION = 3;
+}
+
+enum ProprietaryUnsolicitedIndications {
+	PUI_DISABLE = 0;
+	PUI_ENABLE = 1;
+	PUI_QUERY = 2;
+}
+
+enum Status {
+	STATUS_OFF = 0;
+	STATUS_ON = 1;
+}
+
+enum Pas {
+	PAS_READY = 0;
+	PAS_UNKNOW = 1;
+	PAS_RINGING = 2;
+	PAS_CALL_IN_PROGRESS_OR_CALL_HOLD = 3;
+}
+
+message SIMRelatedCommand {
+	required SIMRelatedMessageType messageType = 1;
+	required Action action = 2;
+	optional string fac = 31;
+	optional LockMode lockMode = 32 [default = QUERY_STATUS];
+	optional string password = 33;
+	optional Class class = 34 [default = ALL_TELEPHONY_EXCEPT_SMS];
+	optional Status status = 6;
+	optional string pin = 7;
+	optional string newPin = 8;
+	optional int32 pwdLength = 9;
+	optional string oldPwd = 10;
+	optional string newPwd = 11;
+	optional CommandSIM commandSIM = 12;
+	optional int32 fileID = 13;
+	optional int32 P1 = 14;
+	optional int32 P2 = 15;
+	optional int32 P3 = 16;
+	optional int32 SW1 = 17;
+	optional int32 SW2 = 18;
+	optional string data = 19;
+	optional string response = 20;
+	optional int32 length = 21;
+	optional string CCIDData = 22;
+	optional int32 GID1 = 23;
+	optional int32 GID2 = 24;
+	optional string serviceProvideName = 25; //spn
+	optional bool displayPLMN = 26;
+	optional int32 chv1 = 27;
+	optional int32 chv2 = 28;
+	optional int32 puk1 = 29;
+	optional int32 puk2 = 30;
+	optional bool isResponse = 35;
+	optional string description = 36;
+	optional VoltageMode voltageMode = 37
+	[default = RECOGNIZE_1_8_V_AND_3_0_V_SIM_CARD];
+	optional string command = 38;
+}
+
+enum SIMRelatedMessageType {
+	REQUEST_IMSI = 0;
+	FACILITY_LOCK = 1;
+	ENTER_PIN = 2;
+	CHANGE_PASSWORD = 3;
+	RESTRICTED_SIM_ACCESS = 4;
+	GENERIC_SIM_ACCESS = 5;
+	CHANGE_PS_SUPER_PASSWORD = 6;
+	SHOW_CCID = 7;
+	SHOW_CCID_QCCID = 8;
+	GET_SIM_CARD_GROUP_IDENTIFIER = 9;
+	SELECT_SIM_CARD_OPERATING_VOLTAGE = 10;
+	GET_SERVICE_PROVIDER_NAME = 11;
+	TIME_REMAINING_TO_INPUT_SIM_PIN_PUK = 12;
+}
+
+enum VoltageMode {
+	RECOGNIZE_1_8_V_AND_3_0_V_SIM_CARD = 0;
+	RECOGNIZE_1_8_V_SIM_CARD_ONLY = 1;
+	RECOGNIZE_3_0_V_SIM_CARD_ONLY = 2;
+}
+
+enum CommandSIM {
+	READ_BINATY = 176;
+	READ_RECORD = 178;
+	GET_RESPONSE = 192;
+	UPDATE_BINATY = 214;
+	UPDATE_RECORD = 220;
+	STATUS = 242;
+}
+
+enum Class {
+	VOICE = 1;
+	DATA = 2;
+	FAX = 4;
+	ALL_TELEPHONY_EXCEPT_SMS = 7;
+	SHORT_MESSAGE_SERVICE = 8;
+	DATA_CIRCUIT_SYNC = 16;
+	DATA_CIRCUIT_ASYNC = 32;
+}
+
+enum LockMode {
+	UNLOCK = 0;
+	LOCK = 1;
+	QUERY_STATUS = 2;
+}
+
+message NetworkServiceCommand {
+	required NetworkServiceMessageType messageType = 1;
+	required Action action = 2;
+	optional OperatorStatus operatorStatus = 6;
+	optional string operator = 33;
+	optional int32 operatorNumber = 7;
+	optional OperatorMode operatorMode = 8 [default = AUTOMATIC_MODE];
+	optional OperatorFormat operatorFormat = 9
+	[default = LONG_FORMAT_ALPHANUMERIC];
+	optional NetworkRegistrationMode networkRegistrationMode = 10;
+	optional string locationAreaCode = 11;
+	optional string cellID = 12;
+	optional int32 rssi = 13;
+	optional int32 ber = 14;
+	optional int32 index = 15;
+	optional string numericn = 16;
+	optional string alphan = 17;
+	optional string opBand = 18;
+	optional EngineeringModeDump engModeDump = 19;
+	optional Band band = 20;
+	optional int32 frequency = 21;
+	optional int32 signalStrength = 22; //dbm
+	optional Band1900 band1900 = 23;
+	optional int32 arfcn1 = 24;
+	optional int32 arfcn2 = 25;
+	optional int32 arfcn3 = 26;
+	optional bool isResponse = 27;
+	optional string description = 28;
+	optional NetworkRegistrationStatus networkRegistrationStatus = 29;
+	optional EngineeringMode engineeringMode = 30
+	[default = SWITCH_OFF_ENGINEERING_MODE];
+	optional LockFrequencyMode lockFreqMode = 31
+	[default = DISABLE_LOCK_FREQUENCY];
+	optional bool lockedARCFN = 32;
+}
+
+enum NetworkServiceMessageType {
+	OPERATOR_SELECTION = 0;
+	NETWORK_REGISTRATION = 1;
+	SIGNAL_QUALITY_REPORT = 2;
+	PREFERRED_OPERATOR_LIST = 3;
+	READ_OPEARATR_NAMES = 4;
+	GET_AND_SET_MOBILE_OPERATION_BAND = 5;
+	NETWORK_SERVICE_SWITCH_ON_OR_OFF_ENGINEERING_MODE = 6;
+	SCAN_POWER_OF_GSM_FREQUENCY = 7;
+	LOCK_GSM_FREQUENCY = 8;
+}
+
+enum Band1900 {
+	NOT_CELL_ID_OF_1900_BAND = 0;
+	CELL_ID_OF_1900_BAND = 1;
+	AUTO_DISTINGUISH_WHETHER_IS_CELL_ID_OF_1900_BAND = 2;
+}
+
+enum LockFrequencyMode {
+	DISABLE_LOCK_FREQUENCY = 0;
+	ENABLE_LOCK_FREQUENCY = 1;
+	ENABLE_LOCK_FREQUENCY_AND_AUTO_SWITCH_TO_SAVED_FREQUENCY_AFTER_POWERED_ON = 2;
+}
+
+enum EngineeringModeDump {
+	ONLY_DISPLAY_SERVING_CELL_INFORMATION = 0;
+	DISPLAY_SERVING_CELL_INFORMATION_1_6_NEIGHBORING_CELLS_INFORMATION = 1;
+	DISPLAY_SERVING_CELL_INFORMATION_AND_LIST_OF_SERVING_CELL_CARRIER_LIST = 2;
+	LIST_OF_SERVING_CELL_CARRIER_LIST = 3;
+	LIST_OF_SERVING_CELL_CARRIER_LIST_AND_BA_MEASURED_RESULT_LIST = 4;
+}
+
+enum NetworkRegistrationStatus {
+	NOT_REGISTRED_ME_IS_NOT_CURRENTLY_SEARCHING_NEW_OPERATOR_TO_REGISTER_TO = 0;
+	REGISTRED_HOME_NETWORK = 1;
+	NOT_REGISTRED_ME_IS_CURRENTLY_SEARCHING_NEW_OPERATOR_TO_REGISTER_TO = 2;
+	REGISTRATION_DENIED = 3;
+	UNKNOW_NETWORK_REGISTRATION_STATUS = 4;
+	REGISTERED_ROAMING = 5;
+}
+
+enum NetworkRegistrationMode {
+	DISABLE_NETWORK_REGISTRATION_UNSOLICITED_RESULT_CODE = 0;
+	ENABLE_NETWORK_REGISTRATION_UNSOLICITED_RESULT_CODE = 1;
+	ENABLE_NETWORK_REGISTRATION_UNSOLICITED_RESULT_CODE_WITH_LOCATION_INFORMATION = 2;
+}
+
+enum OperatorFormat {
+	LONG_FORMAT_ALPHANUMERIC = 0;
+	SHORT_FORMAT_ALPHANUMERIC = 1;
+	NUMERIC_GSM_LOCATION_AREA_IDENTIFICATION_NUMBER = 2;
+}
+
+enum OperatorMode {
+	AUTOMATIC_MODE = 0;
+	MANUAL_OPERATOR_SELECTION = 1;
+	MANUAL_DEREGISTER_FROM_NETWORK = 2;
+	SET_ONLY_FORMAT_NOT_SHOWN_IN_READ_COMMAND_RESPONSE = 3;
+}
+
+message CallRelatedCommand {
+	required CallRelatedMessageType messageType = 1;
+	required Action action = 2;
+	optional string number = 23;
+	optional string GSMModifier = 6; //mgsm
+	optional int32 interworkinWindowsSize = 7; //iws
+	optional int32 mobileWindowSize = 8; //mws
+	optional int32 acknowledmentTimer = 9; //T1
+	optional int32 retransimissionAttempts = 10; //N2
+	optional int32 RPLVersion = 11; //verx
+	optional int32 resequencingPeriod = 12; //T4
+	optional AddressType addresType = 14 [default = UNKNOW_TYPE];
+	optional int32 index = 15;
+	optional CallDir callDir = 16;
+	optional CallState callState = 17;
+	optional CallMode callMode = 18;
+	optional bool callIsOneOfMultiparty = 19;
+	optional int32 speechChannel = 20;
+	optional bool disableATH = 21;
+	optional bool setUpVoiceCall = 22; //;
+	optional bool isResponse = 24;
+	optional string description = 25;
+	optional int32 n = 26;
+	optional bool serviceReportingControlEnabled = 27;
+	optional bool enableExtendedFormat = 28;
+	optional SchemeMode schemeMode = 29;
+	optional AlternatingMode alternatingMode = 30;
+	optional SpeechMode speechMode = 31;
+	optional bool enableReportSpeechChannelType = 32;
+	optional bool delimiter = 33;
+}
+
+enum CallRelatedMessageType {
+	ANSWER_AN_INCOMING_CALL = 0;
+	MOBILE_ORIGINATED_CALL_TO_DIAL_A_NUMBER = 1;
+	DISCONNECT_EXISTING_CONNECTION = 2;
+	SWITCH_FROM_DATA_MODE_TO_COMMAND_MODE = 3;
+	SWITCH_FROM_COMMAND_MODE_TO_DATA_MODE = 4;
+	SELECT_PULSE_DIALING = 5;
+	SET_NUMBER_OF_RINGS_BEFORE_AUTOMATICLY_ANSWERING_CALL = 6;
+	SET_PAUSE_BEFORE_BLIND_DIALING = 7;
+	SET_NUMBER_OF_SECONDS_TO_WAIT_FOR_CONNECTION_COMPLETION = 8;
+	SET_NUMBER_OF_SECONDS_TO_WAIT_FOR_COMMA_DIAL_MODIFIER = 9;
+	SET_DISCONNECT_DELAY_AFTER_INDICATING_ABSENCE_OF_DATA_CARRIER = 10;
+	SELECT_TONE_DIALING = 11;
+	SELECT_TYPE_OF_ADDRESS = 12;
+	LIST_CURRENT_CALLS_OF_ME = 13;
+	SERVICE_REPORTING_CONTROL = 14;
+	SET_CELLULAR_RESULT_CODE_FOR_INCOMING_CALL_INDICATION = 15;
+	SELECT_RADIO_LINK_PROTOCOL_PARAMETER = 16;
+	SINGLE_NUMBERING_SCHEME = 17;
+	CONFIGURE_ALTERNATING_MODE_CALLS = 18;
+	PREFERENCE_SPEACH_CODING = 19;
+	SPEECH_CHANNEL_TYPE_REPORT = 20;
+	DISABLE_ATH = 21;
+}
+
+enum SpeechMode {
+	SPEECH_AUTOMATIC_MODE = 0;
+	FR = 1;
+	HR = 2;
+	EFR = 3;
+	AMR_FR = 4;
+	AMR_HR = 5;
+	FR_AND_EFR_FR_PRIORITY = 6;
+	EFR_AND_FR_EFR_PRIORITY = 7;
+	EFR_AND_HR_EFR_PRIORITY = 8;
+	EFR_AND_AMR_FR_EFR_PRIORITY = 9;
+	AMR_FR_AND_FR_AMR_FR_PRIORITY = 10;
+	AMR_FR_AND_HR_AMR_FR_PRIORITY = 11;
+	AMR_FR_AND_EFR_AMR_FR_PRIORITY = 12;
+	AMR_HR_AND_FR_AMR_HR_PRIORITY = 13;
+	AMR_HR_AND_HR_AMR_HR_PRIORITY = 14;
+	AMR_HR_AND_EFR_AMR_HR_PRIORITY = 15;
+}
+
+enum AlternatingMode {
+	SINGLE_MODE = 0;
+	ALTERNATING_VOICE_FAX = 1;
+	ALTERNATING_VOICE_DATA = 2;
+	VOICE_FOLLOWED_BY_DATA = 3;
+}
+
+enum SchemeMode {
+	SCHEME_VOICE = 0;
+	SCHEME_ALTERNATING_VOICE_FAX_VOICE_FIRST = 1;
+	SCHEME_FAX = 2;
+	SCHEME_ALTERNATING_VOICE_DATA_VOICE_FIRST = 3;
+	SCHEME_DATA = 4;
+	SCHEME_ALTERNATING_VOICE_FAX_FAX_FIRST = 5;
+	SCHEME_ALTERNATING_VOICE_DATA_DATA_FIRST = 6;
+	SCHEME_VOICE_FOLLOWED_BY_DATA = 7;
+}
+
+enum CallMode {
+	VOICE_CALL = 0;
+	DATA_CALL = 1;
+	FAX_CALL = 2;
+	UNKNOW_CALL = 9;
+}
+
+enum CallDir {
+	MOBILE_ORIGINATED_CALL = 0;
+	MOBILE_TERMINATED_CALL = 1;
+}
+
+enum CallState {
+	ACTIVE_CALL = 0;
+	HELD_CALL = 1;
+	DIALING_CALL = 2;
+	ALERTING_CALL = 3;
+	INCOMING_CALL = 4;
+	WAITING_CALL = 5;
+}
+
+enum AddressType {
+	UNKNOW_TYPE = 129;
+	INTERNATIONAL_TYPE = 145;
+	NATIONAL_TYPE = 161;
+}
+
+message SMSCommand {
+	required SMSMessageType messageType = 1;
+	required Action action = 2;
+	optional MessageService messageService = 45 [default = GSM_03_40_AND_03_41];
+	optional bool mobileTerminatedMessageSupported = 6; //mt
+	optional bool mobileOrientedMessageSupported = 7; //mo
+	optional bool broadcastTypeMessageSupported = 8; //bm
+	optional MessageFormat messageFormat = 9 [default = PDU_MODE];
+	optional string SCAddress = 10; //sca
+	optional int32 toSCAddress = 11; //tosca
+	optional string mem1 = 12;
+	optional string mem2 = 13;
+	optional string mem3 = 14;
+	optional int32 index = 15;
+	optional DelFlag delFlag = 16 [default = DELETE_MESSAGE_SPECIFIED_IN_INDEX];
+	optional string alpha = 17;
+	optional string destinationAddress = 18; //da
+	optional bytes data = 19;
+	optional int32 length = 20;
+	optional string originatingAddress = 21; //oa
+	optional int32 pdu = 22;
+	optional string serviceCenterTimeStamp = 23; //scts
+	optional int32 TypeOfDestinationAddress = 24; //toda
+	optional int32 TypeOfOriginatingAddress = 25; //tooa
+	optional int32 fo = 26;
+	optional int32 messageIdentifier = 27; //mid
+	optional int32 protocolIdentifier = 28; //pid
+	optional MessageStatus messageStatus = 29;
+	optional int32 validityPeriod = 30; //vp
+	optional int32 messageReference = 31; //mr
+	optional int32 ackpdu = 32;
+	optional int32 commandType = 33; //ct
+	optional int32 messageNumber = 34; //mn
+	optional BufferMode bufferMode = 36 [default = COMMAND_IS_FLUSHED]; //bfr
+	optional int32 profile = 37;
+	optional string messageIdentifiers = 38; //mids
+	optional string dcss = 39;
+	optional bool showValuesResultCode = 40;
+	optional int32 dataCodinScheme = 41; //dcs
+	optional string type = 42;
+	optional int32 firstOctet = 44; //fo
+	optional bool isResponse = 46;
+	optional string description = 47;
+	optional MessageMode messageMode = 48 [default = NORMAL];
+	optional MessageStatus messageStatusPDU = 49;
+	optional string messageStatusText = 50;
+	optional StoreSMSRule storeSMSRule = 51
+	[default = NO_SMS_DELIVER_INDICATIONS_ARE_ROUTED_TO_TE];
+	optional StoreCBMRule storeCMBRule = 35
+	[default = NO_CMB_INCICATIONS_ARE_ROUTED_TO_TE];
+	optional bool ds = 52;
+	optional bool enableToStoreClass0 = 53;
+	optional MessageIndication messageIndication = 54
+	[default = BUFFER_UNSOLICITED_RESULT_CODES_IN_TA_WHEN_TA_TE_LINK_IS_RESERVED];
+	optional bool messageTypeNotAccepted = 55;
+	optional CodeMode codeMode = 56 [default = CODE_MODE_ACCORDING_WITH_SIEMENS];
+}
+
+enum SMSMessageType {
+	SELECT_MESSAGE_SERVICE = 0;
+	SELECT_SMS_MESSAGE_FORMAT = 1;
+	SMS_SERVICE_CENTER_ADDRESS = 2;
+	PREFERRED_SMS_MESSAGE_STORAGE = 3;
+	DELETE_SMS_MESSAGE = 4;
+	LIST_SMS_MESSAGE_FROM_PREFERRED_STORAGE = 5;
+	READ_SMS_MESSAGE = 6;
+	SEND_SMS_MESSAGE = 7;
+	WRITE_SMS_MESSAGE_TO_MEMORY = 8;
+	SEND_SMS_MESSAGE_FROM_STORAGE = 9;
+	SEND_SMS_COMMAND = 10;
+	NEW_SMS_MESSAGE_INDICATION = 11;
+	RESTORE_SMS_SETTINGS = 12;
+	SAVE_SMS_SETTINGS = 13;
+	SELECT_CELL_BROADCAST_SMS_MESSAGE = 14;
+	SHOW_SMS_TEXT_MODE_PARAMETERS = 15;
+	SET_SMS_TEXT_MODE_PARAMETERS = 16;
+	STRORE_CLASS0_SMS_TO_SIM_WHEN_RECEIVING_CLASS0_SMS = 17;
+	DELETE_ALL_SMS = 18;
+	CONFIGURE_SMS_CODE_MODE = 19;
+}
+
+enum CodeMode {
+	CODE_MODE_ACCORDING_WITH_NOKIA = 0;
+	CODE_MODE_ACCORDING_WITH_SIEMENS = 1;
+	CODE_MODE_ACCORDING_WITH_NOKIA_AND_HEXADECIMAL_0x11_TREATED_AS_UNDERSCORE_AND_HEXADECIMAL_0x02_TREATED_AS_DOLAR = 2;
+}
+
+enum BufferMode {
+	COMMAND_IS_FLUSHED = 0;
+	COMMAND_IS_CLEANED = 1;
+}
+
+enum StoreSMSRule {
+	NO_SMS_DELIVER_INDICATIONS_ARE_ROUTED_TO_TE = 0;
+	SMS_DELIVER_STORED_INTO_ME_TA = 1;
+	SMS_DELIVER_IS_ROUTED_DIRECTLY_TO_TE = 2;
+	CLASS_3_SMS_DELIVER = 3;
+}
+
+enum StoreCBMRule {
+	NO_CMB_INCICATIONS_ARE_ROUTED_TO_TE = 0;
+	NEW_CMBS_ARE_ROUTED_DIRECTLY_TO_TE = 1;
+	CLASS_3_CBMS = 2;
+}
+
+enum MessageIndication {
+	BUFFER_UNSOLICITED_RESULT_CODES_IN_TA = 0;
+	DISCART_INDICATIONS_AND_REJECT_NEW_RECEIVED_MESSAGE_UNSOLICITED_RESULT_CODE = 1;
+	BUFFER_UNSOLICITED_RESULT_CODES_IN_TA_WHEN_TA_TE_LINK_IS_RESERVED = 2;
+	FORWARD_UNSOLICITED_RESULT_CODES_DIRECTLY_TO_TE = 3;
+}
+
+enum MessageStatus {
+	RECEIVED_UNREAD_MESSAGES = 0;
+	RECEIVED_READ_MESSAGES = 1;
+	STORED_UNSENT_MESSAGES = 2;
+	STORED_SENT_MESSAGES = 3;
+	ALL_MESSAGES = 4;
+}
+
+enum MessageMode {
+	NORMAL = 0;
+	NO_CHANGE_STATUS_OF_SPECIFIED_SMS_RECORD = 1;
+}
+
+enum DelFlag {
+	DELETE_MESSAGE_SPECIFIED_IN_INDEX = 0;
+	DELETE_ALL_READ_MESSAGES_FROM_MEM_1_STORAGE = 1;
+	DELETE_ALL_READ_MESSAGES_FROM_MEM_1_STORAGE_AND_SENT_MOBILE_ORIGINATED_MESSAGES = 2;
+	DELETE_ALL_READ_MESSAGES_FROM_MEM_1_STORAGE_SENT_AND_UNSENT_MOBILE_ORIGINATED_MESSAGES = 3;
+	DELETE_ALL_MESSAGES_FROM_MEM_1_STORAGE = 4;
+}
+
+enum MessageFormat {
+	PDU_MODE = 0;
+	TEXT_MODE = 1;
+}
+
+enum MessageService {
+	GSM_03_40_AND_03_41 = 0;
+	SMS_PDU_MODE = 128;
+}
+
+message PhonebookCommand {
+	required PhonebookMessageType messageType = 1;
+	required Action action = 2;
+	optional string storage = 18;
+	optional int32 nlength = 6;
+	optional int32 tlength = 7;
+	optional int32 index = 8;
+	optional string number = 9;
+	optional NumberType numberType = 10;
+	optional string text = 11;
+	optional int32 index1 = 12;
+	optional int32 index2 = 13;
+	optional string findText = 14;
+	optional string alphax = 15;
+	optional string numberx = 16;
+	optional int32 typex = 17;
+	optional bool isResponse = 19;
+	optional string description = 20;
+}
+
+enum PhonebookMessageType {
+	SELECT_PHONEBOOK_MEMORY_STORAGE = 0;
+	WRITE_PHONEBOOK_ENTRY = 1;
+	READ_CURRENT_PHONEBOOK_ENTRIES = 2;
+	FIND_PHONEBOOK_ENTRIES = 3;
+	SUBSCRIBER_NUMBER = 4;
+}
+
+enum NumberType {
+	UNKNOW_NUMBER_TYPE = 129;
+	INTERNATIONAL_NUMBER_TYPE = 145;
+}
+
+message GPRSCommand {
+	required GPRSMessageType messageType = 1;
+	required Action action = 2;
+	optional bool attached = 26;
+	optional int32 cid = 6;
+	optional string PDPType = 7;
+	optional string APN = 8;
+	optional string PDPAddress = 9;
+	optional int32 dComp = 10;
+	optional int32 hComp = 11;
+	optional int32 precedence = 12;
+	optional int32 delay = 13;
+	optional int32 reliability = 14;
+	optional int32 peak = 15;
+	optional int32 mean = 16;
+	optional string L2P = 17;
+	optional string class = 18;
+	optional EventReportingMode eventReportingMode = 19;
+	optional NetworkRegistrationMode networkRegistrationMode = 20;
+	optional NetworkRegistrationStatus networkRegistrationStatus = 21;
+	optional string lac = 22;
+	optional string ci = 23;
+	optional ServiceType serviceType = 24;
+	optional int32 multislotClass = 25;
+	optional bool isResponse = 27;
+	optional string description = 28;
+	optional bool activatePDP = 29;
+}
+
+enum GPRSMessageType {
+	ATTACH_DEATTACH_GPRS_SERVICE = 0;
+	DEFINE_PDP_CONTEXT = 1;
+	QOS_PROFILE_REQUESTED = 2;
+	QOS_PROFILE_MINIMUM_ACCEPTABLE = 3;
+	PDP_CONTEXT_ACTIVATE_OR_DEACTIVATE = 4;
+	ENTER_DATA_STATE = 5;
+	SHOW_PDP_ADDRESS = 6;
+	GPRS_MOBILE_STATION_CLASS = 7;
+	CONTROL_UNSOLICITED_GPRS_EVENT_REPORTING = 8;
+	NETWORK_REGISTRATION_STATUS = 9;
+	SELECT_SERVICE_FOR_MO_SMS_MESSAGE = 10;
+	CHANGE_GPRS_MULTISLOT_CLASS = 11;
+}
+
+enum ServiceType {
+	GPRS = 0;
+	CIRCUIT_SWITCH = 1;
+	GPRS_PREFERRD = 2;
+	CIRCUIT_SWITCH_PREFERRED = 3;
+}
+
+enum EventReportingMode {
+	BUFFER_UNSOLICITED_RESULT_CODES_IN_MT = 0;
+	DISCART_UNSOLICITED_RESULT_CODES_WHEN_MT_TE_LINK_IS_RESERVED = 1;
+}
+
+message TCPIPCommand {
+	required TCPIPMessageType messageType = 1;
+	required Action action = 2;
+	optional int32 index = 54;
+	optional string mode = 6;
+	optional ServerFormat serverFormat = 7;
+	optional int32 port = 8;
+	optional string domainName = 9;
+	optional int32 length = 10;
+	optional string APN = 11;
+	optional string username = 12;
+	optional string password = 13;
+	optional Rate rate = 14 [default = RATE_9600];
+	optional string state = 15;
+	optional string socketState = 16;
+	optional string serverState = 17;
+	optional string primaryDNS = 18;
+	optional string seondaryDNS = 19;
+	optional int64 time = 21;
+	optional SendPrompt sendPrompt = 22 [default = ECHO_PROMPT_AND_SHOW_SEND_OK];
+	optional int32 num = 23;
+	optional ServerType type = 24;
+	optional int64 max = 25;
+	optional string dialNumber = 26;
+	optional Connection connection = 27;
+	optional int32 numberOfRetry = 28;
+	optional int32 waitTime = 29;
+	optional int32 sendSize = 30;
+	optional bool escape = 31;
+	optional Channel channel = 32;
+	optional int32 n = 33;
+	optional int32 sent = 34;
+	optional int32 acked = 35;
+	optional int32 nAcked = 36;
+	optional ReceivedDataMode receivedDataMode = 37
+	[default = OUTPUT_RECEIVED_DATA_THROUGH_UART_DIRECTLY];
+	optional int32 id = 38;
+	optional ServerClient serverClinet = 39;
+	optional int32 sid = 40;
+	optional int32 number = 41;
+	optional string host = 42;
+	optional int32 timeout = 43;
+	optional int32 pingNumber = 44;
+	optional PingResult pingResult = 45;
+	optional int32 bytes = 46;
+	optional int32 ttl = 47;
+	optional FinalResult finalResult = 48;
+	optional int32 received = 49;
+	optional int32 lost = 50;
+	optional int64 min = 51;
+	optional int64 avg = 52;
+	optional string server = 53;
+	optional bool isResponse = 55;
+	optional string description = 56;
+	optional IPHeader ipHeader = 20;
+	optional Timer timer = 57;
+	optional bool configureAsServer = 58;
+	optional BearerType bearerType = 59;
+	optional bool showAddress = 60;
+	optional TransferMode transferMode = 61;
+	optional bool showTransportProtocolType = 62;
+	optional bool enableMultipleTCPIPSession = 63;
+	optional bool echoData = 64;
+	optional SynchronizationResult synchronizationResult = 65;
+	optional int32 CSDDataSpeed = 66;
+}
+
+enum TCPIPMessageType {
+	SET_UP_TCP_OR_UDP_CONNECTION = 0;
+	SEND_DATA_THROUGH_TCP_OR_UDP_CONNECTION = 1;
+	CLOSE_TCP_OR_UDP_CONNECTION = 2;
+	DEACTIVATE_GPRS_CSD_PDP_CONTEXT = 3;
+	SET_LOCAL_PORT = 4;
+	START_TCPIP_TASK_APN_USERNAME_AND_PASSWORD = 5;
+	ACTIVE_GPRS_CSD_CONTEXT = 6;
+	GET_LOCAL_IP_ADDRESS = 7;
+	QUERY_CURRENT_CONNECTION_STATUS = 8;
+	QUERY_CONNECTION_STATUS_OF_CURRENT_ACCESS = 9;
+	QUERY_CURRENT_SERVER_STATUS = 10;
+	CONFIGURE_DOMAIN_NAME_SERVER = 11;
+	QUERY_IP_ADDRESS_OF_GIVEN_DOMAIN_NAME = 12;
+	CONNECT_WITH_IP_ADDRESS_OR_DOMAIN_NAME_SERVER = 13;
+	ADD_AN_IP_HEADER_WHEN_RECEIVING_DATE = 14;
+	SET_AUTO_SENDING_TIMER = 15;
+	SET_PROMPT_WHEN_SENDING_DATA = 16;
+	CONFIGURE_AS_SERVER = 17;
+	SELECT_CSD_OR_GPRS_AS_THE_BEARER = 18;
+	CHOOSE_CONNECTION = 19;
+	SET_WHETHER_OR_NOT_TO_DISPLAY_ADDRESS_OF_SENDER = 20;
+	SAVE_TCPIP_APPLICATION_CONTEXT = 21;
+	SELECT_TCPIP_TRANSFER_MODE = 22;
+	CONFIGURE_TRANSPARENT_TRANSFER_MODE = 23;
+	CONTROL_WHETHER_OR_NOT_TO_SHOW_PROTOCOL_TYPE = 24;
+	ENABLE_MULTIPLE_TCPIP_SESSION = 25;
+	CONTROL_WHETHER_OR_NOT_TO_DISPLAY_LOCAL_IP_ADDRESS = 26;
+	SELECT_A_CONTEXT_AS_FOREGROUND_CONTEXT = 27;
+	QUERY_THE_DATA_INFORMATION_FOR_SENDING = 28;
+	SET_METHOD_TO_HANDLE_RECEIVED_TCPIP_DATA = 29;
+	RETRIEVE_THE_RECEIVED_TCPIP_DATA = 30;
+	CONTRO_WHETHER_OR_NOT_TO_ECHO_DATA_FOR_QISEND = 31;
+	PING_A_REMOTE_SERVER = 32;
+	SYNCHRONIZE_LOCAL_TIME_VIA_NTP = 33;
+}
+
+enum SynchronizationResult {
+	SUCCESS_SYNCHRONIZE_LOCAL_TIME = 0;
+	FAILED_TO_SYNCHRONIZE_LOCAL_TIME_BECAUSE_OF_UNKNOW_RESON = 1;
+	FAILED_TO_RECEIVE_RESPONSE_FROM_TIME_SERVER = 2;
+	TCPIP_STACK_IS_BUSY_NOW = 3;
+	DO_NOT_FIND_TIME_SERVER = 4;
+	FAILED_TO_ACTIVATE_PDP_CONTEXT_SYNCHRONIZATION = 5;
+}
+
+enum FinalResult {
+	IT_IS_FINISHED_NORMALY = 2;
+	TCP_IP_STACK_IS_BUSY_NOW = 3;
+	DO_NOT_FIND_HOST = 4;
+	FAILED_TO_ACTIVATE_PDP_CONTEXT = 5;
+}
+
+enum PingResult {
+	RECEIVED_PING_RESPONSE_FROM_SERVER = 0;
+	TIMEOUT_FOR_PING_REQUEST = 1;
+}
+
+enum ServerClient {
+	MODULE_SERVERS_AS_CLINET_OF_CONNECTION = 1;
+	MODULE_SERVERS_AS_CLIENT_OF_CONNECTION = 2;
+}
+
+enum ReceivedDataMode {
+	OUTPUT_RECEIVED_DATA_THROUGH_UART_DIRECTLY = 0;
+	OUTPUT_NOTIFICATION_STATEMENT_SHORT = 1;
+	OUTPUT_NOTIFICATION_STATEMENT_LONG = 2;
+}
+
+enum Channel {
+	VIRTUAL_UART_1 = 0;
+	VIRTUAL_UART_2 = 1;
+	VIRTUAL_UART_3 = 2;
+	VIRTUAL_UART_4 = 3;
+	CONTEXT_IS_NOT_CONTROLLED_BY_ANY_CHANNEL = 4;
+}
+
+enum TransferMode {
+	NORMAL_MODE = 0;
+	TRANSPARENT_MODE = 1;
+}
+
+enum Connection {
+	MS_USED_AS_CLIENT = 0;
+	MS_USED_AS_SERVER = 1;
+}
+
+enum BearerType {
+	SET_CSD_AS_BEARER_FOR_TCPIP_CONNECTION = 0;
+	SET_GPRS_AS_BEARER_FOR_TCPIP_CONNECTION = 1;
+}
+
+enum ServerType {
+	TCP_SERVER = 0;
+	UDP_SERVER = 1;
+}
+
+enum SendPrompt {
+	NO_PROMPT_AND_SHOW_SEND_OK = 0;
+	ECHO_PROMPT_AND_SHOW_SEND_OK = 1;
+	NO_PROMPT_AND_NOT_SHOW_SEND_OK = 2;
+	ECHO_PROMPT_AND_SHOW_SOCKET_ID_AND_SEND_OK = 3;
+}
+
+enum Timer {
+	DO_NOT_SET_TIMER_FOR_DATA_SENDING = 0;
+	SET_TIMER_FOR_DATA_SENDING = 1;
+}
+
+enum IPHeader {
+	DO_NOT_ADD_IP_HEADER = 0;
+	ADD_A_HEADER_BEFORE_RECEIVED_DATA = 1;
+}
+
+enum ServerFormat {
+	DOTTED_DECIMAL_IP_ADDRESS_OF_SERVER = 0;
+	DOMAIN_NAME_ADDRESS_OF_SERVER = 1;
+}
+
+message SupplementaryServiceCommand {
+	required SupplementaryServiceMessageType messageType = 1;
+	required Action action = 2;
+	optional Reads reads = 22;
+	optional ForwardingMode forwardingMode = 6;
+	optional string number = 7;
+	optional int32 type = 8;
+	optional string subaddress = 9;
+	optional int32 satype = 10;
+	optional Class class = 11;
+	optional int32 time = 12;
+	optional bool active = 13;
+	optional bool enableCUG = 14;
+	optional int32 CUGIndex = 15;
+	optional Info info = 16;
+	optional CLIP clip = 17;
+	optional string USSDString = 18;
+	optional int32 dataCodingScheme = 19;
+	optional Code1 code1 = 20;
+	optional Code2 code2 = 21;
+	optional bool isResponse = 23;
+	optional string description = 24;
+	optional bool enablePresentation = 25;
+	optional bool enableCallWaitingControl = 26;
+	optional int32 callHold = 27;
+	optional bool displayUnsolicitedResultCode = 28;
+	optional bool showCallNumber = 29;
+	optional AdjustmentOutgoingCalls aoc = 30 [default = PRESENTATION_INDICATOR];
+	optional CLIRServiceStatus css = 31;
+	optional bool enableResultCodePresentationOriginated = 32;
+	optional bool enableResultCodePresentationTerminated = 35;
+	optional bool showAlphaField = 33;
+	optional SSDControl ssdControl = 34
+	[default = DISABLE_RESULT_CODE_PRESENTATION_IN_TA];
+}
+
+enum SupplementaryServiceMessageType {
+	CALL_FORWARDING_NUMBER_AND_CONDITIONS_CONTROL = 0;
+	CLOSED_USER_GROUP_CONTROL = 1;
+	CALL_WAITING_CONTROL = 2;
+	CALL_HOLD_AND_MULTIPARTY = 3;
+	CALLING_LINE_IDENTIFICATION_PRESENTATION = 4;
+	CONTROL_WHETHER_OR_NOT_TO_SHOW_NAME_OF_INCOMING_CALL_NUMBER = 5;
+	CONNECTED_LINE_IDENTIFICATION_PRESENTATION = 6;
+	SHOW_ALPHA_FIELD_IN_COLP_STRING = 7;
+	UNSTRUCTURED_SUPPLEMENTARY_SERVICE_DATA = 8;
+	SUPPLEMENTARY_SERVICES_NOTIFICATION = 9;
+	CALLING_LINE_IDENTIFICATION_RESTRICTION = 10;
+}
+
+enum Code1 {
+	UNCONDITIONAL_CALL_FORWARDING_IS_ACTIVE = 0;
+	SOME_OF_CONDITIONAL_CALL_FORWARDING_ARE_ACTIVE = 1;
+	CALL_HAS_BEEN_FORWARDED = 2;
+	CALL_IS_WAITING = 3;
+	THIS_IS_CUG_CALL = 4;
+	OUTGOING_CALLS_ARE_BARRED = 5;
+	INCOMING_CALLS_ARE_BARRED = 6;
+	CLIR_SUPPRESSION_REJECTED = 7;
+}
+
+enum Code2 {
+	THIS_IS_FORWARDED_CALL = 0;
+}
+
+enum SSDControl {
+	DISABLE_RESULT_CODE_PRESENTATION_IN_TA = 0;
+	ENABLE_RESULT_CODE_PRESENTATION_IN_TA = 1;
+	CANCEL_SESSION = 2;
+}
+
+enum CLIRServiceStatus {
+	CLIR_NOT_PROVISIONED = 0;
+	CLIR_PROVISIONED_IN_PERMANENT_MODE = 1;
+	UNKNOW_CLIR = 2;
+	CLIR_TEMORARY_MODE_PRESENTATION_RESTRICTED = 3;
+}
+
+enum AdjustmentOutgoingCalls {
+	PRESENTATION_INDICATOR = 0;
+	CLIR_INVOCATION = 1;
+	CLIR_SUPPRESSION = 2;
+}
+
+enum CLIP {
+	CLIP_NOT_PROVISIONED = 0;
+	CLIP_PROVISIONED = 1;
+	UNKNOW_CLIP = 2;
+}
+
+enum Info {
+	BO_INFORMATION = 0;
+	SUPPRESS_OA = 1;
+	SUPPRESS_PREFERANTIAL_CUG = 2;
+	SUPPRESS_OA_AND_PREFERENTIAL_CUG = 3;
+}
+
+enum Reads {
+	UNCONDITIONAL = 0;
+	MOBILE_BUSY = 1;
+	NO_REPLY = 2;
+	NO_REACHABLE = 3;
+	ALL_CALL_FORWARDING = 4;
+	ALL_CONDITIONAL_CALL_FORWARDING = 5;
+}
+
+enum ForwardingMode {
+	DISABLE_FORWARDING_MODE = 0;
+	ENABLE_FORWARDINF_MODE = 1;
+	QUERY_STATUS_OF_FORWARDING_MODE = 2;
+	REGISTRATION_FORWARDING_MODE = 3;
+	ERASURE_FORWARDING_MODE = 4;
+}
+
+message AudioCommand {
+	required AudioMessageType messageType = 1;
+	required Action action = 2;
+	optional SpeakerLoudness speakerLoudness = 33;
+	optional int32 internalDuration = 6;
+	optional int64 duration = 7;
+	optional string DTMFString = 8;
+	optional SoundMode soundMode = 9;
+	optional int32 level = 10;
+	optional bool mute = 11;
+	optional int32 gainLevel = 12;
+	optional MicrophoneChannel microphoneChannel = 13;
+	optional bool testIsOn = 14;
+	optional int32 frequency = 16;
+	optional int32 periodON = 17;
+	optional int32 periodOFF = 18;
+	optional OutputPath outputPath = 19 [default = AUTO_OUTPUT_PATH];
+	optional AudioOperateFunction operateFunction = 20;
+	optional FunctionStatus functionStatus = 21;
+	optional int32 prefixPause = 23;
+	optional int32 lowThreshold = 24;
+	optional int32 highThreshold = 25;
+	optional PersistenceTime persistenceTime = 27;
+	optional int32 uplinkVolume = 28;
+	optional int32 downlinkVolume = 29;
+	optional int64 continuanceTime = 30;
+	optional int64 muteTime = 31;
+	optional bool isResponse = 34;
+	optional string description = 35;
+	optional SpeakerMode speakerMode = 36;
+	optional AudioChannel audioChannel = 37;
+	optional bool startPlayingTone = 38;
+	optional ToneDetection toneDetection = 22 [default = CLOSE_TONE_DETECTION];
+	optional DTMFOperate dtmfOperate = 39;
+	optional DTMFCode dtmfCode = 26;
+	optional Algorithm algorithm = 15 [default = ALGORITHM_1];
+}
+
+enum AudioMessageType {
+	SET_MONITOR_SPEAKER_LOUDNESS = 0;
+	SET_MONITOR_SPEAKER_MODE = 1;
+	TONE_DURATION = 2;
+	DTMF_AND_TONE_GENERATION = 3;
+	ALERT_SOUND_MODE = 4;
+	RINGER_SOUND_LEVEL = 5;
+	LOUD_SPEAKER_VOLUME_LEVEL = 6;
+	MUTE_CONTROL = 7;
+	CHANGE_THE_SIDE_TONE_GAIN_LEVEL = 8;
+	CHANGE_THE_MICROPHONE_GAIN_LEVEL = 9;
+	GENERATE_LOCAL_DTMF_TONES = 10;
+	SWAP_THE_AUDIO_CHANNELS = 11;
+	AUDIO_CHANNEL_LOOP_BACK_TEST = 12;
+	GENERATE_LOCAL_SPECIFIC_TONE = 13;
+	SET_DTMF_OUTPUT_PATH = 14;
+	SET_TONE_DETECTION_MODE = 15;
+	DETECT_DTMF = 16;
+	PLAY_DTMF_TONE_DURING_CALL = 17;
+}
+
+enum Algorithm {
+	ALGORITHM_1 = 0;
+	ALGORITHM_2 = 1;
+}
+
+enum PersistenceTime {
+	MS_100 = 100;
+	MS_400 = 400;
+}
+
+enum DTMFCode {
+	DTMF_0 = 48;
+	DTMF_1 = 49;
+	DTMF_2 = 50;
+	DTMF_3 = 51;
+	DTMF_4 = 52;
+	DTMF_5 = 53;
+	DTMF_6 = 54;
+	DTMF_7 = 55;
+	DTMF_8 = 56;
+	DTMF_9 = 57;
+	DTMF_A = 65;
+	DTMF_B = 66;
+	DTMF_C = 67;
+	DTMF_D = 68;
+	DTMF_STAR = 42;
+	DTMF_POUND = 35;
+	FREQUENCY_1400_HZ = 69;
+	FREQUENCY_2300_HZ = 70;
+}
+
+enum DTMFOperate {
+	QUERY_THRESHOLD_VALUES = 0;
+	SET_THRESHOLD_VALUES = 1;
+}
+
+enum ToneDetection {
+	CLOSE_TONE_DETECTION = 0;
+	OPEN_TONE_DETECTION = 1;
+	CONFIGURE_1400HZ_OR_2300HZ_DETECTION_THRESHOLD_100_MS = 2;
+	CONFIGURE_1400HZ_AND_2300HZ_DETECTION_THRESHOLD_400_MS = 3;
+	CONFIGURE_DTMF_DETECTION_THRESHOLD = 4;
+	OPEN_DEBUG = 5;
+}
+
+enum FunctionStatus {
+	DETECT_ALL_DTMF = 0;
+	ONLY_DETECT_1400HZ_AND_2300HZ_HANSHAKE_SIGNAL = 1;
+	NOT_DETECT_1400HZ_AND_2300HZ_HANDSAKE_SIGNAL = 2;
+}
+
+enum AudioOperateFunction {
+	SET_DETECTION_RANGE = 0;
+	SET_DETECTION_MODE = 1;
+}
+
+enum OutputPath {
+	OUTPUT_DTMF_NORMAL_SPEAKER = 0;
+	OUTPUT_DTMF_HEADSET_SPEAKER = 1;
+	OUTPUT_DTMF_LOUD_SPEAKER = 2;
+	AUTO_OUTPUT_PATH = 3;
+}
+
+enum AudioChannel {
+	NORMLA_AUDIO_CHANNEL = 0;
+	HEADSET_AUDIO_CHANNEL = 1;
+	LOUDSPEAKER_AUDIO_CHANNEL = 2;
+}
+
+enum MicrophoneChannel {
+	NORMAL_MICROPHONE = 0;
+	HEADSET_MICROPHONE = 1;
+	LOUDSPEAKER_MICROPHONE = 2;
+}
+
+enum SoundMode {
+	NORMAL_SOUND_MODE = 0;
+	SILENT_SOUND_MODE = 1;
+}
+
+enum SpeakerMode {
+	SPEAKER_IS_ALWAYS_OFF = 0;
+	SPEAKER_IS_ON_UTIL_TA_INFORM_TE_THAT_CARRIER_HAS_BEEN_DETECTED = 1;
+	SPEAKER_IS_ALWAYS_ON_WHEN_TA_IS_OFF_HOOK = 2;
+}
+
+enum SpeakerLoudness {
+	NO_SPEAKER_VOLUME = 0;
+	LOW_SPEAKER_VOLUME = 1;
+	MEDIUM_SPEAKER_VOLUME = 2;
+	HIGH_SPEAKER_VOLUME = 3;
+}
+
+message HardwareRelatedCommand {
+	required HardwareRelatedMessageType messageType = 1;
+	required Action action = 2;
+	optional string time = 18;
+	optional bool setAlarm = 6;
+	optional Repeat repeat = 7;
+	optional AlarmPower power = 8;
+	optional BatteryCharge batteryCharge = 9;
+	optional int32 batteryConnectionLevel = 10;
+	optional int32 batteryVoltage = 11;
+	optional ReadStatus readStatus = 12;
+	optional SlowClock slowClock = 14;
+	optional LedMode ledMode = 15;
+	optional ThresholdType thresholdType = 16;
+	optional int32 threshold = 17;
+	optional bool isResponse = 19;
+	optional string description = 20;
+	optional bool thresholdFunctionTurnedON = 21;
+}
+
+enum HardwareRelatedMessageType {
+	CLOCK = 0;
+	SET_ALARM = 1;
+	BATTERY_CHARGE = 2;
+	READ_ADC = 3;
+	CONFIGURE_SHOW_CLOCK = 4;
+	CONFIGURE_NETWORK_LED_PATTERNS = 5;
+	CONFIGURE_THRESHOLD_OF_VOLTAGE = 6;
+}
+
+enum ThresholdType {
+	THRESHOLD_OF_LOW_VOLTAGE_WARNING = 0;
+	THRESHOLD_OF_LOW_VOLTAGE_POWER_DOWN = 1;
+	THRESHOLD_OF_HIGH_VOLTAGE_WARNING = 2;
+	THRESHOLD_OF_HIGH_VOLTAGE_POWER_DOWN = 3;
+}
+
+enum LedMode {
+	NETWORK_LED_FLASHES_RAPIDLY_WHEN_CALL_IS_RINGING = 0;
+	NO_EFFECT_ON_NETWORK_LED_WHEN_CALL_IS_RINGING = 1;
+	RI_WILL_NOT_CHANGE_WHEN_URC_REPORTED_UNTIL_RINGING_ENDS = 2;
+}
+
+enum SlowClock {
+	DISABLE_SLOW_CLOCK = 0;
+	ENABLE_SLOW_CLOCK = 1;
+	ENTER_SLEEP_AFTER_5_SECONDS = 2;
+}
+
+enum ReadStatus {
+	STATUS_FAIL = 0;
+	STATUS_SUCCESS = 2;
+}
+
+enum BatteryCharge {
+	ME_IS_NOT_CHARGING = 0;
+	ME_IS_CHARGING = 1;
+	CHARGING_HAS_FINISHED = 2;
+}
+
+enum AlarmPower {
+	NONE_ALARM_POWER = 0;
+	ALARM_POWER_OFF = 1;
+	ALARM_POWER_ON = 2;
+}
+
+enum Repeat {
+	NONE_REPEAT = 0;
+	DAILY_REPEAT = 1;
+	WEEKLY_REPEAT = 2;
+	MONTLY_REPEAT = 3;
+}
+
+message OthersCommand {
+	required OthersMessageType messageType = 1;
+	required Action action = 2;
+	optional bool echoModeOn = 6;
+	optional int32 commandLineTerminationCharacter = 7;
+	optional int32 responseFormattingCharacter = 12;
+	optional int32 responseEditingCharacter = 13;
+	optional TimeMode timeMode = 8;
+	optional IndMode indMode = 9;
+	optional bool isResponse = 10;
+	optional string description = 11;
+}
+
+enum OthersMessageType {
+	REISSUES_LAST_COMMAND_GIVEN = 0;
+	SET_COMMAND_ECHO_MODE = 1;
+	SET_COMMAND_LINE_TERMINATION_CHARACTER = 2;
+	SET_RESPONSE_FORMATTING_CHARACTER = 3;
+	SET_COMMAND_LINE_EDITING_CHARACTER = 4;
+	SET_RI_TIME = 5;
+	BURST_TRANSITION_SIGNAL_INDICATION = 6;
+}
+
+enum IndMode {
+	DISABLE_TX_BURST_INDICATION_PIN_OUTPUT_LOW_LEVEL_AS_GPIO_FUNCTION = 0;
+	ENABLE_TX_BURST_INDICATION__OUTPUT_WAVE_AS_NOTE = 1;
+	ENABLE_TX_BURST_INDICATION_PIN_WILL_BE_HIGH_DURING_CALL_AND_LOW_AFTER_CALL = 2;
+}
+
+enum TimeMode {
+	RI_120_MS_LOW_PULSE_OTHER_URC_RI_120_MS_LOW_PULSE = 0;
+	RI_120_MS_LOW_PULSE_OTHER_URC_RI_50_MS_LOW_PULSE = 1;
+	RI_120_MS_LOW_PULSE_OTHER_URC_RI_TAKE_NO_EFFECT = 2;
+}
+
+message ErrorCommand {
+	optional Error error = 1;
+	optional FTPError FTPError = 2;
+}
+
+enum Error {
+	OK = 0;
+	UNKNOW_ERROR = 1;
+	SERVICE_BUSY = 3;
+	FAILED_TO_GET_IP_ADDRESS = 4;
+	NETWORK_ERROR = 5;
+	UNSUPPORTED_AUTHENTICATION_TYPE = 6;
+	SERVICE_CLOSED = 7;
+	GPRS_CSD_CONTEXT_IS_DEACTIVATED = 8;
+	TIMEOUT = 9;
+	NO_RECIPIENT_FOR_SMTP_SERVICE = 10;
+	FAILED_TO_SEND_EMAIL = 11;
+	FAILED_TO_OPEN_FILE_FOR_ATTACHMENT = 12;
+	NO_ENOUGH_MEMORY_FOR_ATTACHMENT = 13;
+	FAILED_TO_SAVE_THE_ATTACHMENT = 14;
+	THE_INPUT_PARAMETER_IS_WRONG = 15;
+	SERVICE_NOT_AVAILABLE = 421;
+	REQUESTED_MAIL_ACTION_NOT_TAKEN = 450;
+	REQUESTED_ACTION_ABORTED = 451;
+	REQUESTED_ACTION_NOT_TAKEN_INSUFFICIENT_SYSTEM_STORAGE = 452;
+	SYNTAX_ERROR_COMMAND_UNRECOGNIZED = 500;
+	SYNTAX_ERROR_IN_PARAMETERS_OR_ARGUMENTS = 501;
+	COMMAND_NOT_IMPLEMENTED = 502;
+	BAD_SEQUENCE_OF_COMMANDS = 503;
+	COMMAND_PARAMETER_NOT_IMPLEMENTED = 504;
+	DOMAIN_DOES_NOT_ACCEPT_EMAIL = 521;
+	ACCESS_DENIED_FOR_SMTP_SERVICE = 530;
+	AUTHENTICATION_FAILED = 535;
+	REQUESTED_ACTION_NOT_TAKEN = 550;
+	USER_NOT_LOCAL = 551;
+	REQUESTED_MAIL_ACTION_ABORTED_EXCEEDED_STORAGE_NOT_ALLOWED = 552;
+	REQUESTED_ACTION_NOT_TAKEN_MAILBOX_NAME_NOT_ALLOWED = 553;
+	TRANSACTION_FAILED = 554;
+	HTTP_TIME_OUT = 3801;
+	HTTP_BUSY = 3802;
+	HTTP_UART_BUSY = 3803;
+	HTTP_GET_NO_REQUEST = 3804;
+	HTTP_NETWORK_BUSY = 3805;
+	HTTP_NETWORK_OPEN_FAILED = 3806;
+	HTTP_NETWORK_NO_CONFIG = 3807;
+	HTTP_NETWORK_DEACTIVE = 3808;
+	HTTP_NETWORK_ERROR = 3809;
+	HTTP_URL_ERROR = 3810;
+	HTTP_EMPTY_URL = 3811;
+	HTTP_IP_ADDR_ERROR = 3812;
+	HTTP_DNS_ERROR = 3813;
+	HTTP_SOCKET_CREATE_ERROR = 3814;
+	HTTP_SOCKET_CONNECT_ERROR = 3815;
+	HTTP_SOCKET_READ_ERROR = 3816;
+	HTTP_SOCKET_WRITE_ERROR = 3817;
+	HTTP_SOCKET_CLOSE = 3818;
+	HTTP_DATA_ENCODE_ERROR = 3819;
+	HTTP_DATA_DECODE_ERROR = 3820;
+	HTTP_TO_READ_TIMEOUT = 3821;
+	HTTP_RESPONSE_FAILED = 3822;
+	INCOMING_CALL_BUSY = 3823;
+	VOICE_CALL_BUSY = 3824;
+	INPUT_TIMEOUT = 3825;
+	WAIT_DATA_TIMEOUT = 3826;
+	WAIT_HTTP_RESPONSE_TIMEOUT = 3827;
+	ALLOC_MEMORY_FAIL = 3828;
+	HTTP_NEED_RELOCATION = 3829;
+	INVALID_INPUT_VALUE = 3865;
+	MMS_TIME_OUT = 3901;
+	URL_TOO_LONG = 3902;
+	INVALID_URL = 3903;
+	UNSUPPORTED_PROXY = 3904;
+	INVALID_PROXY_ADDRESS = 3905;
+	IP_ADDRESS_ERROR = 3906;
+	DNS_ERROR = 3907;
+	PARAMETER_ERROR = 3908;
+	TO_ADDRESS_EXCEEDED = 3909;
+	CC_ADDRESS_EXCEEDED = 3910;
+	BCC_ADDRESS_EXCEEDED = 3911;
+	APPENDED_FILE_CAPACITY_EXCEEDED = 3912;
+	FILE_NAME_TOO_LONG = 3913;
+	THE_NUMBER_OF_FILE_EXCEEDED = 3914;
+	NON_EXISTENT_ADDRESS = 3915;
+	UFS_STORAGE_FULL = 3916;
+	DRIVE_FULL = 3917;
+	DRIVE_ERROR = 3918;
+	NOT_FOUND = 3919;
+	INVALID_FILE_NAME = 3920;
+	FILE_ALREADY_EXISTED = 3921;
+	FAILED_TO_CREATE_FILE = 3922;
+	FAILED_TO_WRITE_FILE = 3923;
+	FAILED_TO_OPEN_REQUESTED_FILE = 3924;
+	FAILED_TO_READ_FILE = 3925;
+	MMS_BUSY = 3926;
+	SENDING_MMS_BUSY = 3927;
+	SENDING_MMS_STOPPED = 3928;
+	ALREADY_STOPPED_TO_SEND = 3929;
+	RECEIVING_MMS_BUSY = 3930;
+	RECEIVING_MMS_STOPPED = 3931;
+	ALREADY_STOPPED_RECEIVE = 3932;
+	HTTP_RESPONSE_FALIURE = 3933;
+	INVALID_MMS_RESPONSE = 3934;
+	MMS_RESPONSE_ERROR = 3935;
+	INVALID_PUSH_MESSAGE = 3936;
+	ALREADY_DONWLOADED = 3937;
+	NETWORK_BUSY = 3938;
+	FAILED_TO_OPEN_NETWORK = 3939;
+	NETWORK_NO_CONFIGURED = 3940;
+	NETWORK_DEACTIVATED = 3941;
+	MMS_NETWORK_ERROR = 3942;
+	NETWORK_SHUTDOWN = 3943;
+	UART_BUSY = 3944;
+	UART_ESCAPED = 3945;
+	FAILED_TO_CREATE_SOCKET = 3946;
+	FAILED_TO_CONNECT_SOCKET = 3947;
+	FAILED_TO_READ_SOCKET = 3948;
+	FAILED_TO_WRITE_SOCKET = 3949;
+	SOCKET_CLOSED = 3950;
+	MMS_LENGTH_ERROR = 3951;
+	FAILED_TO_ENCODE_MMS = 3952;
+	FAILED_TO_DECODE_MMS = 3953;
+	FAILED_TO_DECODE_HTTP = 3954;
+	FAILED_TO_DECODE_PUSH_MESSAGE = 3955;
+	PDU_ALIGN_ERROR = 3956;
+	PDU_CHARACTER_ERROR = 3957;
+	STRING_TOO_LONG = 3958;
+	MMS_FULL = 3959;
+	NON_EXISTENT_MMS = 3960;
+	INVALID_ADDRESS = 3961;
+	MMS_VOICE_CALL_BUSY = 3962;
+	ALLOC_MEMORY_FAILED = 3963;
+	EXCEED_MAX_LENGTH = 4000;
+	OPEN_FILE_FAIL = 4001;
+	WRITE_FILE_FAIL = 4002;
+	GET_SIZE_FAIL = 4003;
+	READ_FAIL = 4004;
+	LIST_FILE_FAIL = 4005;
+	DELETE_FILE_FAIL = 4006;
+	GET_DISC_INFO_FAIL = 4007;
+	NO_SPACE = 4008;
+	TIME_OUT = 4009;
+	HTTP_FILE_NOT_FOUND = 4010;
+	FILE_TOO_LARGE = 4011;
+	FILE_ALREADY_EXIST = 4012;
+	INVALID_PARAMETER = 4013;
+	DRIVER_ERROR = 4014;
+	CREATE_FAIL = 4015;
+	ACCESS_DENIED = 4016;
+	FILE_IS_TOO_LARGE = 4017;
+	WRONG_FORMAT = 4300;
+	AUDIO_TASK_BUSY = 4302;
+	CREATE_FILE_FAILED = 4303;
+	ADDITIONAL_RECORDING_IN_A_DIFFERENT_FORMAT = 4304;
+	DISC_FULL = 4305;
+	WRITE_PROTECTION_ON_FILE = 4306;
+	RECORDING_UNKNOW_ERROR = 4499;
+}
+
+enum Action {
+	TEST = 0;
+	READ = 1;
+	WRITE = 2;
+	EXECUTION = 3;
+}
