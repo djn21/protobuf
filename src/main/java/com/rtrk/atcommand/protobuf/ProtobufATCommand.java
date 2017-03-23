@@ -50,9 +50,9 @@ public final class ProtobufATCommand {
      */
     GENERAL_COMMAND(8, 8),
     /**
-     * <code>SERIAL_INTERFACE_COMMAND = 9;</code>
+     * <code>SERIAL_INTERFACE_CONTROL_COMMAND = 9;</code>
      */
-    SERIAL_INTERFACE_COMMAND(9, 9),
+    SERIAL_INTERFACE_CONTROL_COMMAND(9, 9),
     /**
      * <code>STATUS_CONTROL_COMMAND = 10;</code>
      */
@@ -140,9 +140,9 @@ public final class ProtobufATCommand {
      */
     public static final int GENERAL_COMMAND_VALUE = 8;
     /**
-     * <code>SERIAL_INTERFACE_COMMAND = 9;</code>
+     * <code>SERIAL_INTERFACE_CONTROL_COMMAND = 9;</code>
      */
-    public static final int SERIAL_INTERFACE_COMMAND_VALUE = 9;
+    public static final int SERIAL_INTERFACE_CONTROL_COMMAND_VALUE = 9;
     /**
      * <code>STATUS_CONTROL_COMMAND = 10;</code>
      */
@@ -206,7 +206,7 @@ public final class ProtobufATCommand {
         case 6: return SMTP_COMMAND;
         case 7: return STK_COMMAND;
         case 8: return GENERAL_COMMAND;
-        case 9: return SERIAL_INTERFACE_COMMAND;
+        case 9: return SERIAL_INTERFACE_CONTROL_COMMAND;
         case 10: return STATUS_CONTROL_COMMAND;
         case 11: return SIM_RELATED_COMMAND;
         case 12: return NETWORK_SERVICE_COMMAND;
@@ -11214,6 +11214,152 @@ public final class ProtobufATCommand {
   }
 
   /**
+   * Protobuf enum {@code com.rtrk.protobufatcommand.Disconnect}
+   */
+  public enum Disconnect
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>DISCONECT_FROM_LINE_AND_TERMINATE_CALL = 0;</code>
+     */
+    DISCONECT_FROM_LINE_AND_TERMINATE_CALL(0, 0),
+    ;
+
+    /**
+     * <code>DISCONECT_FROM_LINE_AND_TERMINATE_CALL = 0;</code>
+     */
+    public static final int DISCONECT_FROM_LINE_AND_TERMINATE_CALL_VALUE = 0;
+
+
+    public final int getNumber() { return value; }
+
+    public static Disconnect valueOf(int value) {
+      switch (value) {
+        case 0: return DISCONECT_FROM_LINE_AND_TERMINATE_CALL;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<Disconnect>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static com.google.protobuf.Internal.EnumLiteMap<Disconnect>
+        internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<Disconnect>() {
+            public Disconnect findValueByNumber(int number) {
+              return Disconnect.valueOf(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(index);
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return com.rtrk.atcommand.protobuf.ProtobufATCommand.getDescriptor().getEnumTypes().get(99);
+    }
+
+    private static final Disconnect[] VALUES = values();
+
+    public static Disconnect valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int index;
+    private final int value;
+
+    private Disconnect(int index, int value) {
+      this.index = index;
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:com.rtrk.protobufatcommand.Disconnect)
+  }
+
+  /**
+   * Protobuf enum {@code com.rtrk.protobufatcommand.DataMode}
+   */
+  public enum DataMode
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>CALL_SWITCH_FROM_COMMAND_MODE_TO_DATA_MODE = 0;</code>
+     */
+    CALL_SWITCH_FROM_COMMAND_MODE_TO_DATA_MODE(0, 0),
+    ;
+
+    /**
+     * <code>CALL_SWITCH_FROM_COMMAND_MODE_TO_DATA_MODE = 0;</code>
+     */
+    public static final int CALL_SWITCH_FROM_COMMAND_MODE_TO_DATA_MODE_VALUE = 0;
+
+
+    public final int getNumber() { return value; }
+
+    public static DataMode valueOf(int value) {
+      switch (value) {
+        case 0: return CALL_SWITCH_FROM_COMMAND_MODE_TO_DATA_MODE;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<DataMode>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static com.google.protobuf.Internal.EnumLiteMap<DataMode>
+        internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<DataMode>() {
+            public DataMode findValueByNumber(int number) {
+              return DataMode.valueOf(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(index);
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return com.rtrk.atcommand.protobuf.ProtobufATCommand.getDescriptor().getEnumTypes().get(100);
+    }
+
+    private static final DataMode[] VALUES = values();
+
+    public static DataMode valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int index;
+    private final int value;
+
+    private DataMode(int index, int value) {
+      this.index = index;
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:com.rtrk.protobufatcommand.DataMode)
+  }
+
+  /**
    * Protobuf enum {@code com.rtrk.protobufatcommand.SMSMessageType}
    */
   public enum SMSMessageType
@@ -11432,7 +11578,7 @@ public final class ProtobufATCommand {
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return com.rtrk.atcommand.protobuf.ProtobufATCommand.getDescriptor().getEnumTypes().get(99);
+      return com.rtrk.atcommand.protobuf.ProtobufATCommand.getDescriptor().getEnumTypes().get(101);
     }
 
     private static final SMSMessageType[] VALUES = values();
@@ -11523,7 +11669,7 @@ public final class ProtobufATCommand {
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return com.rtrk.atcommand.protobuf.ProtobufATCommand.getDescriptor().getEnumTypes().get(100);
+      return com.rtrk.atcommand.protobuf.ProtobufATCommand.getDescriptor().getEnumTypes().get(102);
     }
 
     private static final CodeMode[] VALUES = values();
@@ -11605,7 +11751,7 @@ public final class ProtobufATCommand {
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return com.rtrk.atcommand.protobuf.ProtobufATCommand.getDescriptor().getEnumTypes().get(101);
+      return com.rtrk.atcommand.protobuf.ProtobufATCommand.getDescriptor().getEnumTypes().get(103);
     }
 
     private static final BufferMode[] VALUES = values();
@@ -11705,7 +11851,7 @@ public final class ProtobufATCommand {
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return com.rtrk.atcommand.protobuf.ProtobufATCommand.getDescriptor().getEnumTypes().get(102);
+      return com.rtrk.atcommand.protobuf.ProtobufATCommand.getDescriptor().getEnumTypes().get(104);
     }
 
     private static final StoreSMSRule[] VALUES = values();
@@ -11796,7 +11942,7 @@ public final class ProtobufATCommand {
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return com.rtrk.atcommand.protobuf.ProtobufATCommand.getDescriptor().getEnumTypes().get(103);
+      return com.rtrk.atcommand.protobuf.ProtobufATCommand.getDescriptor().getEnumTypes().get(105);
     }
 
     private static final StoreCBMRule[] VALUES = values();
@@ -11896,7 +12042,7 @@ public final class ProtobufATCommand {
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return com.rtrk.atcommand.protobuf.ProtobufATCommand.getDescriptor().getEnumTypes().get(104);
+      return com.rtrk.atcommand.protobuf.ProtobufATCommand.getDescriptor().getEnumTypes().get(106);
     }
 
     private static final MessageIndication[] VALUES = values();
@@ -12005,7 +12151,7 @@ public final class ProtobufATCommand {
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return com.rtrk.atcommand.protobuf.ProtobufATCommand.getDescriptor().getEnumTypes().get(105);
+      return com.rtrk.atcommand.protobuf.ProtobufATCommand.getDescriptor().getEnumTypes().get(107);
     }
 
     private static final MessageStatus[] VALUES = values();
@@ -12087,7 +12233,7 @@ public final class ProtobufATCommand {
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return com.rtrk.atcommand.protobuf.ProtobufATCommand.getDescriptor().getEnumTypes().get(106);
+      return com.rtrk.atcommand.protobuf.ProtobufATCommand.getDescriptor().getEnumTypes().get(108);
     }
 
     private static final MessageMode[] VALUES = values();
@@ -12196,7 +12342,7 @@ public final class ProtobufATCommand {
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return com.rtrk.atcommand.protobuf.ProtobufATCommand.getDescriptor().getEnumTypes().get(107);
+      return com.rtrk.atcommand.protobuf.ProtobufATCommand.getDescriptor().getEnumTypes().get(109);
     }
 
     private static final DelFlag[] VALUES = values();
@@ -12278,7 +12424,7 @@ public final class ProtobufATCommand {
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return com.rtrk.atcommand.protobuf.ProtobufATCommand.getDescriptor().getEnumTypes().get(108);
+      return com.rtrk.atcommand.protobuf.ProtobufATCommand.getDescriptor().getEnumTypes().get(110);
     }
 
     private static final MessageFormat[] VALUES = values();
@@ -12360,7 +12506,7 @@ public final class ProtobufATCommand {
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return com.rtrk.atcommand.protobuf.ProtobufATCommand.getDescriptor().getEnumTypes().get(109);
+      return com.rtrk.atcommand.protobuf.ProtobufATCommand.getDescriptor().getEnumTypes().get(111);
     }
 
     private static final MessageService[] VALUES = values();
@@ -12469,7 +12615,7 @@ public final class ProtobufATCommand {
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return com.rtrk.atcommand.protobuf.ProtobufATCommand.getDescriptor().getEnumTypes().get(110);
+      return com.rtrk.atcommand.protobuf.ProtobufATCommand.getDescriptor().getEnumTypes().get(112);
     }
 
     private static final PhonebookMessageType[] VALUES = values();
@@ -12551,7 +12697,7 @@ public final class ProtobufATCommand {
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return com.rtrk.atcommand.protobuf.ProtobufATCommand.getDescriptor().getEnumTypes().get(111);
+      return com.rtrk.atcommand.protobuf.ProtobufATCommand.getDescriptor().getEnumTypes().get(113);
     }
 
     private static final NumberType[] VALUES = values();
@@ -12723,7 +12869,7 @@ public final class ProtobufATCommand {
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return com.rtrk.atcommand.protobuf.ProtobufATCommand.getDescriptor().getEnumTypes().get(112);
+      return com.rtrk.atcommand.protobuf.ProtobufATCommand.getDescriptor().getEnumTypes().get(114);
     }
 
     private static final GPRSMessageType[] VALUES = values();
@@ -12823,7 +12969,7 @@ public final class ProtobufATCommand {
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return com.rtrk.atcommand.protobuf.ProtobufATCommand.getDescriptor().getEnumTypes().get(113);
+      return com.rtrk.atcommand.protobuf.ProtobufATCommand.getDescriptor().getEnumTypes().get(115);
     }
 
     private static final ServiceType[] VALUES = values();
@@ -12905,7 +13051,7 @@ public final class ProtobufATCommand {
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return com.rtrk.atcommand.protobuf.ProtobufATCommand.getDescriptor().getEnumTypes().get(114);
+      return com.rtrk.atcommand.protobuf.ProtobufATCommand.getDescriptor().getEnumTypes().get(116);
     }
 
     private static final EventReportingMode[] VALUES = values();
@@ -13275,7 +13421,7 @@ public final class ProtobufATCommand {
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return com.rtrk.atcommand.protobuf.ProtobufATCommand.getDescriptor().getEnumTypes().get(115);
+      return com.rtrk.atcommand.protobuf.ProtobufATCommand.getDescriptor().getEnumTypes().get(117);
     }
 
     private static final TCPIPMessageType[] VALUES = values();
@@ -13393,7 +13539,7 @@ public final class ProtobufATCommand {
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return com.rtrk.atcommand.protobuf.ProtobufATCommand.getDescriptor().getEnumTypes().get(116);
+      return com.rtrk.atcommand.protobuf.ProtobufATCommand.getDescriptor().getEnumTypes().get(118);
     }
 
     private static final SynchronizationResult[] VALUES = values();
@@ -13493,7 +13639,7 @@ public final class ProtobufATCommand {
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return com.rtrk.atcommand.protobuf.ProtobufATCommand.getDescriptor().getEnumTypes().get(117);
+      return com.rtrk.atcommand.protobuf.ProtobufATCommand.getDescriptor().getEnumTypes().get(119);
     }
 
     private static final FinalResult[] VALUES = values();
@@ -13575,7 +13721,7 @@ public final class ProtobufATCommand {
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return com.rtrk.atcommand.protobuf.ProtobufATCommand.getDescriptor().getEnumTypes().get(118);
+      return com.rtrk.atcommand.protobuf.ProtobufATCommand.getDescriptor().getEnumTypes().get(120);
     }
 
     private static final PingResult[] VALUES = values();
@@ -13657,7 +13803,7 @@ public final class ProtobufATCommand {
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return com.rtrk.atcommand.protobuf.ProtobufATCommand.getDescriptor().getEnumTypes().get(119);
+      return com.rtrk.atcommand.protobuf.ProtobufATCommand.getDescriptor().getEnumTypes().get(121);
     }
 
     private static final ServerClient[] VALUES = values();
@@ -13748,7 +13894,7 @@ public final class ProtobufATCommand {
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return com.rtrk.atcommand.protobuf.ProtobufATCommand.getDescriptor().getEnumTypes().get(120);
+      return com.rtrk.atcommand.protobuf.ProtobufATCommand.getDescriptor().getEnumTypes().get(122);
     }
 
     private static final ReceivedDataMode[] VALUES = values();
@@ -13857,7 +14003,7 @@ public final class ProtobufATCommand {
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return com.rtrk.atcommand.protobuf.ProtobufATCommand.getDescriptor().getEnumTypes().get(121);
+      return com.rtrk.atcommand.protobuf.ProtobufATCommand.getDescriptor().getEnumTypes().get(123);
     }
 
     private static final Channel[] VALUES = values();
@@ -13939,7 +14085,7 @@ public final class ProtobufATCommand {
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return com.rtrk.atcommand.protobuf.ProtobufATCommand.getDescriptor().getEnumTypes().get(122);
+      return com.rtrk.atcommand.protobuf.ProtobufATCommand.getDescriptor().getEnumTypes().get(124);
     }
 
     private static final TransferMode[] VALUES = values();
@@ -14021,7 +14167,7 @@ public final class ProtobufATCommand {
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return com.rtrk.atcommand.protobuf.ProtobufATCommand.getDescriptor().getEnumTypes().get(123);
+      return com.rtrk.atcommand.protobuf.ProtobufATCommand.getDescriptor().getEnumTypes().get(125);
     }
 
     private static final Connection[] VALUES = values();
@@ -14103,7 +14249,7 @@ public final class ProtobufATCommand {
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return com.rtrk.atcommand.protobuf.ProtobufATCommand.getDescriptor().getEnumTypes().get(124);
+      return com.rtrk.atcommand.protobuf.ProtobufATCommand.getDescriptor().getEnumTypes().get(126);
     }
 
     private static final BearerType[] VALUES = values();
@@ -14185,7 +14331,7 @@ public final class ProtobufATCommand {
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return com.rtrk.atcommand.protobuf.ProtobufATCommand.getDescriptor().getEnumTypes().get(125);
+      return com.rtrk.atcommand.protobuf.ProtobufATCommand.getDescriptor().getEnumTypes().get(127);
     }
 
     private static final ServerType[] VALUES = values();
@@ -14285,7 +14431,7 @@ public final class ProtobufATCommand {
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return com.rtrk.atcommand.protobuf.ProtobufATCommand.getDescriptor().getEnumTypes().get(126);
+      return com.rtrk.atcommand.protobuf.ProtobufATCommand.getDescriptor().getEnumTypes().get(128);
     }
 
     private static final SendPrompt[] VALUES = values();
@@ -14367,7 +14513,7 @@ public final class ProtobufATCommand {
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return com.rtrk.atcommand.protobuf.ProtobufATCommand.getDescriptor().getEnumTypes().get(127);
+      return com.rtrk.atcommand.protobuf.ProtobufATCommand.getDescriptor().getEnumTypes().get(129);
     }
 
     private static final Timer[] VALUES = values();
@@ -14449,7 +14595,7 @@ public final class ProtobufATCommand {
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return com.rtrk.atcommand.protobuf.ProtobufATCommand.getDescriptor().getEnumTypes().get(128);
+      return com.rtrk.atcommand.protobuf.ProtobufATCommand.getDescriptor().getEnumTypes().get(130);
     }
 
     private static final IPHeader[] VALUES = values();
@@ -14531,7 +14677,7 @@ public final class ProtobufATCommand {
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return com.rtrk.atcommand.protobuf.ProtobufATCommand.getDescriptor().getEnumTypes().get(129);
+      return com.rtrk.atcommand.protobuf.ProtobufATCommand.getDescriptor().getEnumTypes().get(131);
     }
 
     private static final ServerFormat[] VALUES = values();
@@ -14694,7 +14840,7 @@ public final class ProtobufATCommand {
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return com.rtrk.atcommand.protobuf.ProtobufATCommand.getDescriptor().getEnumTypes().get(130);
+      return com.rtrk.atcommand.protobuf.ProtobufATCommand.getDescriptor().getEnumTypes().get(132);
     }
 
     private static final SupplementaryServiceMessageType[] VALUES = values();
@@ -14830,7 +14976,7 @@ public final class ProtobufATCommand {
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return com.rtrk.atcommand.protobuf.ProtobufATCommand.getDescriptor().getEnumTypes().get(131);
+      return com.rtrk.atcommand.protobuf.ProtobufATCommand.getDescriptor().getEnumTypes().get(133);
     }
 
     private static final Code1[] VALUES = values();
@@ -14903,7 +15049,7 @@ public final class ProtobufATCommand {
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return com.rtrk.atcommand.protobuf.ProtobufATCommand.getDescriptor().getEnumTypes().get(132);
+      return com.rtrk.atcommand.protobuf.ProtobufATCommand.getDescriptor().getEnumTypes().get(134);
     }
 
     private static final Code2[] VALUES = values();
@@ -14994,7 +15140,7 @@ public final class ProtobufATCommand {
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return com.rtrk.atcommand.protobuf.ProtobufATCommand.getDescriptor().getEnumTypes().get(133);
+      return com.rtrk.atcommand.protobuf.ProtobufATCommand.getDescriptor().getEnumTypes().get(135);
     }
 
     private static final SSDControl[] VALUES = values();
@@ -15094,7 +15240,7 @@ public final class ProtobufATCommand {
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return com.rtrk.atcommand.protobuf.ProtobufATCommand.getDescriptor().getEnumTypes().get(134);
+      return com.rtrk.atcommand.protobuf.ProtobufATCommand.getDescriptor().getEnumTypes().get(136);
     }
 
     private static final CLIRServiceStatus[] VALUES = values();
@@ -15185,7 +15331,7 @@ public final class ProtobufATCommand {
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return com.rtrk.atcommand.protobuf.ProtobufATCommand.getDescriptor().getEnumTypes().get(135);
+      return com.rtrk.atcommand.protobuf.ProtobufATCommand.getDescriptor().getEnumTypes().get(137);
     }
 
     private static final AdjustmentOutgoingCalls[] VALUES = values();
@@ -15276,7 +15422,7 @@ public final class ProtobufATCommand {
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return com.rtrk.atcommand.protobuf.ProtobufATCommand.getDescriptor().getEnumTypes().get(136);
+      return com.rtrk.atcommand.protobuf.ProtobufATCommand.getDescriptor().getEnumTypes().get(138);
     }
 
     private static final CLIP[] VALUES = values();
@@ -15376,7 +15522,7 @@ public final class ProtobufATCommand {
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return com.rtrk.atcommand.protobuf.ProtobufATCommand.getDescriptor().getEnumTypes().get(137);
+      return com.rtrk.atcommand.protobuf.ProtobufATCommand.getDescriptor().getEnumTypes().get(139);
     }
 
     private static final Info[] VALUES = values();
@@ -15494,7 +15640,7 @@ public final class ProtobufATCommand {
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return com.rtrk.atcommand.protobuf.ProtobufATCommand.getDescriptor().getEnumTypes().get(138);
+      return com.rtrk.atcommand.protobuf.ProtobufATCommand.getDescriptor().getEnumTypes().get(140);
     }
 
     private static final Reads[] VALUES = values();
@@ -15603,7 +15749,7 @@ public final class ProtobufATCommand {
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return com.rtrk.atcommand.protobuf.ProtobufATCommand.getDescriptor().getEnumTypes().get(139);
+      return com.rtrk.atcommand.protobuf.ProtobufATCommand.getDescriptor().getEnumTypes().get(141);
     }
 
     private static final ForwardingMode[] VALUES = values();
@@ -15829,7 +15975,7 @@ public final class ProtobufATCommand {
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return com.rtrk.atcommand.protobuf.ProtobufATCommand.getDescriptor().getEnumTypes().get(140);
+      return com.rtrk.atcommand.protobuf.ProtobufATCommand.getDescriptor().getEnumTypes().get(142);
     }
 
     private static final AudioMessageType[] VALUES = values();
@@ -15911,7 +16057,7 @@ public final class ProtobufATCommand {
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return com.rtrk.atcommand.protobuf.ProtobufATCommand.getDescriptor().getEnumTypes().get(141);
+      return com.rtrk.atcommand.protobuf.ProtobufATCommand.getDescriptor().getEnumTypes().get(143);
     }
 
     private static final Algorithm[] VALUES = values();
@@ -15993,7 +16139,7 @@ public final class ProtobufATCommand {
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return com.rtrk.atcommand.protobuf.ProtobufATCommand.getDescriptor().getEnumTypes().get(142);
+      return com.rtrk.atcommand.protobuf.ProtobufATCommand.getDescriptor().getEnumTypes().get(144);
     }
 
     private static final PersistenceTime[] VALUES = values();
@@ -16219,7 +16365,7 @@ public final class ProtobufATCommand {
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return com.rtrk.atcommand.protobuf.ProtobufATCommand.getDescriptor().getEnumTypes().get(143);
+      return com.rtrk.atcommand.protobuf.ProtobufATCommand.getDescriptor().getEnumTypes().get(145);
     }
 
     private static final DTMFCode[] VALUES = values();
@@ -16301,7 +16447,7 @@ public final class ProtobufATCommand {
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return com.rtrk.atcommand.protobuf.ProtobufATCommand.getDescriptor().getEnumTypes().get(144);
+      return com.rtrk.atcommand.protobuf.ProtobufATCommand.getDescriptor().getEnumTypes().get(146);
     }
 
     private static final DTMFOperate[] VALUES = values();
@@ -16419,7 +16565,7 @@ public final class ProtobufATCommand {
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return com.rtrk.atcommand.protobuf.ProtobufATCommand.getDescriptor().getEnumTypes().get(145);
+      return com.rtrk.atcommand.protobuf.ProtobufATCommand.getDescriptor().getEnumTypes().get(147);
     }
 
     private static final ToneDetection[] VALUES = values();
@@ -16510,7 +16656,7 @@ public final class ProtobufATCommand {
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return com.rtrk.atcommand.protobuf.ProtobufATCommand.getDescriptor().getEnumTypes().get(146);
+      return com.rtrk.atcommand.protobuf.ProtobufATCommand.getDescriptor().getEnumTypes().get(148);
     }
 
     private static final FunctionStatus[] VALUES = values();
@@ -16592,7 +16738,7 @@ public final class ProtobufATCommand {
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return com.rtrk.atcommand.protobuf.ProtobufATCommand.getDescriptor().getEnumTypes().get(147);
+      return com.rtrk.atcommand.protobuf.ProtobufATCommand.getDescriptor().getEnumTypes().get(149);
     }
 
     private static final AudioOperateFunction[] VALUES = values();
@@ -16692,7 +16838,7 @@ public final class ProtobufATCommand {
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return com.rtrk.atcommand.protobuf.ProtobufATCommand.getDescriptor().getEnumTypes().get(148);
+      return com.rtrk.atcommand.protobuf.ProtobufATCommand.getDescriptor().getEnumTypes().get(150);
     }
 
     private static final OutputPath[] VALUES = values();
@@ -16783,7 +16929,7 @@ public final class ProtobufATCommand {
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return com.rtrk.atcommand.protobuf.ProtobufATCommand.getDescriptor().getEnumTypes().get(149);
+      return com.rtrk.atcommand.protobuf.ProtobufATCommand.getDescriptor().getEnumTypes().get(151);
     }
 
     private static final AudioChannel[] VALUES = values();
@@ -16874,7 +17020,7 @@ public final class ProtobufATCommand {
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return com.rtrk.atcommand.protobuf.ProtobufATCommand.getDescriptor().getEnumTypes().get(150);
+      return com.rtrk.atcommand.protobuf.ProtobufATCommand.getDescriptor().getEnumTypes().get(152);
     }
 
     private static final MicrophoneChannel[] VALUES = values();
@@ -16956,7 +17102,7 @@ public final class ProtobufATCommand {
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return com.rtrk.atcommand.protobuf.ProtobufATCommand.getDescriptor().getEnumTypes().get(151);
+      return com.rtrk.atcommand.protobuf.ProtobufATCommand.getDescriptor().getEnumTypes().get(153);
     }
 
     private static final SoundMode[] VALUES = values();
@@ -17047,7 +17193,7 @@ public final class ProtobufATCommand {
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return com.rtrk.atcommand.protobuf.ProtobufATCommand.getDescriptor().getEnumTypes().get(152);
+      return com.rtrk.atcommand.protobuf.ProtobufATCommand.getDescriptor().getEnumTypes().get(154);
     }
 
     private static final SpeakerMode[] VALUES = values();
@@ -17147,7 +17293,7 @@ public final class ProtobufATCommand {
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return com.rtrk.atcommand.protobuf.ProtobufATCommand.getDescriptor().getEnumTypes().get(153);
+      return com.rtrk.atcommand.protobuf.ProtobufATCommand.getDescriptor().getEnumTypes().get(155);
     }
 
     private static final SpeakerLoudness[] VALUES = values();
@@ -17274,7 +17420,7 @@ public final class ProtobufATCommand {
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return com.rtrk.atcommand.protobuf.ProtobufATCommand.getDescriptor().getEnumTypes().get(154);
+      return com.rtrk.atcommand.protobuf.ProtobufATCommand.getDescriptor().getEnumTypes().get(156);
     }
 
     private static final HardwareRelatedMessageType[] VALUES = values();
@@ -17374,7 +17520,7 @@ public final class ProtobufATCommand {
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return com.rtrk.atcommand.protobuf.ProtobufATCommand.getDescriptor().getEnumTypes().get(155);
+      return com.rtrk.atcommand.protobuf.ProtobufATCommand.getDescriptor().getEnumTypes().get(157);
     }
 
     private static final ThresholdType[] VALUES = values();
@@ -17465,7 +17611,7 @@ public final class ProtobufATCommand {
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return com.rtrk.atcommand.protobuf.ProtobufATCommand.getDescriptor().getEnumTypes().get(156);
+      return com.rtrk.atcommand.protobuf.ProtobufATCommand.getDescriptor().getEnumTypes().get(158);
     }
 
     private static final LedMode[] VALUES = values();
@@ -17556,7 +17702,7 @@ public final class ProtobufATCommand {
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return com.rtrk.atcommand.protobuf.ProtobufATCommand.getDescriptor().getEnumTypes().get(157);
+      return com.rtrk.atcommand.protobuf.ProtobufATCommand.getDescriptor().getEnumTypes().get(159);
     }
 
     private static final SlowClock[] VALUES = values();
@@ -17638,7 +17784,7 @@ public final class ProtobufATCommand {
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return com.rtrk.atcommand.protobuf.ProtobufATCommand.getDescriptor().getEnumTypes().get(158);
+      return com.rtrk.atcommand.protobuf.ProtobufATCommand.getDescriptor().getEnumTypes().get(160);
     }
 
     private static final ReadStatus[] VALUES = values();
@@ -17729,7 +17875,7 @@ public final class ProtobufATCommand {
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return com.rtrk.atcommand.protobuf.ProtobufATCommand.getDescriptor().getEnumTypes().get(159);
+      return com.rtrk.atcommand.protobuf.ProtobufATCommand.getDescriptor().getEnumTypes().get(161);
     }
 
     private static final BatteryCharge[] VALUES = values();
@@ -17820,7 +17966,7 @@ public final class ProtobufATCommand {
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return com.rtrk.atcommand.protobuf.ProtobufATCommand.getDescriptor().getEnumTypes().get(160);
+      return com.rtrk.atcommand.protobuf.ProtobufATCommand.getDescriptor().getEnumTypes().get(162);
     }
 
     private static final AlarmPower[] VALUES = values();
@@ -17920,7 +18066,7 @@ public final class ProtobufATCommand {
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return com.rtrk.atcommand.protobuf.ProtobufATCommand.getDescriptor().getEnumTypes().get(161);
+      return com.rtrk.atcommand.protobuf.ProtobufATCommand.getDescriptor().getEnumTypes().get(163);
     }
 
     private static final Repeat[] VALUES = values();
@@ -18047,7 +18193,7 @@ public final class ProtobufATCommand {
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return com.rtrk.atcommand.protobuf.ProtobufATCommand.getDescriptor().getEnumTypes().get(162);
+      return com.rtrk.atcommand.protobuf.ProtobufATCommand.getDescriptor().getEnumTypes().get(164);
     }
 
     private static final OthersMessageType[] VALUES = values();
@@ -18138,7 +18284,7 @@ public final class ProtobufATCommand {
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return com.rtrk.atcommand.protobuf.ProtobufATCommand.getDescriptor().getEnumTypes().get(163);
+      return com.rtrk.atcommand.protobuf.ProtobufATCommand.getDescriptor().getEnumTypes().get(165);
     }
 
     private static final IndMode[] VALUES = values();
@@ -18229,7 +18375,7 @@ public final class ProtobufATCommand {
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return com.rtrk.atcommand.protobuf.ProtobufATCommand.getDescriptor().getEnumTypes().get(164);
+      return com.rtrk.atcommand.protobuf.ProtobufATCommand.getDescriptor().getEnumTypes().get(166);
     }
 
     private static final TimeMode[] VALUES = values();
@@ -19643,7 +19789,7 @@ public final class ProtobufATCommand {
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return com.rtrk.atcommand.protobuf.ProtobufATCommand.getDescriptor().getEnumTypes().get(165);
+      return com.rtrk.atcommand.protobuf.ProtobufATCommand.getDescriptor().getEnumTypes().get(167);
     }
 
     private static final Error[] VALUES = values();
@@ -19743,7 +19889,7 @@ public final class ProtobufATCommand {
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return com.rtrk.atcommand.protobuf.ProtobufATCommand.getDescriptor().getEnumTypes().get(166);
+      return com.rtrk.atcommand.protobuf.ProtobufATCommand.getDescriptor().getEnumTypes().get(168);
     }
 
     private static final Action[] VALUES = values();
@@ -62494,6 +62640,69 @@ public final class ProtobufATCommand {
     com.rtrk.atcommand.protobuf.ProtobufATCommand.Action getAction();
 
     /**
+     * <code>optional .com.rtrk.protobufatcommand.Disconnect disconnect = 34;</code>
+     */
+    boolean hasDisconnect();
+    /**
+     * <code>optional .com.rtrk.protobufatcommand.Disconnect disconnect = 34;</code>
+     */
+    com.rtrk.atcommand.protobuf.ProtobufATCommand.Disconnect getDisconnect();
+
+    /**
+     * <code>optional .com.rtrk.protobufatcommand.DataMode dataMode = 35;</code>
+     */
+    boolean hasDataMode();
+    /**
+     * <code>optional .com.rtrk.protobufatcommand.DataMode dataMode = 35;</code>
+     */
+    com.rtrk.atcommand.protobuf.ProtobufATCommand.DataMode getDataMode();
+
+    /**
+     * <code>optional int32 ringNumbers = 36;</code>
+     */
+    boolean hasRingNumbers();
+    /**
+     * <code>optional int32 ringNumbers = 36;</code>
+     */
+    int getRingNumbers();
+
+    /**
+     * <code>optional int32 blindDialingWait = 37;</code>
+     */
+    boolean hasBlindDialingWait();
+    /**
+     * <code>optional int32 blindDialingWait = 37;</code>
+     */
+    int getBlindDialingWait();
+
+    /**
+     * <code>optional int32 connectionCompletionWait = 38;</code>
+     */
+    boolean hasConnectionCompletionWait();
+    /**
+     * <code>optional int32 connectionCompletionWait = 38;</code>
+     */
+    int getConnectionCompletionWait();
+
+    /**
+     * <code>optional int32 commaDialModifierWait = 39;</code>
+     */
+    boolean hasCommaDialModifierWait();
+    /**
+     * <code>optional int32 commaDialModifierWait = 39;</code>
+     */
+    int getCommaDialModifierWait();
+
+    /**
+     * <code>optional int32 delay = 40;</code>
+     */
+    boolean hasDelay();
+    /**
+     * <code>optional int32 delay = 40;</code>
+     */
+    int getDelay();
+
+    /**
      * <code>optional string number = 23;</code>
      */
     boolean hasNumber();
@@ -62854,6 +63063,7 @@ public final class ProtobufATCommand {
         throws com.google.protobuf.InvalidProtocolBufferException {
       initFields();
       int mutable_bitField0_ = 0;
+      int mutable_bitField1_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -62895,37 +63105,37 @@ public final class ProtobufATCommand {
             }
             case 50: {
               com.google.protobuf.ByteString bs = input.readBytes();
-              bitField0_ |= 0x00000008;
+              bitField0_ |= 0x00000400;
               gSMModifier_ = bs;
               break;
             }
             case 56: {
-              bitField0_ |= 0x00000010;
+              bitField0_ |= 0x00000800;
               interworkinWindowsSize_ = input.readInt32();
               break;
             }
             case 64: {
-              bitField0_ |= 0x00000020;
+              bitField0_ |= 0x00001000;
               mobileWindowSize_ = input.readInt32();
               break;
             }
             case 72: {
-              bitField0_ |= 0x00000040;
+              bitField0_ |= 0x00002000;
               acknowledmentTimer_ = input.readInt32();
               break;
             }
             case 80: {
-              bitField0_ |= 0x00000080;
+              bitField0_ |= 0x00004000;
               retransimissionAttempts_ = input.readInt32();
               break;
             }
             case 88: {
-              bitField0_ |= 0x00000100;
+              bitField0_ |= 0x00008000;
               rPLVersion_ = input.readInt32();
               break;
             }
             case 96: {
-              bitField0_ |= 0x00000200;
+              bitField0_ |= 0x00010000;
               resequencingPeriod_ = input.readInt32();
               break;
             }
@@ -62935,13 +63145,13 @@ public final class ProtobufATCommand {
               if (value == null) {
                 unknownFields.mergeVarintField(14, rawValue);
               } else {
-                bitField0_ |= 0x00000400;
+                bitField0_ |= 0x00020000;
                 addresType_ = value;
               }
               break;
             }
             case 120: {
-              bitField0_ |= 0x00000800;
+              bitField0_ |= 0x00040000;
               index_ = input.readInt32();
               break;
             }
@@ -62951,7 +63161,7 @@ public final class ProtobufATCommand {
               if (value == null) {
                 unknownFields.mergeVarintField(16, rawValue);
               } else {
-                bitField0_ |= 0x00001000;
+                bitField0_ |= 0x00080000;
                 callDir_ = value;
               }
               break;
@@ -62962,7 +63172,7 @@ public final class ProtobufATCommand {
               if (value == null) {
                 unknownFields.mergeVarintField(17, rawValue);
               } else {
-                bitField0_ |= 0x00002000;
+                bitField0_ |= 0x00100000;
                 callState_ = value;
               }
               break;
@@ -62973,60 +63183,60 @@ public final class ProtobufATCommand {
               if (value == null) {
                 unknownFields.mergeVarintField(18, rawValue);
               } else {
-                bitField0_ |= 0x00004000;
+                bitField0_ |= 0x00200000;
                 callMode_ = value;
               }
               break;
             }
             case 152: {
-              bitField0_ |= 0x00008000;
+              bitField0_ |= 0x00400000;
               callIsOneOfMultiparty_ = input.readBool();
               break;
             }
             case 160: {
-              bitField0_ |= 0x00010000;
+              bitField0_ |= 0x00800000;
               speechChannel_ = input.readInt32();
               break;
             }
             case 168: {
-              bitField0_ |= 0x00020000;
+              bitField0_ |= 0x01000000;
               disableATH_ = input.readBool();
               break;
             }
             case 176: {
-              bitField0_ |= 0x00040000;
+              bitField0_ |= 0x02000000;
               setUpVoiceCall_ = input.readBool();
               break;
             }
             case 186: {
               com.google.protobuf.ByteString bs = input.readBytes();
-              bitField0_ |= 0x00000004;
+              bitField0_ |= 0x00000200;
               number_ = bs;
               break;
             }
             case 192: {
-              bitField0_ |= 0x00080000;
+              bitField0_ |= 0x04000000;
               isResponse_ = input.readBool();
               break;
             }
             case 202: {
               com.google.protobuf.ByteString bs = input.readBytes();
-              bitField0_ |= 0x00100000;
+              bitField0_ |= 0x08000000;
               description_ = bs;
               break;
             }
             case 208: {
-              bitField0_ |= 0x00200000;
+              bitField0_ |= 0x10000000;
               n_ = input.readInt32();
               break;
             }
             case 216: {
-              bitField0_ |= 0x00400000;
+              bitField0_ |= 0x20000000;
               serviceReportingControlEnabled_ = input.readBool();
               break;
             }
             case 224: {
-              bitField0_ |= 0x00800000;
+              bitField0_ |= 0x40000000;
               enableExtendedFormat_ = input.readBool();
               break;
             }
@@ -63036,7 +63246,7 @@ public final class ProtobufATCommand {
               if (value == null) {
                 unknownFields.mergeVarintField(29, rawValue);
               } else {
-                bitField0_ |= 0x01000000;
+                bitField0_ |= 0x80000000;
                 schemeMode_ = value;
               }
               break;
@@ -63047,7 +63257,7 @@ public final class ProtobufATCommand {
               if (value == null) {
                 unknownFields.mergeVarintField(30, rawValue);
               } else {
-                bitField0_ |= 0x02000000;
+                bitField1_ |= 0x00000001;
                 alternatingMode_ = value;
               }
               break;
@@ -63058,19 +63268,66 @@ public final class ProtobufATCommand {
               if (value == null) {
                 unknownFields.mergeVarintField(31, rawValue);
               } else {
-                bitField0_ |= 0x04000000;
+                bitField1_ |= 0x00000002;
                 speechMode_ = value;
               }
               break;
             }
             case 256: {
-              bitField0_ |= 0x08000000;
+              bitField1_ |= 0x00000004;
               enableReportSpeechChannelType_ = input.readBool();
               break;
             }
             case 264: {
-              bitField0_ |= 0x10000000;
+              bitField1_ |= 0x00000008;
               delimiter_ = input.readBool();
+              break;
+            }
+            case 272: {
+              int rawValue = input.readEnum();
+              com.rtrk.atcommand.protobuf.ProtobufATCommand.Disconnect value = com.rtrk.atcommand.protobuf.ProtobufATCommand.Disconnect.valueOf(rawValue);
+              if (value == null) {
+                unknownFields.mergeVarintField(34, rawValue);
+              } else {
+                bitField0_ |= 0x00000004;
+                disconnect_ = value;
+              }
+              break;
+            }
+            case 280: {
+              int rawValue = input.readEnum();
+              com.rtrk.atcommand.protobuf.ProtobufATCommand.DataMode value = com.rtrk.atcommand.protobuf.ProtobufATCommand.DataMode.valueOf(rawValue);
+              if (value == null) {
+                unknownFields.mergeVarintField(35, rawValue);
+              } else {
+                bitField0_ |= 0x00000008;
+                dataMode_ = value;
+              }
+              break;
+            }
+            case 288: {
+              bitField0_ |= 0x00000010;
+              ringNumbers_ = input.readInt32();
+              break;
+            }
+            case 296: {
+              bitField0_ |= 0x00000020;
+              blindDialingWait_ = input.readInt32();
+              break;
+            }
+            case 304: {
+              bitField0_ |= 0x00000040;
+              connectionCompletionWait_ = input.readInt32();
+              break;
+            }
+            case 312: {
+              bitField0_ |= 0x00000080;
+              commaDialModifierWait_ = input.readInt32();
+              break;
+            }
+            case 320: {
+              bitField0_ |= 0x00000100;
+              delay_ = input.readInt32();
               break;
             }
           }
@@ -63113,6 +63370,7 @@ public final class ProtobufATCommand {
     }
 
     private int bitField0_;
+    private int bitField1_;
     public static final int MESSAGETYPE_FIELD_NUMBER = 1;
     private com.rtrk.atcommand.protobuf.ProtobufATCommand.CallRelatedMessageType messageType_;
     /**
@@ -63143,13 +63401,118 @@ public final class ProtobufATCommand {
       return action_;
     }
 
+    public static final int DISCONNECT_FIELD_NUMBER = 34;
+    private com.rtrk.atcommand.protobuf.ProtobufATCommand.Disconnect disconnect_;
+    /**
+     * <code>optional .com.rtrk.protobufatcommand.Disconnect disconnect = 34;</code>
+     */
+    public boolean hasDisconnect() {
+      return ((bitField0_ & 0x00000004) == 0x00000004);
+    }
+    /**
+     * <code>optional .com.rtrk.protobufatcommand.Disconnect disconnect = 34;</code>
+     */
+    public com.rtrk.atcommand.protobuf.ProtobufATCommand.Disconnect getDisconnect() {
+      return disconnect_;
+    }
+
+    public static final int DATAMODE_FIELD_NUMBER = 35;
+    private com.rtrk.atcommand.protobuf.ProtobufATCommand.DataMode dataMode_;
+    /**
+     * <code>optional .com.rtrk.protobufatcommand.DataMode dataMode = 35;</code>
+     */
+    public boolean hasDataMode() {
+      return ((bitField0_ & 0x00000008) == 0x00000008);
+    }
+    /**
+     * <code>optional .com.rtrk.protobufatcommand.DataMode dataMode = 35;</code>
+     */
+    public com.rtrk.atcommand.protobuf.ProtobufATCommand.DataMode getDataMode() {
+      return dataMode_;
+    }
+
+    public static final int RINGNUMBERS_FIELD_NUMBER = 36;
+    private int ringNumbers_;
+    /**
+     * <code>optional int32 ringNumbers = 36;</code>
+     */
+    public boolean hasRingNumbers() {
+      return ((bitField0_ & 0x00000010) == 0x00000010);
+    }
+    /**
+     * <code>optional int32 ringNumbers = 36;</code>
+     */
+    public int getRingNumbers() {
+      return ringNumbers_;
+    }
+
+    public static final int BLINDDIALINGWAIT_FIELD_NUMBER = 37;
+    private int blindDialingWait_;
+    /**
+     * <code>optional int32 blindDialingWait = 37;</code>
+     */
+    public boolean hasBlindDialingWait() {
+      return ((bitField0_ & 0x00000020) == 0x00000020);
+    }
+    /**
+     * <code>optional int32 blindDialingWait = 37;</code>
+     */
+    public int getBlindDialingWait() {
+      return blindDialingWait_;
+    }
+
+    public static final int CONNECTIONCOMPLETIONWAIT_FIELD_NUMBER = 38;
+    private int connectionCompletionWait_;
+    /**
+     * <code>optional int32 connectionCompletionWait = 38;</code>
+     */
+    public boolean hasConnectionCompletionWait() {
+      return ((bitField0_ & 0x00000040) == 0x00000040);
+    }
+    /**
+     * <code>optional int32 connectionCompletionWait = 38;</code>
+     */
+    public int getConnectionCompletionWait() {
+      return connectionCompletionWait_;
+    }
+
+    public static final int COMMADIALMODIFIERWAIT_FIELD_NUMBER = 39;
+    private int commaDialModifierWait_;
+    /**
+     * <code>optional int32 commaDialModifierWait = 39;</code>
+     */
+    public boolean hasCommaDialModifierWait() {
+      return ((bitField0_ & 0x00000080) == 0x00000080);
+    }
+    /**
+     * <code>optional int32 commaDialModifierWait = 39;</code>
+     */
+    public int getCommaDialModifierWait() {
+      return commaDialModifierWait_;
+    }
+
+    public static final int DELAY_FIELD_NUMBER = 40;
+    private int delay_;
+    /**
+     * <code>optional int32 delay = 40;</code>
+     */
+    public boolean hasDelay() {
+      return ((bitField0_ & 0x00000100) == 0x00000100);
+    }
+    /**
+     * <code>optional int32 delay = 40;</code>
+     */
+    public int getDelay() {
+      return delay_;
+    }
+
     public static final int NUMBER_FIELD_NUMBER = 23;
     private java.lang.Object number_;
     /**
      * <code>optional string number = 23;</code>
      */
     public boolean hasNumber() {
-      return ((bitField0_ & 0x00000004) == 0x00000004);
+      return ((bitField0_ & 0x00000200) == 0x00000200);
     }
     /**
      * <code>optional string number = 23;</code>
@@ -63195,7 +63558,7 @@ public final class ProtobufATCommand {
      * </pre>
      */
     public boolean hasGSMModifier() {
-      return ((bitField0_ & 0x00000008) == 0x00000008);
+      return ((bitField0_ & 0x00000400) == 0x00000400);
     }
     /**
      * <code>optional string GSMModifier = 6;</code>
@@ -63249,7 +63612,7 @@ public final class ProtobufATCommand {
      * </pre>
      */
     public boolean hasInterworkinWindowsSize() {
-      return ((bitField0_ & 0x00000010) == 0x00000010);
+      return ((bitField0_ & 0x00000800) == 0x00000800);
     }
     /**
      * <code>optional int32 interworkinWindowsSize = 7;</code>
@@ -63272,7 +63635,7 @@ public final class ProtobufATCommand {
      * </pre>
      */
     public boolean hasMobileWindowSize() {
-      return ((bitField0_ & 0x00000020) == 0x00000020);
+      return ((bitField0_ & 0x00001000) == 0x00001000);
     }
     /**
      * <code>optional int32 mobileWindowSize = 8;</code>
@@ -63295,7 +63658,7 @@ public final class ProtobufATCommand {
      * </pre>
      */
     public boolean hasAcknowledmentTimer() {
-      return ((bitField0_ & 0x00000040) == 0x00000040);
+      return ((bitField0_ & 0x00002000) == 0x00002000);
     }
     /**
      * <code>optional int32 acknowledmentTimer = 9;</code>
@@ -63318,7 +63681,7 @@ public final class ProtobufATCommand {
      * </pre>
      */
     public boolean hasRetransimissionAttempts() {
-      return ((bitField0_ & 0x00000080) == 0x00000080);
+      return ((bitField0_ & 0x00004000) == 0x00004000);
     }
     /**
      * <code>optional int32 retransimissionAttempts = 10;</code>
@@ -63341,7 +63704,7 @@ public final class ProtobufATCommand {
      * </pre>
      */
     public boolean hasRPLVersion() {
-      return ((bitField0_ & 0x00000100) == 0x00000100);
+      return ((bitField0_ & 0x00008000) == 0x00008000);
     }
     /**
      * <code>optional int32 RPLVersion = 11;</code>
@@ -63364,7 +63727,7 @@ public final class ProtobufATCommand {
      * </pre>
      */
     public boolean hasResequencingPeriod() {
-      return ((bitField0_ & 0x00000200) == 0x00000200);
+      return ((bitField0_ & 0x00010000) == 0x00010000);
     }
     /**
      * <code>optional int32 resequencingPeriod = 12;</code>
@@ -63383,7 +63746,7 @@ public final class ProtobufATCommand {
      * <code>optional .com.rtrk.protobufatcommand.AddressType addresType = 14 [default = UNKNOW_TYPE];</code>
      */
     public boolean hasAddresType() {
-      return ((bitField0_ & 0x00000400) == 0x00000400);
+      return ((bitField0_ & 0x00020000) == 0x00020000);
     }
     /**
      * <code>optional .com.rtrk.protobufatcommand.AddressType addresType = 14 [default = UNKNOW_TYPE];</code>
@@ -63398,7 +63761,7 @@ public final class ProtobufATCommand {
      * <code>optional int32 index = 15;</code>
      */
     public boolean hasIndex() {
-      return ((bitField0_ & 0x00000800) == 0x00000800);
+      return ((bitField0_ & 0x00040000) == 0x00040000);
     }
     /**
      * <code>optional int32 index = 15;</code>
@@ -63413,7 +63776,7 @@ public final class ProtobufATCommand {
      * <code>optional .com.rtrk.protobufatcommand.CallDir callDir = 16;</code>
      */
     public boolean hasCallDir() {
-      return ((bitField0_ & 0x00001000) == 0x00001000);
+      return ((bitField0_ & 0x00080000) == 0x00080000);
     }
     /**
      * <code>optional .com.rtrk.protobufatcommand.CallDir callDir = 16;</code>
@@ -63428,7 +63791,7 @@ public final class ProtobufATCommand {
      * <code>optional .com.rtrk.protobufatcommand.CallState callState = 17;</code>
      */
     public boolean hasCallState() {
-      return ((bitField0_ & 0x00002000) == 0x00002000);
+      return ((bitField0_ & 0x00100000) == 0x00100000);
     }
     /**
      * <code>optional .com.rtrk.protobufatcommand.CallState callState = 17;</code>
@@ -63443,7 +63806,7 @@ public final class ProtobufATCommand {
      * <code>optional .com.rtrk.protobufatcommand.CallMode callMode = 18;</code>
      */
     public boolean hasCallMode() {
-      return ((bitField0_ & 0x00004000) == 0x00004000);
+      return ((bitField0_ & 0x00200000) == 0x00200000);
     }
     /**
      * <code>optional .com.rtrk.protobufatcommand.CallMode callMode = 18;</code>
@@ -63458,7 +63821,7 @@ public final class ProtobufATCommand {
      * <code>optional bool callIsOneOfMultiparty = 19;</code>
      */
     public boolean hasCallIsOneOfMultiparty() {
-      return ((bitField0_ & 0x00008000) == 0x00008000);
+      return ((bitField0_ & 0x00400000) == 0x00400000);
     }
     /**
      * <code>optional bool callIsOneOfMultiparty = 19;</code>
@@ -63473,7 +63836,7 @@ public final class ProtobufATCommand {
      * <code>optional int32 speechChannel = 20;</code>
      */
     public boolean hasSpeechChannel() {
-      return ((bitField0_ & 0x00010000) == 0x00010000);
+      return ((bitField0_ & 0x00800000) == 0x00800000);
     }
     /**
      * <code>optional int32 speechChannel = 20;</code>
@@ -63488,7 +63851,7 @@ public final class ProtobufATCommand {
      * <code>optional bool disableATH = 21;</code>
      */
     public boolean hasDisableATH() {
-      return ((bitField0_ & 0x00020000) == 0x00020000);
+      return ((bitField0_ & 0x01000000) == 0x01000000);
     }
     /**
      * <code>optional bool disableATH = 21;</code>
@@ -63507,7 +63870,7 @@ public final class ProtobufATCommand {
      * </pre>
      */
     public boolean hasSetUpVoiceCall() {
-      return ((bitField0_ & 0x00040000) == 0x00040000);
+      return ((bitField0_ & 0x02000000) == 0x02000000);
     }
     /**
      * <code>optional bool setUpVoiceCall = 22;</code>
@@ -63526,7 +63889,7 @@ public final class ProtobufATCommand {
      * <code>optional bool isResponse = 24;</code>
      */
     public boolean hasIsResponse() {
-      return ((bitField0_ & 0x00080000) == 0x00080000);
+      return ((bitField0_ & 0x04000000) == 0x04000000);
     }
     /**
      * <code>optional bool isResponse = 24;</code>
@@ -63541,7 +63904,7 @@ public final class ProtobufATCommand {
      * <code>optional string description = 25;</code>
      */
     public boolean hasDescription() {
-      return ((bitField0_ & 0x00100000) == 0x00100000);
+      return ((bitField0_ & 0x08000000) == 0x08000000);
     }
     /**
      * <code>optional string description = 25;</code>
@@ -63583,7 +63946,7 @@ public final class ProtobufATCommand {
      * <code>optional int32 n = 26;</code>
      */
     public boolean hasN() {
-      return ((bitField0_ & 0x00200000) == 0x00200000);
+      return ((bitField0_ & 0x10000000) == 0x10000000);
     }
     /**
      * <code>optional int32 n = 26;</code>
@@ -63598,7 +63961,7 @@ public final class ProtobufATCommand {
      * <code>optional bool serviceReportingControlEnabled = 27;</code>
      */
     public boolean hasServiceReportingControlEnabled() {
-      return ((bitField0_ & 0x00400000) == 0x00400000);
+      return ((bitField0_ & 0x20000000) == 0x20000000);
     }
     /**
      * <code>optional bool serviceReportingControlEnabled = 27;</code>
@@ -63613,7 +63976,7 @@ public final class ProtobufATCommand {
      * <code>optional bool enableExtendedFormat = 28;</code>
      */
     public boolean hasEnableExtendedFormat() {
-      return ((bitField0_ & 0x00800000) == 0x00800000);
+      return ((bitField0_ & 0x40000000) == 0x40000000);
     }
     /**
      * <code>optional bool enableExtendedFormat = 28;</code>
@@ -63628,7 +63991,7 @@ public final class ProtobufATCommand {
      * <code>optional .com.rtrk.protobufatcommand.SchemeMode schemeMode = 29;</code>
      */
     public boolean hasSchemeMode() {
-      return ((bitField0_ & 0x01000000) == 0x01000000);
+      return ((bitField0_ & 0x80000000) == 0x80000000);
     }
     /**
      * <code>optional .com.rtrk.protobufatcommand.SchemeMode schemeMode = 29;</code>
@@ -63643,7 +64006,7 @@ public final class ProtobufATCommand {
      * <code>optional .com.rtrk.protobufatcommand.AlternatingMode alternatingMode = 30;</code>
      */
     public boolean hasAlternatingMode() {
-      return ((bitField0_ & 0x02000000) == 0x02000000);
+      return ((bitField1_ & 0x00000001) == 0x00000001);
     }
     /**
      * <code>optional .com.rtrk.protobufatcommand.AlternatingMode alternatingMode = 30;</code>
@@ -63658,7 +64021,7 @@ public final class ProtobufATCommand {
      * <code>optional .com.rtrk.protobufatcommand.SpeechMode speechMode = 31;</code>
      */
     public boolean hasSpeechMode() {
-      return ((bitField0_ & 0x04000000) == 0x04000000);
+      return ((bitField1_ & 0x00000002) == 0x00000002);
     }
     /**
      * <code>optional .com.rtrk.protobufatcommand.SpeechMode speechMode = 31;</code>
@@ -63673,7 +64036,7 @@ public final class ProtobufATCommand {
      * <code>optional bool enableReportSpeechChannelType = 32;</code>
      */
     public boolean hasEnableReportSpeechChannelType() {
-      return ((bitField0_ & 0x08000000) == 0x08000000);
+      return ((bitField1_ & 0x00000004) == 0x00000004);
     }
     /**
      * <code>optional bool enableReportSpeechChannelType = 32;</code>
@@ -63688,7 +64051,7 @@ public final class ProtobufATCommand {
      * <code>optional bool delimiter = 33;</code>
      */
     public boolean hasDelimiter() {
-      return ((bitField0_ & 0x10000000) == 0x10000000);
+      return ((bitField1_ & 0x00000008) == 0x00000008);
     }
     /**
      * <code>optional bool delimiter = 33;</code>
@@ -63700,6 +64063,13 @@ public final class ProtobufATCommand {
     private void initFields() {
       messageType_ = com.rtrk.atcommand.protobuf.ProtobufATCommand.CallRelatedMessageType.ANSWER_AN_INCOMING_CALL;
       action_ = com.rtrk.atcommand.protobuf.ProtobufATCommand.Action.TEST;
+      disconnect_ = com.rtrk.atcommand.protobuf.ProtobufATCommand.Disconnect.DISCONECT_FROM_LINE_AND_TERMINATE_CALL;
+      dataMode_ = com.rtrk.atcommand.protobuf.ProtobufATCommand.DataMode.CALL_SWITCH_FROM_COMMAND_MODE_TO_DATA_MODE;
+      ringNumbers_ = 0;
+      blindDialingWait_ = 0;
+      connectionCompletionWait_ = 0;
+      commaDialModifierWait_ = 0;
+      delay_ = 0;
       number_ = "";
       gSMModifier_ = "";
       interworkinWindowsSize_ = 0;
@@ -63755,86 +64125,107 @@ public final class ProtobufATCommand {
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
         output.writeEnum(2, action_.getNumber());
       }
-      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+      if (((bitField0_ & 0x00000400) == 0x00000400)) {
         output.writeBytes(6, getGSMModifierBytes());
       }
-      if (((bitField0_ & 0x00000010) == 0x00000010)) {
+      if (((bitField0_ & 0x00000800) == 0x00000800)) {
         output.writeInt32(7, interworkinWindowsSize_);
       }
-      if (((bitField0_ & 0x00000020) == 0x00000020)) {
+      if (((bitField0_ & 0x00001000) == 0x00001000)) {
         output.writeInt32(8, mobileWindowSize_);
       }
-      if (((bitField0_ & 0x00000040) == 0x00000040)) {
+      if (((bitField0_ & 0x00002000) == 0x00002000)) {
         output.writeInt32(9, acknowledmentTimer_);
       }
-      if (((bitField0_ & 0x00000080) == 0x00000080)) {
+      if (((bitField0_ & 0x00004000) == 0x00004000)) {
         output.writeInt32(10, retransimissionAttempts_);
       }
-      if (((bitField0_ & 0x00000100) == 0x00000100)) {
+      if (((bitField0_ & 0x00008000) == 0x00008000)) {
         output.writeInt32(11, rPLVersion_);
       }
-      if (((bitField0_ & 0x00000200) == 0x00000200)) {
+      if (((bitField0_ & 0x00010000) == 0x00010000)) {
         output.writeInt32(12, resequencingPeriod_);
       }
-      if (((bitField0_ & 0x00000400) == 0x00000400)) {
+      if (((bitField0_ & 0x00020000) == 0x00020000)) {
         output.writeEnum(14, addresType_.getNumber());
       }
-      if (((bitField0_ & 0x00000800) == 0x00000800)) {
+      if (((bitField0_ & 0x00040000) == 0x00040000)) {
         output.writeInt32(15, index_);
       }
-      if (((bitField0_ & 0x00001000) == 0x00001000)) {
+      if (((bitField0_ & 0x00080000) == 0x00080000)) {
         output.writeEnum(16, callDir_.getNumber());
       }
-      if (((bitField0_ & 0x00002000) == 0x00002000)) {
+      if (((bitField0_ & 0x00100000) == 0x00100000)) {
         output.writeEnum(17, callState_.getNumber());
       }
-      if (((bitField0_ & 0x00004000) == 0x00004000)) {
+      if (((bitField0_ & 0x00200000) == 0x00200000)) {
         output.writeEnum(18, callMode_.getNumber());
       }
-      if (((bitField0_ & 0x00008000) == 0x00008000)) {
+      if (((bitField0_ & 0x00400000) == 0x00400000)) {
         output.writeBool(19, callIsOneOfMultiparty_);
       }
-      if (((bitField0_ & 0x00010000) == 0x00010000)) {
+      if (((bitField0_ & 0x00800000) == 0x00800000)) {
         output.writeInt32(20, speechChannel_);
       }
-      if (((bitField0_ & 0x00020000) == 0x00020000)) {
+      if (((bitField0_ & 0x01000000) == 0x01000000)) {
         output.writeBool(21, disableATH_);
       }
-      if (((bitField0_ & 0x00040000) == 0x00040000)) {
+      if (((bitField0_ & 0x02000000) == 0x02000000)) {
         output.writeBool(22, setUpVoiceCall_);
       }
-      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+      if (((bitField0_ & 0x00000200) == 0x00000200)) {
         output.writeBytes(23, getNumberBytes());
       }
-      if (((bitField0_ & 0x00080000) == 0x00080000)) {
+      if (((bitField0_ & 0x04000000) == 0x04000000)) {
         output.writeBool(24, isResponse_);
       }
-      if (((bitField0_ & 0x00100000) == 0x00100000)) {
+      if (((bitField0_ & 0x08000000) == 0x08000000)) {
         output.writeBytes(25, getDescriptionBytes());
       }
-      if (((bitField0_ & 0x00200000) == 0x00200000)) {
+      if (((bitField0_ & 0x10000000) == 0x10000000)) {
         output.writeInt32(26, n_);
       }
-      if (((bitField0_ & 0x00400000) == 0x00400000)) {
+      if (((bitField0_ & 0x20000000) == 0x20000000)) {
         output.writeBool(27, serviceReportingControlEnabled_);
       }
-      if (((bitField0_ & 0x00800000) == 0x00800000)) {
+      if (((bitField0_ & 0x40000000) == 0x40000000)) {
         output.writeBool(28, enableExtendedFormat_);
       }
-      if (((bitField0_ & 0x01000000) == 0x01000000)) {
+      if (((bitField0_ & 0x80000000) == 0x80000000)) {
         output.writeEnum(29, schemeMode_.getNumber());
       }
-      if (((bitField0_ & 0x02000000) == 0x02000000)) {
+      if (((bitField1_ & 0x00000001) == 0x00000001)) {
         output.writeEnum(30, alternatingMode_.getNumber());
       }
-      if (((bitField0_ & 0x04000000) == 0x04000000)) {
+      if (((bitField1_ & 0x00000002) == 0x00000002)) {
         output.writeEnum(31, speechMode_.getNumber());
       }
-      if (((bitField0_ & 0x08000000) == 0x08000000)) {
+      if (((bitField1_ & 0x00000004) == 0x00000004)) {
         output.writeBool(32, enableReportSpeechChannelType_);
       }
-      if (((bitField0_ & 0x10000000) == 0x10000000)) {
+      if (((bitField1_ & 0x00000008) == 0x00000008)) {
         output.writeBool(33, delimiter_);
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        output.writeEnum(34, disconnect_.getNumber());
+      }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        output.writeEnum(35, dataMode_.getNumber());
+      }
+      if (((bitField0_ & 0x00000010) == 0x00000010)) {
+        output.writeInt32(36, ringNumbers_);
+      }
+      if (((bitField0_ & 0x00000020) == 0x00000020)) {
+        output.writeInt32(37, blindDialingWait_);
+      }
+      if (((bitField0_ & 0x00000040) == 0x00000040)) {
+        output.writeInt32(38, connectionCompletionWait_);
+      }
+      if (((bitField0_ & 0x00000080) == 0x00000080)) {
+        output.writeInt32(39, commaDialModifierWait_);
+      }
+      if (((bitField0_ & 0x00000100) == 0x00000100)) {
+        output.writeInt32(40, delay_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -63853,113 +64244,141 @@ public final class ProtobufATCommand {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(2, action_.getNumber());
       }
-      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+      if (((bitField0_ & 0x00000400) == 0x00000400)) {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(6, getGSMModifierBytes());
       }
-      if (((bitField0_ & 0x00000010) == 0x00000010)) {
+      if (((bitField0_ & 0x00000800) == 0x00000800)) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(7, interworkinWindowsSize_);
       }
-      if (((bitField0_ & 0x00000020) == 0x00000020)) {
+      if (((bitField0_ & 0x00001000) == 0x00001000)) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(8, mobileWindowSize_);
       }
-      if (((bitField0_ & 0x00000040) == 0x00000040)) {
+      if (((bitField0_ & 0x00002000) == 0x00002000)) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(9, acknowledmentTimer_);
       }
-      if (((bitField0_ & 0x00000080) == 0x00000080)) {
+      if (((bitField0_ & 0x00004000) == 0x00004000)) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(10, retransimissionAttempts_);
       }
-      if (((bitField0_ & 0x00000100) == 0x00000100)) {
+      if (((bitField0_ & 0x00008000) == 0x00008000)) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(11, rPLVersion_);
       }
-      if (((bitField0_ & 0x00000200) == 0x00000200)) {
+      if (((bitField0_ & 0x00010000) == 0x00010000)) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(12, resequencingPeriod_);
       }
-      if (((bitField0_ & 0x00000400) == 0x00000400)) {
+      if (((bitField0_ & 0x00020000) == 0x00020000)) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(14, addresType_.getNumber());
       }
-      if (((bitField0_ & 0x00000800) == 0x00000800)) {
+      if (((bitField0_ & 0x00040000) == 0x00040000)) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(15, index_);
       }
-      if (((bitField0_ & 0x00001000) == 0x00001000)) {
+      if (((bitField0_ & 0x00080000) == 0x00080000)) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(16, callDir_.getNumber());
       }
-      if (((bitField0_ & 0x00002000) == 0x00002000)) {
+      if (((bitField0_ & 0x00100000) == 0x00100000)) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(17, callState_.getNumber());
       }
-      if (((bitField0_ & 0x00004000) == 0x00004000)) {
+      if (((bitField0_ & 0x00200000) == 0x00200000)) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(18, callMode_.getNumber());
       }
-      if (((bitField0_ & 0x00008000) == 0x00008000)) {
+      if (((bitField0_ & 0x00400000) == 0x00400000)) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(19, callIsOneOfMultiparty_);
       }
-      if (((bitField0_ & 0x00010000) == 0x00010000)) {
+      if (((bitField0_ & 0x00800000) == 0x00800000)) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(20, speechChannel_);
       }
-      if (((bitField0_ & 0x00020000) == 0x00020000)) {
+      if (((bitField0_ & 0x01000000) == 0x01000000)) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(21, disableATH_);
       }
-      if (((bitField0_ & 0x00040000) == 0x00040000)) {
+      if (((bitField0_ & 0x02000000) == 0x02000000)) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(22, setUpVoiceCall_);
       }
-      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+      if (((bitField0_ & 0x00000200) == 0x00000200)) {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(23, getNumberBytes());
       }
-      if (((bitField0_ & 0x00080000) == 0x00080000)) {
+      if (((bitField0_ & 0x04000000) == 0x04000000)) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(24, isResponse_);
       }
-      if (((bitField0_ & 0x00100000) == 0x00100000)) {
+      if (((bitField0_ & 0x08000000) == 0x08000000)) {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(25, getDescriptionBytes());
       }
-      if (((bitField0_ & 0x00200000) == 0x00200000)) {
+      if (((bitField0_ & 0x10000000) == 0x10000000)) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(26, n_);
       }
-      if (((bitField0_ & 0x00400000) == 0x00400000)) {
+      if (((bitField0_ & 0x20000000) == 0x20000000)) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(27, serviceReportingControlEnabled_);
       }
-      if (((bitField0_ & 0x00800000) == 0x00800000)) {
+      if (((bitField0_ & 0x40000000) == 0x40000000)) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(28, enableExtendedFormat_);
       }
-      if (((bitField0_ & 0x01000000) == 0x01000000)) {
+      if (((bitField0_ & 0x80000000) == 0x80000000)) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(29, schemeMode_.getNumber());
       }
-      if (((bitField0_ & 0x02000000) == 0x02000000)) {
+      if (((bitField1_ & 0x00000001) == 0x00000001)) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(30, alternatingMode_.getNumber());
       }
-      if (((bitField0_ & 0x04000000) == 0x04000000)) {
+      if (((bitField1_ & 0x00000002) == 0x00000002)) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(31, speechMode_.getNumber());
       }
-      if (((bitField0_ & 0x08000000) == 0x08000000)) {
+      if (((bitField1_ & 0x00000004) == 0x00000004)) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(32, enableReportSpeechChannelType_);
       }
-      if (((bitField0_ & 0x10000000) == 0x10000000)) {
+      if (((bitField1_ & 0x00000008) == 0x00000008)) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(33, delimiter_);
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(34, disconnect_.getNumber());
+      }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(35, dataMode_.getNumber());
+      }
+      if (((bitField0_ & 0x00000010) == 0x00000010)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(36, ringNumbers_);
+      }
+      if (((bitField0_ & 0x00000020) == 0x00000020)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(37, blindDialingWait_);
+      }
+      if (((bitField0_ & 0x00000040) == 0x00000040)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(38, connectionCompletionWait_);
+      }
+      if (((bitField0_ & 0x00000080) == 0x00000080)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(39, commaDialModifierWait_);
+      }
+      if (((bitField0_ & 0x00000100) == 0x00000100)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(40, delay_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -64082,60 +64501,74 @@ public final class ProtobufATCommand {
         bitField0_ = (bitField0_ & ~0x00000001);
         action_ = com.rtrk.atcommand.protobuf.ProtobufATCommand.Action.TEST;
         bitField0_ = (bitField0_ & ~0x00000002);
-        number_ = "";
+        disconnect_ = com.rtrk.atcommand.protobuf.ProtobufATCommand.Disconnect.DISCONECT_FROM_LINE_AND_TERMINATE_CALL;
         bitField0_ = (bitField0_ & ~0x00000004);
-        gSMModifier_ = "";
+        dataMode_ = com.rtrk.atcommand.protobuf.ProtobufATCommand.DataMode.CALL_SWITCH_FROM_COMMAND_MODE_TO_DATA_MODE;
         bitField0_ = (bitField0_ & ~0x00000008);
-        interworkinWindowsSize_ = 0;
+        ringNumbers_ = 0;
         bitField0_ = (bitField0_ & ~0x00000010);
-        mobileWindowSize_ = 0;
+        blindDialingWait_ = 0;
         bitField0_ = (bitField0_ & ~0x00000020);
-        acknowledmentTimer_ = 0;
+        connectionCompletionWait_ = 0;
         bitField0_ = (bitField0_ & ~0x00000040);
-        retransimissionAttempts_ = 0;
+        commaDialModifierWait_ = 0;
         bitField0_ = (bitField0_ & ~0x00000080);
-        rPLVersion_ = 0;
+        delay_ = 0;
         bitField0_ = (bitField0_ & ~0x00000100);
-        resequencingPeriod_ = 0;
+        number_ = "";
         bitField0_ = (bitField0_ & ~0x00000200);
-        addresType_ = com.rtrk.atcommand.protobuf.ProtobufATCommand.AddressType.UNKNOW_TYPE;
+        gSMModifier_ = "";
         bitField0_ = (bitField0_ & ~0x00000400);
-        index_ = 0;
+        interworkinWindowsSize_ = 0;
         bitField0_ = (bitField0_ & ~0x00000800);
-        callDir_ = com.rtrk.atcommand.protobuf.ProtobufATCommand.CallDir.MOBILE_ORIGINATED_CALL;
+        mobileWindowSize_ = 0;
         bitField0_ = (bitField0_ & ~0x00001000);
-        callState_ = com.rtrk.atcommand.protobuf.ProtobufATCommand.CallState.ACTIVE_CALL;
+        acknowledmentTimer_ = 0;
         bitField0_ = (bitField0_ & ~0x00002000);
-        callMode_ = com.rtrk.atcommand.protobuf.ProtobufATCommand.CallMode.VOICE_CALL;
+        retransimissionAttempts_ = 0;
         bitField0_ = (bitField0_ & ~0x00004000);
-        callIsOneOfMultiparty_ = false;
+        rPLVersion_ = 0;
         bitField0_ = (bitField0_ & ~0x00008000);
-        speechChannel_ = 0;
+        resequencingPeriod_ = 0;
         bitField0_ = (bitField0_ & ~0x00010000);
-        disableATH_ = false;
+        addresType_ = com.rtrk.atcommand.protobuf.ProtobufATCommand.AddressType.UNKNOW_TYPE;
         bitField0_ = (bitField0_ & ~0x00020000);
-        setUpVoiceCall_ = false;
+        index_ = 0;
         bitField0_ = (bitField0_ & ~0x00040000);
-        isResponse_ = false;
+        callDir_ = com.rtrk.atcommand.protobuf.ProtobufATCommand.CallDir.MOBILE_ORIGINATED_CALL;
         bitField0_ = (bitField0_ & ~0x00080000);
-        description_ = "";
+        callState_ = com.rtrk.atcommand.protobuf.ProtobufATCommand.CallState.ACTIVE_CALL;
         bitField0_ = (bitField0_ & ~0x00100000);
-        n_ = 0;
+        callMode_ = com.rtrk.atcommand.protobuf.ProtobufATCommand.CallMode.VOICE_CALL;
         bitField0_ = (bitField0_ & ~0x00200000);
-        serviceReportingControlEnabled_ = false;
+        callIsOneOfMultiparty_ = false;
         bitField0_ = (bitField0_ & ~0x00400000);
-        enableExtendedFormat_ = false;
+        speechChannel_ = 0;
         bitField0_ = (bitField0_ & ~0x00800000);
-        schemeMode_ = com.rtrk.atcommand.protobuf.ProtobufATCommand.SchemeMode.SCHEME_VOICE;
+        disableATH_ = false;
         bitField0_ = (bitField0_ & ~0x01000000);
-        alternatingMode_ = com.rtrk.atcommand.protobuf.ProtobufATCommand.AlternatingMode.SINGLE_MODE;
+        setUpVoiceCall_ = false;
         bitField0_ = (bitField0_ & ~0x02000000);
-        speechMode_ = com.rtrk.atcommand.protobuf.ProtobufATCommand.SpeechMode.SPEECH_AUTOMATIC_MODE;
+        isResponse_ = false;
         bitField0_ = (bitField0_ & ~0x04000000);
-        enableReportSpeechChannelType_ = false;
+        description_ = "";
         bitField0_ = (bitField0_ & ~0x08000000);
-        delimiter_ = false;
+        n_ = 0;
         bitField0_ = (bitField0_ & ~0x10000000);
+        serviceReportingControlEnabled_ = false;
+        bitField0_ = (bitField0_ & ~0x20000000);
+        enableExtendedFormat_ = false;
+        bitField0_ = (bitField0_ & ~0x40000000);
+        schemeMode_ = com.rtrk.atcommand.protobuf.ProtobufATCommand.SchemeMode.SCHEME_VOICE;
+        bitField0_ = (bitField0_ & ~0x80000000);
+        alternatingMode_ = com.rtrk.atcommand.protobuf.ProtobufATCommand.AlternatingMode.SINGLE_MODE;
+        bitField1_ = (bitField1_ & ~0x00000001);
+        speechMode_ = com.rtrk.atcommand.protobuf.ProtobufATCommand.SpeechMode.SPEECH_AUTOMATIC_MODE;
+        bitField1_ = (bitField1_ & ~0x00000002);
+        enableReportSpeechChannelType_ = false;
+        bitField1_ = (bitField1_ & ~0x00000004);
+        delimiter_ = false;
+        bitField1_ = (bitField1_ & ~0x00000008);
         return this;
       }
 
@@ -64163,7 +64596,9 @@ public final class ProtobufATCommand {
       public com.rtrk.atcommand.protobuf.ProtobufATCommand.CallRelatedCommand buildPartial() {
         com.rtrk.atcommand.protobuf.ProtobufATCommand.CallRelatedCommand result = new com.rtrk.atcommand.protobuf.ProtobufATCommand.CallRelatedCommand(this);
         int from_bitField0_ = bitField0_;
+        int from_bitField1_ = bitField1_;
         int to_bitField0_ = 0;
+        int to_bitField1_ = 0;
         if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
           to_bitField0_ |= 0x00000001;
         }
@@ -64175,112 +64610,141 @@ public final class ProtobufATCommand {
         if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
           to_bitField0_ |= 0x00000004;
         }
-        result.number_ = number_;
+        result.disconnect_ = disconnect_;
         if (((from_bitField0_ & 0x00000008) == 0x00000008)) {
           to_bitField0_ |= 0x00000008;
         }
-        result.gSMModifier_ = gSMModifier_;
+        result.dataMode_ = dataMode_;
         if (((from_bitField0_ & 0x00000010) == 0x00000010)) {
           to_bitField0_ |= 0x00000010;
         }
-        result.interworkinWindowsSize_ = interworkinWindowsSize_;
+        result.ringNumbers_ = ringNumbers_;
         if (((from_bitField0_ & 0x00000020) == 0x00000020)) {
           to_bitField0_ |= 0x00000020;
         }
-        result.mobileWindowSize_ = mobileWindowSize_;
+        result.blindDialingWait_ = blindDialingWait_;
         if (((from_bitField0_ & 0x00000040) == 0x00000040)) {
           to_bitField0_ |= 0x00000040;
         }
-        result.acknowledmentTimer_ = acknowledmentTimer_;
+        result.connectionCompletionWait_ = connectionCompletionWait_;
         if (((from_bitField0_ & 0x00000080) == 0x00000080)) {
           to_bitField0_ |= 0x00000080;
         }
-        result.retransimissionAttempts_ = retransimissionAttempts_;
+        result.commaDialModifierWait_ = commaDialModifierWait_;
         if (((from_bitField0_ & 0x00000100) == 0x00000100)) {
           to_bitField0_ |= 0x00000100;
         }
-        result.rPLVersion_ = rPLVersion_;
+        result.delay_ = delay_;
         if (((from_bitField0_ & 0x00000200) == 0x00000200)) {
           to_bitField0_ |= 0x00000200;
         }
-        result.resequencingPeriod_ = resequencingPeriod_;
+        result.number_ = number_;
         if (((from_bitField0_ & 0x00000400) == 0x00000400)) {
           to_bitField0_ |= 0x00000400;
         }
-        result.addresType_ = addresType_;
+        result.gSMModifier_ = gSMModifier_;
         if (((from_bitField0_ & 0x00000800) == 0x00000800)) {
           to_bitField0_ |= 0x00000800;
         }
-        result.index_ = index_;
+        result.interworkinWindowsSize_ = interworkinWindowsSize_;
         if (((from_bitField0_ & 0x00001000) == 0x00001000)) {
           to_bitField0_ |= 0x00001000;
         }
-        result.callDir_ = callDir_;
+        result.mobileWindowSize_ = mobileWindowSize_;
         if (((from_bitField0_ & 0x00002000) == 0x00002000)) {
           to_bitField0_ |= 0x00002000;
         }
-        result.callState_ = callState_;
+        result.acknowledmentTimer_ = acknowledmentTimer_;
         if (((from_bitField0_ & 0x00004000) == 0x00004000)) {
           to_bitField0_ |= 0x00004000;
         }
-        result.callMode_ = callMode_;
+        result.retransimissionAttempts_ = retransimissionAttempts_;
         if (((from_bitField0_ & 0x00008000) == 0x00008000)) {
           to_bitField0_ |= 0x00008000;
         }
-        result.callIsOneOfMultiparty_ = callIsOneOfMultiparty_;
+        result.rPLVersion_ = rPLVersion_;
         if (((from_bitField0_ & 0x00010000) == 0x00010000)) {
           to_bitField0_ |= 0x00010000;
         }
-        result.speechChannel_ = speechChannel_;
+        result.resequencingPeriod_ = resequencingPeriod_;
         if (((from_bitField0_ & 0x00020000) == 0x00020000)) {
           to_bitField0_ |= 0x00020000;
         }
-        result.disableATH_ = disableATH_;
+        result.addresType_ = addresType_;
         if (((from_bitField0_ & 0x00040000) == 0x00040000)) {
           to_bitField0_ |= 0x00040000;
         }
-        result.setUpVoiceCall_ = setUpVoiceCall_;
+        result.index_ = index_;
         if (((from_bitField0_ & 0x00080000) == 0x00080000)) {
           to_bitField0_ |= 0x00080000;
         }
-        result.isResponse_ = isResponse_;
+        result.callDir_ = callDir_;
         if (((from_bitField0_ & 0x00100000) == 0x00100000)) {
           to_bitField0_ |= 0x00100000;
         }
-        result.description_ = description_;
+        result.callState_ = callState_;
         if (((from_bitField0_ & 0x00200000) == 0x00200000)) {
           to_bitField0_ |= 0x00200000;
         }
-        result.n_ = n_;
+        result.callMode_ = callMode_;
         if (((from_bitField0_ & 0x00400000) == 0x00400000)) {
           to_bitField0_ |= 0x00400000;
         }
-        result.serviceReportingControlEnabled_ = serviceReportingControlEnabled_;
+        result.callIsOneOfMultiparty_ = callIsOneOfMultiparty_;
         if (((from_bitField0_ & 0x00800000) == 0x00800000)) {
           to_bitField0_ |= 0x00800000;
         }
-        result.enableExtendedFormat_ = enableExtendedFormat_;
+        result.speechChannel_ = speechChannel_;
         if (((from_bitField0_ & 0x01000000) == 0x01000000)) {
           to_bitField0_ |= 0x01000000;
         }
-        result.schemeMode_ = schemeMode_;
+        result.disableATH_ = disableATH_;
         if (((from_bitField0_ & 0x02000000) == 0x02000000)) {
           to_bitField0_ |= 0x02000000;
         }
-        result.alternatingMode_ = alternatingMode_;
+        result.setUpVoiceCall_ = setUpVoiceCall_;
         if (((from_bitField0_ & 0x04000000) == 0x04000000)) {
           to_bitField0_ |= 0x04000000;
         }
-        result.speechMode_ = speechMode_;
+        result.isResponse_ = isResponse_;
         if (((from_bitField0_ & 0x08000000) == 0x08000000)) {
           to_bitField0_ |= 0x08000000;
         }
-        result.enableReportSpeechChannelType_ = enableReportSpeechChannelType_;
+        result.description_ = description_;
         if (((from_bitField0_ & 0x10000000) == 0x10000000)) {
           to_bitField0_ |= 0x10000000;
         }
+        result.n_ = n_;
+        if (((from_bitField0_ & 0x20000000) == 0x20000000)) {
+          to_bitField0_ |= 0x20000000;
+        }
+        result.serviceReportingControlEnabled_ = serviceReportingControlEnabled_;
+        if (((from_bitField0_ & 0x40000000) == 0x40000000)) {
+          to_bitField0_ |= 0x40000000;
+        }
+        result.enableExtendedFormat_ = enableExtendedFormat_;
+        if (((from_bitField0_ & 0x80000000) == 0x80000000)) {
+          to_bitField0_ |= 0x80000000;
+        }
+        result.schemeMode_ = schemeMode_;
+        if (((from_bitField1_ & 0x00000001) == 0x00000001)) {
+          to_bitField1_ |= 0x00000001;
+        }
+        result.alternatingMode_ = alternatingMode_;
+        if (((from_bitField1_ & 0x00000002) == 0x00000002)) {
+          to_bitField1_ |= 0x00000002;
+        }
+        result.speechMode_ = speechMode_;
+        if (((from_bitField1_ & 0x00000004) == 0x00000004)) {
+          to_bitField1_ |= 0x00000004;
+        }
+        result.enableReportSpeechChannelType_ = enableReportSpeechChannelType_;
+        if (((from_bitField1_ & 0x00000008) == 0x00000008)) {
+          to_bitField1_ |= 0x00000008;
+        }
         result.delimiter_ = delimiter_;
         result.bitField0_ = to_bitField0_;
+        result.bitField1_ = to_bitField1_;
         onBuilt();
         return result;
       }
@@ -64302,13 +64766,34 @@ public final class ProtobufATCommand {
         if (other.hasAction()) {
           setAction(other.getAction());
         }
+        if (other.hasDisconnect()) {
+          setDisconnect(other.getDisconnect());
+        }
+        if (other.hasDataMode()) {
+          setDataMode(other.getDataMode());
+        }
+        if (other.hasRingNumbers()) {
+          setRingNumbers(other.getRingNumbers());
+        }
+        if (other.hasBlindDialingWait()) {
+          setBlindDialingWait(other.getBlindDialingWait());
+        }
+        if (other.hasConnectionCompletionWait()) {
+          setConnectionCompletionWait(other.getConnectionCompletionWait());
+        }
+        if (other.hasCommaDialModifierWait()) {
+          setCommaDialModifierWait(other.getCommaDialModifierWait());
+        }
+        if (other.hasDelay()) {
+          setDelay(other.getDelay());
+        }
         if (other.hasNumber()) {
-          bitField0_ |= 0x00000004;
+          bitField0_ |= 0x00000200;
           number_ = other.number_;
           onChanged();
         }
         if (other.hasGSMModifier()) {
-          bitField0_ |= 0x00000008;
+          bitField0_ |= 0x00000400;
           gSMModifier_ = other.gSMModifier_;
           onChanged();
         }
@@ -64361,7 +64846,7 @@ public final class ProtobufATCommand {
           setIsResponse(other.getIsResponse());
         }
         if (other.hasDescription()) {
-          bitField0_ |= 0x00100000;
+          bitField0_ |= 0x08000000;
           description_ = other.description_;
           onChanged();
         }
@@ -64423,6 +64908,7 @@ public final class ProtobufATCommand {
         return this;
       }
       private int bitField0_;
+      private int bitField1_;
 
       private com.rtrk.atcommand.protobuf.ProtobufATCommand.CallRelatedMessageType messageType_ = com.rtrk.atcommand.protobuf.ProtobufATCommand.CallRelatedMessageType.ANSWER_AN_INCOMING_CALL;
       /**
@@ -64494,12 +64980,242 @@ public final class ProtobufATCommand {
         return this;
       }
 
+      private com.rtrk.atcommand.protobuf.ProtobufATCommand.Disconnect disconnect_ = com.rtrk.atcommand.protobuf.ProtobufATCommand.Disconnect.DISCONECT_FROM_LINE_AND_TERMINATE_CALL;
+      /**
+       * <code>optional .com.rtrk.protobufatcommand.Disconnect disconnect = 34;</code>
+       */
+      public boolean hasDisconnect() {
+        return ((bitField0_ & 0x00000004) == 0x00000004);
+      }
+      /**
+       * <code>optional .com.rtrk.protobufatcommand.Disconnect disconnect = 34;</code>
+       */
+      public com.rtrk.atcommand.protobuf.ProtobufATCommand.Disconnect getDisconnect() {
+        return disconnect_;
+      }
+      /**
+       * <code>optional .com.rtrk.protobufatcommand.Disconnect disconnect = 34;</code>
+       */
+      public Builder setDisconnect(com.rtrk.atcommand.protobuf.ProtobufATCommand.Disconnect value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000004;
+        disconnect_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .com.rtrk.protobufatcommand.Disconnect disconnect = 34;</code>
+       */
+      public Builder clearDisconnect() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        disconnect_ = com.rtrk.atcommand.protobuf.ProtobufATCommand.Disconnect.DISCONECT_FROM_LINE_AND_TERMINATE_CALL;
+        onChanged();
+        return this;
+      }
+
+      private com.rtrk.atcommand.protobuf.ProtobufATCommand.DataMode dataMode_ = com.rtrk.atcommand.protobuf.ProtobufATCommand.DataMode.CALL_SWITCH_FROM_COMMAND_MODE_TO_DATA_MODE;
+      /**
+       * <code>optional .com.rtrk.protobufatcommand.DataMode dataMode = 35;</code>
+       */
+      public boolean hasDataMode() {
+        return ((bitField0_ & 0x00000008) == 0x00000008);
+      }
+      /**
+       * <code>optional .com.rtrk.protobufatcommand.DataMode dataMode = 35;</code>
+       */
+      public com.rtrk.atcommand.protobuf.ProtobufATCommand.DataMode getDataMode() {
+        return dataMode_;
+      }
+      /**
+       * <code>optional .com.rtrk.protobufatcommand.DataMode dataMode = 35;</code>
+       */
+      public Builder setDataMode(com.rtrk.atcommand.protobuf.ProtobufATCommand.DataMode value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000008;
+        dataMode_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .com.rtrk.protobufatcommand.DataMode dataMode = 35;</code>
+       */
+      public Builder clearDataMode() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        dataMode_ = com.rtrk.atcommand.protobuf.ProtobufATCommand.DataMode.CALL_SWITCH_FROM_COMMAND_MODE_TO_DATA_MODE;
+        onChanged();
+        return this;
+      }
+
+      private int ringNumbers_ ;
+      /**
+       * <code>optional int32 ringNumbers = 36;</code>
+       */
+      public boolean hasRingNumbers() {
+        return ((bitField0_ & 0x00000010) == 0x00000010);
+      }
+      /**
+       * <code>optional int32 ringNumbers = 36;</code>
+       */
+      public int getRingNumbers() {
+        return ringNumbers_;
+      }
+      /**
+       * <code>optional int32 ringNumbers = 36;</code>
+       */
+      public Builder setRingNumbers(int value) {
+        bitField0_ |= 0x00000010;
+        ringNumbers_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 ringNumbers = 36;</code>
+       */
+      public Builder clearRingNumbers() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        ringNumbers_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int blindDialingWait_ ;
+      /**
+       * <code>optional int32 blindDialingWait = 37;</code>
+       */
+      public boolean hasBlindDialingWait() {
+        return ((bitField0_ & 0x00000020) == 0x00000020);
+      }
+      /**
+       * <code>optional int32 blindDialingWait = 37;</code>
+       */
+      public int getBlindDialingWait() {
+        return blindDialingWait_;
+      }
+      /**
+       * <code>optional int32 blindDialingWait = 37;</code>
+       */
+      public Builder setBlindDialingWait(int value) {
+        bitField0_ |= 0x00000020;
+        blindDialingWait_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 blindDialingWait = 37;</code>
+       */
+      public Builder clearBlindDialingWait() {
+        bitField0_ = (bitField0_ & ~0x00000020);
+        blindDialingWait_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int connectionCompletionWait_ ;
+      /**
+       * <code>optional int32 connectionCompletionWait = 38;</code>
+       */
+      public boolean hasConnectionCompletionWait() {
+        return ((bitField0_ & 0x00000040) == 0x00000040);
+      }
+      /**
+       * <code>optional int32 connectionCompletionWait = 38;</code>
+       */
+      public int getConnectionCompletionWait() {
+        return connectionCompletionWait_;
+      }
+      /**
+       * <code>optional int32 connectionCompletionWait = 38;</code>
+       */
+      public Builder setConnectionCompletionWait(int value) {
+        bitField0_ |= 0x00000040;
+        connectionCompletionWait_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 connectionCompletionWait = 38;</code>
+       */
+      public Builder clearConnectionCompletionWait() {
+        bitField0_ = (bitField0_ & ~0x00000040);
+        connectionCompletionWait_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int commaDialModifierWait_ ;
+      /**
+       * <code>optional int32 commaDialModifierWait = 39;</code>
+       */
+      public boolean hasCommaDialModifierWait() {
+        return ((bitField0_ & 0x00000080) == 0x00000080);
+      }
+      /**
+       * <code>optional int32 commaDialModifierWait = 39;</code>
+       */
+      public int getCommaDialModifierWait() {
+        return commaDialModifierWait_;
+      }
+      /**
+       * <code>optional int32 commaDialModifierWait = 39;</code>
+       */
+      public Builder setCommaDialModifierWait(int value) {
+        bitField0_ |= 0x00000080;
+        commaDialModifierWait_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 commaDialModifierWait = 39;</code>
+       */
+      public Builder clearCommaDialModifierWait() {
+        bitField0_ = (bitField0_ & ~0x00000080);
+        commaDialModifierWait_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int delay_ ;
+      /**
+       * <code>optional int32 delay = 40;</code>
+       */
+      public boolean hasDelay() {
+        return ((bitField0_ & 0x00000100) == 0x00000100);
+      }
+      /**
+       * <code>optional int32 delay = 40;</code>
+       */
+      public int getDelay() {
+        return delay_;
+      }
+      /**
+       * <code>optional int32 delay = 40;</code>
+       */
+      public Builder setDelay(int value) {
+        bitField0_ |= 0x00000100;
+        delay_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 delay = 40;</code>
+       */
+      public Builder clearDelay() {
+        bitField0_ = (bitField0_ & ~0x00000100);
+        delay_ = 0;
+        onChanged();
+        return this;
+      }
+
       private java.lang.Object number_ = "";
       /**
        * <code>optional string number = 23;</code>
        */
       public boolean hasNumber() {
-        return ((bitField0_ & 0x00000004) == 0x00000004);
+        return ((bitField0_ & 0x00000200) == 0x00000200);
       }
       /**
        * <code>optional string number = 23;</code>
@@ -64542,7 +65258,7 @@ public final class ProtobufATCommand {
         if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00000004;
+  bitField0_ |= 0x00000200;
         number_ = value;
         onChanged();
         return this;
@@ -64551,7 +65267,7 @@ public final class ProtobufATCommand {
        * <code>optional string number = 23;</code>
        */
       public Builder clearNumber() {
-        bitField0_ = (bitField0_ & ~0x00000004);
+        bitField0_ = (bitField0_ & ~0x00000200);
         number_ = getDefaultInstance().getNumber();
         onChanged();
         return this;
@@ -64564,7 +65280,7 @@ public final class ProtobufATCommand {
         if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00000004;
+  bitField0_ |= 0x00000200;
         number_ = value;
         onChanged();
         return this;
@@ -64579,7 +65295,7 @@ public final class ProtobufATCommand {
        * </pre>
        */
       public boolean hasGSMModifier() {
-        return ((bitField0_ & 0x00000008) == 0x00000008);
+        return ((bitField0_ & 0x00000400) == 0x00000400);
       }
       /**
        * <code>optional string GSMModifier = 6;</code>
@@ -64634,7 +65350,7 @@ public final class ProtobufATCommand {
         if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00000008;
+  bitField0_ |= 0x00000400;
         gSMModifier_ = value;
         onChanged();
         return this;
@@ -64647,7 +65363,7 @@ public final class ProtobufATCommand {
        * </pre>
        */
       public Builder clearGSMModifier() {
-        bitField0_ = (bitField0_ & ~0x00000008);
+        bitField0_ = (bitField0_ & ~0x00000400);
         gSMModifier_ = getDefaultInstance().getGSMModifier();
         onChanged();
         return this;
@@ -64664,7 +65380,7 @@ public final class ProtobufATCommand {
         if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00000008;
+  bitField0_ |= 0x00000400;
         gSMModifier_ = value;
         onChanged();
         return this;
@@ -64679,7 +65395,7 @@ public final class ProtobufATCommand {
        * </pre>
        */
       public boolean hasInterworkinWindowsSize() {
-        return ((bitField0_ & 0x00000010) == 0x00000010);
+        return ((bitField0_ & 0x00000800) == 0x00000800);
       }
       /**
        * <code>optional int32 interworkinWindowsSize = 7;</code>
@@ -64699,7 +65415,7 @@ public final class ProtobufATCommand {
        * </pre>
        */
       public Builder setInterworkinWindowsSize(int value) {
-        bitField0_ |= 0x00000010;
+        bitField0_ |= 0x00000800;
         interworkinWindowsSize_ = value;
         onChanged();
         return this;
@@ -64712,7 +65428,7 @@ public final class ProtobufATCommand {
        * </pre>
        */
       public Builder clearInterworkinWindowsSize() {
-        bitField0_ = (bitField0_ & ~0x00000010);
+        bitField0_ = (bitField0_ & ~0x00000800);
         interworkinWindowsSize_ = 0;
         onChanged();
         return this;
@@ -64727,7 +65443,7 @@ public final class ProtobufATCommand {
        * </pre>
        */
       public boolean hasMobileWindowSize() {
-        return ((bitField0_ & 0x00000020) == 0x00000020);
+        return ((bitField0_ & 0x00001000) == 0x00001000);
       }
       /**
        * <code>optional int32 mobileWindowSize = 8;</code>
@@ -64747,7 +65463,7 @@ public final class ProtobufATCommand {
        * </pre>
        */
       public Builder setMobileWindowSize(int value) {
-        bitField0_ |= 0x00000020;
+        bitField0_ |= 0x00001000;
         mobileWindowSize_ = value;
         onChanged();
         return this;
@@ -64760,7 +65476,7 @@ public final class ProtobufATCommand {
        * </pre>
        */
       public Builder clearMobileWindowSize() {
-        bitField0_ = (bitField0_ & ~0x00000020);
+        bitField0_ = (bitField0_ & ~0x00001000);
         mobileWindowSize_ = 0;
         onChanged();
         return this;
@@ -64775,7 +65491,7 @@ public final class ProtobufATCommand {
        * </pre>
        */
       public boolean hasAcknowledmentTimer() {
-        return ((bitField0_ & 0x00000040) == 0x00000040);
+        return ((bitField0_ & 0x00002000) == 0x00002000);
       }
       /**
        * <code>optional int32 acknowledmentTimer = 9;</code>
@@ -64795,7 +65511,7 @@ public final class ProtobufATCommand {
        * </pre>
        */
       public Builder setAcknowledmentTimer(int value) {
-        bitField0_ |= 0x00000040;
+        bitField0_ |= 0x00002000;
         acknowledmentTimer_ = value;
         onChanged();
         return this;
@@ -64808,7 +65524,7 @@ public final class ProtobufATCommand {
        * </pre>
        */
       public Builder clearAcknowledmentTimer() {
-        bitField0_ = (bitField0_ & ~0x00000040);
+        bitField0_ = (bitField0_ & ~0x00002000);
         acknowledmentTimer_ = 0;
         onChanged();
         return this;
@@ -64823,7 +65539,7 @@ public final class ProtobufATCommand {
        * </pre>
        */
       public boolean hasRetransimissionAttempts() {
-        return ((bitField0_ & 0x00000080) == 0x00000080);
+        return ((bitField0_ & 0x00004000) == 0x00004000);
       }
       /**
        * <code>optional int32 retransimissionAttempts = 10;</code>
@@ -64843,7 +65559,7 @@ public final class ProtobufATCommand {
        * </pre>
        */
       public Builder setRetransimissionAttempts(int value) {
-        bitField0_ |= 0x00000080;
+        bitField0_ |= 0x00004000;
         retransimissionAttempts_ = value;
         onChanged();
         return this;
@@ -64856,7 +65572,7 @@ public final class ProtobufATCommand {
        * </pre>
        */
       public Builder clearRetransimissionAttempts() {
-        bitField0_ = (bitField0_ & ~0x00000080);
+        bitField0_ = (bitField0_ & ~0x00004000);
         retransimissionAttempts_ = 0;
         onChanged();
         return this;
@@ -64871,7 +65587,7 @@ public final class ProtobufATCommand {
        * </pre>
        */
       public boolean hasRPLVersion() {
-        return ((bitField0_ & 0x00000100) == 0x00000100);
+        return ((bitField0_ & 0x00008000) == 0x00008000);
       }
       /**
        * <code>optional int32 RPLVersion = 11;</code>
@@ -64891,7 +65607,7 @@ public final class ProtobufATCommand {
        * </pre>
        */
       public Builder setRPLVersion(int value) {
-        bitField0_ |= 0x00000100;
+        bitField0_ |= 0x00008000;
         rPLVersion_ = value;
         onChanged();
         return this;
@@ -64904,7 +65620,7 @@ public final class ProtobufATCommand {
        * </pre>
        */
       public Builder clearRPLVersion() {
-        bitField0_ = (bitField0_ & ~0x00000100);
+        bitField0_ = (bitField0_ & ~0x00008000);
         rPLVersion_ = 0;
         onChanged();
         return this;
@@ -64919,7 +65635,7 @@ public final class ProtobufATCommand {
        * </pre>
        */
       public boolean hasResequencingPeriod() {
-        return ((bitField0_ & 0x00000200) == 0x00000200);
+        return ((bitField0_ & 0x00010000) == 0x00010000);
       }
       /**
        * <code>optional int32 resequencingPeriod = 12;</code>
@@ -64939,7 +65655,7 @@ public final class ProtobufATCommand {
        * </pre>
        */
       public Builder setResequencingPeriod(int value) {
-        bitField0_ |= 0x00000200;
+        bitField0_ |= 0x00010000;
         resequencingPeriod_ = value;
         onChanged();
         return this;
@@ -64952,7 +65668,7 @@ public final class ProtobufATCommand {
        * </pre>
        */
       public Builder clearResequencingPeriod() {
-        bitField0_ = (bitField0_ & ~0x00000200);
+        bitField0_ = (bitField0_ & ~0x00010000);
         resequencingPeriod_ = 0;
         onChanged();
         return this;
@@ -64963,7 +65679,7 @@ public final class ProtobufATCommand {
        * <code>optional .com.rtrk.protobufatcommand.AddressType addresType = 14 [default = UNKNOW_TYPE];</code>
        */
       public boolean hasAddresType() {
-        return ((bitField0_ & 0x00000400) == 0x00000400);
+        return ((bitField0_ & 0x00020000) == 0x00020000);
       }
       /**
        * <code>optional .com.rtrk.protobufatcommand.AddressType addresType = 14 [default = UNKNOW_TYPE];</code>
@@ -64978,7 +65694,7 @@ public final class ProtobufATCommand {
         if (value == null) {
           throw new NullPointerException();
         }
-        bitField0_ |= 0x00000400;
+        bitField0_ |= 0x00020000;
         addresType_ = value;
         onChanged();
         return this;
@@ -64987,7 +65703,7 @@ public final class ProtobufATCommand {
        * <code>optional .com.rtrk.protobufatcommand.AddressType addresType = 14 [default = UNKNOW_TYPE];</code>
        */
       public Builder clearAddresType() {
-        bitField0_ = (bitField0_ & ~0x00000400);
+        bitField0_ = (bitField0_ & ~0x00020000);
         addresType_ = com.rtrk.atcommand.protobuf.ProtobufATCommand.AddressType.UNKNOW_TYPE;
         onChanged();
         return this;
@@ -64998,7 +65714,7 @@ public final class ProtobufATCommand {
        * <code>optional int32 index = 15;</code>
        */
       public boolean hasIndex() {
-        return ((bitField0_ & 0x00000800) == 0x00000800);
+        return ((bitField0_ & 0x00040000) == 0x00040000);
       }
       /**
        * <code>optional int32 index = 15;</code>
@@ -65010,7 +65726,7 @@ public final class ProtobufATCommand {
        * <code>optional int32 index = 15;</code>
        */
       public Builder setIndex(int value) {
-        bitField0_ |= 0x00000800;
+        bitField0_ |= 0x00040000;
         index_ = value;
         onChanged();
         return this;
@@ -65019,7 +65735,7 @@ public final class ProtobufATCommand {
        * <code>optional int32 index = 15;</code>
        */
       public Builder clearIndex() {
-        bitField0_ = (bitField0_ & ~0x00000800);
+        bitField0_ = (bitField0_ & ~0x00040000);
         index_ = 0;
         onChanged();
         return this;
@@ -65030,7 +65746,7 @@ public final class ProtobufATCommand {
        * <code>optional .com.rtrk.protobufatcommand.CallDir callDir = 16;</code>
        */
       public boolean hasCallDir() {
-        return ((bitField0_ & 0x00001000) == 0x00001000);
+        return ((bitField0_ & 0x00080000) == 0x00080000);
       }
       /**
        * <code>optional .com.rtrk.protobufatcommand.CallDir callDir = 16;</code>
@@ -65045,7 +65761,7 @@ public final class ProtobufATCommand {
         if (value == null) {
           throw new NullPointerException();
         }
-        bitField0_ |= 0x00001000;
+        bitField0_ |= 0x00080000;
         callDir_ = value;
         onChanged();
         return this;
@@ -65054,7 +65770,7 @@ public final class ProtobufATCommand {
        * <code>optional .com.rtrk.protobufatcommand.CallDir callDir = 16;</code>
        */
       public Builder clearCallDir() {
-        bitField0_ = (bitField0_ & ~0x00001000);
+        bitField0_ = (bitField0_ & ~0x00080000);
         callDir_ = com.rtrk.atcommand.protobuf.ProtobufATCommand.CallDir.MOBILE_ORIGINATED_CALL;
         onChanged();
         return this;
@@ -65065,7 +65781,7 @@ public final class ProtobufATCommand {
        * <code>optional .com.rtrk.protobufatcommand.CallState callState = 17;</code>
        */
       public boolean hasCallState() {
-        return ((bitField0_ & 0x00002000) == 0x00002000);
+        return ((bitField0_ & 0x00100000) == 0x00100000);
       }
       /**
        * <code>optional .com.rtrk.protobufatcommand.CallState callState = 17;</code>
@@ -65080,7 +65796,7 @@ public final class ProtobufATCommand {
         if (value == null) {
           throw new NullPointerException();
         }
-        bitField0_ |= 0x00002000;
+        bitField0_ |= 0x00100000;
         callState_ = value;
         onChanged();
         return this;
@@ -65089,7 +65805,7 @@ public final class ProtobufATCommand {
        * <code>optional .com.rtrk.protobufatcommand.CallState callState = 17;</code>
        */
       public Builder clearCallState() {
-        bitField0_ = (bitField0_ & ~0x00002000);
+        bitField0_ = (bitField0_ & ~0x00100000);
         callState_ = com.rtrk.atcommand.protobuf.ProtobufATCommand.CallState.ACTIVE_CALL;
         onChanged();
         return this;
@@ -65100,7 +65816,7 @@ public final class ProtobufATCommand {
        * <code>optional .com.rtrk.protobufatcommand.CallMode callMode = 18;</code>
        */
       public boolean hasCallMode() {
-        return ((bitField0_ & 0x00004000) == 0x00004000);
+        return ((bitField0_ & 0x00200000) == 0x00200000);
       }
       /**
        * <code>optional .com.rtrk.protobufatcommand.CallMode callMode = 18;</code>
@@ -65115,7 +65831,7 @@ public final class ProtobufATCommand {
         if (value == null) {
           throw new NullPointerException();
         }
-        bitField0_ |= 0x00004000;
+        bitField0_ |= 0x00200000;
         callMode_ = value;
         onChanged();
         return this;
@@ -65124,7 +65840,7 @@ public final class ProtobufATCommand {
        * <code>optional .com.rtrk.protobufatcommand.CallMode callMode = 18;</code>
        */
       public Builder clearCallMode() {
-        bitField0_ = (bitField0_ & ~0x00004000);
+        bitField0_ = (bitField0_ & ~0x00200000);
         callMode_ = com.rtrk.atcommand.protobuf.ProtobufATCommand.CallMode.VOICE_CALL;
         onChanged();
         return this;
@@ -65135,7 +65851,7 @@ public final class ProtobufATCommand {
        * <code>optional bool callIsOneOfMultiparty = 19;</code>
        */
       public boolean hasCallIsOneOfMultiparty() {
-        return ((bitField0_ & 0x00008000) == 0x00008000);
+        return ((bitField0_ & 0x00400000) == 0x00400000);
       }
       /**
        * <code>optional bool callIsOneOfMultiparty = 19;</code>
@@ -65147,7 +65863,7 @@ public final class ProtobufATCommand {
        * <code>optional bool callIsOneOfMultiparty = 19;</code>
        */
       public Builder setCallIsOneOfMultiparty(boolean value) {
-        bitField0_ |= 0x00008000;
+        bitField0_ |= 0x00400000;
         callIsOneOfMultiparty_ = value;
         onChanged();
         return this;
@@ -65156,7 +65872,7 @@ public final class ProtobufATCommand {
        * <code>optional bool callIsOneOfMultiparty = 19;</code>
        */
       public Builder clearCallIsOneOfMultiparty() {
-        bitField0_ = (bitField0_ & ~0x00008000);
+        bitField0_ = (bitField0_ & ~0x00400000);
         callIsOneOfMultiparty_ = false;
         onChanged();
         return this;
@@ -65167,7 +65883,7 @@ public final class ProtobufATCommand {
        * <code>optional int32 speechChannel = 20;</code>
        */
       public boolean hasSpeechChannel() {
-        return ((bitField0_ & 0x00010000) == 0x00010000);
+        return ((bitField0_ & 0x00800000) == 0x00800000);
       }
       /**
        * <code>optional int32 speechChannel = 20;</code>
@@ -65179,7 +65895,7 @@ public final class ProtobufATCommand {
        * <code>optional int32 speechChannel = 20;</code>
        */
       public Builder setSpeechChannel(int value) {
-        bitField0_ |= 0x00010000;
+        bitField0_ |= 0x00800000;
         speechChannel_ = value;
         onChanged();
         return this;
@@ -65188,7 +65904,7 @@ public final class ProtobufATCommand {
        * <code>optional int32 speechChannel = 20;</code>
        */
       public Builder clearSpeechChannel() {
-        bitField0_ = (bitField0_ & ~0x00010000);
+        bitField0_ = (bitField0_ & ~0x00800000);
         speechChannel_ = 0;
         onChanged();
         return this;
@@ -65199,7 +65915,7 @@ public final class ProtobufATCommand {
        * <code>optional bool disableATH = 21;</code>
        */
       public boolean hasDisableATH() {
-        return ((bitField0_ & 0x00020000) == 0x00020000);
+        return ((bitField0_ & 0x01000000) == 0x01000000);
       }
       /**
        * <code>optional bool disableATH = 21;</code>
@@ -65211,7 +65927,7 @@ public final class ProtobufATCommand {
        * <code>optional bool disableATH = 21;</code>
        */
       public Builder setDisableATH(boolean value) {
-        bitField0_ |= 0x00020000;
+        bitField0_ |= 0x01000000;
         disableATH_ = value;
         onChanged();
         return this;
@@ -65220,7 +65936,7 @@ public final class ProtobufATCommand {
        * <code>optional bool disableATH = 21;</code>
        */
       public Builder clearDisableATH() {
-        bitField0_ = (bitField0_ & ~0x00020000);
+        bitField0_ = (bitField0_ & ~0x01000000);
         disableATH_ = false;
         onChanged();
         return this;
@@ -65235,7 +65951,7 @@ public final class ProtobufATCommand {
        * </pre>
        */
       public boolean hasSetUpVoiceCall() {
-        return ((bitField0_ & 0x00040000) == 0x00040000);
+        return ((bitField0_ & 0x02000000) == 0x02000000);
       }
       /**
        * <code>optional bool setUpVoiceCall = 22;</code>
@@ -65255,7 +65971,7 @@ public final class ProtobufATCommand {
        * </pre>
        */
       public Builder setSetUpVoiceCall(boolean value) {
-        bitField0_ |= 0x00040000;
+        bitField0_ |= 0x02000000;
         setUpVoiceCall_ = value;
         onChanged();
         return this;
@@ -65268,7 +65984,7 @@ public final class ProtobufATCommand {
        * </pre>
        */
       public Builder clearSetUpVoiceCall() {
-        bitField0_ = (bitField0_ & ~0x00040000);
+        bitField0_ = (bitField0_ & ~0x02000000);
         setUpVoiceCall_ = false;
         onChanged();
         return this;
@@ -65279,7 +65995,7 @@ public final class ProtobufATCommand {
        * <code>optional bool isResponse = 24;</code>
        */
       public boolean hasIsResponse() {
-        return ((bitField0_ & 0x00080000) == 0x00080000);
+        return ((bitField0_ & 0x04000000) == 0x04000000);
       }
       /**
        * <code>optional bool isResponse = 24;</code>
@@ -65291,7 +66007,7 @@ public final class ProtobufATCommand {
        * <code>optional bool isResponse = 24;</code>
        */
       public Builder setIsResponse(boolean value) {
-        bitField0_ |= 0x00080000;
+        bitField0_ |= 0x04000000;
         isResponse_ = value;
         onChanged();
         return this;
@@ -65300,7 +66016,7 @@ public final class ProtobufATCommand {
        * <code>optional bool isResponse = 24;</code>
        */
       public Builder clearIsResponse() {
-        bitField0_ = (bitField0_ & ~0x00080000);
+        bitField0_ = (bitField0_ & ~0x04000000);
         isResponse_ = false;
         onChanged();
         return this;
@@ -65311,7 +66027,7 @@ public final class ProtobufATCommand {
        * <code>optional string description = 25;</code>
        */
       public boolean hasDescription() {
-        return ((bitField0_ & 0x00100000) == 0x00100000);
+        return ((bitField0_ & 0x08000000) == 0x08000000);
       }
       /**
        * <code>optional string description = 25;</code>
@@ -65354,7 +66070,7 @@ public final class ProtobufATCommand {
         if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00100000;
+  bitField0_ |= 0x08000000;
         description_ = value;
         onChanged();
         return this;
@@ -65363,7 +66079,7 @@ public final class ProtobufATCommand {
        * <code>optional string description = 25;</code>
        */
       public Builder clearDescription() {
-        bitField0_ = (bitField0_ & ~0x00100000);
+        bitField0_ = (bitField0_ & ~0x08000000);
         description_ = getDefaultInstance().getDescription();
         onChanged();
         return this;
@@ -65376,7 +66092,7 @@ public final class ProtobufATCommand {
         if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00100000;
+  bitField0_ |= 0x08000000;
         description_ = value;
         onChanged();
         return this;
@@ -65387,7 +66103,7 @@ public final class ProtobufATCommand {
        * <code>optional int32 n = 26;</code>
        */
       public boolean hasN() {
-        return ((bitField0_ & 0x00200000) == 0x00200000);
+        return ((bitField0_ & 0x10000000) == 0x10000000);
       }
       /**
        * <code>optional int32 n = 26;</code>
@@ -65399,7 +66115,7 @@ public final class ProtobufATCommand {
        * <code>optional int32 n = 26;</code>
        */
       public Builder setN(int value) {
-        bitField0_ |= 0x00200000;
+        bitField0_ |= 0x10000000;
         n_ = value;
         onChanged();
         return this;
@@ -65408,7 +66124,7 @@ public final class ProtobufATCommand {
        * <code>optional int32 n = 26;</code>
        */
       public Builder clearN() {
-        bitField0_ = (bitField0_ & ~0x00200000);
+        bitField0_ = (bitField0_ & ~0x10000000);
         n_ = 0;
         onChanged();
         return this;
@@ -65419,7 +66135,7 @@ public final class ProtobufATCommand {
        * <code>optional bool serviceReportingControlEnabled = 27;</code>
        */
       public boolean hasServiceReportingControlEnabled() {
-        return ((bitField0_ & 0x00400000) == 0x00400000);
+        return ((bitField0_ & 0x20000000) == 0x20000000);
       }
       /**
        * <code>optional bool serviceReportingControlEnabled = 27;</code>
@@ -65431,7 +66147,7 @@ public final class ProtobufATCommand {
        * <code>optional bool serviceReportingControlEnabled = 27;</code>
        */
       public Builder setServiceReportingControlEnabled(boolean value) {
-        bitField0_ |= 0x00400000;
+        bitField0_ |= 0x20000000;
         serviceReportingControlEnabled_ = value;
         onChanged();
         return this;
@@ -65440,7 +66156,7 @@ public final class ProtobufATCommand {
        * <code>optional bool serviceReportingControlEnabled = 27;</code>
        */
       public Builder clearServiceReportingControlEnabled() {
-        bitField0_ = (bitField0_ & ~0x00400000);
+        bitField0_ = (bitField0_ & ~0x20000000);
         serviceReportingControlEnabled_ = false;
         onChanged();
         return this;
@@ -65451,7 +66167,7 @@ public final class ProtobufATCommand {
        * <code>optional bool enableExtendedFormat = 28;</code>
        */
       public boolean hasEnableExtendedFormat() {
-        return ((bitField0_ & 0x00800000) == 0x00800000);
+        return ((bitField0_ & 0x40000000) == 0x40000000);
       }
       /**
        * <code>optional bool enableExtendedFormat = 28;</code>
@@ -65463,7 +66179,7 @@ public final class ProtobufATCommand {
        * <code>optional bool enableExtendedFormat = 28;</code>
        */
       public Builder setEnableExtendedFormat(boolean value) {
-        bitField0_ |= 0x00800000;
+        bitField0_ |= 0x40000000;
         enableExtendedFormat_ = value;
         onChanged();
         return this;
@@ -65472,7 +66188,7 @@ public final class ProtobufATCommand {
        * <code>optional bool enableExtendedFormat = 28;</code>
        */
       public Builder clearEnableExtendedFormat() {
-        bitField0_ = (bitField0_ & ~0x00800000);
+        bitField0_ = (bitField0_ & ~0x40000000);
         enableExtendedFormat_ = false;
         onChanged();
         return this;
@@ -65483,7 +66199,7 @@ public final class ProtobufATCommand {
        * <code>optional .com.rtrk.protobufatcommand.SchemeMode schemeMode = 29;</code>
        */
       public boolean hasSchemeMode() {
-        return ((bitField0_ & 0x01000000) == 0x01000000);
+        return ((bitField0_ & 0x80000000) == 0x80000000);
       }
       /**
        * <code>optional .com.rtrk.protobufatcommand.SchemeMode schemeMode = 29;</code>
@@ -65498,7 +66214,7 @@ public final class ProtobufATCommand {
         if (value == null) {
           throw new NullPointerException();
         }
-        bitField0_ |= 0x01000000;
+        bitField0_ |= 0x80000000;
         schemeMode_ = value;
         onChanged();
         return this;
@@ -65507,7 +66223,7 @@ public final class ProtobufATCommand {
        * <code>optional .com.rtrk.protobufatcommand.SchemeMode schemeMode = 29;</code>
        */
       public Builder clearSchemeMode() {
-        bitField0_ = (bitField0_ & ~0x01000000);
+        bitField0_ = (bitField0_ & ~0x80000000);
         schemeMode_ = com.rtrk.atcommand.protobuf.ProtobufATCommand.SchemeMode.SCHEME_VOICE;
         onChanged();
         return this;
@@ -65518,7 +66234,7 @@ public final class ProtobufATCommand {
        * <code>optional .com.rtrk.protobufatcommand.AlternatingMode alternatingMode = 30;</code>
        */
       public boolean hasAlternatingMode() {
-        return ((bitField0_ & 0x02000000) == 0x02000000);
+        return ((bitField1_ & 0x00000001) == 0x00000001);
       }
       /**
        * <code>optional .com.rtrk.protobufatcommand.AlternatingMode alternatingMode = 30;</code>
@@ -65533,7 +66249,7 @@ public final class ProtobufATCommand {
         if (value == null) {
           throw new NullPointerException();
         }
-        bitField0_ |= 0x02000000;
+        bitField1_ |= 0x00000001;
         alternatingMode_ = value;
         onChanged();
         return this;
@@ -65542,7 +66258,7 @@ public final class ProtobufATCommand {
        * <code>optional .com.rtrk.protobufatcommand.AlternatingMode alternatingMode = 30;</code>
        */
       public Builder clearAlternatingMode() {
-        bitField0_ = (bitField0_ & ~0x02000000);
+        bitField1_ = (bitField1_ & ~0x00000001);
         alternatingMode_ = com.rtrk.atcommand.protobuf.ProtobufATCommand.AlternatingMode.SINGLE_MODE;
         onChanged();
         return this;
@@ -65553,7 +66269,7 @@ public final class ProtobufATCommand {
        * <code>optional .com.rtrk.protobufatcommand.SpeechMode speechMode = 31;</code>
        */
       public boolean hasSpeechMode() {
-        return ((bitField0_ & 0x04000000) == 0x04000000);
+        return ((bitField1_ & 0x00000002) == 0x00000002);
       }
       /**
        * <code>optional .com.rtrk.protobufatcommand.SpeechMode speechMode = 31;</code>
@@ -65568,7 +66284,7 @@ public final class ProtobufATCommand {
         if (value == null) {
           throw new NullPointerException();
         }
-        bitField0_ |= 0x04000000;
+        bitField1_ |= 0x00000002;
         speechMode_ = value;
         onChanged();
         return this;
@@ -65577,7 +66293,7 @@ public final class ProtobufATCommand {
        * <code>optional .com.rtrk.protobufatcommand.SpeechMode speechMode = 31;</code>
        */
       public Builder clearSpeechMode() {
-        bitField0_ = (bitField0_ & ~0x04000000);
+        bitField1_ = (bitField1_ & ~0x00000002);
         speechMode_ = com.rtrk.atcommand.protobuf.ProtobufATCommand.SpeechMode.SPEECH_AUTOMATIC_MODE;
         onChanged();
         return this;
@@ -65588,7 +66304,7 @@ public final class ProtobufATCommand {
        * <code>optional bool enableReportSpeechChannelType = 32;</code>
        */
       public boolean hasEnableReportSpeechChannelType() {
-        return ((bitField0_ & 0x08000000) == 0x08000000);
+        return ((bitField1_ & 0x00000004) == 0x00000004);
       }
       /**
        * <code>optional bool enableReportSpeechChannelType = 32;</code>
@@ -65600,7 +66316,7 @@ public final class ProtobufATCommand {
        * <code>optional bool enableReportSpeechChannelType = 32;</code>
        */
       public Builder setEnableReportSpeechChannelType(boolean value) {
-        bitField0_ |= 0x08000000;
+        bitField1_ |= 0x00000004;
         enableReportSpeechChannelType_ = value;
         onChanged();
         return this;
@@ -65609,7 +66325,7 @@ public final class ProtobufATCommand {
        * <code>optional bool enableReportSpeechChannelType = 32;</code>
        */
       public Builder clearEnableReportSpeechChannelType() {
-        bitField0_ = (bitField0_ & ~0x08000000);
+        bitField1_ = (bitField1_ & ~0x00000004);
         enableReportSpeechChannelType_ = false;
         onChanged();
         return this;
@@ -65620,7 +66336,7 @@ public final class ProtobufATCommand {
        * <code>optional bool delimiter = 33;</code>
        */
       public boolean hasDelimiter() {
-        return ((bitField0_ & 0x10000000) == 0x10000000);
+        return ((bitField1_ & 0x00000008) == 0x00000008);
       }
       /**
        * <code>optional bool delimiter = 33;</code>
@@ -65632,7 +66348,7 @@ public final class ProtobufATCommand {
        * <code>optional bool delimiter = 33;</code>
        */
       public Builder setDelimiter(boolean value) {
-        bitField0_ |= 0x10000000;
+        bitField1_ |= 0x00000008;
         delimiter_ = value;
         onChanged();
         return this;
@@ -65641,7 +66357,7 @@ public final class ProtobufATCommand {
        * <code>optional bool delimiter = 33;</code>
        */
       public Builder clearDelimiter() {
-        bitField0_ = (bitField0_ & ~0x10000000);
+        bitField1_ = (bitField1_ & ~0x00000008);
         delimiter_ = false;
         onChanged();
         return this;
@@ -65972,7 +66688,7 @@ public final class ProtobufATCommand {
         getServiceCenterTimeStampBytes();
 
     /**
-     * <code>optional int32 TypeOfDestinationAddress = 24;</code>
+     * <code>optional int32 typeOfDestinationAddress = 24;</code>
      *
      * <pre>
      *toda
@@ -65980,7 +66696,7 @@ public final class ProtobufATCommand {
      */
     boolean hasTypeOfDestinationAddress();
     /**
-     * <code>optional int32 TypeOfDestinationAddress = 24;</code>
+     * <code>optional int32 typeOfDestinationAddress = 24;</code>
      *
      * <pre>
      *toda
@@ -65989,7 +66705,7 @@ public final class ProtobufATCommand {
     int getTypeOfDestinationAddress();
 
     /**
-     * <code>optional int32 TypeOfOriginatingAddress = 25;</code>
+     * <code>optional int32 typeOfOriginatingAddress = 25;</code>
      *
      * <pre>
      *tooa
@@ -65997,7 +66713,7 @@ public final class ProtobufATCommand {
      */
     boolean hasTypeOfOriginatingAddress();
     /**
-     * <code>optional int32 TypeOfOriginatingAddress = 25;</code>
+     * <code>optional int32 typeOfOriginatingAddress = 25;</code>
      *
      * <pre>
      *tooa
@@ -66210,21 +66926,21 @@ public final class ProtobufATCommand {
     boolean getShowValuesResultCode();
 
     /**
-     * <code>optional int32 dataCodinScheme = 41;</code>
+     * <code>optional int32 dataCodingScheme = 41;</code>
      *
      * <pre>
      *dcs
      * </pre>
      */
-    boolean hasDataCodinScheme();
+    boolean hasDataCodingScheme();
     /**
-     * <code>optional int32 dataCodinScheme = 41;</code>
+     * <code>optional int32 dataCodingScheme = 41;</code>
      *
      * <pre>
      *dcs
      * </pre>
      */
-    int getDataCodinScheme();
+    int getDataCodingScheme();
 
     /**
      * <code>optional string type = 42;</code>
@@ -66667,7 +67383,7 @@ public final class ProtobufATCommand {
             }
             case 328: {
               bitField1_ |= 0x00000020;
-              dataCodinScheme_ = input.readInt32();
+              dataCodingScheme_ = input.readInt32();
               break;
             }
             case 338: {
@@ -67434,7 +68150,7 @@ public final class ProtobufATCommand {
     public static final int TYPEOFDESTINATIONADDRESS_FIELD_NUMBER = 24;
     private int typeOfDestinationAddress_;
     /**
-     * <code>optional int32 TypeOfDestinationAddress = 24;</code>
+     * <code>optional int32 typeOfDestinationAddress = 24;</code>
      *
      * <pre>
      *toda
@@ -67444,7 +68160,7 @@ public final class ProtobufATCommand {
       return ((bitField0_ & 0x00200000) == 0x00200000);
     }
     /**
-     * <code>optional int32 TypeOfDestinationAddress = 24;</code>
+     * <code>optional int32 typeOfDestinationAddress = 24;</code>
      *
      * <pre>
      *toda
@@ -67457,7 +68173,7 @@ public final class ProtobufATCommand {
     public static final int TYPEOFORIGINATINGADDRESS_FIELD_NUMBER = 25;
     private int typeOfOriginatingAddress_;
     /**
-     * <code>optional int32 TypeOfOriginatingAddress = 25;</code>
+     * <code>optional int32 typeOfOriginatingAddress = 25;</code>
      *
      * <pre>
      *tooa
@@ -67467,7 +68183,7 @@ public final class ProtobufATCommand {
       return ((bitField0_ & 0x00400000) == 0x00400000);
     }
     /**
-     * <code>optional int32 TypeOfOriginatingAddress = 25;</code>
+     * <code>optional int32 typeOfOriginatingAddress = 25;</code>
      *
      * <pre>
      *tooa
@@ -67809,27 +68525,27 @@ public final class ProtobufATCommand {
       return showValuesResultCode_;
     }
 
-    public static final int DATACODINSCHEME_FIELD_NUMBER = 41;
-    private int dataCodinScheme_;
+    public static final int DATACODINGSCHEME_FIELD_NUMBER = 41;
+    private int dataCodingScheme_;
     /**
-     * <code>optional int32 dataCodinScheme = 41;</code>
+     * <code>optional int32 dataCodingScheme = 41;</code>
      *
      * <pre>
      *dcs
      * </pre>
      */
-    public boolean hasDataCodinScheme() {
+    public boolean hasDataCodingScheme() {
       return ((bitField1_ & 0x00000020) == 0x00000020);
     }
     /**
-     * <code>optional int32 dataCodinScheme = 41;</code>
+     * <code>optional int32 dataCodingScheme = 41;</code>
      *
      * <pre>
      *dcs
      * </pre>
      */
-    public int getDataCodinScheme() {
-      return dataCodinScheme_;
+    public int getDataCodingScheme() {
+      return dataCodingScheme_;
     }
 
     public static final int TYPE_FIELD_NUMBER = 42;
@@ -68169,7 +68885,7 @@ public final class ProtobufATCommand {
       messageIdentifiers_ = "";
       dcss_ = "";
       showValuesResultCode_ = false;
-      dataCodinScheme_ = 0;
+      dataCodingScheme_ = 0;
       type_ = "";
       firstOctet_ = 0;
       isResponse_ = false;
@@ -68318,7 +69034,7 @@ public final class ProtobufATCommand {
         output.writeBool(40, showValuesResultCode_);
       }
       if (((bitField1_ & 0x00000020) == 0x00000020)) {
-        output.writeInt32(41, dataCodinScheme_);
+        output.writeInt32(41, dataCodingScheme_);
       }
       if (((bitField1_ & 0x00000040) == 0x00000040)) {
         output.writeBytes(42, getTypeBytes());
@@ -68521,7 +69237,7 @@ public final class ProtobufATCommand {
       }
       if (((bitField1_ & 0x00000020) == 0x00000020)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(41, dataCodinScheme_);
+          .computeInt32Size(41, dataCodingScheme_);
       }
       if (((bitField1_ & 0x00000040) == 0x00000040)) {
         size += com.google.protobuf.CodedOutputStream
@@ -68770,7 +69486,7 @@ public final class ProtobufATCommand {
         bitField1_ = (bitField1_ & ~0x00000008);
         showValuesResultCode_ = false;
         bitField1_ = (bitField1_ & ~0x00000010);
-        dataCodinScheme_ = 0;
+        dataCodingScheme_ = 0;
         bitField1_ = (bitField1_ & ~0x00000020);
         type_ = "";
         bitField1_ = (bitField1_ & ~0x00000040);
@@ -68981,7 +69697,7 @@ public final class ProtobufATCommand {
         if (((from_bitField1_ & 0x00000020) == 0x00000020)) {
           to_bitField1_ |= 0x00000020;
         }
-        result.dataCodinScheme_ = dataCodinScheme_;
+        result.dataCodingScheme_ = dataCodingScheme_;
         if (((from_bitField1_ & 0x00000040) == 0x00000040)) {
           to_bitField1_ |= 0x00000040;
         }
@@ -69186,8 +69902,8 @@ public final class ProtobufATCommand {
         if (other.hasShowValuesResultCode()) {
           setShowValuesResultCode(other.getShowValuesResultCode());
         }
-        if (other.hasDataCodinScheme()) {
-          setDataCodinScheme(other.getDataCodinScheme());
+        if (other.hasDataCodingScheme()) {
+          setDataCodingScheme(other.getDataCodingScheme());
         }
         if (other.hasType()) {
           bitField1_ |= 0x00000040;
@@ -70477,7 +71193,7 @@ public final class ProtobufATCommand {
 
       private int typeOfDestinationAddress_ ;
       /**
-       * <code>optional int32 TypeOfDestinationAddress = 24;</code>
+       * <code>optional int32 typeOfDestinationAddress = 24;</code>
        *
        * <pre>
        *toda
@@ -70487,7 +71203,7 @@ public final class ProtobufATCommand {
         return ((bitField0_ & 0x00200000) == 0x00200000);
       }
       /**
-       * <code>optional int32 TypeOfDestinationAddress = 24;</code>
+       * <code>optional int32 typeOfDestinationAddress = 24;</code>
        *
        * <pre>
        *toda
@@ -70497,7 +71213,7 @@ public final class ProtobufATCommand {
         return typeOfDestinationAddress_;
       }
       /**
-       * <code>optional int32 TypeOfDestinationAddress = 24;</code>
+       * <code>optional int32 typeOfDestinationAddress = 24;</code>
        *
        * <pre>
        *toda
@@ -70510,7 +71226,7 @@ public final class ProtobufATCommand {
         return this;
       }
       /**
-       * <code>optional int32 TypeOfDestinationAddress = 24;</code>
+       * <code>optional int32 typeOfDestinationAddress = 24;</code>
        *
        * <pre>
        *toda
@@ -70525,7 +71241,7 @@ public final class ProtobufATCommand {
 
       private int typeOfOriginatingAddress_ ;
       /**
-       * <code>optional int32 TypeOfOriginatingAddress = 25;</code>
+       * <code>optional int32 typeOfOriginatingAddress = 25;</code>
        *
        * <pre>
        *tooa
@@ -70535,7 +71251,7 @@ public final class ProtobufATCommand {
         return ((bitField0_ & 0x00400000) == 0x00400000);
       }
       /**
-       * <code>optional int32 TypeOfOriginatingAddress = 25;</code>
+       * <code>optional int32 typeOfOriginatingAddress = 25;</code>
        *
        * <pre>
        *tooa
@@ -70545,7 +71261,7 @@ public final class ProtobufATCommand {
         return typeOfOriginatingAddress_;
       }
       /**
-       * <code>optional int32 TypeOfOriginatingAddress = 25;</code>
+       * <code>optional int32 typeOfOriginatingAddress = 25;</code>
        *
        * <pre>
        *tooa
@@ -70558,7 +71274,7 @@ public final class ProtobufATCommand {
         return this;
       }
       /**
-       * <code>optional int32 TypeOfOriginatingAddress = 25;</code>
+       * <code>optional int32 typeOfOriginatingAddress = 25;</code>
        *
        * <pre>
        *tooa
@@ -71249,50 +71965,50 @@ public final class ProtobufATCommand {
         return this;
       }
 
-      private int dataCodinScheme_ ;
+      private int dataCodingScheme_ ;
       /**
-       * <code>optional int32 dataCodinScheme = 41;</code>
+       * <code>optional int32 dataCodingScheme = 41;</code>
        *
        * <pre>
        *dcs
        * </pre>
        */
-      public boolean hasDataCodinScheme() {
+      public boolean hasDataCodingScheme() {
         return ((bitField1_ & 0x00000020) == 0x00000020);
       }
       /**
-       * <code>optional int32 dataCodinScheme = 41;</code>
+       * <code>optional int32 dataCodingScheme = 41;</code>
        *
        * <pre>
        *dcs
        * </pre>
        */
-      public int getDataCodinScheme() {
-        return dataCodinScheme_;
+      public int getDataCodingScheme() {
+        return dataCodingScheme_;
       }
       /**
-       * <code>optional int32 dataCodinScheme = 41;</code>
+       * <code>optional int32 dataCodingScheme = 41;</code>
        *
        * <pre>
        *dcs
        * </pre>
        */
-      public Builder setDataCodinScheme(int value) {
+      public Builder setDataCodingScheme(int value) {
         bitField1_ |= 0x00000020;
-        dataCodinScheme_ = value;
+        dataCodingScheme_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>optional int32 dataCodinScheme = 41;</code>
+       * <code>optional int32 dataCodingScheme = 41;</code>
        *
        * <pre>
        *dcs
        * </pre>
        */
-      public Builder clearDataCodinScheme() {
+      public Builder clearDataCodingScheme() {
         bitField1_ = (bitField1_ & ~0x00000020);
-        dataCodinScheme_ = 0;
+        dataCodingScheme_ = 0;
         onChanged();
         return this;
       }
@@ -72023,22 +72739,22 @@ public final class ProtobufATCommand {
         getTextBytes();
 
     /**
-     * <code>optional int32 index1 = 12;</code>
+     * <code>optional int32 firstPhoneBookRecord = 12;</code>
      */
-    boolean hasIndex1();
+    boolean hasFirstPhoneBookRecord();
     /**
-     * <code>optional int32 index1 = 12;</code>
+     * <code>optional int32 firstPhoneBookRecord = 12;</code>
      */
-    int getIndex1();
+    int getFirstPhoneBookRecord();
 
     /**
-     * <code>optional int32 index2 = 13;</code>
+     * <code>optional int32 lastPhoneBookRecord = 13;</code>
      */
-    boolean hasIndex2();
+    boolean hasLastPhoneBookRecord();
     /**
-     * <code>optional int32 index2 = 13;</code>
+     * <code>optional int32 lastPhoneBookRecord = 13;</code>
      */
-    int getIndex2();
+    int getLastPhoneBookRecord();
 
     /**
      * <code>optional string findText = 14;</code>
@@ -72228,12 +72944,12 @@ public final class ProtobufATCommand {
             }
             case 96: {
               bitField0_ |= 0x00000200;
-              index1_ = input.readInt32();
+              firstPhoneBookRecord_ = input.readInt32();
               break;
             }
             case 104: {
               bitField0_ |= 0x00000400;
-              index2_ = input.readInt32();
+              lastPhoneBookRecord_ = input.readInt32();
               break;
             }
             case 114: {
@@ -72532,34 +73248,34 @@ public final class ProtobufATCommand {
       }
     }
 
-    public static final int INDEX1_FIELD_NUMBER = 12;
-    private int index1_;
+    public static final int FIRSTPHONEBOOKRECORD_FIELD_NUMBER = 12;
+    private int firstPhoneBookRecord_;
     /**
-     * <code>optional int32 index1 = 12;</code>
+     * <code>optional int32 firstPhoneBookRecord = 12;</code>
      */
-    public boolean hasIndex1() {
+    public boolean hasFirstPhoneBookRecord() {
       return ((bitField0_ & 0x00000200) == 0x00000200);
     }
     /**
-     * <code>optional int32 index1 = 12;</code>
+     * <code>optional int32 firstPhoneBookRecord = 12;</code>
      */
-    public int getIndex1() {
-      return index1_;
+    public int getFirstPhoneBookRecord() {
+      return firstPhoneBookRecord_;
     }
 
-    public static final int INDEX2_FIELD_NUMBER = 13;
-    private int index2_;
+    public static final int LASTPHONEBOOKRECORD_FIELD_NUMBER = 13;
+    private int lastPhoneBookRecord_;
     /**
-     * <code>optional int32 index2 = 13;</code>
+     * <code>optional int32 lastPhoneBookRecord = 13;</code>
      */
-    public boolean hasIndex2() {
+    public boolean hasLastPhoneBookRecord() {
       return ((bitField0_ & 0x00000400) == 0x00000400);
     }
     /**
-     * <code>optional int32 index2 = 13;</code>
+     * <code>optional int32 lastPhoneBookRecord = 13;</code>
      */
-    public int getIndex2() {
-      return index2_;
+    public int getLastPhoneBookRecord() {
+      return lastPhoneBookRecord_;
     }
 
     public static final int FINDTEXT_FIELD_NUMBER = 14;
@@ -72770,8 +73486,8 @@ public final class ProtobufATCommand {
       number_ = "";
       numberType_ = com.rtrk.atcommand.protobuf.ProtobufATCommand.NumberType.UNKNOW_NUMBER_TYPE;
       text_ = "";
-      index1_ = 0;
-      index2_ = 0;
+      firstPhoneBookRecord_ = 0;
+      lastPhoneBookRecord_ = 0;
       findText_ = "";
       alphax_ = "";
       numberx_ = "";
@@ -72825,10 +73541,10 @@ public final class ProtobufATCommand {
         output.writeBytes(11, getTextBytes());
       }
       if (((bitField0_ & 0x00000200) == 0x00000200)) {
-        output.writeInt32(12, index1_);
+        output.writeInt32(12, firstPhoneBookRecord_);
       }
       if (((bitField0_ & 0x00000400) == 0x00000400)) {
-        output.writeInt32(13, index2_);
+        output.writeInt32(13, lastPhoneBookRecord_);
       }
       if (((bitField0_ & 0x00000800) == 0x00000800)) {
         output.writeBytes(14, getFindTextBytes());
@@ -72894,11 +73610,11 @@ public final class ProtobufATCommand {
       }
       if (((bitField0_ & 0x00000200) == 0x00000200)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(12, index1_);
+          .computeInt32Size(12, firstPhoneBookRecord_);
       }
       if (((bitField0_ & 0x00000400) == 0x00000400)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(13, index2_);
+          .computeInt32Size(13, lastPhoneBookRecord_);
       }
       if (((bitField0_ & 0x00000800) == 0x00000800)) {
         size += com.google.protobuf.CodedOutputStream
@@ -73063,9 +73779,9 @@ public final class ProtobufATCommand {
         bitField0_ = (bitField0_ & ~0x00000080);
         text_ = "";
         bitField0_ = (bitField0_ & ~0x00000100);
-        index1_ = 0;
+        firstPhoneBookRecord_ = 0;
         bitField0_ = (bitField0_ & ~0x00000200);
-        index2_ = 0;
+        lastPhoneBookRecord_ = 0;
         bitField0_ = (bitField0_ & ~0x00000400);
         findText_ = "";
         bitField0_ = (bitField0_ & ~0x00000800);
@@ -73146,11 +73862,11 @@ public final class ProtobufATCommand {
         if (((from_bitField0_ & 0x00000200) == 0x00000200)) {
           to_bitField0_ |= 0x00000200;
         }
-        result.index1_ = index1_;
+        result.firstPhoneBookRecord_ = firstPhoneBookRecord_;
         if (((from_bitField0_ & 0x00000400) == 0x00000400)) {
           to_bitField0_ |= 0x00000400;
         }
-        result.index2_ = index2_;
+        result.lastPhoneBookRecord_ = lastPhoneBookRecord_;
         if (((from_bitField0_ & 0x00000800) == 0x00000800)) {
           to_bitField0_ |= 0x00000800;
         }
@@ -73224,11 +73940,11 @@ public final class ProtobufATCommand {
           text_ = other.text_;
           onChanged();
         }
-        if (other.hasIndex1()) {
-          setIndex1(other.getIndex1());
+        if (other.hasFirstPhoneBookRecord()) {
+          setFirstPhoneBookRecord(other.getFirstPhoneBookRecord());
         }
-        if (other.hasIndex2()) {
-          setIndex2(other.getIndex2());
+        if (other.hasLastPhoneBookRecord()) {
+          setLastPhoneBookRecord(other.getLastPhoneBookRecord());
         }
         if (other.hasFindText()) {
           bitField0_ |= 0x00000800;
@@ -73720,66 +74436,66 @@ public final class ProtobufATCommand {
         return this;
       }
 
-      private int index1_ ;
+      private int firstPhoneBookRecord_ ;
       /**
-       * <code>optional int32 index1 = 12;</code>
+       * <code>optional int32 firstPhoneBookRecord = 12;</code>
        */
-      public boolean hasIndex1() {
+      public boolean hasFirstPhoneBookRecord() {
         return ((bitField0_ & 0x00000200) == 0x00000200);
       }
       /**
-       * <code>optional int32 index1 = 12;</code>
+       * <code>optional int32 firstPhoneBookRecord = 12;</code>
        */
-      public int getIndex1() {
-        return index1_;
+      public int getFirstPhoneBookRecord() {
+        return firstPhoneBookRecord_;
       }
       /**
-       * <code>optional int32 index1 = 12;</code>
+       * <code>optional int32 firstPhoneBookRecord = 12;</code>
        */
-      public Builder setIndex1(int value) {
+      public Builder setFirstPhoneBookRecord(int value) {
         bitField0_ |= 0x00000200;
-        index1_ = value;
+        firstPhoneBookRecord_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>optional int32 index1 = 12;</code>
+       * <code>optional int32 firstPhoneBookRecord = 12;</code>
        */
-      public Builder clearIndex1() {
+      public Builder clearFirstPhoneBookRecord() {
         bitField0_ = (bitField0_ & ~0x00000200);
-        index1_ = 0;
+        firstPhoneBookRecord_ = 0;
         onChanged();
         return this;
       }
 
-      private int index2_ ;
+      private int lastPhoneBookRecord_ ;
       /**
-       * <code>optional int32 index2 = 13;</code>
+       * <code>optional int32 lastPhoneBookRecord = 13;</code>
        */
-      public boolean hasIndex2() {
+      public boolean hasLastPhoneBookRecord() {
         return ((bitField0_ & 0x00000400) == 0x00000400);
       }
       /**
-       * <code>optional int32 index2 = 13;</code>
+       * <code>optional int32 lastPhoneBookRecord = 13;</code>
        */
-      public int getIndex2() {
-        return index2_;
+      public int getLastPhoneBookRecord() {
+        return lastPhoneBookRecord_;
       }
       /**
-       * <code>optional int32 index2 = 13;</code>
+       * <code>optional int32 lastPhoneBookRecord = 13;</code>
        */
-      public Builder setIndex2(int value) {
+      public Builder setLastPhoneBookRecord(int value) {
         bitField0_ |= 0x00000400;
-        index2_ = value;
+        lastPhoneBookRecord_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>optional int32 index2 = 13;</code>
+       * <code>optional int32 lastPhoneBookRecord = 13;</code>
        */
-      public Builder clearIndex2() {
+      public Builder clearLastPhoneBookRecord() {
         bitField0_ = (bitField0_ & ~0x00000400);
-        index2_ = 0;
+        lastPhoneBookRecord_ = 0;
         onChanged();
         return this;
       }
@@ -94446,1086 +95162,1096 @@ public final class ProtobufATCommand {
       "e:\033SWITCH_OFF_ENGINEERING_MODE\022[\n\014lockFr" +
       "eqMode\030\037 \001(\0162-.com.rtrk.protobufatcomman" +
       "d.LockFrequencyMode:\026DISABLE_LOCK_FREQUE" +
-      "NCY\022\023\n\013lockedARCFN\030  \001(\010\"\262\010\n\022CallRelated",
+      "NCY\022\023\n\013lockedARCFN\030  \001(\010\"\245\n\n\022CallRelated",
       "Command\022G\n\013messageType\030\001 \002(\01622.com.rtrk." +
       "protobufatcommand.CallRelatedMessageType" +
       "\0222\n\006action\030\002 \002(\0162\".com.rtrk.protobufatco" +
-      "mmand.Action\022\016\n\006number\030\027 \001(\t\022\023\n\013GSMModif" +
-      "ier\030\006 \001(\t\022\036\n\026interworkinWindowsSize\030\007 \001(" +
-      "\005\022\030\n\020mobileWindowSize\030\010 \001(\005\022\032\n\022acknowled" +
-      "mentTimer\030\t \001(\005\022\037\n\027retransimissionAttemp" +
-      "ts\030\n \001(\005\022\022\n\nRPLVersion\030\013 \001(\005\022\032\n\022resequen" +
-      "cingPeriod\030\014 \001(\005\022H\n\naddresType\030\016 \001(\0162\'.c" +
-      "om.rtrk.protobufatcommand.AddressType:\013U",
-      "NKNOW_TYPE\022\r\n\005index\030\017 \001(\005\0224\n\007callDir\030\020 \001" +
-      "(\0162#.com.rtrk.protobufatcommand.CallDir\022" +
-      "8\n\tcallState\030\021 \001(\0162%.com.rtrk.protobufat" +
-      "command.CallState\0226\n\010callMode\030\022 \001(\0162$.co" +
-      "m.rtrk.protobufatcommand.CallMode\022\035\n\025cal" +
-      "lIsOneOfMultiparty\030\023 \001(\010\022\025\n\rspeechChanne" +
-      "l\030\024 \001(\005\022\022\n\ndisableATH\030\025 \001(\010\022\026\n\016setUpVoic" +
-      "eCall\030\026 \001(\010\022\022\n\nisResponse\030\030 \001(\010\022\023\n\013descr" +
-      "iption\030\031 \001(\t\022\t\n\001n\030\032 \001(\005\022&\n\036serviceReport" +
-      "ingControlEnabled\030\033 \001(\010\022\034\n\024enableExtende",
-      "dFormat\030\034 \001(\010\022:\n\nschemeMode\030\035 \001(\0162&.com." +
-      "rtrk.protobufatcommand.SchemeMode\022D\n\017alt" +
-      "ernatingMode\030\036 \001(\0162+.com.rtrk.protobufat" +
-      "command.AlternatingMode\022:\n\nspeechMode\030\037 " +
-      "\001(\0162&.com.rtrk.protobufatcommand.SpeechM" +
-      "ode\022%\n\035enableReportSpeechChannelType\030  \001" +
-      "(\010\022\021\n\tdelimiter\030! \001(\010\"\330\017\n\nSMSCommand\022?\n\013" +
-      "messageType\030\001 \002(\0162*.com.rtrk.protobufatc" +
-      "ommand.SMSMessageType\0222\n\006action\030\002 \002(\0162\"." +
-      "com.rtrk.protobufatcommand.Action\022W\n\016mes",
-      "sageService\030- \001(\0162*.com.rtrk.protobufatc" +
-      "ommand.MessageService:\023GSM_03_40_AND_03_" +
-      "41\022(\n mobileTerminatedMessageSupported\030\006" +
-      " \001(\010\022&\n\036mobileOrientedMessageSupported\030\007" +
-      " \001(\010\022%\n\035broadcastTypeMessageSupported\030\010 " +
-      "\001(\010\022J\n\rmessageFormat\030\t \001(\0162).com.rtrk.pr" +
-      "otobufatcommand.MessageFormat:\010PDU_MODE\022" +
-      "\021\n\tSCAddress\030\n \001(\t\022\023\n\013toSCAddress\030\013 \001(\005\022" +
-      "\014\n\004mem1\030\014 \001(\t\022\014\n\004mem2\030\r \001(\t\022\014\n\004mem3\030\016 \001(" +
-      "\t\022\r\n\005index\030\017 \001(\005\022W\n\007delFlag\030\020 \001(\0162#.com.",
-      "rtrk.protobufatcommand.DelFlag:!DELETE_M" +
-      "ESSAGE_SPECIFIED_IN_INDEX\022\r\n\005alpha\030\021 \001(\t" +
-      "\022\032\n\022destinationAddress\030\022 \001(\t\022\014\n\004data\030\023 \001" +
-      "(\014\022\016\n\006length\030\024 \001(\005\022\032\n\022originatingAddress" +
-      "\030\025 \001(\t\022\013\n\003pdu\030\026 \001(\005\022\036\n\026serviceCenterTime" +
-      "Stamp\030\027 \001(\t\022 \n\030TypeOfDestinationAddress\030" +
-      "\030 \001(\005\022 \n\030TypeOfOriginatingAddress\030\031 \001(\005\022" +
-      "\n\n\002fo\030\032 \001(\005\022\031\n\021messageIdentifier\030\033 \001(\005\022\032" +
-      "\n\022protocolIdentifier\030\034 \001(\005\022@\n\rmessageSta" +
-      "tus\030\035 \001(\0162).com.rtrk.protobufatcommand.M",
-      "essageStatus\022\026\n\016validityPeriod\030\036 \001(\005\022\030\n\020" +
-      "messageReference\030\037 \001(\005\022\016\n\006ackpdu\030  \001(\005\022\023" +
-      "\n\013commandType\030! \001(\005\022\025\n\rmessageNumber\030\" \001" +
-      "(\005\022N\n\nbufferMode\030$ \001(\0162&.com.rtrk.protob" +
-      "ufatcommand.BufferMode:\022COMMAND_IS_FLUSH" +
-      "ED\022\017\n\007profile\030% \001(\005\022\032\n\022messageIdentifier" +
-      "s\030& \001(\t\022\014\n\004dcss\030\' \001(\t\022\034\n\024showValuesResul" +
-      "tCode\030( \001(\010\022\027\n\017dataCodinScheme\030) \001(\005\022\014\n\004" +
-      "type\030* \001(\t\022\022\n\nfirstOctet\030, \001(\005\022\022\n\nisResp" +
-      "onse\030. \001(\010\022\023\n\013description\030/ \001(\t\022D\n\013messa",
-      "geMode\0300 \001(\0162\'.com.rtrk.protobufatcomman" +
-      "d.MessageMode:\006NORMAL\022C\n\020messageStatusPD" +
-      "U\0301 \001(\0162).com.rtrk.protobufatcommand.Mes" +
-      "sageStatus\022\031\n\021messageStatusText\0302 \001(\t\022k\n" +
-      "\014storeSMSRule\0303 \001(\0162(.com.rtrk.protobufa" +
-      "tcommand.StoreSMSRule:+NO_SMS_DELIVER_IN" +
-      "DICATIONS_ARE_ROUTED_TO_TE\022c\n\014storeCMBRu" +
-      "le\030# \001(\0162(.com.rtrk.protobufatcommand.St" +
-      "oreCBMRule:#NO_CMB_INCICATIONS_ARE_ROUTE" +
-      "D_TO_TE\022\n\n\002ds\0304 \001(\010\022\033\n\023enableToStoreClas",
-      "s0\0305 \001(\010\022\213\001\n\021messageIndication\0306 \001(\0162-.c" +
-      "om.rtrk.protobufatcommand.MessageIndicat" +
-      "ion:ABUFFER_UNSOLICITED_RESULT_CODES_IN_" +
-      "TA_WHEN_TA_TE_LINK_IS_RESERVED\022\036\n\026messag" +
-      "eTypeNotAccepted\0307 \001(\010\022X\n\010codeMode\0308 \001(\016" +
-      "2$.com.rtrk.protobufatcommand.CodeMode: " +
-      "CODE_MODE_ACCORDING_WITH_SIEMENS\"\264\003\n\020Pho" +
-      "nebookCommand\022E\n\013messageType\030\001 \002(\01620.com" +
-      ".rtrk.protobufatcommand.PhonebookMessage" +
-      "Type\0222\n\006action\030\002 \002(\0162\".com.rtrk.protobuf",
-      "atcommand.Action\022\017\n\007storage\030\022 \001(\t\022\017\n\007nle" +
-      "ngth\030\006 \001(\005\022\017\n\007tlength\030\007 \001(\005\022\r\n\005index\030\010 \001" +
-      "(\005\022\016\n\006number\030\t \001(\t\022:\n\nnumberType\030\n \001(\0162&" +
-      ".com.rtrk.protobufatcommand.NumberType\022\014" +
-      "\n\004text\030\013 \001(\t\022\016\n\006index1\030\014 \001(\005\022\016\n\006index2\030\r" +
-      " \001(\005\022\020\n\010findText\030\016 \001(\t\022\016\n\006alphax\030\017 \001(\t\022\017" +
-      "\n\007numberx\030\020 \001(\t\022\r\n\005typex\030\021 \001(\005\022\022\n\nisResp" +
-      "onse\030\023 \001(\010\022\023\n\013description\030\024 \001(\t\"\213\006\n\013GPRS" +
-      "Command\022@\n\013messageType\030\001 \002(\0162+.com.rtrk." +
-      "protobufatcommand.GPRSMessageType\0222\n\006act",
-      "ion\030\002 \002(\0162\".com.rtrk.protobufatcommand.A" +
-      "ction\022\020\n\010attached\030\032 \001(\010\022\013\n\003cid\030\006 \001(\005\022\017\n\007" +
-      "PDPType\030\007 \001(\t\022\013\n\003APN\030\010 \001(\t\022\022\n\nPDPAddress" +
-      "\030\t \001(\t\022\r\n\005dComp\030\n \001(\005\022\r\n\005hComp\030\013 \001(\005\022\022\n\n" +
-      "precedence\030\014 \001(\005\022\r\n\005delay\030\r \001(\005\022\023\n\013relia" +
-      "bility\030\016 \001(\005\022\014\n\004peak\030\017 \001(\005\022\014\n\004mean\030\020 \001(\005" +
-      "\022\013\n\003L2P\030\021 \001(\t\022\r\n\005class\030\022 \001(\t\022J\n\022eventRep" +
-      "ortingMode\030\023 \001(\0162..com.rtrk.protobufatco" +
-      "mmand.EventReportingMode\022T\n\027networkRegis" +
-      "trationMode\030\024 \001(\01623.com.rtrk.protobufatc",
-      "ommand.NetworkRegistrationMode\022X\n\031networ" +
-      "kRegistrationStatus\030\025 \001(\01625.com.rtrk.pro" +
-      "tobufatcommand.NetworkRegistrationStatus" +
-      "\022\013\n\003lac\030\026 \001(\t\022\n\n\002ci\030\027 \001(\t\022<\n\013serviceType" +
-      "\030\030 \001(\0162\'.com.rtrk.protobufatcommand.Serv" +
-      "iceType\022\026\n\016multislotClass\030\031 \001(\005\022\022\n\nisRes" +
-      "ponse\030\033 \001(\010\022\023\n\013description\030\034 \001(\t\022\023\n\013acti" +
-      "vatePDP\030\035 \001(\010\"\223\017\n\014TCPIPCommand\022A\n\013messag" +
-      "eType\030\001 \002(\0162,.com.rtrk.protobufatcommand" +
-      ".TCPIPMessageType\0222\n\006action\030\002 \002(\0162\".com.",
-      "rtrk.protobufatcommand.Action\022\r\n\005index\0306" +
-      " \001(\005\022\014\n\004mode\030\006 \001(\t\022>\n\014serverFormat\030\007 \001(\016" +
-      "2(.com.rtrk.protobufatcommand.ServerForm" +
-      "at\022\014\n\004port\030\010 \001(\005\022\022\n\ndomainName\030\t \001(\t\022\016\n\006" +
-      "length\030\n \001(\005\022\013\n\003APN\030\013 \001(\t\022\020\n\010username\030\014 " +
-      "\001(\t\022\020\n\010password\030\r \001(\t\0229\n\004rate\030\016 \001(\0162 .co" +
-      "m.rtrk.protobufatcommand.Rate:\tRATE_9600" +
-      "\022\r\n\005state\030\017 \001(\t\022\023\n\013socketState\030\020 \001(\t\022\023\n\013" +
-      "serverState\030\021 \001(\t\022\022\n\nprimaryDNS\030\022 \001(\t\022\023\n" +
-      "\013seondaryDNS\030\023 \001(\t\022\014\n\004time\030\025 \001(\003\022X\n\nsend",
-      "Prompt\030\026 \001(\0162&.com.rtrk.protobufatcomman" +
-      "d.SendPrompt:\034ECHO_PROMPT_AND_SHOW_SEND_" +
-      "OK\022\013\n\003num\030\027 \001(\005\0224\n\004type\030\030 \001(\0162&.com.rtrk" +
-      ".protobufatcommand.ServerType\022\013\n\003max\030\031 \001" +
-      "(\003\022\022\n\ndialNumber\030\032 \001(\t\022:\n\nconnection\030\033 \001" +
-      "(\0162&.com.rtrk.protobufatcommand.Connecti" +
-      "on\022\025\n\rnumberOfRetry\030\034 \001(\005\022\020\n\010waitTime\030\035 " +
-      "\001(\005\022\020\n\010sendSize\030\036 \001(\005\022\016\n\006escape\030\037 \001(\010\0224\n" +
-      "\007channel\030  \001(\0162#.com.rtrk.protobufatcomm" +
-      "and.Channel\022\t\n\001n\030! \001(\005\022\014\n\004sent\030\" \001(\005\022\r\n\005",
-      "acked\030# \001(\005\022\016\n\006nAcked\030$ \001(\005\022r\n\020receivedD" +
-      "ataMode\030% \001(\0162,.com.rtrk.protobufatcomma" +
-      "nd.ReceivedDataMode:*OUTPUT_RECEIVED_DAT" +
-      "A_THROUGH_UART_DIRECTLY\022\n\n\002id\030& \001(\005\022>\n\014s" +
-      "erverClinet\030\' \001(\0162(.com.rtrk.protobufatc" +
-      "ommand.ServerClient\022\013\n\003sid\030( \001(\005\022\016\n\006numb" +
-      "er\030) \001(\005\022\014\n\004host\030* \001(\t\022\017\n\007timeout\030+ \001(\005\022" +
-      "\022\n\npingNumber\030, \001(\005\022:\n\npingResult\030- \001(\0162" +
-      "&.com.rtrk.protobufatcommand.PingResult\022" +
-      "\r\n\005bytes\030. \001(\005\022\013\n\003ttl\030/ \001(\005\022<\n\013finalResu",
-      "lt\0300 \001(\0162\'.com.rtrk.protobufatcommand.Fi" +
-      "nalResult\022\020\n\010received\0301 \001(\005\022\014\n\004lost\0302 \001(" +
-      "\005\022\013\n\003min\0303 \001(\003\022\013\n\003avg\0304 \001(\003\022\016\n\006server\0305 " +
-      "\001(\t\022\022\n\nisResponse\0307 \001(\010\022\023\n\013description\0308" +
-      " \001(\t\0226\n\010ipHeader\030\024 \001(\0162$.com.rtrk.protob" +
-      "ufatcommand.IPHeader\0220\n\005timer\0309 \001(\0162!.co" +
-      "m.rtrk.protobufatcommand.Timer\022\031\n\021config" +
-      "ureAsServer\030: \001(\010\022:\n\nbearerType\030; \001(\0162&." +
-      "com.rtrk.protobufatcommand.BearerType\022\023\n" +
-      "\013showAddress\030< \001(\010\022>\n\014transferMode\030= \001(\016",
-      "2(.com.rtrk.protobufatcommand.TransferMo" +
-      "de\022!\n\031showTransportProtocolType\030> \001(\010\022\"\n" +
-      "\032enableMultipleTCPIPSession\030? \001(\010\022\020\n\010ech" +
-      "oData\030@ \001(\010\022P\n\025synchronizationResult\030A \001" +
-      "(\01621.com.rtrk.protobufatcommand.Synchron" +
-      "izationResult\022\024\n\014CSDDataSpeed\030B \001(\005\"\353\t\n\033" +
-      "SupplementaryServiceCommand\022P\n\013messageTy" +
-      "pe\030\001 \002(\0162;.com.rtrk.protobufatcommand.Su" +
-      "pplementaryServiceMessageType\0222\n\006action\030" +
-      "\002 \002(\0162\".com.rtrk.protobufatcommand.Actio",
-      "n\0220\n\005reads\030\026 \001(\0162!.com.rtrk.protobufatco" +
-      "mmand.Reads\022B\n\016forwardingMode\030\006 \001(\0162*.co" +
-      "m.rtrk.protobufatcommand.ForwardingMode\022" +
-      "\016\n\006number\030\007 \001(\t\022\014\n\004type\030\010 \001(\005\022\022\n\nsubaddr" +
-      "ess\030\t \001(\t\022\016\n\006satype\030\n \001(\005\0220\n\005class\030\013 \001(\016" +
-      "2!.com.rtrk.protobufatcommand.Class\022\014\n\004t" +
-      "ime\030\014 \001(\005\022\016\n\006active\030\r \001(\010\022\021\n\tenableCUG\030\016" +
-      " \001(\010\022\020\n\010CUGIndex\030\017 \001(\005\022.\n\004info\030\020 \001(\0162 .c" +
-      "om.rtrk.protobufatcommand.Info\022.\n\004clip\030\021" +
-      " \001(\0162 .com.rtrk.protobufatcommand.CLIP\022\022",
-      "\n\nUSSDString\030\022 \001(\t\022\030\n\020dataCodingScheme\030\023" +
-      " \001(\005\0220\n\005code1\030\024 \001(\0162!.com.rtrk.protobufa" +
-      "tcommand.Code1\0220\n\005code2\030\025 \001(\0162!.com.rtrk" +
-      ".protobufatcommand.Code2\022\022\n\nisResponse\030\027" +
-      " \001(\010\022\023\n\013description\030\030 \001(\t\022\032\n\022enablePrese" +
-      "ntation\030\031 \001(\010\022 \n\030enableCallWaitingContro" +
-      "l\030\032 \001(\010\022\020\n\010callHold\030\033 \001(\005\022$\n\034displayUnso" +
-      "licitedResultCode\030\034 \001(\010\022\026\n\016showCallNumbe" +
-      "r\030\035 \001(\010\022X\n\003aoc\030\036 \001(\01623.com.rtrk.protobuf" +
-      "atcommand.AdjustmentOutgoingCalls:\026PRESE",
-      "NTATION_INDICATOR\022:\n\003css\030\037 \001(\0162-.com.rtr" +
-      "k.protobufatcommand.CLIRServiceStatus\022.\n" +
-      "&enableResultCodePresentationOriginated\030" +
-      "  \001(\010\022.\n&enableResultCodePresentationTer" +
-      "minated\030# \001(\010\022\026\n\016showAlphaField\030! \001(\010\022b\n" +
-      "\nssdControl\030\" \001(\0162&.com.rtrk.protobufatc" +
-      "ommand.SSDControl:&DISABLE_RESULT_CODE_P" +
-      "RESENTATION_IN_TA\"\235\013\n\014AudioCommand\022A\n\013me" +
-      "ssageType\030\001 \002(\0162,.com.rtrk.protobufatcom" +
-      "mand.AudioMessageType\0222\n\006action\030\002 \002(\0162\".",
-      "com.rtrk.protobufatcommand.Action\022D\n\017spe" +
-      "akerLoudness\030! \001(\0162+.com.rtrk.protobufat" +
-      "command.SpeakerLoudness\022\030\n\020internalDurat" +
-      "ion\030\006 \001(\005\022\020\n\010duration\030\007 \001(\003\022\022\n\nDTMFStrin" +
-      "g\030\010 \001(\t\0228\n\tsoundMode\030\t \001(\0162%.com.rtrk.pr" +
-      "otobufatcommand.SoundMode\022\r\n\005level\030\n \001(\005" +
-      "\022\014\n\004mute\030\013 \001(\010\022\021\n\tgainLevel\030\014 \001(\005\022H\n\021mic" +
-      "rophoneChannel\030\r \001(\0162-.com.rtrk.protobuf" +
-      "atcommand.MicrophoneChannel\022\020\n\010testIsOn\030" +
-      "\016 \001(\010\022\021\n\tfrequency\030\020 \001(\005\022\020\n\010periodON\030\021 \001",
-      "(\005\022\021\n\tperiodOFF\030\022 \001(\005\022L\n\noutputPath\030\023 \001(" +
-      "\0162&.com.rtrk.protobufatcommand.OutputPat" +
-      "h:\020AUTO_OUTPUT_PATH\022I\n\017operateFunction\030\024" +
-      " \001(\01620.com.rtrk.protobufatcommand.AudioO" +
-      "perateFunction\022B\n\016functionStatus\030\025 \001(\0162*" +
-      ".com.rtrk.protobufatcommand.FunctionStat" +
-      "us\022\023\n\013prefixPause\030\027 \001(\005\022\024\n\014lowThreshold\030" +
-      "\030 \001(\005\022\025\n\rhighThreshold\030\031 \001(\005\022D\n\017persiste" +
-      "nceTime\030\033 \001(\0162+.com.rtrk.protobufatcomma" +
-      "nd.PersistenceTime\022\024\n\014uplinkVolume\030\034 \001(\005",
-      "\022\026\n\016downlinkVolume\030\035 \001(\005\022\027\n\017continuanceT" +
-      "ime\030\036 \001(\003\022\020\n\010muteTime\030\037 \001(\003\022\022\n\nisRespons" +
-      "e\030\" \001(\010\022\023\n\013description\030# \001(\t\022<\n\013speakerM" +
-      "ode\030$ \001(\0162\'.com.rtrk.protobufatcommand.S" +
-      "peakerMode\022>\n\014audioChannel\030% \001(\0162(.com.r" +
-      "trk.protobufatcommand.AudioChannel\022\030\n\020st" +
-      "artPlayingTone\030& \001(\010\022V\n\rtoneDetection\030\026 " +
-      "\001(\0162).com.rtrk.protobufatcommand.ToneDet" +
-      "ection:\024CLOSE_TONE_DETECTION\022<\n\013dtmfOper" +
-      "ate\030\' \001(\0162\'.com.rtrk.protobufatcommand.D",
-      "TMFOperate\0226\n\010dtmfCode\030\032 \001(\0162$.com.rtrk." +
-      "protobufatcommand.DTMFCode\022E\n\talgorithm\030" +
-      "\017 \001(\0162%.com.rtrk.protobufatcommand.Algor" +
-      "ithm:\013ALGORITHM_1\"\353\005\n\026HardwareRelatedCom" +
-      "mand\022K\n\013messageType\030\001 \002(\01626.com.rtrk.pro" +
-      "tobufatcommand.HardwareRelatedMessageTyp" +
-      "e\0222\n\006action\030\002 \002(\0162\".com.rtrk.protobufatc" +
-      "ommand.Action\022\014\n\004time\030\022 \001(\t\022\020\n\010setAlarm\030" +
-      "\006 \001(\010\0222\n\006repeat\030\007 \001(\0162\".com.rtrk.protobu" +
-      "fatcommand.Repeat\0225\n\005power\030\010 \001(\0162&.com.r",
-      "trk.protobufatcommand.AlarmPower\022@\n\rbatt" +
-      "eryCharge\030\t \001(\0162).com.rtrk.protobufatcom" +
-      "mand.BatteryCharge\022\036\n\026batteryConnectionL" +
-      "evel\030\n \001(\005\022\026\n\016batteryVoltage\030\013 \001(\005\022:\n\nre" +
-      "adStatus\030\014 \001(\0162&.com.rtrk.protobufatcomm" +
-      "and.ReadStatus\0228\n\tslowClock\030\016 \001(\0162%.com." +
-      "rtrk.protobufatcommand.SlowClock\0224\n\007ledM" +
-      "ode\030\017 \001(\0162#.com.rtrk.protobufatcommand.L" +
-      "edMode\022@\n\rthresholdType\030\020 \001(\0162).com.rtrk" +
-      ".protobufatcommand.ThresholdType\022\021\n\tthre",
-      "shold\030\021 \001(\005\022\022\n\nisResponse\030\023 \001(\010\022\023\n\013descr" +
-      "iption\030\024 \001(\t\022!\n\031thresholdFunctionTurnedO" +
-      "N\030\025 \001(\010\"\242\003\n\rOthersCommand\022B\n\013messageType" +
-      "\030\001 \002(\0162-.com.rtrk.protobufatcommand.Othe" +
-      "rsMessageType\0222\n\006action\030\002 \002(\0162\".com.rtrk" +
-      ".protobufatcommand.Action\022\022\n\nechoModeOn\030" +
-      "\006 \001(\010\022\'\n\037commandLineTerminationCharacter" +
-      "\030\007 \001(\005\022#\n\033responseFormattingCharacter\030\014 " +
-      "\001(\005\022 \n\030responseEditingCharacter\030\r \001(\005\0226\n" +
-      "\010timeMode\030\010 \001(\0162$.com.rtrk.protobufatcom",
-      "mand.TimeMode\0224\n\007indMode\030\t \001(\0162#.com.rtr" +
-      "k.protobufatcommand.IndMode\022\022\n\nisRespons" +
-      "e\030\n \001(\010\022\023\n\013description\030\013 \001(\t\"x\n\014ErrorCom" +
-      "mand\0220\n\005error\030\001 \001(\0162!.com.rtrk.protobufa" +
-      "tcommand.Error\0226\n\010FTPError\030\002 \001(\0162$.com.r" +
-      "trk.protobufatcommand.FTPError*\370\003\n\013Comma" +
-      "ndType\022\020\n\014HTTP_COMMAND\020\000\022\020\n\014FILE_COMMAND" +
-      "\020\001\022\017\n\013FTP_COMMAND\020\002\022\017\n\013MMS_COMMAND\020\003\022\025\n\021" +
-      "QUEC_CELL_COMMAND\020\004\022\025\n\021RECORDING_COMMAND" +
-      "\020\005\022\020\n\014SMTP_COMMAND\020\006\022\017\n\013STK_COMMAND\020\007\022\023\n",
-      "\017GENERAL_COMMAND\020\010\022\034\n\030SERIAL_INTERFACE_C" +
-      "OMMAND\020\t\022\032\n\026STATUS_CONTROL_COMMAND\020\n\022\027\n\023" +
-      "SIM_RELATED_COMMAND\020\013\022\033\n\027NETWORK_SERVICE" +
-      "_COMMAND\020\014\022\030\n\024CALL_RELATED_COMMAND\020\r\022\017\n\013" +
-      "SMS_COMMAND\020\016\022\025\n\021PHONEBOOK_COMMAND\020\017\022\020\n\014" +
-      "GPRS_COMMAND\020\020\022\021\n\rTCPIP_COMMAND\020\021\022!\n\035SUP" +
-      "PLEMENTARY_SERVICE_COMMAND\020\022\022\021\n\rAUDIO_CO" +
-      "MMAND\020\023\022\034\n\030HARDWARE_RELATED_COMMAND\020\024\022\022\n" +
-      "\016OTHERS_COMMAND\020\025*\325\002\n\017FileMessageType\022\031\n" +
-      "\025GET_STORAGE_DATE_SIZE\020\000\022\016\n\nLIST_FILES\020\001",
-      "\022\032\n\026UPLOAD_FILE_TO_STORAGE\020\002\022\036\n\032DOWNLOAD" +
-      "_FILE_FROM_STORAGE\020\003\022\032\n\026DELETE_FILE_IN_S" +
-      "TORAGE\020\004\022\r\n\tMOVE_FILE\020\005\022\r\n\tOPEN_FILE\020\006\022\r" +
-      "\n\tREAD_FILE\020\007\022\016\n\nWRITE_FILE\020\010\022\r\n\tSEEK_FI" +
-      "LE\020\t\022\016\n\nCLOSE_FILE\020\n\022\033\n\027GET_FILE_POINTER" +
-      "_OFFSET\020\013\022!\n\035FORCE_TO_WRITE_DATA_IN_BUFF" +
-      "ER\020\014\022#\n\037TRUNCATE_FILE_FROM_FILE_POINTER\020" +
-      "\r*|\n\014FileOpenMode\022\'\n#IF_NOT_EXISTS_CREAT" +
-      "E_IF_EXISTS_OPEN\020\000\022\"\n\036IF_EXISTS_CREATE_A" +
-      "ND_CLEAR_OLD\020\001\022\037\n\033IF_EXISTS_OPEN_IN_READ",
-      "_MODE\020\002*T\n\023PointerMovementMode\022\016\n\nFILE_B" +
-      "EGIN\020\000\022\037\n\033CURRENT_POSITION_OF_POINTER\020\001\022" +
-      "\014\n\010FILE_END\020\002*\334\003\n\016FTPMessageType\022\024\n\020OPEN" +
-      "_FTP_SERVICE\020\000\022\025\n\021CLOSE_FTP_SERVICE\020\001\022\035\n" +
-      "\031UPLOAD_FILE_TO_FTP_SERVER\020\002\022!\n\035DOWNLOAD" +
-      "_FILE_FROM_FTP_SERVER\020\003\022\034\n\030SET_UPLOAD_DO" +
-      "WNLOAD_PATH\020\004\022\021\n\rSET_USER_NAME\020\005\022\020\n\014SET_" +
-      "PASSWORD\020\006\022\022\n\016SET_PARAMETERS\020\007\022\037\n\033QUERY_" +
-      "STATUS_OF_FTP_SERVICE\020\010\022\035\n\031LATEST_TRANSF" +
-      "ER_REAL_SIZE\020\t\022\036\n\032RENAME_FILE_OR_FOLDER_",
-      "NAME\020\n\022 \n\034QUERY_SIZE_OF_APPOINTED_FILE\020\013" +
-      "\022\017\n\013DELETE_FILE\020\014\022\034\n\030ESTABLISH_NEW_FILEF" +
-      "OLDER\020\r\022\026\n\022REMOVE_FILE_FOLDER\020\016\022&\n\"LIST_" +
-      "CONTENTS_OF_DIRECTORY_OR_FILE\020\017\022\023\n\017LIST_" +
-      "FILE_NAMES\020\020*7\n\022DataConnectionMode\022\017\n\013AC" +
-      "TIVE_MODE\020\000\022\020\n\014PASSIVE_MODE\020\001*\237\001\n\034TypeOf" +
-      "ConfigurableParameters\022\033\n\027MODE_OF_DATA_C" +
-      "ONNECTION\020\001\022\021\n\rTRANSFER_TYPE\020\002\022*\n&RESUMI" +
-      "NG_POINT_TO_RESUME_FILE_TRANSFER\020\003\022#\n\037LO" +
-      "CAL_POSITION_OF_FILE_TRANSFER\020\004*A\n\014Trans",
-      "ferType\022\030\n\024BINARY_TRANSFER_TYPE\020\000\022\027\n\023ASC" +
-      "II_TRANSFER_TYPE\020\001*G\n\006Return\022.\n*RETURN_N" +
-      "O_INFORMATIONS_TRANSFERED_FROM_FTP\020\000\022\r\n\t" +
-      "RETURN_OK\020\001*\245\007\n\010FTPError\022\n\n\006FTP_OK\020\000\022\024\n\020" +
-      "FTP_UNKNOW_ERROR\020\001\022\024\n\020FTP_SERVICE_BUSY\020\003" +
-      "\0225\n1FAILED_TO_GET_IP_ADDRESS_ACCORDING_T" +
-      "O_DOMAIN_NAME\020\004\022\025\n\021FTP_NETWORK_ERROR\020\005\022$" +
-      "\n FTP_SESSION_CLOSED_BY_FTP_SERVER\020\006\022,\n(" +
-      "DATA_CONNECTION_OF_FTP_SERVICE_IS_CLOSED" +
-      "\020\007\022\'\n#FTP_GPRS_CSD_CONTEXT_IS_DEACTIVATE",
-      "D\020\010\022\017\n\013FTP_TIMEOUT\020\t\022\036\n\032INPUT_PARAMETAR_" +
-      "IS_ILLEGAL\020\n\022$\n FILE_NOT_FOUND_IN_LOCAL_" +
-      "POSITION\020\013\022(\n$FAILED_TO_GET_FILE_IN_LOCA" +
-      "L_POSITION\020\014\022\'\n#FTP_NO_ENOUGH_MEMORY_FOR" +
-      "_ATTACHMENT\020\r\022$\n\037FTP_SERVER_CANT_SUPPORT" +
-      "_SERVICE\020\245\003\022#\n\036FAILED_TO_OPEN_DATA_CONNE" +
-      "CTION\020\251\003\022,\n\'CONNECTION_CLOSED_AND_STOP_T" +
-      "RANSFERRING\020\252\003\022#\n\036REQUEST_FOR_FILE_ISNT_" +
-      "OPERATED\020\302\003\022%\n FTP_SERVER_HAS_NOT_ENOUGH" +
-      "_MEMORY\020\304\003\022#\n\036FORMAT_OF_FTP_COMMAND_IS_W",
-      "RONG\020\364\003\022&\n!PARAMETER_OF_FTP_COMMAND_IS_W" +
-      "RONG\020\365\003\022,\n\'FTP_COMMAND_ISNT_OPERATED_BY_" +
-      "FTP_SERVER\020\366\003\022\031\n\024NOT_LOGIN_FTP_SERVER\020\222\004" +
-      "\022 \n\033NEED_INFORMATION_OF_ACCOUNT\020\224\004\022\032\n\025RE" +
-      "QUEST_ISNT_OPERATED\020\246\004\022\027\n\022REQUEST_IS_STO" +
-      "PPED\020\247\004\022\037\n\032REQUEST_OF_FILE_IS_STOPPED\020\250\004" +
-      "\022\031\n\024FILE_NAME_IS_ILLEGAL\020\251\004*\244\001\n\017HTTPMess" +
-      "ageType\022\027\n\023SET_HTTP_SERVER_URL\020\000\022\031\n\025SEND" +
-      "_HTTP_GET_REQUEST\020\001\022\035\n\031READ_HTTP_SERVER_" +
-      "RESPONSE\020\002\022\032\n\026SEND_HTTP_POST_REQUEST\020\003\022\"",
-      "\n\036DOWNLOAD_FILE_FROM_HTTP_SERVER\020\004*\303\003\n\016M" +
-      "MSMessageType\022\023\n\017SET_URL_OF_MMSC\020\000\022\021\n\rSE" +
-      "T_MMS_PROXY\020\001\022)\n%SET_PARAMETER_FOR_SENDI" +
-      "NG_MMS_MESSAGE\020\002\022%\n!SET_CHARACTER_SETS_A" +
-      "ND_INPUT_MODE\020\003\022\025\n\021WRITE_MMS_MESSAGE\020\004\022\024" +
-      "\n\020SEND_MMS_MESSAGE\020\005\022\037\n\033MENAGE_RECEIVED_" +
-      "MMS_MESSAGE\020\006\022\035\n\031READ_RECEIVED_MMS_MESSA" +
-      "GE\020\007\022!\n\035RECEIVE_MMS_MESSAGE_FROM_MMSC\020\010\022" +
-      "(\n$SET_PRIORITY_OF_MMS_MESSAGE_AND_CALL\020" +
-      "\t\022*\n&SET_DUR_ATTRIBUTE_VALUE_IN_SMIL_SCR",
-      "IPT\020\n\022\032\n\026SET_MMS_SMS_TRANSACTOR\020\013\022\036\n\032ENA" +
-      "BLE_OUTPUT_TEXT_IN_USC2\020\014\022\025\n\021OUTPUT_FILE" +
-      "_STYLE\020\r*\272\001\n\010FileType\022\010\n\004TEXT\020\001\022\r\n\tTEXT_" +
-      "HTML\020\002\022\016\n\nTEXT_PLAIN\020\003\022\014\n\010TEXT_XML\020\004\022\t\n\005" +
-      "IMAGE\020\005\022\r\n\tIMAGE_GIF\020\006\022\016\n\nIMAGE_JPEG\020\007\022\016" +
-      "\n\nIMAGE_TIFF\020\010\022\r\n\tIMAGE_PNP\020\t\022\016\n\nIMAGE_W" +
-      "BMP\020\n\022\t\n\005AUDIO\020\013\022\t\n\005VIDEO\020\014\022\010\n\004SMIL\020\r*\'\n" +
-      "\016OperateSendMMS\022\025\n\021START_TO_SEND_MMS\020\001*5" +
-      "\n\021OperateReceiveMMS\022 \n\034START_TO_RECEIVE_" +
-      "MMS_MESSAGE\020\001*\254\001\n\016OperateReadMMS\022\034\n\030VIEW",
-      "_ORIGINATION_ADDRESS\020\001\022\023\n\017VIEW_TO_ADDRES" +
-      "S\020\002\022\023\n\017VIEW_CC_ADDRESS\020\003\022\022\n\016VIEW_MMS_TIT" +
-      "LE\020\004\022\024\n\020LIST_APPEND_FILE\020\005\022(\n$READ_APPEN" +
-      "D_FILE_DATA_OF_MMS_MESSAGE\020\006*@\n\020OperateM" +
-      "anageMMS\022\026\n\022DELETE_MMS_MESSAGE\020\000\022\024\n\020LIST" +
-      "_MMS_MESSAGE\020\001*7\n\017OperateWriteMMS\022\021\n\rCLE" +
-      "AN_OPERATE\020\000\022\021\n\rWRITE_OPERATE\020\001*\256\001\n\017Oper" +
-      "ateFunction\022$\n CLEAR_ALL_CONTENT_OF_MMS_" +
-      "MESSAGE\020\000\022\026\n\022OPERATE_TO_ADDRESS\020\001\022\026\n\022OPE" +
-      "RATE_CC_ADDRESS\020\002\022\027\n\023OPERATE_BCC_ADDRESS",
-      "\020\003\022\021\n\rOPERATE_TITLE\020\004\022\031\n\025OPERATE_FILE_AP" +
-      "PENDED\020\005*!\n\014ProtocolType\022\021\n\rHHTP_PROTOCO" +
-      "L\020\001*\237\001\n\016ValidityPeriod\022\017\n\013TIME_1_HOUR\020\000\022" +
-      "\021\n\rTIME_12_HOURS\020\001\022\021\n\rTIME_24_HOURS\020\002\022\017\n" +
-      "\013TIME_2_DAYS\020\003\022\017\n\013TIME_1_WEEK\020\004\022\020\n\014MAXIM" +
-      "UM_TIME\020\005\022\"\n\036USE_NETWORK_CONFIGURATION_T" +
-      "IME\020\006*l\n\010Priority\022\020\n\014LOW_PRIORITY\020\000\022\023\n\017N" +
-      "ORMAL_PRIORITY\020\001\022\021\n\rHIGH_PRIORITY\020\002\022&\n\"U" +
-      "SE_NETWORK_CONFIGURATION_PRIORITY\020\003*s\n\016A" +
-      "ddressVisible\022\024\n\020HIDE_ANY_ADDRESS\020\000\022\034\n\030S",
-      "HOW_EVEN_SECRET_ADDRESS\020\001\022-\n)USE_NETWORK" +
-      "_CONFIGURATION_ADDRESS_VISIBLE\020\002*\214\001\n\017MMS" +
-      "MessageClass\022\022\n\016PERSONAL_CLASS\020\000\022\027\n\023ADVE" +
-      "RTISEMENT_CLASS\020\001\022\027\n\023INFORMATIONAL_CLASS" +
-      "\020\002\022\016\n\nAUTO_CLASS\020\003\022#\n\037USE_NETWORK_CONFIG" +
-      "URATION_CLASS\020\004*5\n\016TitleInputMode\022\020\n\014PDU" +
-      "_HEX_MODE\020\000\022\021\n\rTEXT_BIN_MODE\020\001*\346\001\n\023QuecC" +
-      "ellMessageType\022\"\n\036SCAN_BASIC_STATION_INF" +
-      "ORMATION\020\000\022%\n!SWITCH_ON_OR_OFF_ENGINEERI" +
-      "NG_MODE\020\001\022\025\n\021LOCK_BASE_STATION\020\002\022\036\n\032SCAN",
-      "_ARFCN_RECEIVING_LEVEL\020\003\022\033\n\027GET_CHANNEL_" +
-      "INFORMATION\020\004\022\033\n\027GET_LAST_VALID_TA_VALUE" +
-      "\020\005\022\023\n\017FORBID_OPERATOR\020\006*P\n\004Band\022\020\n\014GSM_9" +
-      "00_BAND\020\000\022\021\n\rDCS_1800_BAND\020\001\022\021\n\rPCS_1900" +
-      "_BAND\020\002\022\020\n\014GSM_850_BAND\020\003*\312\001\n\022ForbidOper" +
-      "atorMode\022\037\n\033READ_LINE_OF_FORBIDDEN_DATA\020" +
-      "\000\022 \n\034WRITE_LINE_OF_FORBIDDEN_DATA\020\001\022 \n\034C" +
-      "LEAN_LINE_OF_FORBIDDEN_DATA\020\002\022\034\n\030CLEAR_A" +
-      "LL_FORBIDDEN_DATA\020\003\022\027\n\023READ_FORBIDDEN_DA" +
-      "TA\020\004\022\030\n\024WRITE_FORBIDDEN_DATA\020\005*\257\001\n\007RRSta",
-      "te\022\016\n\nNULL_STATE\020\000\022\022\n\016INACTIVE_STATE\020\001\022\025" +
-      "\n\021CELL_SELECT_STATE\020\002\022\016\n\nIDLE_STATE\020\003\022\020\n" +
-      "\014ACCESS_STATE\020\004\022\031\n\025PACKET_TRANSFER_STATE" +
-      "\020\005\022\023\n\017DEDICATED_STATE\020\006\022\027\n\023CELL_RESELECT" +
-      "_STATE\020\007*\262\001\n\004Dump\022,\n(ONLY_DISPLAY_INFORM" +
-      "ATION_OF_SERVING_CALL\020\000\022A\n=DISPLAY_INFOR" +
-      "MATION_OF_SERVING_CELL_AND_1_6_NEIGHBORI" +
-      "NG_CELLS\020\001\0229\n5LIST_OF_ARCFN_AND_CALL_FRE" +
-      "QUENCY_LIST_OF_SERVING_CELL\020\003*\203\001\n\017Engine" +
-      "eringMode\022\037\n\033SWITCH_OFF_ENGINEERING_MODE",
-      "\020\000\022\036\n\032SWITCH_ON_ENGINEERING_MODE\020\001\022/\n+SW" +
-      "ITCH_ON_ENGINEERING_MODE_AND_ACTIVATE_UR" +
-      "C\020\002*k\n\016OperatorStatus\022\023\n\017UNKNOW_OPERATOR" +
-      "\020\000\022\026\n\022OPERATOR_AVAILABLE\020\001\022\024\n\020CURRENT_OP" +
-      "ERATOR\020\002\022\026\n\022FORBIDDEN_OPERATOR\020\003*_\n\024Reco" +
-      "rdingMessageType\022\025\n\021RECORD_MEDIA_FILE\020\000\022" +
-      "\023\n\017PLAY_MEDIA_FILE\020\001\022\033\n\027STOP_PLAYING_MED" +
-      "IA_FILE\020\002*:\n\013PlayChannel\022\014\n\010RECEIVER\020\000\022\013" +
-      "\n\007HEADSET\020\001\022\020\n\014LOUD_SPEAKER\020\002*O\n\nFileFor" +
-      "mat\022\007\n\003AMR\020\003\022\r\n\tWAV_PCM16\020\r\022\014\n\010WAV_ALAW\020",
-      "\016\022\014\n\010WAV_ULAW\020\017\022\r\n\tWAV_ADPCM\020\020*L\n\016Record" +
-      "ingState\022\036\n\032MODULE_IS_NOT_IN_RECORDING\020\000" +
-      "\022\032\n\026MOUDLE_IS_IN_RECORDING\020\001*\210\003\n\017SMTPMes" +
-      "sageType\022$\n SET_USER_NAME_FOR_AUTHENTICA" +
-      "TION\020\000\022#\n\037SET_PASSWORD_FOR_AUTHENTICATIO" +
-      "N\020\001\022\034\n\030SET_SENDER_EMAIL_ADDRESS\020\002\022\024\n\020SET" +
-      "_SENDERS_NAME\020\003\022$\n SET_SMTP_SERVER_ADDRE" +
-      "SS_AND_PORT\020\004\022\034\n\030ADD_OR_DELETE_RECIPIENT" +
-      "S\020\005\022\026\n\022EDIT_EMAIL_SUBJECT\020\006\022\026\n\022EDIT_EMAI" +
-      "L_CONTENT\020\007\022\030\n\024ADD_EMAIL_ATTACHMENT\020\010\022\025\n",
-      "\021DELETE_ATTACHMENT\020\t\022)\n%CLEAR_ALL_CONFIG" +
-      "URATIONS_AND_CONTENTS\020\n\022\026\n\022SMTP_CONFIGUR" +
-      "ATION\020\013\022\016\n\nSEND_EMAIL\020\014*6\n\007Charset\022\t\n\005AS" +
-      "CII\020\000\022\t\n\005UTF_8\020\001\022\013\n\007GB_2312\020\002\022\010\n\004BIG5\020\003*" +
-      "O\n\rRecipientType\022\026\n\022RECEIVER_RECIPIENT\020\001" +
-      "\022\021\n\rCOPY_RECEIVER\020\002\022\023\n\017SECRET_RECEIVER\020\003" +
-      "*8\n\rRecipientMode\022\024\n\020DELETE_RECIPIENT\020\000\022" +
-      "\021\n\rADD_RECIPIENT\020\001*\350\001\n\016STKMessageType\022\034\n" +
-      "\030TURN_ON_OFF_STK_FUNCTION\020\000\022\030\n\024STK_PROFI" +
-      "LE_DOWNLOAD\020\001\022\030\n\024STK_ENVELOPE_COMMAND\020\002\022",
-      "\031\n\025STK_TERMINAL_RESPONSE\020\003\022\024\n\020TRIGGER_ST" +
-      "K_CALL\020\004\022\023\n\017TRIGGER_STK_SMS\020\005\022\022\n\016TRIGGER" +
-      "_STK_SS\020\006\022\024\n\020TRIGGER_STK_USSD\020\007\022\024\n\020TRIGG" +
-      "ER_STK_DTMF\020\010*\202\002\n\003STK\022\034\n\030TRIGER_MODEM_TO" +
-      "_SEND_STK\020\000\0225\n1TRIGER_MODEM_TO_SEND_STK_" +
-      "BUT_ICON_CANT_BE_DISPLAY\020\004\022(\n$PROACTIVE_" +
-      "SESSION_TERMINATED_BY_USER\020\020\022\031\n\025NO_RESPO" +
-      "NSE_FROM_USER\020\022\022\035\n\031UNABLE_TO_PROCESS_COM" +
-      "MAND\020 \022\032\n\026USER_REJECT_SETUP_CALL\020\"\022&\n\"CO" +
-      "MMAND_DATA_DONT_UNDERSTOOD_BY_ME\0202*\365\006\n\022G",
-      "eneralMessageType\022.\n*DISPLAY_PRODUCT_IDE" +
-      "NTIFICATION_INFORMATION\020\000\022\'\n#REQUEST_MAN" +
-      "UFACTURER_IDENTIFICATION\020\001\022#\n\037REQUEST_TA" +
-      "_MODEL_IDENTIFICATION\020\002\022&\n\"REQUEST_TA_RE" +
-      "VISION_IDENTIFICATION\020\003\022(\n$REQUEST_GLOBA" +
-      "L_OBJECT_IDENTIFICATION\020\004\022,\n(REQUEST_MAN" +
-      "UFACTURER_IDENTIFICATION_CGMI\020\005\022 \n\034REQUE" +
-      "ST_MODEL_IDENTIFICATION\020\006\022+\n\'REQUEST_TA_" +
-      "REVISION_IDENTIFICATION_CGMR\020\007\022\020\n\014REQUES" +
-      "T_IMEI\020\010\0220\n,REQUEST_PRODUCT_SERIAL_NUMBE",
-      "R_IDENTIFICATION\020\t\022\025\n\021REQUEST_IMEI_QGSN\020" +
-      "\n\022/\n+SET_ALL_PARAMETERS_TO_MANUFACTURER_" +
-      "DEFAULTS\020\013\022!\n\035DISPLAY_CURRENT_CONFIGURAT" +
-      "ION\020\014\0224\n0STORE_CURRENT_PARAMETERS_TO_USE" +
-      "R_DEFINED_PROFILE\020\r\022%\n!SET_RESULT_CODE_P" +
-      "RESENTATION_CODE\020\016\022\026\n\022TA_RESPONSE_FORMAT" +
-      "\020\017\022\"\n\036SET_CONNECT_RESULT_CODE_FORMAT\020\020\0226" +
-      "\n2SET_ALL_CURRENT_PARAMETERS_TO_USER_DEF" +
-      "INED_PROFILE\020\021\022\033\n\027SET_PHONE_FUNCTIONALIT" +
-      "Y\020\022\022\r\n\tPOWER_OFF\020\023\022!\n\035REPORT_MOBILE_EQUI",
-      "PMENT_ERROR\020\024\022\030\n\024SET_TE_CHARACTER_SET\020\025\022" +
-      ")\n%REQUEST_COMPLETE_TA_CAPABILITIES_LIST" +
-      "\020\026*\212\001\n\021DisableResultCode\022\027\n\023DISABLE_RESU" +
-      "LT_CODE\020\000\022-\n)ENABLE_RESULT_CODE_AND_USE_" +
-      "NUMERIC_VALUES\020\001\022-\n)ENABLE_RESULT_CODE_A" +
-      "ND_USE_VERBOSE_VALUES\020\002*:\n\014PowerOffMode\022" +
-      "\024\n\020URGENT_POWER_OFF\020\000\022\024\n\020NORMAL_POWER_OF" +
-      "F\020\001**\n\005Reset\022\023\n\017DO_NOT_RESET_ME\020\000\022\014\n\010RES" +
-      "ET_ME\020\001*\205\001\n\rFunctionality\022\031\n\025MINIMUM_FUN" +
-      "CTIONALITY\020\000\022\026\n\022FULL_FUNCTIONALITY\020\001\022A\n=",
-      "DISABLE_PHONE_FROM_BOTH_TRANSMITTING_AND" +
-      "_RECEIVING_RF_SIGNALS\020\002*\326\001\n\021ConnectResul" +
-      "tCode\022%\n!CONNECT_RESULT_CODE_ONLY_RETURN" +
-      "ED\020\000\022*\n&CONNECT_TEXT_RESULT_CODE_ONLY_RE" +
-      "TURNED\020\001\022%\n!TONE_ENABLED_BUSY_SIGNAL_DIS" +
-      "ABLED\020\002\022%\n!TONE_DISABLED_BUSY_SIGNAL_ENA" +
-      "BLED\020\003\022 \n\034TONE_AND_BUSY_SIGNAL_ENABLED\020\004" +
-      "*P\n\023InformationResponse\022\034\n\030SHORT_RESULT_" +
-      "CODE_FORMAT\020\000\022\033\n\027LONG_RESULT_CODE_FORMAT" +
-      "\020\001*_\n\nResultCode\022\035\n\031TA_TRANSMINTS_RESULT",
-      "_CODE\020\000\0222\n.RESULT_CODE_ARE_SUPPRESSED_AN" +
-      "D_NOT_TRANSMITTED\020\001*(\n\013TAToDefault\022\031\n\025SE" +
-      "T_ALL_TA_TO_DEFAULT\020\000*#\n\rProfileNumber\022\022" +
-      "\n\016PROFILE_NUMBER\020\000*3\n\024ResetToProfileNumb" +
-      "er\022\033\n\027RESET_TO_PROFILE_NUMBER\020\000*\335\002\n!Seri" +
-      "alInterfaceControlMessageType\022\031\n\025SET_DCD" +
-      "_FUNCTION_MODE\020\000\022\031\n\025SET_DTR_FUNCTION_MOD" +
-      "E\020\001\022\'\n#SET_TE_TA_CONTROL_CHARACTER_FRAMI" +
-      "NG\020\002\022%\n!SET_TE_TA_LOCAL_DATA_FLOW_CONTRO" +
-      "L\020\003\022,\n(SET_TE_TA_LOCAL_DATA_RATE_REPORTI",
-      "NG_MODE\020\004\022\036\n\032SET_TE_TA_FIXED_LOCAL_RATE\020" +
-      "\005\022\027\n\023MULTIPLEXER_CONTROL\020\006\022 \n\034CONFIGURE_" +
-      "DUAL_UART_FUNCTION\020\007\022)\n%CONFIGURE_PARAME" +
-      "TERS_OF_THE_DUAL_UART\020\010*N\n\010DCEByDTE\022\023\n\017D" +
-      "CE_BY_DTE_NONE\020\000\022\027\n\023DCE_BY_DTE_XON_XOFF\020" +
-      "\001\022\024\n\020RTS_FLOW_CONTROL\020\002*N\n\010DTEByDCE\022\023\n\017D" +
-      "TE_BY_DCE_NONE\020\000\022\027\n\023DTE_BY_DCE_XON_XOFF\020" +
-      "\001\022\024\n\020CTS_FLOW_CONTROL\020\002*{\n\016DualUARTParit" +
-      "y\022\031\n\025DUAL_UART_PARITY_NONE\020\000\022\030\n\024DUAL_UAR" +
-      "T_PARITY_ODD\020\001\022\031\n\025DUAL_UART_PARITY_EVEN\020",
-      "\002\022\031\n\025DUAL_UART_PARITY_MARK\020\003*:\n\010StopBits" +
-      "\022\016\n\nSTOP_BIT_1\020\001\022\016\n\nSTOP_BIT_2\020\002\022\016\n\nSTOP" +
-      "_BIT_3\020\003*N\n\010DataBits\022\017\n\013DATA_BITS_5\020\001\022\017\n" +
-      "\013DATA_BITS_6\020\002\022\017\n\013DATA_BITS_7\020\003\022\017\n\013DATA_" +
-      "BITS_8\020\004*E\n\020TransmissionRate\022\034\n\030UNKNOW_T" +
-      "RANSMISSION_RATE\020\000\022\023\n\017RATE_115200_BPS\020\005*" +
-      "4\n MultiplexerTransparencyMechanism\022\020\n\014B" +
-      "ASIC_OPTION\020\000*5\n\031MultiplexerControlChann" +
-      "el\022\030\n\024UIH_FRAMES_USED_ONLY\020\000*\371\001\n\004Rate\022\n\n" +
-      "\006RATE_0\020\000\022\013\n\007RATE_75\020K\022\r\n\010RATE_150\020\226\001\022\r\n",
-      "\010RATE_300\020\254\002\022\r\n\010RATE_600\020\330\004\022\016\n\tRATE_1200" +
-      "\020\260\t\022\017\n\nREATE_2400\020\340\022\022\016\n\tRATE_4800\020\300%\022\016\n\t" +
-      "RATE_9600\020\200K\022\017\n\nRATE_14400\020\240\013\022\020\n\nRATE_19" +
-      "200\020\200\226\001\022\020\n\nRATE_28800\020\200\341\001\022\020\n\nRATE_38400\020" +
-      "\200\254\002\022\020\n\nRATE_57600\020\200\302\003\022\021\n\013RATE_115200\020\200\204\007" +
-      "*0\n\006Parity\022\007\n\003ODD\020\000\022\010\n\004EVEN\020\001\022\010\n\004MARK\020\002\022" +
-      "\t\n\005SPACE\020\003*\322\001\n\rFramingFormat\022\031\n\025UNKNOW_F" +
-      "RAMING_FORMAT\020\000\022\032\n\026DATA_8_PARITY_0_STOP_" +
-      "2\020\001\022\032\n\026DATA_8_PARITY_1_STOP_1\020\002\022\032\n\026DATA_" +
-      "8_PARITY_0_STOP_1\020\003\022\032\n\026DATA_7_PARITY_0_S",
-      "TOP_2\020\004\022\032\n\026DATA_7_PARITY_1_STOP_1\020\005\022\032\n\026D" +
-      "ATA_7_PARITY_0_STOP_1\020\006*\237\001\n\tDTRStatus\022\034\n" +
-      "\030TA_IGNORES_STATUS_ON_DTR\020\000\022:\n6CHANGE_TO" +
-      "_CAOMMAND_MODE_WHILE_REMAINING_CONNECTED" +
-      "_CALL\020\001\0228\n4DISCONNECT_DATA_CALL_AND_THEN" +
-      "_CHANGE_TO_COMMAND_MODE\020\002*_\n\rDCDLineStat" +
-      "us\022\031\n\025DCD_LINE_IS_ALWAYS_ON\020\000\0223\n/DCD_LIN" +
-      "E_IS_ON_ONLY_IN_PRESENCE_OF_DATA_CARRIER" +
-      "\020\001*\261\005\n\030StatusControlMessageType\022\031\n\025EXTEN" +
-      "DED_ERROR_REPORT\020\000\022$\n MOBILE_EQUIPMENT_A",
-      "CTIVITY_STATUS\020\001\022\036\n\032INDICATE_RI_WHEN_USI" +
-      "NG_URC\020\002\022(\n$SHOW_STATE_OF_MOBILE_ORIGINA" +
-      "TED_CELL\020\003\022.\n*REFUSE_TO_RECEIVE_SMS_INCO" +
-      "MING_CALL_OR_NOT\020\004\022.\n*ENABLE_OR_DISABLE_" +
-      "INITIAL_URC_PRESENTATION\020\005\0229\n5ENABLE_OR_" +
-      "DISABLE_PROPRIETARY_UNSOLICITED_INDICATI" +
-      "ONS\020\006\022!\n\035QUERY_STATE_OF_INITIALIZATION\020\007" +
-      "\022\034\n\030QUERY_GSM_NETWORK_STATUS\020\010\022 \n\034NETWOR" +
-      "K_TIME_SYNCHRONIZATION\020\t\022+\n\'OBTAIN_LATES" +
-      "T_NETWORK_TIME_SYNCHRONIZED\020\n\0224\n0NETWORK",
-      "_TIME_SYNCHRONIZATION_AND_UPDATE_RTC_TIM" +
-      "E\020\013\022\'\n#NETWORK_TIME_SYNCHRONIZATION_REPO" +
-      "RT\020\014\022\'\n#SWITCH_ON_OR_OFF_DETECTING_SIM_C" +
-      "ARD\020\r\022!\n\035SIM_INSERTED_STATUS_REPORTING\020\016" +
-      "\0224\n0CSC_CALL_OR_GPRS_PDP_CONTEXT_TERMINA" +
-      "L_INDICATION\020\017*e\n\016ConnectionType\022\037\n\033CIRC" +
-      "UIT_SWITCHED_VOICE_CALL\020\000\022\036\n\032CIRCUIT_SWI" +
-      "TCHED_DATA_CALL\020\001\022\022\n\016PPP_CONNECTION\020\002*~\n" +
-      "\023SIMCardInsertStatus\0222\n.LOW_LEVEL_OF_PIN" +
-      "_INDICATES_SIM_CARD_IS_PRESENT\020\000\0223\n/HIGH",
-      "_LEVEL_OF_PIN_INDICATES_SIM_CARD_IS_PRES" +
-      "ENT\020\001*x\n\023SIMCardDetectionPIN\0224\n0CONFIGUR" +
-      "E_SIM_PRESENCE_AS_SIM_CARD_DETECTION_PIN" +
-      "\020\000\022+\n\'CONFIGURE_DTR_AS_SIM_CARD_DETECTIO" +
-      "N_PIN\020\001*\330\001\n\034TimeZoneChangeEventReporting" +
-      "\022,\n(DISABLE_TIME_ZONE_CHANGE_EVENT_REPOR" +
-      "TING\020\000\022F\nBENABLE_TIME_ZONE_CHANGE_EVENT_" +
-      "REPORTING_BY_UNSOLICITED_RESULT_CODE\020\001\022B" +
-      "\n>ENABLE_EXTENDED_TIME_ZONE_REPORTING_BY" +
-      "_UNSOLICITED_RESULT_CODE\020\002*\305\002\n\007RTCTime\022.",
-      "\n*DISABLE_AUTOMATIC_UPDATE_RTC_TIME_VIA_" +
-      "NITZ\020\000\022I\nEUPDATE_NETWORK_SYNCHRONIZED_TI" +
-      "ME_TO_RTC_AND_SAVE_TIME_ZONE_INTO_NVRAM\020" +
-      "\001\022]\nYUPDATE_GTM_TIME_WITH_TIME_ZONE_TO_R" +
-      "TC_SAVE_TIME_ZONE_TO_NVRAM_IGNORE_DAYLIG" +
-      "HT_SAVING_TIME\020\002\022J\nFUPDATE_LOCALIZED_TIM" +
-      "E_AND_TIME_ZONE_TO_RTC_AND_SAVE_TIME_ZON" +
-      "E_TO_NVRAM\020\003\022\024\n\020SAVE_WITH_MODE_2\020\004*\221\001\n\020G" +
-      "SMNetworkStatus\022\030\n\024WORK_IN_NORMAL_STATE\020" +
-      "\000\022\025\n\021NO_AVAILABLE_CELL\020\001\022\"\n\036ONLY_LIMITED",
-      "_SERVICE_AVAILABLE\020\002\022(\n$NOT_READY_TO_RET" +
-      "RIEVE_NETWORK_STATUS\020\003*\237\001\n\025StateOfInitia" +
-      "lization\022\025\n\021NO_INITIALIZATION\020\000\022\037\n\033READY" +
-      "_TO_EXECUTE_AT_COMMAND\020\001\022)\n%PHONEBOOK_HA" +
-      "S_FINISHED_INITIALIZATION\020\002\022#\n\037SMS_HAS_F" +
-      "INISHED_INITIALIZATION\020\003*S\n!ProprietaryU" +
-      "nsolicitedIndications\022\017\n\013PUI_DISABLE\020\000\022\016" +
-      "\n\nPUI_ENABLE\020\001\022\r\n\tPUI_QUERY\020\002*\'\n\006Status\022" +
-      "\016\n\nSTATUS_OFF\020\000\022\r\n\tSTATUS_ON\020\001*\\\n\003Pas\022\r\n" +
-      "\tPAS_READY\020\000\022\016\n\nPAS_UNKNOW\020\001\022\017\n\013PAS_RING",
-      "ING\020\002\022%\n!PAS_CALL_IN_PROGRESS_OR_CALL_HO" +
-      "LD\020\003*\347\002\n\025SIMRelatedMessageType\022\020\n\014REQUES" +
-      "T_IMSI\020\000\022\021\n\rFACILITY_LOCK\020\001\022\r\n\tENTER_PIN" +
-      "\020\002\022\023\n\017CHANGE_PASSWORD\020\003\022\031\n\025RESTRICTED_SI" +
-      "M_ACCESS\020\004\022\026\n\022GENERIC_SIM_ACCESS\020\005\022\034\n\030CH" +
-      "ANGE_PS_SUPER_PASSWORD\020\006\022\r\n\tSHOW_CCID\020\007\022" +
-      "\023\n\017SHOW_CCID_QCCID\020\010\022!\n\035GET_SIM_CARD_GRO" +
-      "UP_IDENTIFIER\020\t\022%\n!SELECT_SIM_CARD_OPERA" +
-      "TING_VOLTAGE\020\n\022\035\n\031GET_SERVICE_PROVIDER_N" +
-      "AME\020\013\022\'\n#TIME_REMAINING_TO_INPUT_SIM_PIN",
-      "_PUK\020\014*{\n\013VoltageMode\022&\n\"RECOGNIZE_1_8_V" +
-      "_AND_3_0_V_SIM_CARD\020\000\022!\n\035RECOGNIZE_1_8_V" +
-      "_SIM_CARD_ONLY\020\001\022!\n\035RECOGNIZE_3_0_V_SIM_" +
-      "CARD_ONLY\020\002*x\n\nCommandSIM\022\020\n\013READ_BINATY" +
-      "\020\260\001\022\020\n\013READ_RECORD\020\262\001\022\021\n\014GET_RESPONSE\020\300\001" +
-      "\022\022\n\rUPDATE_BINATY\020\326\001\022\022\n\rUPDATE_RECORD\020\334\001" +
-      "\022\013\n\006STATUS\020\362\001*\215\001\n\005Class\022\t\n\005VOICE\020\001\022\010\n\004DA" +
-      "TA\020\002\022\007\n\003FAX\020\004\022\034\n\030ALL_TELEPHONY_EXCEPT_SM" +
-      "S\020\007\022\031\n\025SHORT_MESSAGE_SERVICE\020\010\022\025\n\021DATA_C" +
-      "IRCUIT_SYNC\020\020\022\026\n\022DATA_CIRCUIT_ASYNC\020 *2\n",
-      "\010LockMode\022\n\n\006UNLOCK\020\000\022\010\n\004LOCK\020\001\022\020\n\014QUERY" +
-      "_STATUS\020\002*\265\002\n\031NetworkServiceMessageType\022" +
-      "\026\n\022OPERATOR_SELECTION\020\000\022\030\n\024NETWORK_REGIS" +
-      "TRATION\020\001\022\031\n\025SIGNAL_QUALITY_REPORT\020\002\022\033\n\027" +
-      "PREFERRED_OPERATOR_LIST\020\003\022\027\n\023READ_OPEARA" +
-      "TR_NAMES\020\004\022%\n!GET_AND_SET_MOBILE_OPERATI" +
-      "ON_BAND\020\005\0225\n1NETWORK_SERVICE_SWITCH_ON_O" +
-      "R_OFF_ENGINEERING_MODE\020\006\022\037\n\033SCAN_POWER_O" +
-      "F_GSM_FREQUENCY\020\007\022\026\n\022LOCK_GSM_FREQUENCY\020" +
-      "\010*x\n\010Band1900\022\034\n\030NOT_CELL_ID_OF_1900_BAN",
-      "D\020\000\022\030\n\024CELL_ID_OF_1900_BAND\020\001\0224\n0AUTO_DI" +
-      "STINGUISH_WHETHER_IS_CELL_ID_OF_1900_BAN" +
-      "D\020\002*\231\001\n\021LockFrequencyMode\022\032\n\026DISABLE_LOC" +
-      "K_FREQUENCY\020\000\022\031\n\025ENABLE_LOCK_FREQUENCY\020\001" +
-      "\022M\nIENABLE_LOCK_FREQUENCY_AND_AUTO_SWITC" +
-      "H_TO_SAVED_FREQUENCY_AFTER_POWERED_ON\020\002*" +
-      "\276\002\n\023EngineeringModeDump\022)\n%ONLY_DISPLAY_" +
-      "SERVING_CELL_INFORMATION\020\000\022F\nBDISPLAY_SE" +
-      "RVING_CELL_INFORMATION_1_6_NEIGHBORING_C" +
-      "ELLS_INFORMATION\020\001\022J\nFDISPLAY_SERVING_CE",
-      "LL_INFORMATION_AND_LIST_OF_SERVING_CELL_" +
-      "CARRIER_LIST\020\002\022%\n!LIST_OF_SERVING_CELL_C" +
-      "ARRIER_LIST\020\003\022A\n=LIST_OF_SERVING_CELL_CA" +
-      "RRIER_LIST_AND_BA_MEASURED_RESULT_LIST\020\004" +
-      "*\246\002\n\031NetworkRegistrationStatus\022K\nGNOT_RE" +
-      "GISTRED_ME_IS_NOT_CURRENTLY_SEARCHING_NE" +
-      "W_OPERATOR_TO_REGISTER_TO\020\000\022\032\n\026REGISTRED" +
-      "_HOME_NETWORK\020\001\022G\nCNOT_REGISTRED_ME_IS_C" +
-      "URRENTLY_SEARCHING_NEW_OPERATOR_TO_REGIS" +
-      "TER_TO\020\002\022\027\n\023REGISTRATION_DENIED\020\003\022&\n\"UNK",
-      "NOW_NETWORK_REGISTRATION_STATUS\020\004\022\026\n\022REG" +
-      "ISTERED_ROAMING\020\005*\337\001\n\027NetworkRegistratio" +
-      "nMode\0228\n4DISABLE_NETWORK_REGISTRATION_UN" +
-      "SOLICITED_RESULT_CODE\020\000\0227\n3ENABLE_NETWOR" +
-      "K_REGISTRATION_UNSOLICITED_RESULT_CODE\020\001" +
-      "\022Q\nMENABLE_NETWORK_REGISTRATION_UNSOLICI" +
-      "TED_RESULT_CODE_WITH_LOCATION_INFORMATIO" +
-      "N\020\002*\202\001\n\016OperatorFormat\022\034\n\030LONG_FORMAT_AL" +
-      "PHANUMERIC\020\000\022\035\n\031SHORT_FORMAT_ALPHANUMERI" +
-      "C\020\001\0223\n/NUMERIC_GSM_LOCATION_AREA_IDENTIF",
-      "ICATION_NUMBER\020\002*\235\001\n\014OperatorMode\022\022\n\016AUT" +
-      "OMATIC_MODE\020\000\022\035\n\031MANUAL_OPERATOR_SELECTI" +
-      "ON\020\001\022\"\n\036MANUAL_DEREGISTER_FROM_NETWORK\020\002" +
-      "\0226\n2SET_ONLY_FORMAT_NOT_SHOWN_IN_READ_CO" +
-      "MMAND_RESPONSE\020\003*\371\006\n\026CallRelatedMessageT" +
-      "ype\022\033\n\027ANSWER_AN_INCOMING_CALL\020\000\022+\n\'MOBI" +
-      "LE_ORIGINATED_CALL_TO_DIAL_A_NUMBER\020\001\022\"\n" +
-      "\036DISCONNECT_EXISTING_CONNECTION\020\002\022)\n%SWI" +
-      "TCH_FROM_DATA_MODE_TO_COMMAND_MODE\020\003\022)\n%" +
-      "SWITCH_FROM_COMMAND_MODE_TO_DATA_MODE\020\004\022",
-      "\030\n\024SELECT_PULSE_DIALING\020\005\0229\n5SET_NUMBER_" +
-      "OF_RINGS_BEFORE_AUTOMATICLY_ANSWERING_CA" +
-      "LL\020\006\022\"\n\036SET_PAUSE_BEFORE_BLIND_DIALING\020\007" +
-      "\022;\n7SET_NUMBER_OF_SECONDS_TO_WAIT_FOR_CO" +
-      "NNECTION_COMPLETION\020\010\0229\n5SET_NUMBER_OF_S" +
-      "ECONDS_TO_WAIT_FOR_COMMA_DIAL_MODIFIER\020\t" +
-      "\022A\n=SET_DISCONNECT_DELAY_AFTER_INDICATIN" +
-      "G_ABSENCE_OF_DATA_CARRIER\020\n\022\027\n\023SELECT_TO" +
-      "NE_DIALING\020\013\022\032\n\026SELECT_TYPE_OF_ADDRESS\020\014" +
-      "\022\034\n\030LIST_CURRENT_CALLS_OF_ME\020\r\022\035\n\031SERVIC",
-      "E_REPORTING_CONTROL\020\016\0229\n5SET_CELLULAR_RE" +
-      "SULT_CODE_FOR_INCOMING_CALL_INDICATION\020\017" +
-      "\022(\n$SELECT_RADIO_LINK_PROTOCOL_PARAMETER" +
-      "\020\020\022\033\n\027SINGLE_NUMBERING_SCHEME\020\021\022$\n CONFI" +
-      "GURE_ALTERNATING_MODE_CALLS\020\022\022\034\n\030PREFERE" +
-      "NCE_SPEACH_CODING\020\023\022\036\n\032SPEECH_CHANNEL_TY" +
-      "PE_REPORT\020\024\022\017\n\013DISABLE_ATH\020\025*\243\003\n\nSpeechM" +
-      "ode\022\031\n\025SPEECH_AUTOMATIC_MODE\020\000\022\006\n\002FR\020\001\022\006" +
-      "\n\002HR\020\002\022\007\n\003EFR\020\003\022\n\n\006AMR_FR\020\004\022\n\n\006AMR_HR\020\005\022" +
-      "\032\n\026FR_AND_EFR_FR_PRIORITY\020\006\022\033\n\027EFR_AND_F",
-      "R_EFR_PRIORITY\020\007\022\033\n\027EFR_AND_HR_EFR_PRIOR" +
-      "ITY\020\010\022\037\n\033EFR_AND_AMR_FR_EFR_PRIORITY\020\t\022!" +
-      "\n\035AMR_FR_AND_FR_AMR_FR_PRIORITY\020\n\022!\n\035AMR" +
-      "_FR_AND_HR_AMR_FR_PRIORITY\020\013\022\"\n\036AMR_FR_A" +
-      "ND_EFR_AMR_FR_PRIORITY\020\014\022!\n\035AMR_HR_AND_F" +
-      "R_AMR_HR_PRIORITY\020\r\022!\n\035AMR_HR_AND_HR_AMR" +
-      "_HR_PRIORITY\020\016\022\"\n\036AMR_HR_AND_EFR_AMR_HR_" +
-      "PRIORITY\020\017*u\n\017AlternatingMode\022\017\n\013SINGLE_" +
-      "MODE\020\000\022\031\n\025ALTERNATING_VOICE_FAX\020\001\022\032\n\026ALT" +
-      "ERNATING_VOICE_DATA\020\002\022\032\n\026VOICE_FOLLOWED_",
-      "BY_DATA\020\003*\231\002\n\nSchemeMode\022\020\n\014SCHEME_VOICE" +
-      "\020\000\022,\n(SCHEME_ALTERNATING_VOICE_FAX_VOICE" +
-      "_FIRST\020\001\022\016\n\nSCHEME_FAX\020\002\022-\n)SCHEME_ALTER" +
-      "NATING_VOICE_DATA_VOICE_FIRST\020\003\022\017\n\013SCHEM" +
-      "E_DATA\020\004\022*\n&SCHEME_ALTERNATING_VOICE_FAX" +
-      "_FAX_FIRST\020\005\022,\n(SCHEME_ALTERNATING_VOICE" +
-      "_DATA_DATA_FIRST\020\006\022!\n\035SCHEME_VOICE_FOLLO" +
-      "WED_BY_DATA\020\007*H\n\010CallMode\022\016\n\nVOICE_CALL\020" +
-      "\000\022\r\n\tDATA_CALL\020\001\022\014\n\010FAX_CALL\020\002\022\017\n\013UNKNOW" +
-      "_CALL\020\t*A\n\007CallDir\022\032\n\026MOBILE_ORIGINATED_",
-      "CALL\020\000\022\032\n\026MOBILE_TERMINATED_CALL\020\001*u\n\tCa" +
-      "llState\022\017\n\013ACTIVE_CALL\020\000\022\r\n\tHELD_CALL\020\001\022" +
-      "\020\n\014DIALING_CALL\020\002\022\021\n\rALERTING_CALL\020\003\022\021\n\r" +
-      "INCOMING_CALL\020\004\022\020\n\014WAITING_CALL\020\005*L\n\013Add" +
-      "ressType\022\020\n\013UNKNOW_TYPE\020\201\001\022\027\n\022INTERNATIO" +
-      "NAL_TYPE\020\221\001\022\022\n\rNATIONAL_TYPE\020\241\001*\377\004\n\016SMSM" +
-      "essageType\022\032\n\026SELECT_MESSAGE_SERVICE\020\000\022\035" +
-      "\n\031SELECT_SMS_MESSAGE_FORMAT\020\001\022\036\n\032SMS_SER" +
-      "VICE_CENTER_ADDRESS\020\002\022!\n\035PREFERRED_SMS_M" +
-      "ESSAGE_STORAGE\020\003\022\026\n\022DELETE_SMS_MESSAGE\020\004",
-      "\022+\n\'LIST_SMS_MESSAGE_FROM_PREFERRED_STOR" +
-      "AGE\020\005\022\024\n\020READ_SMS_MESSAGE\020\006\022\024\n\020SEND_SMS_" +
-      "MESSAGE\020\007\022\037\n\033WRITE_SMS_MESSAGE_TO_MEMORY" +
-      "\020\010\022!\n\035SEND_SMS_MESSAGE_FROM_STORAGE\020\t\022\024\n" +
-      "\020SEND_SMS_COMMAND\020\n\022\036\n\032NEW_SMS_MESSAGE_I" +
-      "NDICATION\020\013\022\030\n\024RESTORE_SMS_SETTINGS\020\014\022\025\n" +
-      "\021SAVE_SMS_SETTINGS\020\r\022%\n!SELECT_CELL_BROA" +
-      "DCAST_SMS_MESSAGE\020\016\022!\n\035SHOW_SMS_TEXT_MOD" +
-      "E_PARAMETERS\020\017\022 \n\034SET_SMS_TEXT_MODE_PARA" +
-      "METERS\020\020\0226\n2STRORE_CLASS0_SMS_TO_SIM_WHE",
-      "N_RECEIVING_CLASS0_SMS\020\021\022\022\n\016DELETE_ALL_S" +
-      "MS\020\022\022\033\n\027CONFIGURE_SMS_CODE_MODE\020\023*\311\001\n\010Co" +
-      "deMode\022\"\n\036CODE_MODE_ACCORDING_WITH_NOKIA" +
-      "\020\000\022$\n CODE_MODE_ACCORDING_WITH_SIEMENS\020\001" +
-      "\022s\noCODE_MODE_ACCORDING_WITH_NOKIA_AND_H" +
-      "EXADECIMAL_0x11_TREATED_AS_UNDERSCORE_AN" +
-      "D_HEXADECIMAL_0x02_TREATED_AS_DOLAR\020\002*<\n" +
-      "\nBufferMode\022\026\n\022COMMAND_IS_FLUSHED\020\000\022\026\n\022C" +
-      "OMMAND_IS_CLEANED\020\001*\245\001\n\014StoreSMSRule\022/\n+" +
-      "NO_SMS_DELIVER_INDICATIONS_ARE_ROUTED_TO",
-      "_TE\020\000\022!\n\035SMS_DELIVER_STORED_INTO_ME_TA\020\001" +
-      "\022(\n$SMS_DELIVER_IS_ROUTED_DIRECTLY_TO_TE" +
-      "\020\002\022\027\n\023CLASS_3_SMS_DELIVER\020\003*q\n\014StoreCBMR" +
-      "ule\022\'\n#NO_CMB_INCICATIONS_ARE_ROUTED_TO_" +
-      "TE\020\000\022&\n\"NEW_CMBS_ARE_ROUTED_DIRECTLY_TO_" +
-      "TE\020\001\022\020\n\014CLASS_3_CBMS\020\002*\213\002\n\021MessageIndica" +
-      "tion\022)\n%BUFFER_UNSOLICITED_RESULT_CODES_" +
-      "IN_TA\020\000\022O\nKDISCART_INDICATIONS_AND_REJEC" +
-      "T_NEW_RECEIVED_MESSAGE_UNSOLICITED_RESUL" +
-      "T_CODE\020\001\022E\nABUFFER_UNSOLICITED_RESULT_CO",
-      "DES_IN_TA_WHEN_TA_TE_LINK_IS_RESERVED\020\002\022" +
-      "3\n/FORWARD_UNSOLICITED_RESULT_CODES_DIRE" +
-      "CTLY_TO_TE\020\003*\221\001\n\rMessageStatus\022\034\n\030RECEIV" +
-      "ED_UNREAD_MESSAGES\020\000\022\032\n\026RECEIVED_READ_ME" +
-      "SSAGES\020\001\022\032\n\026STORED_UNSENT_MESSAGES\020\002\022\030\n\024" +
-      "STORED_SENT_MESSAGES\020\003\022\020\n\014ALL_MESSAGES\020\004" +
-      "*G\n\013MessageMode\022\n\n\006NORMAL\020\000\022,\n(NO_CHANGE" +
-      "_STATUS_OF_SPECIFIED_SMS_RECORD\020\001*\276\002\n\007De" +
-      "lFlag\022%\n!DELETE_MESSAGE_SPECIFIED_IN_IND" +
-      "EX\020\000\022/\n+DELETE_ALL_READ_MESSAGES_FROM_ME",
-      "M_1_STORAGE\020\001\022S\nODELETE_ALL_READ_MESSAGE" +
-      "S_FROM_MEM_1_STORAGE_AND_SENT_MOBILE_ORI" +
-      "GINATED_MESSAGES\020\002\022Z\nVDELETE_ALL_READ_ME" +
-      "SSAGES_FROM_MEM_1_STORAGE_SENT_AND_UNSEN" +
-      "T_MOBILE_ORIGINATED_MESSAGES\020\003\022*\n&DELETE" +
-      "_ALL_MESSAGES_FROM_MEM_1_STORAGE\020\004*,\n\rMe" +
-      "ssageFormat\022\014\n\010PDU_MODE\020\000\022\r\n\tTEXT_MODE\020\001" +
-      "*<\n\016MessageService\022\027\n\023GSM_03_40_AND_03_4" +
-      "1\020\000\022\021\n\014SMS_PDU_MODE\020\200\001*\255\001\n\024PhonebookMess" +
-      "ageType\022#\n\037SELECT_PHONEBOOK_MEMORY_STORA",
-      "GE\020\000\022\031\n\025WRITE_PHONEBOOK_ENTRY\020\001\022\"\n\036READ_" +
-      "CURRENT_PHONEBOOK_ENTRIES\020\002\022\032\n\026FIND_PHON" +
-      "EBOOK_ENTRIES\020\003\022\025\n\021SUBSCRIBER_NUMBER\020\004*E" +
-      "\n\nNumberType\022\027\n\022UNKNOW_NUMBER_TYPE\020\201\001\022\036\n" +
-      "\031INTERNATIONAL_NUMBER_TYPE\020\221\001*\224\003\n\017GPRSMe" +
-      "ssageType\022 \n\034ATTACH_DEATTACH_GPRS_SERVIC" +
-      "E\020\000\022\026\n\022DEFINE_PDP_CONTEXT\020\001\022\031\n\025QOS_PROFI" +
-      "LE_REQUESTED\020\002\022\"\n\036QOS_PROFILE_MINIMUM_AC" +
-      "CEPTABLE\020\003\022&\n\"PDP_CONTEXT_ACTIVATE_OR_DE" +
-      "ACTIVATE\020\004\022\024\n\020ENTER_DATA_STATE\020\005\022\024\n\020SHOW",
-      "_PDP_ADDRESS\020\006\022\035\n\031GPRS_MOBILE_STATION_CL" +
-      "ASS\020\007\022,\n(CONTROL_UNSOLICITED_GPRS_EVENT_" +
-      "REPORTING\020\010\022\037\n\033NETWORK_REGISTRATION_STAT" +
-      "US\020\t\022%\n!SELECT_SERVICE_FOR_MO_SMS_MESSAG" +
-      "E\020\n\022\037\n\033CHANGE_GPRS_MULTISLOT_CLASS\020\013*\\\n\013" +
-      "ServiceType\022\010\n\004GPRS\020\000\022\022\n\016CIRCUIT_SWITCH\020" +
-      "\001\022\021\n\rGPRS_PREFERRD\020\002\022\034\n\030CIRCUIT_SWITCH_P" +
-      "REFERRED\020\003*\201\001\n\022EventReportingMode\022)\n%BUF" +
-      "FER_UNSOLICITED_RESULT_CODES_IN_MT\020\000\022@\n<" +
-      "DISCART_UNSOLICITED_RESULT_CODES_WHEN_MT",
-      "_TE_LINK_IS_RESERVED\020\001*\241\n\n\020TCPIPMessageT" +
-      "ype\022 \n\034SET_UP_TCP_OR_UDP_CONNECTION\020\000\022+\n" +
-      "\'SEND_DATA_THROUGH_TCP_OR_UDP_CONNECTION" +
-      "\020\001\022\037\n\033CLOSE_TCP_OR_UDP_CONNECTION\020\002\022#\n\037D" +
-      "EACTIVATE_GPRS_CSD_PDP_CONTEXT\020\003\022\022\n\016SET_" +
-      "LOCAL_PORT\020\004\022.\n*START_TCPIP_TASK_APN_USE" +
-      "RNAME_AND_PASSWORD\020\005\022\033\n\027ACTIVE_GPRS_CSD_" +
-      "CONTEXT\020\006\022\030\n\024GET_LOCAL_IP_ADDRESS\020\007\022#\n\037Q" +
-      "UERY_CURRENT_CONNECTION_STATUS\020\010\022-\n)QUER" +
-      "Y_CONNECTION_STATUS_OF_CURRENT_ACCESS\020\t\022",
-      "\037\n\033QUERY_CURRENT_SERVER_STATUS\020\n\022 \n\034CONF" +
-      "IGURE_DOMAIN_NAME_SERVER\020\013\022)\n%QUERY_IP_A" +
-      "DDRESS_OF_GIVEN_DOMAIN_NAME\020\014\0221\n-CONNECT" +
-      "_WITH_IP_ADDRESS_OR_DOMAIN_NAME_SERVER\020\r" +
-      "\022(\n$ADD_AN_IP_HEADER_WHEN_RECEIVING_DATE" +
-      "\020\016\022\032\n\026SET_AUTO_SENDING_TIMER\020\017\022 \n\034SET_PR" +
-      "OMPT_WHEN_SENDING_DATA\020\020\022\027\n\023CONFIGURE_AS" +
-      "_SERVER\020\021\022$\n SELECT_CSD_OR_GPRS_AS_THE_B" +
-      "EARER\020\022\022\025\n\021CHOOSE_CONNECTION\020\023\0223\n/SET_WH" +
-      "ETHER_OR_NOT_TO_DISPLAY_ADDRESS_OF_SENDE",
-      "R\020\024\022\"\n\036SAVE_TCPIP_APPLICATION_CONTEXT\020\025\022" +
-      "\036\n\032SELECT_TCPIP_TRANSFER_MODE\020\026\022\'\n#CONFI" +
-      "GURE_TRANSPARENT_TRANSFER_MODE\020\027\0220\n,CONT" +
-      "ROL_WHETHER_OR_NOT_TO_SHOW_PROTOCOL_TYPE" +
-      "\020\030\022!\n\035ENABLE_MULTIPLE_TCPIP_SESSION\020\031\0226\n" +
-      "2CONTROL_WHETHER_OR_NOT_TO_DISPLAY_LOCAL" +
-      "_IP_ADDRESS\020\032\022*\n&SELECT_A_CONTEXT_AS_FOR" +
-      "EGROUND_CONTEXT\020\033\022*\n&QUERY_THE_DATA_INFO" +
-      "RMATION_FOR_SENDING\020\034\022,\n(SET_METHOD_TO_H" +
-      "ANDLE_RECEIVED_TCPIP_DATA\020\035\022$\n RETRIEVE_",
-      "THE_RECEIVED_TCPIP_DATA\020\036\0221\n-CONTRO_WHET" +
-      "HER_OR_NOT_TO_ECHO_DATA_FOR_QISEND\020\037\022\030\n\024" +
-      "PING_A_REMOTE_SERVER\020 \022\"\n\036SYNCHRONIZE_LO" +
-      "CAL_TIME_VIA_NTP\020!*\230\002\n\025SynchronizationRe" +
-      "sult\022\"\n\036SUCCESS_SYNCHRONIZE_LOCAL_TIME\020\000" +
-      "\022<\n8FAILED_TO_SYNCHRONIZE_LOCAL_TIME_BEC" +
-      "AUSE_OF_UNKNOW_RESON\020\001\022/\n+FAILED_TO_RECE" +
-      "IVE_RESPONSE_FROM_TIME_SERVER\020\002\022\033\n\027TCPIP" +
-      "_STACK_IS_BUSY_NOW\020\003\022\033\n\027DO_NOT_FIND_TIME" +
-      "_SERVER\020\004\0222\n.FAILED_TO_ACTIVATE_PDP_CONT",
-      "EXT_SYNCHRONIZATION\020\005*\201\001\n\013FinalResult\022\032\n" +
-      "\026IT_IS_FINISHED_NORMALY\020\002\022\034\n\030TCP_IP_STAC" +
-      "K_IS_BUSY_NOW\020\003\022\024\n\020DO_NOT_FIND_HOST\020\004\022\"\n" +
-      "\036FAILED_TO_ACTIVATE_PDP_CONTEXT\020\005*R\n\nPin" +
-      "gResult\022&\n\"RECEIVED_PING_RESPONSE_FROM_S" +
-      "ERVER\020\000\022\034\n\030TIMEOUT_FOR_PING_REQUEST\020\001*f\n" +
-      "\014ServerClient\022*\n&MODULE_SERVERS_AS_CLINE" +
-      "T_OF_CONNECTION\020\001\022*\n&MODULE_SERVERS_AS_C" +
-      "LIENT_OF_CONNECTION\020\002*\223\001\n\020ReceivedDataMo" +
-      "de\022.\n*OUTPUT_RECEIVED_DATA_THROUGH_UART_",
-      "DIRECTLY\020\000\022\'\n#OUTPUT_NOTIFICATION_STATEM" +
-      "ENT_SHORT\020\001\022&\n\"OUTPUT_NOTIFICATION_STATE" +
-      "MENT_LONG\020\002*\207\001\n\007Channel\022\022\n\016VIRTUAL_UART_" +
-      "1\020\000\022\022\n\016VIRTUAL_UART_2\020\001\022\022\n\016VIRTUAL_UART_" +
-      "3\020\002\022\022\n\016VIRTUAL_UART_4\020\003\022,\n(CONTEXT_IS_NO" +
-      "T_CONTROLLED_BY_ANY_CHANNEL\020\004*5\n\014Transfe" +
-      "rMode\022\017\n\013NORMAL_MODE\020\000\022\024\n\020TRANSPARENT_MO" +
-      "DE\020\001*:\n\nConnection\022\025\n\021MS_USED_AS_CLIENT\020" +
-      "\000\022\025\n\021MS_USED_AS_SERVER\020\001*e\n\nBearerType\022*" +
-      "\n&SET_CSD_AS_BEARER_FOR_TCPIP_CONNECTION",
-      "\020\000\022+\n\'SET_GPRS_AS_BEARER_FOR_TCPIP_CONNE" +
-      "CTION\020\001*,\n\nServerType\022\016\n\nTCP_SERVER\020\000\022\016\n" +
-      "\nUDP_SERVER\020\001*\242\001\n\nSendPrompt\022\036\n\032NO_PROMP" +
-      "T_AND_SHOW_SEND_OK\020\000\022 \n\034ECHO_PROMPT_AND_" +
-      "SHOW_SEND_OK\020\001\022\"\n\036NO_PROMPT_AND_NOT_SHOW" +
-      "_SEND_OK\020\002\022.\n*ECHO_PROMPT_AND_SHOW_SOCKE" +
-      "T_ID_AND_SEND_OK\020\003*N\n\005Timer\022%\n!DO_NOT_SE" +
-      "T_TIMER_FOR_DATA_SENDING\020\000\022\036\n\032SET_TIMER_" +
-      "FOR_DATA_SENDING\020\001*K\n\010IPHeader\022\030\n\024DO_NOT" +
-      "_ADD_IP_HEADER\020\000\022%\n!ADD_A_HEADER_BEFORE_",
-      "RECEIVED_DATA\020\001*Z\n\014ServerFormat\022\'\n#DOTTE" +
-      "D_DECIMAL_IP_ADDRESS_OF_SERVER\020\000\022!\n\035DOMA" +
-      "IN_NAME_ADDRESS_OF_SERVER\020\001*\362\003\n\037Suppleme" +
-      "ntaryServiceMessageType\0221\n-CALL_FORWARDI" +
-      "NG_NUMBER_AND_CONDITIONS_CONTROL\020\000\022\035\n\031CL" +
-      "OSED_USER_GROUP_CONTROL\020\001\022\030\n\024CALL_WAITIN" +
-      "G_CONTROL\020\002\022\034\n\030CALL_HOLD_AND_MULTIPARTY\020" +
-      "\003\022,\n(CALLING_LINE_IDENTIFICATION_PRESENT" +
-      "ATION\020\004\022?\n;CONTROL_WHETHER_OR_NOT_TO_SHO" +
-      "W_NAME_OF_INCOMING_CALL_NUMBER\020\005\022.\n*CONN",
-      "ECTED_LINE_IDENTIFICATION_PRESENTATION\020\006" +
-      "\022#\n\037SHOW_ALPHA_FIELD_IN_COLP_STRING\020\007\022+\n" +
-      "\'UNSTRUCTURED_SUPPLEMENTARY_SERVICE_DATA" +
-      "\020\010\022\'\n#SUPPLEMENTARY_SERVICES_NOTIFICATIO" +
-      "N\020\t\022+\n\'CALLING_LINE_IDENTIFICATION_RESTR" +
-      "ICTION\020\n*\215\002\n\005Code1\022+\n\'UNCONDITIONAL_CALL" +
-      "_FORWARDING_IS_ACTIVE\020\000\0222\n.SOME_OF_CONDI" +
-      "TIONAL_CALL_FORWARDING_ARE_ACTIVE\020\001\022\033\n\027C" +
-      "ALL_HAS_BEEN_FORWARDED\020\002\022\023\n\017CALL_IS_WAIT" +
-      "ING\020\003\022\024\n\020THIS_IS_CUG_CALL\020\004\022\035\n\031OUTGOING_",
-      "CALLS_ARE_BARRED\020\005\022\035\n\031INCOMING_CALLS_ARE" +
-      "_BARRED\020\006\022\035\n\031CLIR_SUPPRESSION_REJECTED\020\007" +
-      "*#\n\005Code2\022\032\n\026THIS_IS_FORWARDED_CALL\020\000*w\n" +
-      "\nSSDControl\022*\n&DISABLE_RESULT_CODE_PRESE" +
-      "NTATION_IN_TA\020\000\022)\n%ENABLE_RESULT_CODE_PR" +
-      "ESENTATION_IN_TA\020\001\022\022\n\016CANCEL_SESSION\020\002*\226" +
-      "\001\n\021CLIRServiceStatus\022\030\n\024CLIR_NOT_PROVISI" +
-      "ONED\020\000\022&\n\"CLIR_PROVISIONED_IN_PERMANENT_" +
-      "MODE\020\001\022\017\n\013UNKNOW_CLIR\020\002\022.\n*CLIR_TEMORARY" +
-      "_MODE_PRESENTATION_RESTRICTED\020\003*`\n\027Adjus",
-      "tmentOutgoingCalls\022\032\n\026PRESENTATION_INDIC" +
-      "ATOR\020\000\022\023\n\017CLIR_INVOCATION\020\001\022\024\n\020CLIR_SUPP" +
-      "RESSION\020\002*G\n\004CLIP\022\030\n\024CLIP_NOT_PROVISIONE" +
-      "D\020\000\022\024\n\020CLIP_PROVISIONED\020\001\022\017\n\013UNKNOW_CLIP" +
-      "\020\002*p\n\004Info\022\022\n\016BO_INFORMATION\020\000\022\017\n\013SUPPRE" +
-      "SS_OA\020\001\022\035\n\031SUPPRESS_PREFERANTIAL_CUG\020\002\022$" +
-      "\n SUPPRESS_OA_AND_PREFERENTIAL_CUG\020\003*\211\001\n" +
-      "\005Reads\022\021\n\rUNCONDITIONAL\020\000\022\017\n\013MOBILE_BUSY" +
-      "\020\001\022\014\n\010NO_REPLY\020\002\022\020\n\014NO_REACHABLE\020\003\022\027\n\023AL" +
-      "L_CALL_FORWARDING\020\004\022#\n\037ALL_CONDITIONAL_C",
-      "ALL_FORWARDING\020\005*\255\001\n\016ForwardingMode\022\033\n\027D" +
-      "ISABLE_FORWARDING_MODE\020\000\022\032\n\026ENABLE_FORWA" +
-      "RDINF_MODE\020\001\022#\n\037QUERY_STATUS_OF_FORWARDI" +
-      "NG_MODE\020\002\022 \n\034REGISTRATION_FORWARDING_MOD" +
-      "E\020\003\022\033\n\027ERASURE_FORWARDING_MODE\020\004*\225\004\n\020Aud" +
-      "ioMessageType\022 \n\034SET_MONITOR_SPEAKER_LOU" +
-      "DNESS\020\000\022\034\n\030SET_MONITOR_SPEAKER_MODE\020\001\022\021\n" +
-      "\rTONE_DURATION\020\002\022\034\n\030DTMF_AND_TONE_GENERA" +
-      "TION\020\003\022\024\n\020ALERT_SOUND_MODE\020\004\022\026\n\022RINGER_S" +
-      "OUND_LEVEL\020\005\022\035\n\031LOUD_SPEAKER_VOLUME_LEVE",
-      "L\020\006\022\020\n\014MUTE_CONTROL\020\007\022#\n\037CHANGE_THE_SIDE" +
-      "_TONE_GAIN_LEVEL\020\010\022$\n CHANGE_THE_MICROPH" +
-      "ONE_GAIN_LEVEL\020\t\022\035\n\031GENERATE_LOCAL_DTMF_" +
-      "TONES\020\n\022\033\n\027SWAP_THE_AUDIO_CHANNELS\020\013\022 \n\034" +
-      "AUDIO_CHANNEL_LOOP_BACK_TEST\020\014\022 \n\034GENERA" +
-      "TE_LOCAL_SPECIFIC_TONE\020\r\022\030\n\024SET_DTMF_OUT" +
-      "PUT_PATH\020\016\022\033\n\027SET_TONE_DETECTION_MODE\020\017\022" +
-      "\017\n\013DETECT_DTMF\020\020\022\036\n\032PLAY_DTMF_TONE_DURIN" +
-      "G_CALL\020\021*-\n\tAlgorithm\022\017\n\013ALGORITHM_1\020\000\022\017" +
-      "\n\013ALGORITHM_2\020\001**\n\017PersistenceTime\022\n\n\006MS",
-      "_100\020d\022\013\n\006MS_400\020\220\003*\377\001\n\010DTMFCode\022\n\n\006DTMF" +
-      "_0\0200\022\n\n\006DTMF_1\0201\022\n\n\006DTMF_2\0202\022\n\n\006DTMF_3\0203" +
-      "\022\n\n\006DTMF_4\0204\022\n\n\006DTMF_5\0205\022\n\n\006DTMF_6\0206\022\n\n\006" +
-      "DTMF_7\0207\022\n\n\006DTMF_8\0208\022\n\n\006DTMF_9\0209\022\n\n\006DTMF" +
-      "_A\020A\022\n\n\006DTMF_B\020B\022\n\n\006DTMF_C\020C\022\n\n\006DTMF_D\020D" +
-      "\022\r\n\tDTMF_STAR\020*\022\016\n\nDTMF_POUND\020#\022\025\n\021FREQU" +
-      "ENCY_1400_HZ\020E\022\025\n\021FREQUENCY_2300_HZ\020F*C\n" +
-      "\013DTMFOperate\022\032\n\026QUERY_THRESHOLD_VALUES\020\000" +
-      "\022\030\n\024SET_THRESHOLD_VALUES\020\001*\361\001\n\rToneDetec" +
-      "tion\022\030\n\024CLOSE_TONE_DETECTION\020\000\022\027\n\023OPEN_T",
-      "ONE_DETECTION\020\001\0229\n5CONFIGURE_1400HZ_OR_2" +
-      "300HZ_DETECTION_THRESHOLD_100_MS\020\002\022:\n6CO" +
-      "NFIGURE_1400HZ_AND_2300HZ_DETECTION_THRE" +
-      "SHOLD_400_MS\020\003\022&\n\"CONFIGURE_DTMF_DETECTI" +
-      "ON_THRESHOLD\020\004\022\016\n\nOPEN_DEBUG\020\005*\212\001\n\016Funct" +
-      "ionStatus\022\023\n\017DETECT_ALL_DTMF\020\000\0221\n-ONLY_D" +
-      "ETECT_1400HZ_AND_2300HZ_HANSHAKE_SIGNAL\020" +
-      "\001\0220\n,NOT_DETECT_1400HZ_AND_2300HZ_HANDSA" +
-      "KE_SIGNAL\020\002*G\n\024AudioOperateFunction\022\027\n\023S" +
-      "ET_DETECTION_RANGE\020\000\022\026\n\022SET_DETECTION_MO",
-      "DE\020\001*\201\001\n\nOutputPath\022\036\n\032OUTPUT_DTMF_NORMA" +
-      "L_SPEAKER\020\000\022\037\n\033OUTPUT_DTMF_HEADSET_SPEAK" +
-      "ER\020\001\022\034\n\030OUTPUT_DTMF_LOUD_SPEAKER\020\002\022\024\n\020AU" +
-      "TO_OUTPUT_PATH\020\003*b\n\014AudioChannel\022\030\n\024NORM" +
-      "LA_AUDIO_CHANNEL\020\000\022\031\n\025HEADSET_AUDIO_CHAN" +
-      "NEL\020\001\022\035\n\031LOUDSPEAKER_AUDIO_CHANNEL\020\002*^\n\021" +
-      "MicrophoneChannel\022\025\n\021NORMAL_MICROPHONE\020\000" +
-      "\022\026\n\022HEADSET_MICROPHONE\020\001\022\032\n\026LOUDSPEAKER_" +
-      "MICROPHONE\020\002*9\n\tSoundMode\022\025\n\021NORMAL_SOUN" +
-      "D_MODE\020\000\022\025\n\021SILENT_SOUND_MODE\020\001*\232\001\n\013Spea",
-      "kerMode\022\031\n\025SPEAKER_IS_ALWAYS_OFF\020\000\022B\n>SP" +
-      "EAKER_IS_ON_UTIL_TA_INFORM_TE_THAT_CARRI" +
-      "ER_HAS_BEEN_DETECTED\020\001\022,\n(SPEAKER_IS_ALW" +
-      "AYS_ON_WHEN_TA_IS_OFF_HOOK\020\002*t\n\017SpeakerL" +
-      "oudness\022\025\n\021NO_SPEAKER_VOLUME\020\000\022\026\n\022LOW_SP" +
-      "EAKER_VOLUME\020\001\022\031\n\025MEDIUM_SPEAKER_VOLUME\020" +
-      "\002\022\027\n\023HIGH_SPEAKER_VOLUME\020\003*\272\001\n\032HardwareR" +
-      "elatedMessageType\022\t\n\005CLOCK\020\000\022\r\n\tSET_ALAR" +
-      "M\020\001\022\022\n\016BATTERY_CHARGE\020\002\022\014\n\010READ_ADC\020\003\022\030\n" +
-      "\024CONFIGURE_SHOW_CLOCK\020\004\022\"\n\036CONFIGURE_NET",
-      "WORK_LED_PATTERNS\020\005\022\"\n\036CONFIGURE_THRESHO" +
-      "LD_OF_VOLTAGE\020\006*\257\001\n\rThresholdType\022$\n THR" +
-      "ESHOLD_OF_LOW_VOLTAGE_WARNING\020\000\022\'\n#THRES" +
-      "HOLD_OF_LOW_VOLTAGE_POWER_DOWN\020\001\022%\n!THRE" +
-      "SHOLD_OF_HIGH_VOLTAGE_WARNING\020\002\022(\n$THRES" +
-      "HOLD_OF_HIGH_VOLTAGE_POWER_DOWN\020\003*\257\001\n\007Le" +
-      "dMode\0224\n0NETWORK_LED_FLASHES_RAPIDLY_WHE" +
-      "N_CALL_IS_RINGING\020\000\0221\n-NO_EFFECT_ON_NETW" +
-      "ORK_LED_WHEN_CALL_IS_RINGING\020\001\022;\n7RI_WIL" +
-      "L_NOT_CHANGE_WHEN_URC_REPORTED_UNTIL_RIN",
-      "GING_ENDS\020\002*[\n\tSlowClock\022\026\n\022DISABLE_SLOW" +
-      "_CLOCK\020\000\022\025\n\021ENABLE_SLOW_CLOCK\020\001\022\037\n\033ENTER" +
-      "_SLEEP_AFTER_5_SECONDS\020\002*1\n\nReadStatus\022\017" +
-      "\n\013STATUS_FAIL\020\000\022\022\n\016STATUS_SUCCESS\020\002*V\n\rB" +
-      "atteryCharge\022\026\n\022ME_IS_NOT_CHARGING\020\000\022\022\n\016" +
-      "ME_IS_CHARGING\020\001\022\031\n\025CHARGING_HAS_FINISHE" +
-      "D\020\002*K\n\nAlarmPower\022\024\n\020NONE_ALARM_POWER\020\000\022" +
-      "\023\n\017ALARM_POWER_OFF\020\001\022\022\n\016ALARM_POWER_ON\020\002" +
-      "*Q\n\006Repeat\022\017\n\013NONE_REPEAT\020\000\022\020\n\014DAILY_REP" +
-      "EAT\020\001\022\021\n\rWEEKLY_REPEAT\020\002\022\021\n\rMONTLY_REPEA",
-      "T\020\003*\203\002\n\021OthersMessageType\022\037\n\033REISSUES_LA" +
-      "ST_COMMAND_GIVEN\020\000\022\031\n\025SET_COMMAND_ECHO_M" +
-      "ODE\020\001\022*\n&SET_COMMAND_LINE_TERMINATION_CH" +
-      "ARACTER\020\002\022%\n!SET_RESPONSE_FORMATTING_CHA" +
-      "RACTER\020\003\022&\n\"SET_COMMAND_LINE_EDITING_CHA" +
-      "RACTER\020\004\022\017\n\013SET_RI_TIME\020\005\022&\n\"BURST_TRANS" +
-      "ITION_SIGNAL_INDICATION\020\006*\325\001\n\007IndMode\022E\n" +
-      "ADISABLE_TX_BURST_INDICATION_PIN_OUTPUT_" +
-      "LOW_LEVEL_AS_GPIO_FUNCTION\020\000\0223\n/ENABLE_T" +
-      "X_BURST_INDICATION__OUTPUT_WAVE_AS_NOTE\020",
-      "\001\022N\nJENABLE_TX_BURST_INDICATION_PIN_WILL" +
-      "_BE_HIGH_DURING_CALL_AND_LOW_AFTER_CALL\020" +
-      "\002*\254\001\n\010TimeMode\0225\n1RI_120_MS_LOW_PULSE_OT" +
-      "HER_URC_RI_120_MS_LOW_PULSE\020\000\0224\n0RI_120_" +
-      "MS_LOW_PULSE_OTHER_URC_RI_50_MS_LOW_PULS" +
-      "E\020\001\0223\n/RI_120_MS_LOW_PULSE_OTHER_URC_RI_" +
-      "TAKE_NO_EFFECT\020\002*\376\036\n\005Error\022\006\n\002OK\020\000\022\020\n\014UN" +
-      "KNOW_ERROR\020\001\022\020\n\014SERVICE_BUSY\020\003\022\034\n\030FAILED" +
-      "_TO_GET_IP_ADDRESS\020\004\022\021\n\rNETWORK_ERROR\020\005\022" +
-      "#\n\037UNSUPPORTED_AUTHENTICATION_TYPE\020\006\022\022\n\016",
-      "SERVICE_CLOSED\020\007\022#\n\037GPRS_CSD_CONTEXT_IS_" +
-      "DEACTIVATED\020\010\022\013\n\007TIMEOUT\020\t\022!\n\035NO_RECIPIE" +
-      "NT_FOR_SMTP_SERVICE\020\n\022\030\n\024FAILED_TO_SEND_" +
-      "EMAIL\020\013\022&\n\"FAILED_TO_OPEN_FILE_FOR_ATTAC" +
-      "HMENT\020\014\022#\n\037NO_ENOUGH_MEMORY_FOR_ATTACHME" +
-      "NT\020\r\022!\n\035FAILED_TO_SAVE_THE_ATTACHMENT\020\016\022" +
-      " \n\034THE_INPUT_PARAMETER_IS_WRONG\020\017\022\032\n\025SER" +
-      "VICE_NOT_AVAILABLE\020\245\003\022$\n\037REQUESTED_MAIL_" +
-      "ACTION_NOT_TAKEN\020\302\003\022\035\n\030REQUESTED_ACTION_" +
-      "ABORTED\020\303\003\022;\n6REQUESTED_ACTION_NOT_TAKEN",
-      "_INSUFFICIENT_SYSTEM_STORAGE\020\304\003\022&\n!SYNTA" +
-      "X_ERROR_COMMAND_UNRECOGNIZED\020\364\003\022,\n\'SYNTA" +
-      "X_ERROR_IN_PARAMETERS_OR_ARGUMENTS\020\365\003\022\034\n" +
-      "\027COMMAND_NOT_IMPLEMENTED\020\366\003\022\035\n\030BAD_SEQUE" +
-      "NCE_OF_COMMANDS\020\367\003\022&\n!COMMAND_PARAMETER_" +
-      "NOT_IMPLEMENTED\020\370\003\022!\n\034DOMAIN_DOES_NOT_AC" +
-      "CEPT_EMAIL\020\211\004\022#\n\036ACCESS_DENIED_FOR_SMTP_" +
-      "SERVICE\020\222\004\022\032\n\025AUTHENTICATION_FAILED\020\227\004\022\037" +
-      "\n\032REQUESTED_ACTION_NOT_TAKEN\020\246\004\022\023\n\016USER_" +
-      "NOT_LOCAL\020\247\004\022?\n:REQUESTED_MAIL_ACTION_AB",
-      "ORTED_EXCEEDED_STORAGE_NOT_ALLOWED\020\250\004\0228\n" +
-      "3REQUESTED_ACTION_NOT_TAKEN_MAILBOX_NAME" +
-      "_NOT_ALLOWED\020\251\004\022\027\n\022TRANSACTION_FAILED\020\252\004" +
-      "\022\022\n\rHTTP_TIME_OUT\020\331\035\022\016\n\tHTTP_BUSY\020\332\035\022\023\n\016" +
-      "HTTP_UART_BUSY\020\333\035\022\030\n\023HTTP_GET_NO_REQUEST" +
-      "\020\334\035\022\026\n\021HTTP_NETWORK_BUSY\020\335\035\022\035\n\030HTTP_NETW" +
-      "ORK_OPEN_FAILED\020\336\035\022\033\n\026HTTP_NETWORK_NO_CO" +
-      "NFIG\020\337\035\022\032\n\025HTTP_NETWORK_DEACTIVE\020\340\035\022\027\n\022H" +
-      "TTP_NETWORK_ERROR\020\341\035\022\023\n\016HTTP_URL_ERROR\020\342" +
-      "\035\022\023\n\016HTTP_EMPTY_URL\020\343\035\022\027\n\022HTTP_IP_ADDR_E",
-      "RROR\020\344\035\022\023\n\016HTTP_DNS_ERROR\020\345\035\022\035\n\030HTTP_SOC" +
-      "KET_CREATE_ERROR\020\346\035\022\036\n\031HTTP_SOCKET_CONNE" +
-      "CT_ERROR\020\347\035\022\033\n\026HTTP_SOCKET_READ_ERROR\020\350\035" +
-      "\022\034\n\027HTTP_SOCKET_WRITE_ERROR\020\351\035\022\026\n\021HTTP_S" +
-      "OCKET_CLOSE\020\352\035\022\033\n\026HTTP_DATA_ENCODE_ERROR" +
-      "\020\353\035\022\033\n\026HTTP_DATA_DECODE_ERROR\020\354\035\022\031\n\024HTTP" +
-      "_TO_READ_TIMEOUT\020\355\035\022\031\n\024HTTP_RESPONSE_FAI" +
-      "LED\020\356\035\022\027\n\022INCOMING_CALL_BUSY\020\357\035\022\024\n\017VOICE" +
-      "_CALL_BUSY\020\360\035\022\022\n\rINPUT_TIMEOUT\020\361\035\022\026\n\021WAI" +
-      "T_DATA_TIMEOUT\020\362\035\022\037\n\032WAIT_HTTP_RESPONSE_",
-      "TIMEOUT\020\363\035\022\026\n\021ALLOC_MEMORY_FAIL\020\364\035\022\031\n\024HT" +
-      "TP_NEED_RELOCATION\020\365\035\022\030\n\023INVALID_INPUT_V" +
-      "ALUE\020\231\036\022\021\n\014MMS_TIME_OUT\020\275\036\022\021\n\014URL_TOO_LO" +
-      "NG\020\276\036\022\020\n\013INVALID_URL\020\277\036\022\026\n\021UNSUPPORTED_P" +
-      "ROXY\020\300\036\022\032\n\025INVALID_PROXY_ADDRESS\020\301\036\022\025\n\020I" +
-      "P_ADDRESS_ERROR\020\302\036\022\016\n\tDNS_ERROR\020\303\036\022\024\n\017PA" +
-      "RAMETER_ERROR\020\304\036\022\030\n\023TO_ADDRESS_EXCEEDED\020" +
-      "\305\036\022\030\n\023CC_ADDRESS_EXCEEDED\020\306\036\022\031\n\024BCC_ADDR" +
-      "ESS_EXCEEDED\020\307\036\022$\n\037APPENDED_FILE_CAPACIT" +
-      "Y_EXCEEDED\020\310\036\022\027\n\022FILE_NAME_TOO_LONG\020\311\036\022 ",
-      "\n\033THE_NUMBER_OF_FILE_EXCEEDED\020\312\036\022\031\n\024NON_" +
-      "EXISTENT_ADDRESS\020\313\036\022\025\n\020UFS_STORAGE_FULL\020" +
-      "\314\036\022\017\n\nDRIVE_FULL\020\315\036\022\020\n\013DRIVE_ERROR\020\316\036\022\016\n" +
-      "\tNOT_FOUND\020\317\036\022\026\n\021INVALID_FILE_NAME\020\320\036\022\031\n" +
-      "\024FILE_ALREADY_EXISTED\020\321\036\022\032\n\025FAILED_TO_CR" +
-      "EATE_FILE\020\322\036\022\031\n\024FAILED_TO_WRITE_FILE\020\323\036\022" +
-      "\"\n\035FAILED_TO_OPEN_REQUESTED_FILE\020\324\036\022\030\n\023F" +
-      "AILED_TO_READ_FILE\020\325\036\022\r\n\010MMS_BUSY\020\326\036\022\025\n\020" +
-      "SENDING_MMS_BUSY\020\327\036\022\030\n\023SENDING_MMS_STOPP" +
-      "ED\020\330\036\022\034\n\027ALREADY_STOPPED_TO_SEND\020\331\036\022\027\n\022R",
-      "ECEIVING_MMS_BUSY\020\332\036\022\032\n\025RECEIVING_MMS_ST" +
-      "OPPED\020\333\036\022\034\n\027ALREADY_STOPPED_RECEIVE\020\334\036\022\032" +
-      "\n\025HTTP_RESPONSE_FALIURE\020\335\036\022\031\n\024INVALID_MM" +
-      "S_RESPONSE\020\336\036\022\027\n\022MMS_RESPONSE_ERROR\020\337\036\022\031" +
-      "\n\024INVALID_PUSH_MESSAGE\020\340\036\022\027\n\022ALREADY_DON" +
-      "WLOADED\020\341\036\022\021\n\014NETWORK_BUSY\020\342\036\022\033\n\026FAILED_" +
-      "TO_OPEN_NETWORK\020\343\036\022\032\n\025NETWORK_NO_CONFIGU" +
-      "RED\020\344\036\022\030\n\023NETWORK_DEACTIVATED\020\345\036\022\026\n\021MMS_" +
-      "NETWORK_ERROR\020\346\036\022\025\n\020NETWORK_SHUTDOWN\020\347\036\022" +
-      "\016\n\tUART_BUSY\020\350\036\022\021\n\014UART_ESCAPED\020\351\036\022\034\n\027FA",
-      "ILED_TO_CREATE_SOCKET\020\352\036\022\035\n\030FAILED_TO_CO" +
-      "NNECT_SOCKET\020\353\036\022\032\n\025FAILED_TO_READ_SOCKET" +
-      "\020\354\036\022\033\n\026FAILED_TO_WRITE_SOCKET\020\355\036\022\022\n\rSOCK" +
-      "ET_CLOSED\020\356\036\022\025\n\020MMS_LENGTH_ERROR\020\357\036\022\031\n\024F" +
-      "AILED_TO_ENCODE_MMS\020\360\036\022\031\n\024FAILED_TO_DECO" +
-      "DE_MMS\020\361\036\022\032\n\025FAILED_TO_DECODE_HTTP\020\362\036\022\"\n" +
-      "\035FAILED_TO_DECODE_PUSH_MESSAGE\020\363\036\022\024\n\017PDU" +
-      "_ALIGN_ERROR\020\364\036\022\030\n\023PDU_CHARACTER_ERROR\020\365" +
-      "\036\022\024\n\017STRING_TOO_LONG\020\366\036\022\r\n\010MMS_FULL\020\367\036\022\025" +
-      "\n\020NON_EXISTENT_MMS\020\370\036\022\024\n\017INVALID_ADDRESS",
-      "\020\371\036\022\030\n\023MMS_VOICE_CALL_BUSY\020\372\036\022\030\n\023ALLOC_M" +
-      "EMORY_FAILED\020\373\036\022\026\n\021EXCEED_MAX_LENGTH\020\240\037\022" +
-      "\023\n\016OPEN_FILE_FAIL\020\241\037\022\024\n\017WRITE_FILE_FAIL\020" +
-      "\242\037\022\022\n\rGET_SIZE_FAIL\020\243\037\022\016\n\tREAD_FAIL\020\244\037\022\023" +
-      "\n\016LIST_FILE_FAIL\020\245\037\022\025\n\020DELETE_FILE_FAIL\020" +
-      "\246\037\022\027\n\022GET_DISC_INFO_FAIL\020\247\037\022\r\n\010NO_SPACE\020" +
-      "\250\037\022\r\n\010TIME_OUT\020\251\037\022\030\n\023HTTP_FILE_NOT_FOUND" +
-      "\020\252\037\022\023\n\016FILE_TOO_LARGE\020\253\037\022\027\n\022FILE_ALREADY" +
-      "_EXIST\020\254\037\022\026\n\021INVALID_PARAMETER\020\255\037\022\021\n\014DRI" +
-      "VER_ERROR\020\256\037\022\020\n\013CREATE_FAIL\020\257\037\022\022\n\rACCESS",
-      "_DENIED\020\260\037\022\026\n\021FILE_IS_TOO_LARGE\020\261\037\022\021\n\014WR" +
-      "ONG_FORMAT\020\314!\022\024\n\017AUDIO_TASK_BUSY\020\316!\022\027\n\022C" +
-      "REATE_FILE_FAILED\020\317!\022/\n*ADDITIONAL_RECOR" +
-      "DING_IN_A_DIFFERENT_FORMAT\020\320!\022\016\n\tDISC_FU" +
-      "LL\020\321!\022\035\n\030WRITE_PROTECTION_ON_FILE\020\322!\022\033\n\026" +
-      "RECORDING_UNKNOW_ERROR\020\223#*6\n\006Action\022\010\n\004T" +
-      "EST\020\000\022\010\n\004READ\020\001\022\t\n\005WRITE\020\002\022\r\n\tEXECUTION\020" +
-      "\003B0\n\033com.rtrk.atcommand.protobufB\021Protob" +
-      "ufATCommand"
+      "mmand.Action\022:\n\ndisconnect\030\" \001(\0162&.com.r" +
+      "trk.protobufatcommand.Disconnect\0226\n\010data" +
+      "Mode\030# \001(\0162$.com.rtrk.protobufatcommand." +
+      "DataMode\022\023\n\013ringNumbers\030$ \001(\005\022\030\n\020blindDi" +
+      "alingWait\030% \001(\005\022 \n\030connectionCompletionW" +
+      "ait\030& \001(\005\022\035\n\025commaDialModifierWait\030\' \001(\005" +
+      "\022\r\n\005delay\030( \001(\005\022\016\n\006number\030\027 \001(\t\022\023\n\013GSMMo",
+      "difier\030\006 \001(\t\022\036\n\026interworkinWindowsSize\030\007" +
+      " \001(\005\022\030\n\020mobileWindowSize\030\010 \001(\005\022\032\n\022acknow" +
+      "ledmentTimer\030\t \001(\005\022\037\n\027retransimissionAtt" +
+      "empts\030\n \001(\005\022\022\n\nRPLVersion\030\013 \001(\005\022\032\n\022reseq" +
+      "uencingPeriod\030\014 \001(\005\022H\n\naddresType\030\016 \001(\0162" +
+      "\'.com.rtrk.protobufatcommand.AddressType" +
+      ":\013UNKNOW_TYPE\022\r\n\005index\030\017 \001(\005\0224\n\007callDir\030" +
+      "\020 \001(\0162#.com.rtrk.protobufatcommand.CallD" +
+      "ir\0228\n\tcallState\030\021 \001(\0162%.com.rtrk.protobu" +
+      "fatcommand.CallState\0226\n\010callMode\030\022 \001(\0162$",
+      ".com.rtrk.protobufatcommand.CallMode\022\035\n\025" +
+      "callIsOneOfMultiparty\030\023 \001(\010\022\025\n\rspeechCha" +
+      "nnel\030\024 \001(\005\022\022\n\ndisableATH\030\025 \001(\010\022\026\n\016setUpV" +
+      "oiceCall\030\026 \001(\010\022\022\n\nisResponse\030\030 \001(\010\022\023\n\013de" +
+      "scription\030\031 \001(\t\022\t\n\001n\030\032 \001(\005\022&\n\036serviceRep" +
+      "ortingControlEnabled\030\033 \001(\010\022\034\n\024enableExte" +
+      "ndedFormat\030\034 \001(\010\022:\n\nschemeMode\030\035 \001(\0162&.c" +
+      "om.rtrk.protobufatcommand.SchemeMode\022D\n\017" +
+      "alternatingMode\030\036 \001(\0162+.com.rtrk.protobu" +
+      "fatcommand.AlternatingMode\022:\n\nspeechMode",
+      "\030\037 \001(\0162&.com.rtrk.protobufatcommand.Spee" +
+      "chMode\022%\n\035enableReportSpeechChannelType\030" +
+      "  \001(\010\022\021\n\tdelimiter\030! \001(\010\"\331\017\n\nSMSCommand\022" +
+      "?\n\013messageType\030\001 \002(\0162*.com.rtrk.protobuf" +
+      "atcommand.SMSMessageType\0222\n\006action\030\002 \002(\016" +
+      "2\".com.rtrk.protobufatcommand.Action\022W\n\016" +
+      "messageService\030- \001(\0162*.com.rtrk.protobuf" +
+      "atcommand.MessageService:\023GSM_03_40_AND_" +
+      "03_41\022(\n mobileTerminatedMessageSupporte" +
+      "d\030\006 \001(\010\022&\n\036mobileOrientedMessageSupporte",
+      "d\030\007 \001(\010\022%\n\035broadcastTypeMessageSupported" +
+      "\030\010 \001(\010\022J\n\rmessageFormat\030\t \001(\0162).com.rtrk" +
+      ".protobufatcommand.MessageFormat:\010PDU_MO" +
+      "DE\022\021\n\tSCAddress\030\n \001(\t\022\023\n\013toSCAddress\030\013 \001" +
+      "(\005\022\014\n\004mem1\030\014 \001(\t\022\014\n\004mem2\030\r \001(\t\022\014\n\004mem3\030\016" +
+      " \001(\t\022\r\n\005index\030\017 \001(\005\022W\n\007delFlag\030\020 \001(\0162#.c" +
+      "om.rtrk.protobufatcommand.DelFlag:!DELET" +
+      "E_MESSAGE_SPECIFIED_IN_INDEX\022\r\n\005alpha\030\021 " +
+      "\001(\t\022\032\n\022destinationAddress\030\022 \001(\t\022\014\n\004data\030" +
+      "\023 \001(\014\022\016\n\006length\030\024 \001(\005\022\032\n\022originatingAddr",
+      "ess\030\025 \001(\t\022\013\n\003pdu\030\026 \001(\005\022\036\n\026serviceCenterT" +
+      "imeStamp\030\027 \001(\t\022 \n\030typeOfDestinationAddre" +
+      "ss\030\030 \001(\005\022 \n\030typeOfOriginatingAddress\030\031 \001" +
+      "(\005\022\n\n\002fo\030\032 \001(\005\022\031\n\021messageIdentifier\030\033 \001(" +
+      "\005\022\032\n\022protocolIdentifier\030\034 \001(\005\022@\n\rmessage" +
+      "Status\030\035 \001(\0162).com.rtrk.protobufatcomman" +
+      "d.MessageStatus\022\026\n\016validityPeriod\030\036 \001(\005\022" +
+      "\030\n\020messageReference\030\037 \001(\005\022\016\n\006ackpdu\030  \001(" +
+      "\005\022\023\n\013commandType\030! \001(\005\022\025\n\rmessageNumber\030" +
+      "\" \001(\005\022N\n\nbufferMode\030$ \001(\0162&.com.rtrk.pro",
+      "tobufatcommand.BufferMode:\022COMMAND_IS_FL" +
+      "USHED\022\017\n\007profile\030% \001(\005\022\032\n\022messageIdentif" +
+      "iers\030& \001(\t\022\014\n\004dcss\030\' \001(\t\022\034\n\024showValuesRe" +
+      "sultCode\030( \001(\010\022\030\n\020dataCodingScheme\030) \001(\005" +
+      "\022\014\n\004type\030* \001(\t\022\022\n\nfirstOctet\030, \001(\005\022\022\n\nis" +
+      "Response\030. \001(\010\022\023\n\013description\030/ \001(\t\022D\n\013m" +
+      "essageMode\0300 \001(\0162\'.com.rtrk.protobufatco" +
+      "mmand.MessageMode:\006NORMAL\022C\n\020messageStat" +
+      "usPDU\0301 \001(\0162).com.rtrk.protobufatcommand" +
+      ".MessageStatus\022\031\n\021messageStatusText\0302 \001(",
+      "\t\022k\n\014storeSMSRule\0303 \001(\0162(.com.rtrk.proto" +
+      "bufatcommand.StoreSMSRule:+NO_SMS_DELIVE" +
+      "R_INDICATIONS_ARE_ROUTED_TO_TE\022c\n\014storeC" +
+      "MBRule\030# \001(\0162(.com.rtrk.protobufatcomman" +
+      "d.StoreCBMRule:#NO_CMB_INCICATIONS_ARE_R" +
+      "OUTED_TO_TE\022\n\n\002ds\0304 \001(\010\022\033\n\023enableToStore" +
+      "Class0\0305 \001(\010\022\213\001\n\021messageIndication\0306 \001(\016" +
+      "2-.com.rtrk.protobufatcommand.MessageInd" +
+      "ication:ABUFFER_UNSOLICITED_RESULT_CODES" +
+      "_IN_TA_WHEN_TA_TE_LINK_IS_RESERVED\022\036\n\026me",
+      "ssageTypeNotAccepted\0307 \001(\010\022X\n\010codeMode\0308" +
+      " \001(\0162$.com.rtrk.protobufatcommand.CodeMo" +
+      "de: CODE_MODE_ACCORDING_WITH_SIEMENS\"\317\003\n" +
+      "\020PhonebookCommand\022E\n\013messageType\030\001 \002(\01620" +
+      ".com.rtrk.protobufatcommand.PhonebookMes" +
+      "sageType\0222\n\006action\030\002 \002(\0162\".com.rtrk.prot" +
+      "obufatcommand.Action\022\017\n\007storage\030\022 \001(\t\022\017\n" +
+      "\007nlength\030\006 \001(\005\022\017\n\007tlength\030\007 \001(\005\022\r\n\005index" +
+      "\030\010 \001(\005\022\016\n\006number\030\t \001(\t\022:\n\nnumberType\030\n \001" +
+      "(\0162&.com.rtrk.protobufatcommand.NumberTy",
+      "pe\022\014\n\004text\030\013 \001(\t\022\034\n\024firstPhoneBookRecord" +
+      "\030\014 \001(\005\022\033\n\023lastPhoneBookRecord\030\r \001(\005\022\020\n\010f" +
+      "indText\030\016 \001(\t\022\016\n\006alphax\030\017 \001(\t\022\017\n\007numberx" +
+      "\030\020 \001(\t\022\r\n\005typex\030\021 \001(\005\022\022\n\nisResponse\030\023 \001(" +
+      "\010\022\023\n\013description\030\024 \001(\t\"\213\006\n\013GPRSCommand\022@" +
+      "\n\013messageType\030\001 \002(\0162+.com.rtrk.protobufa" +
+      "tcommand.GPRSMessageType\0222\n\006action\030\002 \002(\016" +
+      "2\".com.rtrk.protobufatcommand.Action\022\020\n\010" +
+      "attached\030\032 \001(\010\022\013\n\003cid\030\006 \001(\005\022\017\n\007PDPType\030\007" +
+      " \001(\t\022\013\n\003APN\030\010 \001(\t\022\022\n\nPDPAddress\030\t \001(\t\022\r\n",
+      "\005dComp\030\n \001(\005\022\r\n\005hComp\030\013 \001(\005\022\022\n\nprecedenc" +
+      "e\030\014 \001(\005\022\r\n\005delay\030\r \001(\005\022\023\n\013reliability\030\016 " +
+      "\001(\005\022\014\n\004peak\030\017 \001(\005\022\014\n\004mean\030\020 \001(\005\022\013\n\003L2P\030\021" +
+      " \001(\t\022\r\n\005class\030\022 \001(\t\022J\n\022eventReportingMod" +
+      "e\030\023 \001(\0162..com.rtrk.protobufatcommand.Eve" +
+      "ntReportingMode\022T\n\027networkRegistrationMo" +
+      "de\030\024 \001(\01623.com.rtrk.protobufatcommand.Ne" +
+      "tworkRegistrationMode\022X\n\031networkRegistra" +
+      "tionStatus\030\025 \001(\01625.com.rtrk.protobufatco" +
+      "mmand.NetworkRegistrationStatus\022\013\n\003lac\030\026",
+      " \001(\t\022\n\n\002ci\030\027 \001(\t\022<\n\013serviceType\030\030 \001(\0162\'." +
+      "com.rtrk.protobufatcommand.ServiceType\022\026" +
+      "\n\016multislotClass\030\031 \001(\005\022\022\n\nisResponse\030\033 \001" +
+      "(\010\022\023\n\013description\030\034 \001(\t\022\023\n\013activatePDP\030\035" +
+      " \001(\010\"\223\017\n\014TCPIPCommand\022A\n\013messageType\030\001 \002" +
+      "(\0162,.com.rtrk.protobufatcommand.TCPIPMes" +
+      "sageType\0222\n\006action\030\002 \002(\0162\".com.rtrk.prot" +
+      "obufatcommand.Action\022\r\n\005index\0306 \001(\005\022\014\n\004m" +
+      "ode\030\006 \001(\t\022>\n\014serverFormat\030\007 \001(\0162(.com.rt" +
+      "rk.protobufatcommand.ServerFormat\022\014\n\004por",
+      "t\030\010 \001(\005\022\022\n\ndomainName\030\t \001(\t\022\016\n\006length\030\n " +
+      "\001(\005\022\013\n\003APN\030\013 \001(\t\022\020\n\010username\030\014 \001(\t\022\020\n\010pa" +
+      "ssword\030\r \001(\t\0229\n\004rate\030\016 \001(\0162 .com.rtrk.pr" +
+      "otobufatcommand.Rate:\tRATE_9600\022\r\n\005state" +
+      "\030\017 \001(\t\022\023\n\013socketState\030\020 \001(\t\022\023\n\013serverSta" +
+      "te\030\021 \001(\t\022\022\n\nprimaryDNS\030\022 \001(\t\022\023\n\013seondary" +
+      "DNS\030\023 \001(\t\022\014\n\004time\030\025 \001(\003\022X\n\nsendPrompt\030\026 " +
+      "\001(\0162&.com.rtrk.protobufatcommand.SendPro" +
+      "mpt:\034ECHO_PROMPT_AND_SHOW_SEND_OK\022\013\n\003num" +
+      "\030\027 \001(\005\0224\n\004type\030\030 \001(\0162&.com.rtrk.protobuf",
+      "atcommand.ServerType\022\013\n\003max\030\031 \001(\003\022\022\n\ndia" +
+      "lNumber\030\032 \001(\t\022:\n\nconnection\030\033 \001(\0162&.com." +
+      "rtrk.protobufatcommand.Connection\022\025\n\rnum" +
+      "berOfRetry\030\034 \001(\005\022\020\n\010waitTime\030\035 \001(\005\022\020\n\010se" +
+      "ndSize\030\036 \001(\005\022\016\n\006escape\030\037 \001(\010\0224\n\007channel\030" +
+      "  \001(\0162#.com.rtrk.protobufatcommand.Chann" +
+      "el\022\t\n\001n\030! \001(\005\022\014\n\004sent\030\" \001(\005\022\r\n\005acked\030# \001" +
+      "(\005\022\016\n\006nAcked\030$ \001(\005\022r\n\020receivedDataMode\030%" +
+      " \001(\0162,.com.rtrk.protobufatcommand.Receiv" +
+      "edDataMode:*OUTPUT_RECEIVED_DATA_THROUGH",
+      "_UART_DIRECTLY\022\n\n\002id\030& \001(\005\022>\n\014serverClin" +
+      "et\030\' \001(\0162(.com.rtrk.protobufatcommand.Se" +
+      "rverClient\022\013\n\003sid\030( \001(\005\022\016\n\006number\030) \001(\005\022" +
+      "\014\n\004host\030* \001(\t\022\017\n\007timeout\030+ \001(\005\022\022\n\npingNu" +
+      "mber\030, \001(\005\022:\n\npingResult\030- \001(\0162&.com.rtr" +
+      "k.protobufatcommand.PingResult\022\r\n\005bytes\030" +
+      ". \001(\005\022\013\n\003ttl\030/ \001(\005\022<\n\013finalResult\0300 \001(\0162" +
+      "\'.com.rtrk.protobufatcommand.FinalResult" +
+      "\022\020\n\010received\0301 \001(\005\022\014\n\004lost\0302 \001(\005\022\013\n\003min\030" +
+      "3 \001(\003\022\013\n\003avg\0304 \001(\003\022\016\n\006server\0305 \001(\t\022\022\n\nis",
+      "Response\0307 \001(\010\022\023\n\013description\0308 \001(\t\0226\n\010i" +
+      "pHeader\030\024 \001(\0162$.com.rtrk.protobufatcomma" +
+      "nd.IPHeader\0220\n\005timer\0309 \001(\0162!.com.rtrk.pr" +
+      "otobufatcommand.Timer\022\031\n\021configureAsServ" +
+      "er\030: \001(\010\022:\n\nbearerType\030; \001(\0162&.com.rtrk." +
+      "protobufatcommand.BearerType\022\023\n\013showAddr" +
+      "ess\030< \001(\010\022>\n\014transferMode\030= \001(\0162(.com.rt" +
+      "rk.protobufatcommand.TransferMode\022!\n\031sho" +
+      "wTransportProtocolType\030> \001(\010\022\"\n\032enableMu" +
+      "ltipleTCPIPSession\030? \001(\010\022\020\n\010echoData\030@ \001",
+      "(\010\022P\n\025synchronizationResult\030A \001(\01621.com." +
+      "rtrk.protobufatcommand.SynchronizationRe" +
+      "sult\022\024\n\014CSDDataSpeed\030B \001(\005\"\353\t\n\033Supplemen" +
+      "taryServiceCommand\022P\n\013messageType\030\001 \002(\0162" +
+      ";.com.rtrk.protobufatcommand.Supplementa" +
+      "ryServiceMessageType\0222\n\006action\030\002 \002(\0162\".c" +
+      "om.rtrk.protobufatcommand.Action\0220\n\005read" +
+      "s\030\026 \001(\0162!.com.rtrk.protobufatcommand.Rea" +
+      "ds\022B\n\016forwardingMode\030\006 \001(\0162*.com.rtrk.pr" +
+      "otobufatcommand.ForwardingMode\022\016\n\006number",
+      "\030\007 \001(\t\022\014\n\004type\030\010 \001(\005\022\022\n\nsubaddress\030\t \001(\t" +
+      "\022\016\n\006satype\030\n \001(\005\0220\n\005class\030\013 \001(\0162!.com.rt" +
+      "rk.protobufatcommand.Class\022\014\n\004time\030\014 \001(\005" +
+      "\022\016\n\006active\030\r \001(\010\022\021\n\tenableCUG\030\016 \001(\010\022\020\n\010C" +
+      "UGIndex\030\017 \001(\005\022.\n\004info\030\020 \001(\0162 .com.rtrk.p" +
+      "rotobufatcommand.Info\022.\n\004clip\030\021 \001(\0162 .co" +
+      "m.rtrk.protobufatcommand.CLIP\022\022\n\nUSSDStr" +
+      "ing\030\022 \001(\t\022\030\n\020dataCodingScheme\030\023 \001(\005\0220\n\005c" +
+      "ode1\030\024 \001(\0162!.com.rtrk.protobufatcommand." +
+      "Code1\0220\n\005code2\030\025 \001(\0162!.com.rtrk.protobuf",
+      "atcommand.Code2\022\022\n\nisResponse\030\027 \001(\010\022\023\n\013d" +
+      "escription\030\030 \001(\t\022\032\n\022enablePresentation\030\031" +
+      " \001(\010\022 \n\030enableCallWaitingControl\030\032 \001(\010\022\020" +
+      "\n\010callHold\030\033 \001(\005\022$\n\034displayUnsolicitedRe" +
+      "sultCode\030\034 \001(\010\022\026\n\016showCallNumber\030\035 \001(\010\022X" +
+      "\n\003aoc\030\036 \001(\01623.com.rtrk.protobufatcommand" +
+      ".AdjustmentOutgoingCalls:\026PRESENTATION_I" +
+      "NDICATOR\022:\n\003css\030\037 \001(\0162-.com.rtrk.protobu" +
+      "fatcommand.CLIRServiceStatus\022.\n&enableRe" +
+      "sultCodePresentationOriginated\030  \001(\010\022.\n&",
+      "enableResultCodePresentationTerminated\030#" +
+      " \001(\010\022\026\n\016showAlphaField\030! \001(\010\022b\n\nssdContr" +
+      "ol\030\" \001(\0162&.com.rtrk.protobufatcommand.SS" +
+      "DControl:&DISABLE_RESULT_CODE_PRESENTATI" +
+      "ON_IN_TA\"\235\013\n\014AudioCommand\022A\n\013messageType" +
+      "\030\001 \002(\0162,.com.rtrk.protobufatcommand.Audi" +
+      "oMessageType\0222\n\006action\030\002 \002(\0162\".com.rtrk." +
+      "protobufatcommand.Action\022D\n\017speakerLoudn" +
+      "ess\030! \001(\0162+.com.rtrk.protobufatcommand.S" +
+      "peakerLoudness\022\030\n\020internalDuration\030\006 \001(\005",
+      "\022\020\n\010duration\030\007 \001(\003\022\022\n\nDTMFString\030\010 \001(\t\0228" +
+      "\n\tsoundMode\030\t \001(\0162%.com.rtrk.protobufatc" +
+      "ommand.SoundMode\022\r\n\005level\030\n \001(\005\022\014\n\004mute\030" +
+      "\013 \001(\010\022\021\n\tgainLevel\030\014 \001(\005\022H\n\021microphoneCh" +
+      "annel\030\r \001(\0162-.com.rtrk.protobufatcommand" +
+      ".MicrophoneChannel\022\020\n\010testIsOn\030\016 \001(\010\022\021\n\t" +
+      "frequency\030\020 \001(\005\022\020\n\010periodON\030\021 \001(\005\022\021\n\tper" +
+      "iodOFF\030\022 \001(\005\022L\n\noutputPath\030\023 \001(\0162&.com.r" +
+      "trk.protobufatcommand.OutputPath:\020AUTO_O" +
+      "UTPUT_PATH\022I\n\017operateFunction\030\024 \001(\01620.co",
+      "m.rtrk.protobufatcommand.AudioOperateFun" +
+      "ction\022B\n\016functionStatus\030\025 \001(\0162*.com.rtrk" +
+      ".protobufatcommand.FunctionStatus\022\023\n\013pre" +
+      "fixPause\030\027 \001(\005\022\024\n\014lowThreshold\030\030 \001(\005\022\025\n\r" +
+      "highThreshold\030\031 \001(\005\022D\n\017persistenceTime\030\033" +
+      " \001(\0162+.com.rtrk.protobufatcommand.Persis" +
+      "tenceTime\022\024\n\014uplinkVolume\030\034 \001(\005\022\026\n\016downl" +
+      "inkVolume\030\035 \001(\005\022\027\n\017continuanceTime\030\036 \001(\003" +
+      "\022\020\n\010muteTime\030\037 \001(\003\022\022\n\nisResponse\030\" \001(\010\022\023" +
+      "\n\013description\030# \001(\t\022<\n\013speakerMode\030$ \001(\016",
+      "2\'.com.rtrk.protobufatcommand.SpeakerMod" +
+      "e\022>\n\014audioChannel\030% \001(\0162(.com.rtrk.proto" +
+      "bufatcommand.AudioChannel\022\030\n\020startPlayin" +
+      "gTone\030& \001(\010\022V\n\rtoneDetection\030\026 \001(\0162).com" +
+      ".rtrk.protobufatcommand.ToneDetection:\024C" +
+      "LOSE_TONE_DETECTION\022<\n\013dtmfOperate\030\' \001(\016" +
+      "2\'.com.rtrk.protobufatcommand.DTMFOperat" +
+      "e\0226\n\010dtmfCode\030\032 \001(\0162$.com.rtrk.protobufa" +
+      "tcommand.DTMFCode\022E\n\talgorithm\030\017 \001(\0162%.c" +
+      "om.rtrk.protobufatcommand.Algorithm:\013ALG",
+      "ORITHM_1\"\353\005\n\026HardwareRelatedCommand\022K\n\013m" +
+      "essageType\030\001 \002(\01626.com.rtrk.protobufatco" +
+      "mmand.HardwareRelatedMessageType\0222\n\006acti" +
+      "on\030\002 \002(\0162\".com.rtrk.protobufatcommand.Ac" +
+      "tion\022\014\n\004time\030\022 \001(\t\022\020\n\010setAlarm\030\006 \001(\010\0222\n\006" +
+      "repeat\030\007 \001(\0162\".com.rtrk.protobufatcomman" +
+      "d.Repeat\0225\n\005power\030\010 \001(\0162&.com.rtrk.proto" +
+      "bufatcommand.AlarmPower\022@\n\rbatteryCharge" +
+      "\030\t \001(\0162).com.rtrk.protobufatcommand.Batt" +
+      "eryCharge\022\036\n\026batteryConnectionLevel\030\n \001(",
+      "\005\022\026\n\016batteryVoltage\030\013 \001(\005\022:\n\nreadStatus\030" +
+      "\014 \001(\0162&.com.rtrk.protobufatcommand.ReadS" +
+      "tatus\0228\n\tslowClock\030\016 \001(\0162%.com.rtrk.prot" +
+      "obufatcommand.SlowClock\0224\n\007ledMode\030\017 \001(\016" +
+      "2#.com.rtrk.protobufatcommand.LedMode\022@\n" +
+      "\rthresholdType\030\020 \001(\0162).com.rtrk.protobuf" +
+      "atcommand.ThresholdType\022\021\n\tthreshold\030\021 \001" +
+      "(\005\022\022\n\nisResponse\030\023 \001(\010\022\023\n\013description\030\024 " +
+      "\001(\t\022!\n\031thresholdFunctionTurnedON\030\025 \001(\010\"\242" +
+      "\003\n\rOthersCommand\022B\n\013messageType\030\001 \002(\0162-.",
+      "com.rtrk.protobufatcommand.OthersMessage" +
+      "Type\0222\n\006action\030\002 \002(\0162\".com.rtrk.protobuf" +
+      "atcommand.Action\022\022\n\nechoModeOn\030\006 \001(\010\022\'\n\037" +
+      "commandLineTerminationCharacter\030\007 \001(\005\022#\n" +
+      "\033responseFormattingCharacter\030\014 \001(\005\022 \n\030re" +
+      "sponseEditingCharacter\030\r \001(\005\0226\n\010timeMode" +
+      "\030\010 \001(\0162$.com.rtrk.protobufatcommand.Time" +
+      "Mode\0224\n\007indMode\030\t \001(\0162#.com.rtrk.protobu" +
+      "fatcommand.IndMode\022\022\n\nisResponse\030\n \001(\010\022\023" +
+      "\n\013description\030\013 \001(\t\"x\n\014ErrorCommand\0220\n\005e",
+      "rror\030\001 \001(\0162!.com.rtrk.protobufatcommand." +
+      "Error\0226\n\010FTPError\030\002 \001(\0162$.com.rtrk.proto" +
+      "bufatcommand.FTPError*\200\004\n\013CommandType\022\020\n" +
+      "\014HTTP_COMMAND\020\000\022\020\n\014FILE_COMMAND\020\001\022\017\n\013FTP" +
+      "_COMMAND\020\002\022\017\n\013MMS_COMMAND\020\003\022\025\n\021QUEC_CELL" +
+      "_COMMAND\020\004\022\025\n\021RECORDING_COMMAND\020\005\022\020\n\014SMT" +
+      "P_COMMAND\020\006\022\017\n\013STK_COMMAND\020\007\022\023\n\017GENERAL_" +
+      "COMMAND\020\010\022$\n SERIAL_INTERFACE_CONTROL_CO" +
+      "MMAND\020\t\022\032\n\026STATUS_CONTROL_COMMAND\020\n\022\027\n\023S" +
+      "IM_RELATED_COMMAND\020\013\022\033\n\027NETWORK_SERVICE_",
+      "COMMAND\020\014\022\030\n\024CALL_RELATED_COMMAND\020\r\022\017\n\013S" +
+      "MS_COMMAND\020\016\022\025\n\021PHONEBOOK_COMMAND\020\017\022\020\n\014G" +
+      "PRS_COMMAND\020\020\022\021\n\rTCPIP_COMMAND\020\021\022!\n\035SUPP" +
+      "LEMENTARY_SERVICE_COMMAND\020\022\022\021\n\rAUDIO_COM" +
+      "MAND\020\023\022\034\n\030HARDWARE_RELATED_COMMAND\020\024\022\022\n\016" +
+      "OTHERS_COMMAND\020\025*\325\002\n\017FileMessageType\022\031\n\025" +
+      "GET_STORAGE_DATE_SIZE\020\000\022\016\n\nLIST_FILES\020\001\022" +
+      "\032\n\026UPLOAD_FILE_TO_STORAGE\020\002\022\036\n\032DOWNLOAD_" +
+      "FILE_FROM_STORAGE\020\003\022\032\n\026DELETE_FILE_IN_ST" +
+      "ORAGE\020\004\022\r\n\tMOVE_FILE\020\005\022\r\n\tOPEN_FILE\020\006\022\r\n",
+      "\tREAD_FILE\020\007\022\016\n\nWRITE_FILE\020\010\022\r\n\tSEEK_FIL" +
+      "E\020\t\022\016\n\nCLOSE_FILE\020\n\022\033\n\027GET_FILE_POINTER_" +
+      "OFFSET\020\013\022!\n\035FORCE_TO_WRITE_DATA_IN_BUFFE" +
+      "R\020\014\022#\n\037TRUNCATE_FILE_FROM_FILE_POINTER\020\r" +
+      "*|\n\014FileOpenMode\022\'\n#IF_NOT_EXISTS_CREATE" +
+      "_IF_EXISTS_OPEN\020\000\022\"\n\036IF_EXISTS_CREATE_AN" +
+      "D_CLEAR_OLD\020\001\022\037\n\033IF_EXISTS_OPEN_IN_READ_" +
+      "MODE\020\002*T\n\023PointerMovementMode\022\016\n\nFILE_BE" +
+      "GIN\020\000\022\037\n\033CURRENT_POSITION_OF_POINTER\020\001\022\014" +
+      "\n\010FILE_END\020\002*\334\003\n\016FTPMessageType\022\024\n\020OPEN_",
+      "FTP_SERVICE\020\000\022\025\n\021CLOSE_FTP_SERVICE\020\001\022\035\n\031" +
+      "UPLOAD_FILE_TO_FTP_SERVER\020\002\022!\n\035DOWNLOAD_" +
+      "FILE_FROM_FTP_SERVER\020\003\022\034\n\030SET_UPLOAD_DOW" +
+      "NLOAD_PATH\020\004\022\021\n\rSET_USER_NAME\020\005\022\020\n\014SET_P" +
+      "ASSWORD\020\006\022\022\n\016SET_PARAMETERS\020\007\022\037\n\033QUERY_S" +
+      "TATUS_OF_FTP_SERVICE\020\010\022\035\n\031LATEST_TRANSFE" +
+      "R_REAL_SIZE\020\t\022\036\n\032RENAME_FILE_OR_FOLDER_N" +
+      "AME\020\n\022 \n\034QUERY_SIZE_OF_APPOINTED_FILE\020\013\022" +
+      "\017\n\013DELETE_FILE\020\014\022\034\n\030ESTABLISH_NEW_FILEFO" +
+      "LDER\020\r\022\026\n\022REMOVE_FILE_FOLDER\020\016\022&\n\"LIST_C",
+      "ONTENTS_OF_DIRECTORY_OR_FILE\020\017\022\023\n\017LIST_F" +
+      "ILE_NAMES\020\020*7\n\022DataConnectionMode\022\017\n\013ACT" +
+      "IVE_MODE\020\000\022\020\n\014PASSIVE_MODE\020\001*\237\001\n\034TypeOfC" +
+      "onfigurableParameters\022\033\n\027MODE_OF_DATA_CO" +
+      "NNECTION\020\001\022\021\n\rTRANSFER_TYPE\020\002\022*\n&RESUMIN" +
+      "G_POINT_TO_RESUME_FILE_TRANSFER\020\003\022#\n\037LOC" +
+      "AL_POSITION_OF_FILE_TRANSFER\020\004*A\n\014Transf" +
+      "erType\022\030\n\024BINARY_TRANSFER_TYPE\020\000\022\027\n\023ASCI" +
+      "I_TRANSFER_TYPE\020\001*G\n\006Return\022.\n*RETURN_NO" +
+      "_INFORMATIONS_TRANSFERED_FROM_FTP\020\000\022\r\n\tR",
+      "ETURN_OK\020\001*\245\007\n\010FTPError\022\n\n\006FTP_OK\020\000\022\024\n\020F" +
+      "TP_UNKNOW_ERROR\020\001\022\024\n\020FTP_SERVICE_BUSY\020\003\022" +
+      "5\n1FAILED_TO_GET_IP_ADDRESS_ACCORDING_TO" +
+      "_DOMAIN_NAME\020\004\022\025\n\021FTP_NETWORK_ERROR\020\005\022$\n" +
+      " FTP_SESSION_CLOSED_BY_FTP_SERVER\020\006\022,\n(D" +
+      "ATA_CONNECTION_OF_FTP_SERVICE_IS_CLOSED\020" +
+      "\007\022\'\n#FTP_GPRS_CSD_CONTEXT_IS_DEACTIVATED" +
+      "\020\010\022\017\n\013FTP_TIMEOUT\020\t\022\036\n\032INPUT_PARAMETAR_I" +
+      "S_ILLEGAL\020\n\022$\n FILE_NOT_FOUND_IN_LOCAL_P" +
+      "OSITION\020\013\022(\n$FAILED_TO_GET_FILE_IN_LOCAL",
+      "_POSITION\020\014\022\'\n#FTP_NO_ENOUGH_MEMORY_FOR_" +
+      "ATTACHMENT\020\r\022$\n\037FTP_SERVER_CANT_SUPPORT_" +
+      "SERVICE\020\245\003\022#\n\036FAILED_TO_OPEN_DATA_CONNEC" +
+      "TION\020\251\003\022,\n\'CONNECTION_CLOSED_AND_STOP_TR" +
+      "ANSFERRING\020\252\003\022#\n\036REQUEST_FOR_FILE_ISNT_O" +
+      "PERATED\020\302\003\022%\n FTP_SERVER_HAS_NOT_ENOUGH_" +
+      "MEMORY\020\304\003\022#\n\036FORMAT_OF_FTP_COMMAND_IS_WR" +
+      "ONG\020\364\003\022&\n!PARAMETER_OF_FTP_COMMAND_IS_WR" +
+      "ONG\020\365\003\022,\n\'FTP_COMMAND_ISNT_OPERATED_BY_F" +
+      "TP_SERVER\020\366\003\022\031\n\024NOT_LOGIN_FTP_SERVER\020\222\004\022",
+      " \n\033NEED_INFORMATION_OF_ACCOUNT\020\224\004\022\032\n\025REQ" +
+      "UEST_ISNT_OPERATED\020\246\004\022\027\n\022REQUEST_IS_STOP" +
+      "PED\020\247\004\022\037\n\032REQUEST_OF_FILE_IS_STOPPED\020\250\004\022" +
+      "\031\n\024FILE_NAME_IS_ILLEGAL\020\251\004*\244\001\n\017HTTPMessa" +
+      "geType\022\027\n\023SET_HTTP_SERVER_URL\020\000\022\031\n\025SEND_" +
+      "HTTP_GET_REQUEST\020\001\022\035\n\031READ_HTTP_SERVER_R" +
+      "ESPONSE\020\002\022\032\n\026SEND_HTTP_POST_REQUEST\020\003\022\"\n" +
+      "\036DOWNLOAD_FILE_FROM_HTTP_SERVER\020\004*\303\003\n\016MM" +
+      "SMessageType\022\023\n\017SET_URL_OF_MMSC\020\000\022\021\n\rSET" +
+      "_MMS_PROXY\020\001\022)\n%SET_PARAMETER_FOR_SENDIN",
+      "G_MMS_MESSAGE\020\002\022%\n!SET_CHARACTER_SETS_AN" +
+      "D_INPUT_MODE\020\003\022\025\n\021WRITE_MMS_MESSAGE\020\004\022\024\n" +
+      "\020SEND_MMS_MESSAGE\020\005\022\037\n\033MENAGE_RECEIVED_M" +
+      "MS_MESSAGE\020\006\022\035\n\031READ_RECEIVED_MMS_MESSAG" +
+      "E\020\007\022!\n\035RECEIVE_MMS_MESSAGE_FROM_MMSC\020\010\022(" +
+      "\n$SET_PRIORITY_OF_MMS_MESSAGE_AND_CALL\020\t" +
+      "\022*\n&SET_DUR_ATTRIBUTE_VALUE_IN_SMIL_SCRI" +
+      "PT\020\n\022\032\n\026SET_MMS_SMS_TRANSACTOR\020\013\022\036\n\032ENAB" +
+      "LE_OUTPUT_TEXT_IN_USC2\020\014\022\025\n\021OUTPUT_FILE_" +
+      "STYLE\020\r*\272\001\n\010FileType\022\010\n\004TEXT\020\001\022\r\n\tTEXT_H",
+      "TML\020\002\022\016\n\nTEXT_PLAIN\020\003\022\014\n\010TEXT_XML\020\004\022\t\n\005I" +
+      "MAGE\020\005\022\r\n\tIMAGE_GIF\020\006\022\016\n\nIMAGE_JPEG\020\007\022\016\n" +
+      "\nIMAGE_TIFF\020\010\022\r\n\tIMAGE_PNP\020\t\022\016\n\nIMAGE_WB" +
+      "MP\020\n\022\t\n\005AUDIO\020\013\022\t\n\005VIDEO\020\014\022\010\n\004SMIL\020\r*\'\n\016" +
+      "OperateSendMMS\022\025\n\021START_TO_SEND_MMS\020\001*5\n" +
+      "\021OperateReceiveMMS\022 \n\034START_TO_RECEIVE_M" +
+      "MS_MESSAGE\020\001*\254\001\n\016OperateReadMMS\022\034\n\030VIEW_" +
+      "ORIGINATION_ADDRESS\020\001\022\023\n\017VIEW_TO_ADDRESS" +
+      "\020\002\022\023\n\017VIEW_CC_ADDRESS\020\003\022\022\n\016VIEW_MMS_TITL" +
+      "E\020\004\022\024\n\020LIST_APPEND_FILE\020\005\022(\n$READ_APPEND",
+      "_FILE_DATA_OF_MMS_MESSAGE\020\006*@\n\020OperateMa" +
+      "nageMMS\022\026\n\022DELETE_MMS_MESSAGE\020\000\022\024\n\020LIST_" +
+      "MMS_MESSAGE\020\001*7\n\017OperateWriteMMS\022\021\n\rCLEA" +
+      "N_OPERATE\020\000\022\021\n\rWRITE_OPERATE\020\001*\256\001\n\017Opera" +
+      "teFunction\022$\n CLEAR_ALL_CONTENT_OF_MMS_M" +
+      "ESSAGE\020\000\022\026\n\022OPERATE_TO_ADDRESS\020\001\022\026\n\022OPER" +
+      "ATE_CC_ADDRESS\020\002\022\027\n\023OPERATE_BCC_ADDRESS\020" +
+      "\003\022\021\n\rOPERATE_TITLE\020\004\022\031\n\025OPERATE_FILE_APP" +
+      "ENDED\020\005*!\n\014ProtocolType\022\021\n\rHHTP_PROTOCOL" +
+      "\020\001*\237\001\n\016ValidityPeriod\022\017\n\013TIME_1_HOUR\020\000\022\021",
+      "\n\rTIME_12_HOURS\020\001\022\021\n\rTIME_24_HOURS\020\002\022\017\n\013" +
+      "TIME_2_DAYS\020\003\022\017\n\013TIME_1_WEEK\020\004\022\020\n\014MAXIMU" +
+      "M_TIME\020\005\022\"\n\036USE_NETWORK_CONFIGURATION_TI" +
+      "ME\020\006*l\n\010Priority\022\020\n\014LOW_PRIORITY\020\000\022\023\n\017NO" +
+      "RMAL_PRIORITY\020\001\022\021\n\rHIGH_PRIORITY\020\002\022&\n\"US" +
+      "E_NETWORK_CONFIGURATION_PRIORITY\020\003*s\n\016Ad" +
+      "dressVisible\022\024\n\020HIDE_ANY_ADDRESS\020\000\022\034\n\030SH" +
+      "OW_EVEN_SECRET_ADDRESS\020\001\022-\n)USE_NETWORK_" +
+      "CONFIGURATION_ADDRESS_VISIBLE\020\002*\214\001\n\017MMSM" +
+      "essageClass\022\022\n\016PERSONAL_CLASS\020\000\022\027\n\023ADVER",
+      "TISEMENT_CLASS\020\001\022\027\n\023INFORMATIONAL_CLASS\020" +
+      "\002\022\016\n\nAUTO_CLASS\020\003\022#\n\037USE_NETWORK_CONFIGU" +
+      "RATION_CLASS\020\004*5\n\016TitleInputMode\022\020\n\014PDU_" +
+      "HEX_MODE\020\000\022\021\n\rTEXT_BIN_MODE\020\001*\346\001\n\023QuecCe" +
+      "llMessageType\022\"\n\036SCAN_BASIC_STATION_INFO" +
+      "RMATION\020\000\022%\n!SWITCH_ON_OR_OFF_ENGINEERIN" +
+      "G_MODE\020\001\022\025\n\021LOCK_BASE_STATION\020\002\022\036\n\032SCAN_" +
+      "ARFCN_RECEIVING_LEVEL\020\003\022\033\n\027GET_CHANNEL_I" +
+      "NFORMATION\020\004\022\033\n\027GET_LAST_VALID_TA_VALUE\020" +
+      "\005\022\023\n\017FORBID_OPERATOR\020\006*P\n\004Band\022\020\n\014GSM_90",
+      "0_BAND\020\000\022\021\n\rDCS_1800_BAND\020\001\022\021\n\rPCS_1900_" +
+      "BAND\020\002\022\020\n\014GSM_850_BAND\020\003*\312\001\n\022ForbidOpera" +
+      "torMode\022\037\n\033READ_LINE_OF_FORBIDDEN_DATA\020\000" +
+      "\022 \n\034WRITE_LINE_OF_FORBIDDEN_DATA\020\001\022 \n\034CL" +
+      "EAN_LINE_OF_FORBIDDEN_DATA\020\002\022\034\n\030CLEAR_AL" +
+      "L_FORBIDDEN_DATA\020\003\022\027\n\023READ_FORBIDDEN_DAT" +
+      "A\020\004\022\030\n\024WRITE_FORBIDDEN_DATA\020\005*\257\001\n\007RRStat" +
+      "e\022\016\n\nNULL_STATE\020\000\022\022\n\016INACTIVE_STATE\020\001\022\025\n" +
+      "\021CELL_SELECT_STATE\020\002\022\016\n\nIDLE_STATE\020\003\022\020\n\014" +
+      "ACCESS_STATE\020\004\022\031\n\025PACKET_TRANSFER_STATE\020",
+      "\005\022\023\n\017DEDICATED_STATE\020\006\022\027\n\023CELL_RESELECT_" +
+      "STATE\020\007*\262\001\n\004Dump\022,\n(ONLY_DISPLAY_INFORMA" +
+      "TION_OF_SERVING_CALL\020\000\022A\n=DISPLAY_INFORM" +
+      "ATION_OF_SERVING_CELL_AND_1_6_NEIGHBORIN" +
+      "G_CELLS\020\001\0229\n5LIST_OF_ARCFN_AND_CALL_FREQ" +
+      "UENCY_LIST_OF_SERVING_CELL\020\003*\203\001\n\017Enginee" +
+      "ringMode\022\037\n\033SWITCH_OFF_ENGINEERING_MODE\020" +
+      "\000\022\036\n\032SWITCH_ON_ENGINEERING_MODE\020\001\022/\n+SWI" +
+      "TCH_ON_ENGINEERING_MODE_AND_ACTIVATE_URC" +
+      "\020\002*k\n\016OperatorStatus\022\023\n\017UNKNOW_OPERATOR\020",
+      "\000\022\026\n\022OPERATOR_AVAILABLE\020\001\022\024\n\020CURRENT_OPE" +
+      "RATOR\020\002\022\026\n\022FORBIDDEN_OPERATOR\020\003*_\n\024Recor" +
+      "dingMessageType\022\025\n\021RECORD_MEDIA_FILE\020\000\022\023" +
+      "\n\017PLAY_MEDIA_FILE\020\001\022\033\n\027STOP_PLAYING_MEDI" +
+      "A_FILE\020\002*:\n\013PlayChannel\022\014\n\010RECEIVER\020\000\022\013\n" +
+      "\007HEADSET\020\001\022\020\n\014LOUD_SPEAKER\020\002*O\n\nFileForm" +
+      "at\022\007\n\003AMR\020\003\022\r\n\tWAV_PCM16\020\r\022\014\n\010WAV_ALAW\020\016" +
+      "\022\014\n\010WAV_ULAW\020\017\022\r\n\tWAV_ADPCM\020\020*L\n\016Recordi" +
+      "ngState\022\036\n\032MODULE_IS_NOT_IN_RECORDING\020\000\022" +
+      "\032\n\026MOUDLE_IS_IN_RECORDING\020\001*\210\003\n\017SMTPMess",
+      "ageType\022$\n SET_USER_NAME_FOR_AUTHENTICAT" +
+      "ION\020\000\022#\n\037SET_PASSWORD_FOR_AUTHENTICATION" +
+      "\020\001\022\034\n\030SET_SENDER_EMAIL_ADDRESS\020\002\022\024\n\020SET_" +
+      "SENDERS_NAME\020\003\022$\n SET_SMTP_SERVER_ADDRES" +
+      "S_AND_PORT\020\004\022\034\n\030ADD_OR_DELETE_RECIPIENTS" +
+      "\020\005\022\026\n\022EDIT_EMAIL_SUBJECT\020\006\022\026\n\022EDIT_EMAIL" +
+      "_CONTENT\020\007\022\030\n\024ADD_EMAIL_ATTACHMENT\020\010\022\025\n\021" +
+      "DELETE_ATTACHMENT\020\t\022)\n%CLEAR_ALL_CONFIGU" +
+      "RATIONS_AND_CONTENTS\020\n\022\026\n\022SMTP_CONFIGURA" +
+      "TION\020\013\022\016\n\nSEND_EMAIL\020\014*6\n\007Charset\022\t\n\005ASC",
+      "II\020\000\022\t\n\005UTF_8\020\001\022\013\n\007GB_2312\020\002\022\010\n\004BIG5\020\003*O" +
+      "\n\rRecipientType\022\026\n\022RECEIVER_RECIPIENT\020\001\022" +
+      "\021\n\rCOPY_RECEIVER\020\002\022\023\n\017SECRET_RECEIVER\020\003*" +
+      "8\n\rRecipientMode\022\024\n\020DELETE_RECIPIENT\020\000\022\021" +
+      "\n\rADD_RECIPIENT\020\001*\350\001\n\016STKMessageType\022\034\n\030" +
+      "TURN_ON_OFF_STK_FUNCTION\020\000\022\030\n\024STK_PROFIL" +
+      "E_DOWNLOAD\020\001\022\030\n\024STK_ENVELOPE_COMMAND\020\002\022\031" +
+      "\n\025STK_TERMINAL_RESPONSE\020\003\022\024\n\020TRIGGER_STK" +
+      "_CALL\020\004\022\023\n\017TRIGGER_STK_SMS\020\005\022\022\n\016TRIGGER_" +
+      "STK_SS\020\006\022\024\n\020TRIGGER_STK_USSD\020\007\022\024\n\020TRIGGE",
+      "R_STK_DTMF\020\010*\202\002\n\003STK\022\034\n\030TRIGER_MODEM_TO_" +
+      "SEND_STK\020\000\0225\n1TRIGER_MODEM_TO_SEND_STK_B" +
+      "UT_ICON_CANT_BE_DISPLAY\020\004\022(\n$PROACTIVE_S" +
+      "ESSION_TERMINATED_BY_USER\020\020\022\031\n\025NO_RESPON" +
+      "SE_FROM_USER\020\022\022\035\n\031UNABLE_TO_PROCESS_COMM" +
+      "AND\020 \022\032\n\026USER_REJECT_SETUP_CALL\020\"\022&\n\"COM" +
+      "MAND_DATA_DONT_UNDERSTOOD_BY_ME\0202*\365\006\n\022Ge" +
+      "neralMessageType\022.\n*DISPLAY_PRODUCT_IDEN" +
+      "TIFICATION_INFORMATION\020\000\022\'\n#REQUEST_MANU" +
+      "FACTURER_IDENTIFICATION\020\001\022#\n\037REQUEST_TA_",
+      "MODEL_IDENTIFICATION\020\002\022&\n\"REQUEST_TA_REV" +
+      "ISION_IDENTIFICATION\020\003\022(\n$REQUEST_GLOBAL" +
+      "_OBJECT_IDENTIFICATION\020\004\022,\n(REQUEST_MANU" +
+      "FACTURER_IDENTIFICATION_CGMI\020\005\022 \n\034REQUES" +
+      "T_MODEL_IDENTIFICATION\020\006\022+\n\'REQUEST_TA_R" +
+      "EVISION_IDENTIFICATION_CGMR\020\007\022\020\n\014REQUEST" +
+      "_IMEI\020\010\0220\n,REQUEST_PRODUCT_SERIAL_NUMBER" +
+      "_IDENTIFICATION\020\t\022\025\n\021REQUEST_IMEI_QGSN\020\n" +
+      "\022/\n+SET_ALL_PARAMETERS_TO_MANUFACTURER_D" +
+      "EFAULTS\020\013\022!\n\035DISPLAY_CURRENT_CONFIGURATI",
+      "ON\020\014\0224\n0STORE_CURRENT_PARAMETERS_TO_USER" +
+      "_DEFINED_PROFILE\020\r\022%\n!SET_RESULT_CODE_PR" +
+      "ESENTATION_CODE\020\016\022\026\n\022TA_RESPONSE_FORMAT\020" +
+      "\017\022\"\n\036SET_CONNECT_RESULT_CODE_FORMAT\020\020\0226\n" +
+      "2SET_ALL_CURRENT_PARAMETERS_TO_USER_DEFI" +
+      "NED_PROFILE\020\021\022\033\n\027SET_PHONE_FUNCTIONALITY" +
+      "\020\022\022\r\n\tPOWER_OFF\020\023\022!\n\035REPORT_MOBILE_EQUIP" +
+      "MENT_ERROR\020\024\022\030\n\024SET_TE_CHARACTER_SET\020\025\022)" +
+      "\n%REQUEST_COMPLETE_TA_CAPABILITIES_LIST\020" +
+      "\026*\212\001\n\021DisableResultCode\022\027\n\023DISABLE_RESUL",
+      "T_CODE\020\000\022-\n)ENABLE_RESULT_CODE_AND_USE_N" +
+      "UMERIC_VALUES\020\001\022-\n)ENABLE_RESULT_CODE_AN" +
+      "D_USE_VERBOSE_VALUES\020\002*:\n\014PowerOffMode\022\024" +
+      "\n\020URGENT_POWER_OFF\020\000\022\024\n\020NORMAL_POWER_OFF" +
+      "\020\001**\n\005Reset\022\023\n\017DO_NOT_RESET_ME\020\000\022\014\n\010RESE" +
+      "T_ME\020\001*\205\001\n\rFunctionality\022\031\n\025MINIMUM_FUNC" +
+      "TIONALITY\020\000\022\026\n\022FULL_FUNCTIONALITY\020\001\022A\n=D" +
+      "ISABLE_PHONE_FROM_BOTH_TRANSMITTING_AND_" +
+      "RECEIVING_RF_SIGNALS\020\002*\326\001\n\021ConnectResult" +
+      "Code\022%\n!CONNECT_RESULT_CODE_ONLY_RETURNE",
+      "D\020\000\022*\n&CONNECT_TEXT_RESULT_CODE_ONLY_RET" +
+      "URNED\020\001\022%\n!TONE_ENABLED_BUSY_SIGNAL_DISA" +
+      "BLED\020\002\022%\n!TONE_DISABLED_BUSY_SIGNAL_ENAB" +
+      "LED\020\003\022 \n\034TONE_AND_BUSY_SIGNAL_ENABLED\020\004*" +
+      "P\n\023InformationResponse\022\034\n\030SHORT_RESULT_C" +
+      "ODE_FORMAT\020\000\022\033\n\027LONG_RESULT_CODE_FORMAT\020" +
+      "\001*_\n\nResultCode\022\035\n\031TA_TRANSMINTS_RESULT_" +
+      "CODE\020\000\0222\n.RESULT_CODE_ARE_SUPPRESSED_AND" +
+      "_NOT_TRANSMITTED\020\001*(\n\013TAToDefault\022\031\n\025SET" +
+      "_ALL_TA_TO_DEFAULT\020\000*#\n\rProfileNumber\022\022\n",
+      "\016PROFILE_NUMBER\020\000*3\n\024ResetToProfileNumbe" +
+      "r\022\033\n\027RESET_TO_PROFILE_NUMBER\020\000*\335\002\n!Seria" +
+      "lInterfaceControlMessageType\022\031\n\025SET_DCD_" +
+      "FUNCTION_MODE\020\000\022\031\n\025SET_DTR_FUNCTION_MODE" +
+      "\020\001\022\'\n#SET_TE_TA_CONTROL_CHARACTER_FRAMIN" +
+      "G\020\002\022%\n!SET_TE_TA_LOCAL_DATA_FLOW_CONTROL" +
+      "\020\003\022,\n(SET_TE_TA_LOCAL_DATA_RATE_REPORTIN" +
+      "G_MODE\020\004\022\036\n\032SET_TE_TA_FIXED_LOCAL_RATE\020\005" +
+      "\022\027\n\023MULTIPLEXER_CONTROL\020\006\022 \n\034CONFIGURE_D" +
+      "UAL_UART_FUNCTION\020\007\022)\n%CONFIGURE_PARAMET",
+      "ERS_OF_THE_DUAL_UART\020\010*N\n\010DCEByDTE\022\023\n\017DC" +
+      "E_BY_DTE_NONE\020\000\022\027\n\023DCE_BY_DTE_XON_XOFF\020\001" +
+      "\022\024\n\020RTS_FLOW_CONTROL\020\002*N\n\010DTEByDCE\022\023\n\017DT" +
+      "E_BY_DCE_NONE\020\000\022\027\n\023DTE_BY_DCE_XON_XOFF\020\001" +
+      "\022\024\n\020CTS_FLOW_CONTROL\020\002*{\n\016DualUARTParity" +
+      "\022\031\n\025DUAL_UART_PARITY_NONE\020\000\022\030\n\024DUAL_UART" +
+      "_PARITY_ODD\020\001\022\031\n\025DUAL_UART_PARITY_EVEN\020\002" +
+      "\022\031\n\025DUAL_UART_PARITY_MARK\020\003*:\n\010StopBits\022" +
+      "\016\n\nSTOP_BIT_1\020\001\022\016\n\nSTOP_BIT_2\020\002\022\016\n\nSTOP_" +
+      "BIT_3\020\003*N\n\010DataBits\022\017\n\013DATA_BITS_5\020\001\022\017\n\013",
+      "DATA_BITS_6\020\002\022\017\n\013DATA_BITS_7\020\003\022\017\n\013DATA_B" +
+      "ITS_8\020\004*E\n\020TransmissionRate\022\034\n\030UNKNOW_TR" +
+      "ANSMISSION_RATE\020\000\022\023\n\017RATE_115200_BPS\020\005*4" +
+      "\n MultiplexerTransparencyMechanism\022\020\n\014BA" +
+      "SIC_OPTION\020\000*5\n\031MultiplexerControlChanne" +
+      "l\022\030\n\024UIH_FRAMES_USED_ONLY\020\000*\371\001\n\004Rate\022\n\n\006" +
+      "RATE_0\020\000\022\013\n\007RATE_75\020K\022\r\n\010RATE_150\020\226\001\022\r\n\010" +
+      "RATE_300\020\254\002\022\r\n\010RATE_600\020\330\004\022\016\n\tRATE_1200\020" +
+      "\260\t\022\017\n\nREATE_2400\020\340\022\022\016\n\tRATE_4800\020\300%\022\016\n\tR" +
+      "ATE_9600\020\200K\022\017\n\nRATE_14400\020\240\013\022\020\n\nRATE_192",
+      "00\020\200\226\001\022\020\n\nRATE_28800\020\200\341\001\022\020\n\nRATE_38400\020\200" +
+      "\254\002\022\020\n\nRATE_57600\020\200\302\003\022\021\n\013RATE_115200\020\200\204\007*" +
+      "0\n\006Parity\022\007\n\003ODD\020\000\022\010\n\004EVEN\020\001\022\010\n\004MARK\020\002\022\t" +
+      "\n\005SPACE\020\003*\322\001\n\rFramingFormat\022\031\n\025UNKNOW_FR" +
+      "AMING_FORMAT\020\000\022\032\n\026DATA_8_PARITY_0_STOP_2" +
+      "\020\001\022\032\n\026DATA_8_PARITY_1_STOP_1\020\002\022\032\n\026DATA_8" +
+      "_PARITY_0_STOP_1\020\003\022\032\n\026DATA_7_PARITY_0_ST" +
+      "OP_2\020\004\022\032\n\026DATA_7_PARITY_1_STOP_1\020\005\022\032\n\026DA" +
+      "TA_7_PARITY_0_STOP_1\020\006*\237\001\n\tDTRStatus\022\034\n\030" +
+      "TA_IGNORES_STATUS_ON_DTR\020\000\022:\n6CHANGE_TO_",
+      "CAOMMAND_MODE_WHILE_REMAINING_CONNECTED_" +
+      "CALL\020\001\0228\n4DISCONNECT_DATA_CALL_AND_THEN_" +
+      "CHANGE_TO_COMMAND_MODE\020\002*_\n\rDCDLineStatu" +
+      "s\022\031\n\025DCD_LINE_IS_ALWAYS_ON\020\000\0223\n/DCD_LINE" +
+      "_IS_ON_ONLY_IN_PRESENCE_OF_DATA_CARRIER\020" +
+      "\001*\261\005\n\030StatusControlMessageType\022\031\n\025EXTEND" +
+      "ED_ERROR_REPORT\020\000\022$\n MOBILE_EQUIPMENT_AC" +
+      "TIVITY_STATUS\020\001\022\036\n\032INDICATE_RI_WHEN_USIN" +
+      "G_URC\020\002\022(\n$SHOW_STATE_OF_MOBILE_ORIGINAT" +
+      "ED_CELL\020\003\022.\n*REFUSE_TO_RECEIVE_SMS_INCOM",
+      "ING_CALL_OR_NOT\020\004\022.\n*ENABLE_OR_DISABLE_I" +
+      "NITIAL_URC_PRESENTATION\020\005\0229\n5ENABLE_OR_D" +
+      "ISABLE_PROPRIETARY_UNSOLICITED_INDICATIO" +
+      "NS\020\006\022!\n\035QUERY_STATE_OF_INITIALIZATION\020\007\022" +
+      "\034\n\030QUERY_GSM_NETWORK_STATUS\020\010\022 \n\034NETWORK" +
+      "_TIME_SYNCHRONIZATION\020\t\022+\n\'OBTAIN_LATEST" +
+      "_NETWORK_TIME_SYNCHRONIZED\020\n\0224\n0NETWORK_" +
+      "TIME_SYNCHRONIZATION_AND_UPDATE_RTC_TIME" +
+      "\020\013\022\'\n#NETWORK_TIME_SYNCHRONIZATION_REPOR" +
+      "T\020\014\022\'\n#SWITCH_ON_OR_OFF_DETECTING_SIM_CA",
+      "RD\020\r\022!\n\035SIM_INSERTED_STATUS_REPORTING\020\016\022" +
+      "4\n0CSC_CALL_OR_GPRS_PDP_CONTEXT_TERMINAL" +
+      "_INDICATION\020\017*e\n\016ConnectionType\022\037\n\033CIRCU" +
+      "IT_SWITCHED_VOICE_CALL\020\000\022\036\n\032CIRCUIT_SWIT" +
+      "CHED_DATA_CALL\020\001\022\022\n\016PPP_CONNECTION\020\002*~\n\023" +
+      "SIMCardInsertStatus\0222\n.LOW_LEVEL_OF_PIN_" +
+      "INDICATES_SIM_CARD_IS_PRESENT\020\000\0223\n/HIGH_" +
+      "LEVEL_OF_PIN_INDICATES_SIM_CARD_IS_PRESE" +
+      "NT\020\001*x\n\023SIMCardDetectionPIN\0224\n0CONFIGURE" +
+      "_SIM_PRESENCE_AS_SIM_CARD_DETECTION_PIN\020",
+      "\000\022+\n\'CONFIGURE_DTR_AS_SIM_CARD_DETECTION" +
+      "_PIN\020\001*\330\001\n\034TimeZoneChangeEventReporting\022" +
+      ",\n(DISABLE_TIME_ZONE_CHANGE_EVENT_REPORT" +
+      "ING\020\000\022F\nBENABLE_TIME_ZONE_CHANGE_EVENT_R" +
+      "EPORTING_BY_UNSOLICITED_RESULT_CODE\020\001\022B\n" +
+      ">ENABLE_EXTENDED_TIME_ZONE_REPORTING_BY_" +
+      "UNSOLICITED_RESULT_CODE\020\002*\305\002\n\007RTCTime\022.\n" +
+      "*DISABLE_AUTOMATIC_UPDATE_RTC_TIME_VIA_N" +
+      "ITZ\020\000\022I\nEUPDATE_NETWORK_SYNCHRONIZED_TIM" +
+      "E_TO_RTC_AND_SAVE_TIME_ZONE_INTO_NVRAM\020\001",
+      "\022]\nYUPDATE_GTM_TIME_WITH_TIME_ZONE_TO_RT" +
+      "C_SAVE_TIME_ZONE_TO_NVRAM_IGNORE_DAYLIGH" +
+      "T_SAVING_TIME\020\002\022J\nFUPDATE_LOCALIZED_TIME" +
+      "_AND_TIME_ZONE_TO_RTC_AND_SAVE_TIME_ZONE" +
+      "_TO_NVRAM\020\003\022\024\n\020SAVE_WITH_MODE_2\020\004*\221\001\n\020GS" +
+      "MNetworkStatus\022\030\n\024WORK_IN_NORMAL_STATE\020\000" +
+      "\022\025\n\021NO_AVAILABLE_CELL\020\001\022\"\n\036ONLY_LIMITED_" +
+      "SERVICE_AVAILABLE\020\002\022(\n$NOT_READY_TO_RETR" +
+      "IEVE_NETWORK_STATUS\020\003*\237\001\n\025StateOfInitial" +
+      "ization\022\025\n\021NO_INITIALIZATION\020\000\022\037\n\033READY_",
+      "TO_EXECUTE_AT_COMMAND\020\001\022)\n%PHONEBOOK_HAS" +
+      "_FINISHED_INITIALIZATION\020\002\022#\n\037SMS_HAS_FI" +
+      "NISHED_INITIALIZATION\020\003*S\n!ProprietaryUn" +
+      "solicitedIndications\022\017\n\013PUI_DISABLE\020\000\022\016\n" +
+      "\nPUI_ENABLE\020\001\022\r\n\tPUI_QUERY\020\002*\'\n\006Status\022\016" +
+      "\n\nSTATUS_OFF\020\000\022\r\n\tSTATUS_ON\020\001*\\\n\003Pas\022\r\n\t" +
+      "PAS_READY\020\000\022\016\n\nPAS_UNKNOW\020\001\022\017\n\013PAS_RINGI" +
+      "NG\020\002\022%\n!PAS_CALL_IN_PROGRESS_OR_CALL_HOL" +
+      "D\020\003*\347\002\n\025SIMRelatedMessageType\022\020\n\014REQUEST" +
+      "_IMSI\020\000\022\021\n\rFACILITY_LOCK\020\001\022\r\n\tENTER_PIN\020",
+      "\002\022\023\n\017CHANGE_PASSWORD\020\003\022\031\n\025RESTRICTED_SIM" +
+      "_ACCESS\020\004\022\026\n\022GENERIC_SIM_ACCESS\020\005\022\034\n\030CHA" +
+      "NGE_PS_SUPER_PASSWORD\020\006\022\r\n\tSHOW_CCID\020\007\022\023" +
+      "\n\017SHOW_CCID_QCCID\020\010\022!\n\035GET_SIM_CARD_GROU" +
+      "P_IDENTIFIER\020\t\022%\n!SELECT_SIM_CARD_OPERAT" +
+      "ING_VOLTAGE\020\n\022\035\n\031GET_SERVICE_PROVIDER_NA" +
+      "ME\020\013\022\'\n#TIME_REMAINING_TO_INPUT_SIM_PIN_" +
+      "PUK\020\014*{\n\013VoltageMode\022&\n\"RECOGNIZE_1_8_V_" +
+      "AND_3_0_V_SIM_CARD\020\000\022!\n\035RECOGNIZE_1_8_V_" +
+      "SIM_CARD_ONLY\020\001\022!\n\035RECOGNIZE_3_0_V_SIM_C",
+      "ARD_ONLY\020\002*x\n\nCommandSIM\022\020\n\013READ_BINATY\020" +
+      "\260\001\022\020\n\013READ_RECORD\020\262\001\022\021\n\014GET_RESPONSE\020\300\001\022" +
+      "\022\n\rUPDATE_BINATY\020\326\001\022\022\n\rUPDATE_RECORD\020\334\001\022" +
+      "\013\n\006STATUS\020\362\001*\215\001\n\005Class\022\t\n\005VOICE\020\001\022\010\n\004DAT" +
+      "A\020\002\022\007\n\003FAX\020\004\022\034\n\030ALL_TELEPHONY_EXCEPT_SMS" +
+      "\020\007\022\031\n\025SHORT_MESSAGE_SERVICE\020\010\022\025\n\021DATA_CI" +
+      "RCUIT_SYNC\020\020\022\026\n\022DATA_CIRCUIT_ASYNC\020 *2\n\010" +
+      "LockMode\022\n\n\006UNLOCK\020\000\022\010\n\004LOCK\020\001\022\020\n\014QUERY_" +
+      "STATUS\020\002*\265\002\n\031NetworkServiceMessageType\022\026" +
+      "\n\022OPERATOR_SELECTION\020\000\022\030\n\024NETWORK_REGIST",
+      "RATION\020\001\022\031\n\025SIGNAL_QUALITY_REPORT\020\002\022\033\n\027P" +
+      "REFERRED_OPERATOR_LIST\020\003\022\027\n\023READ_OPEARAT" +
+      "R_NAMES\020\004\022%\n!GET_AND_SET_MOBILE_OPERATIO" +
+      "N_BAND\020\005\0225\n1NETWORK_SERVICE_SWITCH_ON_OR" +
+      "_OFF_ENGINEERING_MODE\020\006\022\037\n\033SCAN_POWER_OF" +
+      "_GSM_FREQUENCY\020\007\022\026\n\022LOCK_GSM_FREQUENCY\020\010" +
+      "*x\n\010Band1900\022\034\n\030NOT_CELL_ID_OF_1900_BAND" +
+      "\020\000\022\030\n\024CELL_ID_OF_1900_BAND\020\001\0224\n0AUTO_DIS" +
+      "TINGUISH_WHETHER_IS_CELL_ID_OF_1900_BAND" +
+      "\020\002*\231\001\n\021LockFrequencyMode\022\032\n\026DISABLE_LOCK",
+      "_FREQUENCY\020\000\022\031\n\025ENABLE_LOCK_FREQUENCY\020\001\022" +
+      "M\nIENABLE_LOCK_FREQUENCY_AND_AUTO_SWITCH" +
+      "_TO_SAVED_FREQUENCY_AFTER_POWERED_ON\020\002*\276" +
+      "\002\n\023EngineeringModeDump\022)\n%ONLY_DISPLAY_S" +
+      "ERVING_CELL_INFORMATION\020\000\022F\nBDISPLAY_SER" +
+      "VING_CELL_INFORMATION_1_6_NEIGHBORING_CE" +
+      "LLS_INFORMATION\020\001\022J\nFDISPLAY_SERVING_CEL" +
+      "L_INFORMATION_AND_LIST_OF_SERVING_CELL_C" +
+      "ARRIER_LIST\020\002\022%\n!LIST_OF_SERVING_CELL_CA" +
+      "RRIER_LIST\020\003\022A\n=LIST_OF_SERVING_CELL_CAR",
+      "RIER_LIST_AND_BA_MEASURED_RESULT_LIST\020\004*" +
+      "\246\002\n\031NetworkRegistrationStatus\022K\nGNOT_REG" +
+      "ISTRED_ME_IS_NOT_CURRENTLY_SEARCHING_NEW" +
+      "_OPERATOR_TO_REGISTER_TO\020\000\022\032\n\026REGISTRED_" +
+      "HOME_NETWORK\020\001\022G\nCNOT_REGISTRED_ME_IS_CU" +
+      "RRENTLY_SEARCHING_NEW_OPERATOR_TO_REGIST" +
+      "ER_TO\020\002\022\027\n\023REGISTRATION_DENIED\020\003\022&\n\"UNKN" +
+      "OW_NETWORK_REGISTRATION_STATUS\020\004\022\026\n\022REGI" +
+      "STERED_ROAMING\020\005*\337\001\n\027NetworkRegistration" +
+      "Mode\0228\n4DISABLE_NETWORK_REGISTRATION_UNS",
+      "OLICITED_RESULT_CODE\020\000\0227\n3ENABLE_NETWORK" +
+      "_REGISTRATION_UNSOLICITED_RESULT_CODE\020\001\022" +
+      "Q\nMENABLE_NETWORK_REGISTRATION_UNSOLICIT" +
+      "ED_RESULT_CODE_WITH_LOCATION_INFORMATION" +
+      "\020\002*\202\001\n\016OperatorFormat\022\034\n\030LONG_FORMAT_ALP" +
+      "HANUMERIC\020\000\022\035\n\031SHORT_FORMAT_ALPHANUMERIC" +
+      "\020\001\0223\n/NUMERIC_GSM_LOCATION_AREA_IDENTIFI" +
+      "CATION_NUMBER\020\002*\235\001\n\014OperatorMode\022\022\n\016AUTO" +
+      "MATIC_MODE\020\000\022\035\n\031MANUAL_OPERATOR_SELECTIO" +
+      "N\020\001\022\"\n\036MANUAL_DEREGISTER_FROM_NETWORK\020\002\022",
+      "6\n2SET_ONLY_FORMAT_NOT_SHOWN_IN_READ_COM" +
+      "MAND_RESPONSE\020\003*\371\006\n\026CallRelatedMessageTy" +
+      "pe\022\033\n\027ANSWER_AN_INCOMING_CALL\020\000\022+\n\'MOBIL" +
+      "E_ORIGINATED_CALL_TO_DIAL_A_NUMBER\020\001\022\"\n\036" +
+      "DISCONNECT_EXISTING_CONNECTION\020\002\022)\n%SWIT" +
+      "CH_FROM_DATA_MODE_TO_COMMAND_MODE\020\003\022)\n%S" +
+      "WITCH_FROM_COMMAND_MODE_TO_DATA_MODE\020\004\022\030" +
+      "\n\024SELECT_PULSE_DIALING\020\005\0229\n5SET_NUMBER_O" +
+      "F_RINGS_BEFORE_AUTOMATICLY_ANSWERING_CAL" +
+      "L\020\006\022\"\n\036SET_PAUSE_BEFORE_BLIND_DIALING\020\007\022",
+      ";\n7SET_NUMBER_OF_SECONDS_TO_WAIT_FOR_CON" +
+      "NECTION_COMPLETION\020\010\0229\n5SET_NUMBER_OF_SE" +
+      "CONDS_TO_WAIT_FOR_COMMA_DIAL_MODIFIER\020\t\022" +
+      "A\n=SET_DISCONNECT_DELAY_AFTER_INDICATING" +
+      "_ABSENCE_OF_DATA_CARRIER\020\n\022\027\n\023SELECT_TON" +
+      "E_DIALING\020\013\022\032\n\026SELECT_TYPE_OF_ADDRESS\020\014\022" +
+      "\034\n\030LIST_CURRENT_CALLS_OF_ME\020\r\022\035\n\031SERVICE" +
+      "_REPORTING_CONTROL\020\016\0229\n5SET_CELLULAR_RES" +
+      "ULT_CODE_FOR_INCOMING_CALL_INDICATION\020\017\022" +
+      "(\n$SELECT_RADIO_LINK_PROTOCOL_PARAMETER\020",
+      "\020\022\033\n\027SINGLE_NUMBERING_SCHEME\020\021\022$\n CONFIG" +
+      "URE_ALTERNATING_MODE_CALLS\020\022\022\034\n\030PREFEREN" +
+      "CE_SPEACH_CODING\020\023\022\036\n\032SPEECH_CHANNEL_TYP" +
+      "E_REPORT\020\024\022\017\n\013DISABLE_ATH\020\025*\243\003\n\nSpeechMo" +
+      "de\022\031\n\025SPEECH_AUTOMATIC_MODE\020\000\022\006\n\002FR\020\001\022\006\n" +
+      "\002HR\020\002\022\007\n\003EFR\020\003\022\n\n\006AMR_FR\020\004\022\n\n\006AMR_HR\020\005\022\032" +
+      "\n\026FR_AND_EFR_FR_PRIORITY\020\006\022\033\n\027EFR_AND_FR" +
+      "_EFR_PRIORITY\020\007\022\033\n\027EFR_AND_HR_EFR_PRIORI" +
+      "TY\020\010\022\037\n\033EFR_AND_AMR_FR_EFR_PRIORITY\020\t\022!\n" +
+      "\035AMR_FR_AND_FR_AMR_FR_PRIORITY\020\n\022!\n\035AMR_",
+      "FR_AND_HR_AMR_FR_PRIORITY\020\013\022\"\n\036AMR_FR_AN" +
+      "D_EFR_AMR_FR_PRIORITY\020\014\022!\n\035AMR_HR_AND_FR" +
+      "_AMR_HR_PRIORITY\020\r\022!\n\035AMR_HR_AND_HR_AMR_" +
+      "HR_PRIORITY\020\016\022\"\n\036AMR_HR_AND_EFR_AMR_HR_P" +
+      "RIORITY\020\017*u\n\017AlternatingMode\022\017\n\013SINGLE_M" +
+      "ODE\020\000\022\031\n\025ALTERNATING_VOICE_FAX\020\001\022\032\n\026ALTE" +
+      "RNATING_VOICE_DATA\020\002\022\032\n\026VOICE_FOLLOWED_B" +
+      "Y_DATA\020\003*\231\002\n\nSchemeMode\022\020\n\014SCHEME_VOICE\020" +
+      "\000\022,\n(SCHEME_ALTERNATING_VOICE_FAX_VOICE_" +
+      "FIRST\020\001\022\016\n\nSCHEME_FAX\020\002\022-\n)SCHEME_ALTERN",
+      "ATING_VOICE_DATA_VOICE_FIRST\020\003\022\017\n\013SCHEME" +
+      "_DATA\020\004\022*\n&SCHEME_ALTERNATING_VOICE_FAX_" +
+      "FAX_FIRST\020\005\022,\n(SCHEME_ALTERNATING_VOICE_" +
+      "DATA_DATA_FIRST\020\006\022!\n\035SCHEME_VOICE_FOLLOW" +
+      "ED_BY_DATA\020\007*H\n\010CallMode\022\016\n\nVOICE_CALL\020\000" +
+      "\022\r\n\tDATA_CALL\020\001\022\014\n\010FAX_CALL\020\002\022\017\n\013UNKNOW_" +
+      "CALL\020\t*A\n\007CallDir\022\032\n\026MOBILE_ORIGINATED_C" +
+      "ALL\020\000\022\032\n\026MOBILE_TERMINATED_CALL\020\001*u\n\tCal" +
+      "lState\022\017\n\013ACTIVE_CALL\020\000\022\r\n\tHELD_CALL\020\001\022\020" +
+      "\n\014DIALING_CALL\020\002\022\021\n\rALERTING_CALL\020\003\022\021\n\rI",
+      "NCOMING_CALL\020\004\022\020\n\014WAITING_CALL\020\005*L\n\013Addr" +
+      "essType\022\020\n\013UNKNOW_TYPE\020\201\001\022\027\n\022INTERNATION" +
+      "AL_TYPE\020\221\001\022\022\n\rNATIONAL_TYPE\020\241\001*8\n\nDiscon" +
+      "nect\022*\n&DISCONECT_FROM_LINE_AND_TERMINAT" +
+      "E_CALL\020\000*:\n\010DataMode\022.\n*CALL_SWITCH_FROM" +
+      "_COMMAND_MODE_TO_DATA_MODE\020\000*\377\004\n\016SMSMess" +
+      "ageType\022\032\n\026SELECT_MESSAGE_SERVICE\020\000\022\035\n\031S" +
+      "ELECT_SMS_MESSAGE_FORMAT\020\001\022\036\n\032SMS_SERVIC" +
+      "E_CENTER_ADDRESS\020\002\022!\n\035PREFERRED_SMS_MESS" +
+      "AGE_STORAGE\020\003\022\026\n\022DELETE_SMS_MESSAGE\020\004\022+\n",
+      "\'LIST_SMS_MESSAGE_FROM_PREFERRED_STORAGE" +
+      "\020\005\022\024\n\020READ_SMS_MESSAGE\020\006\022\024\n\020SEND_SMS_MES" +
+      "SAGE\020\007\022\037\n\033WRITE_SMS_MESSAGE_TO_MEMORY\020\010\022" +
+      "!\n\035SEND_SMS_MESSAGE_FROM_STORAGE\020\t\022\024\n\020SE" +
+      "ND_SMS_COMMAND\020\n\022\036\n\032NEW_SMS_MESSAGE_INDI" +
+      "CATION\020\013\022\030\n\024RESTORE_SMS_SETTINGS\020\014\022\025\n\021SA" +
+      "VE_SMS_SETTINGS\020\r\022%\n!SELECT_CELL_BROADCA" +
+      "ST_SMS_MESSAGE\020\016\022!\n\035SHOW_SMS_TEXT_MODE_P" +
+      "ARAMETERS\020\017\022 \n\034SET_SMS_TEXT_MODE_PARAMET" +
+      "ERS\020\020\0226\n2STRORE_CLASS0_SMS_TO_SIM_WHEN_R",
+      "ECEIVING_CLASS0_SMS\020\021\022\022\n\016DELETE_ALL_SMS\020" +
+      "\022\022\033\n\027CONFIGURE_SMS_CODE_MODE\020\023*\311\001\n\010CodeM" +
+      "ode\022\"\n\036CODE_MODE_ACCORDING_WITH_NOKIA\020\000\022" +
+      "$\n CODE_MODE_ACCORDING_WITH_SIEMENS\020\001\022s\n" +
+      "oCODE_MODE_ACCORDING_WITH_NOKIA_AND_HEXA" +
+      "DECIMAL_0x11_TREATED_AS_UNDERSCORE_AND_H" +
+      "EXADECIMAL_0x02_TREATED_AS_DOLAR\020\002*<\n\nBu" +
+      "fferMode\022\026\n\022COMMAND_IS_FLUSHED\020\000\022\026\n\022COMM" +
+      "AND_IS_CLEANED\020\001*\245\001\n\014StoreSMSRule\022/\n+NO_" +
+      "SMS_DELIVER_INDICATIONS_ARE_ROUTED_TO_TE",
+      "\020\000\022!\n\035SMS_DELIVER_STORED_INTO_ME_TA\020\001\022(\n" +
+      "$SMS_DELIVER_IS_ROUTED_DIRECTLY_TO_TE\020\002\022" +
+      "\027\n\023CLASS_3_SMS_DELIVER\020\003*q\n\014StoreCBMRule" +
+      "\022\'\n#NO_CMB_INCICATIONS_ARE_ROUTED_TO_TE\020" +
+      "\000\022&\n\"NEW_CMBS_ARE_ROUTED_DIRECTLY_TO_TE\020" +
+      "\001\022\020\n\014CLASS_3_CBMS\020\002*\213\002\n\021MessageIndicatio" +
+      "n\022)\n%BUFFER_UNSOLICITED_RESULT_CODES_IN_" +
+      "TA\020\000\022O\nKDISCART_INDICATIONS_AND_REJECT_N" +
+      "EW_RECEIVED_MESSAGE_UNSOLICITED_RESULT_C" +
+      "ODE\020\001\022E\nABUFFER_UNSOLICITED_RESULT_CODES",
+      "_IN_TA_WHEN_TA_TE_LINK_IS_RESERVED\020\002\0223\n/" +
+      "FORWARD_UNSOLICITED_RESULT_CODES_DIRECTL" +
+      "Y_TO_TE\020\003*\221\001\n\rMessageStatus\022\034\n\030RECEIVED_" +
+      "UNREAD_MESSAGES\020\000\022\032\n\026RECEIVED_READ_MESSA" +
+      "GES\020\001\022\032\n\026STORED_UNSENT_MESSAGES\020\002\022\030\n\024STO" +
+      "RED_SENT_MESSAGES\020\003\022\020\n\014ALL_MESSAGES\020\004*G\n" +
+      "\013MessageMode\022\n\n\006NORMAL\020\000\022,\n(NO_CHANGE_ST" +
+      "ATUS_OF_SPECIFIED_SMS_RECORD\020\001*\276\002\n\007DelFl" +
+      "ag\022%\n!DELETE_MESSAGE_SPECIFIED_IN_INDEX\020" +
+      "\000\022/\n+DELETE_ALL_READ_MESSAGES_FROM_MEM_1",
+      "_STORAGE\020\001\022S\nODELETE_ALL_READ_MESSAGES_F" +
+      "ROM_MEM_1_STORAGE_AND_SENT_MOBILE_ORIGIN" +
+      "ATED_MESSAGES\020\002\022Z\nVDELETE_ALL_READ_MESSA" +
+      "GES_FROM_MEM_1_STORAGE_SENT_AND_UNSENT_M" +
+      "OBILE_ORIGINATED_MESSAGES\020\003\022*\n&DELETE_AL" +
+      "L_MESSAGES_FROM_MEM_1_STORAGE\020\004*,\n\rMessa" +
+      "geFormat\022\014\n\010PDU_MODE\020\000\022\r\n\tTEXT_MODE\020\001*<\n" +
+      "\016MessageService\022\027\n\023GSM_03_40_AND_03_41\020\000" +
+      "\022\021\n\014SMS_PDU_MODE\020\200\001*\255\001\n\024PhonebookMessage" +
+      "Type\022#\n\037SELECT_PHONEBOOK_MEMORY_STORAGE\020",
+      "\000\022\031\n\025WRITE_PHONEBOOK_ENTRY\020\001\022\"\n\036READ_CUR" +
+      "RENT_PHONEBOOK_ENTRIES\020\002\022\032\n\026FIND_PHONEBO" +
+      "OK_ENTRIES\020\003\022\025\n\021SUBSCRIBER_NUMBER\020\004*E\n\nN" +
+      "umberType\022\027\n\022UNKNOW_NUMBER_TYPE\020\201\001\022\036\n\031IN" +
+      "TERNATIONAL_NUMBER_TYPE\020\221\001*\224\003\n\017GPRSMessa" +
+      "geType\022 \n\034ATTACH_DEATTACH_GPRS_SERVICE\020\000" +
+      "\022\026\n\022DEFINE_PDP_CONTEXT\020\001\022\031\n\025QOS_PROFILE_" +
+      "REQUESTED\020\002\022\"\n\036QOS_PROFILE_MINIMUM_ACCEP" +
+      "TABLE\020\003\022&\n\"PDP_CONTEXT_ACTIVATE_OR_DEACT" +
+      "IVATE\020\004\022\024\n\020ENTER_DATA_STATE\020\005\022\024\n\020SHOW_PD",
+      "P_ADDRESS\020\006\022\035\n\031GPRS_MOBILE_STATION_CLASS" +
+      "\020\007\022,\n(CONTROL_UNSOLICITED_GPRS_EVENT_REP" +
+      "ORTING\020\010\022\037\n\033NETWORK_REGISTRATION_STATUS\020" +
+      "\t\022%\n!SELECT_SERVICE_FOR_MO_SMS_MESSAGE\020\n" +
+      "\022\037\n\033CHANGE_GPRS_MULTISLOT_CLASS\020\013*\\\n\013Ser" +
+      "viceType\022\010\n\004GPRS\020\000\022\022\n\016CIRCUIT_SWITCH\020\001\022\021" +
+      "\n\rGPRS_PREFERRD\020\002\022\034\n\030CIRCUIT_SWITCH_PREF" +
+      "ERRED\020\003*\201\001\n\022EventReportingMode\022)\n%BUFFER" +
+      "_UNSOLICITED_RESULT_CODES_IN_MT\020\000\022@\n<DIS" +
+      "CART_UNSOLICITED_RESULT_CODES_WHEN_MT_TE",
+      "_LINK_IS_RESERVED\020\001*\241\n\n\020TCPIPMessageType" +
+      "\022 \n\034SET_UP_TCP_OR_UDP_CONNECTION\020\000\022+\n\'SE" +
+      "ND_DATA_THROUGH_TCP_OR_UDP_CONNECTION\020\001\022" +
+      "\037\n\033CLOSE_TCP_OR_UDP_CONNECTION\020\002\022#\n\037DEAC" +
+      "TIVATE_GPRS_CSD_PDP_CONTEXT\020\003\022\022\n\016SET_LOC" +
+      "AL_PORT\020\004\022.\n*START_TCPIP_TASK_APN_USERNA" +
+      "ME_AND_PASSWORD\020\005\022\033\n\027ACTIVE_GPRS_CSD_CON" +
+      "TEXT\020\006\022\030\n\024GET_LOCAL_IP_ADDRESS\020\007\022#\n\037QUER" +
+      "Y_CURRENT_CONNECTION_STATUS\020\010\022-\n)QUERY_C" +
+      "ONNECTION_STATUS_OF_CURRENT_ACCESS\020\t\022\037\n\033",
+      "QUERY_CURRENT_SERVER_STATUS\020\n\022 \n\034CONFIGU" +
+      "RE_DOMAIN_NAME_SERVER\020\013\022)\n%QUERY_IP_ADDR" +
+      "ESS_OF_GIVEN_DOMAIN_NAME\020\014\0221\n-CONNECT_WI" +
+      "TH_IP_ADDRESS_OR_DOMAIN_NAME_SERVER\020\r\022(\n" +
+      "$ADD_AN_IP_HEADER_WHEN_RECEIVING_DATE\020\016\022" +
+      "\032\n\026SET_AUTO_SENDING_TIMER\020\017\022 \n\034SET_PROMP" +
+      "T_WHEN_SENDING_DATA\020\020\022\027\n\023CONFIGURE_AS_SE" +
+      "RVER\020\021\022$\n SELECT_CSD_OR_GPRS_AS_THE_BEAR" +
+      "ER\020\022\022\025\n\021CHOOSE_CONNECTION\020\023\0223\n/SET_WHETH" +
+      "ER_OR_NOT_TO_DISPLAY_ADDRESS_OF_SENDER\020\024",
+      "\022\"\n\036SAVE_TCPIP_APPLICATION_CONTEXT\020\025\022\036\n\032" +
+      "SELECT_TCPIP_TRANSFER_MODE\020\026\022\'\n#CONFIGUR" +
+      "E_TRANSPARENT_TRANSFER_MODE\020\027\0220\n,CONTROL" +
+      "_WHETHER_OR_NOT_TO_SHOW_PROTOCOL_TYPE\020\030\022" +
+      "!\n\035ENABLE_MULTIPLE_TCPIP_SESSION\020\031\0226\n2CO" +
+      "NTROL_WHETHER_OR_NOT_TO_DISPLAY_LOCAL_IP" +
+      "_ADDRESS\020\032\022*\n&SELECT_A_CONTEXT_AS_FOREGR" +
+      "OUND_CONTEXT\020\033\022*\n&QUERY_THE_DATA_INFORMA" +
+      "TION_FOR_SENDING\020\034\022,\n(SET_METHOD_TO_HAND" +
+      "LE_RECEIVED_TCPIP_DATA\020\035\022$\n RETRIEVE_THE",
+      "_RECEIVED_TCPIP_DATA\020\036\0221\n-CONTRO_WHETHER" +
+      "_OR_NOT_TO_ECHO_DATA_FOR_QISEND\020\037\022\030\n\024PIN" +
+      "G_A_REMOTE_SERVER\020 \022\"\n\036SYNCHRONIZE_LOCAL" +
+      "_TIME_VIA_NTP\020!*\230\002\n\025SynchronizationResul" +
+      "t\022\"\n\036SUCCESS_SYNCHRONIZE_LOCAL_TIME\020\000\022<\n" +
+      "8FAILED_TO_SYNCHRONIZE_LOCAL_TIME_BECAUS" +
+      "E_OF_UNKNOW_RESON\020\001\022/\n+FAILED_TO_RECEIVE" +
+      "_RESPONSE_FROM_TIME_SERVER\020\002\022\033\n\027TCPIP_ST" +
+      "ACK_IS_BUSY_NOW\020\003\022\033\n\027DO_NOT_FIND_TIME_SE" +
+      "RVER\020\004\0222\n.FAILED_TO_ACTIVATE_PDP_CONTEXT",
+      "_SYNCHRONIZATION\020\005*\201\001\n\013FinalResult\022\032\n\026IT" +
+      "_IS_FINISHED_NORMALY\020\002\022\034\n\030TCP_IP_STACK_I" +
+      "S_BUSY_NOW\020\003\022\024\n\020DO_NOT_FIND_HOST\020\004\022\"\n\036FA" +
+      "ILED_TO_ACTIVATE_PDP_CONTEXT\020\005*R\n\nPingRe" +
+      "sult\022&\n\"RECEIVED_PING_RESPONSE_FROM_SERV" +
+      "ER\020\000\022\034\n\030TIMEOUT_FOR_PING_REQUEST\020\001*f\n\014Se" +
+      "rverClient\022*\n&MODULE_SERVERS_AS_CLINET_O" +
+      "F_CONNECTION\020\001\022*\n&MODULE_SERVERS_AS_CLIE" +
+      "NT_OF_CONNECTION\020\002*\223\001\n\020ReceivedDataMode\022" +
+      ".\n*OUTPUT_RECEIVED_DATA_THROUGH_UART_DIR",
+      "ECTLY\020\000\022\'\n#OUTPUT_NOTIFICATION_STATEMENT" +
+      "_SHORT\020\001\022&\n\"OUTPUT_NOTIFICATION_STATEMEN" +
+      "T_LONG\020\002*\207\001\n\007Channel\022\022\n\016VIRTUAL_UART_1\020\000" +
+      "\022\022\n\016VIRTUAL_UART_2\020\001\022\022\n\016VIRTUAL_UART_3\020\002" +
+      "\022\022\n\016VIRTUAL_UART_4\020\003\022,\n(CONTEXT_IS_NOT_C" +
+      "ONTROLLED_BY_ANY_CHANNEL\020\004*5\n\014TransferMo" +
+      "de\022\017\n\013NORMAL_MODE\020\000\022\024\n\020TRANSPARENT_MODE\020" +
+      "\001*:\n\nConnection\022\025\n\021MS_USED_AS_CLIENT\020\000\022\025" +
+      "\n\021MS_USED_AS_SERVER\020\001*e\n\nBearerType\022*\n&S" +
+      "ET_CSD_AS_BEARER_FOR_TCPIP_CONNECTION\020\000\022",
+      "+\n\'SET_GPRS_AS_BEARER_FOR_TCPIP_CONNECTI" +
+      "ON\020\001*,\n\nServerType\022\016\n\nTCP_SERVER\020\000\022\016\n\nUD" +
+      "P_SERVER\020\001*\242\001\n\nSendPrompt\022\036\n\032NO_PROMPT_A" +
+      "ND_SHOW_SEND_OK\020\000\022 \n\034ECHO_PROMPT_AND_SHO" +
+      "W_SEND_OK\020\001\022\"\n\036NO_PROMPT_AND_NOT_SHOW_SE" +
+      "ND_OK\020\002\022.\n*ECHO_PROMPT_AND_SHOW_SOCKET_I" +
+      "D_AND_SEND_OK\020\003*N\n\005Timer\022%\n!DO_NOT_SET_T" +
+      "IMER_FOR_DATA_SENDING\020\000\022\036\n\032SET_TIMER_FOR" +
+      "_DATA_SENDING\020\001*K\n\010IPHeader\022\030\n\024DO_NOT_AD" +
+      "D_IP_HEADER\020\000\022%\n!ADD_A_HEADER_BEFORE_REC",
+      "EIVED_DATA\020\001*Z\n\014ServerFormat\022\'\n#DOTTED_D" +
+      "ECIMAL_IP_ADDRESS_OF_SERVER\020\000\022!\n\035DOMAIN_" +
+      "NAME_ADDRESS_OF_SERVER\020\001*\362\003\n\037Supplementa" +
+      "ryServiceMessageType\0221\n-CALL_FORWARDING_" +
+      "NUMBER_AND_CONDITIONS_CONTROL\020\000\022\035\n\031CLOSE" +
+      "D_USER_GROUP_CONTROL\020\001\022\030\n\024CALL_WAITING_C" +
+      "ONTROL\020\002\022\034\n\030CALL_HOLD_AND_MULTIPARTY\020\003\022," +
+      "\n(CALLING_LINE_IDENTIFICATION_PRESENTATI" +
+      "ON\020\004\022?\n;CONTROL_WHETHER_OR_NOT_TO_SHOW_N" +
+      "AME_OF_INCOMING_CALL_NUMBER\020\005\022.\n*CONNECT",
+      "ED_LINE_IDENTIFICATION_PRESENTATION\020\006\022#\n" +
+      "\037SHOW_ALPHA_FIELD_IN_COLP_STRING\020\007\022+\n\'UN" +
+      "STRUCTURED_SUPPLEMENTARY_SERVICE_DATA\020\010\022" +
+      "\'\n#SUPPLEMENTARY_SERVICES_NOTIFICATION\020\t" +
+      "\022+\n\'CALLING_LINE_IDENTIFICATION_RESTRICT" +
+      "ION\020\n*\215\002\n\005Code1\022+\n\'UNCONDITIONAL_CALL_FO" +
+      "RWARDING_IS_ACTIVE\020\000\0222\n.SOME_OF_CONDITIO" +
+      "NAL_CALL_FORWARDING_ARE_ACTIVE\020\001\022\033\n\027CALL" +
+      "_HAS_BEEN_FORWARDED\020\002\022\023\n\017CALL_IS_WAITING" +
+      "\020\003\022\024\n\020THIS_IS_CUG_CALL\020\004\022\035\n\031OUTGOING_CAL",
+      "LS_ARE_BARRED\020\005\022\035\n\031INCOMING_CALLS_ARE_BA" +
+      "RRED\020\006\022\035\n\031CLIR_SUPPRESSION_REJECTED\020\007*#\n" +
+      "\005Code2\022\032\n\026THIS_IS_FORWARDED_CALL\020\000*w\n\nSS" +
+      "DControl\022*\n&DISABLE_RESULT_CODE_PRESENTA" +
+      "TION_IN_TA\020\000\022)\n%ENABLE_RESULT_CODE_PRESE" +
+      "NTATION_IN_TA\020\001\022\022\n\016CANCEL_SESSION\020\002*\226\001\n\021" +
+      "CLIRServiceStatus\022\030\n\024CLIR_NOT_PROVISIONE" +
+      "D\020\000\022&\n\"CLIR_PROVISIONED_IN_PERMANENT_MOD" +
+      "E\020\001\022\017\n\013UNKNOW_CLIR\020\002\022.\n*CLIR_TEMORARY_MO" +
+      "DE_PRESENTATION_RESTRICTED\020\003*`\n\027Adjustme",
+      "ntOutgoingCalls\022\032\n\026PRESENTATION_INDICATO" +
+      "R\020\000\022\023\n\017CLIR_INVOCATION\020\001\022\024\n\020CLIR_SUPPRES" +
+      "SION\020\002*G\n\004CLIP\022\030\n\024CLIP_NOT_PROVISIONED\020\000" +
+      "\022\024\n\020CLIP_PROVISIONED\020\001\022\017\n\013UNKNOW_CLIP\020\002*" +
+      "p\n\004Info\022\022\n\016BO_INFORMATION\020\000\022\017\n\013SUPPRESS_" +
+      "OA\020\001\022\035\n\031SUPPRESS_PREFERANTIAL_CUG\020\002\022$\n S" +
+      "UPPRESS_OA_AND_PREFERENTIAL_CUG\020\003*\211\001\n\005Re" +
+      "ads\022\021\n\rUNCONDITIONAL\020\000\022\017\n\013MOBILE_BUSY\020\001\022" +
+      "\014\n\010NO_REPLY\020\002\022\020\n\014NO_REACHABLE\020\003\022\027\n\023ALL_C" +
+      "ALL_FORWARDING\020\004\022#\n\037ALL_CONDITIONAL_CALL",
+      "_FORWARDING\020\005*\255\001\n\016ForwardingMode\022\033\n\027DISA" +
+      "BLE_FORWARDING_MODE\020\000\022\032\n\026ENABLE_FORWARDI" +
+      "NF_MODE\020\001\022#\n\037QUERY_STATUS_OF_FORWARDING_" +
+      "MODE\020\002\022 \n\034REGISTRATION_FORWARDING_MODE\020\003" +
+      "\022\033\n\027ERASURE_FORWARDING_MODE\020\004*\225\004\n\020AudioM" +
+      "essageType\022 \n\034SET_MONITOR_SPEAKER_LOUDNE" +
+      "SS\020\000\022\034\n\030SET_MONITOR_SPEAKER_MODE\020\001\022\021\n\rTO" +
+      "NE_DURATION\020\002\022\034\n\030DTMF_AND_TONE_GENERATIO" +
+      "N\020\003\022\024\n\020ALERT_SOUND_MODE\020\004\022\026\n\022RINGER_SOUN" +
+      "D_LEVEL\020\005\022\035\n\031LOUD_SPEAKER_VOLUME_LEVEL\020\006",
+      "\022\020\n\014MUTE_CONTROL\020\007\022#\n\037CHANGE_THE_SIDE_TO" +
+      "NE_GAIN_LEVEL\020\010\022$\n CHANGE_THE_MICROPHONE" +
+      "_GAIN_LEVEL\020\t\022\035\n\031GENERATE_LOCAL_DTMF_TON" +
+      "ES\020\n\022\033\n\027SWAP_THE_AUDIO_CHANNELS\020\013\022 \n\034AUD" +
+      "IO_CHANNEL_LOOP_BACK_TEST\020\014\022 \n\034GENERATE_" +
+      "LOCAL_SPECIFIC_TONE\020\r\022\030\n\024SET_DTMF_OUTPUT" +
+      "_PATH\020\016\022\033\n\027SET_TONE_DETECTION_MODE\020\017\022\017\n\013" +
+      "DETECT_DTMF\020\020\022\036\n\032PLAY_DTMF_TONE_DURING_C" +
+      "ALL\020\021*-\n\tAlgorithm\022\017\n\013ALGORITHM_1\020\000\022\017\n\013A" +
+      "LGORITHM_2\020\001**\n\017PersistenceTime\022\n\n\006MS_10",
+      "0\020d\022\013\n\006MS_400\020\220\003*\377\001\n\010DTMFCode\022\n\n\006DTMF_0\020" +
+      "0\022\n\n\006DTMF_1\0201\022\n\n\006DTMF_2\0202\022\n\n\006DTMF_3\0203\022\n\n" +
+      "\006DTMF_4\0204\022\n\n\006DTMF_5\0205\022\n\n\006DTMF_6\0206\022\n\n\006DTM" +
+      "F_7\0207\022\n\n\006DTMF_8\0208\022\n\n\006DTMF_9\0209\022\n\n\006DTMF_A\020" +
+      "A\022\n\n\006DTMF_B\020B\022\n\n\006DTMF_C\020C\022\n\n\006DTMF_D\020D\022\r\n" +
+      "\tDTMF_STAR\020*\022\016\n\nDTMF_POUND\020#\022\025\n\021FREQUENC" +
+      "Y_1400_HZ\020E\022\025\n\021FREQUENCY_2300_HZ\020F*C\n\013DT" +
+      "MFOperate\022\032\n\026QUERY_THRESHOLD_VALUES\020\000\022\030\n" +
+      "\024SET_THRESHOLD_VALUES\020\001*\361\001\n\rToneDetectio" +
+      "n\022\030\n\024CLOSE_TONE_DETECTION\020\000\022\027\n\023OPEN_TONE",
+      "_DETECTION\020\001\0229\n5CONFIGURE_1400HZ_OR_2300" +
+      "HZ_DETECTION_THRESHOLD_100_MS\020\002\022:\n6CONFI" +
+      "GURE_1400HZ_AND_2300HZ_DETECTION_THRESHO" +
+      "LD_400_MS\020\003\022&\n\"CONFIGURE_DTMF_DETECTION_" +
+      "THRESHOLD\020\004\022\016\n\nOPEN_DEBUG\020\005*\212\001\n\016Function" +
+      "Status\022\023\n\017DETECT_ALL_DTMF\020\000\0221\n-ONLY_DETE" +
+      "CT_1400HZ_AND_2300HZ_HANSHAKE_SIGNAL\020\001\0220" +
+      "\n,NOT_DETECT_1400HZ_AND_2300HZ_HANDSAKE_" +
+      "SIGNAL\020\002*G\n\024AudioOperateFunction\022\027\n\023SET_" +
+      "DETECTION_RANGE\020\000\022\026\n\022SET_DETECTION_MODE\020",
+      "\001*\201\001\n\nOutputPath\022\036\n\032OUTPUT_DTMF_NORMAL_S" +
+      "PEAKER\020\000\022\037\n\033OUTPUT_DTMF_HEADSET_SPEAKER\020" +
+      "\001\022\034\n\030OUTPUT_DTMF_LOUD_SPEAKER\020\002\022\024\n\020AUTO_" +
+      "OUTPUT_PATH\020\003*b\n\014AudioChannel\022\030\n\024NORMLA_" +
+      "AUDIO_CHANNEL\020\000\022\031\n\025HEADSET_AUDIO_CHANNEL" +
+      "\020\001\022\035\n\031LOUDSPEAKER_AUDIO_CHANNEL\020\002*^\n\021Mic" +
+      "rophoneChannel\022\025\n\021NORMAL_MICROPHONE\020\000\022\026\n" +
+      "\022HEADSET_MICROPHONE\020\001\022\032\n\026LOUDSPEAKER_MIC" +
+      "ROPHONE\020\002*9\n\tSoundMode\022\025\n\021NORMAL_SOUND_M" +
+      "ODE\020\000\022\025\n\021SILENT_SOUND_MODE\020\001*\232\001\n\013Speaker",
+      "Mode\022\031\n\025SPEAKER_IS_ALWAYS_OFF\020\000\022B\n>SPEAK" +
+      "ER_IS_ON_UTIL_TA_INFORM_TE_THAT_CARRIER_" +
+      "HAS_BEEN_DETECTED\020\001\022,\n(SPEAKER_IS_ALWAYS" +
+      "_ON_WHEN_TA_IS_OFF_HOOK\020\002*t\n\017SpeakerLoud" +
+      "ness\022\025\n\021NO_SPEAKER_VOLUME\020\000\022\026\n\022LOW_SPEAK" +
+      "ER_VOLUME\020\001\022\031\n\025MEDIUM_SPEAKER_VOLUME\020\002\022\027" +
+      "\n\023HIGH_SPEAKER_VOLUME\020\003*\272\001\n\032HardwareRela" +
+      "tedMessageType\022\t\n\005CLOCK\020\000\022\r\n\tSET_ALARM\020\001" +
+      "\022\022\n\016BATTERY_CHARGE\020\002\022\014\n\010READ_ADC\020\003\022\030\n\024CO" +
+      "NFIGURE_SHOW_CLOCK\020\004\022\"\n\036CONFIGURE_NETWOR",
+      "K_LED_PATTERNS\020\005\022\"\n\036CONFIGURE_THRESHOLD_" +
+      "OF_VOLTAGE\020\006*\257\001\n\rThresholdType\022$\n THRESH" +
+      "OLD_OF_LOW_VOLTAGE_WARNING\020\000\022\'\n#THRESHOL" +
+      "D_OF_LOW_VOLTAGE_POWER_DOWN\020\001\022%\n!THRESHO" +
+      "LD_OF_HIGH_VOLTAGE_WARNING\020\002\022(\n$THRESHOL" +
+      "D_OF_HIGH_VOLTAGE_POWER_DOWN\020\003*\257\001\n\007LedMo" +
+      "de\0224\n0NETWORK_LED_FLASHES_RAPIDLY_WHEN_C" +
+      "ALL_IS_RINGING\020\000\0221\n-NO_EFFECT_ON_NETWORK" +
+      "_LED_WHEN_CALL_IS_RINGING\020\001\022;\n7RI_WILL_N" +
+      "OT_CHANGE_WHEN_URC_REPORTED_UNTIL_RINGIN",
+      "G_ENDS\020\002*[\n\tSlowClock\022\026\n\022DISABLE_SLOW_CL" +
+      "OCK\020\000\022\025\n\021ENABLE_SLOW_CLOCK\020\001\022\037\n\033ENTER_SL" +
+      "EEP_AFTER_5_SECONDS\020\002*1\n\nReadStatus\022\017\n\013S" +
+      "TATUS_FAIL\020\000\022\022\n\016STATUS_SUCCESS\020\002*V\n\rBatt" +
+      "eryCharge\022\026\n\022ME_IS_NOT_CHARGING\020\000\022\022\n\016ME_" +
+      "IS_CHARGING\020\001\022\031\n\025CHARGING_HAS_FINISHED\020\002" +
+      "*K\n\nAlarmPower\022\024\n\020NONE_ALARM_POWER\020\000\022\023\n\017" +
+      "ALARM_POWER_OFF\020\001\022\022\n\016ALARM_POWER_ON\020\002*Q\n" +
+      "\006Repeat\022\017\n\013NONE_REPEAT\020\000\022\020\n\014DAILY_REPEAT" +
+      "\020\001\022\021\n\rWEEKLY_REPEAT\020\002\022\021\n\rMONTLY_REPEAT\020\003",
+      "*\203\002\n\021OthersMessageType\022\037\n\033REISSUES_LAST_" +
+      "COMMAND_GIVEN\020\000\022\031\n\025SET_COMMAND_ECHO_MODE" +
+      "\020\001\022*\n&SET_COMMAND_LINE_TERMINATION_CHARA" +
+      "CTER\020\002\022%\n!SET_RESPONSE_FORMATTING_CHARAC" +
+      "TER\020\003\022&\n\"SET_COMMAND_LINE_EDITING_CHARAC" +
+      "TER\020\004\022\017\n\013SET_RI_TIME\020\005\022&\n\"BURST_TRANSITI" +
+      "ON_SIGNAL_INDICATION\020\006*\325\001\n\007IndMode\022E\nADI" +
+      "SABLE_TX_BURST_INDICATION_PIN_OUTPUT_LOW" +
+      "_LEVEL_AS_GPIO_FUNCTION\020\000\0223\n/ENABLE_TX_B" +
+      "URST_INDICATION__OUTPUT_WAVE_AS_NOTE\020\001\022N",
+      "\nJENABLE_TX_BURST_INDICATION_PIN_WILL_BE" +
+      "_HIGH_DURING_CALL_AND_LOW_AFTER_CALL\020\002*\254" +
+      "\001\n\010TimeMode\0225\n1RI_120_MS_LOW_PULSE_OTHER" +
+      "_URC_RI_120_MS_LOW_PULSE\020\000\0224\n0RI_120_MS_" +
+      "LOW_PULSE_OTHER_URC_RI_50_MS_LOW_PULSE\020\001" +
+      "\0223\n/RI_120_MS_LOW_PULSE_OTHER_URC_RI_TAK" +
+      "E_NO_EFFECT\020\002*\376\036\n\005Error\022\006\n\002OK\020\000\022\020\n\014UNKNO" +
+      "W_ERROR\020\001\022\020\n\014SERVICE_BUSY\020\003\022\034\n\030FAILED_TO" +
+      "_GET_IP_ADDRESS\020\004\022\021\n\rNETWORK_ERROR\020\005\022#\n\037" +
+      "UNSUPPORTED_AUTHENTICATION_TYPE\020\006\022\022\n\016SER",
+      "VICE_CLOSED\020\007\022#\n\037GPRS_CSD_CONTEXT_IS_DEA" +
+      "CTIVATED\020\010\022\013\n\007TIMEOUT\020\t\022!\n\035NO_RECIPIENT_" +
+      "FOR_SMTP_SERVICE\020\n\022\030\n\024FAILED_TO_SEND_EMA" +
+      "IL\020\013\022&\n\"FAILED_TO_OPEN_FILE_FOR_ATTACHME" +
+      "NT\020\014\022#\n\037NO_ENOUGH_MEMORY_FOR_ATTACHMENT\020" +
+      "\r\022!\n\035FAILED_TO_SAVE_THE_ATTACHMENT\020\016\022 \n\034" +
+      "THE_INPUT_PARAMETER_IS_WRONG\020\017\022\032\n\025SERVIC" +
+      "E_NOT_AVAILABLE\020\245\003\022$\n\037REQUESTED_MAIL_ACT" +
+      "ION_NOT_TAKEN\020\302\003\022\035\n\030REQUESTED_ACTION_ABO" +
+      "RTED\020\303\003\022;\n6REQUESTED_ACTION_NOT_TAKEN_IN",
+      "SUFFICIENT_SYSTEM_STORAGE\020\304\003\022&\n!SYNTAX_E" +
+      "RROR_COMMAND_UNRECOGNIZED\020\364\003\022,\n\'SYNTAX_E" +
+      "RROR_IN_PARAMETERS_OR_ARGUMENTS\020\365\003\022\034\n\027CO" +
+      "MMAND_NOT_IMPLEMENTED\020\366\003\022\035\n\030BAD_SEQUENCE" +
+      "_OF_COMMANDS\020\367\003\022&\n!COMMAND_PARAMETER_NOT" +
+      "_IMPLEMENTED\020\370\003\022!\n\034DOMAIN_DOES_NOT_ACCEP" +
+      "T_EMAIL\020\211\004\022#\n\036ACCESS_DENIED_FOR_SMTP_SER" +
+      "VICE\020\222\004\022\032\n\025AUTHENTICATION_FAILED\020\227\004\022\037\n\032R" +
+      "EQUESTED_ACTION_NOT_TAKEN\020\246\004\022\023\n\016USER_NOT" +
+      "_LOCAL\020\247\004\022?\n:REQUESTED_MAIL_ACTION_ABORT",
+      "ED_EXCEEDED_STORAGE_NOT_ALLOWED\020\250\004\0228\n3RE" +
+      "QUESTED_ACTION_NOT_TAKEN_MAILBOX_NAME_NO" +
+      "T_ALLOWED\020\251\004\022\027\n\022TRANSACTION_FAILED\020\252\004\022\022\n" +
+      "\rHTTP_TIME_OUT\020\331\035\022\016\n\tHTTP_BUSY\020\332\035\022\023\n\016HTT" +
+      "P_UART_BUSY\020\333\035\022\030\n\023HTTP_GET_NO_REQUEST\020\334\035" +
+      "\022\026\n\021HTTP_NETWORK_BUSY\020\335\035\022\035\n\030HTTP_NETWORK" +
+      "_OPEN_FAILED\020\336\035\022\033\n\026HTTP_NETWORK_NO_CONFI" +
+      "G\020\337\035\022\032\n\025HTTP_NETWORK_DEACTIVE\020\340\035\022\027\n\022HTTP" +
+      "_NETWORK_ERROR\020\341\035\022\023\n\016HTTP_URL_ERROR\020\342\035\022\023" +
+      "\n\016HTTP_EMPTY_URL\020\343\035\022\027\n\022HTTP_IP_ADDR_ERRO",
+      "R\020\344\035\022\023\n\016HTTP_DNS_ERROR\020\345\035\022\035\n\030HTTP_SOCKET" +
+      "_CREATE_ERROR\020\346\035\022\036\n\031HTTP_SOCKET_CONNECT_" +
+      "ERROR\020\347\035\022\033\n\026HTTP_SOCKET_READ_ERROR\020\350\035\022\034\n" +
+      "\027HTTP_SOCKET_WRITE_ERROR\020\351\035\022\026\n\021HTTP_SOCK" +
+      "ET_CLOSE\020\352\035\022\033\n\026HTTP_DATA_ENCODE_ERROR\020\353\035" +
+      "\022\033\n\026HTTP_DATA_DECODE_ERROR\020\354\035\022\031\n\024HTTP_TO" +
+      "_READ_TIMEOUT\020\355\035\022\031\n\024HTTP_RESPONSE_FAILED" +
+      "\020\356\035\022\027\n\022INCOMING_CALL_BUSY\020\357\035\022\024\n\017VOICE_CA" +
+      "LL_BUSY\020\360\035\022\022\n\rINPUT_TIMEOUT\020\361\035\022\026\n\021WAIT_D" +
+      "ATA_TIMEOUT\020\362\035\022\037\n\032WAIT_HTTP_RESPONSE_TIM",
+      "EOUT\020\363\035\022\026\n\021ALLOC_MEMORY_FAIL\020\364\035\022\031\n\024HTTP_" +
+      "NEED_RELOCATION\020\365\035\022\030\n\023INVALID_INPUT_VALU" +
+      "E\020\231\036\022\021\n\014MMS_TIME_OUT\020\275\036\022\021\n\014URL_TOO_LONG\020" +
+      "\276\036\022\020\n\013INVALID_URL\020\277\036\022\026\n\021UNSUPPORTED_PROX" +
+      "Y\020\300\036\022\032\n\025INVALID_PROXY_ADDRESS\020\301\036\022\025\n\020IP_A" +
+      "DDRESS_ERROR\020\302\036\022\016\n\tDNS_ERROR\020\303\036\022\024\n\017PARAM" +
+      "ETER_ERROR\020\304\036\022\030\n\023TO_ADDRESS_EXCEEDED\020\305\036\022" +
+      "\030\n\023CC_ADDRESS_EXCEEDED\020\306\036\022\031\n\024BCC_ADDRESS" +
+      "_EXCEEDED\020\307\036\022$\n\037APPENDED_FILE_CAPACITY_E" +
+      "XCEEDED\020\310\036\022\027\n\022FILE_NAME_TOO_LONG\020\311\036\022 \n\033T",
+      "HE_NUMBER_OF_FILE_EXCEEDED\020\312\036\022\031\n\024NON_EXI" +
+      "STENT_ADDRESS\020\313\036\022\025\n\020UFS_STORAGE_FULL\020\314\036\022" +
+      "\017\n\nDRIVE_FULL\020\315\036\022\020\n\013DRIVE_ERROR\020\316\036\022\016\n\tNO" +
+      "T_FOUND\020\317\036\022\026\n\021INVALID_FILE_NAME\020\320\036\022\031\n\024FI" +
+      "LE_ALREADY_EXISTED\020\321\036\022\032\n\025FAILED_TO_CREAT" +
+      "E_FILE\020\322\036\022\031\n\024FAILED_TO_WRITE_FILE\020\323\036\022\"\n\035" +
+      "FAILED_TO_OPEN_REQUESTED_FILE\020\324\036\022\030\n\023FAIL" +
+      "ED_TO_READ_FILE\020\325\036\022\r\n\010MMS_BUSY\020\326\036\022\025\n\020SEN" +
+      "DING_MMS_BUSY\020\327\036\022\030\n\023SENDING_MMS_STOPPED\020" +
+      "\330\036\022\034\n\027ALREADY_STOPPED_TO_SEND\020\331\036\022\027\n\022RECE",
+      "IVING_MMS_BUSY\020\332\036\022\032\n\025RECEIVING_MMS_STOPP" +
+      "ED\020\333\036\022\034\n\027ALREADY_STOPPED_RECEIVE\020\334\036\022\032\n\025H" +
+      "TTP_RESPONSE_FALIURE\020\335\036\022\031\n\024INVALID_MMS_R" +
+      "ESPONSE\020\336\036\022\027\n\022MMS_RESPONSE_ERROR\020\337\036\022\031\n\024I" +
+      "NVALID_PUSH_MESSAGE\020\340\036\022\027\n\022ALREADY_DONWLO" +
+      "ADED\020\341\036\022\021\n\014NETWORK_BUSY\020\342\036\022\033\n\026FAILED_TO_" +
+      "OPEN_NETWORK\020\343\036\022\032\n\025NETWORK_NO_CONFIGURED" +
+      "\020\344\036\022\030\n\023NETWORK_DEACTIVATED\020\345\036\022\026\n\021MMS_NET" +
+      "WORK_ERROR\020\346\036\022\025\n\020NETWORK_SHUTDOWN\020\347\036\022\016\n\t" +
+      "UART_BUSY\020\350\036\022\021\n\014UART_ESCAPED\020\351\036\022\034\n\027FAILE",
+      "D_TO_CREATE_SOCKET\020\352\036\022\035\n\030FAILED_TO_CONNE" +
+      "CT_SOCKET\020\353\036\022\032\n\025FAILED_TO_READ_SOCKET\020\354\036" +
+      "\022\033\n\026FAILED_TO_WRITE_SOCKET\020\355\036\022\022\n\rSOCKET_" +
+      "CLOSED\020\356\036\022\025\n\020MMS_LENGTH_ERROR\020\357\036\022\031\n\024FAIL" +
+      "ED_TO_ENCODE_MMS\020\360\036\022\031\n\024FAILED_TO_DECODE_" +
+      "MMS\020\361\036\022\032\n\025FAILED_TO_DECODE_HTTP\020\362\036\022\"\n\035FA" +
+      "ILED_TO_DECODE_PUSH_MESSAGE\020\363\036\022\024\n\017PDU_AL" +
+      "IGN_ERROR\020\364\036\022\030\n\023PDU_CHARACTER_ERROR\020\365\036\022\024" +
+      "\n\017STRING_TOO_LONG\020\366\036\022\r\n\010MMS_FULL\020\367\036\022\025\n\020N" +
+      "ON_EXISTENT_MMS\020\370\036\022\024\n\017INVALID_ADDRESS\020\371\036",
+      "\022\030\n\023MMS_VOICE_CALL_BUSY\020\372\036\022\030\n\023ALLOC_MEMO" +
+      "RY_FAILED\020\373\036\022\026\n\021EXCEED_MAX_LENGTH\020\240\037\022\023\n\016" +
+      "OPEN_FILE_FAIL\020\241\037\022\024\n\017WRITE_FILE_FAIL\020\242\037\022" +
+      "\022\n\rGET_SIZE_FAIL\020\243\037\022\016\n\tREAD_FAIL\020\244\037\022\023\n\016L" +
+      "IST_FILE_FAIL\020\245\037\022\025\n\020DELETE_FILE_FAIL\020\246\037\022" +
+      "\027\n\022GET_DISC_INFO_FAIL\020\247\037\022\r\n\010NO_SPACE\020\250\037\022" +
+      "\r\n\010TIME_OUT\020\251\037\022\030\n\023HTTP_FILE_NOT_FOUND\020\252\037" +
+      "\022\023\n\016FILE_TOO_LARGE\020\253\037\022\027\n\022FILE_ALREADY_EX" +
+      "IST\020\254\037\022\026\n\021INVALID_PARAMETER\020\255\037\022\021\n\014DRIVER" +
+      "_ERROR\020\256\037\022\020\n\013CREATE_FAIL\020\257\037\022\022\n\rACCESS_DE",
+      "NIED\020\260\037\022\026\n\021FILE_IS_TOO_LARGE\020\261\037\022\021\n\014WRONG" +
+      "_FORMAT\020\314!\022\024\n\017AUDIO_TASK_BUSY\020\316!\022\027\n\022CREA" +
+      "TE_FILE_FAILED\020\317!\022/\n*ADDITIONAL_RECORDIN" +
+      "G_IN_A_DIFFERENT_FORMAT\020\320!\022\016\n\tDISC_FULL\020" +
+      "\321!\022\035\n\030WRITE_PROTECTION_ON_FILE\020\322!\022\033\n\026REC" +
+      "ORDING_UNKNOW_ERROR\020\223#*6\n\006Action\022\010\n\004TEST" +
+      "\020\000\022\010\n\004READ\020\001\022\t\n\005WRITE\020\002\022\r\n\tEXECUTION\020\003B0" +
+      "\n\033com.rtrk.atcommand.protobufB\021ProtobufA" +
+      "TCommand"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -95628,19 +96354,19 @@ public final class ProtobufATCommand {
     internal_static_com_rtrk_protobufatcommand_CallRelatedCommand_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_com_rtrk_protobufatcommand_CallRelatedCommand_descriptor,
-        new java.lang.String[] { "MessageType", "Action", "Number", "GSMModifier", "InterworkinWindowsSize", "MobileWindowSize", "AcknowledmentTimer", "RetransimissionAttempts", "RPLVersion", "ResequencingPeriod", "AddresType", "Index", "CallDir", "CallState", "CallMode", "CallIsOneOfMultiparty", "SpeechChannel", "DisableATH", "SetUpVoiceCall", "IsResponse", "Description", "N", "ServiceReportingControlEnabled", "EnableExtendedFormat", "SchemeMode", "AlternatingMode", "SpeechMode", "EnableReportSpeechChannelType", "Delimiter", });
+        new java.lang.String[] { "MessageType", "Action", "Disconnect", "DataMode", "RingNumbers", "BlindDialingWait", "ConnectionCompletionWait", "CommaDialModifierWait", "Delay", "Number", "GSMModifier", "InterworkinWindowsSize", "MobileWindowSize", "AcknowledmentTimer", "RetransimissionAttempts", "RPLVersion", "ResequencingPeriod", "AddresType", "Index", "CallDir", "CallState", "CallMode", "CallIsOneOfMultiparty", "SpeechChannel", "DisableATH", "SetUpVoiceCall", "IsResponse", "Description", "N", "ServiceReportingControlEnabled", "EnableExtendedFormat", "SchemeMode", "AlternatingMode", "SpeechMode", "EnableReportSpeechChannelType", "Delimiter", });
     internal_static_com_rtrk_protobufatcommand_SMSCommand_descriptor =
       getDescriptor().getMessageTypes().get(15);
     internal_static_com_rtrk_protobufatcommand_SMSCommand_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_com_rtrk_protobufatcommand_SMSCommand_descriptor,
-        new java.lang.String[] { "MessageType", "Action", "MessageService", "MobileTerminatedMessageSupported", "MobileOrientedMessageSupported", "BroadcastTypeMessageSupported", "MessageFormat", "SCAddress", "ToSCAddress", "Mem1", "Mem2", "Mem3", "Index", "DelFlag", "Alpha", "DestinationAddress", "Data", "Length", "OriginatingAddress", "Pdu", "ServiceCenterTimeStamp", "TypeOfDestinationAddress", "TypeOfOriginatingAddress", "Fo", "MessageIdentifier", "ProtocolIdentifier", "MessageStatus", "ValidityPeriod", "MessageReference", "Ackpdu", "CommandType", "MessageNumber", "BufferMode", "Profile", "MessageIdentifiers", "Dcss", "ShowValuesResultCode", "DataCodinScheme", "Type", "FirstOctet", "IsResponse", "Description", "MessageMode", "MessageStatusPDU", "MessageStatusText", "StoreSMSRule", "StoreCMBRule", "Ds", "EnableToStoreClass0", "MessageIndication", "MessageTypeNotAccepted", "CodeMode", });
+        new java.lang.String[] { "MessageType", "Action", "MessageService", "MobileTerminatedMessageSupported", "MobileOrientedMessageSupported", "BroadcastTypeMessageSupported", "MessageFormat", "SCAddress", "ToSCAddress", "Mem1", "Mem2", "Mem3", "Index", "DelFlag", "Alpha", "DestinationAddress", "Data", "Length", "OriginatingAddress", "Pdu", "ServiceCenterTimeStamp", "TypeOfDestinationAddress", "TypeOfOriginatingAddress", "Fo", "MessageIdentifier", "ProtocolIdentifier", "MessageStatus", "ValidityPeriod", "MessageReference", "Ackpdu", "CommandType", "MessageNumber", "BufferMode", "Profile", "MessageIdentifiers", "Dcss", "ShowValuesResultCode", "DataCodingScheme", "Type", "FirstOctet", "IsResponse", "Description", "MessageMode", "MessageStatusPDU", "MessageStatusText", "StoreSMSRule", "StoreCMBRule", "Ds", "EnableToStoreClass0", "MessageIndication", "MessageTypeNotAccepted", "CodeMode", });
     internal_static_com_rtrk_protobufatcommand_PhonebookCommand_descriptor =
       getDescriptor().getMessageTypes().get(16);
     internal_static_com_rtrk_protobufatcommand_PhonebookCommand_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_com_rtrk_protobufatcommand_PhonebookCommand_descriptor,
-        new java.lang.String[] { "MessageType", "Action", "Storage", "Nlength", "Tlength", "Index", "Number", "NumberType", "Text", "Index1", "Index2", "FindText", "Alphax", "Numberx", "Typex", "IsResponse", "Description", });
+        new java.lang.String[] { "MessageType", "Action", "Storage", "Nlength", "Tlength", "Index", "Number", "NumberType", "Text", "FirstPhoneBookRecord", "LastPhoneBookRecord", "FindText", "Alphax", "Numberx", "Typex", "IsResponse", "Description", });
     internal_static_com_rtrk_protobufatcommand_GPRSCommand_descriptor =
       getDescriptor().getMessageTypes().get(17);
     internal_static_com_rtrk_protobufatcommand_GPRSCommand_fieldAccessorTable = new

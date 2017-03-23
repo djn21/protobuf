@@ -40,7 +40,7 @@ enum CommandType {
 	SMTP_COMMAND = 6;
 	STK_COMMAND = 7;
 	GENERAL_COMMAND = 8;
-	SERIAL_INTERFACE_COMMAND = 9;
+	SERIAL_INTERFACE_CONTROL_COMMAND = 9;
 	STATUS_CONTROL_COMMAND = 10;
 	SIM_RELATED_COMMAND = 11;
 	NETWORK_SERVICE_COMMAND = 12;
@@ -1169,6 +1169,13 @@ enum OperatorMode {
 message CallRelatedCommand {
 	required CallRelatedMessageType messageType = 1;
 	required Action action = 2;
+	optional Disconnect disconnect = 34;
+	optional DataMode dataMode = 35;
+	optional int32 ringNumbers = 36;
+	optional int32 blindDialingWait = 37;
+	optional int32 connectionCompletionWait = 38;
+	optional int32 commaDialModifierWait = 39;
+	optional int32 delay = 40;
 	optional string number = 23;
 	optional string GSMModifier = 6; //mgsm
 	optional int32 interworkinWindowsSize = 7; //iws
@@ -1287,6 +1294,14 @@ enum AddressType {
 	NATIONAL_TYPE = 161;
 }
 
+enum Disconnect{
+	DISCONECT_FROM_LINE_AND_TERMINATE_CALL = 0;
+}
+
+enum DataMode{
+	CALL_SWITCH_FROM_COMMAND_MODE_TO_DATA_MODE = 0;
+}
+
 message SMSCommand {
 	required SMSMessageType messageType = 1;
 	required Action action = 2;
@@ -1309,8 +1324,8 @@ message SMSCommand {
 	optional string originatingAddress = 21; //oa
 	optional int32 pdu = 22;
 	optional string serviceCenterTimeStamp = 23; //scts
-	optional int32 TypeOfDestinationAddress = 24; //toda
-	optional int32 TypeOfOriginatingAddress = 25; //tooa
+	optional int32 typeOfDestinationAddress = 24; //toda
+	optional int32 typeOfOriginatingAddress = 25; //tooa
 	optional int32 fo = 26;
 	optional int32 messageIdentifier = 27; //mid
 	optional int32 protocolIdentifier = 28; //pid
@@ -1325,7 +1340,7 @@ message SMSCommand {
 	optional string messageIdentifiers = 38; //mids
 	optional string dcss = 39;
 	optional bool showValuesResultCode = 40;
-	optional int32 dataCodinScheme = 41; //dcs
+	optional int32 dataCodingScheme = 41; //dcs
 	optional string type = 42;
 	optional int32 firstOctet = 44; //fo
 	optional bool isResponse = 46;
@@ -1440,8 +1455,8 @@ message PhonebookCommand {
 	optional string number = 9;
 	optional NumberType numberType = 10;
 	optional string text = 11;
-	optional int32 index1 = 12;
-	optional int32 index2 = 13;
+	optional int32 firstPhoneBookRecord = 12;
+	optional int32 lastPhoneBookRecord = 13;
 	optional string findText = 14;
 	optional string alphax = 15;
 	optional string numberx = 16;
