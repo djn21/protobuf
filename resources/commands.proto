@@ -990,7 +990,7 @@ message SIMRelatedCommand {
 	optional string fac = 31;
 	optional LockMode lockMode = 32 [default = QUERY_STATUS];
 	optional string password = 33;
-	optional Class class = 34 [default = ALL_TELEPHONY_EXCEPT_SMS];
+	optional Class clazz = 34 [default = ALL_TELEPHONY_EXCEPT_SMS];
 	optional Status status = 6;
 	optional string pin = 7;
 	optional string newPin = 8;
@@ -1075,7 +1075,6 @@ message NetworkServiceCommand {
 	required Action action = 2;
 	optional OperatorStatus operatorStatus = 6;
 	optional string operator = 33;
-	optional int32 operatorNumber = 7;
 	optional OperatorMode operatorMode = 8 [default = AUTOMATIC_MODE];
 	optional OperatorFormat operatorFormat = 9
 	[default = LONG_FORMAT_ALPHANUMERIC];
@@ -1329,7 +1328,6 @@ message SMSCommand {
 	optional int32 fo = 26;
 	optional int32 messageIdentifier = 27; //mid
 	optional int32 protocolIdentifier = 28; //pid
-	optional MessageStatus messageStatus = 29;
 	optional int32 validityPeriod = 30; //vp
 	optional int32 messageReference = 31; //mr
 	optional int32 ackpdu = 32;
@@ -1494,7 +1492,7 @@ message GPRSCommand {
 	optional int32 peak = 15;
 	optional int32 mean = 16;
 	optional string L2P = 17;
-	optional string class = 18;
+	optional string clazz = 18;
 	optional EventReportingMode eventReportingMode = 19;
 	optional NetworkRegistrationMode networkRegistrationMode = 20;
 	optional NetworkRegistrationStatus networkRegistrationStatus = 21;
@@ -1571,7 +1569,7 @@ message TCPIPCommand {
 	optional ReceivedDataMode receivedDataMode = 37
 	[default = OUTPUT_RECEIVED_DATA_THROUGH_UART_DIRECTLY];
 	optional int32 id = 38;
-	optional ServerClient serverClinet = 39;
+	optional ServerClient serverClient = 39;
 	optional int32 sid = 40;
 	optional int32 number = 41;
 	optional string host = 42;
@@ -1633,7 +1631,7 @@ enum TCPIPMessageType {
 	QUERY_THE_DATA_INFORMATION_FOR_SENDING = 28;
 	SET_METHOD_TO_HANDLE_RECEIVED_TCPIP_DATA = 29;
 	RETRIEVE_THE_RECEIVED_TCPIP_DATA = 30;
-	CONTRO_WHETHER_OR_NOT_TO_ECHO_DATA_FOR_QISEND = 31;
+	CONTROL_WHETHER_OR_NOT_TO_ECHO_DATA_FOR_QISEND = 31;
 	PING_A_REMOTE_SERVER = 32;
 	SYNCHRONIZE_LOCAL_TIME_VIA_NTP = 33;
 }
@@ -1729,7 +1727,7 @@ message SupplementaryServiceCommand {
 	optional int32 type = 8;
 	optional string subaddress = 9;
 	optional int32 satype = 10;
-	optional Class class = 11;
+	optional Class clazz = 11;
 	optional int32 time = 12;
 	optional bool active = 13;
 	optional bool enableCUG = 14;
@@ -1754,6 +1752,7 @@ message SupplementaryServiceCommand {
 	optional bool showAlphaField = 33;
 	optional SSDControl ssdControl = 34
 	[default = DISABLE_RESULT_CODE_PRESENTATION_IN_TA];
+	optional WaitingControlMode waitingControlMode = 36;
 }
 
 enum SupplementaryServiceMessageType {
@@ -1768,6 +1767,12 @@ enum SupplementaryServiceMessageType {
 	UNSTRUCTURED_SUPPLEMENTARY_SERVICE_DATA = 8;
 	SUPPLEMENTARY_SERVICES_NOTIFICATION = 9;
 	CALLING_LINE_IDENTIFICATION_RESTRICTION = 10;
+}
+
+enum WaitingControlMode{
+	DISABLE_WAITING_CONTROL = 0;
+	ENABLE_WAITING_CONTROL = 1;
+	QUERY_STATUS_OF_WAITING_CONTROL = 2;
 }
 
 enum Code1 {
@@ -1927,6 +1932,7 @@ enum DTMFCode {
 enum DTMFOperate {
 	QUERY_THRESHOLD_VALUES = 0;
 	SET_THRESHOLD_VALUES = 1;
+	DEBUG_STATUS_AND_WORKING_STATUS = 2;
 }
 
 enum ToneDetection {
