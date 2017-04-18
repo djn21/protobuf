@@ -67,7 +67,7 @@
 								<exec executable="java">
 									<arg value="-cp" />
 									<arg value="C:/Users/djekanovic/Documents/EclipseProjects/xmlgenerator/target/xmlgenerator-0.0.1-SNAPSHOT.jar" />
-									<arg value="com.rtrk.xmlgenerator.App" />
+									<arg value="com.rtrk.atcommand.xmlgenerator.ATCommandXMLGenerator" />
 									<arg value="${project.basedir}/resources/commands.proto" />
 									<arg value="${project.basedir}/resources/commands.xml" />
 								</exec>

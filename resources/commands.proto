@@ -40,7 +40,7 @@ enum CommandType {
 	SMTP_COMMAND = 6;
 	STK_COMMAND = 7;
 	GENERAL_COMMAND = 8;
-	SERIAL_INTERFACE_COMMAND = 9;
+	SERIAL_INTERFACE_CONTROL_COMMAND = 9;
 	STATUS_CONTROL_COMMAND = 10;
 	SIM_RELATED_COMMAND = 11;
 	NETWORK_SERVICE_COMMAND = 12;
@@ -990,7 +990,7 @@ message SIMRelatedCommand {
 	optional string fac = 31;
 	optional LockMode lockMode = 32 [default = QUERY_STATUS];
 	optional string password = 33;
-	optional Class class = 34 [default = ALL_TELEPHONY_EXCEPT_SMS];
+	optional Class clazz = 34 [default = ALL_TELEPHONY_EXCEPT_SMS];
 	optional Status status = 6;
 	optional string pin = 7;
 	optional string newPin = 8;
@@ -1075,7 +1075,6 @@ message NetworkServiceCommand {
 	required Action action = 2;
 	optional OperatorStatus operatorStatus = 6;
 	optional string operator = 33;
-	optional int32 operatorNumber = 7;
 	optional OperatorMode operatorMode = 8 [default = AUTOMATIC_MODE];
 	optional OperatorFormat operatorFormat = 9
 	[default = LONG_FORMAT_ALPHANUMERIC];
@@ -1169,6 +1168,13 @@ enum OperatorMode {
 message CallRelatedCommand {
 	required CallRelatedMessageType messageType = 1;
 	required Action action = 2;
+	optional Disconnect disconnect = 34;
+	optional DataMode dataMode = 35;
+	optional int32 ringNumbers = 36;
+	optional int32 blindDialingWait = 37;
+	optional int32 connectionCompletionWait = 38;
+	optional int32 commaDialModifierWait = 39;
+	optional int32 delay = 40;
 	optional string number = 23;
 	optional string GSMModifier = 6; //mgsm
 	optional int32 interworkinWindowsSize = 7; //iws
@@ -1287,6 +1293,14 @@ enum AddressType {
 	NATIONAL_TYPE = 161;
 }
 
+enum Disconnect {
+	DISCONECT_FROM_LINE_AND_TERMINATE_CALL = 0;
+}
+
+enum DataMode {
+	CALL_SWITCH_FROM_COMMAND_MODE_TO_DATA_MODE = 0;
+}
+
 message SMSCommand {
 	required SMSMessageType messageType = 1;
 	required Action action = 2;
@@ -1309,12 +1323,11 @@ message SMSCommand {
 	optional string originatingAddress = 21; //oa
 	optional int32 pdu = 22;
 	optional string serviceCenterTimeStamp = 23; //scts
-	optional int32 TypeOfDestinationAddress = 24; //toda
-	optional int32 TypeOfOriginatingAddress = 25; //tooa
+	optional int32 typeOfDestinationAddress = 24; //toda
+	optional int32 typeOfOriginatingAddress = 25; //tooa
 	optional int32 fo = 26;
 	optional int32 messageIdentifier = 27; //mid
 	optional int32 protocolIdentifier = 28; //pid
-	optional MessageStatus messageStatus = 29;
 	optional int32 validityPeriod = 30; //vp
 	optional int32 messageReference = 31; //mr
 	optional int32 ackpdu = 32;
@@ -1325,13 +1338,14 @@ message SMSCommand {
 	optional string messageIdentifiers = 38; //mids
 	optional string dcss = 39;
 	optional bool showValuesResultCode = 40;
-	optional int32 dataCodinScheme = 41; //dcs
+	optional int32 dataCodingScheme = 41; //dcs
 	optional string type = 42;
 	optional int32 firstOctet = 44; //fo
 	optional bool isResponse = 46;
 	optional string description = 47;
 	optional MessageMode messageMode = 48 [default = NORMAL];
-	optional MessageStatus messageStatusPDU = 49;
+	optional MessageStatusList messageStatusListPDU = 49;
+	optional MessageStatusDelete messageStatusDeletePDU = 57;
 	optional string messageStatusText = 50;
 	optional StoreSMSRule storeSMSRule = 51
 	[default = NO_SMS_DELIVER_INDICATIONS_ARE_ROUTED_TO_TE];
@@ -1399,7 +1413,16 @@ enum MessageIndication {
 	FORWARD_UNSOLICITED_RESULT_CODES_DIRECTLY_TO_TE = 3;
 }
 
-enum MessageStatus {
+enum MessageStatusDelete {
+	DELETE_ALL_READ_MESSAGES = 1;
+	DELETE_ALL_UNREAD_MESSAGES = 2;
+	DELETE_ALL_SENT_SMS = 3;
+	DELETE_ALL_UNSENT_SMS = 4;
+	DELETE_ALL_RECEIVED_SMS = 5;
+	DELETE_ALL_SMS_MESSAGE = 6;
+}
+
+enum MessageStatusList {
 	RECEIVED_UNREAD_MESSAGES = 0;
 	RECEIVED_READ_MESSAGES = 1;
 	STORED_UNSENT_MESSAGES = 2;
@@ -1440,8 +1463,8 @@ message PhonebookCommand {
 	optional string number = 9;
 	optional NumberType numberType = 10;
 	optional string text = 11;
-	optional int32 index1 = 12;
-	optional int32 index2 = 13;
+	optional int32 firstPhoneBookRecord = 12;
+	optional int32 lastPhoneBookRecord = 13;
 	optional string findText = 14;
 	optional string alphax = 15;
 	optional string numberx = 16;
@@ -1479,7 +1502,7 @@ message GPRSCommand {
 	optional int32 peak = 15;
 	optional int32 mean = 16;
 	optional string L2P = 17;
-	optional string class = 18;
+	optional string clazz = 18;
 	optional EventReportingMode eventReportingMode = 19;
 	optional NetworkRegistrationMode networkRegistrationMode = 20;
 	optional NetworkRegistrationStatus networkRegistrationStatus = 21;
@@ -1531,7 +1554,7 @@ message TCPIPCommand {
 	optional string APN = 11;
 	optional string username = 12;
 	optional string password = 13;
-	optional Rate rate = 14 [default = RATE_9600];
+	optional CSDRate rate = 14 [default = CSD_RATE_9600];
 	optional string state = 15;
 	optional string socketState = 16;
 	optional string serverState = 17;
@@ -1556,7 +1579,7 @@ message TCPIPCommand {
 	optional ReceivedDataMode receivedDataMode = 37
 	[default = OUTPUT_RECEIVED_DATA_THROUGH_UART_DIRECTLY];
 	optional int32 id = 38;
-	optional ServerClient serverClinet = 39;
+	optional ServerClient serverClient = 39;
 	optional int32 sid = 40;
 	optional int32 number = 41;
 	optional string host = 42;
@@ -1584,6 +1607,13 @@ message TCPIPCommand {
 	optional bool echoData = 64;
 	optional SynchronizationResult synchronizationResult = 65;
 	optional int32 CSDDataSpeed = 66;
+}
+
+enum CSDRate{
+	CSD_RATE_2400 = 0;
+	CSD_RATE_4800 = 1;
+	CSD_RATE_9600 = 2;
+	CSD_RATE_14400 = 3;
 }
 
 enum TCPIPMessageType {
@@ -1618,7 +1648,7 @@ enum TCPIPMessageType {
 	QUERY_THE_DATA_INFORMATION_FOR_SENDING = 28;
 	SET_METHOD_TO_HANDLE_RECEIVED_TCPIP_DATA = 29;
 	RETRIEVE_THE_RECEIVED_TCPIP_DATA = 30;
-	CONTRO_WHETHER_OR_NOT_TO_ECHO_DATA_FOR_QISEND = 31;
+	CONTROL_WHETHER_OR_NOT_TO_ECHO_DATA_FOR_QISEND = 31;
 	PING_A_REMOTE_SERVER = 32;
 	SYNCHRONIZE_LOCAL_TIME_VIA_NTP = 33;
 }
@@ -1714,7 +1744,7 @@ message SupplementaryServiceCommand {
 	optional int32 type = 8;
 	optional string subaddress = 9;
 	optional int32 satype = 10;
-	optional Class class = 11;
+	optional Class clazz = 11;
 	optional int32 time = 12;
 	optional bool active = 13;
 	optional bool enableCUG = 14;
@@ -1739,6 +1769,7 @@ message SupplementaryServiceCommand {
 	optional bool showAlphaField = 33;
 	optional SSDControl ssdControl = 34
 	[default = DISABLE_RESULT_CODE_PRESENTATION_IN_TA];
+	optional WaitingControlMode waitingControlMode = 36;
 }
 
 enum SupplementaryServiceMessageType {
@@ -1753,6 +1784,12 @@ enum SupplementaryServiceMessageType {
 	UNSTRUCTURED_SUPPLEMENTARY_SERVICE_DATA = 8;
 	SUPPLEMENTARY_SERVICES_NOTIFICATION = 9;
 	CALLING_LINE_IDENTIFICATION_RESTRICTION = 10;
+}
+
+enum WaitingControlMode {
+	DISABLE_WAITING_CONTROL = 0;
+	ENABLE_WAITING_CONTROL = 1;
+	QUERY_STATUS_OF_WAITING_CONTROL = 2;
 }
 
 enum Code1 {
@@ -1912,6 +1949,7 @@ enum DTMFCode {
 enum DTMFOperate {
 	QUERY_THRESHOLD_VALUES = 0;
 	SET_THRESHOLD_VALUES = 1;
+	DEBUG_STATUS_AND_WORKING_STATUS = 2;
 }
 
 enum ToneDetection {
